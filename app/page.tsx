@@ -5,7 +5,9 @@ export default function Home() {
     <main className="min-h-screen bg-stone-100">
       <header className="border-b border-stone-200 bg-white">
         <div className="max-w-6xl mx-auto px-6 py-4">
-          <span className="text-stone-900 font-bold text-xl tracking-tight">TodoSombra</span>
+          <span className="font-bold text-xl tracking-tight">
+            <span className="text-amber-500">Todo</span><span className="text-stone-900">Sombra</span>
+          </span>
         </div>
       </header>
 
@@ -22,25 +24,25 @@ export default function Home() {
         <div className="grid md:grid-cols-2 gap-6 max-w-3xl mx-auto">
           <Link
             href="/configurador/ares"
-            className="group block bg-white rounded-xl border border-stone-200 p-8 hover:border-stone-900 hover:shadow-lg transition"
+            className="group block bg-white rounded-xl border border-stone-200 p-8 hover:border-amber-400 hover:shadow-lg transition"
           >
             <div className="text-sm text-stone-500 uppercase tracking-wider">Toldo cofre</div>
             <h2 className="text-2xl font-semibold text-stone-900 mt-2">ARES</h2>
             <p className="text-stone-600 mt-3 text-sm">
               El cofre más vendido en terrazas. Hasta 6 m de ancho, manual o motorizado con Somfy.
             </p>
-            <div className="mt-6 text-stone-900 font-medium group-hover:underline">Configurar →</div>
+            <div className="mt-6 text-amber-500 font-medium group-hover:underline">Configurar →</div>
           </Link>
           <Link
             href="/configurador/palilleria"
-            className="group block bg-white rounded-xl border border-stone-200 p-8 hover:border-stone-900 hover:shadow-lg transition"
+            className="group block bg-white rounded-xl border border-stone-200 p-8 hover:border-amber-400 hover:shadow-lg transition"
           >
             <div className="text-sm text-stone-500 uppercase tracking-wider">Pérgola</div>
             <h2 className="text-2xl font-semibold text-stone-900 mt-2">Palillería 80×40</h2>
             <p className="text-stone-600 mt-3 text-sm">
               La pérgola de jardín. Cuatro configuraciones para fijación en pared, portería o autoportante.
             </p>
-            <div className="mt-6 text-stone-900 font-medium group-hover:underline">Configurar →</div>
+            <div className="mt-6 text-amber-500 font-medium group-hover:underline">Configurar →</div>
           </Link>
         </div>
 

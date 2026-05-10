@@ -142,7 +142,7 @@ export default function ConfiguradorAres() {
                   onClick={() => setColorRal(c.ral)}
                   title={`${c.nombre} (RAL ${c.ral})`}
                   className={`aspect-square rounded-lg border-2 transition ${
-                    colorRal === c.ral ? 'border-stone-900 scale-105' : 'border-stone-200 hover:border-stone-400'
+                    colorRal === c.ral ? 'border-amber-500 scale-105' : 'border-stone-200 hover:border-amber-300'
                   }`}
                   style={{ backgroundColor: c.hex }}
                 />
@@ -159,7 +159,7 @@ export default function ConfiguradorAres() {
                   onClick={() => setColorTelaId(c.id)}
                   title={c.nombre}
                   className={`aspect-square rounded-lg border-2 transition ${
-                    colorTelaId === c.id ? 'border-stone-900 scale-105' : 'border-stone-200 hover:border-stone-400'
+                    colorTelaId === c.id ? 'border-amber-500 scale-105' : 'border-stone-200 hover:border-amber-300'
                   }`}
                   style={{ backgroundColor: c.hex }}
                 />
@@ -203,7 +203,7 @@ export default function ConfiguradorAres() {
               <button
                 type="button"
                 disabled
-                className="mt-4 w-full bg-stone-900 text-white rounded-lg py-3 font-medium hover:bg-stone-800 disabled:opacity-40 disabled:cursor-not-allowed transition"
+                className="mt-4 w-full bg-amber-500 text-white rounded-lg py-3 font-medium hover:bg-amber-600 disabled:opacity-40 disabled:cursor-not-allowed transition"
               >
                 Solicitar pedido (próximamente)
               </button>
@@ -241,7 +241,7 @@ function RadioPill({
       type="button"
       onClick={onClick}
       className={`px-4 py-2 rounded-lg text-sm font-medium transition ${
-        checked ? 'bg-stone-900 text-white' : 'bg-stone-50 text-stone-700 border border-stone-200 hover:border-stone-400'
+        checked ? 'bg-amber-500 text-white' : 'bg-stone-50 text-stone-700 border border-stone-200 hover:border-amber-400'
       }`}
     >
       {children}
