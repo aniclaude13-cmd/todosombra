@@ -30,11 +30,17 @@ export default function Home() {
             </p>
             <div className="mt-6 text-stone-900 font-medium group-hover:underline">Configurar →</div>
           </Link>
-          <div className="block bg-stone-50 rounded-xl border border-dashed border-stone-300 p-8">
-            <div className="text-sm text-stone-400 uppercase tracking-wider">Pérgola</div>
-            <h2 className="text-2xl font-semibold text-stone-400 mt-2">Palillería 80×40</h2>
-            <p className="text-stone-400 mt-3 text-sm">Próximamente.</p>
-          </div>
+          <Link
+            href="/configurador/palilleria"
+            className="group block bg-white rounded-xl border border-stone-200 p-8 hover:border-stone-900 hover:shadow-lg transition"
+          >
+            <div className="text-sm text-stone-500 uppercase tracking-wider">Pérgola</div>
+            <h2 className="text-2xl font-semibold text-stone-900 mt-2">Palillería 80×40</h2>
+            <p className="text-stone-600 mt-3 text-sm">
+              Pérgola de palillería aluminio 80×40 con lona. Cuatro modelos para cualquier tipo de instalación.
+            </p>
+            <div className="mt-6 text-stone-900 font-medium group-hover:underline">Configurar →</div>
+          </Link>
         </div>
       </section>
     </main>
