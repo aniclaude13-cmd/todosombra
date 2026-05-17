@@ -246,7 +246,22 @@ async def menu(update: Update, ctx: ContextTypes.DEFAULT_TYPE) -> int:
 async def elegir_tipo(update: Update, ctx: ContextTypes.DEFAULT_TYPE) -> int:
     opcion = update.message.text.strip()
 
-    if "no sé" in opcion.lower() or "asesoramiento" in opcion.lower():
+    # Si viene del flujo de "cambiar criterios", permitir cambiar medidas
+    if "cambiar medidas" in opcion.lower() or "medidas" in opcion.lower():
+        tipo = ctx.user_data.get("tipo_busqueda")
+        if tipo:
+            await update.message.reply_text(
+                f"🎯 *Perfecto, vamos a encontrar la opción ideal para ti.*\n\n"
+                f"📐 Cuéntame las medidas exactas que necesitas:\n\n"
+                f"*Línea × Salida* (ej: `350x250`)\n\n"
+                f"📏 *Línea* = anchura total\n"
+                f"🎯 *Salida* = cuánto se extiende desde la pared",
+                parse_mode="Markdown",
+                reply_markup=ReplyKeyboardRemove()
+            )
+            return MEDIDAS_BUSQUEDA
+
+    if "no sé" in opcion.lower() or "asesoramiento" in opcion.lower() or "necesito asesoramiento" in opcion.lower():
         ctx.user_data["motivo_derivacion"] = "No sabe qué tipo de producto necesita"
         await update.message.reply_text(
             "Sin problema, uno de nuestros técnicos te asesorará sin compromiso. ¿Cómo te llamas?",
@@ -337,11 +352,10 @@ async def medidas_busqueda(update: Update, ctx: ContextTypes.DEFAULT_TYPE) -> in
 async def comparar_modelos(update: Update, ctx: ContextTypes.DEFAULT_TYPE) -> int:
     nombre = update.message.text.strip()
 
-    if "ninguno" in nombre.lower():
-        teclado = [[t] for t in TIPOS_PRODUCTO.keys()] + [["❓ No sé / necesito asesoramiento"]]
+    if "ninguno" in nombre.lower() or "cambiar" in nombre.lower():
+        teclado = [["📐 Cambiar medidas"], ["🏠 Cambiar tipo de producto"], ["❓ Necesito asesoramiento"]]
         await update.message.reply_text(
-            "Sin problema. ¿Quieres cambiar el tipo de producto o las medidas?\n\n"
-            "Elige de nuevo el tipo:",
+            "Sin problema. ¿Qué quieres cambiar?",
             reply_markup=ReplyKeyboardMarkup(teclado, one_time_keyboard=True, resize_keyboard=True)
         )
         return ELEGIR_TIPO
