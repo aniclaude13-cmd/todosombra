@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Bot de Telegram TodoSombra — Consultas de precios AWMA
+Bot de Telegram TodoSombra — Consultas de precios de soluciones de sombra
 """
 
 import json
@@ -34,7 +34,7 @@ LEADS_FILE = Path(__file__).parent / "leads.json"
  AÑADIR_COMPLEMENTOS, MEDIDA_COMPLEMENTO_ADICIONAL) = range(21)
 
 # Mapeo tipo visible → tipo interno JSON
-TIPOS_AWMA = {
+TIPOS_PRODUCTO = {
     "🏠 Toldo": "toldo",
     "🏗️ Pérgola": "pérgola",
     "🪟 Toldo vertical / cerramiento": "vertical",
@@ -210,7 +210,7 @@ async def start(update: Update, ctx: ContextTypes.DEFAULT_TYPE) -> int:
     ]
     await update.message.reply_text(
         "☀️ *¡Bienvenido a TodoSombra!*\n\n"
-        "🏆 Somos especialistas en *soluciones de sombra AWMA 2026* — toldos, pérgolas, cerramientos y complementos para tu hogar.\n\n"
+        "🏆 Somos especialistas en *soluciones de sombra* — toldos, pérgolas, cerramientos y complementos para tu hogar.\n\n"
         "⚡ En 2 minutos te daré el *precio orientativo* exacto de tu proyecto sin compromiso.\n\n"
         "¿Por dónde empezamos?",
         parse_mode="Markdown",
@@ -236,7 +236,7 @@ async def menu(update: Update, ctx: ContextTypes.DEFAULT_TYPE) -> int:
         )
         return ELEGIR_COMPLEMENTO
     else:
-        teclado = [[t] for t in TIPOS_AWMA.keys()] + [["❓ No sé / necesito asesoramiento"]]
+        teclado = [[t] for t in TIPOS_PRODUCTO.keys()] + [["❓ No sé / necesito asesoramiento"]]
         await update.message.reply_text(
             "¿Qué tipo de producto necesitas?",
             reply_markup=ReplyKeyboardMarkup(teclado, one_time_keyboard=True, resize_keyboard=True)
@@ -254,9 +254,9 @@ async def elegir_tipo(update: Update, ctx: ContextTypes.DEFAULT_TYPE) -> int:
         )
         return CAPTAR_NOMBRE
 
-    tipo_interno = TIPOS_AWMA.get(opcion)
+    tipo_interno = TIPOS_PRODUCTO.get(opcion)
     if not tipo_interno:
-        teclado = [[t] for t in TIPOS_AWMA.keys()] + [["❓ No sé / necesito asesoramiento"]]
+        teclado = [[t] for t in TIPOS_PRODUCTO.keys()] + [["❓ No sé / necesito asesoramiento"]]
         await update.message.reply_text(
             "Elige una opción del menú:",
             reply_markup=ReplyKeyboardMarkup(teclado, one_time_keyboard=True, resize_keyboard=True)
@@ -338,7 +338,7 @@ async def comparar_modelos(update: Update, ctx: ContextTypes.DEFAULT_TYPE) -> in
     nombre = update.message.text.strip()
 
     if "ninguno" in nombre.lower():
-        teclado = [[t] for t in TIPOS_AWMA.keys()] + [["❓ No sé / necesito asesoramiento"]]
+        teclado = [[t] for t in TIPOS_PRODUCTO.keys()] + [["❓ No sé / necesito asesoramiento"]]
         await update.message.reply_text(
             "Sin problema. ¿Quieres cambiar el tipo de producto o las medidas?\n\n"
             "Elige de nuevo el tipo:",
@@ -720,11 +720,11 @@ async def recibir_color(update: Update, ctx: ContextTypes.DEFAULT_TYPE) -> int:
     color_tejido = update.message.text.strip()
     ctx.user_data["color_tejido"] = color_tejido
 
-    teclado = [["✅ Sí, es AWMA"], ["❌ No, es otro color"]]
+    teclado = [["✅ Sí, catálogo estándar"], ["❌ No, color personalizado"]]
     await update.message.reply_text(
         f"🎨 *{color_tejido}*\n\n"
-        f"¿Este color está en el *catálogo AWMA*?\n\n"
-        f"_(Si es AWMA, no lleva incremento de precio)_",
+        f"¿Este color está en el *catálogo estándar*?\n\n"
+        f"_(Si es estándar, no lleva incremento de precio)_",
         parse_mode="Markdown",
         reply_markup=ReplyKeyboardMarkup(teclado, one_time_keyboard=True, resize_keyboard=True)
     )
@@ -737,14 +737,14 @@ async def recibir_tejido(update: Update, ctx: ContextTypes.DEFAULT_TYPE) -> int:
 
     if es_awma:
         await update.message.reply_text(
-            "✅ *Perfecto, catálogo AWMA*\n\n"
+            "✅ *Perfecto, catálogo estándar*\n\n"
             f"Precio *sin incremento* de color",
             parse_mode="Markdown",
             reply_markup=ReplyKeyboardRemove()
         )
     else:
         await update.message.reply_text(
-            "⚠️ *Color especial fuera de catálogo AWMA*\n\n"
+            "⚠️ *Color personalizado*\n\n"
             f"Precio con *incremento según color* (técnico confirmará)",
             parse_mode="Markdown",
             reply_markup=ReplyKeyboardRemove()
@@ -802,7 +802,7 @@ async def mostrar_resumen(update: Update, ctx: ContextTypes.DEFAULT_TYPE) -> int
             lineas_resumen.append(f"🎛️ *Motor:* {pref}")
     color_tejido = ctx.user_data.get("color_tejido", "—")
     es_awma = ctx.user_data.get("es_awma", False)
-    awma_label = "✅ AWMA (sin incremento)" if es_awma else "⚠️ Especial (con incremento)"
+    awma_label = "✅ Estándar (sin incremento)" if es_awma else "⚠️ Personalizado (con incremento)"
     lineas_resumen.append(f"🧵 *Color tejido:* {color_tejido}")
     lineas_resumen.append(f"   {awma_label}")
 
@@ -820,8 +820,8 @@ async def mostrar_resumen(update: Update, ctx: ContextTypes.DEFAULT_TYPE) -> int
     if motorizado:
         lineas_resumen.append("\n_(+ motor Somfy según modelo)_")
 
-    es_awma_tejido = ctx.user_data.get("es_awma", False)
-    if not es_awma_tejido:
+    es_color_estandar = ctx.user_data.get("es_awma", False)
+    if not es_color_estandar:
         lineas_resumen.append("_(+ incremento de color tejido según gama - técnico confirmará)_")
 
     if producto.get("tipo") == "toldo":
