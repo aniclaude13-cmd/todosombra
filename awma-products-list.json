@@ -1,0 +1,1422 @@
+{
+  "products_found": [
+    [
+      "LAVELA",
+      25,
+      "toldo"
+    ],
+    [
+      "VELUM",
+      30,
+      "toldo"
+    ],
+    [
+      "CONFECCIÓN Y TEJIDOS",
+      33,
+      "categoría"
+    ],
+    [
+      "TEJIDOS CONFECCIONADOS",
+      37,
+      "material"
+    ],
+    [
+      "LONAS CONFECCIONADAS",
+      43,
+      "material"
+    ],
+    [
+      "ACRÍLICO PARA PALILLERÍA",
+      44,
+      "material"
+    ],
+    [
+      "CRISTAL TRANSPARENTE",
+      45,
+      "material"
+    ],
+    [
+      "MOTORIZACIÓN",
+      51,
+      "categoría"
+    ],
+    [
+      "MOTORES SOMFY",
+      54,
+      "motor"
+    ],
+    [
+      "AUTOMATISMOS SOMFY RTS",
+      55,
+      "motorización"
+    ],
+    [
+      "AUTOMATISMOS SOMFY iO",
+      56,
+      "motorización"
+    ],
+    [
+      "MOTORES SIMU",
+      58,
+      "motor"
+    ],
+    [
+      "MOTORES TELECO",
+      59,
+      "motor"
+    ],
+    [
+      "CORTINAS",
+      61,
+      "sistema"
+    ],
+    [
+      "CSL COSTADILLO LATERAL",
+      63,
+      "accesorio"
+    ],
+    [
+      "RC RIEL CON CORTINA",
+      64,
+      "cortina"
+    ],
+    [
+      "CAP CAPOTAS",
+      65,
+      "toldo"
+    ],
+    [
+      "STR TOLDOS STOR",
+      67,
+      "marca"
+    ],
+    [
+      "STR1000 SOLARIS",
+      68,
+      "toldo"
+    ],
+    [
+      "STR1100 DESERT",
+      70,
+      "toldo"
+    ],
+    [
+      "PR TOLDOS DE PUNTO RECTO",
+      73,
+      "marca"
+    ],
+    [
+      "PR2000 ÍNDICO I1",
+      74,
+      "toldo"
+    ],
+    [
+      "PRS2100 ÍNDICO I2",
+      76,
+      "toldo"
+    ],
+    [
+      "PRT2200 ÍNDICO I3",
+      78,
+      "toldo"
+    ],
+    [
+      "PRCS3100 DESERT ÍNDICO I2",
+      80,
+      "toldo"
+    ],
+    [
+      "PRCT3200 DESERT ÍNDICO I3",
+      82,
+      "toldo"
+    ],
+    [
+      "ART TOLDOS DE BRAZOS ARTICULADOS",
+      85,
+      "marca"
+    ],
+    [
+      "ART4100 A1 SMART",
+      86,
+      "toldo"
+    ],
+    [
+      "ART4110 A1 PREMIUM",
+      88,
+      "toldo"
+    ],
+    [
+      "ARX1000 BRAZOS CRUZADOS",
+      90,
+      "toldo"
+    ],
+    [
+      "TJD TEJADILLO",
+      92,
+      "toldo"
+    ],
+    [
+      "SBX VÉRTIKO",
+      93,
+      "toldo"
+    ],
+    [
+      "SPL SPIRAL",
+      94,
+      "toldo"
+    ],
+    [
+      "MCK TOLDOS MONOBLOCK",
+      97,
+      "marca"
+    ],
+    [
+      "MCK4700 M1 PREMIUM PLUS",
+      98,
+      "toldo"
+    ],
+    [
+      "MCK4900 ARKO",
+      102,
+      "toldo"
+    ],
+    [
+      "BOX TOLDOS CON COFRE",
+      105,
+      "marca"
+    ],
+    [
+      "BOX6000 IRIS",
+      106,
+      "toldo"
+    ],
+    [
+      "BOX6010 INDIE",
+      108,
+      "toldo"
+    ],
+    [
+      "BOX5200 SAMA",
+      110,
+      "toldo"
+    ],
+    [
+      "BOX6100 ARES",
+      112,
+      "toldo"
+    ],
+    [
+      "BOX6110 CONCEPT",
+      114,
+      "toldo"
+    ],
+    [
+      "BOX6300 ALAND 2.0",
+      116,
+      "toldo"
+    ],
+    [
+      "BOX7000 GÉMINI",
+      118,
+      "toldo"
+    ],
+    [
+      "VSJ12000 VISOMBRA",
+      122,
+      "toldo"
+    ],
+    [
+      "BOX6400 LUSOL",
+      126,
+      "toldo"
+    ],
+    [
+      "BOX6500 ARKO",
+      128,
+      "toldo"
+    ],
+    [
+      "BOX8100 KYMA",
+      130,
+      "toldo"
+    ],
+    [
+      "BOX8110 KYMA + VÉRTIKO",
+      134,
+      "toldo"
+    ],
+    [
+      "BOX8200 KALI",
+      136,
+      "toldo"
+    ],
+    [
+      "BOX8300 MÁXIMUS",
+      140,
+      "toldo"
+    ],
+    [
+      "UVE",
+      144,
+      "toldo"
+    ],
+    [
+      "ET1000 - ENTRETOLDOS",
+      146,
+      "toldo"
+    ],
+    [
+      "PL 80X40 PALILLERÍAS",
+      149,
+      "palillería"
+    ],
+    [
+      "PL7000 ENTRE PAREDES",
+      150,
+      "palillería"
+    ],
+    [
+      "PL7010 PARED PORTERÍA",
+      151,
+      "palillería"
+    ],
+    [
+      "PL7020 PARED PORTERÍA + LARGUERO",
+      152,
+      "palillería"
+    ],
+    [
+      "PL7030 AUTOPORTANTE + LARGUERO",
+      152,
+      "palillería"
+    ],
+    [
+      "ACCESORIOS 80x40",
+      153,
+      "accesorio"
+    ],
+    [
+      "PERGOO 100x100 PALILLERÍAS",
+      158,
+      "palillería"
+    ],
+    [
+      "PL7050 ENTRE PAREDES",
+      160,
+      "palillería"
+    ],
+    [
+      "PL7070 PARED PORTERÍA",
+      162,
+      "palillería"
+    ],
+    [
+      "PL7090 AUTOPORTANTE",
+      164,
+      "palillería"
+    ],
+    [
+      "ILUMINACIÓN",
+      166,
+      "accesorio"
+    ],
+    [
+      "ACCESORIOS 100x100",
+      168,
+      "accesorio"
+    ],
+    [
+      "PERGOO 120x120 PALILLERÍAS",
+      170,
+      "palillería"
+    ],
+    [
+      "PL7100 ENTRE PAREDES",
+      172,
+      "palillería"
+    ],
+    [
+      "PL7110 PARED PORTERÍA",
+      174,
+      "palillería"
+    ],
+    [
+      "PL7130 AUTOPORTANTE",
+      176,
+      "palillería"
+    ],
+    [
+      "ILUMINACIÓN",
+      179,
+      "accesorio"
+    ],
+    [
+      "ACCESORIOS 120x120",
+      179,
+      "accesorio"
+    ],
+    [
+      "TENXO PÉRGOLAS TENSADAS",
+      183,
+      "pérgola"
+    ],
+    [
+      "TX7900 TENXO ENTRE PAREDES",
+      185,
+      "pérgola"
+    ],
+    [
+      "TX7910 TENXO PARED PORTERÍA",
+      186,
+      "pérgola"
+    ],
+    [
+      "TX7930 TENXO AUTOPORTANTE",
+      187,
+      "pérgola"
+    ],
+    [
+      "TX7950 TENXO ARRIOSTRADA",
+      188,
+      "pérgola"
+    ],
+    [
+      "TX7970 TENXO 2 AGUAS AUTOPORTANTE",
+      189,
+      "pérgola"
+    ],
+    [
+      "ACCESORIOS TENXO",
+      190,
+      "accesorio"
+    ],
+    [
+      "TRIÁNGULOS LATERALES Y FRONTALES",
+      192,
+      "accesorio"
+    ],
+    [
+      "TENFLAT PÉRGOLAS TENSADAS",
+      195,
+      "pérgola"
+    ],
+    [
+      "TF7900 TENFLAT ENTRE PAREDES",
+      197,
+      "pérgola"
+    ],
+    [
+      "TF7910 TENFLAT PARED PORTERÍA",
+      198,
+      "pérgola"
+    ],
+    [
+      "TF7930 TENFLAT AUTOPORTANTE",
+      199,
+      "pérgola"
+    ],
+    [
+      "TENSAND PÉRGOLAS PLANA",
+      201,
+      "pérgola"
+    ],
+    [
+      "TS5000 TENSAND ENTRE PAREDES",
+      203,
+      "pérgola"
+    ],
+    [
+      "TS5030 TENSAND AUTOPORTANTE",
+      204,
+      "pérgola"
+    ],
+    [
+      "TS5010 TENSAND PARED PORTERÍA",
+      205,
+      "pérgola"
+    ],
+    [
+      "PANEL TENSAND",
+      206,
+      "accesorio"
+    ],
+    [
+      "TENKI-l PÉRGOLAS BIOCLIMÁTICAS",
+      209,
+      "pérgola"
+    ],
+    [
+      "TK6000 TENKI L ENTRE PAREDES",
+      211,
+      "pérgola"
+    ],
+    [
+      "TK6010 TENKI L PP LAMAS PARALELAS",
+      212,
+      "pérgola"
+    ],
+    [
+      "TK6010-2 TENKI L PP LAMAS PERPEND.",
+      213,
+      "pérgola"
+    ],
+    [
+      "TK6030 TENKI L AUTOPORTANTE",
+      214,
+      "pérgola"
+    ],
+    [
+      "ILUMINACIÓN",
+      215,
+      "accesorio"
+    ],
+    [
+      "A-WIND VERTICALES",
+      217,
+      "vertical"
+    ],
+    [
+      "WZ1000 MANUAL",
+      219,
+      "vertical"
+    ],
+    [
+      "WZ2000 MOTORIZADO",
+      219,
+      "vertical"
+    ],
+    [
+      "AV VERTICALES",
+      223,
+      "vertical"
+    ],
+    [
+      "AV8400/8410/8430 NEXUS 80",
+      224,
+      "vertical"
+    ],
+    [
+      "AV8500/8510/8530 NEXUS 100",
+      226,
+      "vertical"
+    ],
+    [
+      "AV8600/8610/8630 NEXUS 130",
+      228,
+      "vertical"
+    ],
+    [
+      "AV8700/8710/8730 PARAVENTO",
+      232,
+      "vertical"
+    ],
+    [
+      "AV8750 PARABOX",
+      236,
+      "vertical"
+    ],
+    [
+      "AV8770 IGLOO",
+      238,
+      "vertical"
+    ],
+    [
+      "AV8870/ AV8890 NIMBUS",
+      240,
+      "vertical"
+    ],
+    [
+      "VRD TOLDOS VERANDA",
+      245,
+      "toldo"
+    ],
+    [
+      "VRD9000 EOS",
+      246,
+      "toldo"
+    ],
+    [
+      "VRD9000-2 EOS PLUS",
+      248,
+      "toldo"
+    ],
+    [
+      "VRD9010 SCREENY 130GPZ TO",
+      250,
+      "toldo"
+    ],
+    [
+      "VRD9200 GIOTTO",
+      252,
+      "toldo"
+    ],
+    [
+      "VRD9300 SIRIO",
+      254,
+      "toldo"
+    ],
+    [
+      "VRD9500 SIRIO WALL",
+      258,
+      "toldo"
+    ],
+    [
+      "LUZ ILUMINACIÓN",
+      263,
+      "categoría"
+    ],
+    [
+      "TENXO",
+      264,
+      "accesorio"
+    ],
+    [
+      "BRAZOS CONCEPT",
+      265,
+      "accesorio"
+    ],
+    [
+      "ACC ACCESORIOS GENERALES",
+      267,
+      "accesorio"
+    ],
+    [
+      "MÁQUINAS Y CASQUILLOS",
+      268,
+      "accesorio"
+    ],
+    [
+      "TUBOS",
+      269,
+      "accesorio"
+    ],
+    [
+      "ANCLAJES",
+      270,
+      "accesorio"
+    ],
+    [
+      "PERFILES Y MANIVELAS",
+      271,
+      "accesorio"
+    ],
+    [
+      "VARIOS",
+      272,
+      "accesorio"
+    ],
+    [
+      "STB TOLDOS STOBAG",
+      273,
+      "marca"
+    ],
+    [
+      "S8130 SELECT",
+      274,
+      "toldo"
+    ],
+    [
+      "S8135 OMBRAMATIC",
+      278,
+      "toldo"
+    ],
+    [
+      "S2160/2 JUMBO",
+      280,
+      "toldo"
+    ],
+    [
+      "BX2000 CASABOX",
+      282,
+      "toldo"
+    ],
+    [
+      "BX3000 TENDABOX",
+      284,
+      "toldo"
+    ],
+    [
+      "BX4000 CAMABOX",
+      286,
+      "toldo"
+    ],
+    [
+      "BX4700 CAMABOX",
+      288,
+      "toldo"
+    ],
+    [
+      "BX8000 RESOBOX",
+      290,
+      "toldo"
+    ],
+    [
+      "SR6000 SIROFLEX",
+      292,
+      "toldo"
+    ],
+    [
+      "FS6000 VISOMBRA",
+      294,
+      "toldo"
+    ],
+    [
+      "VS5200/1 /2 VENTOSOL",
+      296,
+      "toldo"
+    ],
+    [
+      "VS5400 VENTOSOL",
+      298,
+      "toldo"
+    ],
+    [
+      "VS5600/1 /2 VENTOSOL",
+      300,
+      "toldo"
+    ],
+    [
+      "VS6100 VENTOSOL",
+      302,
+      "toldo"
+    ],
+    [
+      "VS6200 VENTOSOL",
+      304,
+      "toldo"
+    ],
+    [
+      "VM720/3 VENTOSOL",
+      306,
+      "toldo"
+    ],
+    [
+      "PS4000 AIROMATIC",
+      308,
+      "toldo"
+    ],
+    [
+      "PS4500 AIROMATIC",
+      310,
+      "toldo"
+    ],
+    [
+      "PS6000 TARGA",
+      312,
+      "toldo"
+    ],
+    [
+      "PS6100 TARGA PLUS",
+      314,
+      "toldo"
+    ],
+    [
+      "PS2500 ARNEX",
+      316,
+      "toldo"
+    ],
+    [
+      "PS8000 ARNEX PLUS",
+      318,
+      "toldo"
+    ],
+    [
+      "VA1100 LIGHT SURAVA",
+      320,
+      "toldo"
+    ],
+    [
+      "VA2100 BOX SURAVA",
+      322,
+      "toldo"
+    ],
+    [
+      "VA3100 HIDE SURAVA",
+      324,
+      "toldo"
+    ],
+    [
+      "VA2100 BOX ZIP SURAVA",
+      326,
+      "toldo"
+    ],
+    [
+      "VA3100 HIDE ZIP SURAVA",
+      328,
+      "toldo"
+    ],
+    [
+      "S6600 | S6800 VIVO",
+      330,
+      "toldo"
+    ],
+    [
+      "S6600/H VIVO",
+      332,
+      "toldo"
+    ],
+    [
+      "S6800/P VIVO",
+      334,
+      "toldo"
+    ],
+    [
+      "P3600 PERGOLINO",
+      336,
+      "toldo"
+    ]
+  ],
+  "by_type": {
+    "accesorio": [
+      {
+        "name": "CSL COSTADILLO LATERAL",
+        "page": 63
+      },
+      {
+        "name": "ACCESORIOS 80x40",
+        "page": 153
+      },
+      {
+        "name": "ILUMINACIÓN",
+        "page": 166
+      },
+      {
+        "name": "ACCESORIOS 100x100",
+        "page": 168
+      },
+      {
+        "name": "ILUMINACIÓN",
+        "page": 179
+      },
+      {
+        "name": "ACCESORIOS 120x120",
+        "page": 179
+      },
+      {
+        "name": "ACCESORIOS TENXO",
+        "page": 190
+      },
+      {
+        "name": "TRIÁNGULOS LATERALES Y FRONTALES",
+        "page": 192
+      },
+      {
+        "name": "PANEL TENSAND",
+        "page": 206
+      },
+      {
+        "name": "ILUMINACIÓN",
+        "page": 215
+      },
+      {
+        "name": "TENXO",
+        "page": 264
+      },
+      {
+        "name": "BRAZOS CONCEPT",
+        "page": 265
+      },
+      {
+        "name": "ACC ACCESORIOS GENERALES",
+        "page": 267
+      },
+      {
+        "name": "MÁQUINAS Y CASQUILLOS",
+        "page": 268
+      },
+      {
+        "name": "TUBOS",
+        "page": 269
+      },
+      {
+        "name": "ANCLAJES",
+        "page": 270
+      },
+      {
+        "name": "PERFILES Y MANIVELAS",
+        "page": 271
+      },
+      {
+        "name": "VARIOS",
+        "page": 272
+      }
+    ],
+    "categoría": [
+      {
+        "name": "CONFECCIÓN Y TEJIDOS",
+        "page": 33
+      },
+      {
+        "name": "MOTORIZACIÓN",
+        "page": 51
+      },
+      {
+        "name": "LUZ ILUMINACIÓN",
+        "page": 263
+      }
+    ],
+    "cortina": [
+      {
+        "name": "RC RIEL CON CORTINA",
+        "page": 64
+      }
+    ],
+    "marca": [
+      {
+        "name": "STR TOLDOS STOR",
+        "page": 67
+      },
+      {
+        "name": "PR TOLDOS DE PUNTO RECTO",
+        "page": 73
+      },
+      {
+        "name": "ART TOLDOS DE BRAZOS ARTICULADOS",
+        "page": 85
+      },
+      {
+        "name": "MCK TOLDOS MONOBLOCK",
+        "page": 97
+      },
+      {
+        "name": "BOX TOLDOS CON COFRE",
+        "page": 105
+      },
+      {
+        "name": "STB TOLDOS STOBAG",
+        "page": 273
+      }
+    ],
+    "material": [
+      {
+        "name": "TEJIDOS CONFECCIONADOS",
+        "page": 37
+      },
+      {
+        "name": "LONAS CONFECCIONADAS",
+        "page": 43
+      },
+      {
+        "name": "ACRÍLICO PARA PALILLERÍA",
+        "page": 44
+      },
+      {
+        "name": "CRISTAL TRANSPARENTE",
+        "page": 45
+      }
+    ],
+    "motor": [
+      {
+        "name": "MOTORES SOMFY",
+        "page": 54
+      },
+      {
+        "name": "MOTORES SIMU",
+        "page": 58
+      },
+      {
+        "name": "MOTORES TELECO",
+        "page": 59
+      }
+    ],
+    "motorización": [
+      {
+        "name": "AUTOMATISMOS SOMFY RTS",
+        "page": 55
+      },
+      {
+        "name": "AUTOMATISMOS SOMFY iO",
+        "page": 56
+      }
+    ],
+    "palillería": [
+      {
+        "name": "PL 80X40 PALILLERÍAS",
+        "page": 149
+      },
+      {
+        "name": "PL7000 ENTRE PAREDES",
+        "page": 150
+      },
+      {
+        "name": "PL7010 PARED PORTERÍA",
+        "page": 151
+      },
+      {
+        "name": "PL7020 PARED PORTERÍA + LARGUERO",
+        "page": 152
+      },
+      {
+        "name": "PL7030 AUTOPORTANTE + LARGUERO",
+        "page": 152
+      },
+      {
+        "name": "PERGOO 100x100 PALILLERÍAS",
+        "page": 158
+      },
+      {
+        "name": "PL7050 ENTRE PAREDES",
+        "page": 160
+      },
+      {
+        "name": "PL7070 PARED PORTERÍA",
+        "page": 162
+      },
+      {
+        "name": "PL7090 AUTOPORTANTE",
+        "page": 164
+      },
+      {
+        "name": "PERGOO 120x120 PALILLERÍAS",
+        "page": 170
+      },
+      {
+        "name": "PL7100 ENTRE PAREDES",
+        "page": 172
+      },
+      {
+        "name": "PL7110 PARED PORTERÍA",
+        "page": 174
+      },
+      {
+        "name": "PL7130 AUTOPORTANTE",
+        "page": 176
+      }
+    ],
+    "pérgola": [
+      {
+        "name": "TENXO PÉRGOLAS TENSADAS",
+        "page": 183
+      },
+      {
+        "name": "TX7900 TENXO ENTRE PAREDES",
+        "page": 185
+      },
+      {
+        "name": "TX7910 TENXO PARED PORTERÍA",
+        "page": 186
+      },
+      {
+        "name": "TX7930 TENXO AUTOPORTANTE",
+        "page": 187
+      },
+      {
+        "name": "TX7950 TENXO ARRIOSTRADA",
+        "page": 188
+      },
+      {
+        "name": "TX7970 TENXO 2 AGUAS AUTOPORTANTE",
+        "page": 189
+      },
+      {
+        "name": "TENFLAT PÉRGOLAS TENSADAS",
+        "page": 195
+      },
+      {
+        "name": "TF7900 TENFLAT ENTRE PAREDES",
+        "page": 197
+      },
+      {
+        "name": "TF7910 TENFLAT PARED PORTERÍA",
+        "page": 198
+      },
+      {
+        "name": "TF7930 TENFLAT AUTOPORTANTE",
+        "page": 199
+      },
+      {
+        "name": "TENSAND PÉRGOLAS PLANA",
+        "page": 201
+      },
+      {
+        "name": "TS5000 TENSAND ENTRE PAREDES",
+        "page": 203
+      },
+      {
+        "name": "TS5030 TENSAND AUTOPORTANTE",
+        "page": 204
+      },
+      {
+        "name": "TS5010 TENSAND PARED PORTERÍA",
+        "page": 205
+      },
+      {
+        "name": "TENKI-l PÉRGOLAS BIOCLIMÁTICAS",
+        "page": 209
+      },
+      {
+        "name": "TK6000 TENKI L ENTRE PAREDES",
+        "page": 211
+      },
+      {
+        "name": "TK6010 TENKI L PP LAMAS PARALELAS",
+        "page": 212
+      },
+      {
+        "name": "TK6010-2 TENKI L PP LAMAS PERPEND.",
+        "page": 213
+      },
+      {
+        "name": "TK6030 TENKI L AUTOPORTANTE",
+        "page": 214
+      }
+    ],
+    "sistema": [
+      {
+        "name": "CORTINAS",
+        "page": 61
+      }
+    ],
+    "toldo": [
+      {
+        "name": "LAVELA",
+        "page": 25
+      },
+      {
+        "name": "VELUM",
+        "page": 30
+      },
+      {
+        "name": "CAP CAPOTAS",
+        "page": 65
+      },
+      {
+        "name": "STR1000 SOLARIS",
+        "page": 68
+      },
+      {
+        "name": "STR1100 DESERT",
+        "page": 70
+      },
+      {
+        "name": "PR2000 ÍNDICO I1",
+        "page": 74
+      },
+      {
+        "name": "PRS2100 ÍNDICO I2",
+        "page": 76
+      },
+      {
+        "name": "PRT2200 ÍNDICO I3",
+        "page": 78
+      },
+      {
+        "name": "PRCS3100 DESERT ÍNDICO I2",
+        "page": 80
+      },
+      {
+        "name": "PRCT3200 DESERT ÍNDICO I3",
+        "page": 82
+      },
+      {
+        "name": "ART4100 A1 SMART",
+        "page": 86
+      },
+      {
+        "name": "ART4110 A1 PREMIUM",
+        "page": 88
+      },
+      {
+        "name": "ARX1000 BRAZOS CRUZADOS",
+        "page": 90
+      },
+      {
+        "name": "TJD TEJADILLO",
+        "page": 92
+      },
+      {
+        "name": "SBX VÉRTIKO",
+        "page": 93
+      },
+      {
+        "name": "SPL SPIRAL",
+        "page": 94
+      },
+      {
+        "name": "MCK4700 M1 PREMIUM PLUS",
+        "page": 98
+      },
+      {
+        "name": "MCK4900 ARKO",
+        "page": 102
+      },
+      {
+        "name": "BOX6000 IRIS",
+        "page": 106
+      },
+      {
+        "name": "BOX6010 INDIE",
+        "page": 108
+      },
+      {
+        "name": "BOX5200 SAMA",
+        "page": 110
+      },
+      {
+        "name": "BOX6100 ARES",
+        "page": 112
+      },
+      {
+        "name": "BOX6110 CONCEPT",
+        "page": 114
+      },
+      {
+        "name": "BOX6300 ALAND 2.0",
+        "page": 116
+      },
+      {
+        "name": "BOX7000 GÉMINI",
+        "page": 118
+      },
+      {
+        "name": "VSJ12000 VISOMBRA",
+        "page": 122
+      },
+      {
+        "name": "BOX6400 LUSOL",
+        "page": 126
+      },
+      {
+        "name": "BOX6500 ARKO",
+        "page": 128
+      },
+      {
+        "name": "BOX8100 KYMA",
+        "page": 130
+      },
+      {
+        "name": "BOX8110 KYMA + VÉRTIKO",
+        "page": 134
+      },
+      {
+        "name": "BOX8200 KALI",
+        "page": 136
+      },
+      {
+        "name": "BOX8300 MÁXIMUS",
+        "page": 140
+      },
+      {
+        "name": "UVE",
+        "page": 144
+      },
+      {
+        "name": "ET1000 - ENTRETOLDOS",
+        "page": 146
+      },
+      {
+        "name": "VRD TOLDOS VERANDA",
+        "page": 245
+      },
+      {
+        "name": "VRD9000 EOS",
+        "page": 246
+      },
+      {
+        "name": "VRD9000-2 EOS PLUS",
+        "page": 248
+      },
+      {
+        "name": "VRD9010 SCREENY 130GPZ TO",
+        "page": 250
+      },
+      {
+        "name": "VRD9200 GIOTTO",
+        "page": 252
+      },
+      {
+        "name": "VRD9300 SIRIO",
+        "page": 254
+      },
+      {
+        "name": "VRD9500 SIRIO WALL",
+        "page": 258
+      },
+      {
+        "name": "S8130 SELECT",
+        "page": 274
+      },
+      {
+        "name": "S8135 OMBRAMATIC",
+        "page": 278
+      },
+      {
+        "name": "S2160/2 JUMBO",
+        "page": 280
+      },
+      {
+        "name": "BX2000 CASABOX",
+        "page": 282
+      },
+      {
+        "name": "BX3000 TENDABOX",
+        "page": 284
+      },
+      {
+        "name": "BX4000 CAMABOX",
+        "page": 286
+      },
+      {
+        "name": "BX4700 CAMABOX",
+        "page": 288
+      },
+      {
+        "name": "BX8000 RESOBOX",
+        "page": 290
+      },
+      {
+        "name": "SR6000 SIROFLEX",
+        "page": 292
+      },
+      {
+        "name": "FS6000 VISOMBRA",
+        "page": 294
+      },
+      {
+        "name": "VS5200/1 /2 VENTOSOL",
+        "page": 296
+      },
+      {
+        "name": "VS5400 VENTOSOL",
+        "page": 298
+      },
+      {
+        "name": "VS5600/1 /2 VENTOSOL",
+        "page": 300
+      },
+      {
+        "name": "VS6100 VENTOSOL",
+        "page": 302
+      },
+      {
+        "name": "VS6200 VENTOSOL",
+        "page": 304
+      },
+      {
+        "name": "VM720/3 VENTOSOL",
+        "page": 306
+      },
+      {
+        "name": "PS4000 AIROMATIC",
+        "page": 308
+      },
+      {
+        "name": "PS4500 AIROMATIC",
+        "page": 310
+      },
+      {
+        "name": "PS6000 TARGA",
+        "page": 312
+      },
+      {
+        "name": "PS6100 TARGA PLUS",
+        "page": 314
+      },
+      {
+        "name": "PS2500 ARNEX",
+        "page": 316
+      },
+      {
+        "name": "PS8000 ARNEX PLUS",
+        "page": 318
+      },
+      {
+        "name": "VA1100 LIGHT SURAVA",
+        "page": 320
+      },
+      {
+        "name": "VA2100 BOX SURAVA",
+        "page": 322
+      },
+      {
+        "name": "VA3100 HIDE SURAVA",
+        "page": 324
+      },
+      {
+        "name": "VA2100 BOX ZIP SURAVA",
+        "page": 326
+      },
+      {
+        "name": "VA3100 HIDE ZIP SURAVA",
+        "page": 328
+      },
+      {
+        "name": "S6600 | S6800 VIVO",
+        "page": 330
+      },
+      {
+        "name": "S6600/H VIVO",
+        "page": 332
+      },
+      {
+        "name": "S6800/P VIVO",
+        "page": 334
+      },
+      {
+        "name": "P3600 PERGOLINO",
+        "page": 336
+      }
+    ],
+    "vertical": [
+      {
+        "name": "A-WIND VERTICALES",
+        "page": 217
+      },
+      {
+        "name": "WZ1000 MANUAL",
+        "page": 219
+      },
+      {
+        "name": "WZ2000 MOTORIZADO",
+        "page": 219
+      },
+      {
+        "name": "AV VERTICALES",
+        "page": 223
+      },
+      {
+        "name": "AV8400/8410/8430 NEXUS 80",
+        "page": 224
+      },
+      {
+        "name": "AV8500/8510/8530 NEXUS 100",
+        "page": 226
+      },
+      {
+        "name": "AV8600/8610/8630 NEXUS 130",
+        "page": 228
+      },
+      {
+        "name": "AV8700/8710/8730 PARAVENTO",
+        "page": 232
+      },
+      {
+        "name": "AV8750 PARABOX",
+        "page": 236
+      },
+      {
+        "name": "AV8770 IGLOO",
+        "page": 238
+      },
+      {
+        "name": "AV8870/ AV8890 NIMBUS",
+        "page": 240
+      }
+    ]
+  },
+  "total_count": 153,
+  "count_by_type": {
+    "accesorio": 18,
+    "categoría": 3,
+    "cortina": 1,
+    "marca": 6,
+    "material": 4,
+    "motor": 3,
+    "motorización": 2,
+    "palillería": 13,
+    "pérgola": 19,
+    "sistema": 1,
+    "toldo": 72,
+    "vertical": 11
+  }
+}

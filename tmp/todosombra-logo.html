@@ -1,0 +1,624 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TodoSombra · Identidad Visual</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;700;900&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --sol:          #F5A623;
+      --sol-light:    #FFD166;
+      --sombra:       #1C3D5A;
+      --sombra-mid:   #2D5A8E;
+      --cream:        #F7F5F2;
+      --line:         #E0DCD8;
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      background: var(--cream);
+      font-family: 'Montserrat', 'Helvetica Neue', Arial, sans-serif;
+      color: var(--sombra);
+      padding: 56px 48px;
+    }
+
+    /* ── PAGE HEADER ── */
+    .page-header { margin-bottom: 64px; }
+    .page-header h1 {
+      font-size: 11px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 5px;
+      color: #aaa;
+      margin-bottom: 6px;
+    }
+    .page-header p {
+      font-size: 13px;
+      font-weight: 300;
+      color: #bbb;
+    }
+
+    /* ── SECTION ── */
+    .section { margin-bottom: 64px; }
+    .section-label {
+      font-size: 10px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 4px;
+      color: #c5c0bb;
+      margin-bottom: 24px;
+    }
+
+    hr {
+      border: none;
+      border-top: 1px solid var(--line);
+      margin: 56px 0;
+    }
+
+    /* ── LOGO CARDS ── */
+    .logo-row {
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    .logo-card {
+      border-radius: 20px;
+      padding: 52px 56px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 4px 32px rgba(0,0,0,0.07);
+    }
+    .bg-white  { background: #ffffff; }
+    .bg-dark   { background: var(--sombra); }
+    .bg-amber  { background: var(--sol); }
+    .bg-black  { background: #111111; }
+
+    /* ── HORIZONTAL LOGO ── */
+    .logo-h {
+      display: flex;
+      align-items: center;
+      gap: 22px;
+    }
+
+    .wordmark {
+      display: flex;
+      flex-direction: column;
+      line-height: 1;
+      user-select: none;
+    }
+    .wm-todo {
+      font-size: 22px;
+      font-weight: 200;
+      letter-spacing: 8px;
+      text-transform: lowercase;
+      color: var(--sombra);
+      margin-right: -8px; /* compensar letter-spacing final */
+    }
+    .wm-sombra {
+      font-size: 34px;
+      font-weight: 900;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: var(--sombra);
+      margin-top: -3px;
+    }
+
+    /* on dark bg */
+    .bg-dark  .wm-todo  { color: rgba(255,255,255,0.5); }
+    .bg-dark  .wm-sombra{ color: #ffffff; }
+    .bg-black .wm-todo  { color: rgba(255,255,255,0.45); }
+    .bg-black .wm-sombra{ color: #ffffff; }
+
+    /* on amber bg */
+    .bg-amber .wm-todo  { color: rgba(28,61,90,0.6); }
+    .bg-amber .wm-sombra{ color: var(--sombra); }
+
+    /* ── STACKED LOGO ── */
+    .logo-v {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 18px;
+    }
+    .wordmark-v {
+      text-align: center;
+      line-height: 1;
+    }
+    .wm-v-todo {
+      display: block;
+      font-size: 14px;
+      font-weight: 200;
+      letter-spacing: 10px;
+      text-transform: lowercase;
+      color: var(--sombra);
+      margin-right: -10px;
+    }
+    .wm-v-sombra {
+      display: block;
+      font-size: 26px;
+      font-weight: 900;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: var(--sombra);
+      margin-top: 1px;
+    }
+    .bg-dark  .wm-v-todo   { color: rgba(255,255,255,0.5); }
+    .bg-dark  .wm-v-sombra { color: #ffffff; }
+    .bg-amber .wm-v-todo   { color: rgba(28,61,90,0.6); }
+    .bg-amber .wm-v-sombra { color: var(--sombra); }
+
+    /* ── ICON SIZES ── */
+    .icon-row {
+      display: flex;
+      align-items: center;
+      gap: 28px;
+      flex-wrap: wrap;
+      background: white;
+      border-radius: 20px;
+      padding: 40px 48px;
+      box-shadow: 0 4px 32px rgba(0,0,0,0.07);
+    }
+    .icon-label {
+      font-size: 10px;
+      color: #bbb;
+      text-align: center;
+      margin-top: 6px;
+      letter-spacing: 1px;
+    }
+    .icon-item { display: flex; flex-direction: column; align-items: center; }
+
+    /* ── COLORS ── */
+    .color-row {
+      display: flex;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+    .color-chip {
+      width: 150px;
+      border-radius: 16px;
+      overflow: hidden;
+      box-shadow: 0 2px 16px rgba(0,0,0,0.09);
+    }
+    .chip-block { height: 96px; }
+    .chip-info {
+      background: white;
+      padding: 12px 16px 14px;
+    }
+    .chip-name {
+      font-size: 12px;
+      font-weight: 700;
+      margin-bottom: 3px;
+    }
+    .chip-hex  { font-size: 11px; color: #aaa; font-weight: 400; }
+
+    /* ── TYPE SPECIMEN ── */
+    .type-card {
+      background: white;
+      border-radius: 20px;
+      padding: 48px;
+      box-shadow: 0 4px 32px rgba(0,0,0,0.07);
+    }
+    .type-row { margin-bottom: 20px; display: flex; align-items: baseline; gap: 20px; }
+    .type-meta { font-size: 10px; color: #ccc; letter-spacing: 2px; min-width: 120px; }
+
+    /* ── TAGLINE MOCKUP ── */
+    .tagline-card {
+      background: linear-gradient(135deg, var(--sombra) 0%, var(--sombra-mid) 100%);
+      border-radius: 20px;
+      padding: 64px 72px;
+      box-shadow: 0 8px 48px rgba(28,61,90,0.3);
+      display: inline-flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 28px;
+      min-width: 520px;
+    }
+    .tagline-text {
+      font-size: 17px;
+      font-weight: 300;
+      color: rgba(255,255,255,0.65);
+      letter-spacing: 1px;
+    }
+    .tagline-text strong {
+      font-weight: 700;
+      color: var(--sol);
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ───────────────────────────────────────────── PAGE HEADER -->
+  <div class="page-header">
+    <h1>TodoSombra · Identidad Visual</h1>
+    <p>Propuesta de logo · Mayo 2026</p>
+  </div>
+
+
+  <!-- ───────────────────────────────────────── LOGO HORIZONTAL -->
+  <div class="section">
+    <div class="section-label">Logo horizontal</div>
+    <div class="logo-row">
+
+      <!-- Fondo blanco -->
+      <div class="logo-card bg-white">
+        <div class="logo-h">
+          <svg width="68" height="68" viewBox="0 0 80 80" xmlns="http://www.w3.org/2000/svg">
+            <!-- Sombra suave bajo el icono -->
+            <ellipse cx="40" cy="77" rx="26" ry="3.5" fill="rgba(28,61,90,0.10)"/>
+            <!-- Círculo base = zona de sombra (azul marino) -->
+            <circle cx="40" cy="40" r="34" fill="#1C3D5A"/>
+            <!-- Mitad superior = sol (ámbar) -->
+            <path d="M 6,40 A 34,34 0 0 1 74,40 Z" fill="#F5A623"/>
+            <!-- Barra blanca = el toldo -->
+            <rect x="1" y="34.5" width="78" height="11" rx="5.5" fill="white"/>
+            <!-- Rayos del sol -->
+            <line x1="40"  y1="2"  x2="40"  y2="11"  stroke="#F5A623" stroke-width="3"   stroke-linecap="round"/>
+            <line x1="62"  y1="8"  x2="57"  y2="16"  stroke="#F5A623" stroke-width="3"   stroke-linecap="round"/>
+            <line x1="18"  y1="8"  x2="23"  y2="16"  stroke="#F5A623" stroke-width="3"   stroke-linecap="round"/>
+            <line x1="74"  y1="26" x2="66"  y2="29"  stroke="#F5A623" stroke-width="2.5" stroke-linecap="round"/>
+            <line x1="6"   y1="26" x2="14"  y2="29"  stroke="#F5A623" stroke-width="2.5" stroke-linecap="round"/>
+          </svg>
+          <div class="wordmark">
+            <span class="wm-todo">todo</span>
+            <span class="wm-sombra">sombra</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Fondo oscuro -->
+      <div class="logo-card bg-dark">
+        <div class="logo-h">
+          <svg width="68" height="68" viewBox="0 0 80 80" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="40" cy="40" r="34" fill="rgba(255,255,255,0.10)"/>
+            <path d="M 6,40 A 34,34 0 0 1 74,40 Z" fill="#F5A623"/>
+            <rect x="1" y="34.5" width="78" height="11" rx="5.5" fill="white"/>
+            <line x1="40"  y1="2"  x2="40"  y2="11"  stroke="#F5A623" stroke-width="3"   stroke-linecap="round"/>
+            <line x1="62"  y1="8"  x2="57"  y2="16"  stroke="#F5A623" stroke-width="3"   stroke-linecap="round"/>
+            <line x1="18"  y1="8"  x2="23"  y2="16"  stroke="#F5A623" stroke-width="3"   stroke-linecap="round"/>
+            <line x1="74"  y1="26" x2="66"  y2="29"  stroke="#F5A623" stroke-width="2.5" stroke-linecap="round"/>
+            <line x1="6"   y1="26" x2="14"  y2="29"  stroke="#F5A623" stroke-width="2.5" stroke-linecap="round"/>
+          </svg>
+          <div class="wordmark">
+            <span class="wm-todo">todo</span>
+            <span class="wm-sombra">sombra</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Fondo ámbar -->
+      <div class="logo-card bg-amber">
+        <div class="logo-h">
+          <svg width="68" height="68" viewBox="0 0 80 80" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="40" cy="40" r="34" fill="#1C3D5A"/>
+            <path d="M 6,40 A 34,34 0 0 1 74,40 Z" fill="rgba(255,255,255,0.88)"/>
+            <rect x="1" y="34.5" width="78" height="11" rx="5.5" fill="white"/>
+            <line x1="40"  y1="2"  x2="40"  y2="11"  stroke="rgba(255,255,255,0.75)" stroke-width="3"   stroke-linecap="round"/>
+            <line x1="62"  y1="8"  x2="57"  y2="16"  stroke="rgba(255,255,255,0.75)" stroke-width="3"   stroke-linecap="round"/>
+            <line x1="18"  y1="8"  x2="23"  y2="16"  stroke="rgba(255,255,255,0.75)" stroke-width="3"   stroke-linecap="round"/>
+            <line x1="74"  y1="26" x2="66"  y2="29"  stroke="rgba(255,255,255,0.65)" stroke-width="2.5" stroke-linecap="round"/>
+            <line x1="6"   y1="26" x2="14"  y2="29"  stroke="rgba(255,255,255,0.65)" stroke-width="2.5" stroke-linecap="round"/>
+          </svg>
+          <div class="wordmark">
+            <span class="wm-todo">todo</span>
+            <span class="wm-sombra">sombra</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Fondo negro -->
+      <div class="logo-card bg-black">
+        <div class="logo-h">
+          <svg width="68" height="68" viewBox="0 0 80 80" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="40" cy="40" r="34" fill="rgba(255,255,255,0.07)"/>
+            <path d="M 6,40 A 34,34 0 0 1 74,40 Z" fill="#F5A623"/>
+            <rect x="1" y="34.5" width="78" height="11" rx="5.5" fill="white"/>
+            <line x1="40"  y1="2"  x2="40"  y2="11"  stroke="#F5A623" stroke-width="3"   stroke-linecap="round"/>
+            <line x1="62"  y1="8"  x2="57"  y2="16"  stroke="#F5A623" stroke-width="3"   stroke-linecap="round"/>
+            <line x1="18"  y1="8"  x2="23"  y2="16"  stroke="#F5A623" stroke-width="3"   stroke-linecap="round"/>
+            <line x1="74"  y1="26" x2="66"  y2="29"  stroke="#F5A623" stroke-width="2.5" stroke-linecap="round"/>
+            <line x1="6"   y1="26" x2="14"  y2="29"  stroke="#F5A623" stroke-width="2.5" stroke-linecap="round"/>
+          </svg>
+          <div class="wordmark">
+            <span class="wm-todo">todo</span>
+            <span class="wm-sombra">sombra</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <hr>
+
+  <!-- ─────────────────────────────────────────── LOGO VERTICAL -->
+  <div class="section">
+    <div class="section-label">Logo vertical (redes sociales / cuadrado)</div>
+    <div class="logo-row">
+
+      <div class="logo-card bg-white" style="padding: 52px 64px;">
+        <div class="logo-v">
+          <svg width="88" height="88" viewBox="0 0 80 80" xmlns="http://www.w3.org/2000/svg">
+            <ellipse cx="40" cy="77" rx="26" ry="3.5" fill="rgba(28,61,90,0.10)"/>
+            <circle cx="40" cy="40" r="34" fill="#1C3D5A"/>
+            <path d="M 6,40 A 34,34 0 0 1 74,40 Z" fill="#F5A623"/>
+            <rect x="1" y="34.5" width="78" height="11" rx="5.5" fill="white"/>
+            <line x1="40"  y1="2"  x2="40"  y2="11"  stroke="#F5A623" stroke-width="3"   stroke-linecap="round"/>
+            <line x1="62"  y1="8"  x2="57"  y2="16"  stroke="#F5A623" stroke-width="3"   stroke-linecap="round"/>
+            <line x1="18"  y1="8"  x2="23"  y2="16"  stroke="#F5A623" stroke-width="3"   stroke-linecap="round"/>
+            <line x1="74"  y1="26" x2="66"  y2="29"  stroke="#F5A623" stroke-width="2.5" stroke-linecap="round"/>
+            <line x1="6"   y1="26" x2="14"  y2="29"  stroke="#F5A623" stroke-width="2.5" stroke-linecap="round"/>
+          </svg>
+          <div class="wordmark-v">
+            <span class="wm-v-todo">todo</span>
+            <span class="wm-v-sombra">sombra</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="logo-card bg-dark" style="padding: 52px 64px;">
+        <div class="logo-v">
+          <svg width="88" height="88" viewBox="0 0 80 80" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="40" cy="40" r="34" fill="rgba(255,255,255,0.10)"/>
+            <path d="M 6,40 A 34,34 0 0 1 74,40 Z" fill="#F5A623"/>
+            <rect x="1" y="34.5" width="78" height="11" rx="5.5" fill="white"/>
+            <line x1="40"  y1="2"  x2="40"  y2="11"  stroke="#F5A623" stroke-width="3"   stroke-linecap="round"/>
+            <line x1="62"  y1="8"  x2="57"  y2="16"  stroke="#F5A623" stroke-width="3"   stroke-linecap="round"/>
+            <line x1="18"  y1="8"  x2="23"  y2="16"  stroke="#F5A623" stroke-width="3"   stroke-linecap="round"/>
+            <line x1="74"  y1="26" x2="66"  y2="29"  stroke="#F5A623" stroke-width="2.5" stroke-linecap="round"/>
+            <line x1="6"   y1="26" x2="14"  y2="29"  stroke="#F5A623" stroke-width="2.5" stroke-linecap="round"/>
+          </svg>
+          <div class="wordmark-v">
+            <span class="wm-v-todo">todo</span>
+            <span class="wm-v-sombra" style="color:white;">sombra</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="logo-card bg-amber" style="padding: 52px 64px;">
+        <div class="logo-v">
+          <svg width="88" height="88" viewBox="0 0 80 80" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="40" cy="40" r="34" fill="#1C3D5A"/>
+            <path d="M 6,40 A 34,34 0 0 1 74,40 Z" fill="rgba(255,255,255,0.88)"/>
+            <rect x="1" y="34.5" width="78" height="11" rx="5.5" fill="white"/>
+            <line x1="40"  y1="2"  x2="40"  y2="11"  stroke="rgba(255,255,255,0.75)" stroke-width="3"   stroke-linecap="round"/>
+            <line x1="62"  y1="8"  x2="57"  y2="16"  stroke="rgba(255,255,255,0.75)" stroke-width="3"   stroke-linecap="round"/>
+            <line x1="18"  y1="8"  x2="23"  y2="16"  stroke="rgba(255,255,255,0.75)" stroke-width="3"   stroke-linecap="round"/>
+            <line x1="74"  y1="26" x2="66"  y2="29"  stroke="rgba(255,255,255,0.65)" stroke-width="2.5" stroke-linecap="round"/>
+            <line x1="6"   y1="26" x2="14"  y2="29"  stroke="rgba(255,255,255,0.65)" stroke-width="2.5" stroke-linecap="round"/>
+          </svg>
+          <div class="wordmark-v">
+            <span class="wm-v-todo">todo</span>
+            <span class="wm-v-sombra">sombra</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <hr>
+
+  <!-- ──────────────────────────────────────────── ÍCONO SOLO -->
+  <div class="section">
+    <div class="section-label">Ícono solo · escalado (avatar / favicon / sello)</div>
+    <div class="icon-row">
+
+      <div class="icon-item">
+        <svg width="120" height="120" viewBox="0 0 80 80" xmlns="http://www.w3.org/2000/svg">
+          <ellipse cx="40" cy="77" rx="26" ry="3.5" fill="rgba(28,61,90,0.10)"/>
+          <circle cx="40" cy="40" r="34" fill="#1C3D5A"/>
+          <path d="M 6,40 A 34,34 0 0 1 74,40 Z" fill="#F5A623"/>
+          <rect x="1" y="34.5" width="78" height="11" rx="5.5" fill="white"/>
+          <line x1="40" y1="2"  x2="40" y2="11"  stroke="#F5A623" stroke-width="3"   stroke-linecap="round"/>
+          <line x1="62" y1="8"  x2="57" y2="16"  stroke="#F5A623" stroke-width="3"   stroke-linecap="round"/>
+          <line x1="18" y1="8"  x2="23" y2="16"  stroke="#F5A623" stroke-width="3"   stroke-linecap="round"/>
+          <line x1="74" y1="26" x2="66" y2="29"  stroke="#F5A623" stroke-width="2.5" stroke-linecap="round"/>
+          <line x1="6"  y1="26" x2="14" y2="29"  stroke="#F5A623" stroke-width="2.5" stroke-linecap="round"/>
+        </svg>
+        <div class="icon-label">120px</div>
+      </div>
+
+      <div class="icon-item">
+        <svg width="80" height="80" viewBox="0 0 80 80" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="40" cy="40" r="34" fill="#1C3D5A"/>
+          <path d="M 6,40 A 34,34 0 0 1 74,40 Z" fill="#F5A623"/>
+          <rect x="1" y="34.5" width="78" height="11" rx="5.5" fill="white"/>
+          <line x1="40" y1="2"  x2="40" y2="11"  stroke="#F5A623" stroke-width="3"   stroke-linecap="round"/>
+          <line x1="62" y1="8"  x2="57" y2="16"  stroke="#F5A623" stroke-width="3"   stroke-linecap="round"/>
+          <line x1="18" y1="8"  x2="23" y2="16"  stroke="#F5A623" stroke-width="3"   stroke-linecap="round"/>
+        </svg>
+        <div class="icon-label">80px</div>
+      </div>
+
+      <div class="icon-item">
+        <svg width="48" height="48" viewBox="0 0 80 80" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="40" cy="40" r="34" fill="#1C3D5A"/>
+          <path d="M 6,40 A 34,34 0 0 1 74,40 Z" fill="#F5A623"/>
+          <rect x="1" y="34.5" width="78" height="11" rx="5.5" fill="white"/>
+          <line x1="40" y1="2"  x2="40" y2="11"  stroke="#F5A623" stroke-width="3"   stroke-linecap="round"/>
+          <line x1="62" y1="8"  x2="57" y2="16"  stroke="#F5A623" stroke-width="3"   stroke-linecap="round"/>
+          <line x1="18" y1="8"  x2="23" y2="16"  stroke="#F5A623" stroke-width="3"   stroke-linecap="round"/>
+        </svg>
+        <div class="icon-label">48px</div>
+      </div>
+
+      <div class="icon-item">
+        <svg width="32" height="32" viewBox="0 0 80 80" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="40" cy="40" r="34" fill="#1C3D5A"/>
+          <path d="M 6,40 A 34,34 0 0 1 74,40 Z" fill="#F5A623"/>
+          <rect x="1" y="34.5" width="78" height="11" rx="5.5" fill="white"/>
+        </svg>
+        <div class="icon-label">32px</div>
+      </div>
+
+      <div class="icon-item">
+        <svg width="20" height="20" viewBox="0 0 80 80" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="40" cy="40" r="34" fill="#1C3D5A"/>
+          <path d="M 6,40 A 34,34 0 0 1 74,40 Z" fill="#F5A623"/>
+          <rect x="1" y="34.5" width="78" height="11" rx="5.5" fill="white"/>
+        </svg>
+        <div class="icon-label">20px</div>
+      </div>
+
+      <!-- Dark background versions -->
+      <div style="background: #1C3D5A; border-radius: 16px; padding: 24px; display: flex; gap: 20px; align-items: center;">
+        <div class="icon-item">
+          <svg width="80" height="80" viewBox="0 0 80 80" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="40" cy="40" r="34" fill="rgba(255,255,255,0.10)"/>
+            <path d="M 6,40 A 34,34 0 0 1 74,40 Z" fill="#F5A623"/>
+            <rect x="1" y="34.5" width="78" height="11" rx="5.5" fill="white"/>
+            <line x1="40" y1="2"  x2="40" y2="11"  stroke="#F5A623" stroke-width="3"   stroke-linecap="round"/>
+            <line x1="62" y1="8"  x2="57" y2="16"  stroke="#F5A623" stroke-width="3"   stroke-linecap="round"/>
+            <line x1="18" y1="8"  x2="23" y2="16"  stroke="#F5A623" stroke-width="3"   stroke-linecap="round"/>
+          </svg>
+          <div class="icon-label" style="color:rgba(255,255,255,0.4);">dark bg</div>
+        </div>
+        <div class="icon-item">
+          <svg width="48" height="48" viewBox="0 0 80 80" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="40" cy="40" r="34" fill="rgba(255,255,255,0.10)"/>
+            <path d="M 6,40 A 34,34 0 0 1 74,40 Z" fill="#F5A623"/>
+            <rect x="1" y="34.5" width="78" height="11" rx="5.5" fill="white"/>
+          </svg>
+        </div>
+        <div class="icon-item">
+          <svg width="32" height="32" viewBox="0 0 80 80" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="40" cy="40" r="34" fill="rgba(255,255,255,0.10)"/>
+            <path d="M 6,40 A 34,34 0 0 1 74,40 Z" fill="#F5A623"/>
+            <rect x="1" y="34.5" width="78" height="11" rx="5.5" fill="white"/>
+          </svg>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <hr>
+
+  <!-- ─────────────────────────────────────────── PALETA ── -->
+  <div class="section">
+    <div class="section-label">Paleta de color</div>
+    <div class="color-row">
+
+      <div class="color-chip">
+        <div class="chip-block" style="background:#F5A623;"></div>
+        <div class="chip-info">
+          <div class="chip-name" style="color:#1C3D5A;">Sol</div>
+          <div class="chip-hex">#F5A623</div>
+        </div>
+      </div>
+
+      <div class="color-chip">
+        <div class="chip-block" style="background:#FFD166;"></div>
+        <div class="chip-info">
+          <div class="chip-name" style="color:#1C3D5A;">Sol claro</div>
+          <div class="chip-hex">#FFD166</div>
+        </div>
+      </div>
+
+      <div class="color-chip">
+        <div class="chip-block" style="background:#1C3D5A;"></div>
+        <div class="chip-info">
+          <div class="chip-name" style="color:#1C3D5A;">Sombra</div>
+          <div class="chip-hex">#1C3D5A</div>
+        </div>
+      </div>
+
+      <div class="color-chip">
+        <div class="chip-block" style="background:#2D5A8E;"></div>
+        <div class="chip-info">
+          <div class="chip-name" style="color:#1C3D5A;">Sombra media</div>
+          <div class="chip-hex">#2D5A8E</div>
+        </div>
+      </div>
+
+      <div class="color-chip">
+        <div class="chip-block" style="background:#F7F5F2; border-bottom: 1px solid #e8e4df;"></div>
+        <div class="chip-info">
+          <div class="chip-name" style="color:#1C3D5A;">Fondo crema</div>
+          <div class="chip-hex">#F7F5F2</div>
+        </div>
+      </div>
+
+      <div class="color-chip">
+        <div class="chip-block" style="background:#FFFFFF; border-bottom: 1px solid #e8e4df;"></div>
+        <div class="chip-info">
+          <div class="chip-name" style="color:#1C3D5A;">Blanco</div>
+          <div class="chip-hex">#FFFFFF</div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <hr>
+
+  <!-- ──────────────────────────────────────── TIPOGRAFÍA ── -->
+  <div class="section">
+    <div class="section-label">Tipografía — Montserrat</div>
+    <div class="type-card">
+      <div class="type-row">
+        <div class="type-meta">BLACK · 900</div>
+        <div style="font-size:42px; font-weight:900; color:var(--sombra); letter-spacing:-1px;">TODOSOMBRA</div>
+      </div>
+      <div class="type-row">
+        <div class="type-meta">BOLD · 700</div>
+        <div style="font-size:32px; font-weight:700; color:var(--sombra);">Toldos y Pérgolas Premium</div>
+      </div>
+      <div class="type-row">
+        <div class="type-meta">REGULAR · 400</div>
+        <div style="font-size:22px; font-weight:400; color:var(--sombra);">Protección solar de calidad</div>
+      </div>
+      <div class="type-row">
+        <div class="type-meta">LIGHT · 200</div>
+        <div style="font-size:20px; font-weight:200; color:var(--sombra); letter-spacing:1px;">todo tipo de sombras, para tu espacio</div>
+      </div>
+    </div>
+  </div>
+
+  <hr>
+
+  <!-- ────────────────────────────────────────── CONTEXTO ── -->
+  <div class="section">
+    <div class="section-label">Contexto aplicado · mockup</div>
+    <div class="tagline-card">
+      <div class="logo-h">
+        <svg width="56" height="56" viewBox="0 0 80 80" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="40" cy="40" r="34" fill="rgba(255,255,255,0.10)"/>
+          <path d="M 6,40 A 34,34 0 0 1 74,40 Z" fill="#F5A623"/>
+          <rect x="1" y="34.5" width="78" height="11" rx="5.5" fill="white"/>
+          <line x1="40" y1="2"  x2="40" y2="11"  stroke="#F5A623" stroke-width="3"   stroke-linecap="round"/>
+          <line x1="62" y1="8"  x2="57" y2="16"  stroke="#F5A623" stroke-width="3"   stroke-linecap="round"/>
+          <line x1="18" y1="8"  x2="23" y2="16"  stroke="#F5A623" stroke-width="3"   stroke-linecap="round"/>
+        </svg>
+        <div class="wordmark">
+          <span class="wm-todo" style="color:rgba(255,255,255,0.5);">todo</span>
+          <span class="wm-sombra" style="color:white;">sombra</span>
+        </div>
+      </div>
+      <div class="tagline-text">
+        Toldos · Pérgolas · Cofres · Instalación profesional<br>
+        <strong>Costa de Murcia · Mar Menor</strong>
+      </div>
+    </div>
+  </div>
+
+  <!-- ──────────────────────────────── NOTA DE DISEÑO ── -->
+  <div style="margin-top: 56px; padding: 32px 40px; background: white; border-radius: 16px; box-shadow: 0 2px 16px rgba(0,0,0,0.05);">
+    <div class="section-label" style="margin-bottom:16px;">Concepto de diseño</div>
+    <p style="font-size:14px; font-weight:300; line-height:1.8; color:#555; max-width:640px;">
+      El ícono representa la dualidad central del negocio: <strong style="font-weight:700; color:var(--sol);">sol</strong> y <strong style="font-weight:700; color:var(--sombra);">sombra</strong>.
+      Un círculo partido por la mitad — la mitad superior en ámbar cálido (el sol mediterráneo),
+      la mitad inferior en azul marino profundo (la frescura de la sombra).
+      La barra blanca que los separa <em>es el toldo</em>: el producto en sí convirtiendo ese calor en confort.<br><br>
+      El wordmark usa dos pesos opuestos de Montserrat: <em>todo</em> en ultraligero (discreta, casi susurrada)
+      y <strong style="font-weight:900;">SOMBRA</strong> en black (rotunda, protagonista).
+      La misma dualidad en tipografía.
+    </p>
+  </div>
+
+</body>
+</html>
