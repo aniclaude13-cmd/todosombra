@@ -146,14 +146,15 @@ function ToldoAres({ lineaCm, salidaCm, colorTela = '#dcd1b8', colorAluminio = '
   const brazoH = 0.042;
 
   // Articulated arm segments (pantograph mechanism)
-  const segmento1Largo = salida * 0.52;
-  const segmento2Largo = salida * 0.48;
+  // Equal length arms for symmetric folding
+  const segmento1Largo = salida * 0.50;
+  const segmento2Largo = salida * 0.50;
 
   // Pantograph kinematics: realistic arm angles based on extension
-  // When fully extended (extensionRatio=1): first arm ~25°, second arm ~15° (maintains fabric nearly horizontal)
-  // When fully retracted (extensionRatio=0): both arms fold down ~-45° to -75°
-  const inclinacionSegmento1 = THREE.MathUtils.degToRad(25 * extensionRatio - 50 * (1 - extensionRatio));
-  const inclinacionSegmento2 = THREE.MathUtils.degToRad(15 * extensionRatio - 65 * (1 - extensionRatio));
+  // When fully extended (extensionRatio=1): first arm ~42°, second arm ~20° (maintains fabric nearly horizontal)
+  // When fully retracted (extensionRatio=0): both arms fold down vertically
+  const inclinacionSegmento1 = THREE.MathUtils.degToRad(42 * extensionRatio - 48 * (1 - extensionRatio));
+  const inclinacionSegmento2 = THREE.MathUtils.degToRad(20 * extensionRatio - 70 * (1 - extensionRatio));
 
   // Calculate front bar position using pantograph geometry
   const seg1End_Y = Math.sin(inclinacionSegmento1) * segmento1Largo;
@@ -262,11 +263,19 @@ function ToldoAres({ lineaCm, salidaCm, colorTela = '#dcd1b8', colorAluminio = '
         </mesh>
       </group>
 
-      {/* Faldilla (skirt) */}
+      {/* Faldilla (skirt) - trapezoidal */}
       {extensionRatio > 0.1 && (
-        <mesh position={[0, frontBarY - 0.08, frontBarZ + 0.02]} rotation={[0.15, 0, 0]} castShadow>
-          <planeGeometry args={[linea, 0.16]} />
-          <meshStandardMaterial {...telaMapProps} transparent opacity={Math.min(telaOpacity * 0.85, 1)} />
+        <mesh position={[0, frontBarY - 0.12, frontBarZ + 0.025]} rotation={[0.22, 0, 0]} castShadow>
+          <planeGeometry args={[linea * 0.95, 0.14]} />
+          <meshStandardMaterial {...telaMapProps} transparent opacity={Math.min(telaOpacity * 0.8, 1)} />
+        </mesh>
+      )}
+
+      {/* Shadow under awning (projection) */}
+      {extensionRatio > 0.15 && (
+        <mesh position={[0, -2.48, frontBarZ - 0.15]} rotation={[-Math.PI / 2, 0, 0]} receiveShadow>
+          <planeGeometry args={[linea * 0.9, proyeccionActual * 0.85]} />
+          <meshStandardMaterial color="#000000" transparent opacity={0.15 * extensionRatio} />
         </mesh>
       )}
     </group>
@@ -277,9 +286,9 @@ export default function Visor3D(props: Props) {
   return (
     <div className="w-full h-full bg-gradient-to-b from-sky-50 to-sky-200 rounded-xl overflow-hidden">
       <Canvas
-        camera={{ position: [3.5, 2.2, 6.5], fov: 38 }}
+        camera={{ position: [2.8, 1.8, 5.2], fov: 42 }}
         shadows
-        gl={{ antialias: true, toneMapping: THREE.ACESFilmicToneMapping, toneMappingExposure: 1.1 }}
+        gl={{ antialias: true, toneMapping: THREE.ACESFilmicToneMapping, toneMappingExposure: 1.15 }}
       >
         <Suspense fallback={null}>
           <ambientLight intensity={0.45} />
