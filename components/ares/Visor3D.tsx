@@ -153,7 +153,7 @@ function ToldoAres({ lineaCm, salidaCm, colorTela = '#dcd1b8', colorAluminio = '
   const inclinacionExtendida = THREE.MathUtils.degToRad(14 * extensionRatio);
   const inclinacionSegmento1 = inclinacionExtendida;
   // Second segment rotates backward proportionally to closing, creating accordion fold
-  const inclinacionSegmento2 = THREE.MathUtils.degToRad(-100 * (1 - extensionRatio));
+  const inclinacionSegmento2 = THREE.MathUtils.degToRad(-60 * (1 - extensionRatio));
 
   const telaTexture = useFabricTexture(colorTela, lineaCm, salidaCm);
   const wallTexture = useWallTexture();
