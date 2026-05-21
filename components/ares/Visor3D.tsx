@@ -145,27 +145,36 @@ function ToldoAres({ lineaCm, salidaCm, colorTela = '#dcd1b8', colorAluminio = '
   const brazoW = 0.058;
   const brazoH = 0.042;
 
-  // Articulated arm segments
-  const segmento1Largo = salida * 0.55;
-  const segmento2Largo = salida * 0.45;
+  // Articulated arm segments (pantograph mechanism)
+  const segmento1Largo = salida * 0.52;
+  const segmento2Largo = salida * 0.48;
 
-  // Arms extend with fabric, accordion-fold inward when closing
-  const inclinacionExtendida = THREE.MathUtils.degToRad(14 * extensionRatio);
-  const inclinacionSegmento1 = inclinacionExtendida;
-  // Second segment rotates backward proportionally to closing, creating accordion fold
-  const inclinacionSegmento2 = THREE.MathUtils.degToRad(-60 * (1 - extensionRatio));
+  // Pantograph kinematics: realistic arm angles based on extension
+  // When fully extended (extensionRatio=1): first arm ~25°, second arm ~15° (maintains fabric nearly horizontal)
+  // When fully retracted (extensionRatio=0): both arms fold down ~-45° to -75°
+  const inclinacionSegmento1 = THREE.MathUtils.degToRad(25 * extensionRatio - 50 * (1 - extensionRatio));
+  const inclinacionSegmento2 = THREE.MathUtils.degToRad(15 * extensionRatio - 65 * (1 - extensionRatio));
+
+  // Calculate front bar position using pantograph geometry
+  const seg1End_Y = Math.sin(inclinacionSegmento1) * segmento1Largo;
+  const seg1End_Z = Math.cos(inclinacionSegmento1) * segmento1Largo;
+  const frontBarY = seg1End_Y + Math.sin(inclinacionSegmento1 + inclinacionSegmento2) * segmento2Largo - cofreAlto / 2;
+  const frontBarZ = cofreFondo + seg1End_Z + Math.cos(inclinacionSegmento1 + inclinacionSegmento2) * segmento2Largo;
+
+  // Actual extension projection
+  const proyeccionActual = seg1End_Z + Math.cos(inclinacionSegmento1 + inclinacionSegmento2) * segmento2Largo;
 
   const telaTexture = useFabricTexture(colorTela, lineaCm, salidaCm);
   const wallTexture = useWallTexture();
   const floorTexture = useFloorTexture();
   const lonaGeom = useMemo(() => new THREE.PlaneGeometry(linea, salida), [linea, salida]);
 
-  const frontBarY = -Math.sin(inclinacionExtendida) * salida * extensionRatio - cofreAlto / 2;
-  const frontBarZ = cofreFondo + Math.cos(inclinacionExtendida) * salida * extensionRatio;
+  // Fabric positioning: offset based on actual projection
+  const telaOffset = proyeccionActual / 2;
+  const telaOpacity = extensionRatio > 0.05 ? 1 : extensionRatio * 20;
 
-  // Tela enrollada cuando extensionRatio = 0
-  const telaOffset = salida / 2 * extensionRatio;
-  const telaOpacity = extensionRatio > 0.1 ? 1 : extensionRatio * 10;
+  // Fabric angle: maintains parallelism to awning structure
+  const telaAngle = Math.PI / 2 + inclinacionSegmento1 + inclinacionSegmento2;
 
   // Shared material props for spread
   const aluProps = {
@@ -246,18 +255,18 @@ function ToldoAres({ lineaCm, salidaCm, colorTela = '#dcd1b8', colorAluminio = '
         <meshPhysicalMaterial {...aluProps} />
       </mesh>
 
-      {/* Lona */}
-      <group position={[0, -cofreAlto / 2, cofreFondo]} rotation={[Math.PI / 2 + inclinacionExtendida, 0, 0]}>
+      {/* Lona (fabric) */}
+      <group position={[0, -cofreAlto / 2, cofreFondo]} rotation={[telaAngle, 0, 0]}>
         <mesh position={[0, telaOffset, 0]} geometry={lonaGeom} castShadow receiveShadow>
           <meshStandardMaterial {...telaMapProps} transparent opacity={telaOpacity} />
         </mesh>
       </group>
 
-      {/* Faldilla */}
-      {extensionRatio > 0.05 && (
-        <mesh position={[0, frontBarY - 0.09, frontBarZ + 0.015]} castShadow>
-          <planeGeometry args={[linea, 0.18]} />
-          <meshStandardMaterial {...telaMapProps} transparent opacity={telaOpacity} />
+      {/* Faldilla (skirt) */}
+      {extensionRatio > 0.1 && (
+        <mesh position={[0, frontBarY - 0.08, frontBarZ + 0.02]} rotation={[0.15, 0, 0]} castShadow>
+          <planeGeometry args={[linea, 0.16]} />
+          <meshStandardMaterial {...telaMapProps} transparent opacity={Math.min(telaOpacity * 0.85, 1)} />
         </mesh>
       )}
     </group>
