@@ -1,6 +1,6 @@
 'use client';
 
-import { useMemo, useState } from 'react';
+import { useMemo, useState, useEffect, useRef } from 'react';
 import dynamic from 'next/dynamic';
 import {
   ARES_LINEAS,
@@ -53,7 +53,46 @@ export default function ConfiguradorAres() {
   const [colorRal, setColorRal] = useState('6005');
   const [colorTelaId, setColorTelaId] = useState('verde');
   const [cantidad, setCantidad] = useState(1);
+  const [extensionTarget, setExtensionTarget] = useState(1);
   const [extensionRatio, setExtensionRatio] = useState(1);
+  const [isClosing, setIsClosing] = useState(false);
+  const animationRef = useRef<number | null>(null);
+
+  const toggleToldo = () => {
+    setIsClosing(true);
+    setExtensionTarget(extensionTarget === 1 ? 0 : 1);
+    setTimeout(() => setIsClosing(false), 600);
+  };
+
+  // Smooth animation of extensionRatio
+  useEffect(() => {
+    const startTime = Date.now();
+    const duration = 600;
+    const startValue = extensionRatio;
+    const endValue = extensionTarget;
+
+    const animate = () => {
+      const elapsed = Date.now() - startTime;
+      const progress = Math.min(elapsed / duration, 1);
+      const easeProgress = progress < 0.5 ? 2 * progress * progress : -1 + (4 - 2 * progress) * progress;
+      const newValue = startValue + (endValue - startValue) * easeProgress;
+      setExtensionRatio(newValue);
+
+      if (progress < 1) {
+        animationRef.current = requestAnimationFrame(animate);
+      }
+    };
+
+    if (Math.abs(extensionRatio - extensionTarget) > 0.01) {
+      animationRef.current = requestAnimationFrame(animate);
+    }
+
+    return () => {
+      if (animationRef.current) {
+        cancelAnimationFrame(animationRef.current);
+      }
+    };
+  }, [extensionTarget, extensionRatio]);
 
   // Modo admin (mostrar coste): activa con ?admin=1 o tecla A en localStorage
   const [adminMode] = useState(() => {
@@ -88,8 +127,12 @@ export default function ConfiguradorAres() {
           />
         </div>
         <button
-          onClick={() => setExtensionRatio(extensionRatio === 1 ? 0 : 1)}
-          className="mt-3 w-full bg-blue-500 hover:bg-blue-600 text-white font-medium py-2 rounded-lg transition"
+          onClick={toggleToldo}
+          disabled={isClosing}
+          className="mt-3 w-full bg-blue-500 hover:bg-blue-600 disabled:bg-blue-400 text-white font-medium py-2 rounded-lg transition"
+          style={{
+            transition: 'all 600ms ease-in-out',
+          }}
         >
           {extensionRatio === 1 ? '🔼 Cerrar toldo' : '🔽 Abrir toldo'}
         </button>

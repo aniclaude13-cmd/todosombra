@@ -153,10 +153,10 @@ function ToldoAres({ lineaCm, salidaCm, colorTela = '#dcd1b8', colorAluminio = '
   // When retracted (ratio = 0), arms fold inward
   const inclinacionExtendida = THREE.MathUtils.degToRad(14);
   const inclinacionSegmento1 = THREE.MathUtils.degToRad(
-    7 * extensionRatio + (1 - extensionRatio) * 95
+    7 * extensionRatio + (1 - extensionRatio) * 105
   );
   const inclinacionSegmento2 = THREE.MathUtils.degToRad(
-    7 * extensionRatio - (1 - extensionRatio) * 85
+    7 * extensionRatio - (1 - extensionRatio) * 95
   );
 
   const telaTexture = useFabricTexture(colorTela, lineaCm, salidaCm);
@@ -226,7 +226,7 @@ function ToldoAres({ lineaCm, salidaCm, colorTela = '#dcd1b8', colorAluminio = '
 
       {/* Articulated Arms */}
       {[-(linea / 2 - 0.22), linea / 2 - 0.22].map((x, i) => (
-        <group key={i} position={[x, -cofreAlto / 2 - 0.035, -0.12]}>
+        <group key={i} position={[x, -cofreAlto / 2 - 0.035, 0.08]}>
           {/* First arm segment */}
           <group rotation={[inclinacionSegmento1, 0, 0]}>
             <mesh position={[0, 0, segmento1Largo / 2]} castShadow>
