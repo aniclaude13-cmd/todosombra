@@ -50,8 +50,8 @@ export default function ConfiguradorAres() {
   const [marcaLacado, setMarcaLacado] = useState<'awma' | 'gaviota' | 'llaza' | 'stobag'>('awma');
   const [confeccion, setConfeccion] = useState<'cosido' | 'soldado'>('cosido');
   const [faldilla, setFaldilla] = useState<'sin' | 'con'>('sin');
-  const [colorRal, setColorRal] = useState('9016');
-  const [colorTelaId, setColorTelaId] = useState('crema');
+  const [colorRal, setColorRal] = useState('6005');
+  const [colorTelaId, setColorTelaId] = useState('verde');
   const [cantidad, setCantidad] = useState(1);
   const [extensionRatio, setExtensionRatio] = useState(1);
 

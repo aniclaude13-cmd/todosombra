@@ -164,8 +164,12 @@ function ToldoAres({ lineaCm, salidaCm, colorTela = '#dcd1b8', colorAluminio = '
   const floorTexture = useFloorTexture();
   const lonaGeom = useMemo(() => new THREE.PlaneGeometry(linea, salida), [linea, salida]);
 
-  const frontBarY = -Math.sin(inclinacionExtendida) * salida - cofreAlto / 2;
-  const frontBarZ = cofreFondo + Math.cos(inclinacionExtendida) * salida;
+  const frontBarY = -Math.sin(inclinacionExtendida) * salida * extensionRatio - cofreAlto / 2;
+  const frontBarZ = cofreFondo + Math.cos(inclinacionExtendida) * salida * extensionRatio;
+
+  // Tela enrollada cuando extensionRatio = 0
+  const telaOffset = salida / 2 * extensionRatio;
+  const telaOpacity = extensionRatio > 0.1 ? 1 : extensionRatio * 10;
 
   // Shared material props for spread
   const aluProps = {
@@ -248,16 +252,18 @@ function ToldoAres({ lineaCm, salidaCm, colorTela = '#dcd1b8', colorAluminio = '
 
       {/* Lona */}
       <group position={[0, -cofreAlto / 2, cofreFondo]} rotation={[Math.PI / 2 + inclinacionExtendida, 0, 0]}>
-        <mesh position={[0, salida / 2, 0]} geometry={lonaGeom} castShadow receiveShadow>
-          <meshStandardMaterial {...telaMapProps} />
+        <mesh position={[0, telaOffset, 0]} geometry={lonaGeom} castShadow receiveShadow>
+          <meshStandardMaterial {...telaMapProps} transparent opacity={telaOpacity} />
         </mesh>
       </group>
 
       {/* Faldilla */}
-      <mesh position={[0, frontBarY - 0.09, frontBarZ + 0.015]} castShadow>
-        <planeGeometry args={[linea, 0.18]} />
-        <meshStandardMaterial {...telaMapProps} />
-      </mesh>
+      {extensionRatio > 0.05 && (
+        <mesh position={[0, frontBarY - 0.09, frontBarZ + 0.015]} castShadow>
+          <planeGeometry args={[linea, 0.18]} />
+          <meshStandardMaterial {...telaMapProps} transparent opacity={telaOpacity} />
+        </mesh>
+      )}
     </group>
   );
 }
