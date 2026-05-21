@@ -146,15 +146,22 @@ function ToldoAres({ lineaCm, salidaCm, colorTela = '#dcd1b8', colorAluminio = '
   const brazoH = 0.042;
 
   // Articulated arm segments (pantograph mechanism)
-  // Equal length arms for symmetric folding
-  const segmento1Largo = salida * 0.50;
-  const segmento2Largo = salida * 0.50;
+  const segmento1Largo = salida * 0.52;
+  const segmento2Largo = salida * 0.48;
 
-  // Pantograph kinematics: realistic arm angles based on extension
-  // When fully extended (extensionRatio=1): first arm ~42°, second arm ~20° (maintains fabric nearly horizontal)
-  // When fully retracted (extensionRatio=0): both arms fold down vertically
-  const inclinacionSegmento1 = THREE.MathUtils.degToRad(42 * extensionRatio - 48 * (1 - extensionRatio));
-  const inclinacionSegmento2 = THREE.MathUtils.degToRad(20 * extensionRatio - 70 * (1 - extensionRatio));
+  // Inverse kinematics for pantograph: arm angles that produce correct projection
+  // extensionRatio: 0 = fully retracted (arms folded), 1 = fully extended
+  // When fully extended (extensionRatio=1):
+  //   - Seg1 rotates to ~50° (upward)
+  //   - Seg2 rotates to ~-35° relative to seg1 (forward-down), creating ~15° total angle for fabric
+  // When fully retracted (extensionRatio=0): both arms fold to ~-80°
+
+  const extendAngle = extensionRatio; // 0-1 curve
+  const seg1Angle = extendAngle * 50 - (1 - extendAngle) * 80;
+  const seg2RelativeAngle = extendAngle * (-35) - (1 - extendAngle) * (-5);
+
+  const inclinacionSegmento1 = THREE.MathUtils.degToRad(seg1Angle);
+  const inclinacionSegmento2 = THREE.MathUtils.degToRad(seg2RelativeAngle);
 
   // Calculate front bar position using pantograph geometry
   const seg1End_Y = Math.sin(inclinacionSegmento1) * segmento1Largo;
