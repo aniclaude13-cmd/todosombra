@@ -148,14 +148,14 @@ function ToldoAres({ lineaCm, salidaCm, colorTela = '#dcd1b8', colorAluminio = '
   const segmento1Largo = salida * 0.55;
   const segmento2Largo = salida * 0.45;
 
-  // When extended (ratio = 1), arms are at 14 degrees
+  // When extended (ratio = 1), arms align with fabric at ~14 degrees
   // When retracted (ratio = 0), arms fold inward
   const inclinacionExtendida = THREE.MathUtils.degToRad(14);
   const inclinacionSegmento1 = THREE.MathUtils.degToRad(
-    14 + (1 - extensionRatio) * 90
+    7 * extensionRatio + (1 - extensionRatio) * 95
   );
   const inclinacionSegmento2 = THREE.MathUtils.degToRad(
-    (1 - extensionRatio) * 110 - 30
+    7 * extensionRatio - (1 - extensionRatio) * 85
   );
 
   const telaTexture = useFabricTexture(colorTela, lineaCm, salidaCm);
