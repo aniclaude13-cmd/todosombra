@@ -140,17 +140,31 @@ function ToldoAres({ lineaCm, salidaCm, colorTela = '#dcd1b8', colorAluminio = '
   const salida = salidaCm * CM;
   const cofreAlto = 0.18;
   const cofreFondo = 0.19;
-  const inclinacion = THREE.MathUtils.degToRad(14);
+  const extensionRatio = 1; // 0 = fully retracted, 1 = fully extended
   const brazoW = 0.058;
   const brazoH = 0.042;
+
+  // Articulated arm segments
+  const segmento1Largo = salida * 0.55;
+  const segmento2Largo = salida * 0.45;
+
+  // When extended (ratio = 1), arms are at 14 degrees
+  // When retracted (ratio = 0), arms fold inward
+  const inclinacionExtendida = THREE.MathUtils.degToRad(14);
+  const inclinacionSegmento1 = THREE.MathUtils.degToRad(
+    14 + (1 - extensionRatio) * 90
+  );
+  const inclinacionSegmento2 = THREE.MathUtils.degToRad(
+    (1 - extensionRatio) * 110 - 30
+  );
 
   const telaTexture = useFabricTexture(colorTela, lineaCm, salidaCm);
   const wallTexture = useWallTexture();
   const floorTexture = useFloorTexture();
   const lonaGeom = useMemo(() => new THREE.PlaneGeometry(linea, salida), [linea, salida]);
 
-  const frontBarY = -Math.sin(inclinacion) * salida - cofreAlto / 2;
-  const frontBarZ = cofreFondo + Math.cos(inclinacion) * salida;
+  const frontBarY = -Math.sin(inclinacionExtendida) * salida - cofreAlto / 2;
+  const frontBarZ = cofreFondo + Math.cos(inclinacionExtendida) * salida;
 
   // Shared material props for spread
   const aluProps = {
@@ -205,13 +219,23 @@ function ToldoAres({ lineaCm, salidaCm, colorTela = '#dcd1b8', colorAluminio = '
         </mesh>
       ))}
 
-      {/* Arms */}
+      {/* Articulated Arms */}
       {[-(linea / 2 - 0.22), linea / 2 - 0.22].map((x, i) => (
-        <group key={i} position={[x, -cofreAlto / 2, cofreFondo]} rotation={[inclinacion, 0, 0]}>
-          <mesh position={[0, 0, salida / 2]} castShadow>
-            <boxGeometry args={[brazoW, brazoH, salida]} />
-            <meshPhysicalMaterial {...aluProps} />
-          </mesh>
+        <group key={i} position={[x, -cofreAlto / 2, cofreFondo]}>
+          {/* First arm segment */}
+          <group rotation={[inclinacionSegmento1, 0, 0]}>
+            <mesh position={[0, 0, segmento1Largo / 2]} castShadow>
+              <boxGeometry args={[brazoW, brazoH, segmento1Largo]} />
+              <meshPhysicalMaterial {...aluProps} />
+            </mesh>
+            {/* Second arm segment (articulated joint) */}
+            <group position={[0, 0, segmento1Largo]} rotation={[inclinacionSegmento2, 0, 0]}>
+              <mesh position={[0, 0, segmento2Largo / 2]} castShadow>
+                <boxGeometry args={[brazoW, brazoH, segmento2Largo]} />
+                <meshPhysicalMaterial {...aluProps} />
+              </mesh>
+            </group>
+          </group>
         </group>
       ))}
 
@@ -222,7 +246,7 @@ function ToldoAres({ lineaCm, salidaCm, colorTela = '#dcd1b8', colorAluminio = '
       </mesh>
 
       {/* Lona */}
-      <group position={[0, -cofreAlto / 2, cofreFondo]} rotation={[Math.PI / 2 + inclinacion, 0, 0]}>
+      <group position={[0, -cofreAlto / 2, cofreFondo]} rotation={[Math.PI / 2 + inclinacionExtendida, 0, 0]}>
         <mesh position={[0, salida / 2, 0]} geometry={lonaGeom} castShadow receiveShadow>
           <meshStandardMaterial {...telaMapProps} />
         </mesh>
