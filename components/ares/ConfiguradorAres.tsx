@@ -41,7 +41,15 @@ export default function ConfiguradorAres() {
   const [linea, setLinea] = useState<AresLinea>(400);
   const [salida, setSalida] = useState<AresSalida>(250);
   const [motor, setMotor] = useState<AresMotor>('rts_40Nm');
-  const [montaje, setMontaje] = useState<'frente' | 'techo'>('frente');
+  const [montaje, setMontaje] = useState<'frente' | 'techo' | 'pared' | 'entre_paredes'>('frente');
+  const [posicion, setPosicion] = useState<'derecha' | 'izquierda'>('derecha');
+  const [tipoFijacion, setTipoFijacion] = useState<'normal' | 'anclaje_quimico'>('normal');
+  const [iluminacion, setIluminacion] = useState<'ninguna' | 'brazos' | 'cofre' | 'brazos_cofre' | 'preinstalacion'>('ninguna');
+  const [tipoLuz, setTipoLuz] = useState<'calida' | 'fria'>('calida');
+  const [tejadillo, setTejadillo] = useState<'sin' | 'con'>('sin');
+  const [marcaLacado, setMarcaLacado] = useState<'awma' | 'gaviota' | 'llaza' | 'stobag'>('awma');
+  const [confeccion, setConfeccion] = useState<'cosido' | 'soldado'>('cosido');
+  const [faldilla, setFaldilla] = useState<'sin' | 'con'>('sin');
   const [colorRal, setColorRal] = useState('9016');
   const [colorTelaId, setColorTelaId] = useState('crema');
   const [cantidad, setCantidad] = useState(1);
@@ -110,14 +118,26 @@ export default function ConfiguradorAres() {
             </select>
           </Field>
 
-          <Field label="Montaje">
+          <Field label="Fijación">
             <div className="grid grid-cols-2 gap-2">
-              <RadioPill checked={montaje === 'frente'} onClick={() => setMontaje('frente')}>
-                Al frente
-              </RadioPill>
-              <RadioPill checked={montaje === 'techo'} onClick={() => setMontaje('techo')}>
-                A techo
-              </RadioPill>
+              <RadioPill checked={montaje === 'frente'} onClick={() => setMontaje('frente')}>Al frente</RadioPill>
+              <RadioPill checked={montaje === 'techo'} onClick={() => setMontaje('techo')}>A techo</RadioPill>
+              <RadioPill checked={montaje === 'pared'} onClick={() => setMontaje('pared')}>A pared</RadioPill>
+              <RadioPill checked={montaje === 'entre_paredes'} onClick={() => setMontaje('entre_paredes')}>Entre paredes</RadioPill>
+            </div>
+          </Field>
+
+          <Field label="Tipo de fijación">
+            <div className="grid grid-cols-2 gap-2">
+              <RadioPill checked={tipoFijacion === 'normal'} onClick={() => setTipoFijacion('normal')}>Normal</RadioPill>
+              <RadioPill checked={tipoFijacion === 'anclaje_quimico'} onClick={() => setTipoFijacion('anclaje_quimico')}>Anclaje químico</RadioPill>
+            </div>
+          </Field>
+
+          <Field label="Posición accionamiento">
+            <div className="grid grid-cols-2 gap-2">
+              <RadioPill checked={posicion === 'derecha'} onClick={() => setPosicion('derecha')}>👉 Derecha</RadioPill>
+              <RadioPill checked={posicion === 'izquierda'} onClick={() => setPosicion('izquierda')}>👈 Izquierda</RadioPill>
             </div>
           </Field>
 
@@ -131,6 +151,16 @@ export default function ConfiguradorAres() {
               <option value="io_40Nm">Motor Somfy iO 40 Nm</option>
               <option value="io_50Nm">Motor Somfy iO 50 Nm</option>
             </select>
+          </Field>
+
+          <Field label="Marca lacado aluminio">
+            <div className="grid grid-cols-4 gap-2">
+              {(['awma', 'gaviota', 'llaza', 'stobag'] as const).map((m) => (
+                <RadioPill key={m} checked={marcaLacado === m} onClick={() => setMarcaLacado(m)}>
+                  {m.charAt(0).toUpperCase() + m.slice(1)}
+                </RadioPill>
+              ))}
+            </div>
           </Field>
 
           <Field label="Color del aluminio (RAL)">
@@ -150,6 +180,33 @@ export default function ConfiguradorAres() {
             </div>
           </Field>
 
+          <Field label="Iluminación integrada">
+            <select
+              className={selectCls}
+              value={iluminacion}
+              onChange={(e) => setIluminacion(e.target.value as typeof iluminacion)}
+            >
+              <option value="ninguna">Sin iluminación</option>
+              <option value="brazos">Brazos iluminados</option>
+              <option value="cofre">Cofre iluminado</option>
+              <option value="brazos_cofre">Brazos + Cofre iluminados</option>
+              <option value="preinstalacion">Pre-instalación</option>
+            </select>
+            {iluminacion !== 'ninguna' && (
+              <div className="grid grid-cols-2 gap-2 mt-2">
+                <RadioPill checked={tipoLuz === 'calida'} onClick={() => setTipoLuz('calida')}>🟡 Cálida</RadioPill>
+                <RadioPill checked={tipoLuz === 'fria'} onClick={() => setTipoLuz('fria')}>⬜ Fría</RadioPill>
+              </div>
+            )}
+          </Field>
+
+          <Field label="Tejadillo protector">
+            <div className="grid grid-cols-2 gap-2">
+              <RadioPill checked={tejadillo === 'sin'} onClick={() => setTejadillo('sin')}>Sin tejadillo</RadioPill>
+              <RadioPill checked={tejadillo === 'con'} onClick={() => setTejadillo('con')}>Con tejadillo</RadioPill>
+            </div>
+          </Field>
+
           <Field label="Color de la lona">
             <div className="grid grid-cols-5 gap-2">
               {COLORES_TELA.map((c) => (
@@ -164,6 +221,20 @@ export default function ConfiguradorAres() {
                   style={{ backgroundColor: c.hex }}
                 />
               ))}
+            </div>
+          </Field>
+
+          <Field label="Confección tejido">
+            <div className="grid grid-cols-2 gap-2">
+              <RadioPill checked={confeccion === 'cosido'} onClick={() => setConfeccion('cosido')}>✂️ Cosido</RadioPill>
+              <RadioPill checked={confeccion === 'soldado'} onClick={() => setConfeccion('soldado')}>🔥 Soldado</RadioPill>
+            </div>
+          </Field>
+
+          <Field label="Faldilla">
+            <div className="grid grid-cols-2 gap-2">
+              <RadioPill checked={faldilla === 'sin'} onClick={() => setFaldilla('sin')}>Sin faldilla</RadioPill>
+              <RadioPill checked={faldilla === 'con'} onClick={() => setFaldilla('con')}>Con faldilla</RadioPill>
             </div>
           </Field>
 

@@ -61,7 +61,7 @@ export interface AresConfig {
   linea: AresLinea;
   salida: AresSalida;
   motor: AresMotor;
-  montaje: 'frente' | 'techo';
+  montaje: 'frente' | 'techo' | 'pared' | 'entre_paredes';
   colorRal: string;
   manivelaPosicion?: 'izquierda' | 'derecha';
   manivelaLargoCm?: number;
