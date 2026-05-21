@@ -150,15 +150,15 @@ function ToldoAres({ lineaCm, salidaCm, colorTela = '#dcd1b8', colorAluminio = '
   const segmento2Largo = salida * 0.48;
 
   // Inverse kinematics for pantograph: arm angles that produce correct projection
-  // extensionRatio: 0 = fully retracted (arms folded), 1 = fully extended
+  // extensionRatio: 0 = fully retracted (arms horizontal), 1 = fully extended
   // When fully extended (extensionRatio=1):
   //   - Seg1 rotates to ~50° (upward)
   //   - Seg2 rotates to ~-35° relative to seg1 (forward-down), creating ~15° total angle for fabric
-  // When fully retracted (extensionRatio=0): both arms fold to ~-80°
+  // When fully retracted (extensionRatio=0): both arms horizontal (0°)
 
   const extendAngle = extensionRatio; // 0-1 curve
-  const seg1Angle = extendAngle * 50 - (1 - extendAngle) * 80;
-  const seg2RelativeAngle = extendAngle * (-35) - (1 - extendAngle) * (-5);
+  const seg1Angle = extendAngle * 50; // 0° at rest, 50° fully extended
+  const seg2RelativeAngle = extendAngle * (-35); // 0° at rest, -35° fully extended
 
   const inclinacionSegmento1 = THREE.MathUtils.degToRad(seg1Angle);
   const inclinacionSegmento2 = THREE.MathUtils.degToRad(seg2RelativeAngle);
