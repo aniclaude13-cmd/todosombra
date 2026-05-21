@@ -1,0 +1,23 @@
+[
+  {
+    "nombre": "Ruben",
+    "contacto": "644592007",
+    "localidad": "San Pedro del Pinatar",
+    "producto": "BOX6100 ARES",
+    "medidas": "400×300 cm",
+    "tipo_estructura": "🏠 A techo",
+    "color_aluminio": "Blanco",
+    "incremento_ral_pct": 0,
+    "motorizado": true,
+    "color_tejido": "Arena",
+    "es_awma": true,
+    "precio_base_orientativo": 2001.5,
+    "precio_final_orientativo": 2001.5,
+    "complemento_adicional": "📡 Sensores (viento, lluvia, sol)",
+    "precio_complemento": 0,
+    "precio_total_con_complementos": 2421.815,
+    "motivo": "Solicita contacto con técnico tras ver precio",
+    "flujo_ficha_tecnica": false,
+    "telegram_user": "Raiben13"
+  }
+]

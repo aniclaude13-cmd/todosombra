@@ -21,17 +21,68 @@ logging.basicConfig(
 )
 logger = logging.getLogger(__name__)
 
+def _int_keys(d: dict) -> list:
+    return sorted(int(k) for k in d.keys() if k.isdigit())
+
 TOKEN = "8594551708:AAGoGfoBXTCTwrzYRywlVn-OaSaLBFkB10U"
 DATA_FILE = Path(__file__).parent / "../awma-products-with-prices.json"
 LEADS_FILE = Path(__file__).parent / "leads.json"
 
 # Estados de conversación
 (MENU, BUSCAR_PRODUCTO, SELECCIONAR_PRODUCTO, PEDIR_MEDIDAS,
- ACCIONAMIENTO, SELECCIONAR_MOTOR, COLOR, TEJIDO, CONFIRMAR,
+ ACCIONAMIENTO, SELECCIONAR_MARCA_MOTOR, SELECCIONAR_MOTOR, COLOR, CONFIRMAR,
  CAPTAR_NOMBRE, CAPTAR_CONTACTO, CAPTAR_LOCALIDAD,
  ELEGIR_TIPO, MEDIDAS_BUSQUEDA, COMPARAR_MODELOS,
- ELEGIR_COMPLEMENTO, MEDIDA_COMPLEMENTO, TIPO_ESTRUCTURA, COLOR_ALUMINIO,
- AÑADIR_COMPLEMENTOS, MEDIDA_COMPLEMENTO_ADICIONAL) = range(21)
+ ELEGIR_COMPLEMENTO, MEDIDA_COMPLEMENTO, COLOR_ALUMINIO,
+ AÑADIR_COMPLEMENTOS, MEDIDA_COMPLEMENTO_ADICIONAL, COLOR_CATEGORIA) = range(21)
+
+# Catálogo Sauleda PLAINS LISOS (sin incremento de precio)
+CATEGORIAS_SAULEDA = {
+    "⬜ Blancos y neutros": [
+        "Optik", "Blanco", "Natural", "Vainilla", "Crema", "Champagne",
+        "Alabastro", "Shell", "Salt", "Zurich",
+    ],
+    "🟤 Beiges y arenas": [
+        "Caramel", "Trigo", "Arena", "Sand", "Beige", "Avena", "Toast",
+        "Alamo", "Tenneré", "Gobi", "Siroco", "Integral", "Pergamino",
+        "Almond", "Toffee", "Visón", "Tweed Avena", "Coco", "Maquillaje",
+    ],
+    "🟫 Marrones y tierras": [
+        "Trufa", "Bronce", "Ocre", "Cobre", "Teja", "Terracota", "Marrón",
+        "Chocolat", "Café", "Miel", "Seda", "Mármol", "Lugano", "Berna",
+        "Hormigón", "Rain",
+    ],
+    "🟡 Amarillos y naranjas": [
+        "Oro", "Mostaza", "Maiz", "Cereal", "Limón", "Lima", "Amarillo",
+        "Dallas", "Melocotón", "Mandarina", "Naranja", "Salmón",
+    ],
+    "🔴 Rojos y granates": [
+        "Azafrán", "Tomate", "Rojo", "Logo Red", "Generation Red", "Cherry",
+        "Splendore", "Rioja", "Brasserie", "Granite", "Tweed Rojo", "Sandia", "Lava",
+    ],
+    "🌸 Rosas y lilas": [
+        "Berry", "Pink", "Grape", "Maiva", "Lila", "Lavanda", "Malva",
+    ],
+    "🔵 Azules": [
+        "Turkis", "Celeste", "Blue Mist", "Glacier", "Denim", "Bombay",
+        "Indigo", "Regata", "Brisa", "Trópic", "Ocean", "Azul Real", "Azul",
+        "Marino", "Admiral", "Commodore", "Jade", "Aquamarina", "Lagoon",
+    ],
+    "🟢 Verdes": [
+        "Oliva", "Bambú", "Eucaliptus", "Cactus", "Fresh", "Musgo", "Tirol",
+        "Verde Cl.", "Anis", "Confetti", "Tweed Verde", "Verde", "Botella",
+        "Deep Blue", "Racing",
+    ],
+    "⚫ Grises y negros": [
+        "Quartz", "Niebla", "Silver", "Perla", "Piedra", "Tweed Gris Cl.",
+        "Tweed Perla", "Gris", "Mineral", "Basalto", "Grafito", "Antracita",
+        "Carbón", "Tweed Negro", "Coal", "Negro",
+    ],
+}
+
+COLORES_SAULEDA_PLAINS = {
+    c.lower() for colores in CATEGORIAS_SAULEDA.values() for c in colores
+}
 
 # Mapeo tipo visible → tipo interno JSON
 TIPOS_PRODUCTO = {
@@ -47,16 +98,30 @@ EXCLUIDOS_BUSQUEDA = {"TJD_TEJADILLO"}
 # Complementos con precio por línea (anchura en cm)
 COMPLEMENTOS_CON_PRECIO = {
     "💡 Iluminación LED": "ILUMINACIÓN",
-    "🏠 Tejadillo (cubrición protectora)": "TJD_TEJADILLO",
+    "🏠 Tejadillo (protección)": "TJD_TEJADILLO",
     "🪟 Costadillo lateral": "CSL_COSTADILLO_LATERAL",
 }
-# Complementos que derivan a técnico
+
+MANDOS_POR_MARCA = {
+    "somfy": {"label": "Situo 1 io", "precio": 68.50},
+}
+
+# Complementos sin precio (derivan a técnico)
 COMPLEMENTOS_SIN_PRECIO = [
     "🎮 Mandos y automatismos",
     "📡 Sensores (viento, lluvia, sol)",
-    "🔩 Perfiles, terminales y casquillos",
-    "🔧 Otros accesorios",
+    "🔩 Perfiles y accesorios",
 ]
+
+# Colores comunes de aluminio (teclado rápido)
+COLORES_ALUMINIO_RAPIDOS = {
+    "⬜ Blanco": "Blanco",
+    "🔘 Gris / Plata": "Gris",
+    "⚫ Antracita": "Antracita",
+    "⬛ Negro": "Negro",
+    "🟤 Bronce / Marrón": "Marrón",
+    "✏️ Otro color": "otro",
+}
 
 def cargar_datos():
     with open(DATA_FILE, encoding="utf-8") as f:
@@ -98,7 +163,7 @@ def calcular_precio(producto: dict, linea_cm: int, salida_cm: int) -> Optional[f
     if not pw or isinstance(pw, dict) and "estimado" in pw:
         return None
 
-    lineas_disponibles = sorted([int(k) for k in pw.keys()])
+    lineas_disponibles = _int_keys(pw)
     linea_key = None
     for l in lineas_disponibles:
         if l >= linea_cm:
@@ -111,7 +176,7 @@ def calcular_precio(producto: dict, linea_cm: int, salida_cm: int) -> Optional[f
     if isinstance(salidas, (int, float)):
         return float(salidas)
 
-    salidas_disp = sorted([int(k) for k in salidas.keys()])
+    salidas_disp = _int_keys(salidas)
     salida_key = None
     for s in salidas_disp:
         if s >= salida_cm:
@@ -149,7 +214,7 @@ def filtrar_por_tipo_y_medidas(tipo: str, linea_cm: int, salida_cm: int, datos: 
         if not pw or (isinstance(pw, dict) and "estimado" in pw):
             continue
 
-        lineas = sorted([int(k) for k in pw.keys()])
+        lineas = _int_keys(pw)
         if linea_cm < lineas[0] or linea_cm > lineas[-1]:
             continue
 
@@ -173,7 +238,7 @@ def filtrar_por_tipo_y_medidas(tipo: str, linea_cm: int, salida_cm: int, datos: 
         # Verificar que la salida existe en esa línea específica (si hay estructura de salidas)
         salidas_para_linea = pw[str(linea_seleccionada)]
         if isinstance(salidas_para_linea, dict):
-            salidas_disp = sorted([int(k) for k in salidas_para_linea.keys()])
+            salidas_disp = _int_keys(salidas_para_linea)
             # Buscar salida >= a la solicitada
             salida_valida = False
             for s in salidas_disp:
@@ -188,12 +253,12 @@ def filtrar_por_tipo_y_medidas(tipo: str, linea_cm: int, salida_cm: int, datos: 
             resultados.append((p, precio))
 
     resultados.sort(key=lambda x: x[1] if x[1] is not None else 999999)
-    return resultados[:6]
+    return resultados
 
 def rango_lineas(producto: dict) -> str:
     pw = producto.get("precios_por_ancho", {})
     if isinstance(pw, dict) and "estimado" not in pw:
-        lineas = sorted([int(k) for k in pw.keys()])
+        lineas = _int_keys(pw)
         return f"{lineas[0]}–{lineas[-1]} cm"
     return "consultar"
 
@@ -204,15 +269,14 @@ async def start(update: Update, ctx: ContextTypes.DEFAULT_TYPE) -> int:
     ctx.user_data["datos"] = cargar_datos()
 
     teclado = [
-        ["🔍 Sé el modelo que quiero"],
-        ["💡 Ayúdame a elegir modelo"],
-        ["🔧 Complementos y accesorios"],
+        ["🔍 Sé exactamente qué modelo quiero"],
+        ["💡 Ayúdame a elegir el mejor toldo"],
+        ["🔧 Complementos y extras"],
     ]
     await update.message.reply_text(
-        "☀️ *¡Bienvenido a TodoSombra!*\n\n"
-        "🏆 Somos especialistas en *soluciones de sombra* — toldos, pérgolas, cerramientos y complementos para tu hogar.\n\n"
-        "⚡ En 2 minutos te daré el *precio orientativo* exacto de tu proyecto sin compromiso.\n\n"
-        "¿Por dónde empezamos?",
+        "☀️ *¡Hola! Bienvenido a TodoSombra*\n\n"
+        "Te doy *precio exacto en 2 minutos*, sin rodeos, sin compromiso.\n\n"
+        "Nuestro técnico te visitará después para confirmar medidas y agendar la instalación. ¿Por dónde vamos?",
         parse_mode="Markdown",
         reply_markup=ReplyKeyboardMarkup(teclado, one_time_keyboard=True, resize_keyboard=True)
     )
@@ -220,25 +284,25 @@ async def start(update: Update, ctx: ContextTypes.DEFAULT_TYPE) -> int:
 
 async def menu(update: Update, ctx: ContextTypes.DEFAULT_TYPE) -> int:
     opcion = update.message.text.strip()
-    if "modelo que quiero" in opcion.lower() or "sé el" in opcion.lower():
+    if "modelo" in opcion.lower() or "sé" in opcion.lower():
         await update.message.reply_text(
-            "¿Qué modelo te interesa? Escribe el nombre o referencia (ej: *ARES*, *NEXUS 100*, *Tenxo*...)",
+            "Dime el nombre o referencia del modelo (ej: *ARES*, *NEXUS 100*, *Tenxo*...)",
             parse_mode="Markdown",
             reply_markup=ReplyKeyboardRemove()
         )
         return BUSCAR_PRODUCTO
-    elif "complemento" in opcion.lower() or "accesorio" in opcion.lower():
+    elif "complemento" in opcion.lower() or "extra" in opcion.lower() or "accesorio" in opcion.lower():
         todas = list(COMPLEMENTOS_CON_PRECIO.keys()) + COMPLEMENTOS_SIN_PRECIO
         teclado = [[c] for c in todas]
         await update.message.reply_text(
-            "¿Qué complemento o accesorio necesitas?",
+            "¿Qué necesitas?",
             reply_markup=ReplyKeyboardMarkup(teclado, one_time_keyboard=True, resize_keyboard=True)
         )
         return ELEGIR_COMPLEMENTO
     else:
-        teclado = [[t] for t in TIPOS_PRODUCTO.keys()] + [["❓ No sé / necesito asesoramiento"]]
+        teclado = [[t] for t in TIPOS_PRODUCTO.keys()] + [["❓ No sé, necesito asesoramiento"]]
         await update.message.reply_text(
-            "¿Qué tipo de producto necesitas?",
+            "¿Qué buscas?",
             reply_markup=ReplyKeyboardMarkup(teclado, one_time_keyboard=True, resize_keyboard=True)
         )
         return ELEGIR_TIPO
@@ -246,45 +310,57 @@ async def menu(update: Update, ctx: ContextTypes.DEFAULT_TYPE) -> int:
 async def elegir_tipo(update: Update, ctx: ContextTypes.DEFAULT_TYPE) -> int:
     opcion = update.message.text.strip()
 
-    # Si viene del flujo de "cambiar criterios", permitir cambiar medidas
     if "cambiar medidas" in opcion.lower() or "medidas" in opcion.lower():
         tipo = ctx.user_data.get("tipo_busqueda")
         if tipo:
             await update.message.reply_text(
-                f"🎯 *Perfecto, vamos a encontrar la opción ideal para ti.*\n\n"
-                f"📐 Cuéntame las medidas exactas que necesitas:\n\n"
-                f"*Línea × Salida* (ej: `350x250`)\n\n"
-                f"📏 *Línea* = anchura total\n"
-                f"🎯 *Salida* = cuánto se extiende desde la pared",
+                f"📐 ¿Cuánto mide?\n\n*Línea × Salida* (ej: `350x250`)\n\n_(Línea = anchura total, Salida = cuánto sobresale)_",
                 parse_mode="Markdown",
                 reply_markup=ReplyKeyboardRemove()
             )
             return MEDIDAS_BUSQUEDA
 
-    if "no sé" in opcion.lower() or "asesoramiento" in opcion.lower() or "necesito asesoramiento" in opcion.lower():
-        ctx.user_data["motivo_derivacion"] = "No sabe qué tipo de producto necesita"
+    if "cambiar color" in opcion.lower() or "color" in opcion.lower():
+        return await preguntar_color(update, ctx)
+
+    if "cambiar accionamiento" in opcion.lower() or "accionamiento" in opcion.lower():
+        teclado = [["☀️ Manual"], ["⚡ Con motor (Somfy)"]]
         await update.message.reply_text(
-            "Sin problema, uno de nuestros técnicos te asesorará sin compromiso. ¿Cómo te llamas?",
+            "¿Manual o motorizado?",
+            parse_mode="Markdown",
+            reply_markup=ReplyKeyboardMarkup(teclado, one_time_keyboard=True, resize_keyboard=True)
+        )
+        return ACCIONAMIENTO
+
+    if "cambiar tipo" in opcion.lower() or "tipo de producto" in opcion.lower():
+        teclado = [[t] for t in TIPOS_PRODUCTO.keys()]
+        await update.message.reply_text(
+            "¿Qué necesitas?",
+            parse_mode="Markdown",
+            reply_markup=ReplyKeyboardMarkup(teclado, one_time_keyboard=True, resize_keyboard=True)
+        )
+        return ELEGIR_TIPO
+
+    if "no sé" in opcion.lower() or "asesoramiento" in opcion.lower():
+        ctx.user_data["motivo_derivacion"] = "Cliente necesita asesoramiento profesional"
+        await update.message.reply_text(
+            "Perfecto. Nuestro técnico especializado te contactará. ¿Tu nombre?",
             reply_markup=ReplyKeyboardRemove()
         )
         return CAPTAR_NOMBRE
 
     tipo_interno = TIPOS_PRODUCTO.get(opcion)
     if not tipo_interno:
-        teclado = [[t] for t in TIPOS_PRODUCTO.keys()] + [["❓ No sé / necesito asesoramiento"]]
+        teclado = [[t] for t in TIPOS_PRODUCTO.keys()] + [["❓ No sé, necesito asesoramiento"]]
         await update.message.reply_text(
-            "Elige una opción del menú:",
+            "Elige una opción:",
             reply_markup=ReplyKeyboardMarkup(teclado, one_time_keyboard=True, resize_keyboard=True)
         )
         return ELEGIR_TIPO
 
     ctx.user_data["tipo_busqueda"] = tipo_interno
     await update.message.reply_text(
-        f"🎯 *Perfecto, vamos a encontrar la opción ideal para ti.*\n\n"
-        f"📐 Cuéntame las medidas exactas que necesitas:\n\n"
-        f"*Línea × Salida* (ej: `350x250`)\n\n"
-        f"📏 *Línea* = anchura total\n"
-        f"🎯 *Salida* = cuánto se extiende desde la pared",
+        f"📐 ¿Cuánto mide?\n\n*Línea × Salida* (ej: `350x250`)\n\n_(Línea = ancho total, Salida = cuánto sobresale)_",
         parse_mode="Markdown",
         reply_markup=ReplyKeyboardRemove()
     )
@@ -322,14 +398,21 @@ async def medidas_busqueda(update: Update, ctx: ContextTypes.DEFAULT_TYPE) -> in
 
     if len(compatibles) == 1:
         ctx.user_data["producto"] = compatibles[0][0]
+        # Ir a confirmar_modelo directamente sin mostrar comparativa
         return await confirmar_modelo_seleccionado(update, ctx)
 
-    # Mostrar comparativa
-    lineas_msg = [
-        f"✅ *Excelente, encontré {len(compatibles)} opciones* para {linea}×{salida} cm:\n"
-    ]
+    # Mostrar comparativa (primeras 6 opciones por defecto)
+    mostrar_todas = ctx.user_data.get("mostrar_todas_opciones", False)
+    opciones_a_mostrar = compatibles if mostrar_todas else compatibles[:6]
+
+    if mostrar_todas:
+        header = f"📋 *Todas las {len(compatibles)} opciones* para {linea}×{salida} cm:\n"
+    else:
+        header = f"💰 *Las 6 opciones más económicas* para {linea}×{salida} cm:\n"
+
+    lineas_msg = [header]
     teclado = []
-    for i, (p, precio) in enumerate(compatibles, 1):
+    for i, (p, precio) in enumerate(opciones_a_mostrar, 1):
         precio_txt = f"*{precio:,.0f} €*" if precio else "consultar"
         rango = rango_lineas(p)
         icono = "🏅" if i == 1 else "✨" if i <= 3 else "📌"
@@ -338,10 +421,12 @@ async def medidas_busqueda(update: Update, ctx: ContextTypes.DEFAULT_TYPE) -> in
         lineas_msg.append(f"   📏 Línea: {rango}")
         teclado.append([p["nombre"]])
 
-    lineas_msg.append("\n" + "─" * 40)
-    lineas_msg.append("\n👇 *Selecciona tu favorito para ver más detalles:*")
+    lineas_msg.append("\n👇 *Elige el que más te guste:*")
 
-    teclado.append(["❌ Quiero otras opciones"])
+    if not mostrar_todas and len(compatibles) > 6:
+        teclado.append(["🔍 Ver todas las opciones"])
+    teclado.append(["❌ Cambiar criterios"])
+
     await update.message.reply_text(
         "\n".join(lineas_msg),
         parse_mode="Markdown",
@@ -351,6 +436,38 @@ async def medidas_busqueda(update: Update, ctx: ContextTypes.DEFAULT_TYPE) -> in
 
 async def comparar_modelos(update: Update, ctx: ContextTypes.DEFAULT_TYPE) -> int:
     nombre = update.message.text.strip()
+
+    if "ver más" in nombre.lower():
+        ctx.user_data["mostrar_todas_opciones"] = True
+        # Volver a mostrar la comparativa con todas las opciones
+        linea = ctx.user_data.get("linea", 0)
+        salida = ctx.user_data.get("salida", 0)
+        datos = ctx.user_data["datos"]
+        tipo = ctx.user_data["tipo_busqueda"]
+        compatibles = filtrar_por_tipo_y_medidas(tipo, linea, salida, datos)
+        ctx.user_data["compatibles"] = [p for p, _ in compatibles]
+
+        lineas_msg = [
+            f"📋 *Todas las {len(compatibles)} opciones* para {linea}×{salida} cm:\n"
+        ]
+        teclado = []
+        for i, (p, precio) in enumerate(compatibles, 1):
+            precio_txt = f"*{precio:,.0f} €*" if precio else "consultar"
+            rango = rango_lineas(p)
+            icono = "🏅" if i == 1 else "✨" if i <= 3 else "📌"
+            lineas_msg.append(f"\n{icono} *{i}. {p['nombre']}*")
+            lineas_msg.append(f"   💶 Precio: {precio_txt}")
+            lineas_msg.append(f"   📏 Línea: {rango}")
+            teclado.append([p["nombre"]])
+
+        lineas_msg.append("\n👇 *Elige el que más te guste:*")
+        teclado.append(["❌ Cambiar criterios"])
+        await update.message.reply_text(
+            "\n".join(lineas_msg),
+            parse_mode="Markdown",
+            reply_markup=ReplyKeyboardMarkup(teclado, one_time_keyboard=True, resize_keyboard=True)
+        )
+        return COMPARAR_MODELOS
 
     if "ninguno" in nombre.lower() or "cambiar" in nombre.lower():
         teclado = [["📐 Cambiar medidas"], ["🏠 Cambiar tipo de producto"], ["❓ Necesito asesoramiento"]]
@@ -380,92 +497,66 @@ async def confirmar_modelo_seleccionado(update: Update, ctx: ContextTypes.DEFAUL
     salida = ctx.user_data["salida"]
 
     await update.message.reply_text(
-        f"🎉 *Excelente elección:* *{producto['nombre']}*\n"
-        f"📐 Medidas: {linea} × {salida} cm",
+        f"✅ *{producto['nombre']}* — {linea}×{salida} cm",
         parse_mode="Markdown",
         reply_markup=ReplyKeyboardRemove()
     )
-
-    # Si es pérgola, preguntar tipo de estructura
-    if producto.get("tipo") == "pérgola":
-        teclado = [["🏗️ Autoportante"], ["🧱 Pared portería"], ["🏢 Entre paredes"]]
-        await update.message.reply_text(
-            "🏢 *¿Tipo de estructura?*",
-            reply_markup=ReplyKeyboardMarkup(teclado, one_time_keyboard=True, resize_keyboard=True)
-        )
-        return TIPO_ESTRUCTURA
-
-    # Si es toldo, preguntar donde se instala
-    if producto.get("tipo") == "toldo":
-        teclado = [["🏠 A techo"], ["🧱 A pared"], ["🏢 Entre paredes"]]
-        await update.message.reply_text(
-            "📍 *¿Dónde se instalará?*",
-            reply_markup=ReplyKeyboardMarkup(teclado, one_time_keyboard=True, resize_keyboard=True)
-        )
-        return TIPO_ESTRUCTURA
-
-    # Para otros tipos, ir directamente a color aluminio
-    return await preguntar_color_aluminio(update, ctx)
-
-async def tipo_estructura(update: Update, ctx: ContextTypes.DEFAULT_TYPE) -> int:
-    ctx.user_data["tipo_estructura"] = update.message.text.strip()
     return await preguntar_color_aluminio(update, ctx)
 
 async def preguntar_color_aluminio(update: Update, ctx: ContextTypes.DEFAULT_TYPE) -> int:
+    teclado = [[c] for c in COLORES_ALUMINIO_RAPIDOS.keys()]
     await update.message.reply_text(
-        "🎨 *Color de aluminio* — escribe el color que deseas:\n"
-        "_(ej: Blanco, Gris, Negro, Dorado, etc.)_",
+        "🎨 *¿Color de aluminio?*",
         parse_mode="Markdown",
-        reply_markup=ReplyKeyboardRemove()
+        reply_markup=ReplyKeyboardMarkup(teclado, one_time_keyboard=True, resize_keyboard=True)
     )
     return COLOR_ALUMINIO
 
 async def recibir_color_aluminio(update: Update, ctx: ContextTypes.DEFAULT_TYPE) -> int:
-    color_aluminio = update.message.text.strip()
+    texto = update.message.text.strip()
+
+    # Si es "otro color", pedir que lo escriba
+    if "otro" in texto.lower() or "✏️" in texto:
+        await update.message.reply_text(
+            "Escribe el color o referencia RAL que deseas:",
+            parse_mode="Markdown",
+            reply_markup=ReplyKeyboardRemove()
+        )
+        ctx.user_data["_esperando_color_personalizado"] = True
+        return COLOR_ALUMINIO
+
+    # Si ya había seleccionado "otro" antes, procesar el color escrito
+    if ctx.user_data.get("_esperando_color_personalizado"):
+        color_aluminio = texto
+        ctx.user_data.pop("_esperando_color_personalizado", None)
+    else:
+        # Convertir del teclado rápido a nombre limpio
+        color_aluminio = COLORES_ALUMINIO_RAPIDOS.get(texto, texto)
+
     ctx.user_data["color_aluminio"] = color_aluminio
 
-    # Buscar el color en las categorías para calcular incremento
     producto = ctx.user_data["producto"]
     datos = ctx.user_data["datos"]
     grupo = producto.get("grupo_color")
 
     incremento_ral = 0
-    nota_color_ral = ""
+    minimo_ral = 0
 
     if grupo and grupo in datos.get("grupos_color", {}):
         g = datos["grupos_color"][grupo]
         colores = g.get("colores", [])
-
         for c in colores:
-            # Buscar si el color introducido coincide con alguno de la lista
             if color_aluminio.lower() in c["nombre"].lower():
-                pct = c.get("incremento_pct", 0)
-                minimo = c.get("minimo_eur", 0)
-                if pct > 0:
-                    incremento_ral = pct
-                    minimo_txt = f" (mín. {minimo}€)" if minimo else ""
-                    nota_color_ral = f"\n💰 *Incremento RAL:* +{pct}%{minimo_txt}"
-                else:
-                    nota_color_ral = "\n✅ Color incluido (sin incremento)"
+                incremento_ral = c.get("incremento_pct", 0)
+                minimo_ral = c.get("minimo_eur", 0)
                 break
 
-    # Confirmar al usuario
-    msg_color = f"✅ Color de aluminio: *{color_aluminio}*"
-    if nota_color_ral:
-        msg_color += nota_color_ral
-
-    await update.message.reply_text(
-        msg_color,
-        parse_mode="Markdown",
-        reply_markup=ReplyKeyboardRemove()
-    )
-
-    # Guardar el incremento
     ctx.user_data["incremento_ral_pct"] = incremento_ral
+    ctx.user_data["minimo_ral_eur"] = minimo_ral
 
-    teclado = [["☀️ Manual (sin motor)", "⚡ Motorizado (con Somfy)"]]
+    teclado = [["☀️ Manual"], ["⚡ Con motor (Somfy)"]]
     await update.message.reply_text(
-        "⚙️ *¿Accionamiento?* Elige el que mejor se ajuste a tu estilo de vida:",
+        "⚙️ *¿Manual o con motor?*",
         parse_mode="Markdown",
         reply_markup=ReplyKeyboardMarkup(teclado, one_time_keyboard=True, resize_keyboard=True)
     )
@@ -595,9 +686,7 @@ async def pedir_medidas_directo(update: Update, ctx: ContextTypes.DEFAULT_TYPE) 
     producto = ctx.user_data["producto"]
     await update.message.reply_text(
         f"✅ *{producto['nombre']}*\n\n"
-        "Indícame las medidas en centímetros:\n"
-        "📐 *Línea × Salida* (ej: `350x250`)\n\n"
-        "_Línea = anchura total. Salida = proyección._",
+        "📐 Medidas: *Línea × Salida* (ej: `350x250`)",
         parse_mode="Markdown",
         reply_markup=ReplyKeyboardRemove()
     )
@@ -608,7 +697,7 @@ async def recibir_medidas(update: Update, ctx: ContextTypes.DEFAULT_TYPE) -> int
     match = re.match(r"(\d+)[xX×](\d+)", texto)
     if not match:
         await update.message.reply_text(
-            "No reconozco el formato. Escribe las medidas así: `350x250` (línea × salida en cm)",
+            "Formato: `350x250` (línea × salida en cm)",
             parse_mode="Markdown"
         )
         return PEDIR_MEDIDAS
@@ -616,43 +705,34 @@ async def recibir_medidas(update: Update, ctx: ContextTypes.DEFAULT_TYPE) -> int
     linea = int(match.group(1))
     salida = int(match.group(2))
 
-    # Validar medidas contra el modelo seleccionado
     producto = ctx.user_data.get("producto")
     if producto:
         pw = producto.get("precios_por_ancho", {})
         if pw and not (isinstance(pw, dict) and "estimado" in pw):
-            lineas = sorted([int(k) for k in pw.keys()])
+            lineas = _int_keys(pw)
             if linea < lineas[0] or linea > lineas[-1]:
                 rango = rango_lineas(producto)
                 await update.message.reply_text(
-                    f"⚠️ La línea {linea} cm está fuera del rango disponible para *{producto['nombre']}*.\n\n"
-                    f"_Línea disponible: {rango}_\n\n"
-                    f"¿Quieres cambiar la línea o seleccionar otro modelo?",
+                    f"⚠️ La línea {linea}cm está fuera del rango de *{producto['nombre']}*.\n\n_Disponible: {rango}_",
                     parse_mode="Markdown"
                 )
                 return PEDIR_MEDIDAS
 
-            # Validar salida contra rango del producto
             salida_min = producto.get("salida_min")
             salida_max = producto.get("salida_max")
             if salida_min is not None and salida < salida_min:
                 await update.message.reply_text(
-                    f"⚠️ La salida {salida} cm está por debajo del mínimo para *{producto['nombre']}*.\n\n"
-                    f"_Salida mínima: {salida_min} cm_\n\n"
-                    f"¿Quieres ajustar la salida o seleccionar otro modelo?",
+                    f"⚠️ Salida mínima para este modelo: {salida_min}cm",
                     parse_mode="Markdown"
                 )
                 return PEDIR_MEDIDAS
             if salida_max is not None and salida > salida_max:
                 await update.message.reply_text(
-                    f"⚠️ La salida {salida} cm está fuera del rango para *{producto['nombre']}*.\n\n"
-                    f"_Salida máxima disponible: {salida_max} cm_\n\n"
-                    f"¿Quieres ajustar la salida o seleccionar otro modelo?",
+                    f"⚠️ Salida máxima para este modelo: {salida_max}cm",
                     parse_mode="Markdown"
                 )
                 return PEDIR_MEDIDAS
 
-            # Buscar línea y validar salida (si hay estructura de salidas múltiples)
             linea_seleccionada = None
             for l in lineas:
                 if l >= linea:
@@ -662,14 +742,12 @@ async def recibir_medidas(update: Update, ctx: ContextTypes.DEFAULT_TYPE) -> int
             if linea_seleccionada:
                 salidas_para_linea = pw[str(linea_seleccionada)]
                 if isinstance(salidas_para_linea, dict):
-                    salidas_disp = sorted([int(k) for k in salidas_para_linea.keys()])
+                    salidas_disp = _int_keys(salidas_para_linea)
                     salida_valida = any(s >= salida for s in salidas_disp)
                     if not salida_valida:
                         max_salida = salidas_disp[-1]
                         await update.message.reply_text(
-                            f"⚠️ La salida {salida} cm no está disponible en *{producto['nombre']}*.\n\n"
-                            f"_Salidas máximas disponibles: hasta {max_salida} cm_\n\n"
-                            f"¿Quieres ajustar la salida o seleccionar otro modelo?",
+                            f"⚠️ Salida máxima disponible: {max_salida}cm",
                             parse_mode="Markdown"
                         )
                         return PEDIR_MEDIDAS
@@ -677,89 +755,161 @@ async def recibir_medidas(update: Update, ctx: ContextTypes.DEFAULT_TYPE) -> int
     ctx.user_data["linea"] = linea
     ctx.user_data["salida"] = salida
 
-    teclado = [["Manual", "Motorizado"]]
+    teclado = [[c] for c in COLORES_ALUMINIO_RAPIDOS.keys()]
     await update.message.reply_text(
-        "⚙️ ¿Qué tipo de accionamiento necesitas?",
+        "🎨 *¿Color de aluminio?*",
+        parse_mode="Markdown",
         reply_markup=ReplyKeyboardMarkup(teclado, one_time_keyboard=True, resize_keyboard=True)
     )
-    return ACCIONAMIENTO
+    return COLOR_ALUMINIO
+
+
 
 # ─── FLUJO COMPARTIDO ────────────────────────────────────────
 
 async def accionamiento(update: Update, ctx: ContextTypes.DEFAULT_TYPE) -> int:
     opcion = update.message.text.strip()
-    ctx.user_data["motorizado"] = opcion.lower() == "motorizado"
+    ctx.user_data["motorizado"] = "motor" in opcion.lower()
 
     if ctx.user_data["motorizado"]:
+        producto = ctx.user_data["producto"]
+        datos = ctx.user_data["datos"]
+        grupo_motor = producto.get("grupo_motor")
+        tiene_somfy = grupo_motor and str(grupo_motor) in datos.get("grupos_motor", {})
+
+        if tiene_somfy:
+            await update.message.reply_text(
+                "✅ Este modelo tiene motores Somfy disponibles. ¿Cuál te interesa?",
+                parse_mode="Markdown",
+                reply_markup=ReplyKeyboardRemove()
+            )
+            gm = datos["grupos_motor"][str(grupo_motor)]
+            motores = gm.get("motores_somfy", [])
+            teclado = [[m] for m in motores]
+            mando_info = MANDOS_POR_MARCA["somfy"]
+            await update.message.reply_text(
+                f"_(Mando {mando_info['label']} incluido: +{mando_info['precio']:.2f}€)_",
+                parse_mode="Markdown",
+                reply_markup=ReplyKeyboardMarkup(teclado, one_time_keyboard=True, resize_keyboard=True)
+            )
+            return SELECCIONAR_MOTOR
+        else:
+            ctx.user_data["marca_motor"] = "somfy"
+            ctx.user_data["preferencia_motor"] = "Motor recomendado"
+            return await preguntar_color(update, ctx)
+
+    return await preguntar_color(update, ctx)
+
+async def seleccionar_marca_motor(update: Update, ctx: ContextTypes.DEFAULT_TYPE) -> int:
+    opcion = update.message.text.strip()
+
+    if "somfy" in opcion.lower():
+        ctx.user_data["marca_motor"] = "somfy"
         producto = ctx.user_data["producto"]
         datos = ctx.user_data["datos"]
         grupo_motor = producto.get("grupo_motor")
 
         if grupo_motor and str(grupo_motor) in datos.get("grupos_motor", {}):
             gm = datos["grupos_motor"][str(grupo_motor)]
-            motores_str = ", ".join(gm.get("motores_somfy", []))
+            motores = gm.get("motores_somfy", [])
+            teclado = [[m] for m in motores]
+            mando_info = MANDOS_POR_MARCA["somfy"]
             await update.message.reply_text(
-                f"🔌 Los motores Somfy compatibles con este producto son:\n"
-                f"_{motores_str}_\n\n"
-                f"El precio del motor se suma al precio base del producto. "
-                f"¿Tienes preferencia de motor o potencia? (puedes escribir o poner «sin preferencia»)",
+                f"✅ *Motor Somfy*\n\n"
+                f"Elige el motor compatible con tu producto:\n\n"
+                f"_(El mando {mando_info['label']} se incluye automáticamente: +{mando_info['precio']:.2f} €)_",
                 parse_mode="Markdown",
-                reply_markup=ReplyKeyboardRemove()
+                reply_markup=ReplyKeyboardMarkup(teclado, one_time_keyboard=True, resize_keyboard=True)
             )
             return SELECCIONAR_MOTOR
         else:
             await update.message.reply_text(
-                "Para la motorización de este producto, nuestros técnicos te asesorarán sobre el motor más adecuado. "
-                "Continuamos con el precio base.",
+                "Para la motorización Somfy de este producto, nuestros técnicos te asesorarán sobre el motor más adecuado.",
                 reply_markup=ReplyKeyboardRemove()
             )
+    else:
+        ctx.user_data["marca_motor"] = "otra"
+        ctx.user_data["preferencia_motor"] = "Otra marca"
+        await update.message.reply_text(
+            "🔧 *Otra marca de motor*\n\n"
+            "Nuestros técnicos te asesorarán sobre las opciones disponibles y su precio. "
+            "Continuamos con el precio base del producto.",
+            parse_mode="Markdown",
+            reply_markup=ReplyKeyboardRemove()
+        )
 
+    producto = ctx.user_data.get("producto", {})
+    if producto.get("tipo") == "toldo":
+        return await preguntar_tipo_motor(update, ctx)
     return await preguntar_color(update, ctx)
 
 async def seleccionar_motor(update: Update, ctx: ContextTypes.DEFAULT_TYPE) -> int:
     ctx.user_data["preferencia_motor"] = update.message.text.strip()
+    producto = ctx.user_data.get("producto", {})
+    if producto.get("tipo") == "toldo":
+        return await preguntar_tipo_motor(update, ctx)
     return await preguntar_color(update, ctx)
 
 async def preguntar_color(update: Update, ctx: ContextTypes.DEFAULT_TYPE) -> int:
+    teclado = [[cat] for cat in CATEGORIAS_SAULEDA.keys()]
+    teclado.append(["✏️ Otro tejido"])
     await update.message.reply_text(
-        "🧵 *¿Qué color de tejido deseas?*\n\n"
-        "Escribe el color o referencia Sauleda que prefieras.\n"
-        "_(ej: Blanco, Gris oscuro, Antracita, etc.)_",
+        "🧵 *Color de tejido*\n\n"
+        "Elige una gama de color del catálogo Sauleda PLAINS:",
         parse_mode="Markdown",
-        reply_markup=ReplyKeyboardRemove()
+        reply_markup=ReplyKeyboardMarkup(teclado, one_time_keyboard=True, resize_keyboard=True)
+    )
+    return COLOR_CATEGORIA
+
+async def recibir_categoria_color(update: Update, ctx: ContextTypes.DEFAULT_TYPE) -> int:
+    seleccion = update.message.text.strip()
+
+    if seleccion == "✏️ Otro tejido":
+        await update.message.reply_text(
+            "✏️ *Escribe el color o tejido que deseas:*\n\n"
+            "_(Si no está en el catálogo PLAINS Sauleda, puede llevar incremento de precio)_",
+            parse_mode="Markdown",
+            reply_markup=ReplyKeyboardRemove()
+        )
+        ctx.user_data["color_fuera_lista"] = True
+        return COLOR
+
+    categoria = CATEGORIAS_SAULEDA.get(seleccion)
+    if not categoria:
+        return await preguntar_color(update, ctx)
+
+    teclado = [[c] for c in categoria]
+    teclado.append(["↩️ Otras categorías"])
+    await update.message.reply_text(
+        f"🎨 *{seleccion}*\n\nElige tu color:",
+        parse_mode="Markdown",
+        reply_markup=ReplyKeyboardMarkup(teclado, one_time_keyboard=True, resize_keyboard=True)
     )
     return COLOR
 
 async def recibir_color(update: Update, ctx: ContextTypes.DEFAULT_TYPE) -> int:
     color_tejido = update.message.text.strip()
+
+    if color_tejido == "↩️ Otras categorías":
+        return await preguntar_color(update, ctx)
+
     ctx.user_data["color_tejido"] = color_tejido
 
-    teclado = [["✅ Sí, catálogo estándar"], ["❌ No, color personalizado"]]
-    await update.message.reply_text(
-        f"🎨 *{color_tejido}*\n\n"
-        f"¿Este color está en el *catálogo estándar*?\n\n"
-        f"_(Si es estándar, no lleva incremento de precio)_",
-        parse_mode="Markdown",
-        reply_markup=ReplyKeyboardMarkup(teclado, one_time_keyboard=True, resize_keyboard=True)
-    )
-    return TEJIDO
+    fuera_lista = ctx.user_data.pop("color_fuera_lista", False)
+    es_estandar = not fuera_lista and color_tejido.lower() in COLORES_SAULEDA_PLAINS
+    ctx.user_data["es_awma"] = es_estandar
 
-async def recibir_tejido(update: Update, ctx: ContextTypes.DEFAULT_TYPE) -> int:
-    respuesta = update.message.text.strip()
-    es_awma = "sí" in respuesta.lower()
-    ctx.user_data["es_awma"] = es_awma
-
-    if es_awma:
+    if es_estandar:
         await update.message.reply_text(
-            "✅ *Perfecto, catálogo estándar*\n\n"
-            f"Precio *sin incremento* de color",
+            f"✅ *{color_tejido}* — catálogo PLAINS Sauleda\n"
+            "Sin incremento de precio.",
             parse_mode="Markdown",
             reply_markup=ReplyKeyboardRemove()
         )
     else:
         await update.message.reply_text(
-            "⚠️ *Color personalizado*\n\n"
-            f"Precio con *incremento según color* (técnico confirmará)",
+            f"⚠️ *{color_tejido}* — color personalizado\n"
+            "El técnico confirmará si lleva incremento.",
             parse_mode="Markdown",
             reply_markup=ReplyKeyboardRemove()
         )
@@ -790,111 +940,132 @@ async def mostrar_resumen(update: Update, ctx: ContextTypes.DEFAULT_TYPE) -> int
         )
         return await iniciar_captacion(update, ctx)
 
-    # Calcular incremento de color RAL
+    # Calcular incremento de color RAL (con mínimo si aplica)
     incremento_ral_pct = ctx.user_data.get("incremento_ral_pct", 0)
+    minimo_ral_eur = ctx.user_data.get("minimo_ral_eur", 0)
     incremento_ral_euros = 0
     if incremento_ral_pct > 0:
         incremento_ral_euros = precio_base * incremento_ral_pct / 100
+        # Aplicar el mínimo si existe
+        if minimo_ral_eur > 0:
+            incremento_ral_euros = max(incremento_ral_euros, minimo_ral_eur)
 
-    precio_final = precio_base + incremento_ral_euros
+    # Calcular precio del mando según marca de motor
+    precio_mando = 0
+    marca_motor = ctx.user_data.get("marca_motor", "somfy") if motorizado else None
+    if motorizado and marca_motor in MANDOS_POR_MARCA:
+        precio_mando = MANDOS_POR_MARCA[marca_motor]["precio"]
+
+    precio_final = precio_base + incremento_ral_euros + precio_mando
 
     lineas_resumen = [
-        f"━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━",
-        f"🎯 *TU CONFIGURACIÓN PERSONALIZADA*",
-        f"━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\n",
-        f"🏆 *Producto:* {producto['nombre']}",
-        f"📏 *Medidas:* {linea}cm × {salida}cm de salida",
+        f"━━━━━━━━━━━━━━━━━━━━━━━",
+        f"🎯 *TU PRESUPUESTO*",
+        f"━━━━━━━━━━━━━━━━━━━━━━━\n",
+        f"🏆 *Modelo:* {producto['nombre']}",
+        f"📏 *Medidas:* {linea} × {salida} cm",
+        f"🎨 *Aluminio:* {ctx.user_data.get('color_aluminio', '—')}",
     ]
-    if ctx.user_data.get("tipo_estructura"):
-        label = "Instalación" if producto.get("tipo") == "toldo" else "Estructura"
-        lineas_resumen.append(f"📍 *{label}:* {ctx.user_data['tipo_estructura']}")
-    lineas_resumen.append(f"🎨 *Color aluminio:* {ctx.user_data.get('color_aluminio', '—')}")
-    lineas_resumen.append(f"⚙️ *Accionamiento:* {'🔌 Motorizado (Somfy)' if motorizado else '☀️ Manual'}")
+    marca_label = (ctx.user_data.get("marca_motor", "somfy") or "somfy").capitalize()
+    lineas_resumen.append(f"⚙️ *Accionamiento:* {'⚡ Motor ' + marca_label if motorizado else '☀️ Manual'}")
     if motorizado and ctx.user_data.get("preferencia_motor"):
         pref = ctx.user_data["preferencia_motor"]
-        if "sin preferencia" not in pref.lower():
+        if "sin preferencia" not in pref.lower() and "otra marca" not in pref.lower():
             lineas_resumen.append(f"🎛️ *Motor:* {pref}")
     color_tejido = ctx.user_data.get("color_tejido", "—")
     es_awma = ctx.user_data.get("es_awma", False)
-    awma_label = "✅ Estándar (sin incremento)" if es_awma else "⚠️ Personalizado (con incremento)"
-    lineas_resumen.append(f"🧵 *Color tejido:* {color_tejido}")
-    lineas_resumen.append(f"   {awma_label}")
+    awma_label = "✅ Sin incremento" if es_awma else "⚠️ Con posible incremento (técnico confirma)"
+    lineas_resumen.append(f"🧵 *Tejido:* {color_tejido} — {awma_label}")
 
     lineas_resumen.extend([
-        f"\n━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━",
-        f"💰 *DESGLOSE DE PRECIO*",
+        f"\n━━━━━━━━━━━━━━━━━━━━━━━",
+        f"💰 *DESGLOSE*",
     ])
 
-    lineas_resumen.append(f"• Producto base: *{precio_base:,.0f} €*")
+    lineas_resumen.append(f"• Producto base: {precio_base:,.0f} €")
     if incremento_ral_pct > 0:
-        lineas_resumen.append(f"• Incremento RAL (+{incremento_ral_pct}%): +*{incremento_ral_euros:,.0f} €*")
-    lineas_resumen.append(f"━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━")
-    lineas_resumen.append(f"💰 *TOTAL ORIENTATIVO:* *{precio_final:,.0f} €*")
+        lineas_resumen.append(f"• Incremento RAL (+{incremento_ral_pct}%): +{incremento_ral_euros:,.0f} €")
+    if motorizado and precio_mando > 0:
+        mando_info = MANDOS_POR_MARCA.get(ctx.user_data.get("marca_motor", "somfy"), {})
+        mando_tipo = mando_info.get("label", "Mando")
+        lineas_resumen.append(f"• Mando {mando_tipo} (incluido): +{precio_mando:,.2f} €")
 
-    if motorizado:
-        lineas_resumen.append("\n_(+ motor Somfy según modelo)_")
+    lineas_resumen.append(f"━━━━━━━━━━━━━━━━━━━━━━━")
+    lineas_resumen.append(f"📊 *Subtotal:* {precio_final:,.0f} €")
 
-    es_color_estandar = ctx.user_data.get("es_awma", False)
-    if not es_color_estandar:
-        lineas_resumen.append("_(+ incremento de color tejido según gama - técnico confirmará)_")
+    iva = precio_final * 0.21
+    total_con_iva = precio_final + iva
+    lineas_resumen.append(f"📋 *IVA (21%):* +{iva:,.0f} €")
+    lineas_resumen.append(f"━━━━━━━━━━━━━━━━━━━━━━━")
+    lineas_resumen.append(f"💰 *TOTAL: {total_con_iva:,.0f} €*")
 
     if producto.get("tipo") == "toldo":
-        lineas_resumen.append(
-            f"\n💡 *Complemento recomendado:* TJD Tejadillo (protege tu tejido)"
-        )
+        nombre_producto = producto.get("nombre", "").upper()
+        es_box = "BOX" in nombre_producto or "BX" in nombre_producto
+        if not es_box:
+            lineas_resumen.append(
+                f"\n💡 _Recuerda añadir el tejadillo para proteger el tejido cuando no se use._"
+            )
 
     lineas_resumen.extend([
-        f"\n━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━",
-        f"✅ *¿Siguiente paso?*",
-        f"Nuestros técnicos te visitarán SIN COMPROMISO para:",
-        f"• Confirmar medidas exactas",
-        f"• Asesorarte en colores y materiales",
-        f"• Presupuesto final personalizado",
-        f"\n_Precio orientativo PVP tarifa 2026._"
+        f"\n_Precio orientativo. El técnico confirma las medidas y cierra el presupuesto final, sin compromiso._",
     ])
 
     texto = "\n".join(lineas_resumen)
 
-    teclado = [["✅ Sí, contactar con técnico"], ["❌ Cambiar opciones"]]
+    teclado = [["✅ Sí, quiero la visita"], ["🔧 Añadir complementos"], ["❌ Cambiar algo"]]
     await update.message.reply_text(
         texto,
         parse_mode="Markdown",
         reply_markup=ReplyKeyboardMarkup(teclado, one_time_keyboard=True, resize_keyboard=True)
     )
     ctx.user_data["precio_calculado"] = precio_final
+    ctx.user_data["precio_con_iva"] = total_con_iva
     return CONFIRMAR
 
 async def confirmar(update: Update, ctx: ContextTypes.DEFAULT_TYPE) -> int:
-    respuesta = update.message.text.strip()
-    if "cambiar" in respuesta.lower() or "opciones" in respuesta.lower():
-        # Usuario quiere cambiar opciones
-        await update.message.reply_text(
-            "De acuerdo, aquí te dejamos la información. 👍\n\n"
-            "Si cambias de idea o tienes más dudas:\n"
-            "📞 Llámanos o escríbenos\n"
-            "✉️ Email: info@todosombra.es\n\n"
-            "¡Estamos para ayudarte cuando lo necesites! ☀️",
-            reply_markup=ReplyKeyboardRemove()
-        )
-        return ConversationHandler.END
-    else:
-        # Usuario quiere contactar, pero primero pregunta por complementos
+    respuesta = update.message.text.strip().lower()
+
+    if "complemento" in respuesta or "🔧" in respuesta:
         return await preguntar_complementos_adicionales(update, ctx)
+
+    if "cambiar" in respuesta or "❌" in respuesta:
+        teclado = [
+            ["📐 Cambiar medidas"],
+            ["🎨 Cambiar color"],
+            ["⚙️ Cambiar accionamiento"],
+            ["🧵 Cambiar tejido"],
+            ["🏠 Cambiar tipo de producto"],
+        ]
+        await update.message.reply_text(
+            "¿Qué quieres cambiar?",
+            reply_markup=ReplyKeyboardMarkup(teclado, one_time_keyboard=True, resize_keyboard=True)
+        )
+        return ELEGIR_TIPO
+
+    # "Sí, quiero la visita" → directo a captación
+    ctx.user_data["motivo_derivacion"] = "Solicita visita tras ver presupuesto"
+    return await iniciar_captacion(update, ctx)
 
 
 async def preguntar_complementos_adicionales(update: Update, ctx: ContextTypes.DEFAULT_TYPE) -> int:
     teclado = [
         ["💡 Iluminación LED"],
-        ["🏠 Tejadillo (cubrición)"],
         ["🪟 Costadillo lateral"],
-        ["🎮 Mandos y automatismos"],
-        ["📡 Sensores (viento, lluvia, sol)"],
-        ["🔩 Perfiles y terminales"],
-        ["❌ No, continuar sin complementos"]
     ]
+
+    producto = ctx.user_data.get("producto", {})
+    nombre_producto = producto.get("nombre", "").upper()
+    es_box = "BOX" in nombre_producto or "BX" in nombre_producto
+
+    if not es_box:
+        teclado.insert(0, ["🏠 Tejadillo protector"])
+
+    teclado.append(["✅ Listo, pasar al técnico"])
+
     await update.message.reply_text(
-        "¿Quieres añadir complementos adicionales?\n\n"
-        "_(Puedes añadir uno o más)_",
+        "¿Qué extras quieres añadir?",
+        parse_mode="Markdown",
         reply_markup=ReplyKeyboardMarkup(teclado, one_time_keyboard=True, resize_keyboard=True)
     )
     return AÑADIR_COMPLEMENTOS
@@ -902,35 +1073,31 @@ async def preguntar_complementos_adicionales(update: Update, ctx: ContextTypes.D
 
 async def añadir_complementos(update: Update, ctx: ContextTypes.DEFAULT_TYPE) -> int:
     opcion = update.message.text.strip()
+    opcion_lower = opcion.lower()
 
-    if "no, continuar" in opcion.lower() or "❌" in opcion:
-        # Sin complementos, proceder a captar datos
-        ctx.user_data["motivo_derivacion"] = "Solicita contacto con técnico tras ver precio"
+    if "listo" in opcion_lower or "pasar" in opcion_lower or "✅" in opcion or "no" in opcion_lower[:3]:
+        ctx.user_data["motivo_derivacion"] = "Solicita visita tras presupuesto"
         return await iniciar_captacion(update, ctx)
 
-    # Guardar el complemento seleccionado
-    if "Iluminación" in opcion or "Tejadillo" in opcion or "Costadillo" in opcion:
-        # Complemento con potencial precio
+    if "iluminación" in opcion_lower or "tejadillo" in opcion_lower or "costadillo" in opcion_lower:
         ctx.user_data["complemento_adicional_nombre"] = opcion
         await update.message.reply_text(
-            f"¿Cuál es la *línea* (anchura) en centímetros?",
+            f"¿Anchura del *{opcion}* en cm? (ej: `350`)",
             parse_mode="Markdown",
             reply_markup=ReplyKeyboardRemove()
         )
         return MEDIDA_COMPLEMENTO_ADICIONAL
-    else:
-        # Complemento sin precio definido
-        ctx.user_data["complemento_adicional_nombre"] = opcion
-        await update.message.reply_text(
-            f"✅ {opcion} será incluido en tu presupuesto.\n\n"
-            f"¿Quieres añadir otro complemento más?",
-            reply_markup=ReplyKeyboardMarkup(
-                [["Sí, otro complemento"], ["❌ No, continuar"]],
-                one_time_keyboard=True,
-                resize_keyboard=True
-            )
+
+    ctx.user_data["complemento_adicional_nombre"] = opcion
+    await update.message.reply_text(
+        f"✅ {opcion} apuntado. ¿Algo más?",
+        reply_markup=ReplyKeyboardMarkup(
+            [["Sí, otro extra"], ["✅ Listo, pasar al técnico"]],
+            one_time_keyboard=True,
+            resize_keyboard=True
         )
-        return AÑADIR_COMPLEMENTOS
+    )
+    return AÑADIR_COMPLEMENTOS
 
 
 async def medida_complemento_adicional(update: Update, ctx: ContextTypes.DEFAULT_TYPE) -> int:
@@ -1005,16 +1172,19 @@ async def captar_datos_ficha_tecnica(update: Update, ctx: ContextTypes.DEFAULT_T
     return CAPTAR_NOMBRE
 
 async def iniciar_captacion(update: Update, ctx: ContextTypes.DEFAULT_TYPE) -> int:
-    # Recalcular precio final con complementos
-    precio_base = ctx.user_data.get("precio_calculado", 0)
+    precio_final_total = ctx.user_data.get("precio_con_iva", 0)
+    if precio_final_total == 0:
+        precio_final_total = ctx.user_data.get("precio_calculado", 0)
+
     precio_complemento = ctx.user_data.get("precio_complemento_adicional", 0)
-    precio_final_total = precio_base + precio_complemento
+    if precio_complemento > 0:
+        precio_final_total += precio_complemento
+
     ctx.user_data["precio_final_total"] = precio_final_total
 
     await update.message.reply_text(
-        "🎉 *¡Perfecto!*\n\n"
-        "Uno de nuestros especialistas en soluciones de sombra te contactará en las próximas *2-4 horas* con tu presupuesto sin compromiso.\n\n"
-        "👤 *¿Cuál es tu nombre?*",
+        "👍 Genial. Te paso con nuestro técnico para que confirme medidas en tu casa y te entregue el presupuesto final.\n\n"
+        "👤 *¿Cómo te llamas?*",
         parse_mode="Markdown",
         reply_markup=ReplyKeyboardRemove()
     )
@@ -1022,9 +1192,11 @@ async def iniciar_captacion(update: Update, ctx: ContextTypes.DEFAULT_TYPE) -> i
 
 async def captar_nombre(update: Update, ctx: ContextTypes.DEFAULT_TYPE) -> int:
     ctx.user_data["lead_nombre"] = update.message.text.strip()
+    nombre = ctx.user_data["lead_nombre"]
     await update.message.reply_text(
-        "📱 *¿Tu teléfono o email?*\n"
-        "_(Preferiblemente teléfono para que podamos contactarte rápido)_",
+        f"Encantado, {nombre} 👋\n\n"
+        f"📱 *¿Tu teléfono?*\n"
+        f"_(Mejor que el email — así te llamamos en seguida)_",
         parse_mode="Markdown"
     )
     return CAPTAR_CONTACTO
@@ -1034,8 +1206,8 @@ async def captar_contacto(update: Update, ctx: ContextTypes.DEFAULT_TYPE) -> int
     ctx.user_data["lead_contacto"] = contacto
 
     await update.message.reply_text(
-        "📍 *¿En qué localidad o zona te encuentras?*\n"
-        "_(Ej: Cartagena, Murcia, La Manga...)_",
+        "📍 *¿En qué zona estás?*\n"
+        "_(Ej: Cartagena, La Manga, Mazarrón...)_",
         parse_mode="Markdown",
         reply_markup=ReplyKeyboardRemove()
     )
@@ -1061,14 +1233,16 @@ async def captar_localidad(update: Update, ctx: ContextTypes.DEFAULT_TYPE) -> in
         "localidad": localidad,
         "producto": producto.get("nombre", "—"),
         "medidas": f"{linea}×{salida} cm" if linea != "—" else "—",
-        "tipo_estructura": ctx.user_data.get("tipo_estructura"),
         "color_aluminio": ctx.user_data.get("color_aluminio"),
         "incremento_ral_pct": ctx.user_data.get("incremento_ral_pct", 0),
         "motorizado": motorizado,
+        "marca_motor": ctx.user_data.get("marca_motor"),
+        "preferencia_motor": ctx.user_data.get("preferencia_motor"),
         "color_tejido": ctx.user_data.get("color_tejido"),
         "es_awma": ctx.user_data.get("es_awma"),
         "precio_base_orientativo": precio,
         "precio_final_orientativo": ctx.user_data.get("precio_calculado"),
+        "precio_con_iva": ctx.user_data.get("precio_con_iva"),
         "complemento_adicional": ctx.user_data.get("complemento_adicional_nombre"),
         "precio_complemento": ctx.user_data.get("precio_complemento_adicional", 0),
         "precio_total_con_complementos": ctx.user_data.get("precio_final_total"),
@@ -1078,34 +1252,15 @@ async def captar_localidad(update: Update, ctx: ContextTypes.DEFAULT_TYPE) -> in
     }
     guardar_lead(lead)
 
-    if es_ficha_tecnica:
-        await update.message.reply_text(
-            f"✅ *¡Perfecto, {nombre}!*\n\n"
-            f"📄 *Nuestro equipo te enviará la ficha técnica de {producto.get('nombre')}* al {contacto}\n\n"
-            f"📍 Zona: {localidad}\n\n"
-            f"📞 *Te contactaremos en 2-4 horas* para:\n"
-            f"• Enviar ficha técnica y especificaciones\n"
-            f"• Aclarar todos tus detalles técnicos\n"
-            f"• Preparar presupuesto 100% personalizado\n"
-            f"• Agendar visita técnica sin compromiso\n\n"
-            f"¡Gracias por tu confianza! ☀️",
-            parse_mode="Markdown",
-            reply_markup=ReplyKeyboardRemove()
-        )
-    else:
-        await update.message.reply_text(
-            f"🎉 *¡Gracias, {nombre}!*\n\n"
-            f"✅ Tu consulta ha sido registrada correctamente.\n\n"
-            f"📍 Zona: {localidad}\n\n"
-            f"📞 *Un especialista te contactará en 2-4 horas* con:\n"
-            f"• Presupuesto detallado personalizado\n"
-            f"• Asesoramiento profesional sin compromiso\n"
-            f"• Opciones de financiación disponible\n\n"
-            f"☀️ *¡Gracias por elegir TodoSombra!*",
-            parse_mode="Markdown",
-            reply_markup=ReplyKeyboardRemove()
-        )
-
+    await update.message.reply_text(
+        f"✅ *¡Listo, {nombre}!*\n\n"
+        f"📞 Te llamamos en *menos de 24h laborales* para concertar la visita gratuita.\n\n"
+        f"📍 Zona: {localidad}\n"
+        f"📱 Contacto: {contacto}\n\n"
+        f"_Si necesitas algo antes, escríbenos por aquí mismo._ ☀️",
+        parse_mode="Markdown",
+        reply_markup=ReplyKeyboardRemove()
+    )
     return ConversationHandler.END
 
 async def cancelar(update: Update, ctx: ContextTypes.DEFAULT_TYPE) -> int:
@@ -1140,12 +1295,12 @@ def main():
             ELEGIR_TIPO: [MessageHandler(filters.TEXT & ~filters.COMMAND, elegir_tipo)],
             MEDIDAS_BUSQUEDA: [MessageHandler(filters.TEXT & ~filters.COMMAND, medidas_busqueda)],
             COMPARAR_MODELOS: [MessageHandler(filters.TEXT & ~filters.COMMAND, comparar_modelos)],
-            TIPO_ESTRUCTURA: [MessageHandler(filters.TEXT & ~filters.COMMAND, tipo_estructura)],
             COLOR_ALUMINIO: [MessageHandler(filters.TEXT & ~filters.COMMAND, recibir_color_aluminio)],
             ACCIONAMIENTO: [MessageHandler(filters.TEXT & ~filters.COMMAND, accionamiento)],
+            SELECCIONAR_MARCA_MOTOR: [MessageHandler(filters.TEXT & ~filters.COMMAND, seleccionar_marca_motor)],
             SELECCIONAR_MOTOR: [MessageHandler(filters.TEXT & ~filters.COMMAND, seleccionar_motor)],
+            COLOR_CATEGORIA: [MessageHandler(filters.TEXT & ~filters.COMMAND, recibir_categoria_color)],
             COLOR: [MessageHandler(filters.TEXT & ~filters.COMMAND, recibir_color)],
-            TEJIDO: [MessageHandler(filters.TEXT & ~filters.COMMAND, recibir_tejido)],
             CONFIRMAR: [MessageHandler(filters.TEXT & ~filters.COMMAND, confirmar)],
             CAPTAR_NOMBRE: [MessageHandler(filters.TEXT & ~filters.COMMAND, captar_nombre)],
             CAPTAR_CONTACTO: [MessageHandler(filters.TEXT & ~filters.COMMAND, captar_contacto)],
