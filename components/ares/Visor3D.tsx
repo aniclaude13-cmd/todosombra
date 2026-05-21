@@ -226,7 +226,7 @@ function ToldoAres({ lineaCm, salidaCm, colorTela = '#dcd1b8', colorAluminio = '
 
       {/* Articulated Arms */}
       {[-(linea / 2 - 0.22), linea / 2 - 0.22].map((x, i) => (
-        <group key={i} position={[x, -cofreAlto / 2 - 0.035, 0.02]}>
+        <group key={i} position={[x, -cofreAlto / 2 - 0.035, -0.12]}>
           {/* First arm segment */}
           <group rotation={[inclinacionSegmento1, 0, 0]}>
             <mesh position={[0, 0, segmento1Largo / 2]} castShadow>
