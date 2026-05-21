@@ -10,6 +10,7 @@ interface Props {
   salidaCm: number;
   colorTela?: string;
   colorAluminio?: string;
+  extensionRatio?: number;
 }
 
 const CM = 0.01;
@@ -135,12 +136,12 @@ function useFloorTexture(): THREE.CanvasTexture {
   }, []);
 }
 
-function ToldoAres({ lineaCm, salidaCm, colorTela = '#dcd1b8', colorAluminio = '#f1f1ed' }: Props) {
+function ToldoAres({ lineaCm, salidaCm, colorTela = '#dcd1b8', colorAluminio = '#f1f1ed', extensionRatio = 1 }: Props) {
   const linea = lineaCm * CM;
   const salida = salidaCm * CM;
   const cofreAlto = 0.18;
   const cofreFondo = 0.19;
-  const extensionRatio = 1; // 0 = fully retracted, 1 = fully extended
+  // 0 = fully retracted, 1 = fully extended
   const brazoW = 0.058;
   const brazoH = 0.042;
 

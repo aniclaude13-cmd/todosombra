@@ -53,6 +53,7 @@ export default function ConfiguradorAres() {
   const [colorRal, setColorRal] = useState('9016');
   const [colorTelaId, setColorTelaId] = useState('crema');
   const [cantidad, setCantidad] = useState(1);
+  const [extensionRatio, setExtensionRatio] = useState(1);
 
   // Modo admin (mostrar coste): activa con ?admin=1 o tecla A en localStorage
   const [adminMode] = useState(() => {
@@ -76,8 +77,22 @@ export default function ConfiguradorAres() {
   return (
     <div className="grid grid-cols-1 lg:grid-cols-[1fr_400px] gap-6 h-full">
       {/* Visor 3D */}
-      <div className="h-[50vh] lg:h-[calc(100vh-8rem)] min-h-[400px]">
-        <Visor3D lineaCm={linea} salidaCm={salida} colorTela={colorTelaHex} colorAluminio={colorAluminioHex} />
+      <div className="h-[50vh] lg:h-[calc(100vh-8rem)] min-h-[400px] flex flex-col">
+        <div className="flex-1">
+          <Visor3D
+            lineaCm={linea}
+            salidaCm={salida}
+            colorTela={colorTelaHex}
+            colorAluminio={colorAluminioHex}
+            extensionRatio={extensionRatio}
+          />
+        </div>
+        <button
+          onClick={() => setExtensionRatio(extensionRatio === 1 ? 0 : 1)}
+          className="mt-3 w-full bg-blue-500 hover:bg-blue-600 text-white font-medium py-2 rounded-lg transition"
+        >
+          {extensionRatio === 1 ? '🔼 Cerrar toldo' : '🔽 Abrir toldo'}
+        </button>
       </div>
 
       {/* Panel de configuración */}
