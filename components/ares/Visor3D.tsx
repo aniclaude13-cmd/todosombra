@@ -152,13 +152,13 @@ function ToldoAres({ lineaCm, salidaCm, colorTela = '#dcd1b8', colorAluminio = '
   // Inverse kinematics for pantograph: arm angles that produce correct projection
   // extensionRatio: 0 = fully retracted (arms horizontal), 1 = fully extended
   // When fully extended (extensionRatio=1):
-  //   - Seg1 rotates to ~50° (upward)
-  //   - Seg2 rotates to ~-35° relative to seg1 (forward-down), creating ~15° total angle for fabric
-  // When fully retracted (extensionRatio=0): both arms horizontal (0°)
+  //   - Seg1 rotates to ~68 deg (upward)
+  //   - Seg2 rotates to ~-38 deg relative to seg1 (forward-down), creating ~30 deg total angle for fabric
+  // When fully retracted (extensionRatio=0): both arms horizontal (0 deg)
 
   const extendAngle = extensionRatio; // 0-1 curve
-  const seg1Angle = extendAngle * 50; // 0° at rest, 50° fully extended
-  const seg2RelativeAngle = extendAngle * (-35); // 0° at rest, -35° fully extended
+  const seg1Angle = extendAngle * 68; // 0 deg at rest, 68 deg fully extended
+  const seg2RelativeAngle = extendAngle * (-38); // 0 deg at rest, -38 deg fully extended
 
   const inclinacionSegmento1 = THREE.MathUtils.degToRad(seg1Angle);
   const inclinacionSegmento2 = THREE.MathUtils.degToRad(seg2RelativeAngle);
@@ -183,6 +183,10 @@ function ToldoAres({ lineaCm, salidaCm, colorTela = '#dcd1b8', colorAluminio = '
 
   // Fabric angle: maintains parallelism to awning structure
   const telaAngle = Math.PI / 2 + inclinacionSegmento1 + inclinacionSegmento2;
+
+  // Tube rotation: fabric unrolls from the tube as extensionRatio increases
+  // ~2π radians per full rotation (one wrap of fabric around tube)
+  const tubeRotation = extensionRatio * Math.PI * 2.5;
 
   // Shared material props for spread
   const aluProps = {
@@ -263,8 +267,8 @@ function ToldoAres({ lineaCm, salidaCm, colorTela = '#dcd1b8', colorAluminio = '
         <meshPhysicalMaterial {...aluProps} />
       </mesh>
 
-      {/* Lona (fabric) */}
-      <group position={[0, -cofreAlto / 2, cofreFondo]} rotation={[telaAngle, 0, 0]}>
+      {/* Lona (fabric) - unrolls from tube with rotation */}
+      <group position={[0, -cofreAlto / 2, cofreFondo]} rotation={[telaAngle, 0, tubeRotation]}>
         <mesh position={[0, telaOffset, 0]} geometry={lonaGeom} castShadow receiveShadow>
           <meshStandardMaterial {...telaMapProps} transparent opacity={telaOpacity} />
         </mesh>
