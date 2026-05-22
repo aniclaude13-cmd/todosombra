@@ -91,7 +91,7 @@ export default function ConfiguradorAres() {
         cancelAnimationFrame(animationRef.current);
       }
     };
-  }, [extensionTarget, extensionRatio]);
+  }, [extensionTarget]);
 
   // Modo admin (mostrar coste): activa con ?admin=1 o tecla A en localStorage
   const [adminMode] = useState(() => {
