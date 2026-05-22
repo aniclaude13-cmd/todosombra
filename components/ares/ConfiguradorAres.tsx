@@ -129,7 +129,7 @@ export default function ConfiguradorAres() {
         <button
           onClick={toggleToldo}
           disabled={isClosing}
-          className="mt-3 w-full bg-blue-500 hover:bg-blue-600 disabled:bg-blue-400 text-white font-medium py-2 rounded-lg transition"
+          className="mt-3 w-full bg-[#d4a034] hover:bg-[#e8b442] disabled:bg-[#d4a034]/50 text-[#0d0c0b] font-medium py-2 rounded-lg transition"
           style={{
             transition: 'all 600ms ease-in-out',
           }}
@@ -139,10 +139,10 @@ export default function ConfiguradorAres() {
       </div>
 
       {/* Panel de configuración */}
-      <div className="bg-white rounded-xl shadow-sm border border-stone-200 p-6 overflow-y-auto">
+      <div className="bg-white rounded-xl shadow-sm border border-[#e5e1d8] p-6 overflow-y-auto">
         <div className="mb-6">
-          <h1 className="text-2xl font-semibold text-stone-900">Toldo cofre ARES</h1>
-          <p className="text-sm text-stone-500 mt-1">Configura tu toldo a medida</p>
+          <h1 className="text-2xl font-semibold text-[#1a1917]">Toldo cofre ARES</h1>
+          <p className="text-sm text-[#7a756f] mt-1">Configura tu toldo a medida</p>
         </div>
 
         <div className="space-y-5">
@@ -230,7 +230,7 @@ export default function ConfiguradorAres() {
                   onClick={() => setColorRal(c.ral)}
                   title={`${c.nombre} (RAL ${c.ral})`}
                   className={`aspect-square rounded-lg border-2 transition ${
-                    colorRal === c.ral ? 'border-amber-500 scale-105' : 'border-stone-200 hover:border-amber-300'
+                    colorRal === c.ral ? 'border-[#d4a034] scale-105' : 'border-[#e5e1d8] hover:border-[#d4a034]/60'
                   }`}
                   style={{ backgroundColor: c.hex }}
                 />
@@ -274,7 +274,7 @@ export default function ConfiguradorAres() {
                   onClick={() => setColorTelaId(c.id)}
                   title={c.nombre}
                   className={`aspect-square rounded-lg border-2 transition ${
-                    colorTelaId === c.id ? 'border-amber-500 scale-105' : 'border-stone-200 hover:border-amber-300'
+                    colorTelaId === c.id ? 'border-[#d4a034] scale-105' : 'border-[#e5e1d8] hover:border-[#d4a034]/60'
                   }`}
                   style={{ backgroundColor: c.hex }}
                 />
@@ -309,7 +309,7 @@ export default function ConfiguradorAres() {
         </div>
 
         {/* Panel precio */}
-        <div className="mt-6 pt-6 border-t border-stone-200">
+        <div className="mt-6 pt-6 border-t border-[#e5e1d8]">
           {!precio.valido ? (
             <div className="bg-amber-50 border border-amber-200 rounded-lg p-3 text-sm text-amber-900">
               {precio.motivoInvalido}
@@ -317,10 +317,10 @@ export default function ConfiguradorAres() {
           ) : (
             <>
               <div className="flex items-baseline justify-between">
-                <span className="text-sm text-stone-500">Precio total</span>
-                <span className="text-3xl font-semibold text-stone-900">{eur(precio.pvpTotal)}</span>
+                <span className="text-sm text-[#7a756f]">Precio total</span>
+                <span className="text-3xl font-semibold text-[#1a1917]">{eur(precio.pvpTotal)}</span>
               </div>
-              <p className="text-xs text-stone-400 mt-1">IVA incluido · Envío directo desde fábrica · 4 semanas</p>
+              <p className="text-xs text-[#a09a94] mt-1">IVA incluido · Envío directo desde fábrica · 4 semanas</p>
               {adminMode && (
                 <div className="mt-4 bg-stone-50 rounded-lg p-3 text-xs">
                   <div className="font-medium text-stone-700 mb-1">📊 Admin (no visible al cliente)</div>
@@ -332,7 +332,7 @@ export default function ConfiguradorAres() {
               <button
                 type="button"
                 disabled
-                className="mt-4 w-full bg-amber-500 text-white rounded-lg py-3 font-medium hover:bg-amber-600 disabled:opacity-40 disabled:cursor-not-allowed transition"
+                className="mt-4 w-full bg-[#d4a034] text-[#0d0c0b] rounded-lg py-3 font-medium hover:bg-[#e8b442] disabled:opacity-40 disabled:cursor-not-allowed transition"
               >
                 Solicitar pedido (próximamente)
               </button>
@@ -345,12 +345,12 @@ export default function ConfiguradorAres() {
 }
 
 const selectCls =
-  'w-full bg-stone-50 border border-stone-200 rounded-lg px-3 py-2 text-sm text-stone-900 focus:outline-none focus:ring-2 focus:ring-stone-900/20 focus:border-stone-400 transition';
+  'w-full bg-[#faf9f6] border border-[#e5e1d8] rounded-lg px-3 py-2 text-sm text-[#1a1917] focus:outline-none focus:ring-2 focus:ring-[#d4a034]/20 focus:border-[#d4a034]/60 transition';
 
 function Field({ label, children }: { label: string; children: React.ReactNode }) {
   return (
     <div>
-      <label className="block text-sm font-medium text-stone-700 mb-1.5">{label}</label>
+      <label className="block text-sm font-medium text-[#1a1917] mb-1.5">{label}</label>
       {children}
     </div>
   );
@@ -370,7 +370,7 @@ function RadioPill({
       type="button"
       onClick={onClick}
       className={`px-4 py-2 rounded-lg text-sm font-medium transition ${
-        checked ? 'bg-amber-500 text-white' : 'bg-stone-50 text-stone-700 border border-stone-200 hover:border-amber-400'
+        checked ? 'bg-[#d4a034] text-[#0d0c0b]' : 'bg-[#faf9f6] text-[#1a1917] border border-[#e5e1d8] hover:border-[#d4a034]'
       }`}
     >
       {children}

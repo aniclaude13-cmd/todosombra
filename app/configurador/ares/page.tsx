@@ -8,12 +8,12 @@ export const metadata = {
 
 export default function Page() {
   return (
-    <main className="min-h-screen bg-stone-100 p-4 lg:p-8">
+    <main className="min-h-screen bg-[#faf9f6] p-4 lg:p-8">
       <header className="mb-6 flex items-center justify-between">
-        <Link href="/" className="text-stone-900 font-bold text-xl tracking-tight">
-          TodoSombra
+        <Link href="/" className="font-bold text-xl tracking-tight">
+          <span className="text-[#d4a034]">Todo</span><span className="text-[#1a1917]">Sombra</span>
         </Link>
-        <Link href="/" className="text-sm text-stone-500 hover:text-stone-900 transition">
+        <Link href="/" className="text-sm text-[#7a756f] hover:text-[#1a1917] transition">
           ← Volver
         </Link>
       </header>
