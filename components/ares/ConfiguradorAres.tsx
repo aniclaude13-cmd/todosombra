@@ -49,7 +49,6 @@ export default function ConfiguradorAres() {
   const [tejadillo, setTejadillo] = useState<'sin' | 'con'>('sin');
   const [marcaLacado, setMarcaLacado] = useState<'awma' | 'gaviota' | 'llaza' | 'stobag'>('awma');
   const [confeccion, setConfeccion] = useState<'cosido' | 'soldado'>('cosido');
-  const [faldilla, setFaldilla] = useState<'sin' | 'con'>('sin');
   const [colorRal, setColorRal] = useState('6005');
   const [colorTelaId, setColorTelaId] = useState('verde');
   const [cantidad, setCantidad] = useState(1);
@@ -286,13 +285,6 @@ export default function ConfiguradorAres() {
             <div className="grid grid-cols-2 gap-2">
               <RadioPill checked={confeccion === 'cosido'} onClick={() => setConfeccion('cosido')}>✂️ Cosido</RadioPill>
               <RadioPill checked={confeccion === 'soldado'} onClick={() => setConfeccion('soldado')}>🔥 Soldado</RadioPill>
-            </div>
-          </Field>
-
-          <Field label="Faldilla">
-            <div className="grid grid-cols-2 gap-2">
-              <RadioPill checked={faldilla === 'sin'} onClick={() => setFaldilla('sin')}>Sin faldilla</RadioPill>
-              <RadioPill checked={faldilla === 'con'} onClick={() => setFaldilla('con')}>Con faldilla</RadioPill>
             </div>
           </Field>
 
