@@ -1,0 +1,195 @@
+{
+  "version": 1,
+  "updatedAt": "2026-05-23T14:02:21.505Z",
+  "entries": {
+    "memory:memory/2026-05-21.md:1:31": {
+      "key": "memory:memory/2026-05-21.md:1:31",
+      "path": "memory/2026-05-21.md",
+      "startLine": 1,
+      "endLine": 31,
+      "source": "memory",
+      "snippet": "# 2026-05-21 — TodoSombra ## Estado del proyecto **Ubicación:** `/Users/ruben/.openclaw/workspace/todosombra/` **Stack:** Next.js 16.2.6 + React 19 + Tailwind + Three.js (React Three Fiber) **Deployado en:** Vercel ### Estructura - **Landing page** (`app/page.tsx`) — hero, features, municipios, CTA - **Configurador ARES** (`app/configurador/ares/page.tsx`) — toldo cofre - Visor 3D interactivo con estado abierto/cerrado - 13 parámetros: salida, línea, fijación, motorización, iluminación, tejadillo, color RAL, color tela, confección, faldilla, cantidad - Cálculo automático de precio con IVA - Modo admin para ver costes/margen - **Configurador Palillería** (`app/configurador/paliller",
+      "recallCount": 1,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 1,
+      "maxScore": 1,
+      "firstRecalledAt": "2026-05-21T18:35:12.461Z",
+      "lastRecalledAt": "2026-05-21T18:35:12.461Z",
+      "queryHashes": [
+        "9fdaa01577f6"
+      ],
+      "recallDays": [
+        "2026-05-21"
+      ],
+      "conceptTags": [
+        "users/ruben",
+        "openclaw/workspace/todosombra",
+        "next.js",
+        "16.2.6",
+        "three.js",
+        "app/page.tsx",
+        "app/configurador/ares/page.tsx",
+        "abierto/cerrado"
+      ]
+    },
+    "memory:memory/2026-05-21.md:1:47": {
+      "key": "memory:memory/2026-05-21.md:1:47",
+      "path": "memory/2026-05-21.md",
+      "startLine": 1,
+      "endLine": 47,
+      "source": "memory",
+      "snippet": "# 2026-05-21 — TodoSombra ## Trabajo completado ### 1. Mejorada cinemática 3D del toldo (Visor3D.tsx) **Estado:** ✅ Deployado en Vercel - **Brazos articulados realistas:** - Seg1: 0° → 50° (horizontal a extendido) - Seg2: 0° → -35° relativo (horizontal a proyectado) - Longitudes: 50/50 (simétricas) - **Mejoras visuales:** - Faldilla trapezoidal mejorada - Sombra proyectada en suelo - Perspectiva de cámara más cercana - **Commits:** - `29edff3` - Pantógrafo realista - `d6cf826` - Realismo mejorado - `09b12d2` - Cinemática correcta (50°/-35°) - `29f41bb` - Brazos horizontales (cierre correcto) ### 2. Infraestructura & Credenciales **GitHub:** - Repo: `git@github.com:",
+      "recallCount": 1,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 1,
+      "maxScore": 1,
+      "firstRecalledAt": "2026-05-23T12:34:46.296Z",
+      "lastRecalledAt": "2026-05-23T12:34:46.296Z",
+      "queryHashes": [
+        "feef90b5520c"
+      ],
+      "recallDays": [
+        "2026-05-23"
+      ],
+      "conceptTags": [
+        "visor3d.tsx",
+        "50/50",
+        "github.com",
+        "todosombra",
+        "trabajo",
+        "completado",
+        "mejorada",
+        "cinemática"
+      ]
+    },
+    "memory:memory/2026-05-22.md:1:14": {
+      "key": "memory:memory/2026-05-22.md:1:14",
+      "path": "memory/2026-05-22.md",
+      "startLine": 1,
+      "endLine": 14,
+      "source": "memory",
+      "snippet": "# Memory - 2026-05-22 ## Contexto de sesión (flush pre-compactación, ~12:22 CET) - Sin actividad de sesión relevante registrada antes del flush. - No se han realizado tareas, peticiones ni eventos notables en esta sesión hasta el momento del volcado. ## Estado del workspace - MEMORY.md apunta a credenciales TodoSombra en `memory/credenciales_todosombra.md`. - TTS activo: Microsoft Speech, voz `es-ES-XimenaNeural`. - ElevenLabs configurado pero bloqueado (cuenta Free en revisión). - HEARTBEAT.md vacío — sin tareas periódicas activas.",
+      "recallCount": 1,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 1,
+      "maxScore": 1,
+      "firstRecalledAt": "2026-05-23T12:34:46.296Z",
+      "lastRecalledAt": "2026-05-23T12:34:46.296Z",
+      "queryHashes": [
+        "feef90b5520c"
+      ],
+      "recallDays": [
+        "2026-05-23"
+      ],
+      "conceptTags": [
+        "pre-compactación",
+        "memory.md",
+        "es-es-ximenaneural",
+        "heartbeat.md",
+        "contexto",
+        "sesión",
+        "flush",
+        "pre"
+      ]
+    },
+    "memory:memory/2026-05-12.md:1:8": {
+      "key": "memory:memory/2026-05-12.md:1:8",
+      "path": "memory/2026-05-12.md",
+      "startLine": 1,
+      "endLine": 8,
+      "source": "memory",
+      "snippet": "# Memory - 2026-05-12 ## Sesión del día - Sesión corta, principalmente pre-compaction flush. - No hubo interacciones sustantivas con Ruben hoy en esta sesión. - Estado del sistema: todo nominal, workspace limpio.",
+      "recallCount": 2,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 1.2748176473575277,
+      "maxScore": 0.6374088236787638,
+      "firstRecalledAt": "2026-05-23T14:00:59.990Z",
+      "lastRecalledAt": "2026-05-23T14:02:21.505Z",
+      "queryHashes": [
+        "7019b248ee99",
+        "e8fcfa2440f1"
+      ],
+      "recallDays": [
+        "2026-05-23"
+      ],
+      "conceptTags": [
+        "pre-compaction",
+        "sesión",
+        "día",
+        "corta",
+        "principalmente",
+        "pre",
+        "compaction",
+        "flush"
+      ]
+    },
+    "memory:memory/2026-05-13.md:1:8": {
+      "key": "memory:memory/2026-05-13.md:1:8",
+      "path": "memory/2026-05-13.md",
+      "startLine": 1,
+      "endLine": 8,
+      "source": "memory",
+      "snippet": "# Memory - 2026-05-13 ## Session notes - Pre-compaction flush at ~00:47 Europe/Madrid (session near context limit). - No significant conversation events to log from this session; context was primarily system bootstrap/context loading. - Setup confirmed operational: Telegram direct channel, model `anthropic/claude-sonnet-4-6`, host `Mac mini de Ruben`.",
+      "recallCount": 2,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 1.2685131805698788,
+      "maxScore": 0.6342565902849394,
+      "firstRecalledAt": "2026-05-23T14:00:59.990Z",
+      "lastRecalledAt": "2026-05-23T14:02:21.505Z",
+      "queryHashes": [
+        "7019b248ee99",
+        "e8fcfa2440f1"
+      ],
+      "recallDays": [
+        "2026-05-23"
+      ],
+      "conceptTags": [
+        "pre-compaction",
+        "europe/madrid",
+        "bootstrap/context",
+        "anthropic/claude-sonnet-4-6",
+        "pre",
+        "compaction",
+        "flush",
+        "europe"
+      ]
+    },
+    "memory:memory/2026-05-03.md:16:25": {
+      "key": "memory:memory/2026-05-03.md:16:25",
+      "path": "memory/2026-05-03.md",
+      "startLine": 16,
+      "endLine": 25,
+      "source": "memory",
+      "snippet": "- **Mañana o pronto:** retomar el tema de correo Outlook 365 del trabajo. Quiere lectura+resumen. Tiene políticas de IT, hay que averiguar si permiten apps externas (escenario A/B/C). Sugerencia: que pregunte a IT primero. ## Notas y observaciones - Ruben se mueve por Telegram principalmente. - Vive en Murcia, España. - Tiene al menos un hijo (lo recoge del colegio). - Aprecia humor con eficiencia — funciona bien el tono que le doy. - Le gusta probar opciones gratuitas antes de pagar (rechazó plan ElevenLabs).",
+      "recallCount": 2,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 1.2657165128158578,
+      "maxScore": 0.6328582564079289,
+      "firstRecalledAt": "2026-05-23T14:00:59.990Z",
+      "lastRecalledAt": "2026-05-23T14:02:21.505Z",
+      "queryHashes": [
+        "7019b248ee99",
+        "e8fcfa2440f1"
+      ],
+      "recallDays": [
+        "2026-05-23"
+      ],
+      "conceptTags": [
+        "a/b/c",
+        "mañana",
+        "pronto",
+        "retomar",
+        "tema",
+        "correo",
+        "outlook",
+        "trabajo"
+      ]
+    }
+  }
+}

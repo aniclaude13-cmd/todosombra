@@ -1,0 +1,6 @@
+{
+  "model": "claude-opus-4-7",
+  "env": {
+    "GOG_KEYRING_PASSWORD": "UwbqAJBHhgdjTyqVKb1Vhee+Bnr6XNIendS8sXl0o5c="
+  }
+}

@@ -1,0 +1,155 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://todosombra.com/schemas/awma-product.json",
+  "title": "AWMA Product Catalog Entry",
+  "description": "Esquema declarativo para un producto AWMA. Mapea 1:1 con los .abd del DAC/InGnio. Lo leen el motor TS (web) y el motor Python (bot).",
+  "type": "object",
+  "required": ["id", "nombre", "tipo", "dimensiones", "tarifa"],
+  "properties": {
+    "id": { "type": "string", "description": "Identificador único, ej. BOX6100_ARES" },
+    "nombre": { "type": "string" },
+    "tipo": {
+      "type": "string",
+      "enum": ["toldo_cofre", "toldo_brazo", "palilleria", "vertical", "pergola", "otro"]
+    },
+    "version": { "type": "string", "description": "Versión del catálogo, ej. 2026.1" },
+    "fuente": {
+      "type": "object",
+      "description": "De dónde viene este catálogo (.abd, PDF de tarifa, etc.)",
+      "properties": {
+        "abd": { "type": "string" },
+        "tarifaPdf": { "type": "string" },
+        "paginaTarifa": { "type": "integer" }
+      }
+    },
+    "dimensiones": {
+      "type": "object",
+      "required": ["linea", "salida"],
+      "properties": {
+        "linea": {
+          "type": "object",
+          "required": ["min", "max", "valores"],
+          "properties": {
+            "min": { "type": "integer" },
+            "max": { "type": "integer" },
+            "valores": {
+              "type": "array",
+              "items": { "type": "integer" },
+              "description": "Líneas tarifadas (cm). El motor redondea hacia arriba al valor más cercano."
+            }
+          }
+        },
+        "salida": {
+          "type": "object",
+          "required": ["min", "max", "valores"],
+          "properties": {
+            "min": { "type": "integer" },
+            "max": { "type": "integer" },
+            "valores": { "type": "array", "items": { "type": "integer" } }
+          }
+        }
+      }
+    },
+    "tarifa": {
+      "type": "object",
+      "required": ["matriz"],
+      "properties": {
+        "matriz": {
+          "type": "object",
+          "description": "Precio PVP en € por combinación línea→salida. Clave: línea (cm) como string. Valor: objeto {salida: precio} o null si no válida.",
+          "additionalProperties": {
+            "type": "object",
+            "additionalProperties": { "type": ["number", "null"] }
+          }
+        },
+        "minLineaPorSalida": {
+          "type": "object",
+          "description": "salida(cm) -> linea mínima válida. Generado automáticamente desde la matriz si no se da.",
+          "additionalProperties": { "type": "integer" }
+        }
+      }
+    },
+    "motores": {
+      "type": "array",
+      "description": "Recargos de motorización.",
+      "items": {
+        "type": "object",
+        "required": ["id", "nombre", "recargo"],
+        "properties": {
+          "id": { "type": "string" },
+          "nombre": { "type": "string" },
+          "recargo": { "type": "number" },
+          "familia": { "type": "string", "enum": ["manual", "somfy", "cherubini", "gaviota", "puerto", "aok"] }
+        }
+      }
+    },
+    "sobreprecios": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["ref", "desc", "precio"],
+        "properties": {
+          "ref": { "type": "string" },
+          "desc": { "type": "string" },
+          "precio": { "type": "number" },
+          "obligatorio": { "type": "boolean", "default": false },
+          "categoria": { "type": "string", "description": "ej. kit_cofre, brazo, soporte" }
+        }
+      }
+    },
+    "reglas": {
+      "type": "array",
+      "description": "Reglas duras del modelo (extraídas del .abd). Cada regla tiene una condición y un efecto.",
+      "items": {
+        "type": "object",
+        "required": ["id", "efecto", "condicion"],
+        "properties": {
+          "id": { "type": "string" },
+          "descripcion": { "type": "string" },
+          "efecto": {
+            "type": "string",
+            "enum": ["bloqueo", "aviso", "refuerzo", "snap_dimension"],
+            "description": "bloqueo=no se puede vender; aviso=informativo; refuerzo=coste extra; snap_dimension=ajusta la dimensión al valor real"
+          },
+          "mensaje": { "type": "string" },
+          "condicion": {
+            "type": "object",
+            "description": "Condición declarativa evaluable por ambos motores.",
+            "properties": {
+              "linea": { "$ref": "#/$defs/rango" },
+              "salida": { "$ref": "#/$defs/rango" },
+              "color_no_es": { "type": "array", "items": { "type": "string" } },
+              "color_es": { "type": "array", "items": { "type": "string" } },
+              "and": { "type": "array", "items": { "$ref": "#/properties/reglas/items/properties/condicion" } },
+              "or": { "type": "array", "items": { "$ref": "#/properties/reglas/items/properties/condicion" } }
+            }
+          }
+        }
+      }
+    },
+    "brazos": {
+      "type": "object",
+      "description": "Tablas de brazos invisibles (solo modelos de cofre con brazo).",
+      "additionalProperties": {
+        "type": "object",
+        "properties": {
+          "nombre": { "type": "string" },
+          "saltos_cm": { "type": "array", "items": { "type": "integer" } }
+        }
+      }
+    }
+  },
+  "$defs": {
+    "rango": {
+      "type": "object",
+      "properties": {
+        "min": { "type": "number" },
+        "max": { "type": "number" },
+        "gt": { "type": "number" },
+        "lt": { "type": "number" },
+        "gte": { "type": "number" },
+        "lte": { "type": "number" }
+      }
+    }
+  }
+}

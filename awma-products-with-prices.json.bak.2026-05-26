@@ -559,8 +559,7 @@
       "salida_max": 250,
       "grupo_color": "G4",
       "motorizable": true,
-      "grupo_motor": "5",
-      "subtipo": "stor_balcon"
+      "grupo_motor": "5"
     },
     {
       "id": "STR1100_DESERT",
@@ -631,8 +630,7 @@
       "salida_max": 240,
       "grupo_color": "G4",
       "motorizable": true,
-      "grupo_motor": "5",
-      "subtipo": "stor_balcon"
+      "grupo_motor": "5"
     },
     {
       "id": "PR_TOLDOS_DE_PUNTO_RECTO",
@@ -818,8 +816,7 @@
       "salida_max": 140,
       "grupo_color": "G1",
       "motorizable": true,
-      "grupo_motor": "1",
-      "subtipo": "punto_recto"
+      "grupo_motor": "1"
     },
     {
       "id": "PRS2100_ÍNDICO_I2",
@@ -965,8 +962,7 @@
       "salida_max": 120,
       "grupo_color": "G1",
       "motorizable": true,
-      "grupo_motor": "1",
-      "subtipo": "punto_recto"
+      "grupo_motor": "1"
     },
     {
       "id": "PRT2200_ÍNDICO_I3",
@@ -1112,8 +1108,7 @@
       "salida_max": 140,
       "grupo_color": "G1",
       "motorizable": true,
-      "grupo_motor": "1",
-      "subtipo": "punto_recto"
+      "grupo_motor": "1"
     },
     {
       "id": "PRCS3100_DESERT_ÍNDICO_I2",
@@ -1223,8 +1218,7 @@
       "salida_max": 120,
       "grupo_color": "G1",
       "motorizable": true,
-      "grupo_motor": "1",
-      "subtipo": "punto_recto"
+      "grupo_motor": "1"
     },
     {
       "id": "PRCT3200_DESERT_ÍNDICO_I3",
@@ -1319,8 +1313,7 @@
       "salida_max": 120,
       "grupo_color": "G1",
       "motorizable": true,
-      "grupo_motor": "1",
-      "subtipo": "punto_recto"
+      "grupo_motor": "1"
     },
     {
       "id": "ART_TOLDOS_DE_BRAZOS_ARTICULADOS",
@@ -1448,8 +1441,7 @@
       "salida_max": 250,
       "grupo_color": "G1",
       "motorizable": true,
-      "grupo_motor": "1",
-      "subtipo": "terraza_brazo"
+      "grupo_motor": "1"
     },
     {
       "id": "ART4110_A1_PREMIUM",
@@ -1620,8 +1612,7 @@
       "salida_max": 350,
       "grupo_color": "G1",
       "motorizable": true,
-      "grupo_motor": "1",
-      "subtipo": "terraza_brazo"
+      "grupo_motor": "1"
     },
     {
       "id": "ARX1000_BRAZOS_CRUZADOS",
@@ -1759,8 +1750,7 @@
       "salida_max": 350,
       "grupo_color": "G1",
       "motorizable": true,
-      "grupo_motor": "1",
-      "subtipo": "terraza_brazo"
+      "grupo_motor": "1"
     },
     {
       "id": "TJD_TEJADILLO",
@@ -1791,8 +1781,7 @@
       "salida_max": null,
       "grupo_color": "G1",
       "motorizable": true,
-      "grupo_motor": "1",
-      "subtipo": "complemento"
+      "grupo_motor": "1"
     },
     {
       "id": "SBX_VÉRTIKO",
@@ -1856,8 +1845,7 @@
       "salida_max": 170,
       "grupo_color": "G1",
       "motorizable": true,
-      "grupo_motor": "1",
-      "subtipo": "complemento"
+      "grupo_motor": "1"
     },
     {
       "id": "SPL_SPIRAL",
@@ -1953,8 +1941,7 @@
       "salida_max": 350,
       "grupo_color": "G1",
       "motorizable": true,
-      "grupo_motor": "1",
-      "subtipo": "complemento"
+      "grupo_motor": "1"
     },
     {
       "id": "MCK_TOLDOS_MONOBLOCK",
@@ -2092,8 +2079,7 @@
       "salida_max": 400,
       "grupo_color": "G2",
       "motorizable": true,
-      "grupo_motor": "1",
-      "subtipo": "terraza_monoblock"
+      "grupo_motor": "1"
     },
     {
       "id": "MCK4900_ARKO",
@@ -2279,8 +2265,7 @@
       "salida_max": 450,
       "grupo_color": "G2",
       "motorizable": true,
-      "grupo_motor": "1",
-      "subtipo": "terraza_monoblock"
+      "grupo_motor": "1"
     },
     {
       "id": "BOX_TOLDOS_CON_COFRE",
@@ -2408,8 +2393,7 @@
       "salida_max": 250,
       "grupo_color": "G2",
       "motorizable": true,
-      "grupo_motor": "2",
-      "subtipo": "terraza_cofre"
+      "grupo_motor": "2"
     },
     {
       "id": "BOX6010_INDIE",
@@ -2544,8 +2528,7 @@
       "salida_max": 250,
       "grupo_color": "G2",
       "motorizable": true,
-      "grupo_motor": "2",
-      "subtipo": "terraza_cofre"
+      "grupo_motor": "2"
     },
     {
       "id": "BOX5200_SAMA",
@@ -2680,8 +2663,7 @@
       "salida_max": 250,
       "grupo_color": "G2",
       "motorizable": true,
-      "grupo_motor": "2",
-      "subtipo": "terraza_cofre"
+      "grupo_motor": "2"
     },
     {
       "id": "BOX6100_ARES",
@@ -2904,8 +2886,7 @@
       "salida_max": 300,
       "grupo_color": "G2",
       "motorizable": true,
-      "grupo_motor": "2",
-      "subtipo": "terraza_cofre"
+      "grupo_motor": "2"
     },
     {
       "id": "BOX6110_CONCEPT",
@@ -3072,8 +3053,7 @@
       "salida_max": 400,
       "grupo_color": "G2",
       "motorizable": true,
-      "grupo_motor": "2",
-      "subtipo": "terraza_cofre"
+      "grupo_motor": "2"
     },
     {
       "id": "BOX6300_ALAND_2.0",
@@ -3240,8 +3220,7 @@
       "salida_max": 400,
       "grupo_color": "G2",
       "motorizable": true,
-      "grupo_motor": "2",
-      "subtipo": "terraza_cofre"
+      "grupo_motor": "2"
     },
     {
       "id": "BOX7000_GÉMINI",
@@ -3339,8 +3318,7 @@
       "salida_max": 600,
       "grupo_color": "G2",
       "motorizable": true,
-      "grupo_motor": "2",
-      "subtipo": "terraza_cofre"
+      "grupo_motor": "2"
     },
     {
       "id": "VSJ12000_VISOMBRA",
@@ -3365,8 +3343,7 @@
       "salida_max": null,
       "grupo_color": "G2",
       "motorizable": true,
-      "grupo_motor": "2",
-      "subtipo": "jardin_dos_aguas"
+      "grupo_motor": "2"
     },
     {
       "id": "BOX6400_LUSOL",
@@ -3546,8 +3523,7 @@
       "salida_max": 400,
       "grupo_color": "G2",
       "motorizable": true,
-      "grupo_motor": "2",
-      "subtipo": "terraza_cofre"
+      "grupo_motor": "2"
     },
     {
       "id": "BOX6500_ARKO",
@@ -3613,8 +3589,7 @@
       "salida_max": 400,
       "grupo_color": "G2",
       "motorizable": true,
-      "grupo_motor": "2",
-      "subtipo": "terraza_cofre"
+      "grupo_motor": "2"
     },
     {
       "id": "BOX8100_KYMA",
@@ -3949,8 +3924,7 @@
       "salida_max": 400,
       "grupo_color": "G2",
       "motorizable": true,
-      "grupo_motor": "2",
-      "subtipo": "terraza_cofre"
+      "grupo_motor": "2"
     },
     {
       "id": "BOX8110_KYMA_+_VÉRTIKO",
@@ -4147,8 +4121,7 @@
       "salida_max": 300,
       "grupo_color": "G2",
       "motorizable": true,
-      "grupo_motor": "2",
-      "subtipo": "terraza_cofre"
+      "grupo_motor": "2"
     },
     {
       "id": "BOX8200_KALI",
@@ -4483,8 +4456,7 @@
       "salida_max": 400,
       "grupo_color": "G2",
       "motorizable": true,
-      "grupo_motor": "2",
-      "subtipo": "terraza_cofre"
+      "grupo_motor": "2"
     },
     {
       "id": "BOX8300_MÁXIMUS",
@@ -4644,8 +4616,7 @@
       "salida_max": 400,
       "grupo_color": "G2",
       "motorizable": true,
-      "grupo_motor": "2",
-      "subtipo": "terraza_cofre"
+      "grupo_motor": "2"
     },
     {
       "id": "UVE",
@@ -4687,14 +4658,13 @@
       "salida_max": null,
       "grupo_color": "G2",
       "motorizable": false,
-      "grupo_motor": null,
-      "subtipo": "complemento"
+      "grupo_motor": null
     },
     {
       "id": "PL_80X40_PALILLERÍAS",
       "nombre": "PL 80X40 PALILLERÍAS",
       "pagina": 149,
-      "tipo": "pérgola",
+      "tipo": "palillería",
       "precio_base": null,
       "precios_por_ancho": {
         "estimado": 149
@@ -4709,14 +4679,13 @@
       "salida_max": null,
       "grupo_color": null,
       "motorizable": false,
-      "grupo_motor": null,
-      "subtipo": "tejido"
+      "grupo_motor": null
     },
     {
       "id": "PL7000_ENTRE_PAREDES",
       "nombre": "PL7000 ENTRE PAREDES",
       "pagina": 150,
-      "tipo": "pérgola",
+      "tipo": "palillería",
       "precio_base": null,
       "precios_por_ancho": {
         "150": 913,
@@ -4753,14 +4722,13 @@
       "salida_max": null,
       "grupo_color": "G2",
       "motorizable": true,
-      "grupo_motor": "3",
-      "subtipo": "tejido"
+      "grupo_motor": "3"
     },
     {
       "id": "PL7010_PARED_PORTERÍA",
       "nombre": "PL7010 PARED PORTERÍA",
       "pagina": 151,
-      "tipo": "pérgola",
+      "tipo": "palillería",
       "precio_base": null,
       "precios_por_ancho": {
         "150": 1416,
@@ -4797,14 +4765,13 @@
       "salida_max": null,
       "grupo_color": "G2",
       "motorizable": true,
-      "grupo_motor": "3",
-      "subtipo": "tejido"
+      "grupo_motor": "3"
     },
     {
       "id": "PL7020_PARED_PORTERÍA_+_LARGUERO",
       "nombre": "PL7020 PARED PORTERÍA + LARGUERO",
       "pagina": 152,
-      "tipo": "pérgola",
+      "tipo": "palillería",
       "precio_base": null,
       "precios_por_ancho": {
         "150": {
@@ -5117,14 +5084,13 @@
       "salida_max": 700,
       "grupo_color": "G2",
       "motorizable": true,
-      "grupo_motor": "3",
-      "subtipo": "tejido"
+      "grupo_motor": "3"
     },
     {
       "id": "PL7030_AUTOPORTANTE_+_LARGUERO",
       "nombre": "PL7030 AUTOPORTANTE + LARGUERO",
       "pagina": 152,
-      "tipo": "pérgola",
+      "tipo": "palillería",
       "precio_base": null,
       "precios_por_ancho": {
         "estimado": 2026
@@ -5139,8 +5105,7 @@
       "salida_max": null,
       "grupo_color": "G2",
       "motorizable": true,
-      "grupo_motor": "3",
-      "subtipo": "tejido"
+      "grupo_motor": "3"
     },
     {
       "id": "ACCESORIOS_80X40",
@@ -5165,7 +5130,7 @@
       "id": "PERGOO_100X100_PALILLERÍAS",
       "nombre": "PERGOO 100x100 PALILLERÍAS",
       "pagina": 158,
-      "tipo": "pérgola",
+      "tipo": "palillería",
       "precio_base": null,
       "precios_por_ancho": {
         "estimado": 400
@@ -5180,14 +5145,13 @@
       "salida_max": null,
       "grupo_color": null,
       "motorizable": false,
-      "grupo_motor": null,
-      "subtipo": "tejido"
+      "grupo_motor": null
     },
     {
       "id": "PL7050_ENTRE_PAREDES",
       "nombre": "PL7050 ENTRE PAREDES",
       "pagina": 160,
-      "tipo": "pérgola",
+      "tipo": "palillería",
       "precio_base": null,
       "precios_por_ancho": {
         "200": 951,
@@ -5222,14 +5186,13 @@
       "salida_max": null,
       "grupo_color": "G2",
       "motorizable": true,
-      "grupo_motor": "3",
-      "subtipo": "tejido"
+      "grupo_motor": "3"
     },
     {
       "id": "PL7070_PARED_PORTERÍA",
       "nombre": "PL7070 PARED PORTERÍA",
       "pagina": 162,
-      "tipo": "pérgola",
+      "tipo": "palillería",
       "precio_base": null,
       "precios_por_ancho": {
         "200": 1375,
@@ -5264,14 +5227,13 @@
       "salida_max": null,
       "grupo_color": "G2",
       "motorizable": true,
-      "grupo_motor": "3",
-      "subtipo": "tejido"
+      "grupo_motor": "3"
     },
     {
       "id": "PL7090_AUTOPORTANTE",
       "nombre": "PL7090 AUTOPORTANTE",
       "pagina": 164,
-      "tipo": "pérgola",
+      "tipo": "palillería",
       "precio_base": null,
       "precios_por_ancho": {
         "200": 1893,
@@ -5306,8 +5268,7 @@
       "salida_max": null,
       "grupo_color": "G2",
       "motorizable": true,
-      "grupo_motor": "3",
-      "subtipo": "tejido"
+      "grupo_motor": "3"
     },
     {
       "id": "ILUMINACIÓN",
@@ -5373,7 +5334,7 @@
       "id": "PERGOO_120X120_PALILLERÍAS",
       "nombre": "PERGOO 120x120 PALILLERÍAS",
       "pagina": 170,
-      "tipo": "pérgola",
+      "tipo": "palillería",
       "precio_base": null,
       "precios_por_ancho": {
         "estimado": 400
@@ -5388,14 +5349,13 @@
       "salida_max": null,
       "grupo_color": null,
       "motorizable": false,
-      "grupo_motor": null,
-      "subtipo": "tejido"
+      "grupo_motor": null
     },
     {
       "id": "PL7100_ENTRE_PAREDES",
       "nombre": "PL7100 ENTRE PAREDES",
       "pagina": 172,
-      "tipo": "pérgola",
+      "tipo": "palillería",
       "precio_base": null,
       "precios_por_ancho": {
         "200": 986,
@@ -5430,14 +5390,13 @@
       "salida_max": null,
       "grupo_color": "G2",
       "motorizable": true,
-      "grupo_motor": "3",
-      "subtipo": "tejido"
+      "grupo_motor": "3"
     },
     {
       "id": "PL7110_PARED_PORTERÍA",
       "nombre": "PL7110 PARED PORTERÍA",
       "pagina": 174,
-      "tipo": "pérgola",
+      "tipo": "palillería",
       "precio_base": null,
       "precios_por_ancho": {
         "200": 1462,
@@ -5472,14 +5431,13 @@
       "salida_max": null,
       "grupo_color": "G2",
       "motorizable": true,
-      "grupo_motor": "3",
-      "subtipo": "tejido"
+      "grupo_motor": "3"
     },
     {
       "id": "PL7130_AUTOPORTANTE",
       "nombre": "PL7130 AUTOPORTANTE",
       "pagina": 176,
-      "tipo": "pérgola",
+      "tipo": "palillería",
       "precio_base": null,
       "precios_por_ancho": {
         "200": 2007,
@@ -5514,8 +5472,7 @@
       "salida_max": null,
       "grupo_color": "G2",
       "motorizable": true,
-      "grupo_motor": "3",
-      "subtipo": "tejido"
+      "grupo_motor": "3"
     },
     {
       "id": "ACCESORIOS_120X120",
@@ -5574,8 +5531,7 @@
       "salida_max": null,
       "grupo_color": null,
       "motorizable": false,
-      "grupo_motor": null,
-      "subtipo": "lona_tensada"
+      "grupo_motor": null
     },
     {
       "id": "TX7900_TENXO_ENTRE_PAREDES",
@@ -5605,8 +5561,7 @@
       "salida_max": null,
       "grupo_color": "G2",
       "motorizable": true,
-      "grupo_motor": "3",
-      "subtipo": "lona_tensada"
+      "grupo_motor": "3"
     },
     {
       "id": "TX7910_TENXO_PARED_PORTERÍA",
@@ -5636,8 +5591,7 @@
       "salida_max": null,
       "grupo_color": "G2",
       "motorizable": true,
-      "grupo_motor": "3",
-      "subtipo": "lona_tensada"
+      "grupo_motor": "3"
     },
     {
       "id": "TX7930_TENXO_AUTOPORTANTE",
@@ -5664,8 +5618,7 @@
       "salida_max": null,
       "grupo_color": "G2",
       "motorizable": true,
-      "grupo_motor": "3",
-      "subtipo": "lona_tensada"
+      "grupo_motor": "3"
     },
     {
       "id": "TX7950_TENXO_ARRIOSTRADA",
@@ -5695,8 +5648,7 @@
       "salida_max": null,
       "grupo_color": "G2",
       "motorizable": true,
-      "grupo_motor": "3",
-      "subtipo": "lona_tensada"
+      "grupo_motor": "3"
     },
     {
       "id": "TX7970_TENXO_2_AGUAS_AUTOPORTANTE",
@@ -5992,8 +5944,7 @@
       "salida_max": 1400,
       "grupo_color": "G2",
       "motorizable": true,
-      "grupo_motor": "3",
-      "subtipo": "lona_tensada"
+      "grupo_motor": "3"
     },
     {
       "id": "ACCESORIOS_TENXO",
@@ -6052,8 +6003,7 @@
       "salida_max": null,
       "grupo_color": null,
       "motorizable": false,
-      "grupo_motor": null,
-      "subtipo": "lona_tensada"
+      "grupo_motor": null
     },
     {
       "id": "TF7900_TENFLAT_ENTRE_PAREDES",
@@ -6083,8 +6033,7 @@
       "salida_max": null,
       "grupo_color": "G2",
       "motorizable": true,
-      "grupo_motor": "3",
-      "subtipo": "lona_tensada"
+      "grupo_motor": "3"
     },
     {
       "id": "TF7910_TENFLAT_PARED_PORTERÍA",
@@ -6114,8 +6063,7 @@
       "salida_max": null,
       "grupo_color": "G2",
       "motorizable": true,
-      "grupo_motor": "3",
-      "subtipo": "lona_tensada"
+      "grupo_motor": "3"
     },
     {
       "id": "TF7930_TENFLAT_AUTOPORTANTE",
@@ -6255,8 +6203,7 @@
       "salida_max": 700,
       "grupo_color": "G2",
       "motorizable": true,
-      "grupo_motor": "3",
-      "subtipo": "lona_tensada"
+      "grupo_motor": "3"
     },
     {
       "id": "TENSAND_PÉRGOLAS_PLANA",
@@ -6277,8 +6224,7 @@
       "salida_max": null,
       "grupo_color": null,
       "motorizable": false,
-      "grupo_motor": null,
-      "subtipo": "panel_sandwich"
+      "grupo_motor": null
     },
     {
       "id": "TS5000_TENSAND_ENTRE_PAREDES",
@@ -6310,8 +6256,7 @@
       "salida_max": null,
       "grupo_color": "G2",
       "motorizable": true,
-      "grupo_motor": "3",
-      "subtipo": "panel_sandwich"
+      "grupo_motor": "3"
     },
     {
       "id": "TS5030_TENSAND_AUTOPORTANTE",
@@ -6343,8 +6288,7 @@
       "salida_max": null,
       "grupo_color": "G2",
       "motorizable": true,
-      "grupo_motor": "3",
-      "subtipo": "panel_sandwich"
+      "grupo_motor": "3"
     },
     {
       "id": "TS5010_TENSAND_PARED_PORTERÍA",
@@ -6375,8 +6319,7 @@
       "salida_max": null,
       "grupo_color": "G2",
       "motorizable": true,
-      "grupo_motor": "3",
-      "subtipo": "panel_sandwich"
+      "grupo_motor": "3"
     },
     {
       "id": "PANEL_TENSAND",
@@ -6416,8 +6359,7 @@
       "salida_max": null,
       "grupo_color": null,
       "motorizable": false,
-      "grupo_motor": null,
-      "subtipo": "bioclimatica"
+      "grupo_motor": null
     },
     {
       "id": "TK6000_TENKI_L_ENTRE_PAREDES",
@@ -6449,8 +6391,7 @@
       "salida_max": null,
       "grupo_color": "G2",
       "motorizable": true,
-      "grupo_motor": "3",
-      "subtipo": "bioclimatica"
+      "grupo_motor": "3"
     },
     {
       "id": "TK6010_TENKI_L_PP_LAMAS_PARALELAS",
@@ -6482,8 +6423,7 @@
       "salida_max": null,
       "grupo_color": "G2",
       "motorizable": true,
-      "grupo_motor": "3",
-      "subtipo": "bioclimatica"
+      "grupo_motor": "3"
     },
     {
       "id": "TK6010-2_TENKI_L_PP_LAMAS_PERPEND.",
@@ -6515,8 +6455,7 @@
       "salida_max": null,
       "grupo_color": "G2",
       "motorizable": true,
-      "grupo_motor": "3",
-      "subtipo": "bioclimatica"
+      "grupo_motor": "3"
     },
     {
       "id": "TK6030_TENKI_L_AUTOPORTANTE",
@@ -6537,8 +6476,7 @@
       "salida_max": null,
       "grupo_color": "G2",
       "motorizable": true,
-      "grupo_motor": "3",
-      "subtipo": "bioclimatica"
+      "grupo_motor": "3"
     },
     {
       "id": "ILUMINACIÓN_2",
@@ -6909,8 +6847,7 @@
       "salida_max": null,
       "grupo_color": "G2",
       "motorizable": true,
-      "grupo_motor": "2",
-      "subtipo": "veranda"
+      "grupo_motor": "2"
     },
     {
       "id": "VRD9000-2_EOS_PLUS",
@@ -6937,8 +6874,7 @@
       "salida_max": null,
       "grupo_color": "G2",
       "motorizable": true,
-      "grupo_motor": "2",
-      "subtipo": "veranda"
+      "grupo_motor": "2"
     },
     {
       "id": "VRD9010_SCREENY_130GPZ_TO",
@@ -6967,8 +6903,7 @@
       "salida_max": null,
       "grupo_color": "G2",
       "motorizable": true,
-      "grupo_motor": "2",
-      "subtipo": "veranda"
+      "grupo_motor": "2"
     },
     {
       "id": "VRD9200_GIOTTO",
@@ -6995,8 +6930,7 @@
       "salida_max": null,
       "grupo_color": "G2",
       "motorizable": true,
-      "grupo_motor": "2",
-      "subtipo": "veranda"
+      "grupo_motor": "2"
     },
     {
       "id": "VRD9300_SIRIO",
@@ -7025,8 +6959,7 @@
       "salida_max": null,
       "grupo_color": "G2",
       "motorizable": true,
-      "grupo_motor": "2",
-      "subtipo": "veranda"
+      "grupo_motor": "2"
     },
     {
       "id": "VRD9500_SIRIO_WALL",
@@ -7055,8 +6988,7 @@
       "salida_max": null,
       "grupo_color": "G2",
       "motorizable": true,
-      "grupo_motor": "2",
-      "subtipo": "veranda"
+      "grupo_motor": "2"
     },
     {
       "id": "LUZ_ILUMINACIÓN",
@@ -7314,8 +7246,7 @@
       "salida_max": null,
       "grupo_color": "G3",
       "motorizable": true,
-      "grupo_motor": null,
-      "subtipo": "stobag"
+      "grupo_motor": null
     },
     {
       "id": "S8135_OMBRAMATIC",
@@ -7342,8 +7273,7 @@
       "salida_max": null,
       "grupo_color": "G3",
       "motorizable": true,
-      "grupo_motor": null,
-      "subtipo": "stobag"
+      "grupo_motor": null
     },
     {
       "id": "S2160_2_JUMBO",
@@ -7392,8 +7322,7 @@
       "salida_max": null,
       "grupo_color": "G3",
       "motorizable": true,
-      "grupo_motor": null,
-      "subtipo": "stobag"
+      "grupo_motor": null
     },
     {
       "id": "BX2000_CASABOX",
@@ -7423,8 +7352,7 @@
       "salida_max": null,
       "grupo_color": "G3",
       "motorizable": true,
-      "grupo_motor": null,
-      "subtipo": "stobag"
+      "grupo_motor": null
     },
     {
       "id": "BX3000_TENDABOX",
@@ -7454,8 +7382,7 @@
       "salida_max": null,
       "grupo_color": "G3",
       "motorizable": true,
-      "grupo_motor": null,
-      "subtipo": "stobag"
+      "grupo_motor": null
     },
     {
       "id": "BX4000_CAMABOX",
@@ -7482,8 +7409,7 @@
       "salida_max": null,
       "grupo_color": "G3",
       "motorizable": true,
-      "grupo_motor": null,
-      "subtipo": "stobag"
+      "grupo_motor": null
     },
     {
       "id": "BX4700_CAMABOX",
@@ -7513,8 +7439,7 @@
       "salida_max": null,
       "grupo_color": "G3",
       "motorizable": true,
-      "grupo_motor": null,
-      "subtipo": "stobag"
+      "grupo_motor": null
     },
     {
       "id": "BX8000_RESOBOX",
@@ -7565,8 +7490,7 @@
       "salida_max": null,
       "grupo_color": "G3",
       "motorizable": true,
-      "grupo_motor": null,
-      "subtipo": "stobag"
+      "grupo_motor": null
     },
     {
       "id": "SR6000_SIROFLEX",
@@ -7590,8 +7514,7 @@
       "salida_max": null,
       "grupo_color": "G3",
       "motorizable": true,
-      "grupo_motor": null,
-      "subtipo": "stobag"
+      "grupo_motor": null
     },
     {
       "id": "FS6000_VISOMBRA",
@@ -7618,8 +7541,7 @@
       "salida_max": null,
       "grupo_color": "G3",
       "motorizable": true,
-      "grupo_motor": null,
-      "subtipo": "stobag"
+      "grupo_motor": null
     },
     {
       "id": "VS5200_1__2_VENTOSOL",
@@ -7648,8 +7570,7 @@
       "salida_max": null,
       "grupo_color": "G3",
       "motorizable": true,
-      "grupo_motor": null,
-      "subtipo": "stobag"
+      "grupo_motor": null
     },
     {
       "id": "VS5400_VENTOSOL",
@@ -7678,8 +7599,7 @@
       "salida_max": null,
       "grupo_color": "G3",
       "motorizable": true,
-      "grupo_motor": null,
-      "subtipo": "stobag"
+      "grupo_motor": null
     },
     {
       "id": "VS5600_1__2_VENTOSOL",
@@ -7708,8 +7628,7 @@
       "salida_max": null,
       "grupo_color": "G3",
       "motorizable": true,
-      "grupo_motor": null,
-      "subtipo": "stobag"
+      "grupo_motor": null
     },
     {
       "id": "VS6100_VENTOSOL",
@@ -7736,8 +7655,7 @@
       "salida_max": null,
       "grupo_color": "G3",
       "motorizable": true,
-      "grupo_motor": null,
-      "subtipo": "stobag"
+      "grupo_motor": null
     },
     {
       "id": "VS6200_VENTOSOL",
@@ -7766,8 +7684,7 @@
       "salida_max": null,
       "grupo_color": "G3",
       "motorizable": true,
-      "grupo_motor": null,
-      "subtipo": "stobag"
+      "grupo_motor": null
     },
     {
       "id": "VM720_3_VENTOSOL",
@@ -7798,8 +7715,7 @@
       "salida_max": null,
       "grupo_color": "G3",
       "motorizable": true,
-      "grupo_motor": null,
-      "subtipo": "stobag"
+      "grupo_motor": null
     },
     {
       "id": "PS4000_AIROMATIC",
@@ -7832,8 +7748,7 @@
       "salida_max": null,
       "grupo_color": "G3",
       "motorizable": true,
-      "grupo_motor": null,
-      "subtipo": "stobag"
+      "grupo_motor": null
     },
     {
       "id": "PS4500_AIROMATIC",
@@ -7861,8 +7776,7 @@
       "salida_max": null,
       "grupo_color": "G3",
       "motorizable": true,
-      "grupo_motor": null,
-      "subtipo": "stobag"
+      "grupo_motor": null
     },
     {
       "id": "PS6000_TARGA",
@@ -7893,8 +7807,7 @@
       "salida_max": null,
       "grupo_color": "G3",
       "motorizable": true,
-      "grupo_motor": null,
-      "subtipo": "stobag"
+      "grupo_motor": null
     },
     {
       "id": "PS6100_TARGA_PLUS",
@@ -7925,8 +7838,7 @@
       "salida_max": null,
       "grupo_color": "G3",
       "motorizable": true,
-      "grupo_motor": null,
-      "subtipo": "stobag"
+      "grupo_motor": null
     },
     {
       "id": "PS2500_ARNEX",
@@ -7955,8 +7867,7 @@
       "salida_max": null,
       "grupo_color": "G3",
       "motorizable": true,
-      "grupo_motor": null,
-      "subtipo": "stobag"
+      "grupo_motor": null
     },
     {
       "id": "PS8000_ARNEX_PLUS",
@@ -7985,8 +7896,7 @@
       "salida_max": null,
       "grupo_color": "G3",
       "motorizable": true,
-      "grupo_motor": null,
-      "subtipo": "stobag"
+      "grupo_motor": null
     },
     {
       "id": "VA1100_LIGHT_SURAVA",
@@ -8185,8 +8095,7 @@
       "salida_max": null,
       "grupo_color": "G3",
       "motorizable": true,
-      "grupo_motor": null,
-      "subtipo": "stobag"
+      "grupo_motor": null
     }
   ],
   "metadata": {

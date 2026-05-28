@@ -1,0 +1,110 @@
+{
+  "id": "BOX6110",
+  "nombre": "BOX6110 Cofre Concept",
+  "tipo": "toldo_cofre",
+  "version": "2026.1",
+  "fuente": {
+    "abd": "BOX6110.abd",
+    "tarifaPdf": "Tarifa-Awma-PVP-2026.pdf"
+  },
+  "dimensiones": {
+    "linea": {
+      "min": 179,
+      "max": 600,
+      "valores": []
+    },
+    "salida": {
+      "min": 150,
+      "max": 400,
+      "valores": [125, 150, 175, 200, 225, 250, 275, 300, 325, 350]
+    }
+  },
+  "tarifa": {
+    "matriz": {}
+  },
+  "motores": [
+    { "id": "manual", "nombre": "Manivela", "recargo": 0, "familia": "manual" },
+    { "id": "somfy_lt", "nombre": "Somfy LT", "recargo": 0, "familia": "somfy" },
+    { "id": "somfy_rts", "nombre": "Somfy RTS", "recargo": 0, "familia": "somfy" },
+    { "id": "somfy_io", "nombre": "Somfy iO", "recargo": 0, "familia": "somfy" },
+    { "id": "cherubini_mec", "nombre": "Cherubini Mecánico", "recargo": 0, "familia": "cherubini" }
+  ],
+  "brazos": {
+    "premium": {
+      "nombre": "Brazos Invisibles Premium",
+      "saltos_cm": [125, 150, 175, 200, 225, 250, 275, 300, 325, 350]
+    },
+    "concept350": {
+      "nombre": "Brazos Concept 350",
+      "saltos_cm": [150, 175, 200, 225, 250, 275, 300, 325, 350]
+    }
+  },
+  "reglas": [
+    {
+      "id": "linea_min",
+      "descripcion": "Línea mínima del modelo",
+      "efecto": "bloqueo",
+      "mensaje": "Línea mínima del BOX6110: 179 cm.",
+      "condicion": { "linea": { "lt": 179 } }
+    },
+    {
+      "id": "linea_max",
+      "descripcion": "Línea máxima del modelo",
+      "efecto": "bloqueo",
+      "mensaje": "Línea máxima del BOX6110: 600 cm.",
+      "condicion": { "linea": { "gt": 600 } }
+    },
+    {
+      "id": "salida_min",
+      "descripcion": "Salida mínima del modelo",
+      "efecto": "bloqueo",
+      "mensaje": "Salida mínima del BOX6110: 150 cm.",
+      "condicion": { "salida": { "lt": 150 } }
+    },
+    {
+      "id": "salida_max",
+      "descripcion": "Salida máxima del modelo",
+      "efecto": "bloqueo",
+      "mensaje": "Salida máxima del BOX6110: 400 cm.",
+      "condicion": { "salida": { "gt": 400 } }
+    },
+    {
+      "id": "salida_350_400_aviso",
+      "descripcion": "Salidas 350-400 cm requieren validación técnica",
+      "efecto": "aviso",
+      "mensaje": "Salida >350 cm: la tarifa la contempla pero el configurador AWMA solo monta brazos hasta 350 cm. Lo confirma el técnico antes de pedir.",
+      "condicion": { "salida": { "gt": 350, "lte": 400 } }
+    },
+    {
+      "id": "refuerzo_3_brazos",
+      "descripcion": "Refuerzo con 3 brazos para combinaciones grandes",
+      "efecto": "refuerzo",
+      "mensaje": "Para línea >500 cm y salida >300 cm el toldo lleva refuerzo (3 brazos en lugar de 2). Coste extra de fábrica.",
+      "condicion": {
+        "and": [
+          { "linea": { "gt": 500 } },
+          { "salida": { "gt": 300 } }
+        ]
+      }
+    },
+    {
+      "id": "color_blanco_linea_grande",
+      "descripcion": "A partir de 505 cm de línea solo color blanco",
+      "efecto": "bloqueo",
+      "mensaje": "Para línea >505 cm el perfil del BOX6110 solo está disponible en blanco.",
+      "condicion": {
+        "and": [
+          { "linea": { "gt": 505 } },
+          { "color_no_es": ["blanco", "9010", "ral9010"] }
+        ]
+      }
+    },
+    {
+      "id": "techo_linea_grande",
+      "descripcion": "Instalación a techo no válida si línea >510",
+      "efecto": "aviso",
+      "mensaje": "Línea >510 cm: la instalación a techo no es válida en este modelo (debe ir a pared o entreparedes).",
+      "condicion": { "linea": { "gt": 510 } }
+    }
+  ]
+}

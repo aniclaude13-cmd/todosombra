@@ -19,5 +19,70 @@
     "motivo": "Solicita contacto con técnico tras ver precio",
     "flujo_ficha_tecnica": false,
     "telegram_user": "Raiben13"
+  },
+  {
+    "nombre": "Ruben Prueba",
+    "contacto": "644592007",
+    "localidad": "San Pedro",
+    "producto": "BOX6100 ARES",
+    "medidas": "400×250 cm",
+    "color_aluminio": "Blanco",
+    "incremento_ral_pct": 0,
+    "motorizado": true,
+    "marca_motor": null,
+    "preferencia_motor": "SUNEA IO",
+    "color_tejido": "Trigo",
+    "es_awma": true,
+    "precio_base_orientativo": 1908.5,
+    "precio_final_orientativo": 1908.5,
+    "precio_con_iva": 2309.285,
+    "complementos_adicionales": [
+      {
+        "nombre": "📡 Sensores (viento/sol)",
+        "linea": 0,
+        "precio": null,
+        "consultar": true
+      },
+      {
+        "nombre": "📱 Box Tahoma (Somfy)",
+        "linea": 0,
+        "precio": null,
+        "consultar": true
+      },
+      {
+        "nombre": "Mando Somfy Situo 1 io",
+        "modelo": "Situo 1 io",
+        "linea": 0,
+        "precio": 68.5
+      }
+    ],
+    "precio_complementos_total": 68.5,
+    "precio_total_con_complementos": 2377.785,
+    "motivo": "Solicita visita tras presupuesto",
+    "flujo_ficha_tecnica": false,
+    "telegram_user": "Raiben13"
+  },
+  {
+    "nombre": "Ruben",
+    "contacto": "644592007",
+    "localidad": "San Pedro",
+    "producto": "BOX6100 ARES",
+    "medidas": "400×250 cm",
+    "color_aluminio": "Blanco",
+    "incremento_ral_pct": 0,
+    "motorizado": true,
+    "marca_motor": null,
+    "preferencia_motor": "SUNEA IO",
+    "color_tejido": "Trigo",
+    "es_awma": true,
+    "precio_base_orientativo": 1908.5,
+    "precio_final_orientativo": 1908.5,
+    "precio_con_iva": 2309.285,
+    "complementos_adicionales": [],
+    "precio_complementos_total": 0,
+    "precio_total_con_complementos": 2309.285,
+    "motivo": "Solicita visita tras ver presupuesto",
+    "flujo_ficha_tecnica": false,
+    "telegram_user": "Raiben13"
   }
 ]
