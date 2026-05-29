@@ -1,0 +1,26 @@
+{
+  "id": "PL7050",
+  "nombre": "Pergola Aluminio PL7050 Entreparedes P. Simple",
+  "tipo": "pergola",
+  "version": "2025.09",
+  "fuente": {
+    "abd": "PL7050.abd"
+  },
+  "dimensiones": {
+    "linea": {
+      "min": 0,
+      "max": 0,
+      "valores": []
+    },
+    "salida": {
+      "min": 0,
+      "max": 0,
+      "valores": []
+    }
+  },
+  "tarifa": {
+    "matriz": {}
+  },
+  "motores": [],
+  "reglas": []
+}

@@ -1,0 +1,75 @@
+{
+  "id": "STR1000_PRUEBAS",
+  "nombre": "Toldo STOR BALCON con brazo de 50 cm",
+  "tipo": "toldo_brazo",
+  "version": "2025.09",
+  "fuente": {
+    "abd": "STR1000_pruebas.abd"
+  },
+  "dimensiones": {
+    "linea": {
+      "min": 0,
+      "max": 0,
+      "valores": []
+    },
+    "salida": {
+      "min": 0,
+      "max": 0,
+      "valores": []
+    }
+  },
+  "tarifa": {
+    "matriz": {}
+  },
+  "motores": [
+    {
+      "id": "manual",
+      "nombre": "Manivela",
+      "recargo": 0,
+      "familia": "manual"
+    },
+    {
+      "id": "somfy_motor_lt",
+      "nombre": "Somfy Motor Lt",
+      "recargo": 0,
+      "familia": "somfy"
+    },
+    {
+      "id": "somfy_motor_rts",
+      "nombre": "Somfy Motor Rts",
+      "recargo": 0,
+      "familia": "somfy"
+    },
+    {
+      "id": "somfy_motor_io",
+      "nombre": "Somfy Motor Io",
+      "recargo": 0,
+      "familia": "somfy"
+    },
+    {
+      "id": "cherubini_motor_roll_mecanico",
+      "nombre": "Cherubini Motor Roll Mecanico",
+      "recargo": 0,
+      "familia": "cherubini"
+    },
+    {
+      "id": "cherubini_motor_wave_rx_radio",
+      "nombre": "Cherubini Motor Wave Rx Radio",
+      "recargo": 0,
+      "familia": "cherubini"
+    },
+    {
+      "id": "gaviota_motor_gs_mecanico",
+      "nombre": "Gaviota Motor Gs Mecanico",
+      "recargo": 0,
+      "familia": "gaviota"
+    },
+    {
+      "id": "gaviota_motor_cross_radio",
+      "nombre": "Gaviota Motor Cross Radio",
+      "recargo": 0,
+      "familia": "gaviota"
+    }
+  ],
+  "reglas": []
+}

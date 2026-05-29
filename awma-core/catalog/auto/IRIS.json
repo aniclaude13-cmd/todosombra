@@ -1,0 +1,33 @@
+{
+  "id": "IRIS",
+  "nombre": "Toldo iris cofre",
+  "tipo": "toldo_cofre",
+  "version": "2025.09",
+  "fuente": {
+    "abd": "+IRIS.abd"
+  },
+  "dimensiones": {
+    "linea": {
+      "min": 0,
+      "max": 0,
+      "valores": []
+    },
+    "salida": {
+      "min": 0,
+      "max": 0,
+      "valores": []
+    }
+  },
+  "tarifa": {
+    "matriz": {}
+  },
+  "motores": [
+    {
+      "id": "manual",
+      "nombre": "Manivela",
+      "recargo": 0,
+      "familia": "manual"
+    }
+  ],
+  "reglas": []
+}

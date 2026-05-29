@@ -1,0 +1,33 @@
+{
+  "id": "BAJANTESG",
+  "nombre": "Toldo bajante sin guías",
+  "tipo": "toldo_brazo",
+  "version": "2025.09",
+  "fuente": {
+    "abd": "+BAJANTESG.abd"
+  },
+  "dimensiones": {
+    "linea": {
+      "min": 0,
+      "max": 0,
+      "valores": []
+    },
+    "salida": {
+      "min": 0,
+      "max": 0,
+      "valores": []
+    }
+  },
+  "tarifa": {
+    "matriz": {}
+  },
+  "motores": [
+    {
+      "id": "manual",
+      "nombre": "Manivela",
+      "recargo": 0,
+      "familia": "manual"
+    }
+  ],
+  "reglas": []
+}

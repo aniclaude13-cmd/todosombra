@@ -1,0 +1,26 @@
+{
+  "id": "ART500MB2BR",
+  "nombre": "Toldo Art 500 Mb 2 brazos",
+  "tipo": "toldo_brazo",
+  "version": "2025.09",
+  "fuente": {
+    "abd": "+ART500MB2BR.abd"
+  },
+  "dimensiones": {
+    "linea": {
+      "min": 0,
+      "max": 0,
+      "valores": []
+    },
+    "salida": {
+      "min": 0,
+      "max": 0,
+      "valores": []
+    }
+  },
+  "tarifa": {
+    "matriz": {}
+  },
+  "motores": [],
+  "reglas": []
+}

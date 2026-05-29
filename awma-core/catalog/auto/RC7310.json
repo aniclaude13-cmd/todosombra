@@ -1,0 +1,26 @@
+{
+  "id": "RC7310",
+  "nombre": "Riel cortina lateral con guia 80 x 40",
+  "tipo": "vertical",
+  "version": "2025.09",
+  "fuente": {
+    "abd": "RC7310.abd"
+  },
+  "dimensiones": {
+    "linea": {
+      "min": 0,
+      "max": 0,
+      "valores": []
+    },
+    "salida": {
+      "min": 0,
+      "max": 0,
+      "valores": []
+    }
+  },
+  "tarifa": {
+    "matriz": {}
+  },
+  "motores": [],
+  "reglas": []
+}

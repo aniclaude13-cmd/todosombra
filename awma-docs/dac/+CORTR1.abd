@@ -1,0 +1,123 @@
+articulo=+CORTR1
+desc=Cortina reforzada
+NewEstruc=1
+color perfil=Blanco
+color accesorios=Blanco
+dim1=250
+dim2=100
+tipoacabado=8
+AplMultAncho=1
+intAtLin=50
+intAtEA=70
+ilumPrC=20
+ilumPrL=40
+ilumPrF=50
+ProfSombCerr=1
+
+##Datos_Estructura##
+
+Id=0
+PintCotasAut=0
+Modulo000=001         0         0         0         0
+
+
+
+Componente No Visual
+  id=GAPVPCORTR1BL_1
+  art=PVPCORTR1/BL
+  desc=Precio Cortina reforzada
+  tipo_ctrl=0
+  color=Blanco
+  eDim1=250
+  eDim2=100
+  Despiece=0
+  TipoCurva=0
+  AngCorteI=0
+  AngCorteD=0
+  Centro=0
+  TipoTarifa=1
+  f_cant=1
+  f_Dim1=DIM1
+  f_Dim2=DIM2
+end
+Componente No Visual
+  id=G77LONA_1
+  funcion=18
+  art=G77LONA
+  desc=Lona
+  tipo_ctrl=0
+  eDim1=256
+  eDim2=111
+  Despiece=1
+  TipoCurva=0
+  AngCorteI=0
+  AngCorteD=0
+  Centro=0
+  TipoTarifa=2
+  f_cant=1
+  f_Dim1=Dim1+6
+  f_Dim2=(Dim2+6+5)+#@#Si((Dim2>120)y(Dim2<=240);2,5;0)+#@#Si((Dim2>240)y(Dim2<=360);5;0)+#@#Si((Dim2>360)y(Dim2<=480);7.5;0)+#@#Si((Dim2>480)y(Dim2<=600);10;0)+#@#Si((Dim2>600)y(Dim2<=720);12.5;0)+#@#Si((Dim2>720)y(Dim2<=840);15;0)+#@#Si((Dim2>840)y(Dim2<=960);17.5;0)+#@#Si((Dim2>960)y(Dim2<=1080);20;0)+#@#Si((Dim2>1080)y(Dim2<=1200);22.5;0)+#@#Si((Dim2>1200)y(Dim2<=1320);25;0)+#@#Si((Dim2>1320)y(Dim2<=1440);27.5;0)
+  red_Dim2=2
+  desccomp=1
+  ap_prec_inc=1
+end
+Componente No Visual
+  id=G77OLLAO_1
+  art=G77OLLAO
+  desc=Ollaos de desagüe
+  tipo_ctrl=0
+  color=Blanco
+  Despiece=1
+  TipoCurva=0
+  AngCorteI=0
+  AngCorteD=0
+  Centro=0
+  TipoTarifa=2
+  f_cant=DIM2/30
+  red_cant=7
+  ap_prec_inc=1
+end
+Componente No Visual
+  id=GA80130105_1
+  art=80130105
+  desc=Polea perfil riel acero inox exterior
+  tipo_ctrl=0
+  color=Blanco
+  Despiece=1
+  TipoCurva=0
+  AngCorteI=0
+  AngCorteD=0
+  Centro=0
+  TipoTarifa=2
+  f_cant=DIM2/30
+  red_cant=7
+  ap_prec_inc=1
+end
+Componente No Visual
+  id=GA80130003_1
+  art=80130003
+  desc=Perfil riel aluminio
+  ancho_perfil=10
+  color=Blanco
+  tipo_corte_izq=|
+  tipo_corte_der=|
+  Despiece=1
+  TipoCurva=0
+  AngCorteI=90
+  AngCorteD=90
+  Centro=0
+  TipoTarifa=2
+  DtMedCutPerf=4000
+  f_cant=1
+  f_alto=DIM2
+  ap_prec_inc=1
+  MedCutPerf=4000
+end
+
+class=TEstRelleno
+  x=0
+  y=0
+  w=100
+  h=250
+end
+

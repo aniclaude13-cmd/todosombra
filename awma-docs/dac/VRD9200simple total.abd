@@ -1,0 +1,2278 @@
+articulo=VRD9200simple total
+desc=Veranda GIOTTO lacado blanco tejido acrilico motor
+NewEstruc=1
+color perfil=Blanco
+color accesorios=Blanco
+dim1=450
+dim2=450
+tipoacabado=8
+AplMultAncho=1
+intAtLin=50
+intAtEA=70
+ilumPrC=20
+ilumPrL=40
+ilumPrF=50
+ProfSombCerr=1
+
+##Datos_Estructura##
+
+Id=0
+PintCotasAut=0
+Modulo000=001         0         0         0         0
+
+deInfoMontaje000={\rtf1\ansi\ansicpg1252\deff0{\fonttbl{\f0\fnil\fcharset0 Arial;}}
+deInfoMontaje001={\colortbl ;\red255\green0\blue0;}
+deInfoMontaje002=\viewkind4\uc1\pard\cf1\lang3082\fs16 SI LA FIJACION DEL COFRE NO EXISTE Y SE HACE CON SOPORTES DE GUIA, LA SALIDA NO PUEDE SER MAYOR DE 300 CM. SERIA NECESARIO METER UN TERCER SOPORTE/PATA.\cf0\fs20\par
+deInfoMontaje003=}
+
+
+Variable
+  nombre=@PLURIMODULO
+  valor=0
+  tipovar=1
+  formula=
+  max=0
+  min=0
+  actmin=0
+  actmax=0
+  selec=0
+  peticion=1
+  condicion=
+  varserie=0
+  PermEdRes=0
+  ResManual=0
+  ValorManual=0
+  agrupar=0
+  enum_0_texto=NO VALIDO
+  enum_0_valor=0
+  enum_0_condicion=
+  enum_1_texto=NO
+  enum_1_valor=1
+  enum_1_condicion=
+  enum_2_texto=SI
+  enum_2_valor=2
+  enum_2_condicion=
+end
+Variable
+  nombre=@TIPOMODULO
+  valor=0
+  tipovar=1
+  formula=
+  max=0
+  min=0
+  actmin=0
+  actmax=0
+  selec=0
+  peticion=1
+  condicion=SI(@PLURIMODULO=2;1;0)
+  varserie=0
+  PermEdRes=0
+  ResManual=0
+  ValorManual=0
+  agrupar=0
+  enum_0_texto=NO VALIDO
+  enum_0_valor=0
+  enum_0_condicion=
+  enum_1_texto=MODULO B
+  enum_1_valor=1
+  enum_1_condicion=
+  enum_2_texto=MODULO C
+  enum_2_valor=2
+  enum_2_condicion=
+  enum_3_texto=MODULO D
+  enum_3_valor=3
+  enum_3_condicion=
+end
+Variable
+  nombre=@SALIDAANTERIOR
+  valor=0
+  tipovar=1
+  formula=
+  max=0
+  min=0
+  actmin=0
+  actmax=0
+  selec=0
+  peticion=1
+  condicion=SI((@TIPOMODULO>=2);1;0)
+  varserie=0
+  PermEdRes=0
+  ResManual=0
+  ValorManual=0
+  agrupar=0
+  enum_0_texto=NO VALIDO
+  enum_0_valor=0
+  enum_0_condicion=
+  enum_1_texto=IGUAL O MAYOR
+  enum_1_valor=1
+  enum_1_condicion=
+  enum_2_texto=MENOR
+  enum_2_valor=2
+  enum_2_condicion=
+end
+Variable
+  nombre=@SALIDAPOSTERIOR
+  valor=0
+  tipovar=1
+  formula=
+  max=0
+  min=0
+  actmin=0
+  actmax=0
+  selec=0
+  peticion=1
+  condicion=SI((@TIPOMODULO=1);1;0)+SI((@TIPOMODULO=2);1;0)
+  varserie=0
+  PermEdRes=0
+  ResManual=0
+  ValorManual=0
+  agrupar=0
+  enum_0_texto=NO VALIDO
+  enum_0_valor=0
+  enum_0_condicion=
+  enum_1_texto=MAYOR
+  enum_1_valor=1
+  enum_1_condicion=
+  enum_2_texto=MENOR O IGUAL
+  enum_2_valor=2
+  enum_2_condicion=
+end
+Variable
+  nombre=@ACCIONAMIENTO
+  valor=0
+  tipovar=1
+  formula=
+  max=0
+  min=0
+  actmin=0
+  actmax=0
+  selec=0
+  peticion=1
+  condicion=
+  varserie=0
+  PermEdRes=0
+  ResManual=0
+  ValorManual=0
+  agrupar=0
+  enum_0_texto=NO VALIDO
+  enum_0_valor=0
+  enum_0_condicion=
+  enum_1_texto=MOTOR SOMFY
+  enum_1_valor=2
+  enum_1_condicion=
+  enum_2_texto=MOTOR CHERUBINI
+  enum_2_valor=3
+  enum_2_condicion=
+  enum_3_texto=MOTOR GAVIOTA
+  enum_3_valor=4
+  enum_3_condicion=
+  enum_4_texto=CLIENTE PONE MOTOR
+  enum_4_valor=5
+  enum_4_condicion=
+end
+Variable
+  nombre=@POSICIONVDENTRO
+  valor=0
+  tipovar=1
+  formula=
+  max=0
+  min=0
+  actmin=0
+  actmax=0
+  selec=0
+  peticion=1
+  condicion=
+  varserie=0
+  PermEdRes=0
+  ResManual=0
+  ValorManual=0
+  agrupar=0
+  enum_0_texto=NOVALIDO
+  enum_0_valor=0
+  enum_0_condicion=
+  enum_1_texto=IZQUIERDA
+  enum_1_valor=1
+  enum_1_condicion=
+  enum_2_texto=DERECHA
+  enum_2_valor=2
+  enum_2_condicion=
+end
+Variable
+  nombre=@MOTORSOMFY
+  valor=0
+  tipovar=1
+  formula=
+  max=0
+  min=0
+  actmin=0
+  actmax=0
+  selec=0
+  peticion=1
+  condicion=SI(@ACCIONAMIENTO=2;1;0)
+  varserie=0
+  PermEdRes=0
+  ResManual=0
+  ValorManual=0
+  agrupar=0
+  enum_0_texto=NO VALIDO
+  enum_0_valor=0
+  enum_0_condicion=
+  enum_1_texto=MOTOR LT
+  enum_1_valor=1
+  enum_1_condicion=
+  enum_2_texto=MOTOR RTS
+  enum_2_valor=2
+  enum_2_condicion=
+  enum_3_texto=MOTOR iO
+  enum_3_valor=3
+  enum_3_condicion=
+end
+Variable
+  nombre=@MANDOSOMFYRTS
+  valor=0
+  tipovar=1
+  formula=
+  max=0
+  min=0
+  actmin=0
+  actmax=0
+  selec=0
+  peticion=1
+  condicion=SI((@MOTORSOMFY=2)y(@Accionamiento=2);1;0)
+  varserie=0
+  PermEdRes=0
+  ResManual=0
+  ValorManual=0
+  agrupar=0
+  enum_0_texto=SIN MANDO
+  enum_0_valor=0
+  enum_0_condicion=
+  enum_1_texto=TELIS PURE RTS
+  enum_1_valor=1
+  enum_1_condicion=
+  enum_2_texto=TELIS PURE 4 RTS
+  enum_2_valor=2
+  enum_2_condicion=
+  enum_3_texto=TELIS PATIO
+  enum_3_valor=3
+  enum_3_condicion=
+  enum_4_texto=TELIS PATIO 4 RTS
+  enum_4_valor=4
+  enum_4_condicion=
+  enum_5_texto=TELIS1 SOLIRIS PURE
+  enum_5_valor=5
+  enum_5_condicion=
+  enum_6_texto=TELIS 4 SOLIRIS PURE
+  enum_6_valor=6
+  enum_6_condicion=
+  enum_7_texto=TELIS SOLIRIS 1 PATIO
+  enum_7_valor=7
+  enum_7_condicion=
+  enum_8_texto=TELIS SOLIRIS 4 PATIO
+  enum_8_valor=8
+  enum_8_condicion=
+end
+Variable
+  nombre=@MANDOSOMFYIO
+  valor=0
+  tipovar=1
+  formula=
+  max=0
+  min=0
+  actmin=0
+  actmax=0
+  selec=0
+  peticion=1
+  condicion=SI(@MOTORSOMFY=3;1;0)
+  varserie=0
+  PermEdRes=0
+  ResManual=0
+  ValorManual=0
+  agrupar=0
+  enum_0_texto=SIN MANDO
+  enum_0_valor=0
+  enum_0_condicion=
+  enum_1_texto=SITUO 1 PURE
+  enum_1_valor=1
+  enum_1_condicion=
+  enum_2_texto=SITIO 5 PURE
+  enum_2_valor=2
+  enum_2_condicion=
+  enum_3_texto=SITUO 1 VARIATION
+  enum_3_valor=3
+  enum_3_condicion=
+  enum_4_texto=SITUO 5 VARIATION
+  enum_4_valor=4
+  enum_4_condicion=
+end
+Variable
+  nombre=@MOTORCHERUBINI
+  valor=0
+  tipovar=1
+  formula=
+  max=0
+  min=0
+  actmin=0
+  actmax=0
+  selec=0
+  peticion=1
+  condicion=SI(@ACCIONAMIENTO=3;1;0)
+  varserie=0
+  PermEdRes=0
+  ResManual=0
+  ValorManual=0
+  agrupar=0
+  enum_0_texto=NO VALIDO
+  enum_0_valor=0
+  enum_0_condicion=
+  enum_1_texto=MOTOR MECANICO
+  enum_1_valor=1
+  enum_1_condicion=
+  enum_2_texto=MOTOR WAVE RX RADIO
+  enum_2_valor=2
+  enum_2_condicion=
+end
+Variable
+  nombre=@MANDOSCHERUBINI
+  valor=0
+  tipovar=1
+  formula=
+  max=0
+  min=0
+  actmin=0
+  actmax=0
+  selec=0
+  peticion=1
+  condicion=si(@motorcherubini=2;1;0)
+  varserie=0
+  PermEdRes=0
+  ResManual=0
+  ValorManual=0
+  agrupar=0
+  enum_0_texto=SIN MANDO
+  enum_0_valor=0
+  enum_0_condicion=
+  enum_1_texto=SKIPPER 1 CANAL
+  enum_1_valor=1
+  enum_1_condicion=
+  enum_2_texto=SKIPPER 7 CANALES
+  enum_2_valor=2
+  enum_2_condicion=
+  enum_3_texto=GIRO 1 CANAL 
+  enum_3_valor=3
+  enum_3_condicion=
+  enum_4_texto=GIRO 7 CANALES
+  enum_4_valor=4
+  enum_4_condicion=
+end
+Variable
+  nombre=@MOTORGAVIOTA
+  valor=0
+  tipovar=1
+  formula=
+  max=0
+  min=0
+  actmin=0
+  actmax=0
+  selec=0
+  peticion=1
+  condicion=SI(@ACCIONAMIENTO=4;1;0)
+  varserie=0
+  PermEdRes=0
+  ResManual=0
+  ValorManual=0
+  agrupar=0
+  enum_0_texto=NO VALIDO
+  enum_0_valor=0
+  enum_0_condicion=
+  enum_1_texto=MOTOR CROSS RADIO
+  enum_1_valor=2
+  enum_1_condicion=
+end
+Variable
+  nombre=@MANDOSGAVIOTA
+  valor=0
+  tipovar=1
+  formula=
+  max=0
+  min=0
+  actmin=0
+  actmax=0
+  selec=0
+  peticion=1
+  condicion=si(@motorgaviota=2;1;0)
+  varserie=0
+  PermEdRes=0
+  ResManual=0
+  ValorManual=0
+  agrupar=0
+  enum_0_texto=SIN MANDO
+  enum_0_valor=0
+  enum_0_condicion=
+  enum_1_texto=CROSS 1 CANAL
+  enum_1_valor=1
+  enum_1_condicion=
+  enum_2_texto=CROSS 15 CANALES 
+  enum_2_valor=2
+  enum_2_condicion=
+end
+Variable
+  nombre=@PLUS
+  valor=0
+  tipovar=1
+  formula=
+  max=0
+  min=0
+  actmin=0
+  actmax=0
+  selec=0
+  peticion=1
+  condicion=
+  varserie=0
+  PermEdRes=0
+  ResManual=0
+  ValorManual=0
+  agrupar=0
+  enum_0_texto=NO VALIDO
+  enum_0_valor=0
+  enum_0_condicion=
+  enum_1_texto=SIN PATAS
+  enum_1_valor=1
+  enum_1_condicion=
+  enum_2_texto=CON PATAS
+  enum_2_valor=2
+  enum_2_condicion=
+end
+Variable
+  nombre=@FIJACIONCOFRE
+  valor=0
+  tipovar=1
+  formula=
+  max=0
+  min=0
+  actmin=0
+  actmax=0
+  selec=0
+  peticion=1
+  condicion=SI(@PLUS=2;1;0)
+  varserie=0
+  PermEdRes=0
+  ResManual=0
+  ValorManual=0
+  agrupar=0
+  enum_0_texto=NO VALIDO
+  enum_0_valor=0
+  enum_0_condicion=
+  enum_1_texto=A PARED
+  enum_1_valor=1
+  enum_1_condicion=
+  enum_2_texto=A TECHO
+  enum_2_valor=2
+  enum_2_condicion=
+  enum_3_texto=SOBRETECHO
+  enum_3_valor=3
+  enum_3_condicion=
+  enum_4_texto=SIN SOPORTES
+  enum_4_valor=4
+  enum_4_condicion=
+end
+Variable
+  nombre=@ALTURAPATAS
+  valor=0
+  tipovar=0
+  formula=
+  max=0
+  min=0
+  actmin=0
+  actmax=0
+  selec=-1
+  peticion=1
+  condicion=SI(@PLUS=2;1;0)
+  varserie=0
+  PermEdRes=0
+  ResManual=0
+  ValorManual=0
+  agrupar=0
+end
+Variable
+  nombre=@SOPORTES
+  valor=0
+  tipovar=1
+  formula=
+  max=0
+  min=0
+  actmin=0
+  actmax=0
+  selec=0
+  peticion=1
+  condicion=SI((@PLURIMODULO=1)Y(@PLUS=1);1;0)
+  varserie=0
+  PermEdRes=0
+  ResManual=0
+  ValorManual=0
+  agrupar=0
+  enum_0_texto=NOVALIDO
+  enum_0_valor=0
+  enum_0_condicion=
+  enum_1_texto=REGULABLE
+  enum_1_valor=1
+  enum_1_condicion=
+  enum_2_texto=REG. E INCLINABLE
+  enum_2_valor=2
+  enum_2_condicion=
+  enum_3_texto=REG. LATERALMENTE
+  enum_3_valor=3
+  enum_3_condicion=
+  enum_4_texto=ENTREPAREDES
+  enum_4_valor=4
+  enum_4_condicion=
+  enum_5_texto=ESPECIAL
+  enum_5_valor=20
+  enum_5_condicion=
+  enum_6_texto=SINSOPORTES
+  enum_6_valor=21
+  enum_6_condicion=
+end
+Variable
+  nombre=@SOPESPECIAL1
+  valor=0
+  tipovar=1
+  formula=
+  max=0
+  min=0
+  actmin=0
+  actmax=0
+  selec=0
+  peticion=1
+  condicion=SI((@FIJACIONCOFRE=4)Y(@PLURIMODULO=1);1;0)+SI(@SOPORTES=20;1;0)+SI((@PLURIMODULO=2);1;0)
+  varserie=0
+  PermEdRes=0
+  ResManual=0
+  ValorManual=0
+  agrupar=0
+  enum_0_texto=NOVALIDO
+  enum_0_valor=0
+  enum_0_condicion=
+  enum_1_texto=REGULABLE
+  enum_1_valor=1
+  enum_1_condicion=
+  enum_2_texto=REG. E INCLINABLE
+  enum_2_valor=2
+  enum_2_condicion=
+  enum_3_texto=REG. LATERALMENTE
+  enum_3_valor=3
+  enum_3_condicion=
+  enum_4_texto=ENTREPAREDES
+  enum_4_valor=4
+  enum_4_condicion=
+  enum_5_texto=SIN SOPORTES
+  enum_5_valor=21
+  enum_5_condicion=SI(@PLURIMODULO=2;1;0)
+end
+Variable
+  nombre=@CANTIDADSOPESPECIAL1
+  valor=0
+  tipovar=0
+  formula=
+  max=0
+  min=0
+  actmin=0
+  actmax=0
+  selec=-1
+  peticion=1
+  condicion=SI(@SOPESPECIAL1>0;1;0)
+  varserie=0
+  PermEdRes=0
+  ResManual=0
+  ValorManual=0
+  agrupar=0
+end
+Variable
+  nombre=@SOPESPECIAL2
+  valor=0
+  tipovar=1
+  formula=
+  max=0
+  min=0
+  actmin=0
+  actmax=0
+  selec=0
+  peticion=1
+  condicion=SI(@CANTIDADSOPESPECIAL1>0;1;0)
+  varserie=0
+  PermEdRes=0
+  ResManual=0
+  ValorManual=0
+  agrupar=0
+  enum_0_texto=NOVALIDO
+  enum_0_valor=0
+  enum_0_condicion=
+  enum_1_texto=REGULABLE
+  enum_1_valor=1
+  enum_1_condicion=
+  enum_2_texto=REG. E INCLINABLE
+  enum_2_valor=2
+  enum_2_condicion=
+  enum_3_texto=REG. LATERALMENTE
+  enum_3_valor=3
+  enum_3_condicion=
+  enum_4_texto=ENTREPAREDES
+  enum_4_valor=4
+  enum_4_condicion=
+end
+Variable
+  nombre=@CANTIDADSOPESPECIAL2
+  valor=0
+  tipovar=0
+  formula=
+  max=0
+  min=0
+  actmin=0
+  actmax=0
+  selec=-1
+  peticion=1
+  condicion=SI(@CANTIDADSOPESPECIAL1>0;1;0)
+  varserie=0
+  PermEdRes=0
+  ResManual=0
+  ValorManual=0
+  agrupar=0
+end
+Variable
+  nombre=@SOPALTURAESPECIAL
+  valor=0
+  tipovar=1
+  formula=
+  max=0
+  min=0
+  actmin=0
+  actmax=0
+  selec=0
+  peticion=1
+  condicion=SI(@SOPORTES=1;1;0)+SI(@SOPORTES=2;1;0)+SI(@SOPESPECIAL1=1;1;0)+SI(@SOPESPECIAL1=2;1;0)+SI(@SOPESPECIAL2=1;1;0)+SI(@SOPESPECIAL2=2;1;0)
+  varserie=0
+  PermEdRes=0
+  ResManual=0
+  ValorManual=0
+  agrupar=0
+  enum_0_texto=NO VALIDO
+  enum_0_valor=0
+  enum_0_condicion=
+  enum_1_texto=NO
+  enum_1_valor=1
+  enum_1_condicion=
+  enum_2_texto=SI
+  enum_2_valor=2
+  enum_2_condicion=
+end
+Variable
+  nombre=@MEDIDASOPORTEESPECIAL
+  valor=0
+  tipovar=0
+  formula=
+  max=0
+  min=0
+  actmin=0
+  actmax=0
+  selec=-1
+  peticion=1
+  condicion=SI(@SOPALTURAESPECIAL=2;1;0)
+  varserie=0
+  PermEdRes=0
+  ResManual=0
+  ValorManual=0
+  agrupar=0
+end
+Variable
+  nombre=@TUBOINTERMEDIOEXTRA
+  valor=0
+  tipovar=1
+  formula=
+  max=0
+  min=0
+  actmin=0
+  actmax=0
+  selec=0
+  peticion=1
+  condicion=
+  varserie=0
+  PermEdRes=0
+  ResManual=0
+  ValorManual=0
+  agrupar=0
+  enum_0_texto=NOVALIDO
+  enum_0_valor=0
+  enum_0_condicion=
+  enum_1_texto=NO
+  enum_1_valor=1
+  enum_1_condicion=
+  enum_2_texto=SI
+  enum_2_valor=2
+  enum_2_condicion=
+end
+Variable
+  nombre=@CANTIDADTUBOINTERMEDIOEXTRA
+  valor=0
+  tipovar=0
+  formula=
+  max=0
+  min=0
+  actmin=0
+  actmax=0
+  selec=-1
+  peticion=1
+  condicion=SI(@TUBOINTERMEDIOEXTRA=2;1;0)
+  varserie=0
+  PermEdRes=0
+  ResManual=0
+  ValorManual=0
+  agrupar=0
+end
+Variable
+  nombre=@OLLADOS
+  valor=0
+  tipovar=1
+  formula=
+  max=0
+  min=0
+  actmin=0
+  actmax=0
+  selec=0
+  peticion=1
+  condicion=
+  varserie=0
+  PermEdRes=0
+  ResManual=0
+  ValorManual=0
+  agrupar=0
+  enum_0_texto=NOVALIDO
+  enum_0_valor=0
+  enum_0_condicion=
+  enum_1_texto=NO
+  enum_1_valor=1
+  enum_1_condicion=
+  enum_2_texto=SI
+  enum_2_valor=2
+  enum_2_condicion=
+end
+Variable
+  nombre=@MONTAJEOBRA
+  valor=0
+  tipovar=1
+  formula=
+  max=0
+  min=0
+  actmin=0
+  actmax=0
+  selec=0
+  peticion=1
+  condicion=SI(DIM1=900000;1;0)
+  varserie=0
+  PermEdRes=0
+  ResManual=0
+  ValorManual=0
+  agrupar=0
+  enum_0_texto=NOVALIDO
+  enum_0_valor=0
+  enum_0_condicion=
+  enum_1_texto=INDIVIDUAL
+  enum_1_valor=1
+  enum_1_condicion=
+  enum_2_texto=CONTIGUO
+  enum_2_valor=2
+  enum_2_condicion=SI(DIM1=900000;1;0)
+  enum_3_texto=SINSOPORTES
+  enum_3_valor=4
+  enum_3_condicion=
+end
+Componente No Visual
+  id=GAPVPA1PREMIUMBL_1
+  art=PVP_VRD9200/BL
+  desc=Precio para VRD9200 Giotto
+  tipo_ctrl=0
+  eDim1=450
+  eDim2=450
+  Despiece=0
+  TipoCurva=0
+  AngCorteI=0
+  AngCorteD=0
+  Centro=0
+  TipoTarifa=1
+  f_cant=1
+  f_Dim1=DIM1
+  f_Dim2=DIM2
+end
+Componente No Visual
+  id=ACCIONAMIENTONOVAL_1
+  art=ACCIONAMIENTO_NO_VAL
+  desc=ATENCION ACIONAMIENTO NO VALIDO
+  tipo_ctrl=0
+  Despiece=0
+  TipoCurva=0
+  AngCorteI=0
+  AngCorteD=0
+  Centro=0
+  TipoTarifa=1
+  f_cant=SI(@ACCIONAMIENTO=0;1;0)
+end
+Componente No Visual
+  id=ACIONAMIENTOSOMFY_1
+  art=ACCIONAMIENTO_SOMFY
+  desc=ACCIONAMIENTO MOTOR SOMFY
+  tipo_ctrl=0
+  Despiece=0
+  TipoCurva=0
+  AngCorteI=0
+  AngCorteD=0
+  Centro=0
+  TipoTarifa=1
+  f_cant=si(@accionamiento=2;1;0)
+end
+Componente No Visual
+  id=ACCIONAMIENTOCHERUB_1
+  art=ACCIONAMIENTO_CHERUB
+  desc=ACCIONAMIENTO MOTOR CHERUBINI
+  tipo_ctrl=0
+  Despiece=0
+  TipoCurva=0
+  AngCorteI=0
+  AngCorteD=0
+  Centro=0
+  TipoTarifa=1
+  f_cant=si(@accionamiento=3;1;0)
+end
+Componente No Visual
+  id=ACCIONAMIENTOGAVIOT_1
+  art=ACCIONAMIENTO_GAVIOT
+  desc=ACCIONAMIENTO MOTOR GAVIOTA
+  tipo_ctrl=0
+  Despiece=0
+  TipoCurva=0
+  AngCorteI=0
+  AngCorteD=0
+  Centro=0
+  TipoTarifa=1
+  f_cant=si(@accionamiento=4;1;0)
+end
+Componente No Visual
+  id=ACCIONAMIENTOCLIENT_1
+  art=ACCIONAMIENTO_CLIENT
+  desc=Motor suministrado por el cliente
+  tipo_ctrl=0
+  Despiece=1
+  TipoCurva=0
+  AngCorteI=0
+  AngCorteD=0
+  Centro=0
+  TipoTarifa=2
+  f_cant=si(@accionamiento=5;1;0)
+  ap_prec_inc=1
+end
+Componente No Visual
+  id=POSICIONNOVALIDO_3
+  art=POSICION_NO_VALIDO
+  desc=Atención posicion accionamiento no válido
+  tipo_ctrl=0
+  Despiece=1
+  TipoCurva=0
+  AngCorteI=0
+  AngCorteD=0
+  Centro=0
+  TipoTarifa=2
+  f_cant=si(@POSICIONVDENTRO=0;1;0)
+  ap_prec_inc=1
+end
+Componente No Visual
+  id=POSICIONVDDERECHA_1
+  art=POSICION_VDDERECHA
+  desc=Posicion accionamiento visto dentro derecha
+  tipo_ctrl=0
+  Despiece=1
+  TipoCurva=0
+  AngCorteI=0
+  AngCorteD=0
+  Centro=0
+  TipoTarifa=2
+  f_cant=si(@POSICIONVDENTRO=2;1;0)
+  ap_prec_inc=1
+end
+Componente No Visual
+  id=POSICIONVDIZQUIERDA_1
+  art=POSICION_VDIZQUIERDA
+  desc=Posicion accionamiento visto dentro izquierda
+  tipo_ctrl=0
+  Despiece=1
+  TipoCurva=0
+  AngCorteI=0
+  AngCorteD=0
+  Centro=0
+  TipoTarifa=2
+  f_cant=si(@POSICIONVDENTRO=1;1;0)
+  ap_prec_inc=1
+end
+Componente No Visual
+  id=COMPAREACOR_1
+  art=COMP_AREA_COR
+  desc=Comprobacion del linea minima - salida CORRECTA
+  Despiece=1
+  TipoCurva=0
+  AngCorteI=0
+  AngCorteD=0
+  Centro=0
+  TipoTarifa=2
+  f_cant=SI((DIM2>=100)Y(DIM2<150)Y(DIM1>=125);1;0)+SI((DIM2>=150)Y(DIM2<300)Y(DIM1>=150);1;0)+SI((DIM2>=300)Y(DIM2<400)Y(DIM1>=160)Y(DIM1<=500);1;0)+SI((DIM2>=400)Y(DIM2<=500)Y(DIM1>=250);1;0)
+  ap_prec_inc=1
+end
+Componente No Visual
+  id=COMPAREAINCOR_1
+  art=COMP_AREA_INCOR
+  desc=Comprobacion del linea minima - salida INCORRECTA
+  Despiece=1
+  TipoCurva=0
+  AngCorteI=0
+  AngCorteD=0
+  Centro=0
+  TipoTarifa=2
+  f_cant=SI((DIM2>=100)Y(DIM2<150)Y(DIM1<125);1;0)+SI((DIM2>=150)Y(DIM2<300)Y(DIM1<150);1;0)+SI((DIM2>=300)Y(DIM2<400)Y(DIM1<160);1;0)+SI((DIM2>=400)Y(DIM2<=500)Y(DIM1<250);1;0)
+  ap_prec_inc=1
+end
+Componente No Visual
+  id=BT9MOL790101_1
+  art=BT9MOL--790101
+  desc=Muelle Ø19mm 364
+  tipo_ctrl=0
+  Despiece=1
+  TipoCurva=0
+  AngCorteI=0
+  AngCorteD=0
+  Centro=0
+  TipoTarifa=2
+  f_cant=SI(DIM2<=300;2;0)+SI((DIM2>300)Y(DIM2<=400)Y(DIM1<=400);2;0)
+  ap_prec_inc=1
+end
+Componente No Visual
+  id=BT4MOL790001_1
+  art=BT4MOL--790001
+  desc=Muelle 540
+  tipo_ctrl=0
+  Despiece=1
+  TipoCurva=0
+  AngCorteI=0
+  AngCorteD=0
+  Centro=0
+  TipoTarifa=2
+  f_cant=SI((DIM2>300)Y(DIM2<=400)Y(DIM1>400);2;0)+SI((DIM2>400)Y(DIM1>250);2;0)
+  ap_prec_inc=1
+end
+Componente No Visual
+  id=ID207251_1
+  art=201219
+  desc=Casquillo 78mm rd RS14/4
+  tipo_ctrl=0
+  Despiece=1
+  TipoCurva=0
+  AngCorteI=0
+  AngCorteD=0
+  Centro=0
+  TipoTarifa=2
+  f_cant=SI(TUBO78_1_CANTIDAD=1;1;0)
+  ap_prec_inc=1
+end
+Componente No Visual
+  id=ID208479_1
+  art=208479
+  desc=Soporte rodamiento P244/1 blanco
+  tipo_ctrl=0
+  Despiece=1
+  TipoCurva=0
+  AngCorteI=0
+  AngCorteD=0
+  Centro=0
+  TipoTarifa=2
+  f_cant=1
+  ap_prec_inc=1
+end
+Componente No Visual
+  id=TUBO78_1
+  art=TUBO78
+  desc=Lleva tubo 78
+  Despiece=1
+  TipoCurva=0
+  AngCorteI=0
+  AngCorteD=0
+  Centro=0
+  TipoTarifa=2
+  f_cant=1
+  ap_prec_inc=1
+end
+Componente No Visual
+  id=ID80030020_1
+  art=80030020
+  desc=Tubo ranurado galvanizado ojiva 78 x 1 ran 4 m galva
+  ancho_perfil=78
+  color=Blanco
+  tipo_corte_izq=|
+  tipo_corte_der=|
+  Despiece=1
+  TipoCurva=0
+  AngCorteI=90
+  AngCorteD=90
+  Centro=0
+  TipoTarifa=2
+  DtMedCutPerf=3890
+  f_cant=SI((TUBO78_1_CANTIDAD=1)Y(DIM1>354)Y(DIM1<=404);1;0)
+  f_alto=SI((@PLURIMODULO=1)Y(@ACCIONAMIENTO<>4);DIM1-5.8;0)+SI((@PLURIMODULO=1)Y(@ACCIONAMIENTO=4);DIM1-5.1;0)+SI((@TIPOMODULO=1)Y(@ACCIONAMIENTO<>4);DIM1-5.7;0)+SI((@TIPOMODULO=1)Y(@ACCIONAMIENTO=4);DIM1-5.0;0)+SI((@TIPOMODULO=3)Y(@ACCIONAMIENTO<>4);DIM1-5.7;0)+SI((@TIPOMODULO=3)Y(@ACCIONAMIENTO=4);DIM1-5.0;0)+SI((@TIPOMODULO=2)Y(@ACCIONAMIENTO<>4);DIM1-5.5;0)+SI((@TIPOMODULO=2)Y(@ACCIONAMIENTO=4);DIM1-4.8;0)
+  ap_prec_inc=1
+  MedCutPerf=3890
+end
+Componente No Visual
+  id=ID80030021_1
+  art=80030021
+  desc=Tubo ranurado galvanizado ojiva 78 x 1 ran 5 m galva
+  ancho_perfil=78
+  color=Blanco
+  tipo_corte_izq=|
+  tipo_corte_der=|
+  Despiece=1
+  TipoCurva=0
+  AngCorteI=90
+  AngCorteD=90
+  Centro=0
+  TipoTarifa=2
+  DtMedCutPerf=4890
+  f_cant=SI((TUBO78_1_CANTIDAD=1)Y(DIM1>404)Y(DIM1<=504);1;0)
+  f_alto=SI((@PLURIMODULO=1)Y(@ACCIONAMIENTO<>4);DIM1-5.8;0)+SI((@PLURIMODULO=1)Y(@ACCIONAMIENTO=4);DIM1-5.1;0)+SI((@TIPOMODULO=1)Y(@ACCIONAMIENTO<>4);DIM1-5.7;0)+SI((@TIPOMODULO=1)Y(@ACCIONAMIENTO=4);DIM1-5.0;0)+SI((@TIPOMODULO=3)Y(@ACCIONAMIENTO<>4);DIM1-5.7;0)+SI((@TIPOMODULO=3)Y(@ACCIONAMIENTO=4);DIM1-5.0;0)+SI((@TIPOMODULO=2)Y(@ACCIONAMIENTO<>4);DIM1-5.5;0)+SI((@TIPOMODULO=2)Y(@ACCIONAMIENTO=4);DIM1-4.8;0)
+  ap_prec_inc=1
+  MedCutPerf=4890
+end
+Componente No Visual
+  id=ID80030022_1
+  art=80030022
+  desc=Tubo ranurado galvanizado ojiva 78 x 1 ran 6 m galva
+  ancho_perfil=78
+  color=Blanco
+  tipo_corte_izq=|
+  tipo_corte_der=|
+  Despiece=1
+  TipoCurva=0
+  AngCorteI=90
+  AngCorteD=90
+  Centro=0
+  TipoTarifa=2
+  DtMedCutPerf=5890
+  f_cant=SI((TUBO78_1_CANTIDAD=1)Y(DIM1>504)Y(DIM1<=604);1;0)
+  f_alto=SI((@PLURIMODULO=1)Y(@ACCIONAMIENTO<>4);DIM1-5.8;0)+SI((@PLURIMODULO=1)Y(@ACCIONAMIENTO=4);DIM1-5.1;0)+SI((@TIPOMODULO=1)Y(@ACCIONAMIENTO<>4);DIM1-5.7;0)+SI((@TIPOMODULO=1)Y(@ACCIONAMIENTO=4);DIM1-5.0;0)+SI((@TIPOMODULO=3)Y(@ACCIONAMIENTO<>4);DIM1-5.7;0)+SI((@TIPOMODULO=3)Y(@ACCIONAMIENTO=4);DIM1-5.0;0)+SI((@TIPOMODULO=2)Y(@ACCIONAMIENTO<>4);DIM1-5.5;0)+SI((@TIPOMODULO=2)Y(@ACCIONAMIENTO=4);DIM1-4.8;0)
+  ap_prec_inc=1
+  MedCutPerf=5890
+end
+Componente No Visual
+  id=ID80030015_1
+  art=80030015
+  desc=Tubo ranurado galvanizado ojiva 78 x 1 ran 7 m galva
+  ancho_perfil=78
+  color=Blanco
+  tipo_corte_izq=|
+  tipo_corte_der=|
+  Despiece=1
+  TipoCurva=0
+  AngCorteI=90
+  AngCorteD=90
+  Centro=0
+  TipoTarifa=2
+  DtMedCutPerf=6890
+  f_cant=SI((TUBO78_1_CANTIDAD=1)Y(DIM1>=100)Y(DIM1<=354);1;0)
+  f_alto=SI((@PLURIMODULO=1)Y(@ACCIONAMIENTO<>4);DIM1-5.8;0)+SI((@PLURIMODULO=1)Y(@ACCIONAMIENTO=4);DIM1-5.1;0)+SI((@TIPOMODULO=1)Y(@ACCIONAMIENTO<>4);DIM1-5.7;0)+SI((@TIPOMODULO=1)Y(@ACCIONAMIENTO=4);DIM1-5.0;0)+SI((@TIPOMODULO=3)Y(@ACCIONAMIENTO<>4);DIM1-5.7;0)+SI((@TIPOMODULO=3)Y(@ACCIONAMIENTO=4);DIM1-5.0;0)+SI((@TIPOMODULO=2)Y(@ACCIONAMIENTO<>4);DIM1-5.5;0)+SI((@TIPOMODULO=2)Y(@ACCIONAMIENTO=4);DIM1-4.8;0)
+  ap_prec_inc=1
+  MedCutPerf=6890
+end
+Componente No Visual
+  id=ID9910000_1
+  art=9910000
+  desc=Soporte universal Op. HiPro
+  tipo_ctrl=0
+  Despiece=1
+  TipoCurva=0
+  AngCorteI=0
+  AngCorteD=0
+  Centro=0
+  TipoTarifa=2
+  f_cant=SI(@ACCIONAMIENTO=2;1;0)+SI(@ACCIONAMIENTO=5;1;0)
+  ap_prec_inc=1
+end
+Componente No Visual
+  id=ID9128427_1
+  art=9128427
+  desc=Corona adap.LT60 P-800 y ø80x2
+  tipo_ctrl=0
+  Despiece=1
+  TipoCurva=0
+  AngCorteI=0
+  AngCorteD=0
+  Centro=0
+  TipoTarifa=2
+  f_cant=SI(((@ACCIONAMIENTO=2)Y(TUBO78_1_CANTIDAD=1));1;0)+SI(((@ACCIONAMIENTO=5)Y(TUBO78_1_CANTIDAD=1));1;0)
+  ap_prec_inc=1
+end
+Componente No Visual
+  id=ID9761001_1
+  art=9761001
+  desc=Rueda motr. HiP a Ø 78 Catalá
+  tipo_ctrl=0
+  Despiece=1
+  TipoCurva=0
+  AngCorteI=0
+  AngCorteD=0
+  Centro=0
+  TipoTarifa=2
+  f_cant=SI(((@ACCIONAMIENTO=2)Y(TUBO78_1_CANTIDAD=1));1;0)+SI(((@ACCIONAMIENTO=5)Y(TUBO78_1_CANTIDAD=1));1;0)
+  ap_prec_inc=1
+end
+Componente No Visual
+  id=ID9707026_1
+  art=9707026
+  desc=Corona adap.LT50 a ø 63x1,5mm
+  tipo_ctrl=0
+  Despiece=1
+  TipoCurva=0
+  AngCorteI=0
+  AngCorteD=0
+  Centro=0
+  TipoTarifa=2
+  f_cant=SI(((@ACCIONAMIENTO=2)Y(TUBO78_1_CANTIDAD=1));1;0)+SI(((@ACCIONAMIENTO=5)Y(TUBO78_1_CANTIDAD=1));1;0)
+  ap_prec_inc=1
+end
+Componente No Visual
+  id=ID1115153_1
+  art=1115153
+  desc=Orea 30/17 WT
+  tipo_ctrl=0
+  Despiece=1
+  TipoCurva=0
+  AngCorteI=0
+  AngCorteD=0
+  Centro=0
+  TipoTarifa=2
+  f_cant=SI((@motorsomfy=1)Y(DIM1<=300)Y(DIM2<=300);1;0)
+  ap_prec_inc=1
+end
+Componente No Visual
+  id=ID1118121_1
+  art=1118121
+  desc=Orea 50/12 WT
+  tipo_ctrl=0
+  Despiece=1
+  TipoCurva=0
+  AngCorteI=0
+  AngCorteD=0
+  Centro=0
+  TipoTarifa=2
+  f_cant=SI((@motorsomfy=1)Y(DIM1<=300)Y(DIM2>300);1;0)+SI((@motorsomfy=1)Y(DIM1>300)Y(DIM2>300);1;0)+SI((@motorsomfy=1)Y(DIM1>300)Y(DIM2<=300);1;0)
+  ap_prec_inc=1
+end
+Componente No Visual
+  id=ID1115111_1
+  art=1115111
+  desc=Orea 30/17 RTS
+  tipo_ctrl=0
+  Despiece=1
+  TipoCurva=0
+  AngCorteI=0
+  AngCorteD=0
+  Centro=0
+  TipoTarifa=2
+  f_cant=SI((@motorsomfy=2)Y(DIM1<=300)Y(DIM2<=300);1;0)
+  ap_prec_inc=1
+end
+Componente No Visual
+  id=ID1118092_1
+  art=1118092
+  desc=Orea 50/12 RTS
+  tipo_ctrl=0
+  Despiece=1
+  TipoCurva=0
+  AngCorteI=0
+  AngCorteD=0
+  Centro=0
+  TipoTarifa=2
+  f_cant=SI((@motorsomfy=2)Y(DIM1<=300)Y(DIM2>300);1;0)+SI((@motorsomfy=2)Y(DIM1>300)Y(DIM2>300);1;0)+SI((@motorsomfy=2)Y(DIM1>300)Y(DIM2<=300);1;0)
+  ap_prec_inc=1
+end
+Componente No Visual
+  id=ID1810630_1
+  art=1810630
+  desc=Telis 1 RTS Pure
+  tipo_ctrl=0
+  Despiece=1
+  TipoCurva=0
+  AngCorteI=0
+  AngCorteD=0
+  Centro=0
+  TipoTarifa=1
+  f_cant=si(@MANDOSOMFYRTS=1;1;0)
+end
+Componente No Visual
+  id=ID1810631_1
+  art=1810631
+  desc=Telis 4 RTS Pure
+  tipo_ctrl=0
+  Despiece=1
+  TipoCurva=0
+  AngCorteI=0
+  AngCorteD=0
+  Centro=0
+  TipoTarifa=1
+  f_cant=si(@MANDOSOMFYRTS=2;1;0)
+end
+Componente No Visual
+  id=ID1810642_1
+  art=1810642
+  desc=Telis 1 RTS Patio
+  tipo_ctrl=0
+  Despiece=1
+  TipoCurva=0
+  AngCorteI=0
+  AngCorteD=0
+  Centro=0
+  TipoTarifa=1
+  f_cant=si(@MANDOSOMFYRTS=3;1;0)
+end
+Componente No Visual
+  id=ID1810644_1
+  art=1810644
+  desc=Telis 4 RTS Patio
+  tipo_ctrl=0
+  Despiece=1
+  TipoCurva=0
+  AngCorteI=0
+  AngCorteD=0
+  Centro=0
+  TipoTarifa=1
+  f_cant=si(@MANDOSOMFYRTS=4;1;0)
+end
+Componente No Visual
+  id=ID1810634_1
+  art=1810634
+  desc=Telis Soliris RTS Pure
+  tipo_ctrl=0
+  Despiece=1
+  TipoCurva=0
+  AngCorteI=0
+  AngCorteD=0
+  Centro=0
+  TipoTarifa=1
+  f_cant=si(@MANDOSOMFYRTS=5;1;0)
+end
+Componente No Visual
+  id=ID1810957_1
+  art=1810957
+  desc=Telis 4 Soliris RTS Pure
+  tipo_ctrl=0
+  Despiece=1
+  TipoCurva=0
+  AngCorteI=0
+  AngCorteD=0
+  Centro=0
+  TipoTarifa=1
+  f_cant=si(@MANDOSOMFYRTS=6;1;0)
+end
+Componente No Visual
+  id=ID1810646_1
+  art=1810646
+  desc=Telis Soliris RTS Patio
+  tipo_ctrl=0
+  Despiece=1
+  TipoCurva=0
+  AngCorteI=0
+  AngCorteD=0
+  Centro=0
+  TipoTarifa=1
+  f_cant=si(@MANDOSOMFYRTS=7;1;0)
+end
+Componente No Visual
+  id=ID1810648_1
+  art=1810648
+  desc=Telis 4 Soliris RTS Patio
+  tipo_ctrl=0
+  Despiece=1
+  TipoCurva=0
+  AngCorteI=0
+  AngCorteD=0
+  Centro=0
+  TipoTarifa=1
+  f_cant=si(@MANDOSOMFYRTS=8;1;0)
+end
+Componente No Visual
+  id=ID1115207_1
+  art=1115207
+  desc=Sunea 30/17 IO
+  tipo_ctrl=0
+  Despiece=1
+  TipoCurva=0
+  AngCorteI=0
+  AngCorteD=0
+  Centro=0
+  TipoTarifa=2
+  f_cant=SI((@motorsomfy=3)Y(DIM1<=300)Y(DIM2<=300);1;0)
+  ap_prec_inc=1
+end
+Componente No Visual
+  id=ID1118173_1
+  art=1118173
+  desc=Sunea 50/12 IO
+  tipo_ctrl=0
+  Despiece=1
+  TipoCurva=0
+  AngCorteI=0
+  AngCorteD=0
+  Centro=0
+  TipoTarifa=2
+  f_cant=SI((@motorsomfy=3)Y(DIM1<=300)Y(DIM2>300);1;0)+SI((@motorsomfy=3)Y(DIM1>300)Y(DIM2>300);1;0)+SI((@motorsomfy=3)Y(DIM1>300)Y(DIM2<=300);1;0)
+  ap_prec_inc=1
+end
+Componente No Visual
+  id=ID1800463_1
+  art=1800463
+  desc=Situo 1 IO Pure
+  tipo_ctrl=0
+  Despiece=1
+  TipoCurva=0
+  AngCorteI=0
+  AngCorteD=0
+  Centro=0
+  TipoTarifa=1
+  f_cant=SI(@MANDOSOMFYIO=1;1;0)
+end
+Componente No Visual
+  id=ID1811297_1
+  art=1811297
+  desc=Situo 5 IO Pure
+  tipo_ctrl=0
+  Despiece=1
+  TipoCurva=0
+  AngCorteI=0
+  AngCorteD=0
+  Centro=0
+  TipoTarifa=1
+  f_cant=SI(@MANDOSOMFYIO=2;1;0)
+  desccomp=1
+end
+Componente No Visual
+  id=ID1800471_1
+  art=1800471
+  desc=Situo 1 variation io Pure
+  tipo_ctrl=0
+  Despiece=1
+  TipoCurva=0
+  AngCorteI=0
+  AngCorteD=0
+  Centro=0
+  TipoTarifa=1
+  f_cant=SI(@MANDOSOMFYIO=3;1;0)
+end
+Componente No Visual
+  id=ID1811337_1
+  art=1811337
+  desc=Situo 5 variation io Pure
+  tipo_ctrl=0
+  Despiece=1
+  TipoCurva=0
+  AngCorteI=0
+  AngCorteD=0
+  Centro=0
+  TipoTarifa=1
+  f_cant=SI(@MANDOSOMFYIO=4;1;0)
+end
+Componente No Visual
+  id=A45060555_1
+  art=A4506_0555
+  desc=Soporte universal rapido
+  tipo_ctrl=0
+  Despiece=1
+  TipoCurva=0
+  AngCorteI=0
+  AngCorteD=0
+  Centro=0
+  TipoTarifa=2
+  f_cant=SI((@ACCIONAMIENTO=3);1;0)
+  ap_prec_inc=1
+end
+Componente No Visual
+  id=A45050521_1
+  art=A4505_0521
+  desc=Adaptadores 78 ojiva
+  tipo_ctrl=0
+  Despiece=1
+  TipoCurva=0
+  AngCorteI=0
+  AngCorteD=0
+  Centro=0
+  TipoTarifa=2
+  f_cant=SI((@ACCIONAMIENTO=3)Y(TUBO78_1_CANTIDAD=1);1;0)
+  ap_prec_inc=1
+end
+Componente No Visual
+  id=AEW45321700_1
+  art=AEW45321700
+  desc=MOTOR WAVE WIRE 32/17
+  tipo_ctrl=0
+  Despiece=1
+  TipoCurva=0
+  AngCorteI=0
+  AngCorteD=0
+  Centro=0
+  TipoTarifa=2
+  f_cant=SI((@MOTORCHERUBINI=1)Y(DIM1<=300)Y(DIM2<=300);1;0)
+  desccomp=1
+  ap_prec_inc=1
+end
+Componente No Visual
+  id=AEW45501200_1
+  art=AEW45501200
+  desc=Motor Blue Wawe Wire L45 50/12
+  tipo_ctrl=0
+  Despiece=1
+  TipoCurva=0
+  AngCorteI=0
+  AngCorteD=0
+  Centro=0
+  TipoTarifa=2
+  f_cant=SI((@MOTORCHERUBINI=1)Y(DIM1<=300)Y(DIM2>300);1;0)+SI((@MOTORCHERUBINI=1)Y(DIM1>300)Y(DIM2>300);1;0)+SI((@MOTORCHERUBINI=1)Y(DIM1>300)Y(DIM2<=300);1;0)
+  ap_prec_inc=1
+end
+Componente No Visual
+  id=AET45321700_1
+  art=AET45321700
+  desc=Motor Blue Wave Rx 32/17
+  tipo_ctrl=0
+  Despiece=1
+  TipoCurva=0
+  AngCorteI=0
+  AngCorteD=0
+  Centro=0
+  TipoTarifa=2
+  f_cant=SI((@MOTORCHERUBINI=2)Y(DIM1<=300)Y(DIM2<=300);1;0)
+  ap_prec_inc=1
+end
+Componente No Visual
+  id=AET45501200_2
+  art=AET45501200
+  desc=MOTOR WAVE RX 50/12
+  tipo_ctrl=0
+  Despiece=1
+  TipoCurva=0
+  AngCorteI=0
+  AngCorteD=0
+  Centro=0
+  TipoTarifa=2
+  f_cant=SI((@MOTORCHERUBINI=2)Y(DIM1<=300)Y(DIM2>300);1;0)+SI((@MOTORCHERUBINI=2)Y(DIM1>300)Y(DIM2>300);1;0)+SI((@MOTORCHERUBINI=2)Y(DIM1>300)Y(DIM2<=300);1;0)
+  ap_prec_inc=1
+end
+Componente No Visual
+  id=A530031L_1
+  art=A530031L
+  desc=EMISOR SKIPPER
+  tipo_ctrl=0
+  Despiece=1
+  TipoCurva=0
+  AngCorteI=0
+  AngCorteD=0
+  Centro=0
+  TipoTarifa=1
+  f_cant=SI(@MANDOSCHERUBINI=1;1;0)
+end
+Componente No Visual
+  id=A530033L_1
+  art=A530033L
+  desc=EMISOR SKIPPER PLUS
+  tipo_ctrl=0
+  Despiece=1
+  TipoCurva=0
+  AngCorteI=0
+  AngCorteD=0
+  Centro=0
+  TipoTarifa=1
+  f_cant=SI(@MANDOSCHERUBINI=2;1;0)
+end
+Componente No Visual
+  id=A530067L_1
+  art=A530067L
+  desc=Giro Warm Grey
+  tipo_ctrl=0
+  Despiece=1
+  TipoCurva=0
+  AngCorteI=0
+  AngCorteD=0
+  Centro=0
+  TipoTarifa=1
+  f_cant=SI(@MANDOSCHERUBINI=3;1;0)
+end
+Componente No Visual
+  id=A530069L_1
+  art=A530069L
+  desc=Giro Plus Warm Grey
+  tipo_ctrl=0
+  Despiece=1
+  TipoCurva=0
+  AngCorteI=0
+  AngCorteD=0
+  Centro=0
+  TipoTarifa=1
+  f_cant=SI(@MANDOSCHERUBINI=4;1;0)
+end
+Componente No Visual
+  id=ID60070060_1
+  art=60070060
+  desc=Juego Coronas P/Eje 78 Ojiva S45
+  tipo_ctrl=0
+  Despiece=1
+  TipoCurva=0
+  AngCorteI=0
+  AngCorteD=0
+  Centro=0
+  TipoTarifa=2
+  f_cant=SI((@ACCIONAMIENTO=4)Y(TUBO78_1_CANTIDAD=1);1;0)
+  ap_prec_inc=1
+end
+Componente No Visual
+  id=ID60050164_1
+  art=60050164 
+  desc=Motor Cross Box 30/15 S45
+  tipo_ctrl=0
+  Despiece=1
+  TipoCurva=0
+  AngCorteI=0
+  AngCorteD=0
+  Centro=0
+  TipoTarifa=2
+  f_cant=SI((@MOTORGAVIOTA=2)Y(DIM1<=300)Y(DIM2<=300);1;0)
+  ap_prec_inc=1
+end
+Componente No Visual
+  id=ID60050166_1
+  art=60050166
+  desc=MOTOR CROSS BOX 50/12 S45
+  tipo_ctrl=0
+  Despiece=1
+  TipoCurva=0
+  AngCorteI=0
+  AngCorteD=0
+  Centro=0
+  TipoTarifa=2
+  f_cant=SI((@MOTORGAVIOTA=2)Y(DIM1<=300)Y(DIM2>300);1;0)+SI((@MOTORGAVIOTA=2)Y(DIM1>300)Y(DIM2>300);1;0)+SI((@MOTORGAVIOTA=2)Y(DIM1>300)Y(DIM2<=300);1;0)
+  ap_prec_inc=1
+end
+Componente No Visual
+  id=ID60090136_1
+  art=60090136
+  desc=EMISOR 1 CANAL CROSS
+  tipo_ctrl=0
+  Despiece=1
+  TipoCurva=0
+  AngCorteI=0
+  AngCorteD=0
+  Centro=0
+  TipoTarifa=1
+  f_cant=si(@MANDOSGAVIOTA=1;1;0)
+end
+Componente No Visual
+  id=ID60090137_1
+  art=60090137
+  desc=EMISOR 15 CANALES CROSS
+  tipo_ctrl=0
+  Despiece=1
+  TipoCurva=0
+  AngCorteI=0
+  AngCorteD=0
+  Centro=0
+  TipoTarifa=1
+  f_cant=si(@MANDOSGAVIOTA=2;1;0)
+end
+Componente No Visual
+  id=BT9KFX790004_1
+  art=BT9KFX--790004
+  desc=Kit perfiles giotto en 4 m
+  color=Blanco
+  tipo_corte_izq=|
+  tipo_corte_der=|
+  Despiece=1
+  TipoCurva=0
+  AngCorteI=90
+  AngCorteD=90
+  Centro=0
+  TipoTarifa=2
+  DtMedCutPerf=4000
+  f_cant=SI((DIM1>309)Y(DIM1<=409);1;0)
+  f_alto=400
+  ap_prec_inc=1
+  MedCutPerf=3890
+end
+Componente No Visual
+  id=BT9KFX790005_1
+  art=BT9KFX--790005
+  desc=Kit perfiles giotto en 5 m
+  color=Blanco
+  tipo_corte_izq=|
+  tipo_corte_der=|
+  Despiece=1
+  TipoCurva=0
+  AngCorteI=90
+  AngCorteD=90
+  Centro=0
+  TipoTarifa=2
+  DtMedCutPerf=4890
+  f_cant=SI((DIM1>409)Y(DIM1<=509);1;0)
+  f_alto=500
+  ap_prec_inc=1
+  MedCutPerf=4890
+end
+Componente No Visual
+  id=BT9KFX790006_1
+  art=BT9KFX--790006
+  desc=Kit perfiles giotto en 6 m
+  color=Blanco
+  tipo_corte_izq=|
+  tipo_corte_der=|
+  Despiece=1
+  TipoCurva=0
+  AngCorteI=90
+  AngCorteD=90
+  Centro=0
+  TipoTarifa=2
+  DtMedCutPerf=7000
+  f_cant=SI((DIM1>=50)Y(DIM1<=309);1;0)
+  f_alto=600
+  ap_prec_inc=1
+  MedCutPerf=5890
+end
+Componente No Visual
+  id=CORTECOFRE_1
+  art=CORTE_COFRE
+  desc=Medida de corte del cofre y tapa del cofre
+  Despiece=1
+  TipoCurva=0
+  AngCorteI=0
+  AngCorteD=0
+  Centro=0
+  TipoTarifa=2
+  f_cant=1
+  f_Dim1=SI((@PLURIMODULO=1);DIM1-11;0)+SI((@TIPOMODULO=1);DIM1-10.8;0)+SI((@TIPOMODULO=3);DIM1-10.8;0)+SI((@TIPOMODULO=2);DIM1-10.6;0)
+  ap_prec_inc=1
+end
+Componente No Visual
+  id=CORTEPERFILCARGA_1
+  art=CORTE_PERFIL_CARGA
+  desc=Corte del perfil de carga y tapa
+  Despiece=1
+  TipoCurva=0
+  AngCorteI=0
+  AngCorteD=0
+  Centro=0
+  TipoTarifa=2
+  f_cant=1
+  f_Dim1=SI((@PLURIMODULO=1);DIM1-13.5;0)+SI((@TIPOMODULO=1);DIM1-13.3;0)+SI((@TIPOMODULO=3);DIM1-13.3;0)+SI((@TIPOMODULO=2);DIM1-13.0;0)
+  ap_prec_inc=1
+end
+Componente No Visual
+  id=BT9KTU790002_1
+  art=BT9KTU--790002
+  desc=Kit de tension y tapones perfil carga
+  tipo_ctrl=0
+  Despiece=1
+  TipoCurva=0
+  AngCorteI=0
+  AngCorteD=0
+  Centro=0
+  TipoTarifa=2
+  DtMedCutPerf=3890
+  f_cant=1
+  ap_prec_inc=1
+end
+Componente No Visual
+  id=BT9KTC790001_1
+  art=BT9KTC--790001
+  desc=Kit tapones cofre/guia
+  tipo_ctrl=0
+  Despiece=1
+  TipoCurva=0
+  AngCorteI=0
+  AngCorteD=0
+  Centro=0
+  TipoTarifa=2
+  f_cant=SI((@PLURIMODULO=1);1;0)+SI((@TIPOMODULO=1);1;0)
+  ap_prec_inc=1
+end
+Componente No Visual
+  id=BT9KTC790102_1
+  art=BT9KTC--790102
+  desc=Junta central + tapa guia central
+  tipo_ctrl=0
+  Despiece=1
+  TipoCurva=0
+  AngCorteI=0
+  AngCorteD=0
+  Centro=0
+  TipoTarifa=2
+  f_cant=SI(@TIPOMODULO=1;1;0)+SI(@TIPOMODULO=2;1;0)
+  ap_prec_inc=1
+end
+Componente No Visual
+  id=BT9GAL790004_1
+  art=BT9GAL--790004
+  desc=Perfil guia 31813 en 4 m
+  color=Blanco
+  tipo_corte_izq=|
+  tipo_corte_der=|
+  Despiece=1
+  TipoCurva=0
+  AngCorteI=90
+  AngCorteD=90
+  Centro=0
+  TipoTarifa=2
+  DtMedCutPerf=1140
+  f_cant=SI((@PLURIMODULO=1)Y(DIM2<=217)Y(DIM2>50);1;0)+SI((@PLURIMODULO=1)Y(DIM2<=417)Y(DIM2>317);2;0)+SI((@TIPOMODULO=1)Y(DIM2<=417)Y(DIM2>317);1;0)+SI((@TIPOMODULO=1)Y(DIM2<=217)Y(DIM2>50);1;0)+SI((@TIPOMODULO=3)Y(DIM2<=417)Y(DIM2>317);1;0)+SI((@TIPOMODULO=3)Y(DIM2<=217)Y(DIM2>50);1;0)
+  f_alto=DIM2-18.5
+  ap_prec_inc=1
+  MedCutPerf=3890
+end
+Componente No Visual
+  id=BT9GAL790005_1
+  art=BT9GAL--790005
+  desc=Perfil guia 31813 en 5 m
+  color=Blanco
+  tipo_corte_izq=|
+  tipo_corte_der=|
+  Despiece=1
+  TipoCurva=0
+  AngCorteI=90
+  AngCorteD=90
+  Centro=0
+  TipoTarifa=2
+  DtMedCutPerf=1390
+  f_cant=SI((@PLURIMODULO=1)Y(DIM2<=267)Y(DIM2>217);1;0)+SI((@PLURIMODULO=1)Y(DIM2<=517)Y(DIM2>417);2;0)+SI((@TIPOMODULO=1)Y(DIM2<=517)Y(DIM2>417);1;0)+SI((@TIPOMODULO=1)Y(DIM2<=267)Y(DIM2>217);1;0)+SI((@TIPOMODULO=3)Y(DIM2<=517)Y(DIM2>417);1;0)+SI((@TIPOMODULO=3)Y(DIM2<=267)Y(DIM2>217);1;0)
+  f_alto=DIM2-18.5
+  ap_prec_inc=1
+  MedCutPerf=4890
+end
+Componente No Visual
+  id=BT9GAL790006_1
+  art=BT9GAL--790006
+  desc=Perfil guia 31813 en 6 m
+  color=Blanco
+  tipo_corte_izq=|
+  tipo_corte_der=|
+  Despiece=1
+  TipoCurva=0
+  AngCorteI=90
+  AngCorteD=90
+  Centro=0
+  TipoTarifa=2
+  DtMedCutPerf=1890
+  f_cant=SI((@PLURIMODULO=1)Y(DIM2<=317)Y(DIM2>267);1;0)+SI((@PLURIMODULO=1)Y(DIM2>517);2;0)+SI((@TIPOMODULO=1)Y(DIM2>517);1;0)+SI((@TIPOMODULO=1)Y(DIM2<=317)Y(DIM2>267);1;0)+SI((@TIPOMODULO=3)Y(DIM2>517);1;0)+SI((@TIPOMODULO=3)Y(DIM2<=317)Y(DIM2>267);1;0)
+  f_alto=DIM2-18.5
+  ap_prec_inc=1
+  MedCutPerf=5890
+end
+Componente No Visual
+  id=BT9GAL790104_1
+  art=BT9GAL--790104
+  desc=Guia central 32005 en 4 m
+  color=Blanco
+  tipo_corte_izq=|
+  tipo_corte_der=|
+  Despiece=1
+  TipoCurva=0
+  AngCorteI=90
+  AngCorteD=90
+  Centro=0
+  TipoTarifa=2
+  DtMedCutPerf=3890
+  f_cant=SI((@TIPOMODULO=1)Y(@SALIDAPOSTERIOR=2)Y(DIM2<=417);1;0)+SI((@TIPOMODULO=2)Y(@SALIDAANTERIOR=2)Y(DIM2<=417)Y(DIM2>267);1;0)+SI((@TIPOMODULO=2)Y(@SALIDAPOSTERIOR=2)Y(DIM2<=417)Y(DIM2>267);1;0)+SI((@TIPOMODULO=2)Y(@SALIDAANTERIOR=2)Y(@SALIDAPOSTERIOR=2)Y(DIM2<=217);1;0)+SI((@TIPOMODULO=3)Y(@SALIDAANTERIOR=2)Y(DIM2<=417);1;0)
+  f_alto=DIM2-18.5
+  ap_prec_inc=1
+  MedCutPerf=3890
+end
+Componente No Visual
+  id=BT9GAL790105_1
+  art=BT9GAL--790105
+  desc=Guia central 32005 en 5 m
+  color=Blanco
+  tipo_corte_izq=|
+  tipo_corte_der=|
+  Despiece=1
+  TipoCurva=0
+  AngCorteI=90
+  AngCorteD=90
+  Centro=0
+  TipoTarifa=2
+  DtMedCutPerf=4890
+  f_cant=SI((@TIPOMODULO=1)Y(@SALIDAPOSTERIOR=2)Y(DIM2<=517)Y(DIM2>417);1;0)+SI((@TIPOMODULO=2)Y(@SALIDAANTERIOR=2)Y(DIM2<=517)Y(DIM2>417);1;0)+SI((@TIPOMODULO=2)Y(@SALIDAPOSTERIOR=2)Y(DIM2<=517)Y(DIM2>417);1;0)+SI((@TIPOMODULO=2)Y(@SALIDAANTERIOR=2)Y(@SALIDAPOSTERIOR=2)Y(DIM2>217)Y(DIM2<=267);1;0)+SI((@TIPOMODULO=3)Y(@SALIDAANTERIOR=2)Y(DIM2<=517)Y(DIM2>417);1;0)
+  f_alto=DIM2-18.5
+  ap_prec_inc=1
+  MedCutPerf=4890
+end
+Componente No Visual
+  id=NUMERODEGUIAS_1
+  art=NUMERO_DE_GUIAS
+  desc=Número de guías necesarias
+  eDim1=436.5
+  Despiece=0
+  TipoCurva=0
+  AngCorteI=0
+  AngCorteD=0
+  Centro=0
+  TipoTarifa=1
+  f_cant=SI((@PLURIMODULO=1);2;0)+SI((@TIPOMODULO=1)Y(@SALIDAPOSTERIOR=2);2;0)+SI((@TIPOMODULO=1)Y(@SALIDAPOSTERIOR=1);1;0)+SI((@TIPOMODULO=2)Y(@SALIDAANTERIOR=1)Y(@SALIDAPOSTERIOR=2);1;0)+SI((@TIPOMODULO=2)Y(@SALIDAANTERIOR=1)Y(@SALIDAPOSTERIOR=1);0;0)+SI((@TIPOMODULO=2)Y(@SALIDAANTERIOR=2)Y(@SALIDAPOSTERIOR=2);2;0)+SI((@TIPOMODULO=2)Y(@SALIDAANTERIOR=2)Y(@SALIDAPOSTERIOR=1);1;0)+SI((@TIPOMODULO=3)Y(@SALIDAANTERIOR=2);2;0)+SI((@TIPOMODULO=3)Y(@SALIDAANTERIOR=1);1;0)
+  f_Dim1=DIM2-13.5
+end
+Componente No Visual
+  id=BT9RFX700001_1
+  art=BT9RFX--700001
+  desc=Tubo cortaviento 281 d60 mm en 4 m
+  color=Blanco
+  tipo_corte_izq=|
+  tipo_corte_der=|
+  Despiece=1
+  TipoCurva=0
+  AngCorteI=90
+  AngCorteD=90
+  Centro=0
+  TipoTarifa=2
+  DtMedCutPerf=6890
+  f_cant=SI((DIM1<=411)Y(DIM1>311)Y(@TUBOINTERMEDIOEXTRA=2);@CANTIDADTUBOINTERMEDIOEXTRA;0)+SI((DIM1<=411)Y(DIM1>400)Y(DIM2>400);1;0)
+  f_alto=SI((@PLURIMODULO=1);DIM1-12.5;0)+SI((@TIPOMODULO=1);DIM1-12;0)+SI((@TIPOMODULO=3);DIM1-12;0)+SI((@TIPOMODULO=2);DIM1-9;0)
+  ap_prec_inc=1
+  MedCutPerf=3890
+end
+Componente No Visual
+  id=BT9RFX700002_1
+  art=BT9RFX--700002
+  desc=Tubo cortaviento 281 d60 mm en 5 m
+  color=Blanco
+  tipo_corte_izq=|
+  tipo_corte_der=|
+  Despiece=1
+  TipoCurva=0
+  AngCorteI=90
+  AngCorteD=90
+  Centro=0
+  TipoTarifa=2
+  DtMedCutPerf=4890
+  f_cant=SI((DIM1<=511)Y(DIM1>411)Y(@TUBOINTERMEDIOEXTRA=2);@CANTIDADTUBOINTERMEDIOEXTRA;0)+SI((DIM1<=511)Y(DIM1>411)Y(DIM2>400);1;0)
+  f_alto=SI((@PLURIMODULO=1);DIM1-12.5;0)+SI((@TIPOMODULO=1);DIM1-12;0)+SI((@TIPOMODULO=3);DIM1-12;0)+SI((@TIPOMODULO=2);DIM1-9;0)
+  ap_prec_inc=1
+  MedCutPerf=4890
+end
+Componente No Visual
+  id=BT9RFX700003_1
+  art=BT9RFX--700003
+  desc=Tubo cortaviento 281 d60 mm en 6 m
+  color=Blanco
+  tipo_corte_izq=|
+  tipo_corte_der=|
+  Despiece=1
+  TipoCurva=0
+  AngCorteI=90
+  AngCorteD=90
+  Centro=0
+  TipoTarifa=2
+  DtMedCutPerf=5890
+  f_cant=SI((DIM1<=311)Y(@TUBOINTERMEDIOEXTRA=2);@CANTIDADTUBOINTERMEDIOEXTRA;0)
+  f_alto=SI((@PLURIMODULO=1);DIM1-12.5;0)+SI((@TIPOMODULO=1);DIM1-12;0)+SI((@TIPOMODULO=3);DIM1-12;0)+SI((@TIPOMODULO=2);DIM1-9;0)
+  ap_prec_inc=1
+  MedCutPerf=5890
+end
+Componente No Visual
+  id=BT9PCF790001_1
+  art=BT9PCF--790001
+  desc=Kit soportes cortaviento
+  tipo_ctrl=0
+  Despiece=1
+  TipoCurva=0
+  AngCorteI=0
+  AngCorteD=0
+  Centro=0
+  TipoTarifa=2
+  f_cant=SI((DIM2>400)Y(DIM1>400);1;0)+SI((@TUBOINTERMEDIOEXTRA=2);@CANTIDADTUBOINTERMEDIOEXTRA;0)
+  ap_prec_inc=1
+end
+Componente No Visual
+  id=BT9LPX821060_1
+  art=BT9LPX--821060
+  desc=Casquillo D60 eje roscado
+  tipo_ctrl=0
+  Despiece=1
+  TipoCurva=0
+  AngCorteI=0
+  AngCorteD=0
+  Centro=0
+  TipoTarifa=2
+  f_cant=SI((DIM2>400)Y(DIM1>400);2;0)+SI((@TUBOINTERMEDIOEXTRA=2);@CANTIDADTUBOINTERMEDIOEXTRA*2;0)
+  ap_prec_inc=1
+end
+Componente No Visual
+  id=BT9ZZX699001_1
+  art=BT9ZZX--699001
+  desc=Felpudo para cofre
+  tipo_ctrl=0
+  Despiece=1
+  TipoCurva=0
+  AngCorteI=0
+  AngCorteD=0
+  Centro=0
+  TipoTarifa=2
+  f_cant=SI((@PLURIMODULO=1);DIM1-11;0)+SI((@TIPOMODULO=1);DIM1-10.8;0)+SI((@TIPOMODULO=3);DIM1-10.8;0)+SI((@TIPOMODULO=2);DIM1-10.6;0)
+  ap_prec_inc=1
+end
+Componente No Visual
+  id=ID9OPX790001_1
+  art=9OPX--790001
+  desc=Cuerda Poliester D3mm
+  color=Blanco
+  tipo_corte_izq=|
+  tipo_corte_der=|
+  Despiece=1
+  TipoCurva=0
+  AngCorteI=0
+  AngCorteD=0
+  Centro=0
+  TipoTarifa=2
+  DtMedCutPerf=5890
+  f_cant=2
+  f_alto=(DIM1+DIM2)*2.2
+  ap_prec_inc=1
+  MedCutPerf=5890
+end
+Componente No Visual
+  id=CANTIDADSOPORTES_1
+  art=CANTIDADSOPORTES
+  desc=Cantidad de soportes POR GUIA
+  eDim1=3
+  Despiece=1
+  TipoCurva=0
+  AngCorteI=0
+  AngCorteD=0
+  Centro=0
+  TipoTarifa=2
+  f_cant=SI((@SOPORTES>0)Y(DIM2>300);3;0)+SI((@SOPORTES>0)Y(DIM2<=300);2;0)
+  f_Dim1=SI(DIM2>300;3;2)
+  ap_prec_inc=1
+end
+Componente No Visual
+  id=BT9CUP790001_1
+  art=BT9CUP--790001
+  desc=Soporte guia regulable en altura
+  tipo_ctrl=0
+  Despiece=1
+  TipoCurva=0
+  AngCorteI=0
+  AngCorteD=0
+  Centro=0
+  TipoTarifa=2
+  f_cant=SI((@SOPORTES=1);CANTIDADSOPORTES_1_CANTIDAD*2;0)+SI(@SOPESPECIAL1=1;@CANTIDADSOPESPECIAL1;0)+SI(@SOPESPECIAL2=1;@CANTIDADSOPESPECIAL2;0)
+  ap_prec_inc=1
+end
+Componente No Visual
+  id=BT9CUP790011_1
+  art=BT9CUP--790011
+  desc=Soporte guia regulable inclinable
+  tipo_ctrl=0
+  Despiece=1
+  TipoCurva=0
+  AngCorteI=0
+  AngCorteD=0
+  Centro=0
+  TipoTarifa=2
+  f_cant=SI((@SOPORTES=2);CANTIDADSOPORTES_1_CANTIDAD*2;0)+SI(@SOPESPECIAL1=2;@CANTIDADSOPESPECIAL1;0)+SI(@SOPESPECIAL2=2;@CANTIDADSOPESPECIAL2;0)
+  ap_prec_inc=1
+end
+Componente No Visual
+  id=BT9CUP790101_1
+  art=BT9CUP--790101
+  desc=Soporte guia regulable lateralmente
+  tipo_ctrl=0
+  Despiece=1
+  TipoCurva=0
+  AngCorteI=0
+  AngCorteD=0
+  Centro=0
+  TipoTarifa=2
+  f_cant=SI((@SOPORTES=3);CANTIDADSOPORTES_1_CANTIDAD*2;0)+SI(@SOPESPECIAL1=3;@CANTIDADSOPESPECIAL1;0)+SI(@SOPESPECIAL2=3;@CANTIDADSOPESPECIAL2;0)
+  ap_prec_inc=1
+end
+Componente No Visual
+  id=BT9CSN790001_1
+  art=BT9CSN--790001
+  desc=Kit soporte guía entreparedes
+  tipo_ctrl=0
+  Despiece=1
+  TipoCurva=0
+  AngCorteI=0
+  AngCorteD=0
+  Centro=0
+  TipoTarifa=2
+  f_cant=SI((@SOPORTES=4);CANTIDADSOPORTES_1_CANTIDAD*2;0)+SI(@SOPESPECIAL1=4;@CANTIDADSOPESPECIAL1;0)+SI(@SOPESPECIAL2=4;@CANTIDADSOPESPECIAL2;0)
+  ap_prec_inc=1
+end
+Componente No Visual
+  id=BT9PLX790004_1
+  art=BT9PLX--790004
+  desc=Perfil p/sop. guia regulable 31973 en 4 m
+  color=Blanco
+  tipo_corte_izq=|
+  tipo_corte_der=|
+  Despiece=1
+  TipoCurva=0
+  AngCorteI=90
+  AngCorteD=90
+  Centro=0
+  TipoTarifa=2
+  DtMedCutPerf=3890
+  f_cant=SI((@SOPORTES=1)Y(@SOPALTURAESPECIAL=2);CANTIDADSOPORTES_1_CANTIDAD*2;0)+SI((@SOPORTES=2)Y(@SOPALTURAESPECIAL=2);CANTIDADSOPORTES_1_CANTIDAD*2;0)+SI((@SOPESPECIAL1=1)Y(@SOPALTURAESPECIAL=2);@CANTIDADSOPESPECIAL1;0)+SI((@SOPESPECIAL1=2)Y(@SOPALTURAESPECIAL=2);@CANTIDADSOPESPECIAL1;0)+SI((@SOPESPECIAL2=1)Y(@SOPALTURAESPECIAL=2);@CANTIDADSOPESPECIAL2;0)+SI((@SOPESPECIAL2=2)Y(@SOPALTURAESPECIAL=2);@CANTIDADSOPESPECIAL2;0)
+  f_alto=@MEDIDASOPORTEESPECIAL
+  ap_prec_inc=1
+  MedCutPerf=3890
+end
+Componente No Visual
+  id=BT9KCP791001_1
+  art=BT9KCP--791001
+  desc=Kit soporte cofre pared
+  tipo_ctrl=0
+  Despiece=1
+  TipoCurva=0
+  AngCorteI=0
+  AngCorteD=0
+  Centro=0
+  TipoTarifa=2
+  f_cant=SI(@FIJACIONCOFRE=1;1;0)
+  ap_prec_inc=1
+end
+Componente No Visual
+  id=BT9KCS791001_1
+  art=BT9KCS--791001
+  desc=Kit soporte cofre techo
+  tipo_ctrl=0
+  Despiece=1
+  TipoCurva=0
+  AngCorteI=0
+  AngCorteD=0
+  Centro=0
+  TipoTarifa=2
+  f_cant=SI(@FIJACIONCOFRE=2;1;0)+SI(@FIJACIONCOFRE=3;1;0)
+  ap_prec_inc=1
+end
+Componente No Visual
+  id=BT9CSW791001_1
+  art=BT9CSW--791001
+  desc=Escuadra sobretecho 265 mm
+  tipo_ctrl=0
+  Despiece=1
+  TipoCurva=0
+  AngCorteI=0
+  AngCorteD=0
+  Centro=0
+  TipoTarifa=2
+  f_cant=SI(@FIJACIONCOFRE=3;2;0)
+  ap_prec_inc=1
+end
+Componente No Visual
+  id=BT9SGE750001_1
+  art=BT9SGE--750001
+  desc=Soporte perimetral para guía
+  tipo_ctrl=0
+  Despiece=1
+  TipoCurva=0
+  AngCorteI=0
+  AngCorteD=0
+  Centro=0
+  TipoTarifa=2
+  f_cant=SI((@PLUS=2);2;0)
+  ap_prec_inc=1
+end
+Componente No Visual
+  id=BT9GTX791001_1
+  art=BT9GTX--791001
+  desc=Union en "T" guia-pata
+  tipo_ctrl=0
+  Despiece=1
+  TipoCurva=0
+  AngCorteI=0
+  AngCorteD=0
+  Centro=0
+  TipoTarifa=2
+  f_cant=SI((@PLUS=2)Y(@PLURIMODULO=1);2;0)+SI((@PLUS=2)Y(@TIPOMODULO=1);2;0)+SI((@PLUS=2)Y(@TIPOMODULO=2);1;0)+SI((@PLUS=2)Y(@TIPOMODULO=3);1;0)
+  ap_prec_inc=1
+end
+Componente No Visual
+  id=bt9pcx750001_1
+  art=bt9pcx--750001
+  desc=Pie universal
+  tipo_ctrl=0
+  Despiece=1
+  TipoCurva=0
+  AngCorteI=0
+  AngCorteD=0
+  Centro=0
+  TipoTarifa=2
+  f_cant=SI((@PLUS=2)Y(@PLURIMODULO=1);2;0)+SI((@PLUS=2)Y(@TIPOMODULO=1);2;0)+SI((@PLUS=2)Y(@TIPOMODULO=2);1;0)+SI((@PLUS=2)Y(@TIPOMODULO=3);1;0)
+  ap_prec_inc=1
+end
+Componente No Visual
+  id=BT9CPN750001_1
+  art=BT9CPN--750001
+  desc=Soporte angular
+  tipo_ctrl=0
+  Despiece=1
+  TipoCurva=0
+  AngCorteI=0
+  AngCorteD=0
+  Centro=0
+  TipoTarifa=2
+  f_cant=SI((@PLUS=2);2;0)
+  ap_prec_inc=1
+end
+Componente No Visual
+  id=BT9FNX750005_1
+  art=BT9FNX--750005
+  desc=Perfil universal 32482 en 5 m TRAVESAÑO
+  color=Blanco
+  tipo_corte_izq=|
+  tipo_corte_der=|
+  Despiece=1
+  TipoCurva=0
+  AngCorteI=90
+  AngCorteD=90
+  Centro=0
+  TipoTarifa=2
+  DtMedCutPerf=4890
+  f_cant=SI((@PLUS=2)Y(DIM1>312)Y(DIM1<=512);1;0)
+  f_alto=SI((@PLURIMODULO=1);DIM1-13.5;0)+SI((@TIPOMODULO=1);DIM1-10.4;0)+SI((@TIPOMODULO=3);DIM1-10.4;0)+SI((@TIPOMODULO=2);DIM1-7.3;0)
+  ap_prec_inc=1
+  MedCutPerf=4890
+end
+Componente No Visual
+  id=BT9FNX750006_1
+  art=BT9FNX--750006
+  desc=Perfil universal 32482 en 6 m TRAVESAÑO
+  color=Blanco
+  tipo_corte_izq=|
+  tipo_corte_der=|
+  Despiece=1
+  TipoCurva=0
+  AngCorteI=90
+  AngCorteD=90
+  Centro=0
+  TipoTarifa=2
+  DtMedCutPerf=5890
+  f_cant=SI((@PLUS=2)Y(DIM1<=312);1;0)
+  f_alto=SI((@PLURIMODULO=1);DIM1-13.5;0)+SI((@TIPOMODULO=1);DIM1-10.4;0)+SI((@TIPOMODULO=3);DIM1-10.4;0)+SI((@TIPOMODULO=2);DIM1-7.3;0)
+  ap_prec_inc=1
+  MedCutPerf=5890
+end
+Componente No Visual
+  id=BT9FNX750005_2
+  art=BT9FNX--750005
+  desc=Perfil universal 32482 en 5 m PATAS
+  color=Blanco
+  tipo_corte_izq=|
+  tipo_corte_der=|
+  Despiece=1
+  TipoCurva=0
+  AngCorteI=90
+  AngCorteD=90
+  Centro=0
+  TipoTarifa=2
+  DtMedCutPerf=4890
+  f_cant=SI((@PLUS=2)Y(@PLURIMODULO=1)Y(@ALTURAPATAS<=251);1;0)+SI((@PLUS=2)Y(@TIPOMODULO=1)Y(@ALTURAPATAS<=251);1;0)+SI((@PLUS=2)Y(@TIPOMODULO=1)Y(@ALTURAPATAS>301);2;0)+SI((@PLUS=2)Y(@TIPOMODULO=2)Y(@ALTURAPATAS<=251);1;0)+SI((@PLUS=2)Y(@TIPOMODULO=3)Y(@ALTURAPATAS<=251);1;0)
+  f_alto=@ALTURAPATAS-3.6
+  ap_prec_inc=1
+  MedCutPerf=4890
+end
+Componente No Visual
+  id=BT9FNX750006_2
+  art=BT9FNX--750006
+  desc=Perfil universal 32482 en 6 m PATAS
+  color=Blanco
+  tipo_corte_izq=|
+  tipo_corte_der=|
+  Despiece=1
+  TipoCurva=0
+  AngCorteI=90
+  AngCorteD=90
+  Centro=0
+  TipoTarifa=2
+  DtMedCutPerf=5890
+  f_cant=SI((@PLUS=2)Y(@PLURIMODULO=1)Y(@ALTURAPATAS>251)Y(@ALTURAPATAS<=301);1;0)+SI((@PLUS=2)Y(@TIPOMODULO=1)Y(@ALTURAPATAS>251)Y(@ALTURAPATAS<=301);1;0)+SI((@PLUS=2)Y(@TIPOMODULO=2)Y(@ALTURAPATAS>251)Y(@ALTURAPATAS<=301);1;0)+SI((@PLUS=2)Y(@TIPOMODULO=3)Y(@ALTURAPATAS>251)Y(@ALTURAPATAS<=301);1;0)
+  f_alto=@ALTURAPATAS-3.6
+  ap_prec_inc=1
+  MedCutPerf=5890
+end
+Componente No Visual
+  id=NUMEROPATAS_1
+  art=NUMERO_PATAS
+  desc=Número patas portería
+  tipo_ctrl=0
+  Despiece=1
+  TipoCurva=0
+  AngCorteI=0
+  AngCorteD=0
+  Centro=0
+  TipoTarifa=2
+  f_cant=SI((@PLUS=2)Y(@PLURIMODULO=1);2;0)+SI((@PLUS=2)Y(@TIPOMODULO=1);2;0)+SI((@PLUS=2)Y(@TIPOMODULO=2);1;0)+SI((@PLUS=2)Y(@TIPOMODULO=3);1;0)
+  red_cant=2
+  ap_prec_inc=1
+end
+Componente No Visual
+  id=LONA_3
+  funcion=18
+  art=AA_LONA
+  desc=COLOCACION DE REFERENCIA DE LONA
+  tipo_ctrl=0
+  eDim1=480
+  Despiece=1
+  TipoCurva=0
+  AngCorteI=0
+  AngCorteD=0
+  Centro=0
+  TipoTarifa=2
+  DtMedCutPerf=1200
+  f_cant=1
+  f_Dim1=dim2+30
+  f_Dim2=SI((@PLURIMODULO=1);DIM1-14.5;0)+SI((@TIPOMODULO=1);DIM1-14.3;0)+SI((@TIPOMODULO=3);DIM1-14.3;0)+SI((@TIPOMODULO=2);DIM1-14.0;0)
+  ap_prec_inc=1
+  MedCutPerf=1200
+end
+Componente No Visual
+  id=OLLADOS_1
+  art=HC_OLLADOS
+  desc=Colocación de ollados a medida
+  tipo_ctrl=0
+  Despiece=1
+  TipoCurva=0
+  AngCorteI=0
+  AngCorteD=0
+  Centro=0
+  TipoTarifa=2
+  f_cant=SI(@OLLADOS=2;1;0)
+  ap_prec_inc=1
+end
+Componente No Visual
+  id=G77FABRICACION_1
+  art=G77FABRICACION
+  desc=Horas de fabricación
+  tipo_ctrl=0
+  Despiece=0
+  TipoCurva=0
+  AngCorteI=0
+  AngCorteD=0
+  Centro=0
+  TipoTarifa=1
+  f_cant=1
+end
+
+class=TEstRelleno
+  x=0
+  y=0
+  w=450
+  h=450
+end
+

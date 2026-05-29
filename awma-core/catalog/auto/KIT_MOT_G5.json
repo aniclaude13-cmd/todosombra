@@ -1,0 +1,49 @@
+{
+  "id": "KIT_MOT_G5",
+  "nombre": "KIT MOTORIZACION VISTA CON CABLE, RUEDA Y TRACCION CONTINUA",
+  "tipo": "otro",
+  "version": "2025.09",
+  "fuente": {
+    "abd": "KIT-MOT-G5.abd"
+  },
+  "dimensiones": {
+    "linea": {
+      "min": 0,
+      "max": 0,
+      "valores": []
+    },
+    "salida": {
+      "min": 100,
+      "max": 100,
+      "valores": []
+    }
+  },
+  "tarifa": {
+    "matriz": {}
+  },
+  "motores": [],
+  "reglas": [
+    {
+      "id": "salida_min",
+      "descripcion": "Salida mínima del modelo",
+      "efecto": "bloqueo",
+      "mensaje": "Salida mínima del KIT_MOT_G5: 100 cm.",
+      "condicion": {
+        "salida": {
+          "lt": 100
+        }
+      }
+    },
+    {
+      "id": "salida_max",
+      "descripcion": "Salida máxima del modelo",
+      "efecto": "bloqueo",
+      "mensaje": "Salida máxima del KIT_MOT_G5: 100 cm.",
+      "condicion": {
+        "salida": {
+          "gt": 100
+        }
+      }
+    }
+  ]
+}

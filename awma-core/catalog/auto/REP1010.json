@@ -1,0 +1,26 @@
+{
+  "id": "REP1010",
+  "nombre": "TEJIDO  METREADO",
+  "tipo": "otro",
+  "version": "2025.09",
+  "fuente": {
+    "abd": "REP1010.abd"
+  },
+  "dimensiones": {
+    "linea": {
+      "min": 0,
+      "max": 0,
+      "valores": []
+    },
+    "salida": {
+      "min": 0,
+      "max": 0,
+      "valores": []
+    }
+  },
+  "tarifa": {
+    "matriz": {}
+  },
+  "motores": [],
+  "reglas": []
+}

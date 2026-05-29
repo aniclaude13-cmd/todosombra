@@ -1,0 +1,70 @@
+articulo=+TC2A
+desc=Capota 2 arcos
+NewEstruc=1
+color perfil=Blanco
+color accesorios=Blanco
+dim1=90
+dim2=120
+tipoacabado=8
+AplMultAncho=1
+intAtLin=50
+intAtEA=70
+ilumPrC=20
+ilumPrL=40
+ilumPrF=50
+ProfSombCerr=1
+
+##Datos_Estructura##
+
+Id=0
+PintCotasAut=0
+Modulo000=001         0         0         0         0
+
+
+
+Componente No Visual
+  id=GAPVPTC2ABL_1
+  art=PVPTC2A/BL
+  desc=Precio capota 2 arcos
+  tipo_ctrl=0
+  color=Blanco
+  eDim1=90
+  eDim2=120
+  Despiece=0
+  TipoCurva=0
+  AngCorteI=0
+  AngCorteD=0
+  Centro=0
+  TipoTarifa=1
+  f_cant=1
+  f_Dim1=DIM1
+  f_Dim2=DIM2
+end
+Componente No Visual
+  id=G77LONA_1
+  funcion=18
+  art=G77LONA
+  desc=Lona
+  tipo_ctrl=0
+  color=Blanco
+  eDim1=120
+  eDim2=90
+  Despiece=1
+  TipoCurva=0
+  AngCorteI=0
+  AngCorteD=0
+  Centro=0
+  TipoTarifa=2
+  f_cant=1
+  f_Dim1=Dim2
+  f_Dim2=Dim1
+  ap_prec_inc=1
+end
+
+class=TEstRelleno
+  x=0
+  y=0
+  w=120
+  h=90
+end
+

@@ -1,0 +1,803 @@
+articulo=VRD9010
+desc=VRD9010 - Screeny 130GPZ TO
+NewEstruc=1
+color perfil=Blanco
+color accesorios=Blanco
+dim1=500
+dim2=500
+tipoacabado=8
+ActivarFaldon=0
+AplMultAncho=1
+intAtLin=50
+intAtEA=70
+ilumPrC=20
+ilumPrL=40
+ilumPrF=50
+ProfSombCerr=1
+
+##Datos_Estructura##
+
+Id=0
+AltoMax=500
+AltoMin=100
+AnchoMax=500
+AnchoMin=100
+PintCotasAut=0
+Modulo000=001         0         0         0         0
+
+
+
+Variable
+  nombre=@CONFECCION
+  valor=2
+  tipovar=1
+  formula=
+  max=0
+  min=0
+  actmin=0
+  actmax=0
+  selec=2
+  peticion=1
+  condicion=
+  varserie=0
+  PermEdRes=0
+  ResManual=0
+  ValorManual=0
+  agrupar=0
+  enum_0_texto=COSIDO
+  enum_0_valor=0
+  enum_0_condicion=
+  enum_1_texto=PEGADO
+  enum_1_valor=1
+  enum_1_condicion=
+  enum_2_texto=SOLDADO
+  enum_2_valor=2
+  enum_2_condicion=
+end
+Variable
+  nombre=@HILOS
+  valor=11
+  tipovar=1
+  formula=
+  max=0
+  min=0
+  actmin=0
+  actmax=0
+  selec=11
+  peticion=1
+  condicion=SI(@CONFECCION=0;1;0)
+  varserie=0
+  PermEdRes=0
+  ResManual=0
+  ValorManual=0
+  agrupar=0
+  enum_0_texto=Hilo 66502 Blanco
+  enum_0_valor=0
+  enum_0_condicion=
+  enum_1_texto=Hilo 66511 Gris
+  enum_1_valor=1
+  enum_1_condicion=
+  enum_2_texto=Hilo 66517 Beige
+  enum_2_valor=2
+  enum_2_condicion=
+  enum_3_texto=Hilo 66519 rojo
+  enum_3_valor=3
+  enum_3_condicion=
+  enum_4_texto=Hilo 66504 Burdeos
+  enum_4_valor=4
+  enum_4_condicion=
+  enum_5_texto=Hilo 66513 Azul
+  enum_5_valor=5
+  enum_5_condicion=
+  enum_6_texto=Hilo 66501 Negro
+  enum_6_valor=6
+  enum_6_condicion=
+  enum_7_texto=Hilo 66527 Verde
+  enum_7_valor=7
+  enum_7_condicion=
+  enum_8_texto=Hilo 66528 Naranja
+  enum_8_valor=8
+  enum_8_condicion=
+  enum_9_texto=Hilo 66529 Amarillo
+  enum_9_valor=9
+  enum_9_condicion=
+  enum_10_texto=Hilo 66547 Marrón
+  enum_10_valor=10
+  enum_10_condicion=
+  enum_11_texto=Hilo a tono
+  enum_11_valor=11
+  enum_11_condicion=
+  enum_12_texto=Rasant Negro 66501
+  enum_12_valor=20
+  enum_12_condicion=
+  enum_13_texto=Rasant Blanco 66502
+  enum_13_valor=21
+  enum_13_condicion=
+  enum_14_texto=Rasant Burdeos 66504
+  enum_14_valor=22
+  enum_14_condicion=
+  enum_15_texto=Rasant Gris 66511
+  enum_15_valor=23
+  enum_15_condicion=
+  enum_16_texto=Rasant Beige 66517
+  enum_16_valor=24
+  enum_16_condicion=
+  enum_17_texto=Rasant Rojo 66519
+  enum_17_valor=25
+  enum_17_condicion=
+  enum_18_texto=Rasant Verde 66527
+  enum_18_valor=26
+  enum_18_condicion=
+  enum_19_texto=Rasant Amarillo 66529
+  enum_19_valor=27
+  enum_19_condicion=
+  enum_20_texto=Rasant Marron 66547
+  enum_20_valor=28
+  enum_20_condicion=
+  enum_21_texto=Rasant a Tono
+  enum_21_valor=29
+  enum_21_condicion=
+  enum_22_texto=Rasant Azul 66513
+  enum_22_valor=30
+  enum_22_condicion=
+end
+Variable
+  nombre=@REMATESUPERIOR
+  valor=1
+  tipovar=1
+  formula=
+  max=0
+  min=0
+  actmin=0
+  actmax=0
+  selec=1
+  peticion=1
+  condicion=
+  varserie=0
+  PermEdRes=0
+  ResManual=0
+  ValorManual=0
+  agrupar=0
+  enum_0_texto=COATEX
+  enum_0_valor=0
+  enum_0_condicion=
+  enum_1_texto=DOBLADILLO
+  enum_1_valor=1
+  enum_1_condicion=
+  enum_2_texto=COATEX RAPIDO
+  enum_2_valor=2
+  enum_2_condicion=
+end
+Variable
+  nombre=@ETIQUETA
+  valor=1
+  tipovar=1
+  formula=
+  max=0
+  min=0
+  actmin=0
+  actmax=0
+  selec=1
+  peticion=1
+  condicion=
+  varserie=0
+  PermEdRes=0
+  ResManual=0
+  ValorManual=0
+  agrupar=0
+  enum_0_texto=SI 
+  enum_0_valor=0
+  enum_0_condicion=
+  enum_1_texto=NO
+  enum_1_valor=1
+  enum_1_condicion=
+end
+Variable
+  nombre=@RALTOLDO
+  valor=0
+  tipovar=0
+  formula=
+  max=0
+  min=0
+  actmin=0
+  actmax=0
+  selec=-1
+  peticion=1
+  condicion=
+  varserie=0
+  PermEdRes=0
+  ResManual=0
+  ValorManual=0
+  agrupar=0
+end
+Componente No Visual
+  id=AALONA_1
+  funcion=18
+  art=AA_LONA
+  desc=Colocación de referencia de lona
+  tipo_ctrl=0
+  eDim1=545
+  eDim2=492.1
+  Despiece=1
+  TipoCurva=0
+  AngCorteI=0
+  AngCorteD=0
+  Centro=0
+  TipoTarifa=2
+  f_cant=1
+  f_Dim1=SI((@CONFECCION=2)O(@CONFECCION<2);DIM1+45;0)
+  f_Dim2=SI((@CONFECCION=2)O(@CONFECCION<2);DIM2-7.9;0)
+  desccomp=1
+  ap_prec_inc=1
+end
+Componente No Visual
+  id=VCREMALLERASGD_1
+  art=V_CREMALLERAS_GD
+  desc=Cremallera GORDA Kroko DENTRO
+  tipo_ctrl=0
+  Despiece=1
+  TipoCurva=0
+  AngCorteI=0
+  AngCorteD=0
+  Centro=0
+  TipoTarifa=2
+  f_cant=1
+  ap_prec_inc=1
+end
+Componente No Visual
+  id=REMDOBLADILLO_1
+  art=AF_REM_DOBLADILLO
+  desc=Macarrón 5,5 Arriba
+  tipo_ctrl=0
+  Despiece=1
+  TipoCurva=0
+  AngCorteI=0
+  AngCorteD=0
+  Centro=0
+  TipoTarifa=2
+  f_cant=SI((@CONFECCION=2)Y(@REMATESUPERIOR=1);5.5;0)
+  ap_prec_inc=1
+end
+Componente No Visual
+  id=REMCOATEX_1
+  art=AF_REM_COATEX
+  desc=Remate superior con coatex
+  tipo_ctrl=0
+  Despiece=1
+  TipoCurva=0
+  AngCorteI=0
+  AngCorteD=0
+  Centro=0
+  TipoTarifa=2
+  f_cant=SI((@REMATESUPERIOR=0)Y(@CONFECCION<2);6.3;0)
+  ap_prec_inc=1
+end
+Componente No Visual
+  id=AGMACARRON_1
+  art=AG_MACARRON
+  desc=Macarrón 7 Abajo
+  tipo_ctrl=0
+  Despiece=1
+  TipoCurva=0
+  AngCorteI=0
+  AngCorteD=0
+  Centro=0
+  TipoTarifa=2
+  f_cant=7
+  ap_prec_inc=1
+end
+Componente No Visual
+  id=VREFTRIANGULOS_1
+  art=V_REF_TRIANGULOS
+  desc=Refuerzos Triangulares Abajo
+  tipo_ctrl=0
+  Despiece=0
+  TipoCurva=0
+  AngCorteI=0
+  AngCorteD=0
+  Centro=0
+  TipoTarifa=1
+  f_cant=SI(@CONFECCION=2;1;0)
+end
+Componente No Visual
+  id=EDANCHOSINCREMALLER_1
+  art=ED_ANCHOSINCREMALLER
+  desc=Ancho lona SIN Cremallera
+  eDim1=490.9
+  Despiece=1
+  TipoCurva=0
+  AngCorteI=0
+  AngCorteD=0
+  Centro=0
+  TipoTarifa=2
+  f_cant=1
+  f_Dim1=AALONA_1_DIM2-1,2
+  ap_prec_inc=1
+end
+Componente No Visual
+  id=VCOLORTOLDO_1
+  art=V_COLORTOLDO
+  desc=Color RAL del toldo
+  Despiece=1
+  TipoCurva=0
+  AngCorteI=0
+  AngCorteD=0
+  Centro=0
+  TipoTarifa=2
+  f_cant=1
+  f_Dim1=@RALTOLDO
+  red_Dim1=1
+  ap_prec_inc=1
+end
+Componente No Visual
+  id=VCORTESUPVS_1
+  art=V_CORTE_SUP_VS
+  desc=Arriba Desuadre VENTOSOL 8*3
+  tipo_ctrl=0
+  Despiece=1
+  TipoCurva=0
+  AngCorteI=0
+  AngCorteD=0
+  Centro=0
+  TipoTarifa=2
+  f_cant=1
+  ap_prec_inc=1
+end
+Componente No Visual
+  id=ametros_1
+  art=ZZZ_METROS
+  desc=T.e. necesarias / ML total
+  eDim1=27.25
+  Despiece=1
+  TipoCurva=0
+  AngCorteI=0
+  AngCorteD=0
+  Centro=0
+  TipoTarifa=2
+  f_cant=(AALONA_1_dim2+(2.5*(AALONA_1_dim2/120))+8)/120
+  f_Dim1=AALONA_1_DIM1*ametros_1_CANTIDAD/100
+  red_cant=7
+  red_Dim1=3
+  ap_prec_inc=1
+end
+Componente No Visual
+  id=ACONSOLDHORIZ_1
+  art=A_CONSOLDHORIZ
+  desc=Confeccionado con SOLDADURA HORIZONTAL
+  tipo_ctrl=0
+  Despiece=1
+  TipoCurva=0
+  AngCorteI=0
+  AngCorteD=0
+  Centro=0
+  TipoTarifa=2
+  f_cant=1
+  ap_prec_inc=1
+end
+Componente No Visual
+  id=ACONSOLDVERT_1
+  art=A_CONSOLDVERT
+  desc=Confeccionado con SOLDADURA VERTICAL
+  tipo_ctrl=0
+  Despiece=1
+  TipoCurva=0
+  AngCorteI=0
+  AngCorteD=0
+  Centro=0
+  TipoTarifa=2
+  f_cant=SI(@CONFECCION<2;1;0)
+  ap_prec_inc=1
+end
+Componente No Visual
+  id=CJTOHILOS_1
+  art=CJTO_HILOS
+  desc=Conjunto de Hilos
+  tipo_ctrl=0
+  Despiece=1
+  TipoCurva=0
+  AngCorteI=0
+  AngCorteD=0
+  Centro=0
+  TipoTarifa=2
+  f_cant=0
+  ap_prec_inc=1
+end
+Componente No Visual
+  id=AAAARasant66513_1
+  mtid=CJTOHILOS_1
+  funcion=27
+  art=AAAA_Rasant_66513
+  desc=Hilo Rasant Azul 66513
+  tipo_ctrl=0
+  Despiece=1
+  TipoCurva=0
+  AngCorteI=0
+  AngCorteD=0
+  Centro=0
+  TipoTarifa=2
+  f_cant=SI((@HILOS=30)Y(@CONFECCION=0);1;0)
+  ap_prec_inc=1
+  serie_por=3
+end
+Componente No Visual
+  id=AAAARasanttono_1
+  mtid=CJTOHILOS_1
+  funcion=27
+  art=AAAA_Rasant_tono
+  desc=Hilo Rasant a Tono
+  tipo_ctrl=0
+  Despiece=1
+  TipoCurva=0
+  AngCorteI=0
+  AngCorteD=0
+  Centro=0
+  TipoTarifa=2
+  f_cant=SI((@HILOS=29)Y(@CONFECCION=0);1;0)
+  ap_prec_inc=1
+  serie_por=3
+end
+Componente No Visual
+  id=AAAARasant66547_1
+  mtid=CJTOHILOS_1
+  funcion=27
+  art=AAAA_Rasant_66547
+  desc=Hilo Rasant Marron 66547
+  tipo_ctrl=0
+  Despiece=1
+  TipoCurva=0
+  AngCorteI=0
+  AngCorteD=0
+  Centro=0
+  TipoTarifa=2
+  f_cant=SI((@HILOS=28)Y(@CONFECCION=0);1;0)
+  ap_prec_inc=1
+  serie_por=3
+end
+Componente No Visual
+  id=AAAARasant66529_1
+  mtid=CJTOHILOS_1
+  funcion=27
+  art=AAAA_Rasant_66529
+  desc=Hilo Rasant Amarillo 66529
+  tipo_ctrl=0
+  Despiece=1
+  TipoCurva=0
+  AngCorteI=0
+  AngCorteD=0
+  Centro=0
+  TipoTarifa=2
+  f_cant=SI((@HILOS=27)Y(@CONFECCION=0);1;0)
+  ap_prec_inc=1
+  serie_por=3
+end
+Componente No Visual
+  id=AAAARasant66527_1
+  mtid=CJTOHILOS_1
+  funcion=27
+  art=AAAA_Rasant_66527
+  desc=Hilo Rasant Verde 66527
+  tipo_ctrl=0
+  Despiece=1
+  TipoCurva=0
+  AngCorteI=0
+  AngCorteD=0
+  Centro=0
+  TipoTarifa=2
+  f_cant=SI((@HILOS=26)Y(@CONFECCION=0);1;0)
+  ap_prec_inc=1
+  serie_por=3
+end
+Componente No Visual
+  id=AAAARasant66519_1
+  mtid=CJTOHILOS_1
+  funcion=27
+  art=AAAA_Rasant_66519
+  desc=Hilo Rasant Rojo 66519
+  tipo_ctrl=0
+  Despiece=1
+  TipoCurva=0
+  AngCorteI=0
+  AngCorteD=0
+  Centro=0
+  TipoTarifa=2
+  f_cant=SI((@HILOS=25)Y(@CONFECCION=0);1;0)
+  ap_prec_inc=1
+  serie_por=3
+end
+Componente No Visual
+  id=AAAARasant66517_1
+  mtid=CJTOHILOS_1
+  funcion=27
+  art=AAAA_Rasant_66517
+  desc=Hilo Rasant Beige 66517
+  tipo_ctrl=0
+  Despiece=1
+  TipoCurva=0
+  AngCorteI=0
+  AngCorteD=0
+  Centro=0
+  TipoTarifa=2
+  f_cant=SI((@HILOS=24)Y(@CONFECCION=0);1;0)
+  ap_prec_inc=1
+  serie_por=3
+end
+Componente No Visual
+  id=AAAARasant66511_1
+  mtid=CJTOHILOS_1
+  funcion=27
+  art=AAAA_Rasant_66511
+  desc=Hilo Rasant Gris 66511
+  tipo_ctrl=0
+  Despiece=1
+  TipoCurva=0
+  AngCorteI=0
+  AngCorteD=0
+  Centro=0
+  TipoTarifa=2
+  f_cant=SI((@HILOS=23)Y(@CONFECCION=0);1;0)
+  ap_prec_inc=1
+  serie_por=3
+end
+Componente No Visual
+  id=AAAARasant66504_1
+  mtid=CJTOHILOS_1
+  funcion=27
+  art=AAAA_Rasant_66504
+  desc=Hilo Rasant Burdeos 66504
+  tipo_ctrl=0
+  Despiece=1
+  TipoCurva=0
+  AngCorteI=0
+  AngCorteD=0
+  Centro=0
+  TipoTarifa=2
+  f_cant=SI((@HILOS=22)Y(@CONFECCION=0);1;0)
+  ap_prec_inc=1
+  serie_por=3
+end
+Componente No Visual
+  id=AAAARasant66502_1
+  mtid=CJTOHILOS_1
+  funcion=27
+  art=AAAA_Rasant_66502
+  desc=Hilo Rasant Blanco 66502
+  tipo_ctrl=0
+  Despiece=1
+  TipoCurva=0
+  AngCorteI=0
+  AngCorteD=0
+  Centro=0
+  TipoTarifa=2
+  f_cant=SI((@HILOS=21)Y(@CONFECCION=0);1;0)
+  ap_prec_inc=1
+  serie_por=3
+end
+Componente No Visual
+  id=AAAARasant66501_1
+  mtid=CJTOHILOS_1
+  funcion=27
+  art=AAAA_Rasant_66501
+  desc=Hilo Rasant Negro 66501
+  tipo_ctrl=0
+  Despiece=1
+  TipoCurva=0
+  AngCorteI=0
+  AngCorteD=0
+  Centro=0
+  TipoTarifa=2
+  f_cant=SI((@HILOS=20)Y(@CONFECCION=0);1;0)
+  ap_prec_inc=1
+  serie_por=3
+end
+Componente No Visual
+  id=AAAAHilotono_1
+  mtid=CJTOHILOS_1
+  funcion=27
+  art=AAAA_Hilo_tono
+  desc=Hilo a Tono
+  tipo_ctrl=0
+  Despiece=1
+  TipoCurva=0
+  AngCorteI=0
+  AngCorteD=0
+  Centro=0
+  TipoTarifa=2
+  f_cant=SI((@HILOS=11)Y(@CONFECCION=0);1;0)
+  ap_prec_inc=1
+  serie_por=3
+end
+Componente No Visual
+  id=AAAAHilo66513_1
+  mtid=CJTOHILOS_1
+  funcion=27
+  art=AAAA_Hilo_66513
+  desc=Hilo Azul 66513
+  tipo_ctrl=0
+  Despiece=1
+  TipoCurva=0
+  AngCorteI=0
+  AngCorteD=0
+  Centro=0
+  TipoTarifa=2
+  f_cant=SI((@HILOS=5)Y(@CONFECCION=0);1;0)
+  ap_prec_inc=1
+  serie_por=3
+end
+Componente No Visual
+  id=AAAAHilo66547_1
+  mtid=CJTOHILOS_1
+  funcion=27
+  art=AAAA_Hilo_66547
+  desc=Hilo Marron 66547
+  tipo_ctrl=0
+  Despiece=1
+  TipoCurva=0
+  AngCorteI=0
+  AngCorteD=0
+  Centro=0
+  TipoTarifa=2
+  f_cant=SI((@HILOS=10)Y(@CONFECCION=0);1;0)
+  ap_prec_inc=1
+  serie_por=3
+end
+Componente No Visual
+  id=AAAAHilo66529_1
+  mtid=CJTOHILOS_1
+  funcion=27
+  art=AAAA_Hilo_66529
+  desc=Hilo Amarillo 66529
+  tipo_ctrl=0
+  Despiece=1
+  TipoCurva=0
+  AngCorteI=0
+  AngCorteD=0
+  Centro=0
+  TipoTarifa=2
+  f_cant=SI((@HILOS=9)Y(@CONFECCION=0);1;0)
+  ap_prec_inc=1
+  serie_por=3
+end
+Componente No Visual
+  id=AAAAHilo66528_1
+  mtid=CJTOHILOS_1
+  funcion=27
+  art=AAAA_Hilo_66528
+  desc=Hilo Naranja 66528
+  tipo_ctrl=0
+  Despiece=1
+  TipoCurva=0
+  AngCorteI=0
+  AngCorteD=0
+  Centro=0
+  TipoTarifa=2
+  f_cant=SI((@HILOS=8)Y(@CONFECCION=0);1;0)
+  ap_prec_inc=1
+  serie_por=3
+end
+Componente No Visual
+  id=AAAAHilo66527_1
+  mtid=CJTOHILOS_1
+  funcion=27
+  art=AAAA_Hilo_66527
+  desc=Hilo Verde 66527
+  tipo_ctrl=0
+  Despiece=1
+  TipoCurva=0
+  AngCorteI=0
+  AngCorteD=0
+  Centro=0
+  TipoTarifa=2
+  f_cant=SI((@HILOS=7)Y(@CONFECCION=0);1;0)
+  ap_prec_inc=1
+  serie_por=3
+end
+Componente No Visual
+  id=AAAAHilo66519_1
+  mtid=CJTOHILOS_1
+  funcion=27
+  art=AAAA_Hilo_66519
+  desc=Hilo Rojo 66519
+  tipo_ctrl=0
+  Despiece=1
+  TipoCurva=0
+  AngCorteI=0
+  AngCorteD=0
+  Centro=0
+  TipoTarifa=2
+  f_cant=SI((@HILOS=3)Y(@CONFECCION=0);1;0)
+  ap_prec_inc=1
+  serie_por=3
+end
+Componente No Visual
+  id=AAAAHilo66517_1
+  mtid=CJTOHILOS_1
+  funcion=27
+  art=AAAA_Hilo_66517
+  desc=Hilo Beige 66517
+  tipo_ctrl=0
+  Despiece=1
+  TipoCurva=0
+  AngCorteI=0
+  AngCorteD=0
+  Centro=0
+  TipoTarifa=2
+  f_cant=SI((@HILOS=2)Y(@CONFECCION=0);1;0)
+  ap_prec_inc=1
+  serie_por=3
+end
+Componente No Visual
+  id=AAAAHilo66511_1
+  mtid=CJTOHILOS_1
+  funcion=27
+  art=AAAA_Hilo_66511
+  desc=Hilo Gris 66511
+  tipo_ctrl=0
+  Despiece=1
+  TipoCurva=0
+  AngCorteI=0
+  AngCorteD=0
+  Centro=0
+  TipoTarifa=2
+  f_cant=SI((@HILOS=1)Y(@CONFECCION=0);1;0)
+  ap_prec_inc=1
+  serie_por=3
+end
+Componente No Visual
+  id=AAAAHilo66504_1
+  mtid=CJTOHILOS_1
+  funcion=27
+  art=AAAA_Hilo_66504
+  desc=Hilo Burdeos 66504
+  tipo_ctrl=0
+  Despiece=1
+  TipoCurva=0
+  AngCorteI=0
+  AngCorteD=0
+  Centro=0
+  TipoTarifa=2
+  f_cant=SI((@HILOS=4)Y(@CONFECCION=0);1;0)
+  ap_prec_inc=1
+  serie_por=3
+end
+Componente No Visual
+  id=AAAAHilo66501_1
+  mtid=CJTOHILOS_1
+  funcion=27
+  art=AAAA_Hilo_66501
+  desc=Hilo negro 66501
+  tipo_ctrl=0
+  Despiece=1
+  TipoCurva=0
+  AngCorteI=0
+  AngCorteD=0
+  Centro=0
+  TipoTarifa=2
+  f_cant=SI((@HILOS=6)Y(@CONFECCION=0);1;0)
+  ap_prec_inc=1
+  serie_por=3
+end
+Componente No Visual
+  id=AAAAHilo66502_1
+  mtid=CJTOHILOS_1
+  funcion=27
+  art=AAAA_Hilo_66502
+  desc=Hilo Blanco 66502
+  tipo_ctrl=0
+  Despiece=1
+  TipoCurva=0
+  AngCorteI=0
+  AngCorteD=0
+  Centro=0
+  TipoTarifa=2
+  f_cant=SI((@HILOS=0)Y(@CONFECCION=0);1;0)
+  ap_prec_inc=1
+  serie_por=3
+end
+
+class=TEstRelleno
+  x=0
+  y=0
+  w=500
+  h=500
+end
+

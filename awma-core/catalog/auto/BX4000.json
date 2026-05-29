@@ -1,0 +1,69 @@
+{
+  "id": "BX4000",
+  "nombre": "BX4000 Camabox, toldo cofre cuadrado de 170x237 y brazo art",
+  "tipo": "toldo_cofre",
+  "version": "2025.09",
+  "fuente": {
+    "abd": "BX4000.abd"
+  },
+  "dimensiones": {
+    "linea": {
+      "min": 0,
+      "max": 0,
+      "valores": []
+    },
+    "salida": {
+      "min": 0,
+      "max": 0,
+      "valores": []
+    }
+  },
+  "tarifa": {
+    "matriz": {}
+  },
+  "motores": [
+    {
+      "id": "manual",
+      "nombre": "Manivela",
+      "recargo": 0,
+      "familia": "manual"
+    },
+    {
+      "id": "somfy_motor_lt",
+      "nombre": "Somfy Motor Lt",
+      "recargo": 0,
+      "familia": "somfy"
+    },
+    {
+      "id": "somfy_motor_rts",
+      "nombre": "Somfy Motor Rts",
+      "recargo": 0,
+      "familia": "somfy"
+    },
+    {
+      "id": "somfy_motor_io",
+      "nombre": "Somfy Motor Io",
+      "recargo": 0,
+      "familia": "somfy"
+    },
+    {
+      "id": "cherubini_motor_mecanico",
+      "nombre": "Cherubini Motor Mecanico",
+      "recargo": 0,
+      "familia": "cherubini"
+    },
+    {
+      "id": "cherubini_motor_wave_rx_radio",
+      "nombre": "Cherubini Motor Wave Rx Radio",
+      "recargo": 0,
+      "familia": "cherubini"
+    },
+    {
+      "id": "gaviota_motor_elite_radio",
+      "nombre": "Gaviota Motor Elite Radio",
+      "recargo": 0,
+      "familia": "gaviota"
+    }
+  ],
+  "reglas": []
+}

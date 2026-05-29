@@ -1,0 +1,26 @@
+{
+  "id": "VERASTORSKY2G",
+  "nombre": "Toldo Verastor Sky 2 guias",
+  "tipo": "vertical",
+  "version": "2025.09",
+  "fuente": {
+    "abd": "+VERASTORSKY2G.abd"
+  },
+  "dimensiones": {
+    "linea": {
+      "min": 0,
+      "max": 0,
+      "valores": []
+    },
+    "salida": {
+      "min": 0,
+      "max": 0,
+      "valores": []
+    }
+  },
+  "tarifa": {
+    "matriz": {}
+  },
+  "motores": [],
+  "reglas": []
+}

@@ -1,0 +1,2298 @@
+articulo=TF7910
+desc=Sistema Tenflat Pared-Porteria
+NewEstruc=1
+color perfil=Blanco
+color accesorios=Blanco
+dim1=700
+dim2=700
+tipoacabado=8
+ActivarFaldon=0
+AplMultAncho=1
+intAtLin=50
+intAtEA=70
+ilumPrC=20
+ilumPrL=40
+ilumPrF=50
+ProfSombCerr=1
+
+##Datos_Estructura##
+
+Id=0
+AltoMax=700
+AltoMin=250
+AnchoMax=700
+AnchoMin=250
+PintCotasAut=0
+Modulo000=001         0         0         0         0
+
+
+
+Variable
+  nombre=@ESQUINAS
+  valor=0
+  tipovar=1
+  formula=
+  max=0
+  min=0
+  actmin=0
+  actmax=0
+  selec=0
+  peticion=1
+  condicion=
+  varserie=0
+  PermEdRes=0
+  ResManual=0
+  ValorManual=0
+  agrupar=0
+  enum_0_texto=ELEGIR
+  enum_0_valor=0
+  enum_0_condicion=
+  enum_1_texto=4 CIEGAS
+  enum_1_valor=1
+  enum_1_condicion=
+  enum_2_texto=4 DESAGUES
+  enum_2_valor=2
+  enum_2_condicion=
+  enum_3_texto=2 CIEGAS-2 DESAGUES
+  enum_3_valor=3
+  enum_3_condicion=
+  enum_4_texto=3 CIEGAS-1 DESAGUE
+  enum_4_valor=4
+  enum_4_condicion=
+  enum_5_texto=1 CIEGA-3 DESAGUES
+  enum_5_valor=5
+  enum_5_condicion=
+end
+Variable
+  nombre=@ALTURAxPATAS
+  valor=0
+  tipovar=1
+  formula=
+  max=0
+  min=0
+  actmin=0
+  actmax=0
+  selec=0
+  peticion=1
+  condicion=
+  varserie=0
+  PermEdRes=0
+  ResManual=0
+  ValorManual=0
+  agrupar=0
+  enum_0_texto=NO VALIDO
+  enum_0_valor=0
+  enum_0_condicion=
+  enum_1_texto=TODAS IGUALES
+  enum_1_valor=1
+  enum_1_condicion=
+  enum_2_texto=ALTURAS DIFERENTES
+  enum_2_valor=2
+  enum_2_condicion=
+end
+Variable
+  nombre=@ALTURA
+  valor=0
+  tipovar=0
+  formula=
+  max=0
+  min=0
+  actmin=0
+  actmax=0
+  selec=-1
+  peticion=1
+  condicion=SI(@ALTURAxPATAS=1;1;0)
+  varserie=0
+  PermEdRes=0
+  ResManual=0
+  ValorManual=0
+  agrupar=0
+end
+Variable
+  nombre=@PATA1
+  valor=0
+  tipovar=2
+  formula=@ALTURA
+  max=0
+  min=0
+  actmin=0
+  actmax=0
+  selec=-1
+  peticion=1
+  condicion=SI(@ALTURAxPATAS=2;1;0)
+  varserie=0
+  PermEdRes=1
+  ResManual=0
+  ValorManual=0
+  agrupar=0
+end
+Variable
+  nombre=@PATA2
+  valor=0
+  tipovar=2
+  formula=@ALTURA
+  max=0
+  min=0
+  actmin=0
+  actmax=0
+  selec=-1
+  peticion=1
+  condicion=SI(@ALTURAxPATAS=2;1;0)
+  varserie=0
+  PermEdRes=1
+  ResManual=0
+  ValorManual=0
+  agrupar=0
+end
+Variable
+  nombre=@PATA3
+  valor=0
+  tipovar=2
+  formula=@ALTURA
+  max=0
+  min=0
+  actmin=0
+  actmax=0
+  selec=-1
+  peticion=1
+  condicion=SI(@ALTURAxPATAS=2;1;0)
+  varserie=0
+  PermEdRes=1
+  ResManual=0
+  ValorManual=0
+  agrupar=0
+end
+Variable
+  nombre=@PATAEXTRA
+  valor=0
+  tipovar=1
+  formula=
+  max=0
+  min=0
+  actmin=0
+  actmax=0
+  selec=0
+  peticion=1
+  condicion=
+  varserie=0
+  PermEdRes=0
+  ResManual=0
+  ValorManual=0
+  agrupar=0
+  enum_0_texto=NO
+  enum_0_valor=0
+  enum_0_condicion=
+  enum_1_texto=SI
+  enum_1_valor=1
+  enum_1_condicion=
+end
+Variable
+  nombre=@ALTxPATAEXTRA
+  valor=0
+  tipovar=2
+  formula=@ALTURA
+  max=0
+  min=0
+  actmin=0
+  actmax=0
+  selec=-1
+  peticion=1
+  condicion=SI(@PATAEXTRA=1;1;0)
+  varserie=0
+  PermEdRes=1
+  ResManual=0
+  ValorManual=0
+  agrupar=0
+end
+Variable
+  nombre=@BASESxINT
+  valor=0
+  tipovar=0
+  formula=
+  max=0
+  min=0
+  actmin=0
+  actmax=0
+  selec=-1
+  peticion=1
+  condicion=
+  varserie=0
+  PermEdRes=0
+  ResManual=0
+  ValorManual=0
+  agrupar=0
+end
+Variable
+  nombre=@BASESxEXT
+  valor=0
+  tipovar=0
+  formula=
+  max=0
+  min=0
+  actmin=0
+  actmax=0
+  selec=-1
+  peticion=1
+  condicion=
+  varserie=0
+  PermEdRes=0
+  ResManual=0
+  ValorManual=0
+  agrupar=0
+end
+Variable
+  nombre=@BRIDAS
+  valor=0
+  tipovar=1
+  formula=
+  max=0
+  min=0
+  actmin=0
+  actmax=0
+  selec=0
+  peticion=1
+  condicion=
+  varserie=0
+  PermEdRes=0
+  ResManual=0
+  ValorManual=0
+  agrupar=0
+  enum_0_texto=NO NECESITA
+  enum_0_valor=0
+  enum_0_condicion=
+  enum_1_texto=SI NECESITA
+  enum_1_valor=1
+  enum_1_condicion=
+end
+Variable
+  nombre=@PARED
+  valor=0
+  tipovar=0
+  formula=
+  max=0
+  min=0
+  actmin=0
+  actmax=0
+  selec=-1
+  peticion=1
+  condicion=SI(@BRIDAS=1;1;0)
+  varserie=0
+  PermEdRes=0
+  ResManual=0
+  ValorManual=0
+  agrupar=0
+end
+Variable
+  nombre=@ESQUINERAS
+  valor=0
+  tipovar=0
+  formula=
+  max=0
+  min=0
+  actmin=0
+  actmax=0
+  selec=-1
+  peticion=1
+  condicion=SI(@BRIDAS=1;1;0)
+  varserie=0
+  PermEdRes=0
+  ResManual=0
+  ValorManual=0
+  agrupar=0
+end
+Variable
+  nombre=@ILUMINACION
+  valor=0
+  tipovar=1
+  formula=
+  max=0
+  min=0
+  actmin=0
+  actmax=0
+  selec=0
+  peticion=1
+  condicion=
+  varserie=0
+  PermEdRes=0
+  ResManual=0
+  ValorManual=0
+  agrupar=0
+  enum_0_texto=NO VALIDO
+  enum_0_valor=0
+  enum_0_condicion=
+  enum_1_texto=SI
+  enum_1_valor=1
+  enum_1_condicion=
+  enum_2_texto=NO
+  enum_2_valor=2
+  enum_2_condicion=
+end
+Variable
+  nombre=@TEJADILLO
+  valor=0
+  tipovar=1
+  formula=
+  max=0
+  min=0
+  actmin=0
+  actmax=0
+  selec=0
+  peticion=1
+  condicion=
+  varserie=0
+  PermEdRes=0
+  ResManual=0
+  ValorManual=0
+  agrupar=0
+  enum_0_texto=NO VALIDO
+  enum_0_valor=0
+  enum_0_condicion=
+  enum_1_texto=SI
+  enum_1_valor=1
+  enum_1_condicion=
+  enum_2_texto=NO
+  enum_2_valor=2
+  enum_2_condicion=
+end
+Variable
+  nombre=@CERRAMIENTO
+  valor=0
+  tipovar=1
+  formula=
+  max=0
+  min=0
+  actmin=0
+  actmax=0
+  selec=0
+  peticion=1
+  condicion=
+  varserie=0
+  PermEdRes=0
+  ResManual=0
+  ValorManual=0
+  agrupar=0
+  enum_0_texto=NO VALIDO
+  enum_0_valor=0
+  enum_0_condicion=
+  enum_1_texto=SI
+  enum_1_valor=1
+  enum_1_condicion=
+  enum_2_texto=NO
+  enum_2_valor=2
+  enum_2_condicion=
+end
+Variable
+  nombre=@NUMPATAS
+  valor=3
+  tipovar=2
+  formula=ID12000040_1_Cantidad+ID12000040_2_Cantidad+ID12000040_3_Cantidad+ID12000040_7_Cantidad
+  max=0
+  min=0
+  actmin=0
+  actmax=0
+  selec=-1
+  peticion=1
+  condicion=0
+  varserie=0
+  PermEdRes=0
+  ResManual=0
+  ValorManual=0
+  agrupar=0
+end
+Variable
+  nombre=@ETIQUETA
+  valor=1
+  tipovar=1
+  formula=
+  max=0
+  min=0
+  actmin=0
+  actmax=0
+  selec=1
+  peticion=1
+  condicion=
+  varserie=0
+  PermEdRes=0
+  ResManual=0
+  ValorManual=0
+  agrupar=0
+  enum_0_texto=SI
+  enum_0_valor=0
+  enum_0_condicion=
+  enum_1_texto=NO
+  enum_1_valor=1
+  enum_1_condicion=
+end
+Variable
+  nombre=@PEGATINA
+  valor=0
+  tipovar=1
+  formula=
+  max=0
+  min=0
+  actmin=0
+  actmax=0
+  selec=0
+  peticion=1
+  condicion=
+  varserie=0
+  PermEdRes=0
+  ResManual=0
+  ValorManual=0
+  agrupar=0
+  enum_0_texto=SI
+  enum_0_valor=0
+  enum_0_condicion=
+  enum_1_texto=NO
+  enum_1_valor=1
+  enum_1_condicion=
+end
+Componente No Visual
+  id=PVPTF7910BL_1
+  art=PVP_TF7910/BL
+  desc=Precio para TF7910 Pared-Porteira
+  tipo_ctrl=0
+  eDim1=700
+  eDim2=700
+  Despiece=1
+  TipoCurva=0
+  AngCorteI=0
+  AngCorteD=0
+  Centro=0
+  TipoTarifa=1
+  f_cant=1
+  f_Dim1=DIM1
+  f_Dim2=DIM2
+end
+Componente No Visual
+  id=NUMERODEGUIAS_1
+  art=NUMERO_DE_GUIAS
+  desc=NUMERO DE GUIAS TOTALES
+  Despiece=0
+  TipoCurva=0
+  AngCorteI=0
+  AngCorteD=0
+  Centro=0
+  TipoTarifa=1
+  f_cant=ID10000041_1_Cantidad+ID10000042_1_Cantidad+ID10000043_1_Cantidad+ID10000044_1_Cantidad
+  desccomp=1
+end
+Componente No Visual
+  id=NUMEROPATAS_1
+  art=NUMERO_PATAS
+  desc=NUMERO DE PATAS TOTALES
+  tipo_ctrl=0
+  Despiece=1
+  TipoCurva=0
+  AngCorteI=0
+  AngCorteD=0
+  Centro=0
+  TipoTarifa=2
+  f_cant=@NUMPATAS
+  ap_prec_inc=1
+end
+Componente No Visual
+  id=TESQUINA1_1
+  art=TESQUINA1
+  desc=0 DESAGUE - 4 CIEGAS
+  tipo_ctrl=0
+  Despiece=0
+  TipoCurva=0
+  AngCorteI=0
+  AngCorteD=0
+  Centro=0
+  TipoTarifa=1
+  f_cant=SI(@ESQUINAS=1;1;0)
+  desccomp=1
+end
+Componente No Visual
+  id=TESQUINA2_1
+  art=TESQUINA2
+  desc=4 DESAGUES - 0 CIEGAS
+  tipo_ctrl=0
+  Despiece=0
+  TipoCurva=0
+  AngCorteI=0
+  AngCorteD=0
+  Centro=0
+  TipoTarifa=1
+  f_cant=SI(@ESQUINAS=2;1;0)
+  desccomp=1
+end
+Componente No Visual
+  id=TESQUINA3_1
+  art=TESQUINA3
+  desc=2 DESAGUE - 2 CIEGAS
+  tipo_ctrl=0
+  Despiece=0
+  TipoCurva=0
+  AngCorteI=0
+  AngCorteD=0
+  Centro=0
+  TipoTarifa=1
+  f_cant=SI(@ESQUINAS=3;1;0)
+  desccomp=1
+end
+Componente No Visual
+  id=TESQUINA4_1
+  art=TESQUINA4
+  desc=1 DESAGUE - 3 CIEGAS
+  tipo_ctrl=0
+  Despiece=0
+  TipoCurva=0
+  AngCorteI=0
+  AngCorteD=0
+  Centro=0
+  TipoTarifa=1
+  f_cant=SI(@ESQUINAS=4;1;0)
+  desccomp=1
+end
+Componente No Visual
+  id=TESQUINA5_1
+  art=TESQUINA5
+  desc=3 DESAGUE - 1 CIEGAS
+  tipo_ctrl=0
+  Despiece=0
+  TipoCurva=0
+  AngCorteI=0
+  AngCorteD=0
+  Centro=0
+  TipoTarifa=1
+  f_cant=SI(@ESQUINAS=5;1;0)
+  desccomp=1
+end
+Componente No Visual
+  id=PLANOTEJ_1
+  art=PLANO_TEJ
+  desc=Solicitar plano (TEJADILLO) a Oficina Tecnica
+  tipo_ctrl=0
+  Despiece=0
+  TipoCurva=0
+  AngCorteI=0
+  AngCorteD=0
+  Centro=0
+  TipoTarifa=1
+  f_cant=SI(@TEJADILLO=1;1;0)
+end
+Componente No Visual
+  id=PLANOCERR_1
+  art=PLANO_CERR
+  desc=Solicitar plano (CERRAMIENTO) a Oficina Tecnica
+  tipo_ctrl=0
+  Despiece=0
+  TipoCurva=0
+  AngCorteI=0
+  AngCorteD=0
+  Centro=0
+  TipoTarifa=1
+  f_cant=SI(@CERRAMIENTO=1;1;0)
+end
+Componente No Visual
+  id=PLANOLUCES_1
+  art=PLANO_LUCES
+  desc=Solicitar plano (LUCES) a Oficina Tecnica
+  tipo_ctrl=0
+  Despiece=0
+  TipoCurva=0
+  AngCorteI=0
+  AngCorteD=0
+  Centro=0
+  TipoTarifa=1
+  f_cant=SI(@ILUMINACION=1;1;0)
+end
+Componente No Visual
+  id=ID10000041_1
+  art=100.0.0041
+  desc=Perfil Guia Tenxo/Tenflat 4M Bruto
+  color=Blanco
+  tipo_corte_izq=|
+  tipo_corte_der=|
+  Despiece=1
+  TipoCurva=0
+  AngCorteI=90
+  AngCorteD=90
+  Centro=0
+  TipoTarifa=2
+  DtMedCutPerf=5890
+  f_cant=SI((DIM2>=250)Y(DIM2<=400)Y(DIM1>=250)Y(DIM1<=400);2;0)
+  f_alto=DIM2-13,160-9,660
+  red_alto=4
+  ap_prec_inc=1
+  MedCutPerf=5890
+end
+Componente No Visual
+  id=ID10000042_1
+  art=100.0.0042
+  desc=Perfil Guia Tenxo/Tenflat 5M Bruto
+  color=Blanco
+  tipo_corte_izq=|
+  tipo_corte_der=|
+  Despiece=1
+  TipoCurva=0
+  AngCorteI=90
+  AngCorteD=90
+  Centro=0
+  TipoTarifa=2
+  DtMedCutPerf=5890
+  f_cant=SI((DIM2>400)Y(DIM2<=500)Y(DIM1>=250)Y(DIM1<=450);2;SI((DIM2>400)Y(DIM2<=500)Y(DIM1>450);3;0))
+  f_alto=DIM2-13.160-9.660
+  red_alto=4
+  ap_prec_inc=1
+  MedCutPerf=5890
+end
+Componente No Visual
+  id=ID10000043_1
+  art=100.0.0043
+  desc=Perfil Guia Tenxo/Tenflat 6M Bruto
+  color=Blanco
+  tipo_corte_izq=|
+  tipo_corte_der=|
+  Despiece=1
+  TipoCurva=0
+  AngCorteI=90
+  AngCorteD=90
+  Centro=0
+  TipoTarifa=2
+  DtMedCutPerf=5890
+  f_cant=SI((DIM2>500)Y(DIM2<=600)Y(DIM1>=250)Y(DIM1<=450);2;SI((DIM2>500)Y(DIM2<=600)Y(DIM1>450);3;0))
+  f_alto=DIM2-13.160-9.660
+  red_alto=4
+  ap_prec_inc=1
+  MedCutPerf=5890
+end
+Componente No Visual
+  id=VAETIQUETA_1
+  art=VA_ETIQUETA
+  desc=Poner ETIQUETA Cliente
+  tipo_ctrl=0
+  Despiece=1
+  TipoCurva=0
+  AngCorteI=0
+  AngCorteD=0
+  Centro=0
+  TipoTarifa=2
+  f_cant=SI(@ETIQUETA=0;1;0)
+  ap_prec_inc=1
+end
+Componente No Visual
+  id=PEGATINA_1
+  art=PEGATINA
+  desc=Colocar pegatina de Awma.
+  tipo_ctrl=0
+  Despiece=1
+  TipoCurva=0
+  AngCorteI=0
+  AngCorteD=0
+  Centro=0
+  TipoTarifa=2
+  f_cant=SI(@PEGATINA=0;1;0)
+  ap_prec_inc=1
+end
+Componente No Visual
+  id=ID10000044_1
+  art=100.0.0044
+  desc=Perfil Guia Tenxo/Tenflat 7M Bruto
+  color=Blanco
+  tipo_corte_izq=|
+  tipo_corte_der=|
+  Despiece=1
+  TipoCurva=0
+  AngCorteI=90
+  AngCorteD=90
+  Centro=0
+  TipoTarifa=2
+  DtMedCutPerf=5890
+  f_cant=SI((DIM2>600)Y(DIM2<=700)Y(DIM1>=250)Y(DIM1<=450);2;SI((DIM2>600)Y(DIM2<=700)Y(DIM1>450);3;0))
+  f_alto=DIM2-13.160-9.660
+  red_alto=4
+  ap_prec_inc=1
+  MedCutPerf=5890
+end
+Componente No Visual
+  id=ID10000042_2
+  art=100.0.0042
+  desc=Perfil Guia Tenxo/Tenflat 5M Bruto (SOPORTE MOTOR)
+  color=Blanco
+  tipo_corte_izq=|
+  tipo_corte_der=|
+  Despiece=1
+  TipoCurva=0
+  AngCorteI=90
+  AngCorteD=90
+  Centro=0
+  TipoTarifa=2
+  DtMedCutPerf=5890
+  f_cant=1
+  f_alto=SI((ID10000041_1_Cantidad+ID10000042_1_Cantidad+ID10000043_1_Cantidad+ID10000044_1_Cantidad)=3;((DIM1-(2*13.95))-7.5)/2;DIM1-(2*13.95))
+  ap_prec_inc=1
+  MedCutPerf=5890
+end
+Componente No Visual
+  id=ID10000025_1
+  art=100.0.0025
+  desc=Perfil Palillo Tenxo/Tenflat 4M Bruto
+  color=Blanco
+  tipo_corte_izq=|
+  tipo_corte_der=|
+  Despiece=1
+  TipoCurva=0
+  AngCorteI=90
+  AngCorteD=90
+  Centro=0
+  TipoTarifa=2
+  DtMedCutPerf=5890
+  f_cant=SI((DIM1>=250)Y(DIM1<=400);2;0)
+  f_alto=DIM1-(2*7.8)
+  red_alto=4
+  ap_prec_inc=1
+  MedCutPerf=5890
+end
+Componente No Visual
+  id=ID10000026_1
+  art=100.0.0026
+  desc=Perfil Palillo Tenxo/Tenflat 5M Bruto
+  color=Blanco
+  tipo_corte_izq=|
+  tipo_corte_der=|
+  Despiece=1
+  TipoCurva=0
+  AngCorteI=90
+  AngCorteD=90
+  Centro=0
+  TipoTarifa=2
+  DtMedCutPerf=5890
+  f_cant=SI((DIM1>400)Y(DIM1<=500);2;0)
+  f_alto=DIM1-(2*7.8)
+  red_alto=4
+  ap_prec_inc=1
+  MedCutPerf=5890
+end
+Componente No Visual
+  id=ID10000027_1
+  art=100.0.0027
+  desc=Perfil Palillo Tenxo/Tenflat 6M Bruto
+  color=Blanco
+  tipo_corte_izq=|
+  tipo_corte_der=|
+  Despiece=1
+  TipoCurva=0
+  AngCorteI=90
+  AngCorteD=90
+  Centro=0
+  TipoTarifa=2
+  DtMedCutPerf=5890
+  f_cant=SI((DIM1>500)Y(DIM1<=600);2;0)
+  f_alto=DIM1-(2*7.8)
+  red_alto=4
+  ap_prec_inc=1
+  MedCutPerf=5890
+end
+Componente No Visual
+  id=ID10000028_1
+  art=100.0.0028
+  desc=Perfil Palillo Tenxo/Tenflat 7M Bruto
+  color=Blanco
+  tipo_corte_izq=|
+  tipo_corte_der=|
+  Despiece=1
+  TipoCurva=0
+  AngCorteI=90
+  AngCorteD=90
+  Centro=0
+  TipoTarifa=2
+  DtMedCutPerf=5890
+  f_cant=SI((DIM1>600)Y(DIM1<=700);2;0)
+  f_alto=DIM1-(2*7.8)
+  red_alto=4
+  ap_prec_inc=1
+  MedCutPerf=5890
+end
+Componente No Visual
+  id=ID10000025_2
+  art=100.0.0025
+  desc=Perfil Palillo Tenxo/Tenflat 4M Bruto (CURVO)
+  color=Blanco
+  tipo_corte_izq=|
+  tipo_corte_der=|
+  Despiece=1
+  TipoCurva=0
+  AngCorteI=90
+  AngCorteD=90
+  Centro=0
+  TipoTarifa=2
+  DtMedCutPerf=5890
+  f_cant=SI((DIM1>=250)Y(DIM1<=400)Y(DIM2=250);4;SI((DIM1>=250)Y(DIM1<=400)Y(DIM2>250)Y(DIM2<=300);5;SI((DIM1>=250)Y(DIM1<=400)Y(DIM2>300)Y(DIM2<=350);6;SI((DIM1>=250)Y(DIM1<=400)Y(DIM2>350)Y(DIM2<=400);7;SI((DIM1>=250)Y(DIM1<=400)Y(DIM2>400)Y(DIM2<=450);8;SI((DIM1>=250)Y(DIM1<=400)Y(DIM2>450)Y(DIM2<=500);9;SI((DIM1>=250)Y(DIM1<=400)Y(DIM2>500)Y(DIM2<=550);10;SI((DIM1>=250)Y(DIM1<=400)Y(DIM2>550)Y(DIM2<=600);11;SI((DIM1>=250)Y(DIM1<=400)Y(DIM2>600)Y(DIM2<=650);12;SI((DIM1>=250)Y(DIM1<=400)Y(DIM2>650)Y(DIM2<=700);13;0))))))))))
+  f_alto=(DIM1-(2*7.8))
+  red_alto=4
+  ap_prec_inc=1
+  MedCutPerf=5890
+end
+Componente No Visual
+  id=ID10000026_2
+  art=100.0.0026
+  desc=Perfil Palillo Tenxo/Tenflat 5M Bruto (CURVO)
+  color=Blanco
+  tipo_corte_izq=|
+  tipo_corte_der=|
+  Despiece=1
+  TipoCurva=0
+  AngCorteI=90
+  AngCorteD=90
+  Centro=0
+  TipoTarifa=2
+  DtMedCutPerf=5890
+  f_cant=SI((DIM1>400)Y(DIM1<=500)Y(DIM2=250);4;SI((DIM1>400)Y(DIM1<=500)Y(DIM2>250)Y(DIM2<=300);5;SI((DIM1>400)Y(DIM1<=500)Y(DIM2>300)Y(DIM2<=350);6;SI((DIM1>400)Y(DIM1<=500)Y(DIM2>350)Y(DIM2<=400);7;SI((DIM1>400)Y(DIM1<=500)Y(DIM2>400)Y(DIM2<=450);8;SI((DIM1>400)Y(DIM1<=500)Y(DIM2>450)Y(DIM2<=500);9;SI((DIM1>400)Y(DIM1<=500)Y(DIM2>500)Y(DIM2<=550);10;SI((DIM1>400)Y(DIM1<=500)Y(DIM2>550)Y(DIM2<=600);11;SI((DIM1>400)Y(DIM1<=500)Y(DIM2>600)Y(DIM2<=650);12;SI((DIM1>400)Y(DIM1<=500)Y(DIM2>650)Y(DIM2<=700);13;0))))))))))
+  f_alto=(DIM1-(2*7.8))
+  red_alto=4
+  ap_prec_inc=1
+  MedCutPerf=5890
+end
+Componente No Visual
+  id=ID10000027_2
+  art=100.0.0027
+  desc=Perfil Palillo Tenxo/Tenflat 6M Bruto (CURVO)
+  color=Blanco
+  tipo_corte_izq=|
+  tipo_corte_der=|
+  Despiece=1
+  TipoCurva=0
+  AngCorteI=90
+  AngCorteD=90
+  Centro=0
+  TipoTarifa=2
+  DtMedCutPerf=5890
+  f_cant=SI((DIM1>500)Y(DIM1<=600)Y(DIM2=250);4;SI((DIM1>500)Y(DIM1<=600)Y(DIM2>250)Y(DIM2<=300);5;SI((DIM1>500)Y(DIM1<=600)Y(DIM2>300)Y(DIM2<=350);6;SI((DIM1>500)Y(DIM1<=600)Y(DIM2>350)Y(DIM2<=400);7;SI((DIM1>500)Y(DIM1<=600)Y(DIM2>400)Y(DIM2<=450);8;SI((DIM1>500)Y(DIM1<=600)Y(DIM2>450)Y(DIM2<=500);9;SI((DIM1>500)Y(DIM1<=600)Y(DIM2>500)Y(DIM2<=550);10;SI((DIM1>500)Y(DIM1<=600)Y(DIM2>550)Y(DIM2<=600);11;SI((DIM1>500)Y(DIM1<=600)Y(DIM2>600)Y(DIM2<=650);12;SI((DIM1>500)Y(DIM1<=600)Y(DIM2>650)Y(DIM2<=700);13;0))))))))))
+  f_alto=(DIM1-(2*7.8))
+  red_alto=4
+  ap_prec_inc=1
+  MedCutPerf=5890
+end
+Componente No Visual
+  id=ID10000028_2
+  art=100.0.0028
+  desc=Perfil Palillo Tenxo/Tenflat 7M Bruto (CURVO)
+  color=Blanco
+  tipo_corte_izq=|
+  tipo_corte_der=|
+  Despiece=1
+  TipoCurva=0
+  AngCorteI=90
+  AngCorteD=90
+  Centro=0
+  TipoTarifa=2
+  DtMedCutPerf=5890
+  f_cant=SI((DIM1>600)Y(DIM1<=700)Y(DIM2=250);4;SI((DIM1>600)Y(DIM1<=700)Y(DIM2>250)Y(DIM2<=300);5;SI((DIM1>600)Y(DIM1<=700)Y(DIM2>300)Y(DIM2<=350);6;SI((DIM1>600)Y(DIM1<=700)Y(DIM2>350)Y(DIM2<=400);7;SI((DIM1>600)Y(DIM1<=700)Y(DIM2>400)Y(DIM2<=450);8;SI((DIM1>600)Y(DIM1<=700)Y(DIM2>450)Y(DIM2<=500);9;SI((DIM1>600)Y(DIM1<=700)Y(DIM2>500)Y(DIM2<=550);10;SI((DIM1>600)Y(DIM1<=700)Y(DIM2>550)Y(DIM2<=600);11;SI((DIM1>600)Y(DIM1<=700)Y(DIM2>600)Y(DIM2<=650);12;SI((DIM1>600)Y(DIM1<=700)Y(DIM2>650)Y(DIM2<=700);13;0))))))))))
+  f_alto=(DIM1-(2*7.8))
+  red_alto=4
+  ap_prec_inc=1
+  MedCutPerf=5890
+end
+Componente No Visual
+  id=ID10000017_1
+  art=100.0.0017
+  desc=Perfil Canal 140x140 Tenxo/Tenflat 4M Bruto (FRONTAL)
+  color=Blanco
+  tipo_corte_izq=|
+  tipo_corte_der=|
+  Despiece=1
+  TipoCurva=0
+  AngCorteI=90
+  AngCorteD=90
+  Centro=0
+  TipoTarifa=2
+  DtMedCutPerf=5890
+  f_cant=SI((DIM1>=250)Y(DIM1<=400);2;0)
+  f_alto=DIM1-(2*14.4)
+  ap_prec_inc=1
+  MedCutPerf=5890
+end
+Componente No Visual
+  id=ID10000018_1
+  art=100.0.0018
+  desc=Perfil Canal 140x140 Tenxo/Tenflat 5M Bruto (FRONTAL)
+  color=Blanco
+  tipo_corte_izq=|
+  tipo_corte_der=|
+  Despiece=1
+  TipoCurva=0
+  AngCorteI=90
+  AngCorteD=90
+  Centro=0
+  TipoTarifa=2
+  DtMedCutPerf=5890
+  f_cant=SI((DIM1>400)Y(DIM1<=500);2;0)
+  f_alto=DIM1-(2*14.4)
+  ap_prec_inc=1
+  MedCutPerf=5890
+end
+Componente No Visual
+  id=ID10000019_1
+  art=100.0.0019
+  desc=Perfil Canal 140x140 Tenxo/Tenflat 6M Bruto (FRONTAL)
+  color=Blanco
+  tipo_corte_izq=|
+  tipo_corte_der=|
+  Despiece=1
+  TipoCurva=0
+  AngCorteI=90
+  AngCorteD=90
+  Centro=0
+  TipoTarifa=2
+  DtMedCutPerf=5890
+  f_cant=SI((DIM1>500)Y(DIM1<=600);2;0)
+  f_alto=DIM1-(2*14.4)
+  ap_prec_inc=1
+  MedCutPerf=5890
+end
+Componente No Visual
+  id=ID10000020_1
+  art=100.0.0020
+  desc=Perfil Canal 140x140 Tenxo/Tenflat 7M Bruto (FRONTAL)
+  color=Blanco
+  tipo_corte_izq=|
+  tipo_corte_der=|
+  Despiece=1
+  TipoCurva=0
+  AngCorteI=90
+  AngCorteD=90
+  Centro=0
+  TipoTarifa=2
+  DtMedCutPerf=5890
+  f_cant=SI((DIM1>600)Y(DIM1<=700);2;0)
+  f_alto=DIM1-(2*14.4)
+  ap_prec_inc=1
+  MedCutPerf=5890
+end
+Componente No Visual
+  id=ID10000017_2
+  art=100.0.0017
+  desc=Perfil Canal 140x140 Tenxo/Tenflat 4M Bruto (LATERAL)
+  color=Blanco
+  tipo_corte_izq=|
+  tipo_corte_der=|
+  Despiece=1
+  TipoCurva=0
+  AngCorteI=90
+  AngCorteD=90
+  Centro=0
+  TipoTarifa=2
+  DtMedCutPerf=5890
+  f_cant=SI((DIM1>=250)Y(DIM1<=400);2;0)
+  f_alto=DIM1-(2*14.4)
+  ap_prec_inc=1
+  MedCutPerf=5890
+end
+Componente No Visual
+  id=ID10000018_2
+  art=100.0.0018
+  desc=Perfil Canal 140x140 Tenxo/Tenflat 5M Bruto (LATERAL)
+  color=Blanco
+  tipo_corte_izq=|
+  tipo_corte_der=|
+  Despiece=1
+  TipoCurva=0
+  AngCorteI=90
+  AngCorteD=90
+  Centro=0
+  TipoTarifa=2
+  DtMedCutPerf=5890
+  f_cant=SI((DIM1>400)Y(DIM1<=500);2;0)
+  f_alto=DIM1-(2*14.4)
+  ap_prec_inc=1
+  MedCutPerf=5890
+end
+Componente No Visual
+  id=ID10000019_2
+  art=100.0.0019
+  desc=Perfil Canal 140x140 Tenxo/Tenflat 6M Bruto (LATERAL)
+  color=Blanco
+  tipo_corte_izq=|
+  tipo_corte_der=|
+  Despiece=1
+  TipoCurva=0
+  AngCorteI=90
+  AngCorteD=90
+  Centro=0
+  TipoTarifa=2
+  DtMedCutPerf=5890
+  f_cant=SI((DIM1>500)Y(DIM1<=600);2;0)
+  f_alto=DIM1-(2*14.4)
+  red_alto=4
+  ap_prec_inc=1
+  MedCutPerf=5890
+end
+Componente No Visual
+  id=ID10000020_2
+  art=100.0.0020
+  desc=Perfil Canal 140x140 Tenxo/Tenflat 7M Bruto (LATERAL)
+  color=Blanco
+  tipo_corte_izq=|
+  tipo_corte_der=|
+  Despiece=1
+  TipoCurva=0
+  AngCorteI=90
+  AngCorteD=90
+  Centro=0
+  TipoTarifa=2
+  DtMedCutPerf=5890
+  f_cant=SI((DIM1>600)Y(DIM1<=700);2;0)
+  f_alto=DIM1-(2*14.4)
+  red_alto=4
+  ap_prec_inc=1
+  MedCutPerf=5890
+end
+Componente No Visual
+  id=ID12000018_1
+  art=120.0.0018
+  desc=Perfil Rectangular 120x40 4M Bruto
+  color=Blanco
+  tipo_corte_izq=|
+  tipo_corte_der=|
+  Despiece=1
+  TipoCurva=0
+  AngCorteI=90
+  AngCorteD=90
+  Centro=0
+  TipoTarifa=2
+  DtMedCutPerf=5890
+  f_cant=SI((ID10000041_1_Cantidad=2);2;0)
+  f_alto=DIM1-(2*13.95)
+  ap_prec_inc=1
+  MedCutPerf=5890
+end
+Componente No Visual
+  id=ID12000019_1
+  art=120.0.0019
+  desc=Perfil Rectangular 120x40 5M Bruto
+  color=Blanco
+  tipo_corte_izq=|
+  tipo_corte_der=|
+  Despiece=1
+  TipoCurva=0
+  AngCorteI=90
+  AngCorteD=90
+  Centro=0
+  TipoTarifa=2
+  DtMedCutPerf=5890
+  f_cant=SI((DIM1>400)Y(DIM1<=450)Y(ID10000042_1_Cantidad=2);2;SI((DIM1>450)Y(DIM1<=550)Y(ID10000042_1_Cantidad=3);5;0))+SI((DIM1>400)Y(DIM1<=450)Y(ID10000042_1_Cantidad=3);5;SI((DIM1>450)Y(DIM1<=550)Y(ID10000042_1_Cantidad=2);2;0))
+  f_alto=SI((ID10000042_1_Cantidad=2);DIM1-(2*13.95);(DIM1-(2*13.95)-7.5)/2)
+  ap_prec_inc=1
+  MedCutPerf=5890
+end
+Componente No Visual
+  id=ID12000020_1
+  art=120.0.0020
+  desc=Perfil Rectangular 120x40 6M Bruto
+  color=Blanco
+  tipo_corte_izq=|
+  tipo_corte_der=|
+  Despiece=1
+  TipoCurva=0
+  AngCorteI=90
+  AngCorteD=90
+  Centro=0
+  TipoTarifa=2
+  DtMedCutPerf=5890
+  f_cant=SI((ID10000043_1_Cantidad=3);5;0)
+  f_alto=SI((ID10000043_1_Cantidad=2);DIM1-(2*13.95);(DIM1-(2*13.95)-7.5)/2)
+  ap_prec_inc=1
+  MedCutPerf=5890
+end
+Componente No Visual
+  id=ID12000021_1
+  art=120.0.0021
+  desc=Perfil Rectangular 120x40 7M Bruto
+  color=Blanco
+  tipo_corte_izq=|
+  tipo_corte_der=|
+  Despiece=1
+  TipoCurva=0
+  AngCorteI=90
+  AngCorteD=90
+  Centro=0
+  TipoTarifa=2
+  DtMedCutPerf=5890
+  f_cant=SI((ID10000044_1_Cantidad=3);5;0)
+  f_alto=SI((ID10000043_1_Cantidad=2);DIM1-(2*13.95);(DIM1-(2*13.95)-7.5)/2)
+  ap_prec_inc=1
+  MedCutPerf=5890
+end
+Componente No Visual
+  id=ID12000032_1
+  art=120.0.0032
+  desc=Perfil Angulo 40x40 4M Bruto
+  color=Blanco
+  tipo_corte_izq=|
+  tipo_corte_der=|
+  Despiece=1
+  TipoCurva=0
+  AngCorteI=90
+  AngCorteD=90
+  Centro=0
+  TipoTarifa=2
+  DtMedCutPerf=5890
+  f_cant=SI((ID10000041_1_Cantidad=2);2;0)*2
+  f_alto=12
+  ap_prec_inc=1
+  MedCutPerf=5890
+end
+Componente No Visual
+  id=ID12000033_1
+  art=120.0.0033
+  desc=Perfil Angulo 40x40 5M Bruto
+  color=Blanco
+  tipo_corte_izq=|
+  tipo_corte_der=|
+  Despiece=1
+  TipoCurva=0
+  AngCorteI=90
+  AngCorteD=90
+  Centro=0
+  TipoTarifa=2
+  DtMedCutPerf=5890
+  f_cant=SI((DIM1>400)Y(DIM1<=450)Y(ID10000042_1_Cantidad=2);2;SI((DIM1>450)Y(DIM1<=550)Y(ID10000042_1_Cantidad=3);5;0))*2+SI((DIM1>400)Y(DIM1<=450)Y(ID10000042_1_Cantidad=3);5;SI((DIM1>450)Y(DIM1<=550)Y(ID10000042_1_Cantidad=2);2;0))*2
+  f_alto=12
+  ap_prec_inc=1
+  MedCutPerf=5890
+end
+Componente No Visual
+  id=ID12000034_1
+  art=120.0.0034
+  desc=Perfil Angulo 40x40 6M Bruto
+  color=Blanco
+  tipo_corte_izq=|
+  tipo_corte_der=|
+  Despiece=1
+  TipoCurva=0
+  AngCorteI=90
+  AngCorteD=90
+  Centro=0
+  TipoTarifa=2
+  DtMedCutPerf=5890
+  f_cant=SI((ID10000043_1_Cantidad=3);5;0)*2
+  f_alto=12
+  ap_prec_inc=1
+  MedCutPerf=5890
+end
+Componente No Visual
+  id=ID12000035_1
+  art=120.0.0035
+  desc=Perfil Angulo 40x40 7M Bruto
+  color=Blanco
+  tipo_corte_izq=|
+  tipo_corte_der=|
+  Despiece=1
+  TipoCurva=0
+  AngCorteI=90
+  AngCorteD=90
+  Centro=0
+  TipoTarifa=2
+  DtMedCutPerf=5890
+  f_cant=SI((ID10000044_1_Cantidad=3);5;0)*2
+  f_alto=12
+  ap_prec_inc=1
+  MedCutPerf=5890
+end
+Componente No Visual
+  id=ID12000040_1
+  art=120.0.0040
+  desc=Perfil Cuadrado 140x140 Tenxo 4M (PATA 1)
+  color=Blanco
+  tipo_corte_izq=|
+  tipo_corte_der=|
+  Despiece=1
+  TipoCurva=0
+  AngCorteI=90
+  AngCorteD=90
+  Centro=0
+  TipoTarifa=2
+  DtMedCutPerf=5890
+  f_cant=1
+  f_alto=@PATA1
+  ap_prec_inc=1
+  MedCutPerf=5890
+end
+Componente No Visual
+  id=ID12000040_2
+  art=120.0.0040
+  desc=Perfil Cuadrado 140x140 Tenxo 4M (PATA 2)
+  color=Blanco
+  tipo_corte_izq=|
+  tipo_corte_der=|
+  Despiece=1
+  TipoCurva=0
+  AngCorteI=90
+  AngCorteD=90
+  Centro=0
+  TipoTarifa=2
+  DtMedCutPerf=5890
+  f_cant=1
+  f_alto=@PATA2
+  ap_prec_inc=1
+  MedCutPerf=5890
+end
+Componente No Visual
+  id=ID12000040_3
+  art=120.0.0040
+  desc=Perfil Cuadrado 140x140 Tenxo 4M (PATA 3)
+  color=Blanco
+  tipo_corte_izq=|
+  tipo_corte_der=|
+  Despiece=1
+  TipoCurva=0
+  AngCorteI=90
+  AngCorteD=90
+  Centro=0
+  TipoTarifa=2
+  DtMedCutPerf=5890
+  f_cant=1
+  f_alto=@PATA3
+  ap_prec_inc=1
+  MedCutPerf=5890
+end
+Componente No Visual
+  id=ID12000040_7
+  art=120.0.0040
+  desc=Perfil Cuadrado 140x140 Tenxo 4M (PATA EXTRA)
+  color=Blanco
+  tipo_corte_izq=|
+  tipo_corte_der=|
+  Despiece=1
+  TipoCurva=0
+  AngCorteI=90
+  AngCorteD=90
+  Centro=0
+  TipoTarifa=2
+  DtMedCutPerf=5890
+  f_cant=SI(@PATAEXTRA=1;1;0)
+  f_alto=@ALTxPATAEXTRA
+  ap_prec_inc=1
+  MedCutPerf=5890
+end
+Componente No Visual
+  id=ID3f000015_1
+  art=3f0.0.0015
+  desc=Perfil en h para felpudo strip 5  Tenflat
+  color=Blanco
+  tipo_corte_izq=|
+  tipo_corte_der=|
+  Despiece=1
+  TipoCurva=0
+  AngCorteI=90
+  AngCorteD=90
+  Centro=0
+  TipoTarifa=2
+  DtMedCutPerf=5890
+  f_cant=2
+  f_alto=DIM2-(2*14.4)
+  ap_prec_inc=1
+  MedCutPerf=5890
+end
+Componente No Visual
+  id=ID80030054_1
+  art=80030054
+  desc=Tubo ranurado ojiva plana 78x1 A 4 m
+  ancho_perfil=10
+  color=Blanco
+  tipo_corte_izq=|
+  tipo_corte_der=|
+  Despiece=1
+  TipoCurva=0
+  AngCorteI=90
+  AngCorteD=90
+  Centro=0
+  TipoTarifa=2
+  DtMedCutPerf=3890
+  f_cant=SI((ID10000041_1_Cantidad=2);2;0)
+  f_alto=((((DIM1-2*13.95)-107.4)/2)-3.0)
+  red_alto=4
+  ap_prec_inc=1
+  MedCutPerf=3890
+end
+Componente No Visual
+  id=ID80030055_1
+  art=80030055
+  desc=Tubo ranurado ojiva plana 78x1 A 5 m
+  ancho_perfil=10
+  color=Blanco
+  tipo_corte_izq=|
+  tipo_corte_der=|
+  Despiece=1
+  TipoCurva=0
+  AngCorteI=90
+  AngCorteD=90
+  Centro=0
+  TipoTarifa=2
+  DtMedCutPerf=4890
+  f_cant=SI((DIM1>400)Y(DIM1<=450)Y(ID10000042_1_Cantidad=2);2;SI((DIM1>450)Y(DIM1<=550)Y(ID10000042_1_Cantidad=3);1;0))+SI((DIM1>400)Y(DIM1<=450)Y(ID10000042_1_Cantidad=3);1;SI((DIM1>450)Y(DIM1<=550)Y(ID10000042_1_Cantidad=2);2;0))
+  f_alto=SI((ID10000041_1_Cantidad+ID10000042_1_Cantidad+ID10000043_1_Cantidad+ID10000044_1_Cantidad)=3;(((DIM1-(2*13.95))-7.5)/2)-108.1;((((DIM1-2*13.95)-107.4)/2)-3.0))
+  ap_prec_inc=1
+  MedCutPerf=4890
+end
+Componente No Visual
+  id=ID80030056_1
+  art=80030056
+  desc=Tubo ranurado ojiva plana 78x1 A 6 m
+  ancho_perfil=10
+  color=Blanco
+  tipo_corte_izq=|
+  tipo_corte_der=|
+  Despiece=1
+  TipoCurva=0
+  AngCorteI=90
+  AngCorteD=90
+  Centro=0
+  TipoTarifa=2
+  DtMedCutPerf=5890
+  f_cant=SI((ID10000043_1_Cantidad=3);1;0)
+  f_alto=(((DIM1-(2*13.95))-7.5)/2)-108.1
+  ap_prec_inc=1
+  MedCutPerf=5890
+end
+Componente No Visual
+  id=ID80030057_1
+  art=80030057
+  desc=Tubo ranurado ojiva plana 78x1 A 7 m
+  ancho_perfil=10
+  color=Blanco
+  tipo_corte_izq=|
+  tipo_corte_der=|
+  Despiece=1
+  TipoCurva=0
+  AngCorteI=90
+  AngCorteD=90
+  Centro=0
+  TipoTarifa=2
+  DtMedCutPerf=6890
+  f_cant=SI((ID10000044_1_Cantidad=3);1;0)
+  f_alto=(((DIM1-(2*13.95))-7.5)/2)-108.1
+  ap_prec_inc=1
+  MedCutPerf=6890
+end
+Componente No Visual
+  id=ID80030054_2
+  art=80030054
+  desc=Tubo ranurado ojiva plana 78x1 A 4 m (MOTOR)
+  ancho_perfil=10
+  color=Blanco
+  tipo_corte_izq=|
+  tipo_corte_der=|
+  Despiece=1
+  TipoCurva=0
+  AngCorteI=90
+  AngCorteD=90
+  Centro=0
+  TipoTarifa=2
+  DtMedCutPerf=3890
+  f_cant=1
+  f_alto=78.5
+  ap_prec_inc=1
+  MedCutPerf=3890
+end
+Componente No Visual
+  id=ID80030055_2
+  art=80030055
+  desc=Tubo ranurado ojiva plana 78x1 A 5 m (VANO)
+  ancho_perfil=10
+  color=Blanco
+  tipo_corte_izq=|
+  tipo_corte_der=|
+  Despiece=1
+  TipoCurva=0
+  AngCorteI=90
+  AngCorteD=90
+  Centro=0
+  TipoTarifa=2
+  DtMedCutPerf=4890
+  f_cant=SI((DIM1>400)Y(DIM1<=450)Y(ID10000042_1_Cantidad=2);0;SI((DIM1>450)Y(DIM1<=550)Y(ID10000042_1_Cantidad=3);1;SI((DIM1>450)Y(DIM1<=550)Y(ID10000042_1_Cantidad=2);2;0)))
+  f_alto=(((DIM1-(2*13.95))-7.5)/2)-10.4
+  ap_prec_inc=1
+  MedCutPerf=4890
+end
+Componente No Visual
+  id=ID80030056_2
+  art=80030056
+  desc=Tubo ranurado ojiva plana 78x1 A 6 m (VANO)
+  ancho_perfil=10
+  color=Blanco
+  tipo_corte_izq=|
+  tipo_corte_der=|
+  Despiece=1
+  TipoCurva=0
+  AngCorteI=90
+  AngCorteD=90
+  Centro=0
+  TipoTarifa=2
+  DtMedCutPerf=5890
+  f_cant=SI((ID10000043_1_Cantidad=3);1;0)
+  f_alto=(((DIM1-(2*13.95))-7.5)/2)-10.4
+  ap_prec_inc=1
+  MedCutPerf=5890
+end
+Componente No Visual
+  id=ID80030057_2
+  art=80030057
+  desc=Tubo ranurado ojiva plana 78x1 A 7 m (VANO)
+  ancho_perfil=10
+  color=Blanco
+  tipo_corte_izq=|
+  tipo_corte_der=|
+  Despiece=1
+  TipoCurva=0
+  AngCorteI=90
+  AngCorteD=90
+  Centro=0
+  TipoTarifa=2
+  DtMedCutPerf=6890
+  f_cant=SI((ID10000044_1_Cantidad=3);1;0)
+  f_alto=(((DIM1-(2*13.95))-7.5)/2)-10.4
+  ap_prec_inc=1
+  MedCutPerf=6890
+end
+Componente No Visual
+  id=ID45038730_1
+  art=45038730
+  desc=Perfil Cofre Cajon Motor Superior Blanco
+  color=Blanco
+  tipo_corte_izq=|
+  tipo_corte_der=|
+  Despiece=1
+  TipoCurva=0
+  AngCorteI=90
+  AngCorteD=90
+  Centro=0
+  TipoTarifa=2
+  DtMedCutPerf=5890
+  f_cant=1
+  f_alto=85.2
+  ap_prec_inc=1
+  MedCutPerf=5890
+end
+Componente No Visual
+  id=ID45038731_1
+  art=45038731
+  desc=Perfil Cofre Tapa Motor Inferior Blanco
+  color=Blanco
+  tipo_corte_izq=|
+  tipo_corte_der=|
+  Despiece=1
+  TipoCurva=0
+  AngCorteI=90
+  AngCorteD=90
+  Centro=0
+  TipoTarifa=2
+  DtMedCutPerf=5890
+  f_cant=1
+  f_alto=85.2
+  ap_prec_inc=1
+  MedCutPerf=5890
+end
+Componente No Visual
+  id=ID23000006_1
+  art=230.0.0006
+  desc=Soporte Guia motor Tenxo/Tenflat
+  tipo_ctrl=0
+  Despiece=1
+  TipoCurva=0
+  AngCorteI=0
+  AngCorteD=0
+  Centro=0
+  TipoTarifa=2
+  f_cant=2
+  ap_prec_inc=1
+end
+Componente No Visual
+  id=ID23000033_1
+  art=230.0.0033
+  desc=Tapa Motor Derecha Tenxo
+  tipo_ctrl=0
+  Despiece=1
+  TipoCurva=0
+  AngCorteI=0
+  AngCorteD=0
+  Centro=0
+  TipoTarifa=2
+  f_cant=1
+  ap_prec_inc=1
+end
+Componente No Visual
+  id=ID23000034_1
+  art=230.0.0034
+  desc=Tapa Motor Izquierda Tenxo
+  tipo_ctrl=0
+  Despiece=1
+  TipoCurva=0
+  AngCorteI=0
+  AngCorteD=0
+  Centro=0
+  TipoTarifa=2
+  f_cant=1
+  ap_prec_inc=1
+end
+Componente No Visual
+  id=ID20200004_1
+  art=202.0.0004
+  desc=Eje Transmision Motor Corto 1000mm Calibre 13x13 Bruto
+  tipo_ctrl=0
+  Despiece=1
+  TipoCurva=0
+  AngCorteI=0
+  AngCorteD=0
+  Centro=0
+  TipoTarifa=2
+  f_cant=1
+  ap_prec_inc=1
+end
+Componente No Visual
+  id=ID36400004_1
+  art=364.0.0004
+  desc=Cojinete  Plastico IGUS con valona para apoyo transmision
+  tipo_ctrl=0
+  Despiece=1
+  TipoCurva=0
+  AngCorteI=0
+  AngCorteD=0
+  Centro=0
+  TipoTarifa=2
+  f_cant=1
+  ap_prec_inc=1
+end
+Componente No Visual
+  id=ID36400003_1
+  art=364.0.0003
+  desc=Cojinete  Plastico IGUS con valona para engranaje motor
+  tipo_ctrl=0
+  Despiece=1
+  TipoCurva=0
+  AngCorteI=0
+  AngCorteD=0
+  Centro=0
+  TipoTarifa=2
+  f_cant=1+1
+  ap_prec_inc=1
+end
+Componente No Visual
+  id=ID22400004_1
+  art=224.0.0004
+  desc=Casquillo Apoyo transmision tapa motor Bruto
+  tipo_ctrl=0
+  Despiece=1
+  TipoCurva=0
+  AngCorteI=0
+  AngCorteD=0
+  Centro=0
+  TipoTarifa=2
+  f_cant=1
+  ap_prec_inc=1
+end
+Componente No Visual
+  id=ID20000010_1
+  art=200.0.0010
+  desc=Polea Dentada Engranaje modulo 2,5 Z26 Bruto
+  tipo_ctrl=0
+  Despiece=1
+  TipoCurva=0
+  AngCorteI=0
+  AngCorteD=0
+  Centro=0
+  TipoTarifa=2
+  f_cant=2
+  ap_prec_inc=1
+end
+Componente No Visual
+  id=DIN6799M12A2_1
+  art=DIN6799M12A2
+  desc=Arandela de seguridad DIN6799 Ø12
+  tipo_ctrl=0
+  Despiece=1
+  TipoCurva=0
+  AngCorteI=0
+  AngCorteD=0
+  Centro=0
+  TipoTarifa=2
+  f_cant=2
+  ap_prec_inc=1
+end
+Componente No Visual
+  id=ID80020025_1
+  art=80020025
+  desc=Casquillo 78 ran ptco. transmision c13 sc zip
+  tipo_ctrl=0
+  Despiece=1
+  TipoCurva=0
+  AngCorteI=0
+  AngCorteD=0
+  Centro=0
+  TipoTarifa=2
+  f_cant=4
+  ap_prec_inc=1
+end
+Componente No Visual
+  id=ID9910000_1
+  art=9910000
+  desc=Soporte universal Op. HiPro
+  tipo_ctrl=0
+  Despiece=1
+  TipoCurva=0
+  AngCorteI=0
+  AngCorteD=0
+  Centro=0
+  TipoTarifa=2
+  f_cant=1
+  ap_prec_inc=1
+end
+Componente No Visual
+  id=ID9017508_1
+  art=9017508
+  desc=Rued motr.HiP.a Ø 80x2 c/ran.Mecanizada
+  tipo_ctrl=0
+  Despiece=1
+  TipoCurva=0
+  AngCorteI=0
+  AngCorteD=0
+  Centro=0
+  TipoTarifa=2
+  f_cant=1
+  ap_prec_inc=1
+end
+Componente No Visual
+  id=ID9128427_1
+  art=9128427
+  desc=Corona adap.LT60 P-800 y ø80x2
+  tipo_ctrl=0
+  Despiece=1
+  TipoCurva=0
+  AngCorteI=0
+  AngCorteD=0
+  Centro=0
+  TipoTarifa=2
+  f_cant=1
+  ap_prec_inc=1
+end
+Componente No Visual
+  id=ID80020010_1
+  art=80020010
+  desc=Casquillo 78 ran ptco. maquina e/c-13x33
+  tipo_ctrl=0
+  Despiece=1
+  TipoCurva=0
+  AngCorteI=0
+  AngCorteD=0
+  Centro=0
+  TipoTarifa=2
+  f_cant=1
+  ap_prec_inc=1
+end
+Componente No Visual
+  id=ID1161184_1
+  art=1161184
+  desc=Sunilus 55/17 io
+  tipo_ctrl=0
+  Despiece=1
+  TipoCurva=0
+  AngCorteI=0
+  AngCorteD=0
+  Centro=0
+  TipoTarifa=2
+  f_cant=1
+  ap_prec_inc=1
+end
+Componente No Visual
+  id=ID20200002_1
+  art=202.0.0002
+  desc=Punta Transmision 250mm Calibre 13x13 Bruto
+  tipo_ctrl=0
+  Despiece=1
+  TipoCurva=0
+  AngCorteI=0
+  AngCorteD=0
+  Centro=0
+  TipoTarifa=2
+  f_cant=2
+  ap_prec_inc=1
+end
+Componente No Visual
+  id=ID22000002_1
+  art=220.0.0002
+  desc=Tapa Palillo estrecho Tenxo/Tenflat Bruto
+  tipo_ctrl=0
+  Despiece=1
+  TipoCurva=0
+  AngCorteI=0
+  AngCorteD=0
+  Centro=0
+  TipoTarifa=2
+  f_cant=(ID10000025_1_Cantidad+ID10000026_1_Cantidad+ID10000027_1_Cantidad+ID10000028_1_Cantidad+ID10000025_2_Cantidad+ID10000026_2_Cantidad+ID10000027_2_Cantidad+ID10000028_2_Cantidad)*2
+  ap_prec_inc=1
+end
+Componente No Visual
+  id=ID25000012_1
+  art=250.0.0012
+  desc=Esquina canal - 01 Tenflat
+  tipo_ctrl=0
+  Despiece=1
+  TipoCurva=0
+  AngCorteI=0
+  AngCorteD=0
+  Centro=0
+  TipoTarifa=2
+  f_cant=SI(@ESQUINAS=0;0;SI(@ESQUINAS=1;0;SI(@ESQUINAS=2;4;SI(@ESQUINAS=3;2;SI(@ESQUINAS=4;1;SI(@ESQUINAS=5;3;0))))))
+  ap_prec_inc=1
+end
+Componente No Visual
+  id=ID25000013_1
+  art=250.0.0013
+  desc=Esquina canal ciega - 01 Tenflat
+  tipo_ctrl=0
+  Despiece=1
+  TipoCurva=0
+  AngCorteI=0
+  AngCorteD=0
+  Centro=0
+  TipoTarifa=2
+  f_cant=SI(@ESQUINAS=0;0;SI(@ESQUINAS=1;4;SI(@ESQUINAS=2;0;SI(@ESQUINAS=3;2;SI(@ESQUINAS=4;3;SI(@ESQUINAS=5;1;0))))))
+  ap_prec_inc=1
+end
+Componente No Visual
+  id=ID24000001_1
+  art=240.0.0001
+  desc=Embudo de 50 Tenxo/Tenflat
+  tipo_ctrl=0
+  Despiece=1
+  TipoCurva=0
+  AngCorteI=0
+  AngCorteD=0
+  Centro=0
+  TipoTarifa=2
+  f_cant=ID25000012_1_Cantidad
+  ap_prec_inc=1
+end
+Componente No Visual
+  id=ID22000001_1
+  art=220.0.0001
+  desc=Jgo. Punta Tenxo/Tenflat
+  tipo_ctrl=0
+  Despiece=1
+  TipoCurva=0
+  AngCorteI=0
+  AngCorteD=0
+  Centro=0
+  TipoTarifa=2
+  f_cant=(ID10000041_1_Cantidad+ID10000042_1_Cantidad+ID10000043_1_Cantidad+ID10000044_1_Cantidad)*4
+  ap_prec_inc=1
+end
+Componente No Visual
+  id=ID20000062_1
+  art=200.0.0062
+  desc=Polea dentada t10 17d al 54x58 int 4/c 13
+  tipo_ctrl=0
+  Despiece=1
+  TipoCurva=0
+  AngCorteI=0
+  AngCorteD=0
+  Centro=0
+  TipoTarifa=2
+  f_cant=ID10000041_1_Cantidad+ID10000042_1_Cantidad+ID10000043_1_Cantidad+ID10000044_1_Cantidad
+  ap_prec_inc=1
+end
+Componente No Visual
+  id=ID36400001_1
+  art=364.0.0001
+  desc=Cojinete  Plastico IGUS con valona para polea JFM-3539-16
+  tipo_ctrl=0
+  Despiece=1
+  TipoCurva=0
+  AngCorteI=0
+  AngCorteD=0
+  Centro=0
+  TipoTarifa=2
+  f_cant=(ID10000041_1_Cantidad+ID10000042_1_Cantidad+ID10000043_1_Cantidad+ID10000044_1_Cantidad)*2
+  ap_prec_inc=1
+end
+Componente No Visual
+  id=ID20000001_1
+  art=200.0.0001
+  desc=Tensor Correa eje polea lisa 35/41 Pergoo/Tenxo
+  tipo_ctrl=0
+  Despiece=1
+  TipoCurva=0
+  AngCorteI=0
+  AngCorteD=0
+  Centro=0
+  TipoTarifa=2
+  f_cant=ID10000041_1_Cantidad+ID10000042_1_Cantidad+ID10000043_1_Cantidad+ID10000044_1_Cantidad
+  ap_prec_inc=1
+end
+Componente No Visual
+  id=ID22410005_1
+  art=224.1.0005
+  desc=Casquillo Polea Blanco
+  tipo_ctrl=0
+  Despiece=1
+  TipoCurva=0
+  AngCorteI=0
+  AngCorteD=0
+  Centro=0
+  TipoTarifa=2
+  f_cant=(ID10000041_1_Cantidad+ID10000042_1_Cantidad+ID10000043_1_Cantidad+ID10000044_1_Cantidad)*2
+  ap_prec_inc=1
+end
+Componente No Visual
+  id=ID3F520005_1
+  art=3F5.2.0005
+  desc=Felpudo Strip 5x5mm L50 Negro Tenflat
+  color=Blanco
+  tipo_corte_izq=|
+  tipo_corte_der=|
+  Despiece=1
+  TipoCurva=0
+  AngCorteI=90
+  AngCorteD=90
+  Centro=0
+  TipoTarifa=2
+  DtMedCutPerf=5890
+  f_cant=2
+  f_alto=DIM1-(2*14.4)
+  ap_prec_inc=1
+  MedCutPerf=5890
+end
+Componente No Visual
+  id=ID10420001_1
+  art=104.2.0001
+  desc=Perfil Goma Antilluvia Tenxo/Tenflat Negro
+  color=Blanco
+  tipo_corte_izq=|
+  tipo_corte_der=|
+  Despiece=1
+  TipoCurva=0
+  AngCorteI=90
+  AngCorteD=90
+  Centro=0
+  TipoTarifa=2
+  DtMedCutPerf=5890
+  f_cant=ID10000041_1_Cantidad+ID10000042_1_Cantidad+ID10000043_1_Cantidad+ID10000044_1_Cantidad
+  f_alto=((DIM2-13,160-9,660)*2)
+  ap_prec_inc=1
+  MedCutPerf=5890
+end
+Componente No Visual
+  id=ID334J0001_1
+  art=334.J.0001
+  desc=Correa Dentada Breco-M Transport T10 12,5 100M
+  color=Blanco
+  tipo_corte_izq=|
+  tipo_corte_der=|
+  Despiece=1
+  TipoCurva=0
+  AngCorteI=90
+  AngCorteD=90
+  Centro=0
+  TipoTarifa=2
+  DtMedCutPerf=5890
+  f_cant=ID10000041_1_Cantidad+ID10000042_1_Cantidad+ID10000043_1_Cantidad+ID10000044_1_Cantidad
+  f_alto=(((DIM2-13,160-9,660)*2)+30.0)
+  ap_prec_inc=1
+  MedCutPerf=5890
+end
+Componente No Visual
+  id=ID23000005_1
+  art=230.0.0005
+  desc=Tapa Frontal guia Tenxo/Tenflat
+  tipo_ctrl=0
+  Despiece=1
+  TipoCurva=0
+  AngCorteI=0
+  AngCorteD=0
+  Centro=0
+  TipoTarifa=2
+  f_cant=ID10000041_1_Cantidad+ID10000042_1_Cantidad+ID10000043_1_Cantidad+ID10000044_1_Cantidad
+  ap_prec_inc=1
+end
+Componente No Visual
+  id=ID20000005_1
+  art=200.0.0005
+  desc=Tapa Inferior guia Tenxo/Tenflat
+  tipo_ctrl=0
+  Despiece=1
+  TipoCurva=0
+  AngCorteI=0
+  AngCorteD=0
+  Centro=0
+  TipoTarifa=2
+  f_cant=ID10000041_1_Cantidad+ID10000042_1_Cantidad+ID10000043_1_Cantidad+ID10000044_1_Cantidad
+  ap_prec_inc=1
+end
+Componente No Visual
+  id=ID20000007_1
+  art=200.0.0007
+  desc=Tapa Trasera Superior guia Tenxo/Tenflat
+  tipo_ctrl=0
+  Despiece=1
+  TipoCurva=0
+  AngCorteI=0
+  AngCorteD=0
+  Centro=0
+  TipoTarifa=2
+  f_cant=ID10000041_1_Cantidad+ID10000042_1_Cantidad+ID10000043_1_Cantidad+ID10000044_1_Cantidad
+  ap_prec_inc=1
+end
+Componente No Visual
+  id=ID20000006_1
+  art=200.0.0006
+  desc=Tapa Trasera Inferior guia Tenxo/Tenflat
+  tipo_ctrl=0
+  Despiece=1
+  TipoCurva=0
+  AngCorteI=0
+  AngCorteD=0
+  Centro=0
+  TipoTarifa=2
+  f_cant=ID10000041_1_Cantidad+ID10000042_1_Cantidad+ID10000043_1_Cantidad+ID10000044_1_Cantidad
+  ap_prec_inc=1
+end
+Componente No Visual
+  id=ID23000056_1
+  art=230.0.0056
+  desc=Pieza A soporte guia trasero 3 guias Tenflat V1
+  tipo_ctrl=0
+  Despiece=1
+  TipoCurva=0
+  AngCorteI=0
+  AngCorteD=0
+  Centro=0
+  TipoTarifa=2
+  f_cant=SI(ID10000041_1_Cantidad+ID10000042_1_Cantidad+ID10000043_1_Cantidad+ID10000044_1_Cantidad=3;ID10000041_1_Cantidad+ID10000042_1_Cantidad+ID10000043_1_Cantidad+ID10000044_1_Cantidad;0)
+  ap_prec_inc=1
+end
+Componente No Visual
+  id=ID20000044_1
+  art=200.0.0044
+  desc=Pieza B soporte guia Tenflat
+  tipo_ctrl=0
+  Despiece=1
+  TipoCurva=0
+  AngCorteI=0
+  AngCorteD=0
+  Centro=0
+  TipoTarifa=2
+  f_cant=SI(ID10000041_1_Cantidad+ID10000042_1_Cantidad+ID10000043_1_Cantidad+ID10000044_1_Cantidad=3;ID10000041_1_Cantidad+ID10000042_1_Cantidad+ID10000043_1_Cantidad+ID10000044_1_Cantidad;2)
+  ap_prec_inc=1
+end
+Componente No Visual
+  id=ID23000059_1
+  art=230.0.0059
+  desc=Soporte guia delantero 3 guias Tenflat V1
+  tipo_ctrl=0
+  Despiece=1
+  TipoCurva=0
+  AngCorteI=0
+  AngCorteD=0
+  Centro=0
+  TipoTarifa=2
+  f_cant=SI(ID10000041_1_Cantidad+ID10000042_1_Cantidad#@#+ID10000043_1_Cantidad#@#+ID10000044_1_Cantidad=3;ID10000041_1_Cantidad#@#+ID10000042_1_Cantidad+ID10000043_1_Cantidad#@#+ID10000044_1_Cantidad;0)
+  ap_prec_inc=1
+end
+Componente No Visual
+  id=ID20300009_1
+  art=203.0.0009
+  desc=Perno Palillo fijo Tenxo/Tenflat Bruto
+  tipo_ctrl=0
+  Despiece=1
+  TipoCurva=0
+  AngCorteI=0
+  AngCorteD=0
+  Centro=0
+  TipoTarifa=2
+  f_cant=SI(ID10000041_1_Cantidad+ID10000042_1_Cantidad+ID10000043_1_Cantidad+ID10000044_1_Cantidad=3;ID10000041_1_Cantidad+ID10000042_1_Cantidad+ID10000043_1_Cantidad+ID10000044_1_Cantidad;2)
+  ap_prec_inc=1
+end
+Componente No Visual
+  id=ID20300011_1
+  art=203.0.0011
+  desc=Casquillo distanciador 22mm Tenflat
+  tipo_ctrl=0
+  Despiece=1
+  TipoCurva=0
+  AngCorteI=0
+  AngCorteD=0
+  Centro=0
+  TipoTarifa=2
+  f_cant=SI(ID10000041_1_Cantidad+ID10000042_1_Cantidad+ID10000043_1_Cantidad+ID10000044_1_Cantidad=3;ID10000041_1_Cantidad+ID10000042_1_Cantidad+ID10000043_1_Cantidad+ID10000044_1_Cantidad;2)
+  ap_prec_inc=1
+end
+Componente No Visual
+  id=ID30300049_1
+  art=303.0.0049
+  desc=Muelle tensor palillo fijo
+  tipo_ctrl=0
+  Despiece=1
+  TipoCurva=0
+  AngCorteI=0
+  AngCorteD=0
+  Centro=0
+  TipoTarifa=2
+  f_cant=SI(ID10000041_1_Cantidad+ID10000042_1_Cantidad+ID10000043_1_Cantidad+ID10000044_1_Cantidad=3;ID10000041_1_Cantidad+ID10000042_1_Cantidad+ID10000043_1_Cantidad+ID10000044_1_Cantidad;2)
+  ap_prec_inc=1
+end
+Componente No Visual
+  id=ID23000070_1
+  art=230.0.0070
+  desc=Soporte Delantero 2 guias caja V1 5mmTenflat
+  tipo_ctrl=0
+  Despiece=1
+  TipoCurva=0
+  AngCorteI=0
+  AngCorteD=0
+  Centro=0
+  TipoTarifa=2
+  f_cant=SI(ID10000041_1_Cantidad+ID10000042_1_Cantidad+ID10000043_1_Cantidad+ID10000044_1_Cantidad=2;ID10000041_1_Cantidad+ID10000042_1_Cantidad+ID10000043_1_Cantidad+ID10000044_1_Cantidad;0)
+  ap_prec_inc=1
+end
+Componente No Visual
+  id=ID23000069_1
+  art=230.0.0069
+  desc=Soporte Trasero 2 guias caja V1 5mmTenflat
+  tipo_ctrl=0
+  Despiece=1
+  TipoCurva=0
+  AngCorteI=0
+  AngCorteD=0
+  Centro=0
+  TipoTarifa=2
+  f_cant=SI(ID10000041_1_Cantidad+ID10000042_1_Cantidad+ID10000043_1_Cantidad+ID10000044_1_Cantidad=2;ID10000041_1_Cantidad+ID10000042_1_Cantidad+ID10000043_1_Cantidad+ID10000044_1_Cantidad;0)
+  ap_prec_inc=1
+end
+Componente No Visual
+  id=ID26500002_1
+  art=265.0.0002
+  desc=Patin delantero completo Tenxo/Tenflat Bruto
+  tipo_ctrl=0
+  Despiece=1
+  TipoCurva=0
+  AngCorteI=0
+  AngCorteD=0
+  Centro=0
+  TipoTarifa=2
+  f_cant=ID10000041_1_Cantidad+ID10000042_1_Cantidad+ID10000043_1_Cantidad+ID10000044_1_Cantidad
+  ap_prec_inc=1
+end
+Componente No Visual
+  id=ID26510003_1
+  art=265.1.0003
+  desc=Patin palillo intermedio completo Tenxo/Tenflat Blanco
+  tipo_ctrl=0
+  Despiece=1
+  TipoCurva=0
+  AngCorteI=0
+  AngCorteD=0
+  Centro=0
+  TipoTarifa=2
+  f_cant=SI((ID10000041_1_Cantidad+ID10000042_1_Cantidad+ID10000043_1_Cantidad+ID10000044_1_Cantidad)=2;(ID10000025_2_Cantidad+ID10000026_2_Cantidad+ID10000027_2_Cantidad+ID10000028_2_Cantidad)*2;(ID10000025_2_Cantidad+ID10000026_2_Cantidad+ID10000027_2_Cantidad+ID10000028_2_Cantidad)*3)
+  ap_prec_inc=1
+end
+Componente No Visual
+  id=ID20300006_1
+  art=203.0.0006
+  desc=Perno Palillo Tenxo/Tenflat Bruto
+  tipo_ctrl=0
+  Despiece=1
+  TipoCurva=0
+  AngCorteI=0
+  AngCorteD=0
+  Centro=0
+  TipoTarifa=2
+  f_cant=SI((ID10000041_1_Cantidad+ID10000042_1_Cantidad+ID10000043_1_Cantidad+ID10000044_1_Cantidad)=2;(ID10000025_2_Cantidad+ID10000026_2_Cantidad+ID10000027_2_Cantidad+ID10000028_2_Cantidad)*2;0)+SI((ID10000041_1_Cantidad+ID10000042_1_Cantidad+ID10000043_1_Cantidad+ID10000044_1_Cantidad)=3;(ID10000025_1_Cantidad+ID10000025_2_Cantidad+ID10000026_1_Cantidad+ID10000026_2_Cantidad+ID10000027_1_Cantidad+ID10000027_2_Cantidad+ID10000028_1_Cantidad+ID10000028_2_Cantidad)-1;2)
+  ap_prec_inc=1
+end
+Componente No Visual
+  id=ID20300010_1
+  art=203.0.0010
+  desc=Perno Largo palillo Tenxo/Tenflat Bruto
+  tipo_ctrl=0
+  Despiece=1
+  TipoCurva=0
+  AngCorteI=0
+  AngCorteD=0
+  Centro=0
+  TipoTarifa=2
+  f_cant=SI((ID10000041_1_Cantidad+ID10000042_1_Cantidad+ID10000043_1_Cantidad+ID10000044_1_Cantidad)=3;(ID10000025_2_Cantidad+ID10000026_2_Cantidad+ID10000027_2_Cantidad+ID10000028_2_Cantidad)*2;0)
+  ap_prec_inc=1
+end
+Componente No Visual
+  id=ID20300012_1
+  art=203.0.0012
+  desc=Casquillo perno Tenflat Ø12x1.5 L40
+  tipo_ctrl=0
+  Despiece=0
+  TipoCurva=0
+  AngCorteI=0
+  AngCorteD=0
+  Centro=0
+  TipoTarifa=1
+  f_cant=SI((ID10000041_1_Cantidad+ID10000042_1_Cantidad+ID10000043_1_Cantidad+ID10000044_1_Cantidad)=2;(ID10000025_2_Cantidad+ID10000026_2_Cantidad+ID10000027_2_Cantidad+ID10000028_2_Cantidad)*2;0)+SI((ID10000041_1_Cantidad+ID10000042_1_Cantidad+ID10000043_1_Cantidad+ID10000044_1_Cantidad)=3;(ID10000025_1_Cantidad+ID10000025_2_Cantidad+ID10000026_1_Cantidad+ID10000026_2_Cantidad+ID10000027_1_Cantidad+ID10000027_2_Cantidad+ID10000028_1_Cantidad+ID10000028_2_Cantidad)-1;2)
+end
+Componente No Visual
+  id=DIN9021M8A2_1
+  art=DIN9021M8A2
+  desc=Arandela DIN9021 Ø8
+  tipo_ctrl=0
+  Despiece=1
+  TipoCurva=0
+  AngCorteI=0
+  AngCorteD=0
+  Centro=0
+  TipoTarifa=2
+  f_cant=SI((ID10000041_1_Cantidad+ID10000042_1_Cantidad+ID10000043_1_Cantidad+ID10000044_1_Cantidad)=2;(ID10000025_2_Cantidad+ID10000026_2_Cantidad+ID10000027_2_Cantidad+ID10000028_2_Cantidad)*2;0)+SI((ID10000041_1_Cantidad+ID10000042_1_Cantidad+ID10000043_1_Cantidad+ID10000044_1_Cantidad)=3;(ID10000025_1_Cantidad+ID10000025_2_Cantidad+ID10000026_1_Cantidad+ID10000026_2_Cantidad+ID10000027_1_Cantidad+ID10000027_2_Cantidad+ID10000028_1_Cantidad+ID10000028_2_Cantidad)-1;2)+SI((ID10000041_1_Cantidad+ID10000042_1_Cantidad+ID10000043_1_Cantidad+ID10000044_1_Cantidad)=3;(ID10000025_2_Cantidad+ID10000026_2_Cantidad+ID10000027_2_Cantidad+ID10000028_2_Cantidad)*2;0)
+  ap_prec_inc=1
+end
+Componente No Visual
+  id=ID30420001_1
+  art=304.2.0001
+  desc=Arandela Plastica Ø7,5 35mm Negro
+  tipo_ctrl=0
+  Despiece=1
+  TipoCurva=0
+  AngCorteI=0
+  AngCorteD=0
+  Centro=0
+  TipoTarifa=2
+  f_cant=SI((ID10000041_1_Cantidad+ID10000042_1_Cantidad+ID10000043_1_Cantidad+ID10000044_1_Cantidad)=2;(ID10000025_2_Cantidad+ID10000026_2_Cantidad+ID10000027_2_Cantidad+ID10000028_2_Cantidad)*2;0)+SI((ID10000041_1_Cantidad+ID10000042_1_Cantidad+ID10000043_1_Cantidad+ID10000044_1_Cantidad)=3;(ID10000025_1_Cantidad+ID10000025_2_Cantidad+ID10000026_1_Cantidad+ID10000026_2_Cantidad+ID10000027_1_Cantidad+ID10000027_2_Cantidad+ID10000028_1_Cantidad+ID10000028_2_Cantidad)-1;2)+SI((ID10000041_1_Cantidad+ID10000042_1_Cantidad+ID10000043_1_Cantidad+ID10000044_1_Cantidad)=3;(ID10000025_2_Cantidad+ID10000026_2_Cantidad+ID10000027_2_Cantidad+ID10000028_2_Cantidad)*2;0)
+  ap_prec_inc=1
+end
+Componente No Visual
+  id=ID30500001_1
+  art=305.0.0001
+  desc=Tornilleria para ensamblaje Tenflat
+  tipo_ctrl=0
+  Despiece=1
+  TipoCurva=0
+  AngCorteI=0
+  AngCorteD=0
+  Centro=0
+  TipoTarifa=2
+  f_cant=1
+  ap_prec_inc=1
+end
+Componente No Visual
+  id=ID23000011_1
+  art=230.0.0011
+  desc=Entronque 140x140 Tenxo/Tenflat
+  tipo_ctrl=0
+  Despiece=1
+  TipoCurva=0
+  AngCorteI=0
+  AngCorteD=0
+  Centro=0
+  TipoTarifa=2
+  f_cant=@NUMPATAS
+  ap_prec_inc=1
+end
+Componente No Visual
+  id=ID24200002_1
+  art=242.0.0002
+  desc=Base Interior Alta 140x140 Tenxo
+  tipo_ctrl=0
+  Despiece=1
+  TipoCurva=0
+  AngCorteI=0
+  AngCorteD=0
+  Centro=0
+  TipoTarifa=2
+  f_cant=@BASESxINT+@BASESxEXT
+  ap_prec_inc=1
+end
+Componente No Visual
+  id=ID20200006_1
+  art=202.0.0006
+  desc=Placa Base Exterior 140x140
+  tipo_ctrl=0
+  Despiece=0
+  TipoCurva=0
+  AngCorteI=0
+  AngCorteD=0
+  Centro=0
+  TipoTarifa=1
+  f_cant=@BASESxEXT
+end
+Componente No Visual
+  id=ID23000029_1
+  art=230.0.0029
+  desc=Brida 140x140 Tenxo/Tenflat
+  tipo_ctrl=0
+  Despiece=1
+  TipoCurva=0
+  AngCorteI=0
+  AngCorteD=0
+  Centro=0
+  TipoTarifa=2
+  f_cant=@PARED
+  ap_prec_inc=1
+end
+Componente No Visual
+  id=ID23000032_1
+  art=230.0.0032
+  desc=Brida Esquinera 140x140 Tenxo/Tenflat
+  tipo_ctrl=0
+  Despiece=1
+  TipoCurva=0
+  AngCorteI=0
+  AngCorteD=0
+  Centro=0
+  TipoTarifa=2
+  f_cant=@ESQUINERAS
+  ap_prec_inc=1
+end
+Componente No Visual
+  id=LZ01_1
+  art=LZ-01
+  desc=Lampara ModuLED 4200-4500ºkelvin (Montada en perfil Tenxo)
+  tipo_ctrl=0
+  Despiece=1
+  TipoCurva=0
+  AngCorteI=0
+  AngCorteD=0
+  Centro=0
+  TipoTarifa=2
+  f_cant=SI(@ILUMINACION=1;SI((DIM2=250)Y(DIM1>=250)Y(DIM1<=400);(1*2);SI((DIM2=250)Y(DIM1>400)Y(DIM1<=600);(1*3);SI((DIM2=250)Y(DIM1>600)Y(DIM1<=700);(1*4);SI((DIM2>250)Y(DIM2<=450)Y(DIM1>=250)Y(DIM1<=400);(2*2);SI((DIM2>250)Y(DIM2<=450)Y(DIM1>400)Y(DIM1<=600);(2*3);SI((DIM2>250)Y(DIM2<=450)Y(DIM1>600)Y(DIM1<=700);(2*4);SI((DIM2>450)Y(DIM2<=700)Y(DIM1>=250)Y(DIM1<=400);(3*2);SI((DIM2>450)Y(DIM2<=700)Y(DIM1>400)Y(DIM1<=600);(3*3);SI((DIM2>450)Y(DIM2<=700)Y(DIM1>600)Y(DIM1<=700);(3*4);0)))))))));0)
+  ap_prec_inc=1
+end
+Componente No Visual
+  id=LZ05_1
+  art=LZ-05
+  desc=Pack regulación de luz IO para Tenxo
+  tipo_ctrl=0
+  Despiece=1
+  TipoCurva=0
+  AngCorteI=0
+  AngCorteD=0
+  Centro=0
+  TipoTarifa=2
+  f_cant=SI(@ILUMINACION=1;1;0)
+  ap_prec_inc=1
+end
+Componente No Visual
+  id=MEDIDALONA_1
+  art=MEDIDA_LONA
+  desc=MEDIDA LONA TOTAL
+  tipo_ctrl=0
+  eDim1=698.3
+  eDim2=700
+  Despiece=1
+  TipoCurva=0
+  AngCorteI=0
+  AngCorteD=0
+  Centro=0
+  TipoTarifa=2
+  f_cant=1
+  f_Dim1=(DIM1-(2*7.8))+(2*6.95)
+  f_Dim2=DIM2
+  ap_prec_inc=1
+end
+
+class=TEstRelleno
+  x=0
+  y=0
+  w=700
+  h=700
+end
+

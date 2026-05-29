@@ -1,0 +1,678 @@
+articulo=+SUPERSTOR
+desc=Toldo Super-Stor
+NewEstruc=1
+color perfil=Blanco
+color accesorios=Blanco
+dim1=300
+dim2=250
+tipoacabado=8
+AplMultAncho=1
+intAtLin=50
+intAtEA=70
+ilumPrC=20
+ilumPrL=40
+ilumPrF=50
+ProfSombCerr=1
+
+##Datos_Estructura##
+
+Id=0
+PintCotasAut=0
+Modulo000=001         0         0         0         0
+
+
+
+Variable
+  nombre=@Brida42
+  valor=0
+  tipovar=1
+  formula=
+  max=0
+  min=0
+  actmin=0
+  actmax=0
+  selec=0
+  peticion=1
+  condicion=
+  varserie=0
+  PermEdRes=0
+  ResManual=0
+  ValorManual=0
+  agrupar=0
+  enum_0_texto=No
+  enum_0_valor=0
+  enum_0_condicion=
+  enum_1_texto=Sí
+  enum_1_valor=1
+  enum_1_condicion=
+end
+Variable
+  nombre=@Brida51
+  valor=0
+  tipovar=1
+  formula=
+  max=0
+  min=0
+  actmin=0
+  actmax=0
+  selec=0
+  peticion=1
+  condicion=
+  varserie=0
+  PermEdRes=0
+  ResManual=0
+  ValorManual=0
+  agrupar=0
+  enum_0_texto=No
+  enum_0_valor=0
+  enum_0_condicion=
+  enum_1_texto=Sí
+  enum_1_valor=1
+  enum_1_condicion=
+end
+Variable
+  nombre=@MaquinaInterior
+  valor=1
+  tipovar=1
+  formula=
+  max=0
+  min=0
+  actmin=0
+  actmax=0
+  selec=1
+  peticion=1
+  condicion=
+  varserie=0
+  PermEdRes=0
+  ResManual=0
+  ValorManual=0
+  agrupar=0
+  enum_0_texto=No
+  enum_0_valor=0
+  enum_0_condicion=
+  enum_1_texto=Sí
+  enum_1_valor=1
+  enum_1_condicion=
+end
+Variable
+  nombre=@MaquinaExterior
+  valor=0
+  tipovar=1
+  formula=
+  max=0
+  min=0
+  actmin=0
+  actmax=0
+  selec=0
+  peticion=1
+  condicion=
+  varserie=0
+  PermEdRes=0
+  ResManual=0
+  ValorManual=0
+  agrupar=0
+  enum_0_texto=No
+  enum_0_valor=0
+  enum_0_condicion=
+  enum_1_texto=Sí
+  enum_1_valor=1
+  enum_1_condicion=
+end
+Variable
+  nombre=@Manivela
+  valor=4
+  tipovar=1
+  formula=
+  max=0
+  min=0
+  actmin=0
+  actmax=0
+  selec=3
+  peticion=1
+  condicion=(@MotorSomfy=0)y(@MotorCherubini=0)
+  varserie=0
+  PermEdRes=0
+  ResManual=0
+  ValorManual=0
+  agrupar=0
+  enum_0_texto=80 cm
+  enum_0_valor=1
+  enum_0_condicion=
+  enum_1_texto=100 cm
+  enum_1_valor=2
+  enum_1_condicion=
+  enum_2_texto=120 cm
+  enum_2_valor=3
+  enum_2_condicion=
+  enum_3_texto=150 cm
+  enum_3_valor=4
+  enum_3_condicion=
+  enum_4_texto=170 cm
+  enum_4_valor=5
+  enum_4_condicion=
+  enum_5_texto=200 cm
+  enum_5_valor=6
+  enum_5_condicion=
+  enum_6_texto=225 cm
+  enum_6_valor=7
+  enum_6_condicion=
+  enum_7_texto=250 cm
+  enum_7_valor=8
+  enum_7_condicion=
+  enum_8_texto=No lleva
+  enum_8_valor=0
+  enum_8_condicion=
+end
+Variable
+  nombre=@MotorSomfy
+  valor=0
+  tipovar=1
+  formula=
+  max=0
+  min=0
+  actmin=0
+  actmax=0
+  selec=0
+  peticion=1
+  condicion=
+  varserie=0
+  PermEdRes=0
+  ResManual=0
+  ValorManual=0
+  agrupar=0
+  enum_0_texto=No
+  enum_0_valor=0
+  enum_0_condicion=
+  enum_1_texto=RTS
+  enum_1_valor=1
+  enum_1_condicion=
+  enum_2_texto=IO
+  enum_2_valor=2
+  enum_2_condicion=
+  enum_3_texto=WT
+  enum_3_valor=3
+  enum_3_condicion=
+  enum_4_texto=T/H 70
+  enum_4_valor=4
+  enum_4_condicion=
+end
+Variable
+  nombre=@MotorCherubini
+  valor=0
+  tipovar=1
+  formula=
+  max=0
+  min=0
+  actmin=0
+  actmax=0
+  selec=0
+  peticion=1
+  condicion=
+  varserie=0
+  PermEdRes=0
+  ResManual=0
+  ValorManual=0
+  agrupar=0
+  enum_0_texto=No
+  enum_0_valor=0
+  enum_0_condicion=
+  enum_1_texto=Wave RX 15/17
+  enum_1_valor=1
+  enum_1_condicion=
+end
+Variable
+  nombre=@MedidaFaldon
+  valor=25
+  tipovar=0
+  formula=
+  max=0
+  min=0
+  actmin=0
+  actmax=0
+  selec=-1
+  peticion=1
+  condicion=
+  varserie=0
+  PermEdRes=0
+  ResManual=0
+  ValorManual=0
+  agrupar=0
+end
+Componente No Visual
+  id=LLPVPSUPERSTORBL_1
+  art=LLPVPSUPERSTOR/BL
+  desc=Precio Toldo Super-Stor
+  tipo_ctrl=0
+  color=Blanco
+  Despiece=0
+  TipoCurva=0
+  AngCorteI=0
+  AngCorteD=0
+  Centro=0
+  TipoTarifa=1
+  f_cant=1
+end
+Componente No Visual
+  id=G77LONA_1
+  funcion=18
+  art=G77LONA
+  desc=Lona
+  tipo_ctrl=0
+  eDim1=300
+  eDim2=289
+  Despiece=1
+  TipoCurva=0
+  AngCorteI=0
+  AngCorteD=0
+  Centro=0
+  TipoTarifa=2
+  f_cant=1
+  f_Dim1=Dim2+50
+  f_Dim2=Dim1-11
+  desccomp=1
+  ap_prec_inc=1
+end
+Componente No Visual
+  id=G77FALDON_1
+  funcion=24
+  art=G77FALDON
+  desc=Faldón
+  tipo_ctrl=0
+  eDim1=25
+  eDim2=289
+  Despiece=1
+  TipoCurva=0
+  AngCorteI=0
+  AngCorteD=0
+  Centro=0
+  TipoTarifa=2
+  f_cant=1
+  f_Dim1=@MedidaFaldon
+  f_Dim2=Dim1-11
+  ap_prec_inc=1
+end
+Componente No Visual
+  id=LL20018019001_1
+  art=20018019001
+  desc=Juego soportes mixtos universales aluminio 3 agujeros BL
+  tipo_ctrl=0
+  color=Blanco
+  Despiece=1
+  TipoCurva=0
+  AngCorteI=0
+  AngCorteD=0
+  Centro=0
+  TipoTarifa=2
+  f_cant=1
+  ap_prec_inc=1
+end
+Componente No Visual
+  id=LL10015050001_1
+  funcion=20
+  art=10015050001
+  desc=Juego brazos SUPER-STOR 0,50m BL
+  tipo_ctrl=0
+  color=Blanco
+  Despiece=1
+  TipoCurva=0
+  AngCorteI=0
+  AngCorteD=0
+  Centro=0
+  TipoTarifa=2
+  f_cant=1
+  ap_prec_inc=1
+end
+Componente No Visual
+  id=LL11011000001_1
+  art=11011000001
+  desc=Conjunto brida a baranda Ø42 SUPER-STOR BL
+  tipo_ctrl=0
+  color=Blanco
+  Despiece=1
+  TipoCurva=0
+  AngCorteI=0
+  AngCorteD=0
+  Centro=0
+  TipoTarifa=2
+  f_cant=@Brida42
+  ap_prec_inc=1
+end
+Componente No Visual
+  id=LL11011001001_1
+  art=11011001001
+  desc=Conjunto brida a baranda Ø51 SUPER-STOR BL
+  tipo_ctrl=0
+  color=Blanco
+  Despiece=1
+  TipoCurva=0
+  AngCorteI=0
+  AngCorteD=0
+  Centro=0
+  TipoTarifa=2
+  f_cant=@Brida51
+  ap_prec_inc=1
+end
+Componente No Visual
+  id=LL36027700001_1
+  art=36027700001
+  desc=Perfil frontal b/c EVO-60 7,00m BL
+  ancho_perfil=10
+  color=Blanco
+  tipo_corte_izq=|
+  tipo_corte_der=|
+  Despiece=1
+  TipoCurva=0
+  AngCorteI=90
+  AngCorteD=90
+  Centro=0
+  TipoTarifa=2
+  DtMedCutPerf=7000
+  f_cant=1
+  f_alto=Dim1-10
+  ap_prec_inc=1
+  MedCutPerf=7000
+end
+Componente No Visual
+  id=LL14052001001_1
+  art=14052001001
+  desc=Juego tapas b/c EVO 60 BL
+  tipo_ctrl=0
+  color=Blanco
+  Despiece=1
+  TipoCurva=0
+  AngCorteI=0
+  AngCorteD=0
+  Centro=0
+  TipoTarifa=2
+  f_cant=1
+  ap_prec_inc=1
+end
+Componente No Visual
+  id=LL21008007001_1
+  art=21008007001
+  desc=Maquina  ZNP-6 L-170 BL
+  tipo_ctrl=0
+  color=Blanco
+  Despiece=1
+  TipoCurva=0
+  AngCorteI=0
+  AngCorteD=0
+  Centro=0
+  TipoTarifa=2
+  f_cant=1
+  ap_prec_inc=1
+end
+Componente No Visual
+  id=LL11002011050_1
+  art=11002011050
+  desc=Kit tornillos fij. maq. STORBOX/SOP. UNIV. al
+  tipo_ctrl=0
+  Despiece=1
+  TipoCurva=0
+  AngCorteI=0
+  AngCorteD=0
+  Centro=0
+  TipoTarifa=2
+  f_cant=1
+  ap_prec_inc=1
+end
+Componente No Visual
+  id=LL12060003000_1
+  art=12060003000
+  desc=Casquillo punta de 60 con eje
+  tipo_ctrl=0
+  Despiece=1
+  TipoCurva=0
+  AngCorteI=0
+  AngCorteD=0
+  Centro=0
+  TipoTarifa=2
+  f_cant=Si(Dim1<=500;1;0)
+  ap_prec_inc=1
+end
+Componente No Visual
+  id=LL12060009000_1
+  art=12060009000
+  desc=Casquillo maquina de 60 mini
+  tipo_ctrl=0
+  Despiece=1
+  TipoCurva=0
+  AngCorteI=0
+  AngCorteD=0
+  Centro=0
+  TipoTarifa=2
+  f_cant=@MaquinaInterior=1
+  ap_prec_inc=1
+end
+Componente No Visual
+  id=LL12060001000_1
+  art=12060001000
+  desc=Casquillo maquina de 60 L
+  tipo_ctrl=0
+  Despiece=1
+  TipoCurva=0
+  AngCorteI=0
+  AngCorteD=0
+  Centro=0
+  TipoTarifa=2
+  f_cant=@MaquinaExterior=1
+  ap_prec_inc=1
+end
+Componente No Visual
+  id=LL31060700044_1
+  funcion=19
+  art=31060700044
+  desc=Tubo H. de enrolle P-601 de 60 galv. 7m
+  ancho_perfil=10
+  tipo_corte_izq=|
+  tipo_corte_der=|
+  Despiece=1
+  TipoCurva=0
+  AngCorteI=90
+  AngCorteD=90
+  Centro=0
+  TipoTarifa=2
+  DtMedCutPerf=7000
+  f_cant=Si(Dim1<=500;1;0)
+  f_alto=Dim1-10
+  ap_prec_inc=1
+  MedCutPerf=7000
+end
+Componente No Visual
+  id=LL31072700044_1
+  funcion=19
+  art=31072700044
+  desc=Tubo H. de enrolle P-701 de 70 galv. 7m
+  ancho_perfil=10
+  tipo_corte_izq=|
+  tipo_corte_der=|
+  Despiece=1
+  TipoCurva=0
+  AngCorteI=90
+  AngCorteD=90
+  Centro=0
+  TipoTarifa=2
+  DtMedCutPerf=7000
+  f_cant=Si(Dim1>500;1;0)
+  f_alto=Dim1-10
+  ap_prec_inc=1
+  MedCutPerf=7000
+end
+Componente No Visual
+  id=LL12070003000_1
+  art=12070003000
+  desc=Casquillo punta de 70 con eje
+  tipo_ctrl=0
+  Despiece=1
+  TipoCurva=0
+  AngCorteI=0
+  AngCorteD=0
+  Centro=0
+  TipoTarifa=2
+  f_cant=Si(Dim1>500;1;0)
+  ap_prec_inc=1
+end
+Componente No Visual
+  id=LL12070009000_1
+  art=12070009000
+  desc=Casquillo maquina de 70 mini
+  tipo_ctrl=0
+  Despiece=0
+  TipoCurva=0
+  AngCorteI=0
+  AngCorteD=0
+  Centro=0
+  TipoTarifa=1
+  f_cant=Si((Dim1>500)y(@MaquinaInterior=1);1;0)
+  desccomp=1
+end
+Componente No Visual
+  id=LL12070001000_1
+  art=12070001000
+  desc=Casquillo maquina de 70 l
+  tipo_ctrl=0
+  Despiece=1
+  TipoCurva=0
+  AngCorteI=0
+  AngCorteD=0
+  Centro=0
+  TipoTarifa=2
+  f_cant=Si((Dim1>500)y(@MaquinaExterior=1);1;0)
+  ap_prec_inc=1
+end
+Componente No Visual
+  id=LL13006080001_1
+  funcion=21
+  art=13006080001
+  desc=Manivela standard 0,80m BL
+  tipo_ctrl=0
+  color=Blanco
+  Despiece=1
+  TipoCurva=0
+  AngCorteI=0
+  AngCorteD=0
+  Centro=0
+  TipoTarifa=2
+  f_cant=@Manivela=1
+  ap_prec_inc=1
+end
+Componente No Visual
+  id=LL13006100001_1
+  funcion=21
+  art=13006100001
+  desc=Manivela standard 1,00m BL
+  tipo_ctrl=0
+  color=Blanco
+  Despiece=1
+  TipoCurva=0
+  AngCorteI=0
+  AngCorteD=0
+  Centro=0
+  TipoTarifa=2
+  f_cant=@Manivela=2
+  ap_prec_inc=1
+end
+Componente No Visual
+  id=LL13006120001_1
+  funcion=21
+  art=13006120001
+  desc=Manivela standard 1,20m BL
+  tipo_ctrl=0
+  color=Blanco
+  Despiece=1
+  TipoCurva=0
+  AngCorteI=0
+  AngCorteD=0
+  Centro=0
+  TipoTarifa=2
+  f_cant=@Manivela=3
+  ap_prec_inc=1
+end
+Componente No Visual
+  id=LL13006150001_1
+  funcion=21
+  art=13006150001
+  desc=Manivela standard 1,50m BL
+  tipo_ctrl=0
+  color=Blanco
+  Despiece=1
+  TipoCurva=0
+  AngCorteI=0
+  AngCorteD=0
+  Centro=0
+  TipoTarifa=2
+  f_cant=@Manivela=4
+  ap_prec_inc=1
+end
+Componente No Visual
+  id=LL13006170001_1
+  funcion=21
+  art=13006170001
+  desc=Manivela standard 1,70m BL
+  tipo_ctrl=0
+  color=Blanco
+  Despiece=1
+  TipoCurva=0
+  AngCorteI=0
+  AngCorteD=0
+  Centro=0
+  TipoTarifa=2
+  f_cant=@Manivela=5
+  ap_prec_inc=1
+end
+Componente No Visual
+  id=LL13005200001_1
+  funcion=21
+  art=13005200001
+  desc=Manivela LUXE 2,00m NX BL
+  tipo_ctrl=0
+  color=Blanco
+  Despiece=1
+  TipoCurva=0
+  AngCorteI=0
+  AngCorteD=0
+  Centro=0
+  TipoTarifa=2
+  f_cant=@Manivela=6
+  ap_prec_inc=1
+end
+Componente No Visual
+  id=LL13005225001_1
+  funcion=21
+  art=13005225001
+  desc=Manivela LUXE 2,25m NX BL
+  tipo_ctrl=0
+  color=Blanco
+  Despiece=1
+  TipoCurva=0
+  AngCorteI=0
+  AngCorteD=0
+  Centro=0
+  TipoTarifa=2
+  f_cant=@Manivela=7
+  ap_prec_inc=1
+end
+Componente No Visual
+  id=LL13005250001_1
+  funcion=21
+  art=13005250001
+  desc=Manivela LUXE 2,50m NX BL
+  tipo_ctrl=0
+  color=Blanco
+  Despiece=1
+  TipoCurva=0
+  AngCorteI=0
+  AngCorteD=0
+  Centro=0
+  TipoTarifa=2
+  f_cant=@Manivela=8
+  ap_prec_inc=1
+end
+
+class=TEstRelleno
+  x=0
+  y=0
+  w=250
+  h=300
+end
+

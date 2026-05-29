@@ -1,0 +1,26 @@
+{
+  "id": "PALCPZ9050",
+  "nombre": "Toldo de palilleria zen con porteria 90 x 50",
+  "tipo": "palilleria",
+  "version": "2025.09",
+  "fuente": {
+    "abd": "+PALCPZ9050.abd"
+  },
+  "dimensiones": {
+    "linea": {
+      "min": 0,
+      "max": 0,
+      "valores": []
+    },
+    "salida": {
+      "min": 0,
+      "max": 0,
+      "valores": []
+    }
+  },
+  "tarifa": {
+    "matriz": {}
+  },
+  "motores": [],
+  "reglas": []
+}

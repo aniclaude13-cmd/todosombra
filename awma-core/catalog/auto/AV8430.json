@@ -1,0 +1,114 @@
+{
+  "id": "AV8430",
+  "nombre": "NEXUS 80 sistema vertical con guia y ZIP",
+  "tipo": "vertical",
+  "version": "2025.09",
+  "fuente": {
+    "abd": "AV8430.abd"
+  },
+  "dimensiones": {
+    "linea": {
+      "min": 85,
+      "max": 200,
+      "valores": []
+    },
+    "salida": {
+      "min": 50,
+      "max": 200,
+      "valores": []
+    }
+  },
+  "tarifa": {
+    "matriz": {}
+  },
+  "motores": [
+    {
+      "id": "manual",
+      "nombre": "Manivela",
+      "recargo": 0,
+      "familia": "manual"
+    },
+    {
+      "id": "somfy_motor_lt",
+      "nombre": "Somfy Motor Lt",
+      "recargo": 0,
+      "familia": "somfy"
+    },
+    {
+      "id": "somfy_motor_rts",
+      "nombre": "Somfy Motor Rts",
+      "recargo": 0,
+      "familia": "somfy"
+    },
+    {
+      "id": "somfy_motor_io",
+      "nombre": "Somfy Motor Io",
+      "recargo": 0,
+      "familia": "somfy"
+    },
+    {
+      "id": "cherubini_motor_mecanico",
+      "nombre": "Cherubini Motor Mecanico",
+      "recargo": 0,
+      "familia": "cherubini"
+    },
+    {
+      "id": "cherubini_motor_wave_rx_radio",
+      "nombre": "Cherubini Motor Wave Rx Radio",
+      "recargo": 0,
+      "familia": "cherubini"
+    },
+    {
+      "id": "gaviota_motor_elite_radio",
+      "nombre": "Gaviota Motor Elite Radio",
+      "recargo": 0,
+      "familia": "gaviota"
+    }
+  ],
+  "reglas": [
+    {
+      "id": "linea_min",
+      "descripcion": "Línea mínima del modelo",
+      "efecto": "bloqueo",
+      "mensaje": "Línea mínima del AV8430: 85 cm.",
+      "condicion": {
+        "linea": {
+          "lt": 85
+        }
+      }
+    },
+    {
+      "id": "linea_max",
+      "descripcion": "Línea máxima del modelo",
+      "efecto": "bloqueo",
+      "mensaje": "Línea máxima del AV8430: 200 cm.",
+      "condicion": {
+        "linea": {
+          "gt": 200
+        }
+      }
+    },
+    {
+      "id": "salida_min",
+      "descripcion": "Salida mínima del modelo",
+      "efecto": "bloqueo",
+      "mensaje": "Salida mínima del AV8430: 50 cm.",
+      "condicion": {
+        "salida": {
+          "lt": 50
+        }
+      }
+    },
+    {
+      "id": "salida_max",
+      "descripcion": "Salida máxima del modelo",
+      "efecto": "bloqueo",
+      "mensaje": "Salida máxima del AV8430: 200 cm.",
+      "condicion": {
+        "salida": {
+          "gt": 200
+        }
+      }
+    }
+  ]
+}

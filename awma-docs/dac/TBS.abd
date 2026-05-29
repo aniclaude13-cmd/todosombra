@@ -1,0 +1,147 @@
+articulo=*TBS
+desc=Toldo brazo stor
+NewEstruc=1
+color perfil=Blanco
+color accesorios=Blanco
+dim1=100
+dim2=150
+tipoacabado=8
+AplMultAncho=1
+intAtLin=50
+intAtEA=70
+ilumPrC=20
+ilumPrL=40
+ilumPrF=50
+ProfSombCerr=1
+
+##Datos_Estructura##
+
+Id=0
+PintCotasAut=0
+Modulo000=001         0         0         0         0
+
+
+
+Componente No Visual
+  id=SV51000501_2
+  art=51000501
+  desc=Juego brazo stor lacado blanco 0,50 m.
+  tipo_ctrl=0
+  color=Blanco
+  Despiece=0
+  TipoCurva=0
+  AngCorteI=0
+  AngCorteD=0
+  Centro=0
+  TipoTarifa=1
+  DtMedCutPerf=4000
+  f_cant=1
+  MedCutPerf=4000
+end
+Componente No Visual
+  id=SV50010001_1
+  art=50010001
+  desc=Juego soportes jaraba con eje blanco
+  tipo_ctrl=0
+  color=Blanco
+  Despiece=0
+  TipoCurva=0
+  AngCorteI=0
+  AngCorteD=0
+  Centro=0
+  TipoTarifa=1
+  DtMedCutPerf=4000
+  f_cant=1
+  MedCutPerf=4000
+end
+Componente No Visual
+  id=SV71300001_1
+  art=71300001
+  desc=Maquina siplan 1.3 blanco
+  tipo_ctrl=0
+  color=Blanco
+  Despiece=0
+  TipoCurva=0
+  AngCorteI=0
+  AngCorteD=0
+  Centro=0
+  TipoTarifa=1
+  DtMedCutPerf=4000
+  f_cant=1
+  MedCutPerf=4000
+end
+Componente No Visual
+  id=SV51020001_1
+  art=51020001
+  desc=Juego enganche baranda brazo stor blanco
+  tipo_ctrl=0
+  color=Blanco
+  Despiece=0
+  TipoCurva=0
+  AngCorteI=0
+  AngCorteD=0
+  Centro=0
+  TipoTarifa=1
+  DtMedCutPerf=4000
+  f_cant=1
+  MedCutPerf=4000
+end
+Componente No Visual
+  id=SV51030001_1
+  art=51030001
+  desc=Terminal inferior stor blanco
+  tipo_ctrl=0
+  color=Blanco
+  Despiece=0
+  TipoCurva=0
+  AngCorteI=0
+  AngCorteD=0
+  Centro=0
+  TipoTarifa=1
+  DtMedCutPerf=4000
+  f_cant=1
+  MedCutPerf=4000
+end
+Componente No Visual
+  id=SV51040001_1
+  art=51040001
+  desc=Juego herraje brazo stor lacado blanco
+  tipo_ctrl=0
+  color=Blanco
+  Despiece=0
+  TipoCurva=0
+  AngCorteI=0
+  AngCorteD=0
+  Centro=0
+  TipoTarifa=1
+  DtMedCutPerf=4000
+  f_cant=1
+  MedCutPerf=4000
+end
+Componente No Visual
+  id=SV51506002_1
+  funcion=19
+  art=51506002
+  desc=Perfil brazo stor lacado bronce 6 m.
+  color=Blanco
+  tipo_corte_izq=|
+  tipo_corte_der=|
+  Despiece=0
+  TipoCurva=0
+  AngCorteI=90
+  AngCorteD=90
+  Centro=0
+  TipoTarifa=1
+  DtMedCutPerf=4000
+  f_cant=1
+  f_alto=DIM1
+  MedCutPerf=4000
+end
+
+class=TEstRelleno
+  x=0
+  y=0
+  w=150
+  h=100
+end
+

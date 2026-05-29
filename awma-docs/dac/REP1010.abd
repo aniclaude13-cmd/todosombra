@@ -1,0 +1,111 @@
+articulo=REP1010
+desc=TEJIDO  METREADO
+NewEstruc=1
+color perfil=Blanco
+color accesorios=Blanco
+dim1=120
+dim2=800
+tipoacabado=8
+ActivarFaldon=0
+AplMultAncho=1
+intAtLin=50
+intAtEA=70
+ilumPrC=20
+ilumPrL=40
+ilumPrF=50
+ProfSombCerr=1
+
+##Datos_Estructura##
+
+Id=0
+PintCotasAut=0
+Modulo000=001         0         0         0         0
+
+
+
+Componente No Visual
+  id=LONA_1
+  funcion=18
+  art=AA_LONA
+  desc=COLOCACION DE REFERENCIA DE LONA
+  tipo_ctrl=0
+  eDim1=840
+  eDim2=120
+  Despiece=1
+  TipoCurva=0
+  AngCorteI=0
+  AngCorteD=0
+  Centro=0
+  TipoTarifa=2
+  f_cant=0
+  f_Dim1=Dim2+40
+  f_Dim2=Dim1
+  desccomp=1
+  ap_prec_inc=1
+end
+Componente No Visual
+  id=PVPREP1000BL_1
+  art=PVP_REP1000/BL
+  desc=Precio para REP1000, lona stor
+  tipo_ctrl=0
+  eDim1=120
+  eDim2=800
+  Despiece=0
+  TipoCurva=0
+  AngCorteI=0
+  AngCorteD=0
+  Centro=0
+  TipoTarifa=1
+  f_cant=1
+  f_Dim1=DIM1
+  f_Dim2=DIM2
+end
+Componente No Visual
+  id=AMETROS_1
+  art=ZZZ_METROS
+  desc=T.e. necesarias / ML total
+  Despiece=1
+  TipoCurva=0
+  AngCorteI=0
+  AngCorteD=0
+  Centro=0
+  TipoTarifa=2
+  red_cant=7
+  red_Dim1=2
+  ap_prec_inc=1
+end
+Componente No Visual
+  id=Comprobado_1
+  art=Comprobado
+  desc=Revisado por:
+  tipo_ctrl=0
+  Despiece=0
+  TipoCurva=0
+  AngCorteI=0
+  AngCorteD=0
+  Centro=0
+  TipoTarifa=1
+  OrdenEtiquetas=1
+  f_cant=0
+end
+Componente No Visual
+  id=COMPROB2_1
+  art=COMPROB2
+  desc=Confección por:
+  tipo_ctrl=0
+  Despiece=0
+  TipoCurva=0
+  AngCorteI=0
+  AngCorteD=0
+  Centro=0
+  TipoTarifa=1
+  f_cant=1
+end
+
+class=TEstRelleno
+  x=0
+  y=0
+  w=800
+  h=120
+end
+

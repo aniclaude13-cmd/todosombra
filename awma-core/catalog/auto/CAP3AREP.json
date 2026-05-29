@@ -1,0 +1,26 @@
+{
+  "id": "CAP3AREP",
+  "nombre": "Reposicion lona capota grapada de tres arcos aluminio blanco",
+  "tipo": "otro",
+  "version": "2025.09",
+  "fuente": {
+    "abd": "CAP3AREP.abd"
+  },
+  "dimensiones": {
+    "linea": {
+      "min": 0,
+      "max": 0,
+      "valores": []
+    },
+    "salida": {
+      "min": 0,
+      "max": 0,
+      "valores": []
+    }
+  },
+  "tarifa": {
+    "matriz": {}
+  },
+  "motores": [],
+  "reglas": []
+}

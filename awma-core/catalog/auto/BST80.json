@@ -1,0 +1,51 @@
+{
+  "id": "BST80",
+  "nombre": "B_STORE CON TEJIDO SOLTIS SERGE",
+  "tipo": "vertical",
+  "version": "2025.09",
+  "fuente": {
+    "abd": "BST80.abd"
+  },
+  "dimensiones": {
+    "linea": {
+      "min": 0,
+      "max": 0,
+      "valores": []
+    },
+    "salida": {
+      "min": 0,
+      "max": 0,
+      "valores": []
+    }
+  },
+  "tarifa": {
+    "matriz": {}
+  },
+  "motores": [
+    {
+      "id": "manual",
+      "nombre": "Manivela",
+      "recargo": 0,
+      "familia": "manual"
+    },
+    {
+      "id": "somfy_motor_lt",
+      "nombre": "Somfy Motor Lt",
+      "recargo": 0,
+      "familia": "somfy"
+    },
+    {
+      "id": "somfy_motor_rts",
+      "nombre": "Somfy Motor Rts",
+      "recargo": 0,
+      "familia": "somfy"
+    },
+    {
+      "id": "somfy_motor_io",
+      "nombre": "Somfy Motor Io",
+      "recargo": 0,
+      "familia": "somfy"
+    }
+  ],
+  "reglas": []
+}

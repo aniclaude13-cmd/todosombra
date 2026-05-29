@@ -1,0 +1,847 @@
+articulo=+MICROBOX300
+desc=Toldo Microbox 300
+NewEstruc=1
+color perfil=Blanco
+color accesorios=Blanco
+dim1=300
+dim2=120
+tipoacabado=8
+AplMultAncho=1
+intAtLin=50
+intAtEA=70
+ilumPrC=20
+ilumPrL=40
+ilumPrF=50
+ProfSombCerr=1
+
+##Datos_Estructura##
+
+Id=0
+PintCotasAut=0
+Modulo000=001         0         0         0         0
+
+
+
+Variable
+  nombre=@TipoInstalacion
+  valor=4
+  tipovar=1
+  formula=
+  max=0
+  min=0
+  actmin=0
+  actmax=0
+  selec=3
+  peticion=1
+  condicion=
+  varserie=0
+  PermEdRes=0
+  ResManual=0
+  ValorManual=0
+  agrupar=0
+  enum_0_texto=Frontal - Techo
+  enum_0_valor=1
+  enum_0_condicion=
+  enum_1_texto=Techo
+  enum_1_valor=2
+  enum_1_condicion=
+  enum_2_texto=Frontal
+  enum_2_valor=3
+  enum_2_condicion=
+  enum_3_texto=Entre paredes
+  enum_3_valor=4
+  enum_3_condicion=
+end
+Variable
+  nombre=@Manivela
+  valor=0
+  tipovar=1
+  formula=
+  max=0
+  min=0
+  actmin=0
+  actmax=0
+  selec=8
+  peticion=1
+  condicion=(@MotorSomfy=0)y(@MotorCherubini=0)
+  varserie=0
+  PermEdRes=0
+  ResManual=0
+  ValorManual=0
+  agrupar=0
+  enum_0_texto=80 cm
+  enum_0_valor=1
+  enum_0_condicion=
+  enum_1_texto=100 cm
+  enum_1_valor=2
+  enum_1_condicion=
+  enum_2_texto=120 cm
+  enum_2_valor=3
+  enum_2_condicion=
+  enum_3_texto=150 cm
+  enum_3_valor=4
+  enum_3_condicion=
+  enum_4_texto=170 cm
+  enum_4_valor=5
+  enum_4_condicion=
+  enum_5_texto=200 cm
+  enum_5_valor=6
+  enum_5_condicion=
+  enum_6_texto=225 cm
+  enum_6_valor=7
+  enum_6_condicion=
+  enum_7_texto=250 cm
+  enum_7_valor=8
+  enum_7_condicion=
+  enum_8_texto=No lleva
+  enum_8_valor=0
+  enum_8_condicion=
+end
+Variable
+  nombre=@MaquinaInterior
+  valor=1
+  tipovar=1
+  formula=
+  max=0
+  min=0
+  actmin=0
+  actmax=0
+  selec=1
+  peticion=1
+  condicion=
+  varserie=0
+  PermEdRes=0
+  ResManual=0
+  ValorManual=0
+  agrupar=0
+  enum_0_texto=No
+  enum_0_valor=0
+  enum_0_condicion=
+  enum_1_texto=Sí
+  enum_1_valor=1
+  enum_1_condicion=
+end
+Variable
+  nombre=@MaquinaExterior
+  valor=0
+  tipovar=1
+  formula=
+  max=0
+  min=0
+  actmin=0
+  actmax=0
+  selec=0
+  peticion=1
+  condicion=
+  varserie=0
+  PermEdRes=0
+  ResManual=0
+  ValorManual=0
+  agrupar=0
+  enum_0_texto=No
+  enum_0_valor=0
+  enum_0_condicion=
+  enum_1_texto=Sí
+  enum_1_valor=1
+  enum_1_condicion=
+end
+Variable
+  nombre=@MotorSomfy
+  valor=0
+  tipovar=1
+  formula=
+  max=0
+  min=0
+  actmin=0
+  actmax=0
+  selec=0
+  peticion=1
+  condicion=
+  varserie=0
+  PermEdRes=0
+  ResManual=0
+  ValorManual=0
+  agrupar=0
+  enum_0_texto=No
+  enum_0_valor=0
+  enum_0_condicion=
+  enum_1_texto=RTS
+  enum_1_valor=1
+  enum_1_condicion=
+  enum_2_texto=IO
+  enum_2_valor=2
+  enum_2_condicion=
+  enum_3_texto=WT
+  enum_3_valor=3
+  enum_3_condicion=
+  enum_4_texto=T/H 70
+  enum_4_valor=4
+  enum_4_condicion=
+end
+Variable
+  nombre=@MotorCherubini
+  valor=1
+  tipovar=1
+  formula=
+  max=0
+  min=0
+  actmin=0
+  actmax=0
+  selec=1
+  peticion=1
+  condicion=
+  varserie=0
+  PermEdRes=0
+  ResManual=0
+  ValorManual=0
+  agrupar=0
+  enum_0_texto=No
+  enum_0_valor=0
+  enum_0_condicion=
+  enum_1_texto=Sí
+  enum_1_valor=1
+  enum_1_condicion=
+end
+Variable
+  nombre=@MedidaFaldon
+  valor=25
+  tipovar=0
+  formula=
+  max=0
+  min=0
+  actmin=0
+  actmax=0
+  selec=-1
+  peticion=1
+  condicion=
+  varserie=0
+  PermEdRes=0
+  ResManual=0
+  ValorManual=0
+  agrupar=0
+end
+Componente No Visual
+  id=LLPVPMICROBOX300BL_1
+  art=LLPVPMICROBOX300/BL
+  desc=Precio Toldo Microbox 300
+  tipo_ctrl=0
+  color=Blanco
+  Despiece=0
+  TipoCurva=0
+  AngCorteI=0
+  AngCorteD=0
+  Centro=0
+  TipoTarifa=1
+  f_cant=1
+end
+Componente No Visual
+  id=G77LONA_1
+  funcion=18
+  art=G77LONA
+  desc=Lona
+  tipo_ctrl=0
+  eDim1=240
+  eDim2=287.5
+  Despiece=1
+  TipoCurva=0
+  AngCorteI=0
+  AngCorteD=0
+  Centro=0
+  TipoTarifa=2
+  f_cant=1
+  f_Dim1=Dim2+120
+  f_Dim2=Si((@TipoInstalacion=1);Dim1-10;0)+#@#Si((@TipoInstalacion=4);Dim1-12,5;0)
+  desccomp=1
+  ap_prec_inc=1
+end
+Componente No Visual
+  id=G77FALDON_1
+  funcion=24
+  art=G77FALDON
+  desc=Faldón
+  tipo_ctrl=0
+  eDim1=25
+  eDim2=287.5
+  Despiece=1
+  TipoCurva=0
+  AngCorteI=0
+  AngCorteD=0
+  Centro=0
+  TipoTarifa=2
+  f_cant=1
+  f_Dim1=@MedidaFaldon
+  f_Dim2=Si((@TipoInstalacion=1);Dim1-10;0)+#@#Si((@TipoInstalacion=4);Dim1-12,5;0)
+  ap_prec_inc=1
+end
+Componente No Visual
+  id=LL39066500001_1
+  art=39066500001
+  desc=Kit perfiles MICROBOX-300 5,00m BL
+  ancho_perfil=10
+  color=Blanco
+  tipo_corte_izq=|
+  tipo_corte_der=|
+  Despiece=1
+  TipoCurva=0
+  AngCorteI=90
+  AngCorteD=90
+  Centro=0
+  TipoTarifa=2
+  DtMedCutPerf=5000
+  f_cant=Si(Dim1>400;1;0)
+  f_alto=Si((@TipoInstalacion=1);Dim1-8;0)+#@#Si((@TipoInstalacion=4);Dim1-10,5;0)
+  ap_prec_inc=1
+  MedCutPerf=5000
+end
+Componente No Visual
+  id=LL39066700001_1
+  art=39066700001
+  desc=Kit perfiles MICROBOX-300 7,00m BL
+  ancho_perfil=10
+  color=Blanco
+  tipo_corte_izq=|
+  tipo_corte_der=|
+  Despiece=1
+  TipoCurva=0
+  AngCorteI=90
+  AngCorteD=90
+  Centro=0
+  TipoTarifa=2
+  DtMedCutPerf=7000
+  f_cant=Si(Dim1<=400;1;0)
+  f_alto=Si((@TipoInstalacion=1);Dim1-8;0)+#@#Si((@TipoInstalacion=4);Dim1-10,5;0)
+  ap_prec_inc=1
+  MedCutPerf=7000
+end
+Componente No Visual
+  id=LL20047005001_1
+  art=20047005001
+  desc=Juego soporte frontal techo MICROBOX 300 BL
+  tipo_ctrl=0
+  color=Blanco
+  Despiece=1
+  TipoCurva=0
+  AngCorteI=0
+  AngCorteD=0
+  Centro=0
+  TipoTarifa=2
+  f_cant=Si((Dim1<=400)y(@TipoInstalacion=1);1,5;0)+#@#Si((Dim1>400)y(@TipoInstalacion=1);2,5;0)
+  ap_prec_inc=1
+end
+Componente No Visual
+  id=LL20047006001_1
+  art=20047006001
+  desc=Juego soporte entreparedes MICROBOX 300 BL
+  tipo_ctrl=0
+  color=Blanco
+  Despiece=1
+  TipoCurva=0
+  AngCorteI=0
+  AngCorteD=0
+  Centro=0
+  TipoTarifa=2
+  f_cant=Si(@TipoInstalacion=4;1;0)
+  ap_prec_inc=1
+end
+Componente No Visual
+  id=LL20047007001_1
+  art=20047007001
+  desc=Kit accionamiento manivela o motor MICROBOX 300 BL
+  tipo_ctrl=0
+  color=Blanco
+  Despiece=1
+  TipoCurva=0
+  AngCorteI=0
+  AngCorteD=0
+  Centro=0
+  TipoTarifa=2
+  f_cant=1
+  ap_prec_inc=1
+end
+Componente No Visual
+  id=LL21008007001_1
+  art=21008007001
+  desc=Maquina  ZNP-6 L-170 BL
+  tipo_ctrl=0
+  color=Blanco
+  Despiece=1
+  TipoCurva=0
+  AngCorteI=0
+  AngCorteD=0
+  Centro=0
+  TipoTarifa=2
+  f_cant=@Manivela>0
+  ap_prec_inc=1
+end
+Componente No Visual
+  id=LL11002033000_1
+  art=11002033000
+  desc=Kit tornillos maquinas sp. MICROBOX 300
+  tipo_ctrl=0
+  Despiece=1
+  TipoCurva=0
+  AngCorteI=0
+  AngCorteD=0
+  Centro=0
+  TipoTarifa=2
+  f_cant=@Manivela>0
+  ap_prec_inc=1
+end
+Componente No Visual
+  id=LL10071070001_1
+  funcion=20
+  art=10071070001
+  desc=Juego brazos PRT 07 0,70m BL
+  tipo_ctrl=0
+  color=Blanco
+  Despiece=1
+  TipoCurva=0
+  AngCorteI=0
+  AngCorteD=0
+  Centro=0
+  TipoTarifa=2
+  f_cant=Si(Dim2<=70;1;0)
+  ap_prec_inc=1
+end
+Componente No Visual
+  id=LL10071080001_1
+  funcion=20
+  art=10071080001
+  desc=Juego brazos PRT 07 0,80m BL
+  tipo_ctrl=0
+  color=Blanco
+  Despiece=1
+  TipoCurva=0
+  AngCorteI=0
+  AngCorteD=0
+  Centro=0
+  TipoTarifa=2
+  f_cant=Si((Dim2>70)y(Dim2<=80);1;0)
+  ap_prec_inc=1
+end
+Componente No Visual
+  id=LL10071090001_1
+  funcion=20
+  art=10071090001
+  desc=Juego brazos PRT 07 0,90m BL
+  tipo_ctrl=0
+  color=Blanco
+  Despiece=1
+  TipoCurva=0
+  AngCorteI=0
+  AngCorteD=0
+  Centro=0
+  TipoTarifa=2
+  f_cant=Si((Dim2>80)y(Dim2<=90);1;0)
+  ap_prec_inc=1
+end
+Componente No Visual
+  id=LL10071100001_1
+  funcion=20
+  art=10071100001
+  desc=Juego brazos PRT 07 1,00m BL
+  tipo_ctrl=0
+  color=Blanco
+  Despiece=1
+  TipoCurva=0
+  AngCorteI=0
+  AngCorteD=0
+  Centro=0
+  TipoTarifa=2
+  f_cant=Si((Dim2>90)y(Dim2<=100);1;0)
+  ap_prec_inc=1
+end
+Componente No Visual
+  id=LL10071120001_1
+  funcion=20
+  art=10071120001
+  desc=Juego brazos PRT 07 1,20m BL
+  tipo_ctrl=0
+  color=Blanco
+  Despiece=1
+  TipoCurva=0
+  AngCorteI=0
+  AngCorteD=0
+  Centro=0
+  TipoTarifa=2
+  f_cant=Si((Dim2>100)y(Dim2<=120);1;0)
+  ap_prec_inc=1
+end
+Componente No Visual
+  id=LL10071140001_1
+  funcion=20
+  art=10071140001
+  desc=Juego brazos PRT 07 1,40m BL
+  tipo_ctrl=0
+  color=Blanco
+  Despiece=1
+  TipoCurva=0
+  AngCorteI=0
+  AngCorteD=0
+  Centro=0
+  TipoTarifa=2
+  f_cant=Si((Dim2>120)y(Dim2<=140);1;0)
+  ap_prec_inc=1
+end
+Componente No Visual
+  id=LL12060003000_1
+  art=12060003000
+  desc=Casquillo punta de 60 con eje
+  tipo_ctrl=0
+  Despiece=1
+  TipoCurva=0
+  AngCorteI=0
+  AngCorteD=0
+  Centro=0
+  TipoTarifa=2
+  f_cant=Si((Dim1<=500)y(@Manivela>=0);1;0)
+  ap_prec_inc=1
+end
+Componente No Visual
+  id=LL12070003000_1
+  art=12070003000
+  desc=Casquillo punta de 70 con eje
+  tipo_ctrl=0
+  Despiece=1
+  TipoCurva=0
+  AngCorteI=0
+  AngCorteD=0
+  Centro=0
+  TipoTarifa=2
+  f_cant=Si((Dim1>500)y((@MotorSomfy>0)o(@MotorCherubini>0));1;0)
+  ap_prec_inc=1
+end
+Componente No Visual
+  id=LL12060009000_1
+  art=12060009000
+  desc=Casquillo maquina de 60 mini
+  tipo_ctrl=0
+  Despiece=1
+  TipoCurva=0
+  AngCorteI=0
+  AngCorteD=0
+  Centro=0
+  TipoTarifa=2
+  f_cant=Si((Dim1<=500)y(@Manivela>0)y(@MaquinaInterior=1);1;0)
+  ap_prec_inc=1
+end
+Componente No Visual
+  id=LL12060001000_1
+  art=12060001000
+  desc=Casquillo maquina de 60 L
+  tipo_ctrl=0
+  Despiece=1
+  TipoCurva=0
+  AngCorteI=0
+  AngCorteD=0
+  Centro=0
+  TipoTarifa=2
+  f_cant=Si((Dim1<=500)y(@Manivela>0)y(@MaquinaExterior=1);1;0)
+  ap_prec_inc=1
+end
+Componente No Visual
+  id=LL12070009000_1
+  art=12070009000
+  desc=Casquillo maquina de 70 mini
+  tipo_ctrl=0
+  Despiece=1
+  TipoCurva=0
+  AngCorteI=0
+  AngCorteD=0
+  Centro=0
+  TipoTarifa=2
+  f_cant=Si((Dim1>500)y(@Manivela>0)y(@MaquinaInterior=1);1;0)
+  ap_prec_inc=1
+end
+Componente No Visual
+  id=LL31060700044_1
+  funcion=19
+  art=31060700044
+  desc=Tubo H. de enrolle P-601 de 60 galv. 7m
+  ancho_perfil=10
+  tipo_corte_izq=|
+  tipo_corte_der=|
+  Despiece=1
+  TipoCurva=0
+  AngCorteI=90
+  AngCorteD=90
+  Centro=0
+  TipoTarifa=2
+  DtMedCutPerf=7000
+  f_cant=Si((Dim1<500)y(@Manivela>=0);1;0)
+  f_alto=Si((@TipoInstalacion=1)y((@MotorSomfy>0)o#@#(@MotorCherubini>0));Dim1-7;0)+#@#Si((@TipoInstalacion=1)y(@Manivela>0);Dim1-8,3;0)+#@#Si((@TipoInstalacion=4)y((@MotorSomfy>0)o#@#(@MotorCherubini>0));Dim1-9,5;0)+#@#Si((@TipoInstalacion=4)y(@Manivela>0);Dim1-10,8;0)
+  ap_prec_inc=1
+  MedCutPerf=7000
+end
+Componente No Visual
+  id=LL31072500044_1
+  funcion=19
+  art=31072500044
+  desc=Tubo H. de enrolle P-701 de 70 galv. 5m
+  tipo_corte_izq=|
+  tipo_corte_der=|
+  Despiece=1
+  TipoCurva=0
+  AngCorteI=0
+  AngCorteD=0
+  Centro=0
+  TipoTarifa=2
+  DtMedCutPerf=5000
+  f_cant=Si((Dim1=500)y(@Manivela>=0);1;0)
+  ap_prec_inc=1
+  MedCutPerf=5000
+end
+Componente No Visual
+  id=LL31072700044_1
+  funcion=19
+  art=31072700044
+  desc=Tubo H. de enrolle P-701 de 70 galv. 7m
+  ancho_perfil=10
+  tipo_corte_izq=|
+  tipo_corte_der=|
+  Despiece=1
+  TipoCurva=0
+  AngCorteI=0
+  AngCorteD=0
+  Centro=0
+  TipoTarifa=2
+  DtMedCutPerf=7000
+  f_cant=Si((Dim1>500)y(@Manivela>=0);1;0)
+  f_alto=Si((@TipoInstalacion=1)y((@MotorSomfy>0)o#@#(@MotorCherubini>0));Dim1-7;0)+#@#Si((@TipoInstalacion=1)y(@Manivela>0);Dim1-8,3;0)+#@#Si((@TipoInstalacion=4)y((@MotorSomfy>0)o#@#(@MotorCherubini>0));Dim1-9,5;0)+#@#Si((@TipoInstalacion=4)y(@Manivela>0);Dim1-10,8;0)
+  ap_prec_inc=1
+  MedCutPerf=7000
+end
+Componente No Visual
+  id=LL13006080001_1
+  funcion=21
+  art=13006080001
+  desc=Manivela standard 0,80m BL
+  tipo_ctrl=0
+  color=Blanco
+  Despiece=1
+  TipoCurva=0
+  AngCorteI=0
+  AngCorteD=0
+  Centro=0
+  TipoTarifa=2
+  f_cant=@Manivela=1
+  ap_prec_inc=1
+end
+Componente No Visual
+  id=LL13006100001_1
+  funcion=21
+  art=13006100001
+  desc=Manivela standard 1,00m BL
+  tipo_ctrl=0
+  color=Blanco
+  Despiece=1
+  TipoCurva=0
+  AngCorteI=0
+  AngCorteD=0
+  Centro=0
+  TipoTarifa=2
+  f_cant=@Manivela=2
+  ap_prec_inc=1
+end
+Componente No Visual
+  id=LL13006120001_1
+  funcion=21
+  art=13006120001
+  desc=Manivela standard 1,20m BL
+  tipo_ctrl=0
+  color=Blanco
+  Despiece=1
+  TipoCurva=0
+  AngCorteI=0
+  AngCorteD=0
+  Centro=0
+  TipoTarifa=2
+  f_cant=@Manivela=3
+  ap_prec_inc=1
+end
+Componente No Visual
+  id=LL13006150001_1
+  funcion=21
+  art=13006150001
+  desc=Manivela standard 1,50m BL
+  tipo_ctrl=0
+  color=Blanco
+  Despiece=1
+  TipoCurva=0
+  AngCorteI=0
+  AngCorteD=0
+  Centro=0
+  TipoTarifa=2
+  f_cant=@Manivela=4
+  ap_prec_inc=1
+end
+Componente No Visual
+  id=LL13006170001_1
+  funcion=21
+  art=13006170001
+  desc=Manivela standard 1,70m BL
+  tipo_ctrl=0
+  color=Blanco
+  Despiece=1
+  TipoCurva=0
+  AngCorteI=0
+  AngCorteD=0
+  Centro=0
+  TipoTarifa=2
+  f_cant=@Manivela=5
+  ap_prec_inc=1
+end
+Componente No Visual
+  id=LL13005200001_1
+  funcion=21
+  art=13005200001
+  desc=Manivela LUXE 2,00m NX BL
+  tipo_ctrl=0
+  color=Blanco
+  Despiece=1
+  TipoCurva=0
+  AngCorteI=0
+  AngCorteD=0
+  Centro=0
+  TipoTarifa=2
+  f_cant=@Manivela=6
+  ap_prec_inc=1
+end
+Componente No Visual
+  id=LL13005225001_1
+  funcion=21
+  art=13005225001
+  desc=Manivela LUXE 2,25m NX BL
+  tipo_ctrl=0
+  color=Blanco
+  Despiece=1
+  TipoCurva=0
+  AngCorteI=0
+  AngCorteD=0
+  Centro=0
+  TipoTarifa=2
+  f_cant=@Manivela=7
+  ap_prec_inc=1
+end
+Componente No Visual
+  id=LL13005250001_1
+  funcion=21
+  art=13005250001
+  desc=Manivela LUXE 2,50m NX BL
+  tipo_ctrl=0
+  color=Blanco
+  Despiece=1
+  TipoCurva=0
+  AngCorteI=0
+  AngCorteD=0
+  Centro=0
+  TipoTarifa=2
+  f_cant=@Manivela=8
+  ap_prec_inc=1
+end
+Componente No Visual
+  id=SY9910000_1
+  art=9910000
+  desc=Soporte universal Op. HiPro
+  tipo_ctrl=0
+  Despiece=1
+  TipoCurva=0
+  AngCorteI=0
+  AngCorteD=0
+  Centro=0
+  TipoTarifa=2
+  f_cant=Si(@MotorSomfy>0;1;0)
+  ap_prec_inc=1
+end
+Componente No Visual
+  id=SY1039378_1
+  art=1039378
+  desc=Altus 15/17 rts
+  tipo_ctrl=0
+  Despiece=1
+  TipoCurva=0
+  AngCorteI=0
+  AngCorteD=0
+  Centro=0
+  TipoTarifa=2
+  f_cant=Si(@MotorSomfy=1;1;0)
+  ap_prec_inc=1
+end
+Componente No Visual
+  id=SY1112249_1
+  art=1112249
+  desc=Sunea 15/17 io
+  tipo_ctrl=0
+  Despiece=1
+  TipoCurva=0
+  AngCorteI=0
+  AngCorteD=0
+  Centro=0
+  TipoTarifa=2
+  f_cant=Si(@MotorSomfy=2;1;0)
+  ap_prec_inc=1
+end
+Componente No Visual
+  id=SY1039051_1
+  art=1039051
+  desc=Atlas 15/17
+  tipo_ctrl=0
+  Despiece=1
+  TipoCurva=0
+  AngCorteI=0
+  AngCorteD=0
+  Centro=0
+  TipoTarifa=2
+  f_cant=Si(@MotorSomfy=3;1;0)
+  ap_prec_inc=1
+end
+Componente No Visual
+  id=SY9017507_1
+  art=9017507
+  desc=Corona mec.tubo diam.70 ranur.
+  tipo_ctrl=0
+  Despiece=1
+  TipoCurva=0
+  AngCorteI=0
+  AngCorteD=0
+  Centro=0
+  TipoTarifa=2
+  f_cant=Si(@MotorSomfy=4;1;0)
+  ap_prec_inc=1
+end
+Componente No Visual
+  id=SY9751015_1
+  art=9751015
+  desc=Rueda motr. HiP a Ø 68. Llaza
+  tipo_ctrl=0
+  Despiece=1
+  TipoCurva=0
+  AngCorteI=0
+  AngCorteD=0
+  Centro=0
+  TipoTarifa=2
+  f_cant=Si(@MotorSomfy=4;1;0)
+  ap_prec_inc=1
+end
+Componente No Visual
+  id=HRAET45151700_1
+  art=AET45151700
+  desc=Motor Blue Wawe L45 15/17
+  tipo_ctrl=0
+  Despiece=1
+  TipoCurva=0
+  AngCorteI=0
+  AngCorteD=0
+  Centro=0
+  TipoTarifa=2
+  f_cant=Si(@MotorCherubini=1;1;0)
+  ap_prec_inc=1
+end
+
+class=TEstRelleno
+  x=0
+  y=0
+  w=120
+  h=300
+end
+

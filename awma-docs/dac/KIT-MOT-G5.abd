@@ -1,0 +1,178 @@
+articulo=KIT-MOT-G5
+desc=KIT MOTORIZACION VISTA CON CABLE, RUEDA Y TRACCION CONTINUA
+NewEstruc=1
+color perfil=Blanco
+color accesorios=Blanco
+dim2=100
+tipoacabado=8
+ActivarFaldon=0
+AplMultAncho=1
+intAtLin=50
+intAtEA=70
+ilumPrC=20
+ilumPrL=40
+ilumPrF=50
+ProfSombCerr=1
+
+##Datos_Estructura##
+
+Id=0
+AnchoMax=100
+AnchoMin=100
+PintCotasAut=0
+Modulo000=001         0         0         0         0
+
+
+
+Variable
+  nombre=@ACCIONAMIENTO
+  valor=0
+  tipovar=1
+  formula=
+  max=0
+  min=0
+  actmin=0
+  actmax=0
+  selec=0
+  peticion=1
+  condicion=
+  varserie=0
+  PermEdRes=0
+  ResManual=0
+  ValorManual=0
+  agrupar=0
+  enum_0_texto=GAVIOTA
+  enum_0_valor=0
+  enum_0_condicion=
+  enum_1_texto=SOMFY
+  enum_1_valor=1
+  enum_1_condicion=
+  enum_2_texto=CHERUBINI
+  enum_2_valor=2
+  enum_2_condicion=
+end
+Componente No Visual
+  id=PVPKITMOTG5_1
+  art=PVP_KIT-MOT-G5
+  desc=Precio para KIT-MOT-G5
+  Despiece=0
+  TipoCurva=0
+  AngCorteI=0
+  AngCorteD=0
+  Centro=0
+  TipoTarifa=1
+  f_cant=1
+  f_Dim1=DIM1
+end
+Componente No Visual
+  id=ID80140248_1
+  art=80140248
+  desc=Eje 60x0,8 oct s/tal lacado 6 m blanco
+  ancho_perfil=60
+  color=Blanco
+  tipo_corte_izq=|
+  tipo_corte_der=|
+  Despiece=1
+  TipoCurva=0
+  AngCorteI=90
+  AngCorteD=90
+  Centro=0
+  TipoTarifa=2
+  DtMedCutPerf=5890
+  f_cant=1
+  f_alto=DIM1
+  ap_prec_inc=1
+  MedCutPerf=5890
+end
+Componente No Visual
+  id=ID60110012_1
+  art=60110012
+  desc=Kit motorizacion toldo plano N-1 s/mot 5M
+  tipo_ctrl=0
+  Despiece=1
+  TipoCurva=0
+  AngCorteI=0
+  AngCorteD=0
+  Centro=0
+  TipoTarifa=2
+  f_cant=1
+  ap_prec_inc=1
+end
+Componente No Visual
+  id=ID9910000_1
+  art=9910000
+  desc=Soporte universal Op. HiPro
+  tipo_ctrl=0
+  Despiece=1
+  TipoCurva=0
+  AngCorteI=0
+  AngCorteD=0
+  Centro=0
+  TipoTarifa=2
+  f_cant=SI(@ACCIONAMIENTO=1;1;0)
+  ap_prec_inc=1
+end
+Componente No Visual
+  id=ID9751001_1
+  art=9751001
+  desc=Rueda motr.HiP.a Imbac 60 Octo
+  tipo_ctrl=0
+  Despiece=1
+  TipoCurva=0
+  AngCorteI=0
+  AngCorteD=0
+  Centro=0
+  TipoTarifa=2
+  f_cant=SI(@ACCIONAMIENTO=1;1;0)
+  ap_prec_inc=1
+end
+Componente No Visual
+  id=ID9707025_1
+  art=9707025
+  desc=Corona adap.LT50 Imbac 60 octo
+  tipo_ctrl=0
+  Despiece=1
+  TipoCurva=0
+  AngCorteI=0
+  AngCorteD=0
+  Centro=0
+  TipoTarifa=2
+  f_cant=SI(@ACCIONAMIENTO=1;1;0)
+  ap_prec_inc=1
+end
+Componente No Visual
+  id=A45060638_1
+  art=A4506_0638
+  desc=Soporte universal rápido
+  tipo_ctrl=0
+  Despiece=1
+  TipoCurva=0
+  AngCorteI=0
+  AngCorteD=0
+  Centro=0
+  TipoTarifa=2
+  f_cant=SI(@ACCIONAMIENTO=2;1;0)
+  ap_prec_inc=1
+end
+Componente No Visual
+  id=A45050510_1
+  art=A4505_0510
+  desc=Adaptador 60 octogonal
+  tipo_ctrl=0
+  Despiece=1
+  TipoCurva=0
+  AngCorteI=0
+  AngCorteD=0
+  Centro=0
+  TipoTarifa=2
+  f_cant=SI(@ACCIONAMIENTO=2;1;0)
+  ap_prec_inc=1
+end
+
+class=TEstRelleno
+  x=0
+  y=0
+  w=100
+  h=0
+end
+

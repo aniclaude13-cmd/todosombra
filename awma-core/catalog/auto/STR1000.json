@@ -1,0 +1,132 @@
+{
+  "id": "STR1000",
+  "nombre": "Toldo STOR BALCON con brazo de 50 cm",
+  "tipo": "toldo_brazo",
+  "version": "2025.09",
+  "fuente": {
+    "abd": "STR1000.abd"
+  },
+  "dimensiones": {
+    "linea": {
+      "min": 100,
+      "max": 600,
+      "valores": []
+    },
+    "salida": {
+      "min": 170,
+      "max": 250,
+      "valores": []
+    }
+  },
+  "tarifa": {
+    "matriz": {}
+  },
+  "motores": [
+    {
+      "id": "manual",
+      "nombre": "Manivela",
+      "recargo": 0,
+      "familia": "manual"
+    },
+    {
+      "id": "somfy_motor_lt",
+      "nombre": "Somfy Motor Lt",
+      "recargo": 0,
+      "familia": "somfy"
+    },
+    {
+      "id": "somfy_motor_rts",
+      "nombre": "Somfy Motor Rts",
+      "recargo": 0,
+      "familia": "somfy"
+    },
+    {
+      "id": "somfy_motor_io",
+      "nombre": "Somfy Motor Io",
+      "recargo": 0,
+      "familia": "somfy"
+    },
+    {
+      "id": "cherubini_motor_mecanico",
+      "nombre": "Cherubini Motor Mecanico",
+      "recargo": 0,
+      "familia": "cherubini"
+    },
+    {
+      "id": "cherubini_motor_wave_rx_radio",
+      "nombre": "Cherubini Motor Wave Rx Radio",
+      "recargo": 0,
+      "familia": "cherubini"
+    },
+    {
+      "id": "gaviota_motor_gs_mecanico",
+      "nombre": "Gaviota Motor Gs Mecanico",
+      "recargo": 0,
+      "familia": "gaviota"
+    },
+    {
+      "id": "gaviota_motor_elite_radio",
+      "nombre": "Gaviota Motor Elite Radio",
+      "recargo": 0,
+      "familia": "gaviota"
+    },
+    {
+      "id": "aok_motor_mecanico",
+      "nombre": "Aok Motor Mecanico",
+      "recargo": 0,
+      "familia": "aok"
+    },
+    {
+      "id": "aok_motor_radio",
+      "nombre": "Aok Motor Radio",
+      "recargo": 0,
+      "familia": "aok"
+    }
+  ],
+  "reglas": [
+    {
+      "id": "linea_min",
+      "descripcion": "Línea mínima del modelo",
+      "efecto": "bloqueo",
+      "mensaje": "Línea mínima del STR1000: 100 cm.",
+      "condicion": {
+        "linea": {
+          "lt": 100
+        }
+      }
+    },
+    {
+      "id": "linea_max",
+      "descripcion": "Línea máxima del modelo",
+      "efecto": "bloqueo",
+      "mensaje": "Línea máxima del STR1000: 600 cm.",
+      "condicion": {
+        "linea": {
+          "gt": 600
+        }
+      }
+    },
+    {
+      "id": "salida_min",
+      "descripcion": "Salida mínima del modelo",
+      "efecto": "bloqueo",
+      "mensaje": "Salida mínima del STR1000: 170 cm.",
+      "condicion": {
+        "salida": {
+          "lt": 170
+        }
+      }
+    },
+    {
+      "id": "salida_max",
+      "descripcion": "Salida máxima del modelo",
+      "efecto": "bloqueo",
+      "mensaje": "Salida máxima del STR1000: 250 cm.",
+      "condicion": {
+        "salida": {
+          "gt": 250
+        }
+      }
+    }
+  ]
+}

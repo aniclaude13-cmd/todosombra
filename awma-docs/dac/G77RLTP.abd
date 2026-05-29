@@ -1,0 +1,87 @@
+articulo=G77RLTP
+desc=Reposicion de lona toldos palilleria
+NewEstruc=1
+color perfil=Blanco
+color accesorios=Blanco
+dim1=150
+dim2=550
+tipoacabado=8
+AplMultAncho=1
+intAtLin=50
+intAtEA=70
+ilumPrC=20
+ilumPrL=40
+ilumPrF=50
+ProfSombCerr=1
+
+##Datos_Estructura##
+
+Id=0
+PintCotasAut=0
+Modulo000=001         0         0         0         0
+
+
+
+Variable
+  nombre=@AltoLona
+  valor=656
+  tipovar=2
+  formula=SI(DIM2<=200;278;#@#Si(DIM2<=250;332;#@#Si(DIM2<=300;386;#@#Si(DIM2<=350;440;#@#Si(DIM2<=400;494;#@#Si(DIM2<=450;548;#@#Si(DIM2<=500;602;#@#Si(DIM2<=550;656;#@#Si(DIM2<=600;710;#@#Si(DIM2<=650;764;#@#Si(DIM2<=700;818;#@#)))))))))))
+  max=0
+  min=0
+  actmin=0
+  actmax=0
+  selec=-1
+  peticion=1
+  condicion=
+  varserie=0
+  PermEdRes=0
+  ResManual=0
+  ValorManual=0
+  agrupar=0
+end
+Componente No Visual
+  id=G77PVPRLTP_1
+  art=G77PVPRLTP
+  desc=Precio Reposicion de lona toldos palilleria
+  tipo_ctrl=0
+  color=Blanco
+  eDim1=150
+  eDim2=550
+  Despiece=0
+  TipoCurva=0
+  AngCorteI=0
+  AngCorteD=0
+  Centro=0
+  TipoTarifa=1
+  f_cant=1
+  f_Dim1=DIM1
+  f_Dim2=DIM2
+end
+Componente No Visual
+  id=G77LONA_1
+  funcion=18
+  art=G77LONA
+  desc=Lona
+  tipo_ctrl=0
+  eDim1=656
+  eDim2=150
+  Despiece=0
+  TipoCurva=0
+  AngCorteI=0
+  AngCorteD=0
+  Centro=0
+  TipoTarifa=1
+  f_cant=1
+  f_Dim1=SI(DIM2<=200;278;#@#Si(DIM2<=250;332;#@#Si(DIM2<=300;386;#@#Si(DIM2<=350;440;#@#Si(DIM2<=400;494;#@#Si(DIM2<=450;548;#@#Si(DIM2<=500;602;#@#Si(DIM2<=550;656;#@#Si(DIM2<=600;710;#@#Si(DIM2<=650;764;#@#Si(DIM2<=700;818;#@#)))))))))))
+  f_Dim2=Dim1
+  desccomp=1
+end
+
+class=TEstRelleno
+  x=0
+  y=0
+  w=550
+  h=150
+end
+

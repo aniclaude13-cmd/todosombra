@@ -1,0 +1,26 @@
+{
+  "id": "RC7300",
+  "nombre": "Riel cortina lateral  estandard",
+  "tipo": "vertical",
+  "version": "2025.09",
+  "fuente": {
+    "abd": "RC7300.abd"
+  },
+  "dimensiones": {
+    "linea": {
+      "min": 0,
+      "max": 0,
+      "valores": []
+    },
+    "salida": {
+      "min": 0,
+      "max": 0,
+      "valores": []
+    }
+  },
+  "tarifa": {
+    "matriz": {}
+  },
+  "motores": [],
+  "reglas": []
+}

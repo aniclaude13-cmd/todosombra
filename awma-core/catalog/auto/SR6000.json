@@ -1,0 +1,71 @@
+{
+  "id": "SR6000",
+  "nombre": "SR6000 Siro Flex, toldo cofre para protección lateral",
+  "tipo": "toldo_cofre",
+  "version": "2025.09",
+  "fuente": {
+    "abd": "SR6000.abd"
+  },
+  "dimensiones": {
+    "linea": {
+      "min": 80,
+      "max": 200,
+      "valores": []
+    },
+    "salida": {
+      "min": 80,
+      "max": 400,
+      "valores": []
+    }
+  },
+  "tarifa": {
+    "matriz": {}
+  },
+  "motores": [],
+  "reglas": [
+    {
+      "id": "linea_min",
+      "descripcion": "Línea mínima del modelo",
+      "efecto": "bloqueo",
+      "mensaje": "Línea mínima del SR6000: 80 cm.",
+      "condicion": {
+        "linea": {
+          "lt": 80
+        }
+      }
+    },
+    {
+      "id": "linea_max",
+      "descripcion": "Línea máxima del modelo",
+      "efecto": "bloqueo",
+      "mensaje": "Línea máxima del SR6000: 200 cm.",
+      "condicion": {
+        "linea": {
+          "gt": 200
+        }
+      }
+    },
+    {
+      "id": "salida_min",
+      "descripcion": "Salida mínima del modelo",
+      "efecto": "bloqueo",
+      "mensaje": "Salida mínima del SR6000: 80 cm.",
+      "condicion": {
+        "salida": {
+          "lt": 80
+        }
+      }
+    },
+    {
+      "id": "salida_max",
+      "descripcion": "Salida máxima del modelo",
+      "efecto": "bloqueo",
+      "mensaje": "Salida máxima del SR6000: 400 cm.",
+      "condicion": {
+        "salida": {
+          "gt": 400
+        }
+      }
+    }
+  ]
+}

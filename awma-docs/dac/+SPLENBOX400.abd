@@ -1,0 +1,730 @@
+articulo=+SPLENBOX400
+desc=Toldo Splenbox 400
+NewEstruc=1
+color perfil=Blanco
+color accesorios=Blanco
+dim1=400
+dim2=300
+tipoacabado=8
+AplMultAncho=1
+intAtLin=50
+intAtEA=70
+ilumPrC=20
+ilumPrL=40
+ilumPrF=50
+ProfSombCerr=1
+
+##Datos_Estructura##
+
+Id=0
+PintCotasAut=0
+Modulo000=001         0         0         0         0
+
+
+
+Variable
+  nombre=@TapaLateral
+  valor=0
+  tipovar=1
+  formula=
+  max=0
+  min=0
+  actmin=0
+  actmax=0
+  selec=0
+  peticion=1
+  condicion=
+  varserie=0
+  PermEdRes=0
+  ResManual=0
+  ValorManual=0
+  agrupar=0
+  enum_0_texto=No
+  enum_0_valor=0
+  enum_0_condicion=
+  enum_1_texto=Sí
+  enum_1_valor=1
+  enum_1_condicion=
+end
+Variable
+  nombre=@Placa
+  valor=0
+  tipovar=1
+  formula=
+  max=0
+  min=0
+  actmin=0
+  actmax=0
+  selec=0
+  peticion=1
+  condicion=
+  varserie=0
+  PermEdRes=0
+  ResManual=0
+  ValorManual=0
+  agrupar=0
+  enum_0_texto=No
+  enum_0_valor=0
+  enum_0_condicion=
+  enum_1_texto=Sí
+  enum_1_valor=1
+  enum_1_condicion=
+end
+Variable
+  nombre=@EscuadraTecho
+  valor=0
+  tipovar=1
+  formula=
+  max=0
+  min=0
+  actmin=0
+  actmax=0
+  selec=0
+  peticion=1
+  condicion=
+  varserie=0
+  PermEdRes=0
+  ResManual=0
+  ValorManual=0
+  agrupar=0
+  enum_0_texto=No
+  enum_0_valor=0
+  enum_0_condicion=
+  enum_1_texto=Sí
+  enum_1_valor=1
+  enum_1_condicion=
+end
+Variable
+  nombre=@TacoQuimico
+  valor=0
+  tipovar=1
+  formula=
+  max=0
+  min=0
+  actmin=0
+  actmax=0
+  selec=0
+  peticion=1
+  condicion=
+  varserie=0
+  PermEdRes=0
+  ResManual=0
+  ValorManual=0
+  agrupar=0
+  enum_0_texto=No
+  enum_0_valor=0
+  enum_0_condicion=
+  enum_1_texto=Sí
+  enum_1_valor=1
+  enum_1_condicion=
+end
+Variable
+  nombre=@MotorSomfy
+  valor=2
+  tipovar=1
+  formula=
+  max=0
+  min=0
+  actmin=0
+  actmax=0
+  selec=2
+  peticion=1
+  condicion=
+  varserie=0
+  PermEdRes=0
+  ResManual=0
+  ValorManual=0
+  agrupar=0
+  enum_0_texto=No
+  enum_0_valor=0
+  enum_0_condicion=
+  enum_1_texto=RTS
+  enum_1_valor=1
+  enum_1_condicion=
+  enum_2_texto=IO
+  enum_2_valor=2
+  enum_2_condicion=
+  enum_3_texto=WT
+  enum_3_valor=3
+  enum_3_condicion=
+  enum_4_texto=T/H 70
+  enum_4_valor=4
+  enum_4_condicion=
+end
+Variable
+  nombre=@MotorCherubini
+  valor=0
+  tipovar=1
+  formula=
+  max=0
+  min=0
+  actmin=0
+  actmax=0
+  selec=0
+  peticion=1
+  condicion=
+  varserie=0
+  PermEdRes=0
+  ResManual=0
+  ValorManual=0
+  agrupar=0
+  enum_0_texto=No
+  enum_0_valor=0
+  enum_0_condicion=
+  enum_1_texto=Sí
+  enum_1_valor=1
+  enum_1_condicion=
+end
+Variable
+  nombre=@MedidaFaldon
+  valor=25
+  tipovar=0
+  formula=
+  max=0
+  min=0
+  actmin=0
+  actmax=0
+  selec=-1
+  peticion=1
+  condicion=
+  varserie=0
+  PermEdRes=0
+  ResManual=0
+  ValorManual=0
+  agrupar=0
+end
+Componente No Visual
+  id=LLPVPSPLENBOX400BL_1
+  art=LLPVPSPLENBOX400/BL
+  desc=Precio Toldo Splenbox 400
+  tipo_ctrl=0
+  color=Blanco
+  Despiece=0
+  TipoCurva=0
+  AngCorteI=0
+  AngCorteD=0
+  Centro=0
+  TipoTarifa=1
+  f_cant=1
+end
+Componente No Visual
+  id=G77LONA_1
+  funcion=18
+  art=G77LONA
+  desc=Lona
+  tipo_ctrl=0
+  eDim1=260
+  eDim2=381.5
+  Despiece=1
+  TipoCurva=0
+  AngCorteI=0
+  AngCorteD=0
+  Centro=0
+  TipoTarifa=2
+  f_cant=1
+  f_Dim1=Dim2-40
+  f_Dim2=Dim1-18,5
+  desccomp=1
+  ap_prec_inc=1
+end
+Componente No Visual
+  id=G77FALDON_1
+  funcion=24
+  art=G77FALDON
+  desc=Faldón
+  tipo_ctrl=0
+  eDim1=25
+  eDim2=381.5
+  Despiece=1
+  TipoCurva=0
+  AngCorteI=0
+  AngCorteD=0
+  Centro=0
+  TipoTarifa=2
+  f_cant=1
+  f_Dim1=@MedidaFaldon
+  f_Dim2=Dim1-18,5
+  ap_prec_inc=1
+end
+Componente No Visual
+  id=LL20024000001_1
+  art=20024000001
+  desc=Juego soportes SPLENBOX 400 BL
+  tipo_ctrl=0
+  color=Blanco
+  Despiece=1
+  TipoCurva=0
+  AngCorteI=0
+  AngCorteD=0
+  Centro=0
+  TipoTarifa=2
+  f_cant=1
+  ap_prec_inc=1
+end
+Componente No Visual
+  id=LL20024001001_1
+  art=20024001001
+  desc=Kit embellecedor lateral SPLENBOX 400 BL
+  tipo_ctrl=0
+  color=Blanco
+  Despiece=1
+  TipoCurva=0
+  AngCorteI=0
+  AngCorteD=0
+  Centro=0
+  TipoTarifa=2
+  f_cant=@TapaLateral=1
+  ap_prec_inc=1
+end
+Componente No Visual
+  id=LL20074008001_1
+  art=20074008001
+  desc=Placa SPLENBOX-400 L-500 BL
+  tipo_ctrl=0
+  color=Blanco
+  Despiece=1
+  TipoCurva=0
+  AngCorteI=0
+  AngCorteD=0
+  Centro=0
+  TipoTarifa=2
+  f_cant=@Placa=1
+  ap_prec_inc=1
+end
+Componente No Visual
+  id=LL39079500001_1
+  art=39079500001
+  desc=Kit perfiles SPLENBOX-400 5,00m BL
+  color=Blanco
+  tipo_corte_izq=|
+  tipo_corte_der=|
+  Despiece=1
+  TipoCurva=0
+  AngCorteI=90
+  AngCorteD=90
+  Centro=0
+  TipoTarifa=2
+  DtMedCutPerf=5000
+  f_cant=Si(Dim1<=500;1;0)
+  f_alto=Dim1-13,2
+  ap_prec_inc=1
+  MedCutPerf=5000
+end
+Componente No Visual
+  id=LL39079600001_1
+  art=39079600001
+  desc=Kit perfiles SPLENBOX-400 6,00m BL
+  ancho_perfil=10
+  color=Blanco
+  tipo_corte_izq=|
+  tipo_corte_der=|
+  Despiece=1
+  TipoCurva=0
+  AngCorteI=90
+  AngCorteD=90
+  Centro=0
+  TipoTarifa=2
+  DtMedCutPerf=6000
+  f_cant=Si(Dim1>500;1;0)
+  f_alto=Dim1-13,2
+  ap_prec_inc=1
+  MedCutPerf=6000
+end
+Componente No Visual
+  id=LL17016000000_1
+  art=17016000000
+  desc=Perfil sellador MTBX/SPBX/MNBX 50m NT
+  tipo_corte_izq=|
+  tipo_corte_der=|
+  eDim1=386.8
+  Despiece=1
+  TipoCurva=0
+  AngCorteI=90
+  AngCorteD=90
+  Centro=0
+  TipoTarifa=2
+  f_cant=1
+  f_Dim1=Dim1-13,2
+  ap_prec_inc=1
+end
+Componente No Visual
+  id=LL20024005001_1
+  art=20024005001
+  desc=Conjunto placa fijacion quimica SPLENBOX-400 BL
+  tipo_ctrl=0
+  color=Blanco
+  Despiece=1
+  TipoCurva=0
+  AngCorteI=0
+  AngCorteD=0
+  Centro=0
+  TipoTarifa=2
+  f_cant=@TacoQuimico=1
+  ap_prec_inc=1
+end
+Componente No Visual
+  id=LL20024004001_1
+  art=20024004001
+  desc=Conjunto soporte escuadra techo universal BL
+  tipo_ctrl=0
+  color=Blanco
+  Despiece=1
+  TipoCurva=0
+  AngCorteI=0
+  AngCorteD=0
+  Centro=0
+  TipoTarifa=2
+  f_cant=(@EscuadraTecho=1)*2
+  ap_prec_inc=1
+end
+Componente No Visual
+  id=LL10003200001_1
+  funcion=20
+  art=10003200001
+  desc=Juego brazos SPLENDOR-400 2,00m BL
+  tipo_ctrl=0
+  color=Blanco
+  Despiece=1
+  TipoCurva=0
+  AngCorteI=0
+  AngCorteD=0
+  Centro=0
+  TipoTarifa=2
+  f_cant=Si((Dim2>175)y(Dim2<=200);1;0)
+  ap_prec_inc=1
+end
+Componente No Visual
+  id=LL10003250001_1
+  funcion=20
+  art=10003250001
+  desc=Juego brazos SPLENDOR-400 2,50m BL
+  tipo_ctrl=0
+  color=Blanco
+  Despiece=1
+  TipoCurva=0
+  AngCorteI=0
+  AngCorteD=0
+  Centro=0
+  TipoTarifa=2
+  f_cant=Si((Dim2>225)y(Dim2<=250);1;0)
+  ap_prec_inc=1
+end
+Componente No Visual
+  id=LL10003300001_1
+  funcion=20
+  art=10003300001
+  desc=Juego brazos SPLENDOR-400 3,00m BL
+  tipo_ctrl=0
+  color=Blanco
+  Despiece=1
+  TipoCurva=0
+  AngCorteI=0
+  AngCorteD=0
+  Centro=0
+  TipoTarifa=2
+  f_cant=Si((Dim2>275)y(Dim2<=300);1;0)
+  ap_prec_inc=1
+end
+Componente No Visual
+  id=LL10003350001_1
+  funcion=20
+  art=10003350001
+  desc=Juego brazos SPLENDOR-400 3,50m BL
+  tipo_ctrl=0
+  color=Blanco
+  Despiece=1
+  TipoCurva=0
+  AngCorteI=0
+  AngCorteD=0
+  Centro=0
+  TipoTarifa=2
+  f_cant=Si((Dim2>325)y(Dim2<=350);1;0)
+  ap_prec_inc=1
+end
+Componente No Visual
+  id=LL10003400001_1
+  funcion=20
+  art=10003400001
+  desc=Juego brazos SPLENDOR-400 4,00m BL
+  tipo_ctrl=0
+  color=Blanco
+  Despiece=1
+  TipoCurva=0
+  AngCorteI=0
+  AngCorteD=0
+  Centro=0
+  TipoTarifa=2
+  f_cant=Si((Dim2>350)y(Dim2<=400);1;0)
+  ap_prec_inc=1
+end
+Componente No Visual
+  id=LL31080600044_1
+  funcion=19
+  art=31080600044
+  desc=Tubo h.p-801 d.80x1.2 galv. 7m
+  tipo_corte_izq=|
+  tipo_corte_der=|
+  Despiece=1
+  TipoCurva=0
+  AngCorteI=90
+  AngCorteD=90
+  Centro=0
+  TipoTarifa=2
+  DtMedCutPerf=7000
+  f_cant=Si(Dim1>400;1;0)
+  f_alto=Dim1-17,5
+  ap_prec_inc=1
+  MedCutPerf=7000
+end
+Componente No Visual
+  id=LL31080700044_1
+  funcion=19
+  art=31080700044
+  desc=Tubo H. de enrolle P-801 de 80 galv. 7m
+  ancho_perfil=10
+  tipo_corte_izq=|
+  tipo_corte_der=|
+  Despiece=1
+  TipoCurva=0
+  AngCorteI=90
+  AngCorteD=90
+  Centro=0
+  TipoTarifa=2
+  DtMedCutPerf=7000
+  f_cant=Si(Dim1<=400;1;0)
+  f_alto=Dim1-17,5
+  ap_prec_inc=1
+  MedCutPerf=7000
+end
+Componente No Visual
+  id=LL12080003000_1
+  art=12080003000
+  desc=Casquillo punta con eje p-800
+  tipo_ctrl=0
+  Despiece=1
+  TipoCurva=0
+  AngCorteI=0
+  AngCorteD=0
+  Centro=0
+  TipoTarifa=2
+  f_cant=1
+  ap_prec_inc=1
+end
+Componente No Visual
+  id=SY1116127_1
+  art=1116127
+  desc=Orea 35/17 rts
+  tipo_ctrl=0
+  Despiece=1
+  TipoCurva=0
+  AngCorteI=0
+  AngCorteD=0
+  Centro=0
+  TipoTarifa=2
+  f_cant=Si((@MotorSomfy=1)y(Dim2<=200);1;0)
+  ap_prec_inc=1
+end
+Componente No Visual
+  id=SY1117121_1
+  art=1117121
+  desc=Orea 40/17 rts
+  tipo_ctrl=0
+  Despiece=1
+  TipoCurva=0
+  AngCorteI=0
+  AngCorteD=0
+  Centro=0
+  TipoTarifa=2
+  f_cant=Si((@MotorSomfy=1)y(Dim2>200)y(Dim2<=300);1;0)
+  ap_prec_inc=1
+end
+Componente No Visual
+  id=SY1118092_1
+  art=1118092
+  desc=Orea 50/12 rts
+  tipo_ctrl=0
+  Despiece=1
+  TipoCurva=0
+  AngCorteI=0
+  AngCorteD=0
+  Centro=0
+  TipoTarifa=2
+  f_cant=Si((@MotorSomfy=1)y(Dim2>300)y(Dim2<=400);1;0)
+  ap_prec_inc=1
+end
+Componente No Visual
+  id=SY1116232_1
+  art=1116232
+  desc=Sunea 35/17 io
+  tipo_ctrl=0
+  Despiece=1
+  TipoCurva=0
+  AngCorteI=0
+  AngCorteD=0
+  Centro=0
+  TipoTarifa=2
+  f_cant=Si((@MotorSomfy=2)y(Dim2<=200);1;0)
+  ap_prec_inc=1
+end
+Componente No Visual
+  id=SY1117226_1
+  art=1117226
+  desc=Sunea 40/17 io
+  tipo_ctrl=0
+  Despiece=1
+  TipoCurva=0
+  AngCorteI=0
+  AngCorteD=0
+  Centro=0
+  TipoTarifa=2
+  f_cant=Si((@MotorSomfy=2)y(Dim2>200)y(Dim2<=300);1;0)
+  ap_prec_inc=1
+end
+Componente No Visual
+  id=SY1118173_1
+  art=1118173
+  desc=Sunea 50/12 io
+  tipo_ctrl=0
+  Despiece=1
+  TipoCurva=0
+  AngCorteI=0
+  AngCorteD=0
+  Centro=0
+  TipoTarifa=2
+  f_cant=Si((@MotorSomfy=2)y(Dim2>300)y(Dim2<=400);1;0)
+  ap_prec_inc=1
+end
+Componente No Visual
+  id=SY1116170_1
+  art=1116170
+  desc=Orea 35/17 wt
+  tipo_ctrl=0
+  Despiece=1
+  TipoCurva=0
+  AngCorteI=0
+  AngCorteD=0
+  Centro=0
+  TipoTarifa=2
+  f_cant=Si((@MotorSomfy=3)y(Dim2<=200);1;0)
+  ap_prec_inc=1
+end
+Componente No Visual
+  id=SY1117160_1
+  art=1117160
+  desc=Orea 40/17 wt
+  tipo_ctrl=0
+  Despiece=1
+  TipoCurva=0
+  AngCorteI=0
+  AngCorteD=0
+  Centro=0
+  TipoTarifa=2
+  f_cant=Si((@MotorSomfy=3)y(Dim2>200)y(Dim2<=300);1;0)
+  ap_prec_inc=1
+end
+Componente No Visual
+  id=SY1118121_1
+  art=1118121
+  desc=Orea 50/12 wt
+  tipo_ctrl=0
+  Despiece=1
+  TipoCurva=0
+  AngCorteI=0
+  AngCorteD=0
+  Centro=0
+  TipoTarifa=2
+  f_cant=Si((@MotorSomfy=3)y(Dim2>300)y(Dim2<=400);1;0)
+  ap_prec_inc=1
+end
+Componente No Visual
+  id=SY9707027_1
+  art=9707027
+  desc=Corona adap.LT50 a ø78 c/ran.
+  tipo_ctrl=0
+  Despiece=1
+  TipoCurva=0
+  AngCorteI=0
+  AngCorteD=0
+  Centro=0
+  TipoTarifa=2
+  f_cant=@MotorSomfy>0
+  ap_prec_inc=1
+end
+Componente No Visual
+  id=SY9910000_1
+  art=9910000
+  desc=Soporte universal Op. HiPro
+  tipo_ctrl=0
+  Despiece=1
+  TipoCurva=0
+  AngCorteI=0
+  AngCorteD=0
+  Centro=0
+  TipoTarifa=2
+  f_cant=@MotorSomfy>0
+  ap_prec_inc=1
+end
+Componente No Visual
+  id=SY9017508_1
+  art=9017508
+  desc=Rued motr.HiP.a Ø 80x2 c/ran.Mecanizada
+  tipo_ctrl=0
+  Despiece=1
+  TipoCurva=0
+  AngCorteI=0
+  AngCorteD=0
+  Centro=0
+  TipoTarifa=2
+  f_cant=@MotorSomfy>0
+  ap_prec_inc=1
+end
+Componente No Visual
+  id=HRAET45321700_1
+  art=AET45321700
+  desc=Motor Blue Wave Rx 32/17
+  tipo_ctrl=0
+  Despiece=1
+  TipoCurva=0
+  AngCorteI=0
+  AngCorteD=0
+  Centro=0
+  TipoTarifa=2
+  f_cant=Si((@MotorCherubini=1)y(Dim2<=200);1;0)
+  ap_prec_inc=1
+end
+Componente No Visual
+  id=HRAET45401700_1
+  art=AET45401700
+  desc=Motor Blue Wawe L45 40/17
+  tipo_ctrl=0
+  Despiece=1
+  TipoCurva=0
+  AngCorteI=0
+  AngCorteD=0
+  Centro=0
+  TipoTarifa=2
+  f_cant=Si((@MotorCherubini=1)y(Dim2>200)y(Dim2<=300);1;0)
+  ap_prec_inc=1
+end
+Componente No Visual
+  id=HRAET45501700_1
+  art=AET45501700
+  desc=Motor Blue Wawe L45 50/17
+  tipo_ctrl=0
+  Despiece=1
+  TipoCurva=0
+  AngCorteI=0
+  AngCorteD=0
+  Centro=0
+  TipoTarifa=2
+  f_cant=Si((@MotorCherubini=1)y(Dim2>300)y(Dim2<=400);1;0)
+  ap_prec_inc=1
+end
+
+class=TEstRelleno
+  x=0
+  y=0
+  w=300
+  h=400
+end
+

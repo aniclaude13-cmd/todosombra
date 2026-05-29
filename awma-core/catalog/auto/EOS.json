@@ -1,0 +1,26 @@
+{
+  "id": "EOS",
+  "nombre": "Toldo veranda eos",
+  "tipo": "toldo_brazo",
+  "version": "2025.09",
+  "fuente": {
+    "abd": "+EOS.abd"
+  },
+  "dimensiones": {
+    "linea": {
+      "min": 0,
+      "max": 0,
+      "valores": []
+    },
+    "salida": {
+      "min": 0,
+      "max": 0,
+      "valores": []
+    }
+  },
+  "tarifa": {
+    "matriz": {}
+  },
+  "motores": [],
+  "reglas": []
+}

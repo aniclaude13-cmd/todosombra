@@ -1,0 +1,26 @@
+{
+  "id": "G77RLTSB",
+  "nombre": "Reposicion de lona toldos stor y bajante",
+  "tipo": "otro",
+  "version": "2025.09",
+  "fuente": {
+    "abd": "G77RLTSB.abd"
+  },
+  "dimensiones": {
+    "linea": {
+      "min": 0,
+      "max": 0,
+      "valores": []
+    },
+    "salida": {
+      "min": 0,
+      "max": 0,
+      "valores": []
+    }
+  },
+  "tarifa": {
+    "matriz": {}
+  },
+  "motores": [],
+  "reglas": []
+}

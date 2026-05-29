@@ -1,0 +1,26 @@
+{
+  "id": "PL7030",
+  "nombre": "Toldo de palilleria simple PL7030 autoportante 4 patas",
+  "tipo": "palilleria",
+  "version": "2025.09",
+  "fuente": {
+    "abd": "PL7030.abd"
+  },
+  "dimensiones": {
+    "linea": {
+      "min": 0,
+      "max": 0,
+      "valores": []
+    },
+    "salida": {
+      "min": 0,
+      "max": 0,
+      "valores": []
+    }
+  },
+  "tarifa": {
+    "matriz": {}
+  },
+  "motores": [],
+  "reglas": []
+}

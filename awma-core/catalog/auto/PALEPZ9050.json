@@ -1,0 +1,26 @@
+{
+  "id": "PALEPZ9050",
+  "nombre": "Toldo de palilleria zen entre paredes 90 x 50",
+  "tipo": "palilleria",
+  "version": "2025.09",
+  "fuente": {
+    "abd": "+PALEPZ9050.abd"
+  },
+  "dimensiones": {
+    "linea": {
+      "min": 0,
+      "max": 0,
+      "valores": []
+    },
+    "salida": {
+      "min": 0,
+      "max": 0,
+      "valores": []
+    }
+  },
+  "tarifa": {
+    "matriz": {}
+  },
+  "motores": [],
+  "reglas": []
+}

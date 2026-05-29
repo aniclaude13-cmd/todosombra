@@ -1,0 +1,826 @@
+articulo=+PALEP8040
+desc=Toldo de palilleria entre paredes 80 x 40
+NewEstruc=1
+color perfil=Blanco
+color accesorios=Blanco
+dim1=250
+dim2=350
+tipoacabado=8
+AplMultAncho=1
+intAtLin=50
+intAtEA=70
+ilumPrC=20
+ilumPrL=40
+ilumPrF=50
+ProfSombCerr=1
+
+##Datos_Estructura##
+
+Id=0
+PintCotasAut=0
+Modulo000=001         0         0         0         0
+
+
+
+Variable
+  nombre=@Motor
+  valor=0
+  tipovar=1
+  formula=
+  max=0
+  min=0
+  actmin=0
+  actmax=0
+  selec=0
+  peticion=1
+  condicion=
+  varserie=0
+  PermEdRes=0
+  ResManual=0
+  ValorManual=0
+  agrupar=0
+  enum_0_texto=NO
+  enum_0_valor=0
+  enum_0_condicion=
+  enum_1_texto=Pulsador
+  enum_1_valor=1
+  enum_1_condicion=
+  enum_2_texto=Emisor
+  enum_2_valor=2
+  enum_2_condicion=
+end
+Variable
+  nombre=@TipoEmisor
+  valor=1
+  tipovar=1
+  formula=
+  max=0
+  min=0
+  actmin=0
+  actmax=0
+  selec=0
+  peticion=1
+  condicion=@Motor=2
+  varserie=0
+  PermEdRes=0
+  ResManual=0
+  ValorManual=0
+  agrupar=0
+  enum_0_texto=Skiper
+  enum_0_valor=1
+  enum_0_condicion=
+  enum_1_texto=Skiper Black
+  enum_1_valor=2
+  enum_1_condicion=
+  enum_2_texto=Skiper Plus
+  enum_2_valor=3
+  enum_2_condicion=
+  enum_3_texto=Skiper Plus Black
+  enum_3_valor=4
+  enum_3_condicion=
+  enum_4_texto=Skiper Lux
+  enum_4_valor=5
+  enum_4_condicion=
+  enum_5_texto=Skiper Lux Black
+  enum_5_valor=6
+  enum_5_condicion=
+  enum_6_texto=Skiper P-Lux
+  enum_6_valor=7
+  enum_6_condicion=
+  enum_7_texto=Skiper P-Lux Black
+  enum_7_valor=8
+  enum_7_condicion=
+  enum_8_texto=Skiper Senso
+  enum_8_valor=9
+  enum_8_condicion=
+end
+Variable
+  nombre=@MedidaFaldon
+  valor=30
+  tipovar=0
+  formula=
+  max=0
+  min=0
+  actmin=0
+  actmax=0
+  selec=-1
+  peticion=1
+  condicion=
+  varserie=0
+  PermEdRes=0
+  ResManual=0
+  ValorManual=0
+  agrupar=0
+end
+Variable
+  nombre=@Altura
+  valor=300
+  tipovar=0
+  formula=
+  max=0
+  min=0
+  actmin=0
+  actmax=0
+  selec=-1
+  peticion=1
+  condicion=
+  varserie=0
+  PermEdRes=0
+  ResManual=0
+  ValorManual=0
+  agrupar=0
+end
+Variable
+  nombre=@NumeroGuias
+  valor=2
+  tipovar=2
+  formula=Exceso(Si(dim1>=501;3;2))
+  max=0
+  min=0
+  actmin=0
+  actmax=0
+  selec=-1
+  peticion=1
+  condicion=
+  varserie=0
+  PermEdRes=1
+  ResManual=0
+  ValorManual=0
+  agrupar=0
+end
+Variable
+  nombre=@NumeroPanos
+  valor=6
+  tipovar=2
+  formula=exceso(Dim2/60)
+  max=0
+  min=0
+  actmin=0
+  actmax=0
+  selec=-1
+  peticion=1
+  condicion=
+  varserie=0
+  PermEdRes=1
+  ResManual=0
+  ValorManual=0
+  agrupar=0
+end
+Componente No Visual
+  id=GAPVPALEP8040BL_1
+  art=GAPVPALEP8040/BL
+  desc=Precio Toldo de palilleria entre paredes 80 x 40
+  tipo_ctrl=0
+  color=Blanco
+  Despiece=0
+  TipoCurva=0
+  AngCorteI=0
+  AngCorteD=0
+  Centro=0
+  TipoTarifa=1
+  f_cant=1
+end
+Componente No Visual
+  id=GA80140257_1
+  art=80140257
+  desc=Soporte guía 80x40mm con taladros, extrusión de alum. blanco
+  tipo_ctrl=0
+  color=Blanco
+  Despiece=1
+  TipoCurva=0
+  AngCorteI=0
+  AngCorteD=0
+  Centro=0
+  TipoTarifa=2
+  f_cant=@NumeroGuias*2
+  ap_prec_inc=1
+end
+Componente No Visual
+  id=GA80140050_1
+  art=80140050
+  desc=Tubo guía 80x40mm aluminio 4 m blanco
+  ancho_perfil=80
+  color=Blanco
+  tipo_corte_izq=|
+  tipo_corte_der=|
+  Despiece=1
+  TipoCurva=0
+  AngCorteI=90
+  AngCorteD=90
+  Centro=0
+  TipoTarifa=2
+  DtMedCutPerf=4000
+  f_cant=Si(Dim2-1.8<400;@NumeroGuias;0)
+  f_alto=Dim2-1.8
+  ap_prec_inc=1
+  MedCutPerf=4000
+end
+Componente No Visual
+  id=GA80140003_1
+  art=80140003
+  desc=Tubo guía 80x40mm aluminio 5 m blanco
+  ancho_perfil=80
+  color=Blanco
+  tipo_corte_izq=|
+  tipo_corte_der=|
+  Despiece=1
+  TipoCurva=0
+  AngCorteI=90
+  AngCorteD=90
+  Centro=0
+  TipoTarifa=2
+  DtMedCutPerf=4000
+  f_cant=Si(((Dim2-1.8>=400)y(Dim2-1.8<500));@NumeroGuias;0)
+  f_alto=Dim2-1.8
+  ap_prec_inc=1
+  MedCutPerf=4000
+end
+Componente No Visual
+  id=GA80140038_1
+  art=80140038
+  desc=Tubo guía 80x40mm aluminio 6 m blanco
+  ancho_perfil=80
+  color=Blanco
+  tipo_corte_izq=|
+  tipo_corte_der=|
+  Despiece=1
+  TipoCurva=0
+  AngCorteI=90
+  AngCorteD=90
+  Centro=0
+  TipoTarifa=2
+  DtMedCutPerf=4000
+  f_cant=Si(((Dim2-1.8>=500)y(Dim2-1.8<600));@NumeroGuias;0)
+  f_alto=Dim2-1.8
+  ap_prec_inc=1
+  MedCutPerf=4000
+end
+Componente No Visual
+  id=GA80140039_1
+  art=80140039
+  desc=Tubo guía 80x40mm aluminio 7 m blanco
+  ancho_perfil=80
+  color=Blanco
+  tipo_corte_izq=|
+  tipo_corte_der=|
+  Despiece=1
+  TipoCurva=0
+  AngCorteI=90
+  AngCorteD=90
+  Centro=0
+  TipoTarifa=2
+  DtMedCutPerf=4000
+  f_cant=Si(((Dim2-1.8>=600)y(Dim2-1.8<700));@NumeroGuias;0)
+  f_alto=Dim2-1.8
+  ap_prec_inc=1
+  MedCutPerf=4000
+end
+Componente No Visual
+  id=GA80140066_1
+  art=80140066
+  desc=Palillo simple standard aluminio 4 m blanco
+  ancho_perfil=10
+  color=Blanco
+  tipo_corte_izq=|
+  tipo_corte_der=|
+  Despiece=1
+  TipoCurva=0
+  AngCorteI=90
+  AngCorteD=90
+  Centro=0
+  TipoTarifa=2
+  DtMedCutPerf=4000
+  f_cant=si(dim1<=400;1;0)
+  f_alto=dim1-2
+  ap_prec_inc=1
+  MedCutPerf=4000
+end
+Componente No Visual
+  id=GA80140067_1
+  art=80140067
+  desc=Palillo simple standard aluminio 5 m blanco
+  ancho_perfil=10
+  color=Blanco
+  tipo_corte_izq=|
+  tipo_corte_der=|
+  Despiece=1
+  TipoCurva=0
+  AngCorteI=90
+  AngCorteD=90
+  Centro=0
+  TipoTarifa=2
+  DtMedCutPerf=4000
+  f_cant=si((dim1>400)y(dim1<=500);1;0)
+  f_alto=dim1-2
+  ap_prec_inc=1
+  MedCutPerf=4000
+end
+Componente No Visual
+  id=GA80140068_1
+  art=80140068
+  desc=Palillo simple standard aluminio 6 m blanco
+  ancho_perfil=10
+  color=Blanco
+  tipo_corte_izq=|
+  tipo_corte_der=|
+  Despiece=1
+  TipoCurva=0
+  AngCorteI=90
+  AngCorteD=90
+  Centro=0
+  TipoTarifa=2
+  DtMedCutPerf=4000
+  f_cant=si((dim1>500)y(dim1<=600);1;0)
+  f_alto=dim1-2
+  ap_prec_inc=1
+  MedCutPerf=4000
+end
+Componente No Visual
+  id=GA80140069_1
+  art=80140069
+  desc=Palillo simple standard aluminio 7 m blanco
+  ancho_perfil=10
+  color=Blanco
+  tipo_corte_izq=|
+  tipo_corte_der=|
+  Despiece=1
+  TipoCurva=0
+  AngCorteI=90
+  AngCorteD=90
+  Centro=0
+  TipoTarifa=2
+  DtMedCutPerf=4000
+  f_cant=si((dim1>600)y(dim1<=700);1;0)
+  f_alto=dim1-2
+  ap_prec_inc=1
+  MedCutPerf=4000
+end
+Componente No Visual
+  id=GA80140073_1
+  art=80140073
+  desc=Palillo doble standard aluminio 4 m blanco
+  ancho_perfil=10
+  color=Blanco
+  tipo_corte_izq=|
+  tipo_corte_der=|
+  Despiece=1
+  TipoCurva=0
+  AngCorteI=90
+  AngCorteD=90
+  Centro=0
+  TipoTarifa=2
+  DtMedCutPerf=4000
+  f_cant=si(dim1<=400;@NumeroPanos;0)
+  f_alto=dim1-2
+  red_cant=7
+  ap_prec_inc=1
+  MedCutPerf=4000
+end
+Componente No Visual
+  id=GA80140074_1
+  art=80140074
+  desc=Palillo doble standard aluminio 5 m blanco
+  ancho_perfil=10
+  color=Blanco
+  tipo_corte_izq=|
+  tipo_corte_der=|
+  Despiece=1
+  TipoCurva=0
+  AngCorteI=90
+  AngCorteD=90
+  Centro=0
+  TipoTarifa=2
+  DtMedCutPerf=4000
+  f_cant=si((dim1>400)y(dim1<=500);@NumeroPanos;0)
+  f_alto=dim1-2
+  ap_prec_inc=1
+  MedCutPerf=4000
+end
+Componente No Visual
+  id=GA80140075_1
+  art=80140075
+  desc=Palillo doble standard aluminio 6 m blanco
+  ancho_perfil=10
+  color=Blanco
+  tipo_corte_izq=|
+  tipo_corte_der=|
+  Despiece=1
+  TipoCurva=0
+  AngCorteI=90
+  AngCorteD=90
+  Centro=0
+  TipoTarifa=2
+  DtMedCutPerf=4000
+  f_cant=si((dim1>500)y(dim1<=600);@NumeroPanos;0)
+  f_alto=dim1-2
+  ap_prec_inc=1
+  MedCutPerf=4000
+end
+Componente No Visual
+  id=GA80140076_1
+  art=80140076
+  desc=Palillo doble standard aluminio 7 m blanco
+  ancho_perfil=10
+  color=Blanco
+  tipo_corte_izq=|
+  tipo_corte_der=|
+  Despiece=1
+  TipoCurva=0
+  AngCorteI=90
+  AngCorteD=90
+  Centro=0
+  TipoTarifa=2
+  DtMedCutPerf=4000
+  f_cant=si((dim1>600)y(dim1<=700);@NumeroPanos;0)
+  f_alto=dim1-2
+  ap_prec_inc=1
+  MedCutPerf=4000
+end
+Componente No Visual
+  id=GA80140853_1
+  art=80140853
+  desc=Tapa palillo simple con agujero blanco
+  tipo_ctrl=0
+  color=Blanco
+  Despiece=1
+  TipoCurva=0
+  AngCorteI=0
+  AngCorteD=0
+  Centro=0
+  TipoTarifa=2
+  f_cant=(GA80140066_1_Cantidad+GA80140067_1_Cantidad+GA8014#@#0068_1_Cantidad+GA80140069_1_Cantidad)*2
+  ap_prec_inc=1
+end
+Componente No Visual
+  id=GA80140859_1
+  art=80140859
+  desc=Tapa palillo doble con agujero blanco
+  tipo_ctrl=0
+  color=Blanco
+  Despiece=1
+  TipoCurva=0
+  AngCorteI=0
+  AngCorteD=0
+  Centro=0
+  TipoTarifa=2
+  f_cant=(GA80140073_1_Cantidad+GA80140074_1_Cantidad+GA8014#@#0075_1_Cantidad+GA80140076_1_Cantidad)*2
+  ap_prec_inc=1
+end
+Componente No Visual
+  id=GA80140100_1
+  art=80140100
+  desc=Polea brida nylon reforz. rodam. y torn. con tuerca blanco
+  tipo_ctrl=0
+  color=Blanco
+  Despiece=1
+  TipoCurva=0
+  AngCorteI=0
+  AngCorteD=0
+  Centro=0
+  TipoTarifa=2
+  f_cant=(GA80140073_1_Cantidad+GA80140074_1_Cantidad+GA8014#@#0075_1_Cantidad+GA80140076_1_Cantidad)*@NumeroGuias
+  ap_prec_inc=1
+end
+Componente No Visual
+  id=GA80140107_1
+  art=80140107
+  desc=Polea doble nylon pequeña blanco
+  tipo_ctrl=0
+  color=Blanco
+  Despiece=1
+  TipoCurva=0
+  AngCorteI=0
+  AngCorteD=0
+  Centro=0
+  TipoTarifa=2
+  f_cant=Si (@Motor=0;@NumeroGuias;0)
+  ap_prec_inc=1
+end
+Componente No Visual
+  id=GA80140999_1
+  art=80140099
+  desc=Conjunto gancho final regleta y torn. (nylon reforz) blanco
+  tipo_ctrl=0
+  color=Blanco
+  Despiece=1
+  TipoCurva=0
+  AngCorteI=0
+  AngCorteD=0
+  Centro=0
+  TipoTarifa=2
+  f_cant=2
+  ap_prec_inc=1
+end
+Componente No Visual
+  id=GA80140101_1
+  art=80140101
+  desc=Brida con pisacuerdas con regleta y torn. (nylon reforzado)
+  tipo_ctrl=0
+  color=Blanco
+  Despiece=1
+  TipoCurva=0
+  AngCorteI=0
+  AngCorteD=0
+  Centro=0
+  TipoTarifa=2
+  f_cant=Si (@Motor=0;1;0)
+  ap_prec_inc=1
+end
+Componente No Visual
+  id=GA80100049_1
+  art=80100049
+  desc=Atacuerdas blanco
+  tipo_ctrl=0
+  color=Blanco
+  Despiece=1
+  TipoCurva=0
+  AngCorteI=0
+  AngCorteD=0
+  Centro=0
+  TipoTarifa=2
+  f_cant=Si (@Motor=0;1;0)
+  ap_prec_inc=1
+end
+Componente No Visual
+  id=GA80100069_1
+  art=80100069
+  desc=Cuerda Nylon blanco 6 mm
+  color=Blanco
+  eDim1=1300
+  Despiece=1
+  TipoCurva=0
+  AngCorteI=0
+  AngCorteD=0
+  Centro=0
+  TipoTarifa=2
+  DtMedCutPerf=4000
+  f_cant=Si (@Motor=0;1;0)
+  f_Dim1=(dim2*2)+(300*2)
+  ap_prec_inc=1
+  MedCutPerf=4000
+end
+Componente No Visual
+  id=G77LONA_1
+  funcion=18
+  art=G77LONA
+  desc=Lona
+  tipo_ctrl=0
+  color=Blanco
+  eDim1=430.9
+  eDim2=247
+  Despiece=1
+  TipoCurva=0
+  AngCorteI=0
+  AngCorteD=0
+  Centro=0
+  TipoTarifa=2
+  f_cant=1
+  f_Dim1=(@NumeroPanos*((Dim2/@NumeroPanos)+7.7))#@#+@MedidaFaldon+4.7
+  f_Dim2=si(@motor=0;Dim1-3;dim1-8,5)
+  desccomp=1
+  ap_prec_inc=1
+end
+Componente No Visual
+  id=G77FONDAS_1
+  funcion=25
+  art=G77FONDAS
+  desc=Faldón tipo ondas
+  tipo_ctrl=0
+  color=Blanco
+  Despiece=1
+  TipoCurva=0
+  AngCorteI=0
+  AngCorteD=0
+  Centro=0
+  TipoTarifa=2
+  f_cant=@MedidaFaldon+4.7
+  desccomplista=1
+  ap_prec_inc=1
+end
+Componente No Visual
+  id=G77PAO_1
+  art=G77PAÑO
+  desc=Paño toldo palilleria entre paredes 40 x 40
+  tipo_ctrl=0
+  color=Blanco
+  eDim1=66
+  eDim2=247
+  Despiece=1
+  TipoCurva=0
+  AngCorteI=0
+  AngCorteD=0
+  Centro=0
+  TipoTarifa=2
+  f_cant=@NumeroPanos
+  f_Dim1=(Dim2/@NumeroPanos)+7.7
+  f_Dim2=Dim1-3
+  red_Dim1=2
+  ap_prec_inc=1
+end
+Componente No Visual
+  id=HRAET45151700_1
+  funcion=13
+  art=HRAET45151700
+  desc=Motor Blue Wawe L45 15/17
+  tipo_ctrl=0
+  color=Blanco
+  Despiece=1
+  TipoCurva=0
+  AngCorteI=0
+  AngCorteD=0
+  Centro=0
+  TipoTarifa=1
+  f_cant=@motor=2
+  desccomp=1
+end
+Componente No Visual
+  id=HRAME45151700_1
+  funcion=13
+  art=HRAME45151700
+  desc=Motor Blue Garda L45 15/17
+  tipo_ctrl=0
+  color=Blanco
+  Despiece=1
+  TipoCurva=0
+  AngCorteI=0
+  AngCorteD=0
+  Centro=0
+  TipoTarifa=1
+  f_cant=@Motor=1
+  desccomp=1
+end
+Componente No Visual
+  id=HRA530031_1
+  art=HRA530031
+  desc=Emisor Skipper
+  tipo_ctrl=0
+  color=Blanco
+  Despiece=0
+  TipoCurva=0
+  AngCorteI=0
+  AngCorteD=0
+  Centro=0
+  TipoTarifa=1
+  f_cant=(@TipoEmisor=1)y(@motor=2)
+  desccomp=1
+end
+Componente No Visual
+  id=HRA530037_1
+  art=HRA530037
+  desc=Emisor Skipper Black
+  tipo_ctrl=0
+  color=Blanco
+  Despiece=0
+  TipoCurva=0
+  AngCorteI=0
+  AngCorteD=0
+  Centro=0
+  TipoTarifa=1
+  f_cant=(@TipoEmisor=2)y(@motor=2)
+  desccomp=1
+end
+Componente No Visual
+  id=HRA530032_1
+  art=HRA530032
+  desc=Emisor Skipper Lux
+  tipo_ctrl=0
+  color=Blanco
+  Despiece=0
+  TipoCurva=0
+  AngCorteI=0
+  AngCorteD=0
+  Centro=0
+  TipoTarifa=1
+  f_cant=(@TipoEmisor=5)y(@motor=2)
+  desccomp=1
+end
+Componente No Visual
+  id=HRA530038_1
+  art=HRA530038
+  desc=Emisor Skipper Lux Black
+  tipo_ctrl=0
+  color=Blanco
+  Despiece=0
+  TipoCurva=0
+  AngCorteI=0
+  AngCorteD=0
+  Centro=0
+  TipoTarifa=1
+  f_cant=(@TipoEmisor=6)y(@motor=2)
+  desccomp=1
+end
+Componente No Visual
+  id=HRA530033_1
+  art=HRA530033
+  desc=Emisor Skipper Plus
+  tipo_ctrl=0
+  color=Blanco
+  Despiece=0
+  TipoCurva=0
+  AngCorteI=0
+  AngCorteD=0
+  Centro=0
+  TipoTarifa=1
+  f_cant=(@TipoEmisor=3)y(@motor=2)
+  desccomp=1
+end
+Componente No Visual
+  id=HRA530039_1
+  art=HRA530039
+  desc=Emisor Skipper Plus Black
+  tipo_ctrl=0
+  color=Blanco
+  Despiece=0
+  TipoCurva=0
+  AngCorteI=0
+  AngCorteD=0
+  Centro=0
+  TipoTarifa=1
+  f_cant=(@TipoEmisor=4)y(@motor=2)
+  desccomp=1
+end
+Componente No Visual
+  id=HRA530034_1
+  art=HRA530034
+  desc=Emisor Skipper P-Lux
+  tipo_ctrl=0
+  color=Blanco
+  Despiece=0
+  TipoCurva=0
+  AngCorteI=0
+  AngCorteD=0
+  Centro=0
+  TipoTarifa=1
+  f_cant=(@TipoEmisor=7)y(@motor=2)
+  desccomp=1
+end
+Componente No Visual
+  id=HRA530040_1
+  art=HRA530040
+  desc=Emisor Skipper P-Lux Black
+  tipo_ctrl=0
+  color=Blanco
+  Despiece=0
+  TipoCurva=0
+  AngCorteI=0
+  AngCorteD=0
+  Centro=0
+  TipoTarifa=1
+  f_cant=(@TipoEmisor=8)y(@motor=2)
+  desccomp=1
+end
+Componente No Visual
+  id=HRA530063L_1
+  art=HRA530063L
+  desc=Emisor Skipper Senso
+  tipo_ctrl=0
+  color=Blanco
+  Despiece=0
+  TipoCurva=0
+  AngCorteI=0
+  AngCorteD=0
+  Centro=0
+  TipoTarifa=1
+  f_cant=(@TipoEmisor=9)y(@motor=2)
+  desccomp=1
+end
+Componente No Visual
+  id=GA80140997_1
+  art=80140997
+  desc=Kit motorización palillería Zen blanco
+  tipo_ctrl=0
+  color=Blanco
+  Despiece=0
+  TipoCurva=0
+  AngCorteI=0
+  AngCorteD=0
+  Centro=0
+  TipoTarifa=1
+  DtMedCutPerf=5000
+  f_cant=@motor<>0
+  MedCutPerf=5000
+end
+Componente No Visual
+  id=GA80140997_2
+  art=80140997
+  desc=Kit motorización palillería Zen blanco
+  tipo_ctrl=0
+  color=Blanco
+  Despiece=0
+  TipoCurva=0
+  AngCorteI=0
+  AngCorteD=0
+  Centro=0
+  TipoTarifa=1
+  DtMedCutPerf=5000
+  f_cant=@Motor<>0
+  MedCutPerf=5000
+end
+
+class=TEstRelleno
+  x=0
+  y=0
+  w=350
+  h=250
+end
+

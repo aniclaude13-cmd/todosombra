@@ -1,0 +1,26 @@
+{
+  "id": "CORTR1",
+  "nombre": "Cortina reforzada",
+  "tipo": "otro",
+  "version": "2025.09",
+  "fuente": {
+    "abd": "+CORTR1.abd"
+  },
+  "dimensiones": {
+    "linea": {
+      "min": 0,
+      "max": 0,
+      "valores": []
+    },
+    "salida": {
+      "min": 0,
+      "max": 0,
+      "valores": []
+    }
+  },
+  "tarifa": {
+    "matriz": {}
+  },
+  "motores": [],
+  "reglas": []
+}

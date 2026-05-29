@@ -1,0 +1,26 @@
+{
+  "id": "PL7020_DM_31_05_2023",
+  "nombre": "Toldo de palilleria doble PL7020 con porteria con refuerzos",
+  "tipo": "palilleria",
+  "version": "2025.09",
+  "fuente": {
+    "abd": "PL7020_DM 31-05-2023.abd"
+  },
+  "dimensiones": {
+    "linea": {
+      "min": 0,
+      "max": 0,
+      "valores": []
+    },
+    "salida": {
+      "min": 0,
+      "max": 0,
+      "valores": []
+    }
+  },
+  "tarifa": {
+    "matriz": {}
+  },
+  "motores": [],
+  "reglas": []
+}

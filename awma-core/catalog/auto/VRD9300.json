@@ -1,0 +1,71 @@
+{
+  "id": "VRD9300",
+  "nombre": "Veranda Toldo cofre Sirio veranda horizontal",
+  "tipo": "vertical",
+  "version": "2025.09",
+  "fuente": {
+    "abd": "VRD9300.abd"
+  },
+  "dimensiones": {
+    "linea": {
+      "min": 200,
+      "max": 600,
+      "valores": []
+    },
+    "salida": {
+      "min": 250,
+      "max": 500,
+      "valores": []
+    }
+  },
+  "tarifa": {
+    "matriz": {}
+  },
+  "motores": [],
+  "reglas": [
+    {
+      "id": "linea_min",
+      "descripcion": "Línea mínima del modelo",
+      "efecto": "bloqueo",
+      "mensaje": "Línea mínima del VRD9300: 200 cm.",
+      "condicion": {
+        "linea": {
+          "lt": 200
+        }
+      }
+    },
+    {
+      "id": "linea_max",
+      "descripcion": "Línea máxima del modelo",
+      "efecto": "bloqueo",
+      "mensaje": "Línea máxima del VRD9300: 600 cm.",
+      "condicion": {
+        "linea": {
+          "gt": 600
+        }
+      }
+    },
+    {
+      "id": "salida_min",
+      "descripcion": "Salida mínima del modelo",
+      "efecto": "bloqueo",
+      "mensaje": "Salida mínima del VRD9300: 250 cm.",
+      "condicion": {
+        "salida": {
+          "lt": 250
+        }
+      }
+    },
+    {
+      "id": "salida_max",
+      "descripcion": "Salida máxima del modelo",
+      "efecto": "bloqueo",
+      "mensaje": "Salida máxima del VRD9300: 500 cm.",
+      "condicion": {
+        "salida": {
+          "gt": 500
+        }
+      }
+    }
+  ]
+}

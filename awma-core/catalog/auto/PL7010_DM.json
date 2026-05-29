@@ -1,0 +1,26 @@
+{
+  "id": "PL7010_DM",
+  "nombre": "Toldo de palilleria doble PL7010 con porteria sin refuerzos",
+  "tipo": "palilleria",
+  "version": "2025.09",
+  "fuente": {
+    "abd": "PL7010_DM.abd"
+  },
+  "dimensiones": {
+    "linea": {
+      "min": 0,
+      "max": 0,
+      "valores": []
+    },
+    "salida": {
+      "min": 0,
+      "max": 0,
+      "valores": []
+    }
+  },
+  "tarifa": {
+    "matriz": {}
+  },
+  "motores": [],
+  "reglas": []
+}

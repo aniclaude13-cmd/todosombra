@@ -1,0 +1,87 @@
+articulo=G77RLTSB
+desc=Reposicion de lona toldos stor y bajante
+NewEstruc=1
+color perfil=Blanco
+color accesorios=Blanco
+dim1=150
+dim2=325
+tipoacabado=8
+AplMultAncho=1
+intAtLin=50
+intAtEA=70
+ilumPrC=20
+ilumPrL=40
+ilumPrF=50
+ProfSombCerr=1
+
+##Datos_Estructura##
+
+Id=0
+PintCotasAut=0
+Modulo000=001         0         0         0         0
+
+
+
+Variable
+  nombre=@AltoLona
+  valor=400
+  tipovar=2
+  formula=SI(DIM2<=170;245;#@#Si(DIM2<=200;275;#@#Si(DIM2<=230;305;#@#Si(DIM2<=250;325;#@#Si(DIM2<=275;350;#@#Si(DIM2<=300;375;#@#Si(DIM2<=325;400;#@#Si(DIM2<=350;425;#@#))))))))
+  max=0
+  min=0
+  actmin=0
+  actmax=0
+  selec=-1
+  peticion=1
+  condicion=
+  varserie=0
+  PermEdRes=0
+  ResManual=0
+  ValorManual=0
+  agrupar=0
+end
+Componente No Visual
+  id=G77PVPRLTSB_1
+  art=G77PVPRLTSB
+  desc=Precio Reposicion de lona toldos stor y bajante
+  tipo_ctrl=0
+  color=Blanco
+  eDim1=150
+  eDim2=325
+  Despiece=0
+  TipoCurva=0
+  AngCorteI=0
+  AngCorteD=0
+  Centro=0
+  TipoTarifa=1
+  f_cant=1
+  f_Dim1=DIM1
+  f_Dim2=DIM2
+end
+Componente No Visual
+  id=G77LONA_1
+  funcion=18
+  art=G77LONA
+  desc=Lona
+  tipo_ctrl=0
+  eDim1=400
+  eDim2=150
+  Despiece=0
+  TipoCurva=0
+  AngCorteI=0
+  AngCorteD=0
+  Centro=0
+  TipoTarifa=1
+  f_cant=1
+  f_Dim1=SI(DIM2<=170;245;#@#Si(DIM2<=200;275;#@#Si(DIM2<=230;305;#@#Si(DIM2<=250;325;#@#Si(DIM2<=275;350;#@#Si(DIM2<=300;375;#@#Si(DIM2<=325;400;#@#Si(DIM2<=350;425;#@#))))))))
+  f_Dim2=Dim1
+  desccomp=1
+end
+
+class=TEstRelleno
+  x=0
+  y=0
+  w=325
+  h=150
+end
+

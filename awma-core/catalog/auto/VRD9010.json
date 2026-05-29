@@ -1,0 +1,71 @@
+{
+  "id": "VRD9010",
+  "nombre": "VRD9010 - Screeny 130GPZ TO",
+  "tipo": "vertical",
+  "version": "2025.09",
+  "fuente": {
+    "abd": "VRD9010.abd"
+  },
+  "dimensiones": {
+    "linea": {
+      "min": 100,
+      "max": 500,
+      "valores": []
+    },
+    "salida": {
+      "min": 100,
+      "max": 500,
+      "valores": []
+    }
+  },
+  "tarifa": {
+    "matriz": {}
+  },
+  "motores": [],
+  "reglas": [
+    {
+      "id": "linea_min",
+      "descripcion": "Línea mínima del modelo",
+      "efecto": "bloqueo",
+      "mensaje": "Línea mínima del VRD9010: 100 cm.",
+      "condicion": {
+        "linea": {
+          "lt": 100
+        }
+      }
+    },
+    {
+      "id": "linea_max",
+      "descripcion": "Línea máxima del modelo",
+      "efecto": "bloqueo",
+      "mensaje": "Línea máxima del VRD9010: 500 cm.",
+      "condicion": {
+        "linea": {
+          "gt": 500
+        }
+      }
+    },
+    {
+      "id": "salida_min",
+      "descripcion": "Salida mínima del modelo",
+      "efecto": "bloqueo",
+      "mensaje": "Salida mínima del VRD9010: 100 cm.",
+      "condicion": {
+        "salida": {
+          "lt": 100
+        }
+      }
+    },
+    {
+      "id": "salida_max",
+      "descripcion": "Salida máxima del modelo",
+      "efecto": "bloqueo",
+      "mensaje": "Salida máxima del VRD9010: 500 cm.",
+      "condicion": {
+        "salida": {
+          "gt": 500
+        }
+      }
+    }
+  ]
+}

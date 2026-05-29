@@ -1,0 +1,26 @@
+{
+  "id": "REP1005ESP",
+  "nombre": "Lona confeccionada para reposicion toldo PALILLERIA DOBLE",
+  "tipo": "otro",
+  "version": "2025.09",
+  "fuente": {
+    "abd": "REP1005ESP.abd"
+  },
+  "dimensiones": {
+    "linea": {
+      "min": 0,
+      "max": 0,
+      "valores": []
+    },
+    "salida": {
+      "min": 0,
+      "max": 0,
+      "valores": []
+    }
+  },
+  "tarifa": {
+    "matriz": {}
+  },
+  "motores": [],
+  "reglas": []
+}

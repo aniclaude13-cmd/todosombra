@@ -1,0 +1,26 @@
+{
+  "id": "TC3A",
+  "nombre": "Capota 3 arcos",
+  "tipo": "otro",
+  "version": "2025.09",
+  "fuente": {
+    "abd": "+TC3A.abd"
+  },
+  "dimensiones": {
+    "linea": {
+      "min": 0,
+      "max": 0,
+      "valores": []
+    },
+    "salida": {
+      "min": 0,
+      "max": 0,
+      "valores": []
+    }
+  },
+  "tarifa": {
+    "matriz": {}
+  },
+  "motores": [],
+  "reglas": []
+}

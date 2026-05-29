@@ -1,0 +1,82 @@
+articulo=+KUAD4002BR
+desc=Toldo Kuadbox 400 2 brazos
+NewEstruc=1
+color perfil=Blanco
+color accesorios=Blanco
+dim1=300
+dim2=175
+tipoacabado=8
+AplMultAncho=1
+intAtLin=50
+intAtEA=70
+ilumPrC=20
+ilumPrL=40
+ilumPrF=50
+ProfSombCerr=1
+
+##Datos_Estructura##
+
+Id=0
+PintCotasAut=0
+Modulo000=001         0         0         0         0
+
+
+
+Componente No Visual
+  id=LLPVPKUAD4002BRBL_1
+  art=LLPVPKUAD4002BR/BL
+  desc=Precio Toldo Kuadbox 400 2 brazos
+  tipo_ctrl=0
+  color=Blanco
+  Despiece=0
+  TipoCurva=0
+  AngCorteI=0
+  AngCorteD=0
+  Centro=0
+  TipoTarifa=1
+  f_cant=1
+end
+Componente No Visual
+  id=G77LONA_1
+  funcion=18
+  art=G77LONA
+  desc=Lona
+  tipo_ctrl=0
+  eDim1=175
+  eDim2=300
+  Despiece=0
+  TipoCurva=0
+  AngCorteI=0
+  AngCorteD=0
+  Centro=0
+  TipoTarifa=1
+  f_cant=1
+  f_Dim1=Dim2
+  f_Dim2=Dim1
+  desccomp=1
+end
+Componente No Visual
+  id=G77FALDON_1
+  funcion=24
+  art=G77FALDON
+  desc=Faldón
+  eDim1=25
+  eDim2=300
+  Despiece=0
+  TipoCurva=0
+  AngCorteI=0
+  AngCorteD=0
+  Centro=0
+  TipoTarifa=0
+  f_cant=1
+  f_Dim1=25
+  f_Dim2=Dim1
+end
+
+class=TEstRelleno
+  x=0
+  y=0
+  w=175
+  h=300
+end
+

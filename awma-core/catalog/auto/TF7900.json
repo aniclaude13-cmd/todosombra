@@ -1,0 +1,71 @@
+{
+  "id": "TF7900",
+  "nombre": "Sistema Tenflat Entreparedes",
+  "tipo": "vertical",
+  "version": "2025.09",
+  "fuente": {
+    "abd": "TF7900.abd"
+  },
+  "dimensiones": {
+    "linea": {
+      "min": 250,
+      "max": 700,
+      "valores": []
+    },
+    "salida": {
+      "min": 250,
+      "max": 700,
+      "valores": []
+    }
+  },
+  "tarifa": {
+    "matriz": {}
+  },
+  "motores": [],
+  "reglas": [
+    {
+      "id": "linea_min",
+      "descripcion": "Línea mínima del modelo",
+      "efecto": "bloqueo",
+      "mensaje": "Línea mínima del TF7900: 250 cm.",
+      "condicion": {
+        "linea": {
+          "lt": 250
+        }
+      }
+    },
+    {
+      "id": "linea_max",
+      "descripcion": "Línea máxima del modelo",
+      "efecto": "bloqueo",
+      "mensaje": "Línea máxima del TF7900: 700 cm.",
+      "condicion": {
+        "linea": {
+          "gt": 700
+        }
+      }
+    },
+    {
+      "id": "salida_min",
+      "descripcion": "Salida mínima del modelo",
+      "efecto": "bloqueo",
+      "mensaje": "Salida mínima del TF7900: 250 cm.",
+      "condicion": {
+        "salida": {
+          "lt": 250
+        }
+      }
+    },
+    {
+      "id": "salida_max",
+      "descripcion": "Salida máxima del modelo",
+      "efecto": "bloqueo",
+      "mensaje": "Salida máxima del TF7900: 700 cm.",
+      "condicion": {
+        "salida": {
+          "gt": 700
+        }
+      }
+    }
+  ]
+}

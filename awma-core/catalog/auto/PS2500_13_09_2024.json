@@ -1,0 +1,108 @@
+{
+  "id": "PS2500_13_09_2024",
+  "nombre": "PS2500 Arnex: toldo cofre veranda con guias y cremallera",
+  "tipo": "toldo_cofre",
+  "version": "2025.09",
+  "fuente": {
+    "abd": "PS2500 13-09-2024.abd"
+  },
+  "dimensiones": {
+    "linea": {
+      "min": 195,
+      "max": 600,
+      "valores": []
+    },
+    "salida": {
+      "min": 100,
+      "max": 450,
+      "valores": []
+    }
+  },
+  "tarifa": {
+    "matriz": {}
+  },
+  "motores": [
+    {
+      "id": "somfy_motor_lt",
+      "nombre": "Somfy Motor Lt",
+      "recargo": 0,
+      "familia": "somfy"
+    },
+    {
+      "id": "somfy_motor_rts",
+      "nombre": "Somfy Motor Rts",
+      "recargo": 0,
+      "familia": "somfy"
+    },
+    {
+      "id": "somfy_motor_io",
+      "nombre": "Somfy Motor Io",
+      "recargo": 0,
+      "familia": "somfy"
+    },
+    {
+      "id": "cherubini_motor_mecanico",
+      "nombre": "Cherubini Motor Mecanico",
+      "recargo": 0,
+      "familia": "cherubini"
+    },
+    {
+      "id": "cherubini_motor_wave_rx_radio",
+      "nombre": "Cherubini Motor Wave Rx Radio",
+      "recargo": 0,
+      "familia": "cherubini"
+    },
+    {
+      "id": "gaviota_motor_elite_radio",
+      "nombre": "Gaviota Motor Elite Radio",
+      "recargo": 0,
+      "familia": "gaviota"
+    }
+  ],
+  "reglas": [
+    {
+      "id": "linea_min",
+      "descripcion": "Línea mínima del modelo",
+      "efecto": "bloqueo",
+      "mensaje": "Línea mínima del PS2500_13_09_2024: 195 cm.",
+      "condicion": {
+        "linea": {
+          "lt": 195
+        }
+      }
+    },
+    {
+      "id": "linea_max",
+      "descripcion": "Línea máxima del modelo",
+      "efecto": "bloqueo",
+      "mensaje": "Línea máxima del PS2500_13_09_2024: 600 cm.",
+      "condicion": {
+        "linea": {
+          "gt": 600
+        }
+      }
+    },
+    {
+      "id": "salida_min",
+      "descripcion": "Salida mínima del modelo",
+      "efecto": "bloqueo",
+      "mensaje": "Salida mínima del PS2500_13_09_2024: 100 cm.",
+      "condicion": {
+        "salida": {
+          "lt": 100
+        }
+      }
+    },
+    {
+      "id": "salida_max",
+      "descripcion": "Salida máxima del modelo",
+      "efecto": "bloqueo",
+      "mensaje": "Salida máxima del PS2500_13_09_2024: 450 cm.",
+      "condicion": {
+        "salida": {
+          "gt": 450
+        }
+      }
+    }
+  ]
+}

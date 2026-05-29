@@ -1,0 +1,26 @@
+{
+  "id": "KUAD4002BR",
+  "nombre": "Toldo Kuadbox 400 2 brazos",
+  "tipo": "toldo_cofre",
+  "version": "2025.09",
+  "fuente": {
+    "abd": "+KUAD4002BR.abd"
+  },
+  "dimensiones": {
+    "linea": {
+      "min": 0,
+      "max": 0,
+      "valores": []
+    },
+    "salida": {
+      "min": 0,
+      "max": 0,
+      "valores": []
+    }
+  },
+  "tarifa": {
+    "matriz": {}
+  },
+  "motores": [],
+  "reglas": []
+}

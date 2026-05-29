@@ -1,0 +1,26 @@
+{
+  "id": "PL7000ESP_14_05_24PE",
+  "nombre": "Toldo ESPECIAL de palilleria simple PL7000 entreparedes",
+  "tipo": "palilleria",
+  "version": "2025.09",
+  "fuente": {
+    "abd": "PL7000ESP 14-05-24Pe.abd"
+  },
+  "dimensiones": {
+    "linea": {
+      "min": 0,
+      "max": 0,
+      "valores": []
+    },
+    "salida": {
+      "min": 0,
+      "max": 0,
+      "valores": []
+    }
+  },
+  "tarifa": {
+    "matriz": {}
+  },
+  "motores": [],
+  "reglas": []
+}

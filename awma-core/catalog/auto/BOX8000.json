@@ -1,0 +1,140 @@
+{
+  "id": "BOX8000",
+  "nombre": "Toldo cofre cuadrado Kuadbox 400 con brazo articulado Onyx",
+  "tipo": "toldo_cofre",
+  "version": "2025.09",
+  "fuente": {
+    "abd": "BOX8000.abd"
+  },
+  "dimensiones": {
+    "linea": {
+      "min": 204,
+      "max": 1800,
+      "valores": []
+    },
+    "salida": {
+      "min": 150,
+      "max": 400,
+      "valores": []
+    }
+  },
+  "tarifa": {
+    "matriz": {}
+  },
+  "motores": [
+    {
+      "id": "manual",
+      "nombre": "Manivela",
+      "recargo": 0,
+      "familia": "manual"
+    },
+    {
+      "id": "somfy_motor_lt",
+      "nombre": "Somfy Motor Lt",
+      "recargo": 0,
+      "familia": "somfy"
+    },
+    {
+      "id": "somfy_motor_rts",
+      "nombre": "Somfy Motor Rts",
+      "recargo": 0,
+      "familia": "somfy"
+    },
+    {
+      "id": "somfy_motor_io",
+      "nombre": "Somfy Motor Io",
+      "recargo": 0,
+      "familia": "somfy"
+    },
+    {
+      "id": "cherubini_motor_mecanico",
+      "nombre": "Cherubini Motor Mecanico",
+      "recargo": 0,
+      "familia": "cherubini"
+    },
+    {
+      "id": "cherubini_motor_ora_zrx_radio",
+      "nombre": "Cherubini Motor Ora Zrx Radio",
+      "recargo": 0,
+      "familia": "cherubini"
+    },
+    {
+      "id": "gaviota_motor_elite_radio",
+      "nombre": "Gaviota Motor Elite Radio",
+      "recargo": 0,
+      "familia": "gaviota"
+    },
+    {
+      "id": "aok_motor_mecanico",
+      "nombre": "Aok Motor Mecanico",
+      "recargo": 0,
+      "familia": "aok"
+    },
+    {
+      "id": "aok_motor_radio",
+      "nombre": "Aok Motor Radio",
+      "recargo": 0,
+      "familia": "aok"
+    }
+  ],
+  "reglas": [
+    {
+      "id": "linea_min",
+      "descripcion": "Línea mínima del modelo",
+      "efecto": "bloqueo",
+      "mensaje": "Línea mínima del BOX8000: 204 cm.",
+      "condicion": {
+        "linea": {
+          "lt": 204
+        }
+      }
+    },
+    {
+      "id": "linea_max",
+      "descripcion": "Línea máxima del modelo",
+      "efecto": "bloqueo",
+      "mensaje": "Línea máxima del BOX8000: 1800 cm.",
+      "condicion": {
+        "linea": {
+          "gt": 1800
+        }
+      }
+    },
+    {
+      "id": "salida_min",
+      "descripcion": "Salida mínima del modelo",
+      "efecto": "bloqueo",
+      "mensaje": "Salida mínima del BOX8000: 150 cm.",
+      "condicion": {
+        "salida": {
+          "lt": 150
+        }
+      }
+    },
+    {
+      "id": "salida_max",
+      "descripcion": "Salida máxima del modelo",
+      "efecto": "bloqueo",
+      "mensaje": "Salida máxima del BOX8000: 400 cm.",
+      "condicion": {
+        "salida": {
+          "gt": 400
+        }
+      }
+    }
+  ],
+  "brazos": {
+    "onyx": {
+      "nombre": "Brazos Onyx",
+      "saltos_cm": []
+    },
+    "onyx_lux_sin_led": {
+      "nombre": "Brazos Onyx Lux Sin Led",
+      "saltos_cm": []
+    },
+    "onyx_lux_con_led": {
+      "nombre": "Brazos Onyx Lux Con Led",
+      "saltos_cm": []
+    }
+  }
+}

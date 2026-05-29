@@ -1,0 +1,26 @@
+{
+  "id": "G77RLPR",
+  "nombre": "Reposicion de lona punto recto",
+  "tipo": "otro",
+  "version": "2025.09",
+  "fuente": {
+    "abd": "G77RLPR.abd"
+  },
+  "dimensiones": {
+    "linea": {
+      "min": 0,
+      "max": 0,
+      "valores": []
+    },
+    "salida": {
+      "min": 0,
+      "max": 0,
+      "valores": []
+    }
+  },
+  "tarifa": {
+    "matriz": {}
+  },
+  "motores": [],
+  "reglas": []
+}

@@ -1,0 +1,134 @@
+{
+  "id": "MCK4700PLUSNOUSAR",
+  "nombre": "Toldo monoblock brazo articulado premium",
+  "tipo": "toldo_brazo",
+  "version": "2025.09",
+  "fuente": {
+    "abd": "MCK4700PlusNOUSAR.abd"
+  },
+  "dimensiones": {
+    "linea": {
+      "min": 590,
+      "max": 1800,
+      "valores": []
+    },
+    "salida": {
+      "min": 150,
+      "max": 500,
+      "valores": []
+    }
+  },
+  "tarifa": {
+    "matriz": {}
+  },
+  "motores": [
+    {
+      "id": "manual",
+      "nombre": "Manivela",
+      "recargo": 0,
+      "familia": "manual"
+    },
+    {
+      "id": "somfy_motor_lt",
+      "nombre": "Somfy Motor Lt",
+      "recargo": 0,
+      "familia": "somfy"
+    },
+    {
+      "id": "somfy_motor_rts",
+      "nombre": "Somfy Motor Rts",
+      "recargo": 0,
+      "familia": "somfy"
+    },
+    {
+      "id": "somfy_motor_io",
+      "nombre": "Somfy Motor Io",
+      "recargo": 0,
+      "familia": "somfy"
+    },
+    {
+      "id": "cherubini_motor_roll_mecanico",
+      "nombre": "Cherubini Motor Roll Mecanico",
+      "recargo": 0,
+      "familia": "cherubini"
+    },
+    {
+      "id": "cherubini_motor_wave_rx_radio",
+      "nombre": "Cherubini Motor Wave Rx Radio",
+      "recargo": 0,
+      "familia": "cherubini"
+    },
+    {
+      "id": "gaviota_motor_gs_mecanico",
+      "nombre": "Gaviota Motor Gs Mecanico",
+      "recargo": 0,
+      "familia": "gaviota"
+    },
+    {
+      "id": "gaviota_motor_elite_radio",
+      "nombre": "Gaviota Motor Elite Radio",
+      "recargo": 0,
+      "familia": "gaviota"
+    }
+  ],
+  "reglas": [
+    {
+      "id": "linea_min",
+      "descripcion": "Línea mínima del modelo",
+      "efecto": "bloqueo",
+      "mensaje": "Línea mínima del MCK4700PLUSNOUSAR: 590 cm.",
+      "condicion": {
+        "linea": {
+          "lt": 590
+        }
+      }
+    },
+    {
+      "id": "linea_max",
+      "descripcion": "Línea máxima del modelo",
+      "efecto": "bloqueo",
+      "mensaje": "Línea máxima del MCK4700PLUSNOUSAR: 1800 cm.",
+      "condicion": {
+        "linea": {
+          "gt": 1800
+        }
+      }
+    },
+    {
+      "id": "salida_min",
+      "descripcion": "Salida mínima del modelo",
+      "efecto": "bloqueo",
+      "mensaje": "Salida mínima del MCK4700PLUSNOUSAR: 150 cm.",
+      "condicion": {
+        "salida": {
+          "lt": 150
+        }
+      }
+    },
+    {
+      "id": "salida_max",
+      "descripcion": "Salida máxima del modelo",
+      "efecto": "bloqueo",
+      "mensaje": "Salida máxima del MCK4700PLUSNOUSAR: 500 cm.",
+      "condicion": {
+        "salida": {
+          "gt": 500
+        }
+      }
+    }
+  ],
+  "brazos": {
+    "novalido": {
+      "nombre": "Brazos Novalido",
+      "saltos_cm": []
+    },
+    "premium": {
+      "nombre": "Brazos Premium",
+      "saltos_cm": []
+    },
+    "concept": {
+      "nombre": "Brazos Concept",
+      "saltos_cm": []
+    }
+  }
+}

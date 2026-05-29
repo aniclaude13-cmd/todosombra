@@ -1,0 +1,120 @@
+{
+  "id": "US3910",
+  "nombre": "US3910 Universal, toldo vertical cofre",
+  "tipo": "vertical",
+  "version": "2025.09",
+  "fuente": {
+    "abd": "US3910.abd"
+  },
+  "dimensiones": {
+    "linea": {
+      "min": 95,
+      "max": 450,
+      "valores": []
+    },
+    "salida": {
+      "min": 95,
+      "max": 400,
+      "valores": []
+    }
+  },
+  "tarifa": {
+    "matriz": {}
+  },
+  "motores": [
+    {
+      "id": "manual",
+      "nombre": "Manivela",
+      "recargo": 0,
+      "familia": "manual"
+    },
+    {
+      "id": "somfy_motor_wt",
+      "nombre": "Somfy Motor Wt",
+      "recargo": 0,
+      "familia": "somfy"
+    },
+    {
+      "id": "somfy_motor_rts",
+      "nombre": "Somfy Motor Rts",
+      "recargo": 0,
+      "familia": "somfy"
+    },
+    {
+      "id": "somfy_motor_io",
+      "nombre": "Somfy Motor Io",
+      "recargo": 0,
+      "familia": "somfy"
+    },
+    {
+      "id": "cherubini_motor_mecanico",
+      "nombre": "Cherubini Motor Mecanico",
+      "recargo": 0,
+      "familia": "cherubini"
+    },
+    {
+      "id": "cherubini_motor_wave_rx_radio",
+      "nombre": "Cherubini Motor Wave Rx Radio",
+      "recargo": 0,
+      "familia": "cherubini"
+    },
+    {
+      "id": "gaviota_motor_cross_radio",
+      "nombre": "Gaviota Motor Cross Radio",
+      "recargo": 0,
+      "familia": "gaviota"
+    },
+    {
+      "id": "gaviota_motor_elite",
+      "nombre": "Gaviota Motor Elite",
+      "recargo": 0,
+      "familia": "gaviota"
+    }
+  ],
+  "reglas": [
+    {
+      "id": "linea_min",
+      "descripcion": "Línea mínima del modelo",
+      "efecto": "bloqueo",
+      "mensaje": "Línea mínima del US3910: 95 cm.",
+      "condicion": {
+        "linea": {
+          "lt": 95
+        }
+      }
+    },
+    {
+      "id": "linea_max",
+      "descripcion": "Línea máxima del modelo",
+      "efecto": "bloqueo",
+      "mensaje": "Línea máxima del US3910: 450 cm.",
+      "condicion": {
+        "linea": {
+          "gt": 450
+        }
+      }
+    },
+    {
+      "id": "salida_min",
+      "descripcion": "Salida mínima del modelo",
+      "efecto": "bloqueo",
+      "mensaje": "Salida mínima del US3910: 95 cm.",
+      "condicion": {
+        "salida": {
+          "lt": 95
+        }
+      }
+    },
+    {
+      "id": "salida_max",
+      "descripcion": "Salida máxima del modelo",
+      "efecto": "bloqueo",
+      "mensaje": "Salida máxima del US3910: 400 cm.",
+      "condicion": {
+        "salida": {
+          "gt": 400
+        }
+      }
+    }
+  ]
+}

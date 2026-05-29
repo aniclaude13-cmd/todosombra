@@ -1,0 +1,26 @@
+{
+  "id": "REP1000ESP",
+  "nombre": "Lona confeccionada para reposicion especial",
+  "tipo": "otro",
+  "version": "2025.09",
+  "fuente": {
+    "abd": "REP1000ESP.abd"
+  },
+  "dimensiones": {
+    "linea": {
+      "min": 0,
+      "max": 0,
+      "valores": []
+    },
+    "salida": {
+      "min": 0,
+      "max": 0,
+      "valores": []
+    }
+  },
+  "tarifa": {
+    "matriz": {}
+  },
+  "motores": [],
+  "reglas": []
+}

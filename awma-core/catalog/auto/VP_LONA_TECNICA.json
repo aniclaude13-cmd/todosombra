@@ -1,0 +1,71 @@
+{
+  "id": "VP_LONA_TECNICA",
+  "nombre": "Lona Tejido tecnico Volant Plus",
+  "tipo": "otro",
+  "version": "2025.09",
+  "fuente": {
+    "abd": "VP_LONA_TECNICA.abd"
+  },
+  "dimensiones": {
+    "linea": {
+      "min": 215,
+      "max": 700,
+      "valores": []
+    },
+    "salida": {
+      "min": 150,
+      "max": 400,
+      "valores": []
+    }
+  },
+  "tarifa": {
+    "matriz": {}
+  },
+  "motores": [],
+  "reglas": [
+    {
+      "id": "linea_min",
+      "descripcion": "Línea mínima del modelo",
+      "efecto": "bloqueo",
+      "mensaje": "Línea mínima del VP_LONA_TECNICA: 215 cm.",
+      "condicion": {
+        "linea": {
+          "lt": 215
+        }
+      }
+    },
+    {
+      "id": "linea_max",
+      "descripcion": "Línea máxima del modelo",
+      "efecto": "bloqueo",
+      "mensaje": "Línea máxima del VP_LONA_TECNICA: 700 cm.",
+      "condicion": {
+        "linea": {
+          "gt": 700
+        }
+      }
+    },
+    {
+      "id": "salida_min",
+      "descripcion": "Salida mínima del modelo",
+      "efecto": "bloqueo",
+      "mensaje": "Salida mínima del VP_LONA_TECNICA: 150 cm.",
+      "condicion": {
+        "salida": {
+          "lt": 150
+        }
+      }
+    },
+    {
+      "id": "salida_max",
+      "descripcion": "Salida máxima del modelo",
+      "efecto": "bloqueo",
+      "mensaje": "Salida máxima del VP_LONA_TECNICA: 400 cm.",
+      "condicion": {
+        "salida": {
+          "gt": 400
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,2879 @@
+articulo=PL7030_M 31-05-2023
+desc=Toldo de palilleria simple PL7030 autoportante 4 patas
+NewEstruc=1
+color perfil=Blanco
+color accesorios=Blanco
+dim1=700
+dim2=700
+tipoacabado=8
+AplMultAncho=1
+intAtLin=50
+intAtEA=70
+ilumPrC=20
+ilumPrL=40
+ilumPrF=50
+ProfSombCerr=1
+
+##Datos_Estructura##
+
+Id=0
+PintCotasAut=0
+Modulo000=001         0         0         0         0
+
+deInfoMontaje000={\rtf1\ansi\ansicpg1252\deff0{\fonttbl{\f0\fnil\fcharset0 Arial;}}
+deInfoMontaje001={\colortbl ;\red255\green0\blue0;}
+deInfoMontaje002=\viewkind4\uc1\pard\cf1\lang3082\b\fs44\par
+deInfoMontaje003=}
+
+
+Variable
+  nombre=@POLEABRIDA
+  valor=1
+  tipovar=1
+  formula=
+  max=0
+  min=0
+  actmin=0
+  actmax=0
+  selec=0
+  peticion=1
+  condicion=
+  varserie=0
+  PermEdRes=0
+  ResManual=0
+  ValorManual=0
+  agrupar=0
+  enum_0_texto=ESTANDAR
+  enum_0_valor=1
+  enum_0_condicion=
+  enum_1_texto=ESPECIAL
+  enum_1_valor=2
+  enum_1_condicion=
+end
+Variable
+  nombre=@AGUAS
+  valor=0
+  tipovar=1
+  formula=
+  max=0
+  min=0
+  actmin=0
+  actmax=0
+  selec=0
+  peticion=1
+  condicion=
+  varserie=0
+  PermEdRes=0
+  ResManual=0
+  ValorManual=0
+  agrupar=0
+  enum_0_texto=SIN CAIDA DE AGUA
+  enum_0_valor=0
+  enum_0_condicion=
+  enum_1_texto=AGUAS FRENTE DERECHA
+  enum_1_valor=1
+  enum_1_condicion=
+  enum_2_texto=AGUAS FRENTE IZQUIERDA
+  enum_2_valor=2
+  enum_2_condicion=
+end
+Variable
+  nombre=@ALTURADEPATA
+  valor=0
+  tipovar=0
+  formula=
+  max=0
+  min=0
+  actmin=0
+  actmax=0
+  selec=-1
+  peticion=1
+  condicion=
+  varserie=0
+  PermEdRes=0
+  ResManual=0
+  ValorManual=0
+  agrupar=0
+end
+Variable
+  nombre=@CORTEPERFILERIA
+  valor=0
+  tipovar=1
+  formula=
+  max=0
+  min=0
+  actmin=0
+  actmax=0
+  selec=0
+  peticion=1
+  condicion=
+  varserie=0
+  PermEdRes=0
+  ResManual=0
+  ValorManual=0
+  agrupar=0
+  enum_0_texto=NO VALIDO
+  enum_0_valor=0
+  enum_0_condicion=
+  enum_1_texto=SOBRANTE
+  enum_1_valor=1
+  enum_1_condicion=
+  enum_2_texto=MEDIDA EXACTA
+  enum_2_valor=2
+  enum_2_condicion=
+end
+Variable
+  nombre=@CORTEAINGLETE
+  valor=0
+  tipovar=1
+  formula=
+  max=0
+  min=0
+  actmin=0
+  actmax=0
+  selec=0
+  peticion=1
+  condicion=
+  varserie=0
+  PermEdRes=0
+  ResManual=0
+  ValorManual=0
+  agrupar=0
+  enum_0_texto=NO
+  enum_0_valor=0
+  enum_0_condicion=
+  enum_1_texto=CON CORTE A INGLETE
+  enum_1_valor=1
+  enum_1_condicion=
+end
+Variable
+  nombre=@TORNILLERIA
+  valor=1
+  tipovar=1
+  formula=
+  max=0
+  min=0
+  actmin=0
+  actmax=0
+  selec=1
+  peticion=1
+  condicion=
+  varserie=0
+  PermEdRes=0
+  ResManual=0
+  ValorManual=0
+  agrupar=0
+  enum_0_texto=SIN TORNILLERIA
+  enum_0_valor=0
+  enum_0_condicion=
+  enum_1_texto=CON TORNILLERIA 
+  enum_1_valor=1
+  enum_1_condicion=
+end
+Variable
+  nombre=@POLEAESQUINA
+  valor=0
+  tipovar=1
+  formula=
+  max=0
+  min=0
+  actmin=0
+  actmax=0
+  selec=1
+  peticion=1
+  condicion=
+  varserie=0
+  PermEdRes=0
+  ResManual=0
+  ValorManual=0
+  agrupar=0
+  enum_0_texto=SI
+  enum_0_valor=1
+  enum_0_condicion=
+  enum_1_texto=NO
+  enum_1_valor=0
+  enum_1_condicion=
+end
+Variable
+  nombre=@TIPOCONFECCION
+  valor=0
+  tipovar=1
+  formula=
+  max=0
+  min=0
+  actmin=0
+  actmax=0
+  selec=0
+  peticion=1
+  condicion=
+  varserie=0
+  PermEdRes=0
+  ResManual=0
+  ValorManual=0
+  agrupar=0
+  enum_0_texto=NORMAL
+  enum_0_valor=0
+  enum_0_condicion=
+  enum_1_texto=TENSA
+  enum_1_valor=1
+  enum_1_condicion=
+  enum_2_texto=PLUS ONDA
+  enum_2_valor=2
+  enum_2_condicion=
+end
+Variable
+  nombre=@MedidaFaldon
+  valor=0
+  tipovar=0
+  formula=
+  max=0
+  min=0
+  actmin=0
+  actmax=0
+  selec=-1
+  peticion=1
+  condicion=
+  varserie=0
+  PermEdRes=0
+  ResManual=0
+  ValorManual=0
+  agrupar=0
+end
+Variable
+  nombre=@TIPOFALDON
+  valor=0
+  tipovar=1
+  formula=
+  max=0
+  min=0
+  actmin=0
+  actmax=0
+  selec=0
+  peticion=1
+  condicion=
+  varserie=0
+  PermEdRes=0
+  ResManual=0
+  ValorManual=0
+  agrupar=0
+  enum_0_texto=SIN FALDON
+  enum_0_valor=0
+  enum_0_condicion=
+  enum_1_texto=TIPO 50
+  enum_1_valor=1
+  enum_1_condicion=
+  enum_2_texto=TIPO 51
+  enum_2_valor=2
+  enum_2_condicion=
+  enum_3_texto=TIPO 54
+  enum_3_valor=3
+  enum_3_condicion=
+  enum_4_texto=TIPO 58
+  enum_4_valor=4
+  enum_4_condicion=
+  enum_5_texto=TIPO 63
+  enum_5_valor=5
+  enum_5_condicion=
+  enum_6_texto=TIPO 70 
+  enum_6_valor=6
+  enum_6_condicion=
+end
+Variable
+  nombre=@MEDIDAFALDON2
+  valor=0
+  tipovar=0
+  formula=
+  max=0
+  min=0
+  actmin=0
+  actmax=0
+  selec=-1
+  peticion=1
+  condicion=
+  varserie=0
+  PermEdRes=0
+  ResManual=0
+  ValorManual=0
+  agrupar=0
+end
+Variable
+  nombre=@TIPOFALDON2
+  valor=0
+  tipovar=1
+  formula=
+  max=0
+  min=0
+  actmin=0
+  actmax=0
+  selec=0
+  peticion=1
+  condicion=
+  varserie=0
+  PermEdRes=0
+  ResManual=0
+  ValorManual=0
+  agrupar=0
+  enum_0_texto=SIN FALDON 2 
+  enum_0_valor=0
+  enum_0_condicion=
+  enum_1_texto=FALDON 2 TIPO 50
+  enum_1_valor=1
+  enum_1_condicion=
+  enum_2_texto=FALDON 2 TIPO 51
+  enum_2_valor=2
+  enum_2_condicion=
+  enum_3_texto=FALDON 2 TIPO 54
+  enum_3_valor=3
+  enum_3_condicion=
+  enum_4_texto=FALDON 2 TIPO 58
+  enum_4_valor=4
+  enum_4_condicion=
+  enum_5_texto=FALDON 2 TIPO 63
+  enum_5_valor=5
+  enum_5_condicion=
+  enum_6_texto=FALDON 2 TIPO 70
+  enum_6_valor=6
+  enum_6_condicion=
+end
+Variable
+  nombre=@COLORRIBETE
+  valor=0
+  tipovar=1
+  formula=
+  max=0
+  min=0
+  actmin=0
+  actmax=0
+  selec=0
+  peticion=1
+  condicion=SI(@MEDIDAFALDON>0;1;0)
+  varserie=0
+  PermEdRes=0
+  ResManual=0
+  ValorManual=0
+  agrupar=0
+  enum_0_texto=SIN RIBETE 
+  enum_0_valor=0
+  enum_0_condicion=
+  enum_1_texto=COLOR 0000
+  enum_1_valor=1
+  enum_1_condicion=
+  enum_2_texto=COLOR 5847
+  enum_2_valor=2
+  enum_2_condicion=
+  enum_3_texto=COLOR 5029
+  enum_3_valor=3
+  enum_3_condicion=
+  enum_4_texto=COLOR 9644
+  enum_4_valor=4
+  enum_4_condicion=
+  enum_5_texto=COLOR 5445
+  enum_5_valor=5
+  enum_5_condicion=
+  enum_6_texto=COLOR 9633
+  enum_6_valor=6
+  enum_6_condicion=
+  enum_7_texto=COLOR 5110
+  enum_7_valor=7
+  enum_7_condicion=
+  enum_8_texto=COLOR 9647
+  enum_8_valor=8
+  enum_8_condicion=
+  enum_9_texto=COLOR 5040
+  enum_9_valor=9
+  enum_9_condicion=
+  enum_10_texto=COLOR 5021
+  enum_10_valor=10
+  enum_10_condicion=
+  enum_11_texto=COLOR 5291
+  enum_11_valor=11
+  enum_11_condicion=
+  enum_12_texto=COLOR 5012
+  enum_12_valor=12
+  enum_12_condicion=
+  enum_13_texto=COLOR 9631
+  enum_13_valor=13
+  enum_13_condicion=
+  enum_14_texto=COLOR 3914
+  enum_14_valor=14
+  enum_14_condicion=
+  enum_15_texto=COLOR 9512
+  enum_15_valor=15
+  enum_15_condicion=
+  enum_16_texto=COLOR 5242 
+  enum_16_valor=16
+  enum_16_condicion=
+  enum_17_texto=COLOR 5025
+  enum_17_valor=17
+  enum_17_condicion=
+  enum_18_texto=COLOR 5024
+  enum_18_valor=18
+  enum_18_condicion=
+  enum_19_texto=COLOR 5132
+  enum_19_valor=19
+  enum_19_condicion=
+  enum_20_texto=COLOR 5888
+  enum_20_valor=20
+  enum_20_condicion=
+  enum_21_texto=COLOR 5254
+  enum_21_valor=21
+  enum_21_condicion=
+  enum_22_texto=COLOR 5412
+  enum_22_valor=22
+  enum_22_condicion=
+  enum_23_texto=COLOR 5412
+  enum_23_valor=23
+  enum_23_condicion=
+  enum_24_texto=COLOR 9514
+  enum_24_valor=24
+  enum_24_condicion=
+  enum_25_texto=CON DOBLADILLO 
+  enum_25_valor=25
+  enum_25_condicion=
+  enum_26_texto=A TONO 
+  enum_26_valor=26
+  enum_26_condicion=
+  enum_27_texto=PISADO
+  enum_27_valor=27
+  enum_27_condicion=
+end
+Variable
+  nombre=@HILOS
+  valor=11
+  tipovar=1
+  formula=
+  max=0
+  min=0
+  actmin=0
+  actmax=0
+  selec=11
+  peticion=1
+  condicion=
+  varserie=0
+  PermEdRes=0
+  ResManual=0
+  ValorManual=0
+  agrupar=0
+  enum_0_texto=Hilo 66502 Blanco
+  enum_0_valor=0
+  enum_0_condicion=
+  enum_1_texto=Hilo 66511 Gris
+  enum_1_valor=1
+  enum_1_condicion=
+  enum_2_texto=Hilo 66517 Beige
+  enum_2_valor=2
+  enum_2_condicion=
+  enum_3_texto=Hilo 66519 rojo
+  enum_3_valor=3
+  enum_3_condicion=
+  enum_4_texto=Hilo 66504 Burdeos
+  enum_4_valor=4
+  enum_4_condicion=
+  enum_5_texto=Hilo 66513 Azul
+  enum_5_valor=5
+  enum_5_condicion=
+  enum_6_texto=Hilo 66501 Negro
+  enum_6_valor=6
+  enum_6_condicion=
+  enum_7_texto=Hilo 66527 Verde
+  enum_7_valor=7
+  enum_7_condicion=
+  enum_8_texto=Hilo 66528 Naranja
+  enum_8_valor=8
+  enum_8_condicion=
+  enum_9_texto=Hilo 66529 Amarillo
+  enum_9_valor=9
+  enum_9_condicion=
+  enum_10_texto=Hilo 66547 Marrón
+  enum_10_valor=10
+  enum_10_condicion=
+  enum_11_texto=Hilo a tono
+  enum_11_valor=11
+  enum_11_condicion=
+  enum_12_texto=Con soldadura
+  enum_12_valor=12
+  enum_12_condicion=
+end
+Variable
+  nombre=@ETIQUETA
+  valor=1
+  tipovar=1
+  formula=
+  max=0
+  min=0
+  actmin=0
+  actmax=0
+  selec=1
+  peticion=1
+  condicion=
+  varserie=0
+  PermEdRes=0
+  ResManual=0
+  ValorManual=0
+  agrupar=0
+  enum_0_texto=SI 
+  enum_0_valor=0
+  enum_0_condicion=
+  enum_1_texto=NO
+  enum_1_valor=1
+  enum_1_condicion=
+end
+Componente No Visual
+  id=PVPPL7030BL_1
+  art=PVP_PL7030/BL
+  desc=Precio para PL7030 palilleria 80x40
+  tipo_ctrl=0
+  eDim1=700
+  eDim2=700
+  Despiece=0
+  TipoCurva=0
+  AngCorteI=0
+  AngCorteD=0
+  Centro=0
+  TipoTarifa=1
+  f_cant=1
+  f_Dim1=DIM1
+  f_Dim2=DIM2
+end
+Componente No Visual
+  id=LONA_1
+  funcion=18
+  art=AA_LONA
+  desc=COLOCACION DE REFERENCIA DE LONA
+  tipo_ctrl=0
+  eDim1=782
+  eDim2=697.5
+  Despiece=1
+  TipoCurva=0
+  AngCorteI=0
+  AngCorteD=0
+  Centro=0
+  TipoTarifa=2
+  f_cant=1
+  f_Dim1=SI(@TIPOCONFECCION=0;Dim2-#@#8+HUECOS_1_CANTIDAD*6+12+SI((@MEDIDAFALDON>=1)y#@#(@COLORRIBETE<=24);@MEDIDAFALDON+7;0)+SI#@#((@MEDIDAFALDON>=1)Y#@#(@COLORRIBETE=25);@MEDIDAFALDON+10,5;0)+SI#@#((@MEDIDAFALDON>=1)y#@#(@COLORRIBETE>=26);@MEDIDAFALDON+7;0)+SI#@#((@MEDIDAFALDON2>=1)y#@#(@COLORRIBETE<=24);@MEDIDAFALDON2+7;0)+SI#@#((@MEDIDAFALDON2>=1)Y#@#(@COLORRIBETE=25);@MEDIDAFALDON2+10,5;0)+SI#@#((@MEDIDAFALDON2>=1)y#@#(@COLORRIBETE>=26);@MEDIDAFALDON2+7;0);0)+SI#@#(@TIPOCONFECCION=1;Dim2-#@#8+HUECOS_1_CANTIDAD*4+12+SI((@MEDIDAFALDON>=1)y#@#(@COLORRIBETE<=24);@MEDIDAFALDON+7;0)+SI#@#((@MEDIDAFALDON>=1)Y#@#(@COLORRIBETE=25);@MEDIDAFALDON+10,5;0)+SI#@#((@MEDIDAFALDON>=1)y#@#(@COLORRIBETE>=26);@MEDIDAFALDON+7;0)+SI#@#((@MEDIDAFALDON2>=1)y#@#(@COLORRIBETE<=24);@MEDIDAFALDON2+7;0)+SI#@#((@MEDIDAFALDON2>=1)Y#@#(@COLORRIBETE=25);@MEDIDAFALDON2+10,5;0)+SI#@#((@MEDIDAFALDON2>=1)y#@#(@COLORRIBETE>=26);@MEDIDAFALDON2+7;0);0)+SI#@#(@TIPOCONFECCION=2;Dim2-#@#8+HUECOS_1_CANTIDAD*8+12+SI((@MEDIDAFALDON>=1)y#@#(@COLORRIBETE<=24);@MEDIDAFALDON+7;0)+SI#@#((@MEDIDAFALDON>=1)Y#@#(@COLORRIBETE=25);@MEDIDAFALDON+10,5;0)+SI#@#((@MEDIDAFALDON>=1)y#@#(@COLORRIBETE>=26);@MEDIDAFALDON+7;0)+SI#@#((@MEDIDAFALDON2>=1)y#@#(@COLORRIBETE<=24);@MEDIDAFALDON2+7;0)+SI#@#((@MEDIDAFALDON2>=1)Y#@#(@COLORRIBETE=25);@MEDIDAFALDON2+10,5;0)+SI#@#((@MEDIDAFALDON2>=1)y#@#(@COLORRIBETE>=26);@MEDIDAFALDON2+7;0);0)
+  f_Dim2=Dim1-2.5
+  desccomp=1
+  ap_prec_inc=1
+end
+Componente No Visual
+  id=MEDIDAFALDON1_1
+  art=BB_MEDIDA_FALDON_1
+  desc=Medida del faldon
+  tipo_ctrl=0
+  eDim2=697.5
+  Despiece=1
+  TipoCurva=0
+  AngCorteI=0
+  AngCorteD=0
+  Centro=0
+  TipoTarifa=2
+  f_cant=SI((@MEDIDAFALDON>1);1;0)
+  f_Dim1=SI((@MEDIDAFALDON>1)Y#@#(@COLORRIBETE<=24);@MEDIDAFALDON+7;0)+SI#@#((@MEDIDAFALDON>1)Y#@#(@COLORRIBETE=25);@MEDIDAFALDON+10,5;0)+SI#@#((@MEDIDAFALDON>1)Y#@#(@COLORRIBETE>=26);@MEDIDAFALDON+7;0)
+  f_Dim2=Dim1-2.5
+  ap_prec_inc=1
+end
+Componente No Visual
+  id=MEDIDAFALDON2_2
+  art=BI_MEDIDA_FALDON_2
+  desc=MEDIDA DEL SEGUNDO FALDON
+  tipo_ctrl=0
+  eDim2=697.5
+  Despiece=0
+  TipoCurva=0
+  AngCorteI=0
+  AngCorteD=0
+  Centro=0
+  TipoTarifa=1
+  f_cant=SI((@MEDIDAFALDON2>1);1;0)
+  f_Dim1=SI((@MEDIDAFALDON2>1)Y#@#(@COLORRIBETE<=24);@MEDIDAFALDON2+7;0)+SI#@#((@MEDIDAFALDON2>1)Y#@#(@COLORRIBETE=25);@MEDIDAFALDON2+10,5;0)+SI#@#((@MEDIDAFALDON2>1)Y#@#(@COLORRIBETE>=26);@MEDIDAFALDON2+7;0)
+  f_Dim2=Dim1-2.5
+end
+Componente No Visual
+  id=NPALILLOSDOBLES_1
+  art=Nº_PALILLOS_DOBLES
+  desc=Número de palillos dobles
+  eDim1=698.5
+  Despiece=1
+  TipoCurva=0
+  AngCorteI=0
+  AngCorteD=0
+  Centro=0
+  TipoTarifa=2
+  OrdenEtiquetas=1
+  f_cant=SI((DIM1>=1)Y(DIM1<=700)Y#@#(@MEDIDAFALDON2=0);1*0;0)+SI#@#((DIM1>=1)Y(DIM1<=700)Y(@MEDIDAFALDON2>=1);2-1;0)
+  f_Dim1=DIM1-1.5
+  ap_prec_inc=1
+end
+Componente No Visual
+  id=NUMERODEPALILLOS_1
+  art=NUMERO_DE_PALILLOS
+  desc=NUMERO DE PALILLOS SIMPLES
+  eDim1=698.5
+  Despiece=1
+  TipoCurva=0
+  AngCorteI=0
+  AngCorteD=0
+  Centro=0
+  TipoTarifa=2
+  f_cant=SI((DIM1>=1)Y(DIM1<=700)Y#@#(@MEDIDAFALDON2=0);HUECOS_1_CANTIDAD;0)+SI#@#((DIM1>=1)Y(DIM1<=700)Y#@#(@MEDIDAFALDON2>=1);HUECOS_1_CANTIDAD-1;0)
+  f_Dim1=DIM1-1.5
+  ap_prec_inc=1
+end
+Componente No Visual
+  id=NUMERODEGUIAS_1
+  art=NUMERO_DE_GUIAS
+  desc=NUMERO DE GUIAS NECESARIAS
+  Despiece=1
+  TipoCurva=0
+  AngCorteI=0
+  AngCorteD=0
+  Centro=0
+  TipoTarifa=2
+  f_cant=SI((DIM1>=1)Y(DIM1<=600);2;0)+SI((DIM1>600)Y#@#(DIM1<=700);3;0)
+  f_Dim1=SI((@CORTEPERFILERIA=1);DIM2;0)+SI#@#((@CORTEPERFILERIA=2);DIM2-8;0)
+  ap_prec_inc=1
+end
+Componente No Visual
+  id=CAIDAAGUAIZDA_1
+  art=CAIDA_AGUA_IZDA
+  desc=Caida de agua frente izquierda
+  tipo_ctrl=0
+  Despiece=0
+  TipoCurva=0
+  AngCorteI=0
+  AngCorteD=0
+  Centro=0
+  TipoTarifa=1
+  f_cant=SI(@AGUAS=2;1;0)
+  desccomp=1
+end
+Componente No Visual
+  id=CAIDAAGUADCHA_1
+  art=CAIDA_AGUA_DCHA
+  desc=Caida de agua frente derecha
+  tipo_ctrl=0
+  Despiece=0
+  TipoCurva=0
+  AngCorteI=0
+  AngCorteD=0
+  Centro=0
+  TipoTarifa=1
+  f_cant=SI(@AGUAS=1;1;0)
+  desccomp=1
+end
+Componente No Visual
+  id=NUMPATAS_1
+  art=NUM_PATAS
+  desc=Numero patas porteria
+  color=Blanco
+  tipo_corte_izq=|
+  tipo_corte_der=|
+  Despiece=0
+  TipoCurva=0
+  AngCorteI=90
+  AngCorteD=90
+  Centro=0
+  TipoTarifa=1
+  DtMedCutPerf=5890
+  OrdenEtiquetas=4
+  f_cant=SI((DIM1<=600);4;0)+SI((DIM1>600);6;0)
+  f_alto=SI((@CORTEPERFILERIA=1);@ALTURADEPATA;0)+SI#@#((@CORTEPERFILERIA=2);@ALTURADEPATA-8;0)
+  MedCutPerf=5890
+end
+Componente No Visual
+  id=NUMLARGUEROS_1
+  art=NUM_LARGUEROS
+  desc=Numero largueros porteria
+  color=Blanco
+  tipo_corte_izq=|
+  tipo_corte_der=|
+  Despiece=0
+  TipoCurva=0
+  AngCorteI=90
+  AngCorteD=90
+  Centro=0
+  TipoTarifa=1
+  DtMedCutPerf=5890
+  OrdenEtiquetas=5
+  f_cant=SI((DIM1<=600);2;0)+SI((DIM1>600);4;0)
+  f_alto=SI(((@CORTEPERFILERIA=1)Y(DIM1<=600));DIM1;0)+SI#@#(((@CORTEPERFILERIA=2)Y(DIM1<=600));DIM1-16;0)+SI#@#(((@CORTEPERFILERIA=1)Y(DIM1>600));DIM1/2;0)+SI#@#(((@CORTEPERFILERIA=2)Y(DIM1>600));((DIM1-24)/2);0)
+  MedCutPerf=5890
+end
+Componente No Visual
+  id=Numerorefuerzolate_1
+  art=Numero_refuerzo_late
+  desc=Numero de perfiles refuerzos lateral de estructura
+  Despiece=1
+  TipoCurva=0
+  AngCorteI=0
+  AngCorteD=0
+  Centro=0
+  TipoTarifa=2
+  OrdenEtiquetas=6
+  f_cant=2
+  f_Dim1=SI((@CORTEPERFILERIA=1);DIM2;0)+SI#@#((@CORTEPERFILERIA=2);DIM2-8;0)
+  ap_prec_inc=1
+end
+Componente No Visual
+  id=HUECOS_1
+  art=AC_HUECOS
+  desc=HUECOS LONA EN PALILLERIA
+  tipo_ctrl=0
+  Despiece=0
+  TipoCurva=0
+  AngCorteI=0
+  AngCorteD=0
+  Centro=0
+  TipoTarifa=1
+  f_cant=DIM2/55
+  red_cant=7
+end
+Componente No Visual
+  id=SINFALDON_1
+  art=BG_SIN_FALDONmontaje
+  desc=No lleva faldon
+  tipo_ctrl=0
+  Despiece=0
+  TipoCurva=0
+  AngCorteI=0
+  AngCorteD=0
+  Centro=0
+  TipoTarifa=1
+  f_cant=@TIPOFALDON=0
+end
+Componente No Visual
+  id=SINSEGUNDOFALDON_1
+  art=BK_SIN_SEGUNDO_FALDm
+  desc=SIN SEGUNDO FALDON
+  tipo_ctrl=0
+  Despiece=0
+  TipoCurva=0
+  AngCorteI=0
+  AngCorteD=0
+  Centro=0
+  TipoTarifa=1
+  f_cant=SI((@MEDIDAFALDON2=0);1;0)
+end
+Componente No Visual
+  id=SEPARACION1_1
+  art=AD_SEPARACION_1
+  desc=DISTACIA ENTRE HUECOS PRIMERO Y ULTIMO
+  tipo_ctrl=0
+  Despiece=0
+  TipoCurva=0
+  AngCorteI=0
+  AngCorteD=0
+  Centro=0
+  TipoTarifa=1
+  f_cant=((LONA_1_Dim1-MEDIDAFALDON1_1_Dim1-MEDIDAFALDON2_2_Dim1)-12)/HUECOS_1_Cantidad+5
+  red_cant=2
+end
+Componente No Visual
+  id=SEPARACION_1
+  art=AE_SEPARACION_2
+  desc=DISTANCIA ENTRE HUECOS PARA MARCAR
+  tipo_ctrl=0
+  Despiece=0
+  TipoCurva=0
+  AngCorteI=0
+  AngCorteD=0
+  Centro=0
+  TipoTarifa=1
+  f_cant=((LONA_1_Dim1-MEDIDAFALDON1_1_Dim1-MEDIDAFALDON2_2_Dim1)-12)/HUECOS_1_Cantidad
+  red_cant=2
+end
+Componente No Visual
+  id=TORNILLOSPALILLERIA_1
+  art=TORNILLOS_PALILLERIA
+  desc=PREPARAR TORNILLERIA PALILLERIA
+  tipo_ctrl=0
+  Despiece=0
+  TipoCurva=0
+  AngCorteI=0
+  AngCorteD=0
+  Centro=0
+  TipoTarifa=1
+  f_cant=SI((@TORNILLERIA=1);1;0)
+end
+Componente No Visual
+  id=CORTEAINGLETE_1
+  art=CORTE_A_INGLETE
+  desc=REALIZAR CORTE INGLETE A LAS GUIAS
+  tipo_ctrl=0
+  Despiece=0
+  TipoCurva=0
+  AngCorteI=0
+  AngCorteD=0
+  Centro=0
+  TipoTarifa=1
+  f_cant=SI((@CORTEAINGLETE=1);1;0)
+end
+Componente No Visual
+  id=ID80140543_1
+  art=80140543
+  desc=Bolsa de tornillos para soportes 10x60 blanco
+  tipo_ctrl=0
+  Despiece=1
+  TipoCurva=0
+  AngCorteI=0
+  AngCorteD=0
+  Centro=0
+  TipoTarifa=2
+  OrdenEtiquetas=2
+  f_cant=SI((@TORNILLERIA=1)Y(DIM1<=600);4;0)+SI#@#((@TORNILLERIA=1)Y(DIM1>600);6;0)
+  ap_prec_inc=1
+end
+Componente No Visual
+  id=ID80140258_1
+  art=80140258
+  desc=Soporte pie 80x40mm con taladros, extrusión de alum. blanco
+  tipo_ctrl=0
+  Despiece=1
+  TipoCurva=0
+  AngCorteI=0
+  AngCorteD=0
+  Centro=0
+  TipoTarifa=2
+  OrdenEtiquetas=2
+  f_cant=SI((DIM1<=600);4;0)+SI((DIM1>600);6;0)
+  ap_prec_inc=1
+end
+Componente No Visual
+  id=ID80140266_2
+  art=80140266
+  desc=Tubo estructural rectangular 80x40mm aluminio 4 m blanco
+  ancho_perfil=80
+  color=Blanco
+  tipo_corte_izq=|
+  tipo_corte_der=|
+  Despiece=1
+  TipoCurva=0
+  AngCorteI=90
+  AngCorteD=90
+  Centro=0
+  TipoTarifa=2
+  DtMedCutPerf=4000
+  f_cant=SI((@ALTURADEPATA>150)Y(@ALTURADEPATA<=199);2;0)
+  f_alto=SI((@CORTEPERFILERIA=1);@ALTURADEPATA;0)+SI#@#((@CORTEPERFILERIA=2);@ALTURADEPATA-8;0)
+  ap_prec_inc=1
+  MedCutPerf=4000
+end
+Componente No Visual
+  id=ID80140078_2
+  art=80140078
+  desc=Tubo estructural rectangular 80x40mm aluminio 5 m blanco
+  ancho_perfil=10
+  color=Blanco
+  tipo_corte_izq=|
+  tipo_corte_der=|
+  Despiece=1
+  TipoCurva=0
+  AngCorteI=90
+  AngCorteD=90
+  Centro=0
+  TipoTarifa=2
+  DtMedCutPerf=5000
+  f_cant=SI((@ALTURADEPATA>199)Y(@ALTURADEPATA<=249);2;0)
+  f_alto=SI((@CORTEPERFILERIA=1);@ALTURADEPATA;0)+SI#@#((@CORTEPERFILERIA=2);@ALTURADEPATA-8;0)
+  ap_prec_inc=1
+  MedCutPerf=5000
+end
+Componente No Visual
+  id=ID80140001_2
+  art=80140001
+  desc=Tubo estructural rectangular 80x40mm aluminio 6 m blanco
+  ancho_perfil=80
+  color=Blanco
+  tipo_corte_izq=|
+  tipo_corte_der=|
+  Despiece=1
+  TipoCurva=0
+  AngCorteI=90
+  AngCorteD=90
+  Centro=0
+  TipoTarifa=2
+  DtMedCutPerf=6000
+  f_cant=SI((@ALTURADEPATA>249)Y(@ALTURADEPATA<=299);2;0)
+  f_alto=SI((@CORTEPERFILERIA=1);@ALTURADEPATA;0)+SI#@#((@CORTEPERFILERIA=2);@ALTURADEPATA-8;0)
+  ap_prec_inc=1
+  MedCutPerf=6000
+end
+Componente No Visual
+  id=ID80140079_2
+  art=80140079
+  desc=Tubo estructural rectangular 80x40mm aluminio 7 m blanco
+  ancho_perfil=10
+  color=Blanco
+  tipo_corte_izq=|
+  tipo_corte_der=|
+  Despiece=1
+  TipoCurva=0
+  AngCorteI=90
+  AngCorteD=90
+  Centro=0
+  TipoTarifa=2
+  DtMedCutPerf=7000
+  f_cant=SI((@ALTURADEPATA>299)Y(@ALTURADEPATA<=349);2;0)
+  f_alto=SI((@CORTEPERFILERIA=1);@ALTURADEPATA;0)+SI#@#((@CORTEPERFILERIA=2);@ALTURADEPATA-8;0)
+  ap_prec_inc=1
+  MedCutPerf=7000
+end
+Componente No Visual
+  id=ID80140079_3
+  art=80140079
+  desc=Tubo estructural rectangular 80x40mm aluminio 7 m blanco
+  ancho_perfil=10
+  color=Blanco
+  tipo_corte_izq=|
+  tipo_corte_der=|
+  Despiece=1
+  TipoCurva=0
+  AngCorteI=90
+  AngCorteD=90
+  Centro=0
+  TipoTarifa=2
+  DtMedCutPerf=7000
+  f_cant=SI((@ALTURADEPATA>=100)Y(@ALTURADEPATA<=349)Y#@#(DIM1>600);1;0)
+  ap_prec_inc=1
+  MedCutPerf=7000
+end
+Componente No Visual
+  id=ID80140461_1
+  art=80140461
+  desc=Soporte en T aluminio palillería blanco
+  tipo_ctrl=0
+  Despiece=1
+  TipoCurva=0
+  AngCorteI=0
+  AngCorteD=0
+  Centro=0
+  TipoTarifa=2
+  OrdenEtiquetas=2
+  f_cant=SI((DIM1>600);2;0)
+  ap_prec_inc=1
+end
+Componente No Visual
+  id=ID80140266_1
+  art=80140266
+  desc=Tubo estructural rectangular 80x40mm aluminio 4 m blanco
+  ancho_perfil=80
+  color=Blanco
+  tipo_corte_izq=|
+  tipo_corte_der=|
+  Despiece=1
+  TipoCurva=0
+  AngCorteI=90
+  AngCorteD=90
+  Centro=0
+  TipoTarifa=2
+  DtMedCutPerf=4000
+  f_cant=SI((DIM1>350)Y(DIM1<=400);2;0)
+  f_alto=SI((@CORTEPERFILERIA=1);DIM1;0)+SI#@#((@CORTEPERFILERIA=2);DIM1-8;0)
+  ap_prec_inc=1
+  MedCutPerf=4000
+end
+Componente No Visual
+  id=ID80140078_1
+  art=80140078
+  desc=Tubo estructural rectangular 80x40mm aluminio 5 m blanco
+  ancho_perfil=10
+  color=Blanco
+  tipo_corte_izq=|
+  tipo_corte_der=|
+  Despiece=1
+  TipoCurva=0
+  AngCorteI=90
+  AngCorteD=90
+  Centro=0
+  TipoTarifa=2
+  DtMedCutPerf=5000
+  f_cant=SI((DIM1>400)Y(DIM1<=500);2;0)
+  f_alto=SI((@CORTEPERFILERIA=1);DIM1;0)+SI#@#((@CORTEPERFILERIA=2);DIM1-8;0)
+  ap_prec_inc=1
+  MedCutPerf=5000
+end
+Componente No Visual
+  id=ID80140001_1
+  art=80140001
+  desc=Tubo estructural rectangular 80x40mm aluminio 6 m blanco
+  ancho_perfil=80
+  color=Blanco
+  tipo_corte_izq=|
+  tipo_corte_der=|
+  Despiece=1
+  TipoCurva=0
+  AngCorteI=90
+  AngCorteD=90
+  Centro=0
+  TipoTarifa=2
+  DtMedCutPerf=6000
+  f_cant=SI((DIM1>500)Y(DIM1<=600);2;0)
+  f_alto=SI((@CORTEPERFILERIA=1);DIM1;0)+SI#@#((@CORTEPERFILERIA=2);DIM1-8;0)
+  ap_prec_inc=1
+  MedCutPerf=6000
+end
+Componente No Visual
+  id=ID80140079_1
+  art=80140079
+  desc=Tubo estructural rectangular 80x40mm aluminio 7 m blanco
+  ancho_perfil=10
+  color=Blanco
+  tipo_corte_izq=|
+  tipo_corte_der=|
+  Despiece=1
+  TipoCurva=0
+  AngCorteI=90
+  AngCorteD=90
+  Centro=0
+  TipoTarifa=2
+  DtMedCutPerf=7000
+  f_cant=SI((DIM1>600)Y(DIM1<=700);2;0)+SI((DIM1>101)Y#@#(DIM1<=349);1;0)
+  f_alto=SI((@CORTEPERFILERIA=1);DIM1;0)+SI#@#((@CORTEPERFILERIA=2);DIM1-8;0)
+  ap_prec_inc=1
+  MedCutPerf=7000
+end
+Componente No Visual
+  id=ID80140520_1
+  art=80140520
+  desc=Juego empalme esquina regulable aluminio palillería blanco
+  tipo_ctrl=0
+  Despiece=1
+  TipoCurva=0
+  AngCorteI=0
+  AngCorteD=0
+  Centro=0
+  TipoTarifa=2
+  OrdenEtiquetas=2
+  f_cant=2
+  ap_prec_inc=1
+end
+Componente No Visual
+  id=ID80140525_1
+  art=80140525
+  desc=Macho empalme esquinero aluminio regulable blanco
+  tipo_ctrl=0
+  Despiece=1
+  TipoCurva=0
+  AngCorteI=0
+  AngCorteD=0
+  Centro=0
+  TipoTarifa=2
+  OrdenEtiquetas=2
+  f_cant=4
+  ap_prec_inc=1
+end
+Componente No Visual
+  id=ID80140266_3
+  art=80140266
+  desc=Tubo estructural rectangular 80x40mm aluminio 4 m blanco
+  ancho_perfil=80
+  color=Blanco
+  tipo_corte_izq=|
+  tipo_corte_der=|
+  Despiece=1
+  TipoCurva=0
+  AngCorteI=90
+  AngCorteD=90
+  Centro=0
+  TipoTarifa=2
+  DtMedCutPerf=4000
+  f_cant=SI((DIM2>340)Y(DIM2<=390);2;0)+SI((DIM2>140)Y#@#(DIM2<=190);1;0)
+  f_alto=SI((@CORTEPERFILERIA=1);DIM2;0)+SI#@#((@CORTEPERFILERIA=2);DIM2-8;0)
+  ap_prec_inc=1
+  MedCutPerf=4000
+end
+Componente No Visual
+  id=ID80140078_3
+  art=80140078
+  desc=Tubo estructural rectangular 80x40mm aluminio 5 m blanco
+  ancho_perfil=10
+  color=Blanco
+  tipo_corte_izq=|
+  tipo_corte_der=|
+  Despiece=1
+  TipoCurva=0
+  AngCorteI=90
+  AngCorteD=90
+  Centro=0
+  TipoTarifa=2
+  DtMedCutPerf=5000
+  f_cant=SI((DIM2>390)Y(DIM2<=490);2;0)+SI((DIM2>190)Y#@#(DIM2<=240);1;0)
+  f_alto=SI((@CORTEPERFILERIA=1);DIM2;0)+SI#@#((@CORTEPERFILERIA=2);DIM2-8;0)
+  ap_prec_inc=1
+  MedCutPerf=5000
+end
+Componente No Visual
+  id=ID80140001_3
+  art=80140001
+  desc=Tubo estructural rectangular 80x40mm aluminio 6 m blanco
+  ancho_perfil=80
+  color=Blanco
+  tipo_corte_izq=|
+  tipo_corte_der=|
+  Despiece=1
+  TipoCurva=0
+  AngCorteI=90
+  AngCorteD=90
+  Centro=0
+  TipoTarifa=2
+  DtMedCutPerf=6000
+  f_cant=SI((DIM2>490)Y(DIM2<=590);2;0)+SI((DIM2>240)Y#@#(DIM2<=290);1;0)
+  f_alto=SI((@CORTEPERFILERIA=1);DIM2;0)+SI#@#((@CORTEPERFILERIA=2);DIM2-8;0)
+  ap_prec_inc=1
+  MedCutPerf=6000
+end
+Componente No Visual
+  id=ID80140079_4
+  art=80140079
+  desc=Tubo estructural rectangular 80x40mm aluminio 7 m blanco
+  ancho_perfil=10
+  color=Blanco
+  tipo_corte_izq=|
+  tipo_corte_der=|
+  Despiece=1
+  TipoCurva=0
+  AngCorteI=90
+  AngCorteD=90
+  Centro=0
+  TipoTarifa=2
+  DtMedCutPerf=7000
+  f_cant=SI((DIM2>590)Y(DIM2<=700);2;0)+SI((DIM2>290)Y#@#(DIM2<=340);1;0)
+  f_alto=SI((@CORTEPERFILERIA=1);DIM2;0)+SI#@#((@CORTEPERFILERIA=2);DIM2-8;0)
+  ap_prec_inc=1
+  MedCutPerf=7000
+end
+Componente No Visual
+  id=ID80140696_1
+  art=80140696
+  desc=Polea brida nylon reforz. rodam. y torn./tuerca inox blanco
+  tipo_ctrl=0
+  Despiece=1
+  TipoCurva=0
+  AngCorteI=0
+  AngCorteD=0
+  Centro=0
+  TipoTarifa=2
+  f_cant=SI((DIM1<=600)Y(@AGUAS=0)Y#@#(@POLEABRIDA=1);(HUECOS_1_CANTIDAD+1)*2;0)+SI#@#((DIM1>600)Y(@AGUAS=0)Y#@#(@POLEABRIDA=1);(HUECOS_1_CANTIDAD+1)*3;0)+SI#@#((DIM1<=600)Y(@AGUAS>=1)Y#@#(@POLEABRIDA=1);(HUECOS_1_CANTIDAD+1)*1;0)+SI#@#((DIM1>600)Y(@AGUAS>=1)Y#@#(@POLEABRIDA=1);(HUECOS_1_CANTIDAD+1)*1;0)
+  ap_prec_inc=1
+end
+Componente No Visual
+  id=ID80140698_1
+  art=80140698
+  desc=Polea brida nylon reforz. rodam. y torn./tuerca inox L-60 bl
+  tipo_ctrl=0
+  Despiece=1
+  TipoCurva=0
+  AngCorteI=0
+  AngCorteD=0
+  Centro=0
+  TipoTarifa=2
+  f_cant=SI((DIM1>600)Y(@AGUAS>=1)Y#@#(@POLEABRIDA=1);(HUECOS_1_CANTIDAD+1)*1;0)
+  ap_prec_inc=1
+end
+Componente No Visual
+  id=ID80140700_1
+  art=80140700
+  desc=Polea brida nylon reforz. rodam. y torn./tuerca inox L-90 bl
+  tipo_ctrl=0
+  Despiece=1
+  TipoCurva=0
+  AngCorteI=0
+  AngCorteD=0
+  Centro=0
+  TipoTarifa=2
+  f_cant=SI((DIM1<=600)Y(@AGUAS>=1)Y#@#(@POLEABRIDA=1);(HUECOS_1_CANTIDAD+1)*1;0)+SI#@#((DIM1>600)Y(@AGUAS>=1)Y#@#(@POLEABRIDA=1);(HUECOS_1_CANTIDAD+1)*1;0)
+  ap_prec_inc=1
+end
+Componente No Visual
+  id=ID80140712_1
+  art=80140712
+  desc=Polea brida nylon reforz. rodam. plást.y torn/tuerca inox bl
+  tipo_ctrl=0
+  Despiece=1
+  TipoCurva=0
+  AngCorteI=0
+  AngCorteD=0
+  Centro=0
+  TipoTarifa=2
+  f_cant=SI((DIM1<=600)Y(@AGUAS=0)Y#@#(@POLEABRIDA=2);(HUECOS_1_CANTIDAD+1)*2;0)+SI#@#((DIM1>600)Y(@AGUAS=0)Y#@#(@POLEABRIDA=2);(HUECOS_1_CANTIDAD+1)*3;0)+SI#@#((DIM1<=600)Y(@AGUAS>=1)Y#@#(@POLEABRIDA=2);(HUECOS_1_CANTIDAD+1)*1;0)+SI#@#((DIM1>600)Y(@AGUAS>=1)Y#@#(@POLEABRIDA=2);(HUECOS_1_CANTIDAD+1)*1;0)
+  ap_prec_inc=1
+end
+Componente No Visual
+  id=ID80140714_1
+  art=80140714
+  desc=Polea brida nylon reforz. rodam. plást.y torn/tuerca L-60 bl
+  tipo_ctrl=0
+  Despiece=1
+  TipoCurva=0
+  AngCorteI=0
+  AngCorteD=0
+  Centro=0
+  TipoTarifa=2
+  f_cant=SI((DIM1>600)Y(@AGUAS>=1)Y#@#(@POLEABRIDA=2);(HUECOS_1_CANTIDAD+1)*1;0)
+  ap_prec_inc=1
+end
+Componente No Visual
+  id=ID80140716_1
+  art=80140716
+  desc=Polea brida nylon reforz. rodam. plást y torn/tuerca L-90 bl
+  tipo_ctrl=0
+  Despiece=1
+  TipoCurva=0
+  AngCorteI=0
+  AngCorteD=0
+  Centro=0
+  TipoTarifa=2
+  f_cant=SI((DIM1<=600)Y(@AGUAS>=1)Y#@#(@POLEABRIDA=2);(HUECOS_1_CANTIDAD+1)*1;0)+SI#@#((DIM1>600)Y(@AGUAS>=1)Y#@#(@POLEABRIDA=2);(HUECOS_1_CANTIDAD+1)*1;0)
+  ap_prec_inc=1
+end
+Componente No Visual
+  id=ID10200001_1
+  art=10200001
+  desc=Carrucha simple lacado blanco
+  tipo_ctrl=0
+  Despiece=1
+  TipoCurva=0
+  AngCorteI=0
+  AngCorteD=0
+  Centro=0
+  TipoTarifa=2
+  OrdenEtiquetas=2
+  f_cant=SI((DIM1>=1)Y(DIM1<=600);1;0)+SI((DIM1>600)Y#@#(DIM1<=700);2;0)
+  ap_prec_inc=1
+end
+Componente No Visual
+  id=ID10210001_1
+  art=10210001
+  desc=Carrucha doble lacado blanco
+  tipo_ctrl=0
+  Despiece=1
+  TipoCurva=0
+  AngCorteI=0
+  AngCorteD=0
+  Centro=0
+  TipoTarifa=2
+  OrdenEtiquetas=2
+  f_cant=SI((@POLEAESQUINA=0)Y(DIM1<=600);1;0)+SI#@#((@POLEAESQUINA=1)Y(DIM1<=600);0;0)+SI#@#((@POLEAESQUINA=0)Y(DIM1>600);2;0)+SI#@#((@POLEAESQUINA=1)Y(DIM1>600);0;0)
+  ap_prec_inc=1
+end
+Componente No Visual
+  id=ID80140702_1
+  art=80140702
+  desc=Polea doble nylon desviadora
+  tipo_ctrl=0
+  Despiece=1
+  TipoCurva=0
+  AngCorteI=0
+  AngCorteD=0
+  Centro=0
+  TipoTarifa=2
+  OrdenEtiquetas=2
+  f_cant=SI((@POLEAESQUINA=0)Y(DIM1<=600);0;0)+SI#@#((@POLEAESQUINA=1)Y(DIM1<=600);2;0)+SI#@#((@POLEAESQUINA=0)Y(DIM1>600);0;0)+SI#@#((@POLEAESQUINA=1)Y(DIM1>600);4;0)
+  desccomp=1
+  ap_prec_inc=1
+end
+Componente No Visual
+  id=ID80140257_1
+  art=80140257
+  desc=Soporte guía 80x40mm con taladros, extrusión de alum. blanco
+  tipo_ctrl=0
+  Despiece=1
+  TipoCurva=0
+  AngCorteI=0
+  AngCorteD=0
+  Centro=0
+  TipoTarifa=2
+  OrdenEtiquetas=2
+  f_cant=SI((DIM1<=600);4;0)+SI((DIM1>600);6;0)
+  ap_prec_inc=1
+end
+Componente No Visual
+  id=ID80140050_1
+  art=80140050
+  desc=Tubo guía 80x40mm aluminio 4 m blanco
+  ancho_perfil=80
+  color=Blanco
+  tipo_corte_izq=|
+  tipo_corte_der=|
+  Despiece=1
+  TipoCurva=0
+  AngCorteI=90
+  AngCorteD=90
+  Centro=0
+  TipoTarifa=2
+  DtMedCutPerf=4000
+  OrdenEtiquetas=3
+  f_cant=SI((DIM2>340)Y(DIM2<=390)Y(DIM1<=600);2;0)+SI#@#((DIM2>340)Y(DIM2<=390)Y(DIM1>600);3;0)+SI#@#((DIM2>140)Y(DIM2<=190);1;0)
+  f_alto=SI((@CORTEPERFILERIA=1);DIM2;0)+SI#@#((@CORTEPERFILERIA=2);DIM2-8;0)
+  ap_prec_inc=1
+  MedCutPerf=4000
+end
+Componente No Visual
+  id=ID80140003_1
+  art=80140003
+  desc=Tubo guía 80x40mm aluminio 5 m blanco
+  ancho_perfil=80
+  color=Blanco
+  tipo_corte_izq=|
+  tipo_corte_der=|
+  Despiece=1
+  TipoCurva=0
+  AngCorteI=90
+  AngCorteD=90
+  Centro=0
+  TipoTarifa=2
+  DtMedCutPerf=5000
+  OrdenEtiquetas=3
+  f_cant=SI((DIM2>390)Y(DIM2<=490)Y(DIM1<=600);2;0)+SI#@#((DIM2>190)Y(DIM2<=240);1;0)+SI((DIM2>390)Y#@#(DIM2<=490)Y(DIM1>600);3;0)
+  f_alto=SI((@CORTEPERFILERIA=1);DIM2;0)+SI#@#((@CORTEPERFILERIA=2);DIM2-8;0)
+  ap_prec_inc=1
+  MedCutPerf=5000
+end
+Componente No Visual
+  id=ID80140038_1
+  art=80140038
+  desc=Tubo guía 80x40mm aluminio 6 m blanco
+  ancho_perfil=80
+  color=Blanco
+  tipo_corte_izq=|
+  tipo_corte_der=|
+  Despiece=1
+  TipoCurva=0
+  AngCorteI=90
+  AngCorteD=90
+  Centro=0
+  TipoTarifa=2
+  DtMedCutPerf=6000
+  OrdenEtiquetas=3
+  f_cant=SI((DIM2>490)Y(DIM2<=590)Y(DIM1<=600);2;0)+SI#@#((DIM2>240)Y(DIM2<=290);1;0)+SI((DIM2>490)Y#@#(DIM2<=590)Y(DIM1>600);3;0)
+  f_alto=SI((@CORTEPERFILERIA=1);DIM2;0)+SI#@#((@CORTEPERFILERIA=2);DIM2-8;0)
+  ap_prec_inc=1
+  MedCutPerf=6000
+end
+Componente No Visual
+  id=ID80140039_1
+  art=80140039
+  desc=Tubo guía 80x40mm aluminio 7 m blanco
+  ancho_perfil=80
+  color=Blanco
+  tipo_corte_izq=|
+  tipo_corte_der=|
+  Despiece=1
+  TipoCurva=0
+  AngCorteI=90
+  AngCorteD=90
+  Centro=0
+  TipoTarifa=2
+  DtMedCutPerf=7000
+  OrdenEtiquetas=3
+  f_cant=SI((DIM2>590)Y(DIM2<=700)Y(DIM1<=600);2;0)+SI#@#((DIM2>290)Y(DIM2<=340);1;0)+SI((DIM2>590)Y#@#(DIM2<=700)Y(DIM1>600);3;0)+SI((DIM2>=1)Y(DIM2<=140)Y#@#(DIM1>600);1;0)+SI((DIM2>140)Y(DIM2<=340)Y#@#(DIM1>600);1;0)
+  f_alto=SI((@CORTEPERFILERIA=1);DIM2;0)+SI#@#((@CORTEPERFILERIA=2);DIM2-8;0)
+  ap_prec_inc=1
+  MedCutPerf=7000
+end
+Componente No Visual
+  id=ID80140066_1
+  art=80140066
+  desc=Palillo simple standard aluminio 4 m blanco
+  ancho_perfil=10
+  color=Blanco
+  tipo_corte_izq=|
+  tipo_corte_der=|
+  Despiece=1
+  TipoCurva=0
+  AngCorteI=90
+  AngCorteD=90
+  Centro=0
+  TipoTarifa=2
+  DtMedCutPerf=4000
+  f_cant=SI((DIM1>350)Y(DIM1<=400)Y#@#(@MEDIDAFALDON2=0);HUECOS_1_CANTIDAD;0)+SI#@#((DIM1>350)Y(DIM1<=400)Y#@#(@MEDIDAFALDON2=1);HUECOS_1_CANTIDAD-1;0)+SI#@#((DIM1>150)Y(DIM1<=200);HUECOS_1_CANTIDAD/2;0)
+  f_alto=DIM1-1.5
+  ap_prec_inc=1
+  MedCutPerf=4000
+end
+Componente No Visual
+  id=ID80140067_1
+  art=80140067
+  desc=Palillo simple standard aluminio 5 m blanco
+  ancho_perfil=10
+  color=Blanco
+  tipo_corte_izq=|
+  tipo_corte_der=|
+  Despiece=1
+  TipoCurva=0
+  AngCorteI=90
+  AngCorteD=90
+  Centro=0
+  TipoTarifa=2
+  DtMedCutPerf=5000
+  f_cant=SI((DIM1>400)Y(DIM1<=500);HUECOS_1_CANTIDAD;0)+SI#@#((DIM1>400)Y(DIM1<=500)Y#@#(@MEDIDAFALDON2=1);HUECOS_1_CANTIDAD-1;0)+SI#@#((DIM1>200)Y(DIM1<=250);HUECOS_1_CANTIDAD/2;0)
+  f_alto=DIM1-1.5
+  ap_prec_inc=1
+  MedCutPerf=5000
+end
+Componente No Visual
+  id=ID80140068_1
+  art=80140068
+  desc=Palillo simple standard aluminio 6 m blanco
+  ancho_perfil=10
+  color=Blanco
+  tipo_corte_izq=|
+  tipo_corte_der=|
+  Despiece=1
+  TipoCurva=0
+  AngCorteI=90
+  AngCorteD=90
+  Centro=0
+  TipoTarifa=2
+  DtMedCutPerf=6000
+  f_cant=SI((DIM1>500)Y(DIM1<=600);HUECOS_1_CANTIDAD;0)+SI#@#((DIM1>500)Y(DIM1<=600)Y#@#(@MEDIDAFALDON2=1);HUECOS_1_CANTIDAD-1;0)+SI#@#((DIM1>250)Y(DIM1<=300);HUECOS_1_CANTIDAD/2;0)
+  f_alto=DIM1-1.5
+  ap_prec_inc=1
+  MedCutPerf=6000
+end
+Componente No Visual
+  id=ID80140069_1
+  art=80140069
+  desc=Palillo simple standard aluminio 7 m blanco
+  ancho_perfil=10
+  color=Blanco
+  tipo_corte_izq=|
+  tipo_corte_der=|
+  Despiece=1
+  TipoCurva=0
+  AngCorteI=90
+  AngCorteD=90
+  Centro=0
+  TipoTarifa=2
+  DtMedCutPerf=7000
+  f_cant=SI((DIM1>600)Y(DIM1<=700);HUECOS_1_CANTIDAD;0)+SI#@#((DIM1>600)Y(DIM1<=700)Y#@#(@MEDIDAFALDON2=1);HUECOS_1_CANTIDAD-1;0)+SI#@#((DIM1>300)Y(DIM1<=350);HUECOS_1_CANTIDAD/2;0)+SI#@#((DIM1>=10)Y(DIM1<=150);HUECOS_1_CANTIDAD/3;0)
+  f_alto=DIM1-1.5
+  red_cant=7
+  ap_prec_inc=1
+  MedCutPerf=7000
+end
+Componente No Visual
+  id=ID80140853_1
+  art=80140853
+  desc=Tapa palillo simple con agujero blanco
+  tipo_ctrl=0
+  Despiece=1
+  TipoCurva=0
+  AngCorteI=0
+  AngCorteD=0
+  Centro=0
+  TipoTarifa=2
+  f_cant=SI((DIM1<=700)Y#@#(@MEDIDAFALDON2=0);HUECOS_1_CANTIDAD*2;0)+SI#@#((DIM1<=700)Y#@#(@MEDIDAFALDON2>=1);HUECOS_1_CANTIDAD*2-2;0)
+  ap_prec_inc=1
+end
+Componente No Visual
+  id=ID80140073_1
+  art=80140073
+  desc=Palillo doble standard aluminio 4 m blanco
+  ancho_perfil=10
+  color=Blanco
+  tipo_corte_izq=|
+  tipo_corte_der=|
+  Despiece=1
+  TipoCurva=0
+  AngCorteI=90
+  AngCorteD=90
+  Centro=0
+  TipoTarifa=2
+  DtMedCutPerf=4000
+  f_cant=SI((DIM1>350)Y(DIM1<=400)Y#@#(@MEDIDAFALDON2<=0);1*0;0)+SI((DIM1>350)Y#@#(DIM1<=400)Y(@MEDIDAFALDON2>=1);2-1;0)
+  f_alto=DIM1-1.5
+  ap_prec_inc=1
+  MedCutPerf=4000
+end
+Componente No Visual
+  id=ID80140074_1
+  art=80140074
+  desc=Palillo doble standard aluminio 5 m blanco
+  ancho_perfil=10
+  color=Blanco
+  tipo_corte_izq=|
+  tipo_corte_der=|
+  Despiece=1
+  TipoCurva=0
+  AngCorteI=90
+  AngCorteD=90
+  Centro=0
+  TipoTarifa=2
+  DtMedCutPerf=5000
+  f_cant=SI((DIM1>400)Y(DIM1<=500)Y#@#(@MEDIDAFALDON2<=0);1*0;0)+SI((DIM1>400)Y#@#(DIM1<=500)Y(@MEDIDAFALDON2>=1);2-1;0)
+  f_alto=DIM1-1.5
+  ap_prec_inc=1
+  MedCutPerf=5000
+end
+Componente No Visual
+  id=ID80140075_1
+  art=80140075
+  desc=Palillo doble standard aluminio 6 m blanco
+  ancho_perfil=10
+  color=Blanco
+  tipo_corte_izq=|
+  tipo_corte_der=|
+  Despiece=1
+  TipoCurva=0
+  AngCorteI=90
+  AngCorteD=90
+  Centro=0
+  TipoTarifa=2
+  DtMedCutPerf=6000
+  f_cant=SI((DIM1>500)Y(DIM1<=600)Y#@#(@MEDIDAFALDON2<=0);1*0;0)+SI((DIM1>500)Y#@#(DIM1<=600)Y(@MEDIDAFALDON2>=1);2-1;0)
+  f_alto=DIM1-1.5
+  ap_prec_inc=1
+  MedCutPerf=6000
+end
+Componente No Visual
+  id=ID80140076_1
+  art=80140076
+  desc=Palillo doble standard aluminio 7 m blanco
+  ancho_perfil=10
+  color=Blanco
+  tipo_corte_izq=|
+  tipo_corte_der=|
+  Despiece=1
+  TipoCurva=0
+  AngCorteI=90
+  AngCorteD=90
+  Centro=0
+  TipoTarifa=2
+  DtMedCutPerf=7000
+  f_cant=SI((DIM1>600)Y(DIM1<=700)Y#@#(@MEDIDAFALDON2<=0);1*0;0)+SI((DIM1>600)Y#@#(DIM1<=700)Y(@MEDIDAFALDON2>=1);2-1;0)+SI((DIM1>=1)Y#@#(DIM1<=350)Y(@MEDIDAFALDON2<=0);1*0;0)+SI((DIM1>=1)Y#@#(DIM1<=350)Y(@MEDIDAFALDON2>=1);1;0)
+  f_alto=DIM1-1.5
+  ap_prec_inc=1
+  MedCutPerf=7000
+end
+Componente No Visual
+  id=ID80140859_1
+  art=80140859
+  desc=Tapa palillo doble con agujero blanco
+  tipo_ctrl=0
+  Despiece=1
+  TipoCurva=0
+  AngCorteI=0
+  AngCorteD=0
+  Centro=0
+  TipoTarifa=2
+  f_cant=SI((DIM1<=700)Y(@MEDIDAFALDON2=0);2*0;0)+SI#@#((DIM1<=700)Y(@MEDIDAFALDON2>=1);4-2;0)
+  ap_prec_inc=1
+end
+Componente No Visual
+  id=ID80050320_1
+  art=80050320
+  desc=Perfil terminal Bambu 1  4 m blanco
+  ancho_perfil=10
+  color=Blanco
+  tipo_corte_izq=|
+  tipo_corte_der=|
+  Despiece=1
+  TipoCurva=0
+  AngCorteI=90
+  AngCorteD=90
+  Centro=0
+  TipoTarifa=2
+  DtMedCutPerf=3890
+  f_cant=SI((DIM1>350)Y(DIM1<=400)Y#@#(@MEDIDAFALDON2<=0);1;0)+SI((DIM1>350)Y#@#(DIM1<=400)Y(@MEDIDAFALDON2>=1);2-1;0)
+  f_alto=DIM1-1.5
+  ap_prec_inc=1
+  MedCutPerf=3890
+end
+Componente No Visual
+  id=ID80050321_1
+  art=80050321
+  desc=Perfil terminal Bambu 1  5 m blanco
+  ancho_perfil=10
+  color=Blanco
+  tipo_corte_izq=|
+  tipo_corte_der=|
+  Despiece=1
+  TipoCurva=0
+  AngCorteI=90
+  AngCorteD=90
+  Centro=0
+  TipoTarifa=2
+  DtMedCutPerf=4890
+  f_cant=SI((DIM1>400)Y(DIM1<=500)Y#@#(@MEDIDAFALDON2<=0);1;0)+SI((DIM1>400)Y#@#(DIM1<=500)Y(@MEDIDAFALDON2>=1);2-1;0)
+  f_alto=DIM1-1.5
+  ap_prec_inc=1
+  MedCutPerf=4890
+end
+Componente No Visual
+  id=ID80050322_1
+  art=80050322
+  desc=Perfil terminal Bambu 1  6 m blanco
+  ancho_perfil=10
+  color=Blanco
+  tipo_corte_izq=|
+  tipo_corte_der=|
+  Despiece=1
+  TipoCurva=0
+  AngCorteI=90
+  AngCorteD=90
+  Centro=0
+  TipoTarifa=2
+  DtMedCutPerf=5890
+  f_cant=SI((DIM1>500)Y(DIM1<=600)Y#@#(@MEDIDAFALDON2<=0);1;0)+SI((DIM1>500)Y#@#(DIM1<=600)Y(@MEDIDAFALDON2>=1);2-1;0)
+  f_alto=DIM1-1.5
+  ap_prec_inc=1
+  MedCutPerf=5890
+end
+Componente No Visual
+  id=ID80050323_1
+  art=80050323
+  desc=Perfil terminal Bambu 1  7 m blanco
+  ancho_perfil=10
+  color=Blanco
+  tipo_corte_izq=|
+  tipo_corte_der=|
+  Despiece=1
+  TipoCurva=0
+  AngCorteI=90
+  AngCorteD=90
+  Centro=0
+  TipoTarifa=2
+  DtMedCutPerf=6890
+  f_cant=SI((DIM1>600)Y(DIM1<=700)Y#@#(@MEDIDAFALDON2<=0);1;0)+SI((DIM1>600)Y#@#(DIM1<=700)Y(@MEDIDAFALDON2>=1);2-1;0)+SI((DIM1>=1)Y#@#(DIM1<=350)Y(@MEDIDAFALDON2<=0);1;0)+SI((DIM1>=1)Y#@#(DIM1<=350)Y(@MEDIDAFALDON2>=1);1;0)
+  f_alto=DIM1-1.5
+  ap_prec_inc=1
+  MedCutPerf=6890
+end
+Componente No Visual
+  id=ID80050328_1
+  art=80050328
+  desc=Juego de tapas perfil Bambu 1 blanco
+  tipo_ctrl=0
+  Despiece=1
+  TipoCurva=0
+  AngCorteI=0
+  AngCorteD=0
+  Centro=0
+  TipoTarifa=2
+  f_cant=2
+  ap_prec_inc=1
+end
+Componente No Visual
+  id=ID10900001_1
+  art=10900001
+  desc=Atacuerda de pared blanco
+  tipo_ctrl=0
+  Despiece=1
+  TipoCurva=0
+  AngCorteI=0
+  AngCorteD=0
+  Centro=0
+  TipoTarifa=2
+  OrdenEtiquetas=2
+  f_cant=SI((DIM1>=1)Y(DIM1<=600);1;0)+SI((DIM1>600)Y#@#(DIM1<=700);2;0)
+  ap_prec_inc=1
+end
+Componente No Visual
+  id=ID80100070_1
+  art=80100070
+  desc=Cuerda Nylon blanco 8 mm
+  eDim1=1950
+  Despiece=1
+  TipoCurva=0
+  AngCorteI=0
+  AngCorteD=0
+  Centro=0
+  TipoTarifa=2
+  OrdenEtiquetas=2
+  f_cant=SI((DIM1>=1)Y(DIM1<=600);1;0)+SI((DIM1>600)Y#@#(DIM1<=700);2;0)
+  f_Dim1=SI((@POLEAESQUINA=0);DIM2*2+550;0)+SI#@#((@POLEAESQUINA=1);(DIM2*2)+DIM1+550;0)
+  ap_prec_inc=1
+end
+Componente No Visual
+  id=ID80140101_1
+  art=80140101
+  desc=Brida con pisacuerdas con regleta y torn. (nylon reforzado)
+  tipo_ctrl=0
+  Despiece=1
+  TipoCurva=0
+  AngCorteI=0
+  AngCorteD=0
+  Centro=0
+  TipoTarifa=2
+  f_cant=SI((DIM1>=1)Y(DIM1<=600);1;0)+SI((DIM1>600)Y#@#(DIM1<=700);2;0)
+  ap_prec_inc=1
+end
+Componente No Visual
+  id=ID80140099_1
+  art=80140099
+  desc=Conjunto gancho final regleta y torn. (nylon reforz) blanco
+  tipo_ctrl=0
+  Despiece=1
+  TipoCurva=0
+  AngCorteI=0
+  AngCorteD=0
+  Centro=0
+  TipoTarifa=2
+  f_cant=(SI((DIM1<=600)Y(@AGUAS=0);2;0)+SI((DIM1>600)Y#@#(@AGUAS=0);3;0)+SI((DIM1<=600)Y(@AGUAS>=1);1;0)+SI#@#((DIM1>600)Y(@AGUAS>=1);1;0))*0
+  ap_prec_inc=1
+end
+Componente No Visual
+  id=ID80140616_1
+  art=80140616
+  desc=Conjunto gancho final regleta y torn. (nylon reforz) L-60 bl
+  tipo_ctrl=0
+  Despiece=1
+  TipoCurva=0
+  AngCorteI=0
+  AngCorteD=0
+  Centro=0
+  TipoTarifa=2
+  f_cant=SI((DIM1>600)Y(@AGUAS>=1);1;0)*0
+  ap_prec_inc=1
+end
+Componente No Visual
+  id=ID80140618_1
+  art=80140618
+  desc=Conjunto gancho final regleta y torn. (nylon reforz) L-90 bl
+  tipo_ctrl=0
+  Despiece=1
+  TipoCurva=0
+  AngCorteI=0
+  AngCorteD=0
+  Centro=0
+  TipoTarifa=2
+  f_cant=(SI((DIM1<=600)Y(@AGUAS>=1);1;0)+SI((DIM1>600)Y#@#(@AGUAS>=1);1;0))*0
+  ap_prec_inc=1
+end
+Componente No Visual
+  id=FALDONTIPO50_1
+  funcion=25
+  art=BC_FALDON_TIPO_50
+  desc=Faldón tipo 50
+  tipo_ctrl=0
+  Despiece=0
+  TipoCurva=0
+  AngCorteI=0
+  AngCorteD=0
+  Centro=0
+  TipoTarifa=1
+  f_cant=@TIPOFALDON=1
+  desccomp=1
+end
+Componente No Visual
+  id=FALDONTIPO51_1
+  funcion=25
+  art=BC_FALDON_TIPO_51
+  desc=Faldón tipo 51
+  tipo_ctrl=0
+  Despiece=0
+  TipoCurva=0
+  AngCorteI=0
+  AngCorteD=0
+  Centro=0
+  TipoTarifa=1
+  f_cant=@TIPOFALDON=2
+  desccomp=1
+end
+Componente No Visual
+  id=FALDONTIPO54_1
+  funcion=25
+  art=BC_FALDON_TIPO_54
+  desc=Faldón tipo 54
+  tipo_ctrl=0
+  Despiece=0
+  TipoCurva=0
+  AngCorteI=0
+  AngCorteD=0
+  Centro=0
+  TipoTarifa=1
+  f_cant=@TIPOFALDON=3
+  desccomp=1
+end
+Componente No Visual
+  id=FALDONTIPO58_1
+  funcion=25
+  art=BC_FALDON_TIPO_58
+  desc=Faldón tipo 58
+  tipo_ctrl=0
+  Despiece=0
+  TipoCurva=0
+  AngCorteI=0
+  AngCorteD=0
+  Centro=0
+  TipoTarifa=1
+  f_cant=@TIPOFALDON=4
+  desccomp=1
+end
+Componente No Visual
+  id=FALDONTIPO63_1
+  funcion=25
+  art=BC_FALDON_TIPO_63
+  desc=Faldón tipo 63
+  tipo_ctrl=0
+  Despiece=0
+  TipoCurva=0
+  AngCorteI=0
+  AngCorteD=0
+  Centro=0
+  TipoTarifa=1
+  f_cant=@TIPOFALDON=5
+end
+Componente No Visual
+  id=FALDONTIPO70_1
+  funcion=25
+  art=BC_FALDON_TIPO_70
+  desc=Faldón tipo 70
+  tipo_ctrl=0
+  Despiece=0
+  TipoCurva=0
+  AngCorteI=0
+  AngCorteD=0
+  Centro=0
+  TipoTarifa=1
+  f_cant=@TIPOFALDON=6
+  desccomp=1
+end
+Componente No Visual
+  id=FALDON2TIPO50_1
+  funcion=25
+  art=BJ_FALDON_2_TIPO_50
+  desc=Faldón trasero tipo 50
+  tipo_ctrl=0
+  Despiece=0
+  TipoCurva=0
+  AngCorteI=0
+  AngCorteD=0
+  Centro=0
+  TipoTarifa=1
+  f_cant=@TIPOFALDON2=1
+  desccomp=1
+end
+Componente No Visual
+  id=FALDON2TIPO51_1
+  funcion=25
+  art=BJ_FALDON_2_TIPO_51
+  desc=Faldón trasero tipo 51
+  tipo_ctrl=0
+  Despiece=0
+  TipoCurva=0
+  AngCorteI=0
+  AngCorteD=0
+  Centro=0
+  TipoTarifa=1
+  f_cant=@TIPOFALDON2=2
+  desccomp=1
+end
+Componente No Visual
+  id=FALDON2TIPO54_1
+  funcion=25
+  art=BJ_FALDON_2_TIPO_54
+  desc=Faldón trasero tipo 54
+  tipo_ctrl=0
+  Despiece=0
+  TipoCurva=0
+  AngCorteI=0
+  AngCorteD=0
+  Centro=0
+  TipoTarifa=1
+  f_cant=@TIPOFALDON2=3
+  desccomp=1
+end
+Componente No Visual
+  id=FALDON2TIPO58_1
+  funcion=25
+  art=BJ_FALDON_2_TIPO_58
+  desc=Faldón trasero tipo 58
+  tipo_ctrl=0
+  Despiece=0
+  TipoCurva=0
+  AngCorteI=0
+  AngCorteD=0
+  Centro=0
+  TipoTarifa=1
+  f_cant=@TIPOFALDON2=4
+  desccomp=1
+end
+Componente No Visual
+  id=FALDON2TIPO63_1
+  funcion=25
+  art=BJ_FALDON_2_TIPO_63
+  desc=Faldón trasero tipo 63
+  tipo_ctrl=0
+  Despiece=0
+  TipoCurva=0
+  AngCorteI=0
+  AngCorteD=0
+  Centro=0
+  TipoTarifa=1
+  f_cant=@TIPOFALDON2=5
+  desccomp=1
+end
+Componente No Visual
+  id=FALDON2TIPO70_1
+  funcion=25
+  art=BJ_FALDON_2_TIPO_70
+  desc=Faldón trasero tipo 70
+  tipo_ctrl=0
+  Despiece=0
+  TipoCurva=0
+  AngCorteI=0
+  AngCorteD=0
+  Centro=0
+  TipoTarifa=1
+  f_cant=@TIPOFALDON2=6
+  desccomp=1
+end
+Componente No Visual
+  id=COLOR0000_1
+  funcion=22
+  art=COLOR_0000
+  desc=Ribete color Blanco 0000
+  tipo_ctrl=0
+  Despiece=0
+  TipoCurva=0
+  AngCorteI=0
+  AngCorteD=0
+  Centro=0
+  TipoTarifa=1
+  f_cant=@COLORRIBETE=1
+  desccomp=1
+end
+Componente No Visual
+  id=COLOR5847_1
+  funcion=22
+  art=COLOR_5847
+  desc=Ribete color Gris 5847
+  tipo_ctrl=0
+  Despiece=0
+  TipoCurva=0
+  AngCorteI=0
+  AngCorteD=0
+  Centro=0
+  TipoTarifa=1
+  f_cant=@COLORRIBETE=2
+  desccomp=1
+end
+Componente No Visual
+  id=COLOR5029_1
+  funcion=22
+  art=COLOR_5029
+  desc=Ribete color Gris 5029
+  tipo_ctrl=0
+  Despiece=0
+  TipoCurva=0
+  AngCorteI=0
+  AngCorteD=0
+  Centro=0
+  TipoTarifa=1
+  f_cant=@COLORRIBETE=3
+  red_cant=5
+  desccomp=1
+end
+Componente No Visual
+  id=COLOR9644_1
+  funcion=22
+  art=COLOR_9644
+  desc=Ribete color Gris 9644
+  tipo_ctrl=0
+  Despiece=0
+  TipoCurva=0
+  AngCorteI=0
+  AngCorteD=0
+  Centro=0
+  TipoTarifa=1
+  f_cant=@COLORRIBETE=4
+  desccomp=1
+end
+Componente No Visual
+  id=COLOR5445_1
+  funcion=22
+  art=COLOR_5445
+  desc=Ribete color Beige 5445
+  tipo_ctrl=0
+  Despiece=0
+  TipoCurva=0
+  AngCorteI=0
+  AngCorteD=0
+  Centro=0
+  TipoTarifa=1
+  f_cant=@COLORRIBETE=5
+  desccomp=1
+end
+Componente No Visual
+  id=COLOR9633_1
+  funcion=22
+  art=COLOR_9633
+  desc=Ribete color Beige 9633
+  tipo_ctrl=0
+  Despiece=0
+  TipoCurva=0
+  AngCorteI=0
+  AngCorteD=0
+  Centro=0
+  TipoTarifa=1
+  f_cant=@COLORRIBETE=6
+  desccomp=1
+end
+Componente No Visual
+  id=COLOR5110_1
+  funcion=22
+  art=COLOR_5110
+  desc=Ribete color Marrón 5110
+  tipo_ctrl=0
+  Despiece=0
+  TipoCurva=0
+  AngCorteI=0
+  AngCorteD=0
+  Centro=0
+  TipoTarifa=1
+  f_cant=@COLORRIBETE=7
+  desccomp=1
+end
+Componente No Visual
+  id=COLOR9647_1
+  funcion=22
+  art=COLOR_9647
+  desc=Ribete color Marrón 9647
+  tipo_ctrl=0
+  Despiece=0
+  TipoCurva=0
+  AngCorteI=0
+  AngCorteD=0
+  Centro=0
+  TipoTarifa=1
+  f_cant=@COLORRIBETE=8
+  desccomp=1
+end
+Componente No Visual
+  id=COLOR5040_1
+  funcion=22
+  art=COLOR_5040
+  desc=Ribete color Marrón 5040
+  tipo_ctrl=0
+  Despiece=0
+  TipoCurva=0
+  AngCorteI=0
+  AngCorteD=0
+  Centro=0
+  TipoTarifa=1
+  f_cant=@COLORRIBETE=9
+  desccomp=1
+end
+Componente No Visual
+  id=COLOR5021_1
+  funcion=22
+  art=COLOR_5021
+  desc=Ribete color Marrón 5021
+  tipo_ctrl=0
+  Despiece=0
+  TipoCurva=0
+  AngCorteI=0
+  AngCorteD=0
+  Centro=0
+  TipoTarifa=1
+  f_cant=@COLORRIBETE=10
+  desccomp=1
+end
+Componente No Visual
+  id=COLOR5291_1
+  funcion=22
+  art=COLOR_5291
+  desc=Ribete color Marrón 5291
+  tipo_ctrl=0
+  Despiece=0
+  TipoCurva=0
+  AngCorteI=0
+  AngCorteD=0
+  Centro=0
+  TipoTarifa=1
+  f_cant=@COLORRIBETE=11
+  desccomp=1
+end
+Componente No Visual
+  id=COLOR5012_2
+  funcion=22
+  art=COLOR_5012
+  desc=Ribete color Negro 5012
+  tipo_ctrl=0
+  Despiece=0
+  TipoCurva=0
+  AngCorteI=0
+  AngCorteD=0
+  Centro=0
+  TipoTarifa=1
+  f_cant=@COLORRIBETE=12
+  desccomp=1
+end
+Componente No Visual
+  id=COLOR9631_1
+  funcion=22
+  art=COLOR_9631
+  desc=Ribete color Burdeos 9631
+  tipo_ctrl=0
+  Despiece=1
+  TipoCurva=0
+  AngCorteI=0
+  AngCorteD=0
+  Centro=0
+  TipoTarifa=2
+  f_cant=@COLORRIBETE=13
+  desccomp=1
+  ap_prec_inc=1
+end
+Componente No Visual
+  id=COLOR3914_1
+  funcion=22
+  art=COLOR_3914
+  desc=Ribete color Terracota 3914
+  tipo_ctrl=0
+  Despiece=0
+  TipoCurva=0
+  AngCorteI=0
+  AngCorteD=0
+  Centro=0
+  TipoTarifa=1
+  f_cant=@COLORRIBETE=14
+  desccomp=1
+end
+Componente No Visual
+  id=COLOR9512_1
+  funcion=22
+  art=COLOR_9512
+  desc=Ribete color Naranja 9512
+  tipo_ctrl=0
+  Despiece=0
+  TipoCurva=0
+  AngCorteI=0
+  AngCorteD=0
+  Centro=0
+  TipoTarifa=1
+  f_cant=@COLORRIBETE=15
+  desccomp=1
+end
+Componente No Visual
+  id=COLOR5242_1
+  funcion=22
+  art=COLOR_5242
+  desc=Ribete color Naranja 5242
+  tipo_ctrl=0
+  Despiece=0
+  TipoCurva=0
+  AngCorteI=0
+  AngCorteD=0
+  Centro=0
+  TipoTarifa=1
+  f_cant=@COLORRIBETE=16
+  desccomp=1
+end
+Componente No Visual
+  id=COLOR5025_1
+  funcion=22
+  art=COLOR_5025
+  desc=Ribete color Rojo 5025
+  tipo_ctrl=0
+  Despiece=0
+  TipoCurva=0
+  AngCorteI=0
+  AngCorteD=0
+  Centro=0
+  TipoTarifa=1
+  f_cant=@COLORRIBETE=17
+  desccomp=1
+end
+Componente No Visual
+  id=COLOR5024_1
+  funcion=22
+  art=COLOR_5024
+  desc=Ribete color Amarillo 5024
+  tipo_ctrl=0
+  Despiece=0
+  TipoCurva=0
+  AngCorteI=0
+  AngCorteD=0
+  Centro=0
+  TipoTarifa=1
+  f_cant=@COLORRIBETE=18
+  desccomp=1
+end
+Componente No Visual
+  id=COLOR5132_1
+  funcion=22
+  art=COLOR_5132
+  desc=Ribete color Verde 5132
+  tipo_ctrl=0
+  Despiece=0
+  TipoCurva=0
+  AngCorteI=0
+  AngCorteD=0
+  Centro=0
+  TipoTarifa=1
+  f_cant=@COLORRIBETE=19
+  desccomp=1
+end
+Componente No Visual
+  id=COLOR5888_1
+  funcion=22
+  art=COLOR_5888
+  desc=Ribete color Verde 5888
+  tipo_ctrl=0
+  Despiece=0
+  TipoCurva=0
+  AngCorteI=0
+  AngCorteD=0
+  Centro=0
+  TipoTarifa=1
+  f_cant=@COLORRIBETE=20
+  desccomp=1
+end
+Componente No Visual
+  id=COLOR5254_1
+  funcion=22
+  art=COLOR_R163
+  desc=Ribete color Verde 5254
+  tipo_ctrl=0
+  Despiece=0
+  TipoCurva=0
+  AngCorteI=0
+  AngCorteD=0
+  Centro=0
+  TipoTarifa=1
+  f_cant=@COLORRIBETE=21
+  desccomp=1
+end
+Componente No Visual
+  id=COLOR5412_1
+  funcion=22
+  art=COLOR_5412
+  desc=Ribete color Azul 5412
+  tipo_ctrl=0
+  Despiece=0
+  TipoCurva=0
+  AngCorteI=0
+  AngCorteD=0
+  Centro=0
+  TipoTarifa=1
+  f_cant=@COLORRIBETE=22
+  desccomp=1
+end
+Componente No Visual
+  id=COLOR5331_1
+  funcion=22
+  art=COLOR_5331
+  desc=Ribete color Azul 5331
+  tipo_ctrl=0
+  Despiece=0
+  TipoCurva=0
+  AngCorteI=0
+  AngCorteD=0
+  Centro=0
+  TipoTarifa=1
+  f_cant=@COLORRIBETE=23
+  desccomp=1
+end
+Componente No Visual
+  id=COLOR9514_1
+  funcion=22
+  art=COLOR_9514
+  desc=Ribete color Azul 9514
+  tipo_ctrl=0
+  Despiece=0
+  TipoCurva=0
+  AngCorteI=0
+  AngCorteD=0
+  Centro=0
+  TipoTarifa=1
+  f_cant=@COLORRIBETE=24
+  desccomp=1
+end
+Componente No Visual
+  id=Ribeteatono_2
+  funcion=22
+  art=Ribete_a_tono
+  desc=Color del ribete a tono con el tejido 
+  tipo_ctrl=0
+  Despiece=0
+  TipoCurva=0
+  AngCorteI=0
+  AngCorteD=0
+  Centro=0
+  TipoTarifa=1
+  f_cant=@COLORRIBETE=26
+end
+Componente No Visual
+  id=CONDOBLADILLO_1
+  art=BE_CON_DOBLADILLO
+  desc=Dobladillo abajo con doble costura
+  tipo_ctrl=0
+  Despiece=1
+  TipoCurva=0
+  AngCorteI=0
+  AngCorteD=0
+  Centro=0
+  TipoTarifa=2
+  f_cant=@COLORRIBETE=25
+  desccomp=1
+  ap_prec_inc=1
+end
+Componente No Visual
+  id=FALDON2DOBLADILLO_1
+  art=BJ_FALD_2_DOBLADILLO
+  desc=Faldón trasero con dobladillo
+  tipo_ctrl=0
+  Despiece=0
+  TipoCurva=0
+  AngCorteI=0
+  AngCorteD=0
+  Centro=0
+  TipoTarifa=1
+  f_cant=@COLORRIBETE=25
+  desccomp=1
+end
+Componente No Visual
+  id=ACONSOLDADURA_1
+  funcion=27
+  art=AAAA_CON_SOLDADURA
+  desc=Confeccionado con SOLDADURA
+  tipo_ctrl=0
+  Despiece=1
+  TipoCurva=0
+  AngCorteI=0
+  AngCorteD=0
+  Centro=0
+  TipoTarifa=2
+  f_cant=SI(@HILOS=12;1;0)
+  ap_prec_inc=1
+end
+Componente No Visual
+  id=Hilo66501_1
+  funcion=27
+  art=AAAA_Hilo_66501
+  desc=Hilo negro
+  tipo_ctrl=0
+  Despiece=1
+  TipoCurva=0
+  AngCorteI=0
+  AngCorteD=0
+  Centro=0
+  TipoTarifa=2
+  f_cant=SI(@HILOS=6;1;0)
+  ap_prec_inc=1
+end
+Componente No Visual
+  id=Hilo66502_1
+  funcion=27
+  art=AAA_Hilo_66502
+  desc=Hilo blanco
+  tipo_ctrl=0
+  Despiece=1
+  TipoCurva=0
+  AngCorteI=0
+  AngCorteD=0
+  Centro=0
+  TipoTarifa=2
+  f_cant=SI(@HILOS=0;1;0)
+  ap_prec_inc=1
+end
+Componente No Visual
+  id=Hilo66504_1
+  funcion=27
+  art=A_Hilo_66504
+  desc=Hilo burdeos
+  tipo_ctrl=0
+  Despiece=1
+  TipoCurva=0
+  AngCorteI=0
+  AngCorteD=0
+  Centro=0
+  TipoTarifa=2
+  f_cant=SI(@HILOS=4;1;0)
+  ap_prec_inc=1
+end
+Componente No Visual
+  id=Hilo66511_1
+  funcion=27
+  art=A_Hilo_66511
+  desc=Hilo gris
+  tipo_ctrl=0
+  Despiece=1
+  TipoCurva=0
+  AngCorteI=0
+  AngCorteD=0
+  Centro=0
+  TipoTarifa=2
+  f_cant=SI(@HILOS=1;1;0)
+  ap_prec_inc=1
+end
+Componente No Visual
+  id=Hilo66517_1
+  funcion=27
+  art=A_Hilo_66517
+  desc=Hilo beige
+  tipo_ctrl=0
+  Despiece=1
+  TipoCurva=0
+  AngCorteI=0
+  AngCorteD=0
+  Centro=0
+  TipoTarifa=2
+  f_cant=SI(@HILOS=2;1;0)
+  ap_prec_inc=1
+end
+Componente No Visual
+  id=AHIlo66519_1
+  funcion=27
+  art=A_HIlo_66519 
+  desc=Hilo rojo 66519
+  tipo_ctrl=0
+  Despiece=1
+  TipoCurva=0
+  AngCorteI=0
+  AngCorteD=0
+  Centro=0
+  TipoTarifa=2
+  f_cant=SI(@HILOS=3;1;0)
+  ap_prec_inc=1
+end
+Componente No Visual
+  id=Hilo66527_1
+  funcion=27
+  art=A_Hilo_66527
+  desc=Hilo verde
+  tipo_ctrl=0
+  Despiece=1
+  TipoCurva=0
+  AngCorteI=0
+  AngCorteD=0
+  Centro=0
+  TipoTarifa=2
+  f_cant=SI(@HILOS=7;1;0)
+  ap_prec_inc=1
+end
+Componente No Visual
+  id=Hilo66528_1
+  funcion=27
+  art=A_Hilo_66528
+  desc=Hilo naranja
+  tipo_ctrl=0
+  Despiece=1
+  TipoCurva=0
+  AngCorteI=0
+  AngCorteD=0
+  Centro=0
+  TipoTarifa=2
+  f_cant=SI(@HILOS=8;1;0)
+  ap_prec_inc=1
+end
+Componente No Visual
+  id=Hilo66529_1
+  funcion=27
+  art=A_Hilo_66529
+  desc=Hilo amarillo
+  tipo_ctrl=0
+  Despiece=1
+  TipoCurva=0
+  AngCorteI=0
+  AngCorteD=0
+  Centro=0
+  TipoTarifa=2
+  f_cant=SI(@HILOS=9;1;0)
+  ap_prec_inc=1
+end
+Componente No Visual
+  id=Hilo66547_1
+  funcion=27
+  art=A_Hilo_66547
+  desc=Hilo marrón
+  tipo_ctrl=0
+  Despiece=1
+  TipoCurva=0
+  AngCorteI=0
+  AngCorteD=0
+  Centro=0
+  TipoTarifa=2
+  f_cant=SI(@HILOS=10;1;0)
+  ap_prec_inc=1
+end
+Componente No Visual
+  id=Hilotono_1
+  funcion=27
+  art=AAA_Hilo_tono
+  desc=Hilo a tono
+  tipo_ctrl=0
+  Despiece=1
+  TipoCurva=0
+  AngCorteI=0
+  AngCorteD=0
+  Centro=0
+  TipoTarifa=2
+  f_cant=SI(@HILOS=11;1;0)
+  ap_prec_inc=1
+end
+Componente No Visual
+  id=Hilo66513_1
+  funcion=27
+  art=A_Hilo_66513
+  desc=Hilo azul
+  tipo_ctrl=0
+  Despiece=1
+  TipoCurva=0
+  AngCorteI=0
+  AngCorteD=0
+  Centro=0
+  TipoTarifa=2
+  f_cant=SI(@HILOS=5;1;0)
+  ap_prec_inc=1
+end
+Componente No Visual
+  id=LONA_2
+  funcion=24
+  art=AA_LONA
+  desc=Colocación de referencia de lona
+  tipo_ctrl=0
+  eDim2=697.5
+  Despiece=1
+  TipoCurva=0
+  AngCorteI=0
+  AngCorteD=0
+  Centro=0
+  TipoTarifa=2
+  f_cant=Si(@MedidaFaldon=0;0;1)
+  f_Dim1=SI((@MEDIDAFALDON>1)Y(@COLORRIBETE<=24);@MEDIDAFALDON+7;0)+SI((@MEDIDAFALDON>1)Y(@COLORRIBETE=25);@MEDIDAFALDON+10,5;0)+SI((@MEDIDAFALDON>1)Y(@COLORRIBETE=26);@MEDIDAFALDON+7;0)
+  f_Dim2=Dim1-2.5
+  ap_prec_inc=1
+end
+Componente No Visual
+  id=CONFNORMAL_1
+  art=AB_CONF_NORMAL
+  desc=Confeccion NORMAL
+  tipo_ctrl=0
+  Despiece=1
+  TipoCurva=0
+  AngCorteI=0
+  AngCorteD=0
+  Centro=0
+  TipoTarifa=2
+  f_cant=SI(@TIPOCONFECCION=0;(LONA_1_Dim1-#@#MEDIDAFALDON1_1_Dim1-MEDIDAFALDON2_2_Dim1)-2;0)
+  ap_prec_inc=1
+end
+Componente No Visual
+  id=CONFTENSA_1
+  art=AB_CONF_TENSA
+  desc=Confeccion TENSA
+  tipo_ctrl=0
+  Despiece=1
+  TipoCurva=0
+  AngCorteI=0
+  AngCorteD=0
+  Centro=0
+  TipoTarifa=2
+  f_cant=SI(@TIPOCONFECCION=1;(LONA_1_Dim1-#@#MEDIDAFALDON1_1_Dim1-MEDIDAFALDON2_2_Dim1)-2;0)
+  ap_prec_inc=1
+end
+Componente No Visual
+  id=CONFPLUSONDA_1
+  art=AB_CONF_PLUS_ONDA
+  desc=Confeccion PLUS ONDA
+  tipo_ctrl=0
+  Despiece=1
+  TipoCurva=0
+  AngCorteI=0
+  AngCorteD=0
+  Centro=0
+  TipoTarifa=2
+  f_cant=SI(@TIPOCONFECCION=2;(LONA_1_Dim1-#@#MEDIDAFALDON1_1_Dim1-MEDIDAFALDON2_2_Dim1)-2;0)
+  ap_prec_inc=1
+end
+Componente No Visual
+  id=MEDIDAFALDON_1
+  art=MEDIDA_FALDON
+  desc=Medida faldón
+  tipo_ctrl=0
+  Despiece=0
+  TipoCurva=0
+  AngCorteI=0
+  AngCorteD=0
+  Centro=0
+  TipoTarifa=1
+  f_cant=SI(@MEDIDAFALDON>1;@MEDIDAFALDON;0)
+  desccomplista=1
+end
+Componente No Visual
+  id=MEDIDAFALDON_2
+  art=MEDIDA_FALDON
+  desc=Medida faldón trasero
+  tipo_ctrl=0
+  Despiece=0
+  TipoCurva=0
+  AngCorteI=0
+  AngCorteD=0
+  Centro=0
+  TipoTarifa=1
+  f_cant=SI(@MEDIDAFALDON2>1;@MEDIDAFALDON2;0)#@#
+  desccomplista=1
+end
+Componente No Visual
+  id=COMPROBADO_1
+  art=COMPROBADO
+  desc=Revisado por:
+  tipo_ctrl=0
+  Despiece=0
+  TipoCurva=0
+  AngCorteI=0
+  AngCorteD=0
+  Centro=0
+  TipoTarifa=1
+  OrdenEtiquetas=1
+  f_cant=1
+end
+Componente No Visual
+  id=PISADO1
+  art=COLOR_RIBETE_PISADO
+  desc=Piasado
+  tipo_ctrl=0
+  Despiece=0
+  TipoCurva=0
+  AngCorteI=0
+  AngCorteD=0
+  Centro=0
+  TipoTarifa=1
+  f_cant=SI(@COLORRIBETE=27;1;0)#@#
+  desccomp=1
+end
+Componente No Visual
+  id=AGMACARRON_1
+  art=AG_MACARRON
+  desc=Dobladillo inferior mac.
+  tipo_ctrl=0
+  Despiece=0
+  TipoCurva=0
+  AngCorteI=0
+  AngCorteD=0
+  Centro=0
+  TipoTarifa=1
+  f_cant=5.5
+  desccomp=1
+end
+Componente No Visual
+  id=AMETROS_1
+  art=ZZZ_METROS
+  desc=T.e. necesarias / ML total
+  eDim1=54.7
+  Despiece=0
+  TipoCurva=0
+  AngCorteI=0
+  AngCorteD=0
+  Centro=0
+  TipoTarifa=1
+  f_cant=(lona_1_dim2+(2.5*(lona_1_dim2/120))+8)/120
+  f_Dim1=#@#LONA_1_DIM1*ametros_1_CANTIDAD/100
+  red_cant=7
+  red_Dim1=2
+end
+Componente No Visual
+  id=AATIPOPALILLERIAS_1
+  art=AA_TIPO_PALILLERIAS
+  desc=           Palilleria SIMPLE
+  tipo_ctrl=0
+  Despiece=0
+  TipoCurva=0
+  AngCorteI=0
+  AngCorteD=0
+  Centro=0
+  TipoTarifa=1
+  f_cant=1
+end
+Componente No Visual
+  id=AAADOBLADILLOSABAJ_1
+  art=AAA_DOBLADILLOS_ABAJ
+  desc=*****DOBL Lateral hacia ABAJO******
+  tipo_ctrl=0
+  Despiece=0
+  TipoCurva=0
+  AngCorteI=0
+  AngCorteD=0
+  Centro=0
+  TipoTarifa=1
+  f_cant=1
+end
+Componente No Visual
+  id=COMPROB1_1
+  art=COMPROB1
+  desc=Ensamblaje por:
+  tipo_ctrl=0
+  Despiece=0
+  TipoCurva=0
+  AngCorteI=0
+  AngCorteD=0
+  Centro=0
+  TipoTarifa=1
+  f_cant=1
+end
+Componente No Visual
+  id=COMPROB2_1
+  art=COMPROB2
+  desc=Confección por:
+  tipo_ctrl=0
+  Despiece=0
+  TipoCurva=0
+  AngCorteI=0
+  AngCorteD=0
+  Centro=0
+  TipoTarifa=1
+  f_cant=1
+end
+Componente No Visual
+  id=COMPROB3_1
+  art=COMPROB3
+  desc=Perfiles E por:
+  tipo_ctrl=0
+  Despiece=0
+  TipoCurva=0
+  AngCorteI=0
+  AngCorteD=0
+  Centro=0
+  TipoTarifa=1
+  f_cant=1
+end
+Componente No Visual
+  id=COMPROB4_1
+  art=COMPROB4
+  desc=Perfiles F por:
+  tipo_ctrl=0
+  Despiece=0
+  TipoCurva=0
+  AngCorteI=0
+  AngCorteD=0
+  Centro=0
+  TipoTarifa=1
+  f_cant=1
+end
+Componente No Visual
+  id=COMPROB5_1
+  art=COMPROB5
+  desc=Accesorios E por:
+  tipo_ctrl=0
+  Despiece=0
+  TipoCurva=0
+  AngCorteI=0
+  AngCorteD=0
+  Centro=0
+  TipoTarifa=1
+  f_cant=1
+end
+Componente No Visual
+  id=COMPROB6_1
+  art=COMPROB6
+  desc=Accesorios F por:
+  tipo_ctrl=0
+  Despiece=0
+  TipoCurva=0
+  AngCorteI=0
+  AngCorteD=0
+  Centro=0
+  TipoTarifa=1
+  f_cant=1
+end
+Componente No Visual
+  id=TF01_1
+  art=TF01
+  desc=Corte de tallas
+  tipo_ctrl=0
+  Despiece=0
+  TipoCurva=0
+  AngCorteI=0
+  AngCorteD=0
+  Centro=0
+  TipoTarifa=1
+end
+Componente No Visual
+  id=TF02_1
+  art=TF02
+  desc=Unión de paños
+  tipo_ctrl=0
+  Despiece=0
+  TipoCurva=0
+  AngCorteI=0
+  AngCorteD=0
+  Centro=0
+  TipoTarifa=1
+end
+Componente No Visual
+  id=TF03_1
+  art=TF03
+  desc=Verificacion y Faldilla
+  tipo_ctrl=0
+  Despiece=0
+  TipoCurva=0
+  AngCorteI=0
+  AngCorteD=0
+  Centro=0
+  TipoTarifa=1
+end
+Componente No Visual
+  id=TF03B_1
+  art=TF03B
+  desc=Terminacion confeccion
+  tipo_ctrl=0
+  Despiece=0
+  TipoCurva=0
+  AngCorteI=0
+  AngCorteD=0
+  Centro=0
+  TipoTarifa=1
+end
+Componente No Visual
+  id=TF04_1
+  art=TF04
+  desc=Corte perfilería
+  tipo_ctrl=0
+  Despiece=0
+  TipoCurva=0
+  AngCorteI=0
+  AngCorteD=0
+  Centro=0
+  TipoTarifa=1
+  f_cant=18/60
+end
+Componente No Visual
+  id=TF05_1
+  art=TF05
+  desc=Preparación accesorios
+  tipo_ctrl=0
+  Despiece=0
+  TipoCurva=0
+  AngCorteI=0
+  AngCorteD=0
+  Centro=0
+  TipoTarifa=1
+  f_cant=12/60
+end
+Componente No Visual
+  id=TF06_1
+  art=TF06
+  desc=Montaje y reglaje
+  tipo_ctrl=0
+  Despiece=0
+  TipoCurva=0
+  AngCorteI=0
+  AngCorteD=0
+  Centro=0
+  TipoTarifa=1
+  f_cant=4/60*(HUECOS_1_Cantidad+1)
+end
+Componente No Visual
+  id=TF07_1
+  art=TF07
+  desc=Comprobación , emabalaje y zona de salida
+  tipo_ctrl=0
+  Despiece=0
+  TipoCurva=0
+  AngCorteI=0
+  AngCorteD=0
+  Centro=0
+  TipoTarifa=1
+end
+
+class=TEstRelleno
+  x=0
+  y=0
+  w=700
+  h=700
+end
+

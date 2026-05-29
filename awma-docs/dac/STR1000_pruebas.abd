@@ -1,0 +1,2717 @@
+articulo=STR1000_pruebas
+desc=Toldo STOR BALCON con brazo de 50 cm
+NewEstruc=1
+color perfil=Blanco
+color accesorios=Blanco
+dim1=600
+dim2=250
+tipoacabado=8
+AplMultAncho=1
+intAtLin=50
+intAtEA=70
+ilumPrC=20
+ilumPrL=40
+ilumPrF=50
+ProfSombCerr=1
+
+##Datos_Estructura##
+
+Id=0
+PintCotasAut=0
+Modulo000=001         0         0         0         0
+
+
+
+Variable
+  nombre=@SEMICOFRESPIRAL
+  valor=0
+  tipovar=1
+  formula=
+  max=0
+  min=0
+  actmin=0
+  actmax=0
+  selec=0
+  peticion=1
+  condicion=
+  varserie=0
+  PermEdRes=0
+  ResManual=0
+  ValorManual=0
+  agrupar=0
+  enum_0_texto=SIN SEMICOFRE
+  enum_0_valor=0
+  enum_0_condicion=
+  enum_1_texto=CON SEMICOFRE
+  enum_1_valor=1
+  enum_1_condicion=
+end
+Variable
+  nombre=@INSTALACION
+  valor=0
+  tipovar=1
+  formula=
+  max=0
+  min=0
+  actmin=0
+  actmax=0
+  selec=0
+  peticion=1
+  condicion=
+  varserie=0
+  PermEdRes=0
+  ResManual=0
+  ValorManual=0
+  agrupar=0
+  enum_0_texto=NOVALIDO
+  enum_0_valor=0
+  enum_0_condicion=
+  enum_1_texto=A PARED
+  enum_1_valor=1
+  enum_1_condicion=
+  enum_2_texto=A TECHO
+  enum_2_valor=2
+  enum_2_condicion=
+  enum_3_texto=ENTREPAREDES
+  enum_3_valor=3
+  enum_3_condicion=
+end
+Variable
+  nombre=@ACCIONAMIENTO
+  valor=0
+  tipovar=1
+  formula=
+  max=0
+  min=0
+  actmin=0
+  actmax=0
+  selec=0
+  peticion=1
+  condicion=
+  varserie=0
+  PermEdRes=0
+  ResManual=0
+  ValorManual=0
+  agrupar=0
+  enum_0_texto=NO VALIDO
+  enum_0_valor=0
+  enum_0_condicion=
+  enum_1_texto=MAQUINA
+  enum_1_valor=1
+  enum_1_condicion=
+  enum_2_texto=MOTOR SOMFY
+  enum_2_valor=2
+  enum_2_condicion=
+  enum_3_texto=MOTOR CHERUBINI
+  enum_3_valor=3
+  enum_3_condicion=
+  enum_4_texto=MOTOR GAVIOTA
+  enum_4_valor=4
+  enum_4_condicion=
+end
+Variable
+  nombre=@POSICION
+  valor=0
+  tipovar=1
+  formula=
+  max=0
+  min=0
+  actmin=0
+  actmax=0
+  selec=0
+  peticion=1
+  condicion=
+  varserie=0
+  PermEdRes=0
+  ResManual=0
+  ValorManual=0
+  agrupar=0
+  enum_0_texto=NO VALIDO
+  enum_0_valor=0
+  enum_0_condicion=
+  enum_1_texto=DERECHA
+  enum_1_valor=1
+  enum_1_condicion=
+  enum_2_texto=IZQUIERDA
+  enum_2_valor=2
+  enum_2_condicion=
+end
+Variable
+  nombre=@Manivela
+  valor=0
+  tipovar=1
+  formula=
+  max=0
+  min=0
+  actmin=0
+  actmax=0
+  selec=0
+  peticion=1
+  condicion=SI(@ACCIONAMIENTO=1;1;0)
+  varserie=0
+  PermEdRes=0
+  ResManual=0
+  ValorManual=0
+  agrupar=0
+  enum_0_texto=SIN MANIVELA
+  enum_0_valor=0
+  enum_0_condicion=
+  enum_1_texto=MANIVELA 80
+  enum_1_valor=1
+  enum_1_condicion=
+  enum_2_texto=MANIVELA 110
+  enum_2_valor=2
+  enum_2_condicion=
+  enum_3_texto=MANIVELA 120
+  enum_3_valor=3
+  enum_3_condicion=
+  enum_4_texto=MANIVELA 140
+  enum_4_valor=4
+  enum_4_condicion=
+  enum_5_texto=MANIVELA 150
+  enum_5_valor=5
+  enum_5_condicion=
+  enum_6_texto=MANIVELA 160
+  enum_6_valor=6
+  enum_6_condicion=
+  enum_7_texto=MANIVELA 180
+  enum_7_valor=7
+  enum_7_condicion=
+  enum_8_texto=MANIVELA 200
+  enum_8_valor=8
+  enum_8_condicion=
+  enum_9_texto=MANIVELA 220
+  enum_9_valor=9
+  enum_9_condicion=
+  enum_10_texto=MANIVELA 240
+  enum_10_valor=10
+  enum_10_condicion=
+  enum_11_texto=MANIVELA 260
+  enum_11_valor=11
+  enum_11_condicion=
+  enum_12_texto=MANIVELA 280
+  enum_12_valor=0
+  enum_12_condicion=
+  enum_13_texto=MANIVELA 300
+  enum_13_valor=0
+  enum_13_condicion=
+end
+Variable
+  nombre=@MOTORSOMFY
+  valor=0
+  tipovar=1
+  formula=
+  max=0
+  min=0
+  actmin=0
+  actmax=0
+  selec=0
+  peticion=1
+  condicion=SI(@ACCIONAMIENTO=2;1;0)
+  varserie=0
+  PermEdRes=0
+  ResManual=0
+  ValorManual=0
+  agrupar=0
+  enum_0_texto=NO VALIDO
+  enum_0_valor=0
+  enum_0_condicion=
+  enum_1_texto=MOTOR LT
+  enum_1_valor=1
+  enum_1_condicion=
+  enum_2_texto=MOTOR RTS
+  enum_2_valor=2
+  enum_2_condicion=
+  enum_3_texto=MOTOR iO
+  enum_3_valor=3
+  enum_3_condicion=
+end
+Variable
+  nombre=@MANDOSOMFYRTS
+  valor=0
+  tipovar=1
+  formula=
+  max=0
+  min=0
+  actmin=0
+  actmax=0
+  selec=0
+  peticion=1
+  condicion=SI((@MOTORSOMFY=2)y(@Accionamiento=2);1;0)
+  varserie=0
+  PermEdRes=0
+  ResManual=0
+  ValorManual=0
+  agrupar=0
+  enum_0_texto=SIN MANDO
+  enum_0_valor=0
+  enum_0_condicion=
+  enum_1_texto=TELIS PURE RTS
+  enum_1_valor=1
+  enum_1_condicion=
+  enum_2_texto=TELIS PURE 4 RTS
+  enum_2_valor=2
+  enum_2_condicion=
+  enum_3_texto=TELIS PATIO
+  enum_3_valor=3
+  enum_3_condicion=
+  enum_4_texto=TELIS PATIO 4 RTS
+  enum_4_valor=4
+  enum_4_condicion=
+  enum_5_texto=TELIS1 SOLIRIS PURE
+  enum_5_valor=5
+  enum_5_condicion=
+  enum_6_texto=TELIS 4 SOLIRIS PURE
+  enum_6_valor=6
+  enum_6_condicion=
+  enum_7_texto=TELIS SOLIRIS 1 PATIO
+  enum_7_valor=7
+  enum_7_condicion=
+  enum_8_texto=TELIS SOLIRIS 4 PATIO
+  enum_8_valor=8
+  enum_8_condicion=
+end
+Variable
+  nombre=@MANDOSOMFYIO
+  valor=0
+  tipovar=1
+  formula=
+  max=0
+  min=0
+  actmin=0
+  actmax=0
+  selec=0
+  peticion=1
+  condicion=SI(@MOTORSOMFY=3;1;0)
+  varserie=0
+  PermEdRes=0
+  ResManual=0
+  ValorManual=0
+  agrupar=0
+  enum_0_texto=SIN MANDO
+  enum_0_valor=0
+  enum_0_condicion=
+  enum_1_texto=SITUO 1 PURE
+  enum_1_valor=1
+  enum_1_condicion=
+  enum_2_texto=SITIO 5 PURE
+  enum_2_valor=2
+  enum_2_condicion=
+  enum_3_texto=SITUO 1 VARIATION
+  enum_3_valor=3
+  enum_3_condicion=
+  enum_4_texto=SITUO 5 VARIATION
+  enum_4_valor=4
+  enum_4_condicion=
+end
+Variable
+  nombre=@MOTORCHERUBINI
+  valor=0
+  tipovar=1
+  formula=
+  max=0
+  min=0
+  actmin=0
+  actmax=0
+  selec=0
+  peticion=1
+  condicion=SI(@ACCIONAMIENTO=3;1;0)
+  varserie=0
+  PermEdRes=0
+  ResManual=0
+  ValorManual=0
+  agrupar=0
+  enum_0_texto=NO VALIDO
+  enum_0_valor=0
+  enum_0_condicion=
+  enum_1_texto=MOTOR ROLL MECANICO
+  enum_1_valor=1
+  enum_1_condicion=
+  enum_2_texto=MOTOR WAVE RX RADIO
+  enum_2_valor=2
+  enum_2_condicion=
+end
+Variable
+  nombre=@MANDOSCHERUBINI
+  valor=0
+  tipovar=1
+  formula=
+  max=0
+  min=0
+  actmin=0
+  actmax=0
+  selec=0
+  peticion=1
+  condicion=si(@motorcherubini=2;1;0)
+  varserie=0
+  PermEdRes=0
+  ResManual=0
+  ValorManual=0
+  agrupar=0
+  enum_0_texto=SIN MANDO
+  enum_0_valor=0
+  enum_0_condicion=
+  enum_1_texto=SKIPPER 1 CANAL
+  enum_1_valor=1
+  enum_1_condicion=
+  enum_2_texto=SKIPPER 7 CANALES
+  enum_2_valor=2
+  enum_2_condicion=
+  enum_3_texto=GIRO 1 CANAL 
+  enum_3_valor=3
+  enum_3_condicion=
+  enum_4_texto=GIRO 7 CANALES
+  enum_4_valor=4
+  enum_4_condicion=
+end
+Variable
+  nombre=@MOTORGAVIOTA
+  valor=0
+  tipovar=1
+  formula=
+  max=0
+  min=0
+  actmin=0
+  actmax=0
+  selec=0
+  peticion=1
+  condicion=SI(@ACCIONAMIENTO=4;1;0)
+  varserie=0
+  PermEdRes=0
+  ResManual=0
+  ValorManual=0
+  agrupar=0
+  enum_0_texto=NO VALIDO
+  enum_0_valor=0
+  enum_0_condicion=
+  enum_1_texto=MOTOR GS MECANICO
+  enum_1_valor=1
+  enum_1_condicion=
+  enum_2_texto=MOTOR CROSS RADIO
+  enum_2_valor=2
+  enum_2_condicion=
+end
+Variable
+  nombre=@MANDOSGAVIOTA
+  valor=0
+  tipovar=1
+  formula=
+  max=0
+  min=0
+  actmin=0
+  actmax=0
+  selec=0
+  peticion=1
+  condicion=si(@motorgaviota=2;1;0)
+  varserie=0
+  PermEdRes=0
+  ResManual=0
+  ValorManual=0
+  agrupar=0
+  enum_0_texto=SIN MANDO
+  enum_0_valor=0
+  enum_0_condicion=
+  enum_1_texto=CROSS 1 CANAL
+  enum_1_valor=1
+  enum_1_condicion=
+  enum_2_texto=CROSS 15 CANALES 
+  enum_2_valor=2
+  enum_2_condicion=
+end
+Variable
+  nombre=@MedidaFaldon
+  valor=1
+  tipovar=0
+  formula=
+  max=0
+  min=0
+  actmin=0
+  actmax=0
+  selec=-1
+  peticion=1
+  condicion=
+  varserie=0
+  PermEdRes=0
+  ResManual=0
+  ValorManual=0
+  agrupar=0
+end
+Variable
+  nombre=@TIPOFALDON
+  valor=0
+  tipovar=1
+  formula=
+  max=0
+  min=0
+  actmin=0
+  actmax=0
+  selec=0
+  peticion=1
+  condicion=
+  varserie=0
+  PermEdRes=0
+  ResManual=0
+  ValorManual=0
+  agrupar=0
+  enum_0_texto=SIN FALDON
+  enum_0_valor=0
+  enum_0_condicion=
+  enum_1_texto=MODELO 50
+  enum_1_valor=1
+  enum_1_condicion=
+  enum_2_texto=MODELO 51
+  enum_2_valor=2
+  enum_2_condicion=
+  enum_3_texto=MODELO 54
+  enum_3_valor=3
+  enum_3_condicion=
+  enum_4_texto=MODELO 58
+  enum_4_valor=4
+  enum_4_condicion=
+  enum_5_texto=MODELO 63
+  enum_5_valor=5
+  enum_5_condicion=
+  enum_6_texto=MODELO 70
+  enum_6_valor=6
+  enum_6_condicion=
+end
+Variable
+  nombre=@COLORRIBETE
+  valor=0
+  tipovar=1
+  formula=
+  max=0
+  min=0
+  actmin=0
+  actmax=0
+  selec=0
+  peticion=1
+  condicion=
+  varserie=0
+  PermEdRes=0
+  ResManual=0
+  ValorManual=0
+  agrupar=0
+  enum_0_texto=SIN RIBETE 
+  enum_0_valor=0
+  enum_0_condicion=
+  enum_1_texto=COLOR 0000
+  enum_1_valor=1
+  enum_1_condicion=
+  enum_2_texto=COLOR 5847
+  enum_2_valor=2
+  enum_2_condicion=
+  enum_3_texto=COLOR 5029
+  enum_3_valor=3
+  enum_3_condicion=
+  enum_4_texto=COLOR 9644
+  enum_4_valor=4
+  enum_4_condicion=
+  enum_5_texto=COLOR 5445
+  enum_5_valor=5
+  enum_5_condicion=
+  enum_6_texto=COLOR 9633
+  enum_6_valor=6
+  enum_6_condicion=
+  enum_7_texto=COLOR 5110
+  enum_7_valor=7
+  enum_7_condicion=
+  enum_8_texto=COLOR 9647
+  enum_8_valor=8
+  enum_8_condicion=
+  enum_9_texto=COLOR 5040
+  enum_9_valor=9
+  enum_9_condicion=
+  enum_10_texto=COLOR 5021
+  enum_10_valor=10
+  enum_10_condicion=
+  enum_11_texto=COLOR 5291
+  enum_11_valor=11
+  enum_11_condicion=
+  enum_12_texto=COLOR 5012
+  enum_12_valor=12
+  enum_12_condicion=
+  enum_13_texto=COLOR 9631
+  enum_13_valor=13
+  enum_13_condicion=
+  enum_14_texto=COLOR 3914
+  enum_14_valor=14
+  enum_14_condicion=
+  enum_15_texto=COLOR 9512
+  enum_15_valor=15
+  enum_15_condicion=
+  enum_16_texto=COLOR 5242 
+  enum_16_valor=16
+  enum_16_condicion=
+  enum_17_texto=COLOR 5025
+  enum_17_valor=17
+  enum_17_condicion=
+  enum_18_texto=COLOR 5024
+  enum_18_valor=18
+  enum_18_condicion=
+  enum_19_texto=COLOR 5132
+  enum_19_valor=19
+  enum_19_condicion=
+  enum_20_texto=COLOR 5888
+  enum_20_valor=20
+  enum_20_condicion=
+  enum_21_texto=COLOR 5254
+  enum_21_valor=21
+  enum_21_condicion=
+  enum_22_texto=COLOR 5412
+  enum_22_valor=22
+  enum_22_condicion=
+  enum_23_texto=COLOR 5412
+  enum_23_valor=23
+  enum_23_condicion=
+  enum_24_texto=COLOR 9514
+  enum_24_valor=24
+  enum_24_condicion=
+  enum_25_texto=CON DOBLADILLO 
+  enum_25_valor=25
+  enum_25_condicion=
+  enum_26_texto=A TONO 
+  enum_26_valor=26
+  enum_26_condicion=
+end
+Variable
+  nombre=@REMATESUPERIOR
+  valor=0
+  tipovar=1
+  formula=
+  max=0
+  min=0
+  actmin=0
+  actmax=0
+  selec=0
+  peticion=1
+  condicion=
+  varserie=0
+  PermEdRes=0
+  ResManual=0
+  ValorManual=0
+  agrupar=0
+  enum_0_texto=COATEX
+  enum_0_valor=0
+  enum_0_condicion=
+  enum_1_texto=DOBLADILLO
+  enum_1_valor=1
+  enum_1_condicion=
+  enum_2_texto=COATEX RAPIDO
+  enum_2_valor=2
+  enum_2_condicion=
+end
+Variable
+  nombre=@HILOS
+  valor=0
+  tipovar=1
+  formula=
+  max=0
+  min=0
+  actmin=0
+  actmax=0
+  selec=0
+  peticion=1
+  condicion=
+  varserie=0
+  PermEdRes=0
+  ResManual=0
+  ValorManual=0
+  agrupar=0
+  enum_0_texto=Hilo 66502 Blanco
+  enum_0_valor=0
+  enum_0_condicion=
+  enum_1_texto=Hilo 66511 Gris
+  enum_1_valor=1
+  enum_1_condicion=
+  enum_2_texto=Hilo 66517 Beige
+  enum_2_valor=2
+  enum_2_condicion=
+  enum_3_texto=Hilo 66519 rojo
+  enum_3_valor=3
+  enum_3_condicion=
+  enum_4_texto=Hilo 66504 Burdeos
+  enum_4_valor=4
+  enum_4_condicion=
+  enum_5_texto=Hilo 66513 Azul
+  enum_5_valor=5
+  enum_5_condicion=
+  enum_6_texto=Hilo 66501 Negro
+  enum_6_valor=6
+  enum_6_condicion=
+  enum_7_texto=Hilo 66527 Verde
+  enum_7_valor=7
+  enum_7_condicion=
+  enum_8_texto=Hilo 66528 Naranja
+  enum_8_valor=8
+  enum_8_condicion=
+  enum_9_texto=Hilo 66529 Amarillo
+  enum_9_valor=9
+  enum_9_condicion=
+  enum_10_texto=Hilo 66547 Marrón
+  enum_10_valor=10
+  enum_10_condicion=
+  enum_11_texto=Hilo a tono
+  enum_11_valor=11
+  enum_11_condicion=
+  enum_12_texto=Con soldadura
+  enum_12_valor=12
+  enum_12_condicion=
+end
+Variable
+  nombre=@ETIQUETA
+  valor=1
+  tipovar=1
+  formula=
+  max=0
+  min=0
+  actmin=0
+  actmax=0
+  selec=1
+  peticion=1
+  condicion=
+  varserie=0
+  PermEdRes=0
+  ResManual=0
+  ValorManual=0
+  agrupar=0
+  enum_0_texto=SI 
+  enum_0_valor=0
+  enum_0_condicion=
+  enum_1_texto=NO
+  enum_1_valor=1
+  enum_1_condicion=
+end
+Componente No Visual
+  id=PVPSPIRALPREMIUMBL_2
+  art=PVP_SPIRAL_PREMIUM/BL
+  desc=PRECO PARA SPIRAL PREMIUN
+  tipo_ctrl=0
+  color=Blanco
+  eDim1=600
+  eDim2=250
+  Despiece=0
+  TipoCurva=0
+  AngCorteI=0
+  AngCorteD=0
+  Centro=0
+  TipoTarifa=1
+  f_cant=@SEMICOFRESPIRAL=1
+  f_Dim1=DIM1
+  f_Dim2=DIM2
+end
+Componente No Visual
+  id=PVPSTR1000BL_1
+  art=PVP_STR1000/BL
+  desc=Precio para STR1000 toldo stor
+  tipo_ctrl=0
+  eDim1=600
+  eDim2=250
+  Despiece=0
+  TipoCurva=0
+  AngCorteI=0
+  AngCorteD=0
+  Centro=0
+  TipoTarifa=1
+  f_cant=1
+  f_Dim1=DIM1
+  f_Dim2=DIM2
+end
+Componente No Visual
+  id=ACCIONAMIENTONOVAL_1
+  art=ACCIONAMIENTO_NO_VAL
+  desc=ATENCION ACIONAMIENTO NO VALIDO
+  tipo_ctrl=0
+  Despiece=0
+  TipoCurva=0
+  AngCorteI=0
+  AngCorteD=0
+  Centro=0
+  TipoTarifa=1
+  f_cant=SI(@ACCIONAMIENTO=0;1;0)
+end
+Componente No Visual
+  id=ACIONAMIENTOMAQUIN_1
+  art=ACCIONAMIENTO_MAQUIN
+  desc=ACCIONAMIENTO CON MAQUINA
+  tipo_ctrl=0
+  Despiece=0
+  TipoCurva=0
+  AngCorteI=0
+  AngCorteD=0
+  Centro=0
+  TipoTarifa=1
+  f_cant=si(@accionamiento=1;1;0)
+end
+Componente No Visual
+  id=ACIONAMIENTOSOMFY_1
+  art=ACCIONAMIENTO_SOMFY
+  desc=ACCIONAMIENTO MOTOR SOMFY
+  tipo_ctrl=0
+  Despiece=0
+  TipoCurva=0
+  AngCorteI=0
+  AngCorteD=0
+  Centro=0
+  TipoTarifa=1
+  f_cant=si(@accionamiento=2;1;0)
+end
+Componente No Visual
+  id=ACCIONAMIENTOCHERUB_1
+  art=ACCIONAMIENTO_CHERUB
+  desc=ACCIONAMIENTO MOTOR CHERUBINI
+  tipo_ctrl=0
+  Despiece=0
+  TipoCurva=0
+  AngCorteI=0
+  AngCorteD=0
+  Centro=0
+  TipoTarifa=1
+  f_cant=si(@accionamiento=3;1;0)
+end
+Componente No Visual
+  id=ACCIONAMIENTOGAVIOT_1
+  art=ACCIONAMIENTO_GAVIOT
+  desc=ACCIONAMIENTO MOTOR GAVIOTA
+  tipo_ctrl=0
+  Despiece=0
+  TipoCurva=0
+  AngCorteI=0
+  AngCorteD=0
+  Centro=0
+  TipoTarifa=1
+  f_cant=si(@accionamiento=4;1;0)
+end
+Componente No Visual
+  id=POSICIONNOVALIDO_1
+  art=POSICION_NO_VALIDO
+  desc=ATENCION PUNTO DE MANDO NO VALIDO
+  tipo_ctrl=0
+  Despiece=0
+  TipoCurva=0
+  AngCorteI=0
+  AngCorteD=0
+  Centro=0
+  TipoTarifa=1
+  f_cant=si(@POSICION=0;1;0)
+end
+Componente No Visual
+  id=POSICIONDERECHA_1
+  art=POSICION_DERECHA
+  desc=PUNTO DE MANDO FRENTE DERECHA
+  tipo_ctrl=0
+  Despiece=0
+  TipoCurva=0
+  AngCorteI=0
+  AngCorteD=0
+  Centro=0
+  TipoTarifa=1
+  f_cant=si(@POSICION=1;1;0)
+end
+Componente No Visual
+  id=POSICIONIZQUIERDA_1
+  art=POSICION_IZQUIERDA
+  desc=PUNTO DE MANDO FRENTE IZQUIERDA
+  tipo_ctrl=0
+  Despiece=0
+  TipoCurva=0
+  AngCorteI=0
+  AngCorteD=0
+  Centro=0
+  TipoTarifa=1
+  f_cant=si(@POSICION=2;1;0)
+end
+Componente No Visual
+  id=INSTALACIONNOVALID_1
+  art=INSTALACION_NO_VALID
+  desc=ATENCION ¡¡ INSTALACION NO VALIDA --- PARED O TECHO
+  tipo_ctrl=0
+  Despiece=0
+  TipoCurva=0
+  AngCorteI=0
+  AngCorteD=0
+  Centro=0
+  TipoTarifa=1
+  f_cant=si(@INSTALACION=0;1;0)
+end
+Componente No Visual
+  id=INSTALACIONPARED_1
+  art=INSTALACION_PARED
+  desc=INSTALACION A PARED
+  tipo_ctrl=0
+  Despiece=0
+  TipoCurva=0
+  AngCorteI=0
+  AngCorteD=0
+  Centro=0
+  TipoTarifa=1
+  f_cant=si(@INSTALACION=1;1;0)
+end
+Componente No Visual
+  id=INSTALACIONTECHO_1
+  art=INSTALACION_TECHO
+  desc=INSTALACION A TECHO
+  tipo_ctrl=0
+  Despiece=0
+  TipoCurva=0
+  AngCorteI=0
+  AngCorteD=0
+  Centro=0
+  TipoTarifa=1
+  f_cant=si(@INSTALACION=2;1;0)
+end
+Componente No Visual
+  id=INSTALACIONENTREPAR_1
+  art=INSTALACION_ENTREPAR
+  desc=INSTALACION ENTREPAREDES
+  tipo_ctrl=0
+  Despiece=0
+  TipoCurva=0
+  AngCorteI=0
+  AngCorteD=0
+  Centro=0
+  TipoTarifa=1
+  f_cant=si(@INSTALACION=3;1;0)
+end
+Componente No Visual
+  id=SINMANIVELA_1
+  art=SIN_MANIVELA
+  desc=ATENCION TOLDO SIN MANIVELA
+  tipo_ctrl=0
+  Despiece=0
+  TipoCurva=0
+  AngCorteI=0
+  AngCorteD=0
+  Centro=0
+  TipoTarifa=1
+  f_cant=si(@MANIVELA=0;1;0)
+end
+Componente No Visual
+  id=FALDONTIPO50_1
+  funcion=25
+  art=BC_FALDON_TIPO_50
+  desc=FALDON TIPO 50
+  tipo_ctrl=0
+  Despiece=0
+  TipoCurva=0
+  AngCorteI=0
+  AngCorteD=0
+  Centro=0
+  TipoTarifa=1
+  f_cant=SI(@TIPOFALDON=1;1;0)
+end
+Componente No Visual
+  id=FALDONTIPO51_1
+  funcion=25
+  art=BC_FALDON_TIPO_51
+  desc=FALDON TIPO 51
+  tipo_ctrl=0
+  Despiece=0
+  TipoCurva=0
+  AngCorteI=0
+  AngCorteD=0
+  Centro=0
+  TipoTarifa=1
+  f_cant=SI(@TIPOFALDON=2;1;0)
+end
+Componente No Visual
+  id=FALDONTIPO54_1
+  funcion=25
+  art=BC_FALDON_TIPO_54
+  desc=FALDON TIPO 54
+  tipo_ctrl=0
+  Despiece=0
+  TipoCurva=0
+  AngCorteI=0
+  AngCorteD=0
+  Centro=0
+  TipoTarifa=1
+  f_cant=SI(@TIPOFALDON=3;1;0)
+end
+Componente No Visual
+  id=FALDONTIPO58_1
+  funcion=25
+  art=BC_FALDON_TIPO_58
+  desc=FALDON TIPO 58
+  tipo_ctrl=0
+  Despiece=0
+  TipoCurva=0
+  AngCorteI=0
+  AngCorteD=0
+  Centro=0
+  TipoTarifa=1
+  f_cant=SI(@TIPOFALDON=4;1;0)
+end
+Componente No Visual
+  id=FALDONTIPO63_1
+  funcion=25
+  art=BC_FALDON_TIPO_63
+  desc=FALDON TIPO 63
+  tipo_ctrl=0
+  Despiece=0
+  TipoCurva=0
+  AngCorteI=0
+  AngCorteD=0
+  Centro=0
+  TipoTarifa=1
+  f_cant=SI(@TIPOFALDON=5;1;0)
+end
+Componente No Visual
+  id=FALDONTIPO70_1
+  funcion=25
+  art=BC_FALDON_TIPO_70
+  desc=FALDON TIPO 70
+  tipo_ctrl=0
+  Despiece=0
+  TipoCurva=0
+  AngCorteI=0
+  AngCorteD=0
+  Centro=0
+  TipoTarifa=1
+  f_cant=SI(@TIPOFALDON=6;1;0)
+end
+Componente No Visual
+  id=ID80090023_1
+  art=80090023
+  desc=Manivela extra lacada gancho zincado 0,80 m blanco
+  tipo_ctrl=0
+  Despiece=1
+  TipoCurva=0
+  AngCorteI=0
+  AngCorteD=0
+  Centro=0
+  TipoTarifa=2
+  f_cant=si(@MANIVELA=1;1;0)
+  ap_prec_inc=1
+end
+Componente No Visual
+  id=ID80090008_1
+  art=80090008
+  desc=Manivela extra lacada gancho zincado 1,10 m blanco
+  tipo_ctrl=0
+  Despiece=1
+  TipoCurva=0
+  AngCorteI=0
+  AngCorteD=0
+  Centro=0
+  TipoTarifa=2
+  f_cant=si(@MANIVELA=2;1;0)
+  ap_prec_inc=1
+end
+Componente No Visual
+  id=ID80090009_1
+  art=80090009
+  desc=Manivela extra lacada gancho zincado 1,20 m blanco
+  tipo_ctrl=0
+  Despiece=1
+  TipoCurva=0
+  AngCorteI=0
+  AngCorteD=0
+  Centro=0
+  TipoTarifa=2
+  f_cant=si(@MANIVELA=3;1;0)
+  ap_prec_inc=1
+end
+Componente No Visual
+  id=ID80090072_1
+  art=80090072
+  desc=Manivela extra lacada gancho zincado 1,40 m blanco
+  tipo_ctrl=0
+  Despiece=1
+  TipoCurva=0
+  AngCorteI=0
+  AngCorteD=0
+  Centro=0
+  TipoTarifa=2
+  f_cant=si(@MANIVELA=4;1;0)
+  ap_prec_inc=1
+end
+Componente No Visual
+  id=ID80090010_1
+  art=80090010
+  desc=Manivela extra lacada gancho zincado 1,50 m blanco
+  tipo_ctrl=0
+  Despiece=1
+  TipoCurva=0
+  AngCorteI=0
+  AngCorteD=0
+  Centro=0
+  TipoTarifa=2
+  f_cant=si(@MANIVELA=5;1;0)
+  ap_prec_inc=1
+end
+Componente No Visual
+  id=ID80090073_1
+  art=80090073
+  desc=Manivela extra lacada gancho zincado 1,60 m blanco
+  tipo_ctrl=0
+  Despiece=1
+  TipoCurva=0
+  AngCorteI=0
+  AngCorteD=0
+  Centro=0
+  TipoTarifa=2
+  f_cant=si(@MANIVELA=6;1;0)
+  ap_prec_inc=1
+end
+Componente No Visual
+  id=ID80090011_1
+  art=80090011
+  desc=Manivela extra lacada gancho zincado 1,80 m blanco
+  tipo_ctrl=0
+  Despiece=1
+  TipoCurva=0
+  AngCorteI=0
+  AngCorteD=0
+  Centro=0
+  TipoTarifa=1
+  f_cant=si(@MANIVELA=7;1;0)
+end
+Componente No Visual
+  id=ID80090012_1
+  art=80090012
+  desc=Manivela extra lacada gancho zincado 2,00 m blanco
+  tipo_ctrl=0
+  Despiece=1
+  TipoCurva=0
+  AngCorteI=0
+  AngCorteD=0
+  Centro=0
+  TipoTarifa=1
+  f_cant=si(@MANIVELA=8;1;0)
+end
+Componente No Visual
+  id=ID80090013_1
+  art=80090013
+  desc=Manivela extra lacada gancho zincado 2,20 m blanco
+  tipo_ctrl=0
+  Despiece=1
+  TipoCurva=0
+  AngCorteI=0
+  AngCorteD=0
+  Centro=0
+  TipoTarifa=1
+  f_cant=si(@MANIVELA=9;1;0)
+end
+Componente No Visual
+  id=ID80090014_1
+  art=80090014
+  desc=Manivela extra lacada gancho zincado 2,40 m blanco
+  tipo_ctrl=0
+  Despiece=1
+  TipoCurva=0
+  AngCorteI=0
+  AngCorteD=0
+  Centro=0
+  TipoTarifa=1
+  f_cant=si(@MANIVELA=10;1;0)
+end
+Componente No Visual
+  id=ID80090074_1
+  art=80090074
+  desc=Manivela extra lacada gancho zincado 2,60 m blanco
+  tipo_ctrl=0
+  Despiece=1
+  TipoCurva=0
+  AngCorteI=0
+  AngCorteD=0
+  Centro=0
+  TipoTarifa=1
+  f_cant=si(@MANIVELA=11;1;0)
+end
+Componente No Visual
+  id=ID80090075_1
+  art=80090075
+  desc=Manivela extra lacada gancho zincado 2,80 m blanco
+  tipo_ctrl=0
+  Despiece=1
+  TipoCurva=0
+  AngCorteI=0
+  AngCorteD=0
+  Centro=0
+  TipoTarifa=1
+  f_cant=si(@MANIVELA=12;1;0)
+end
+Componente No Visual
+  id=ID80090076_1
+  art=80090076
+  desc=Manivela extra lacada gancho zincado 3,00 m blanco
+  tipo_ctrl=0
+  Despiece=1
+  TipoCurva=0
+  AngCorteI=0
+  AngCorteD=0
+  Centro=0
+  TipoTarifa=1
+  f_cant=si(@MANIVELA=13;1;0)
+end
+Componente No Visual
+  id=ID80020035_1
+  art=80020035
+  desc=Casquillo punto 78 ran 13 aluminio
+  tipo_ctrl=0
+  Despiece=1
+  TipoCurva=0
+  AngCorteI=0
+  AngCorteD=0
+  Centro=0
+  TipoTarifa=2
+  f_cant=SI(@SEMICOFRESPIRAL=0;1;0)
+  ap_prec_inc=1
+end
+Componente No Visual
+  id=ID80020043_1
+  art=80020043
+  desc=Casquillo punto E/R 78 ran 12 x 20 aluminio
+  tipo_ctrl=0
+  Despiece=1
+  TipoCurva=0
+  AngCorteI=0
+  AngCorteD=0
+  Centro=0
+  TipoTarifa=2
+  OrdenEtiquetas=1
+  f_cant=SI(@SEMICOFRESPIRAL=1;1;0)
+  ap_prec_inc=1
+end
+Componente No Visual
+  id=ID80020032_1
+  art=80020032
+  desc=Casquillo máquina E/C 78 ran 13 x 33 aluminio
+  tipo_ctrl=0
+  Despiece=1
+  TipoCurva=0
+  AngCorteI=0
+  AngCorteD=0
+  Centro=0
+  TipoTarifa=2
+  f_cant=si((@accionamiento=1)Y(@SEMICOFRESPIRAL=0);1;0)
+  ap_prec_inc=1
+end
+Componente No Visual
+  id=ID80020033_1
+  art=80020033
+  desc=Casquillo máquina E/C 78 ran 13 x 63 aluminio
+  tipo_ctrl=0
+  Despiece=1
+  TipoCurva=0
+  AngCorteI=0
+  AngCorteD=0
+  Centro=0
+  TipoTarifa=2
+  f_cant=si((@accionamiento=1)Y(@SEMICOFRESPIRAL=1);1;0)
+  ap_prec_inc=1
+end
+Componente No Visual
+  id=ID80010341_1
+  art=80010341
+  desc=GEL 1:7 cáncamo 80 pasante Blanco
+  tipo_ctrl=0
+  Despiece=1
+  TipoCurva=0
+  AngCorteI=0
+  AngCorteD=0
+  Centro=0
+  TipoTarifa=2
+  f_cant=si((@accionamiento=1)Y(@SEMICOFRESPIRAL=1);1;0)
+  ap_prec_inc=1
+end
+Componente No Visual
+  id=ID80010327_1
+  art=80010327
+  desc=GEL 1:11 cáncamo 80 roscada Blanco
+  tipo_ctrl=0
+  Despiece=1
+  TipoCurva=0
+  AngCorteI=0
+  AngCorteD=0
+  Centro=0
+  TipoTarifa=2
+  OrdenEtiquetas=1
+  f_cant=si((@accionamiento=1)Y(@SEMICOFRESPIRAL=0);1;0)
+  ap_prec_inc=1
+end
+Componente No Visual
+  id=TORNILLOSMAQUINA_1
+  art=TORNILLOS_MAQUINA
+  desc=2 TORNILLOS PASANTE Y TUERCAS PARA MAQUINA
+  tipo_ctrl=0
+  Despiece=1
+  TipoCurva=0
+  AngCorteI=0
+  AngCorteD=0
+  Centro=0
+  TipoTarifa=2
+  f_cant=SI(@ACCIONAMIENTO=1;1;0)
+  ap_prec_inc=1
+end
+Componente No Visual
+  id=ID80030015_1
+  funcion=19
+  art=80030015
+  desc=Tubo ranurado galvanizado ojiva 78 x 1 ran 7 m galva
+  ancho_perfil=78
+  color=Blanco
+  tipo_corte_izq=|
+  tipo_corte_der=|
+  Despiece=1
+  TipoCurva=0
+  AngCorteI=90
+  AngCorteD=90
+  Centro=0
+  TipoTarifa=2
+  DtMedCutPerf=7000
+  f_cant=SI((DIM1>=100)Y(DIM1<=355);1;0)
+  f_alto=si((@accionamiento=1)Y(@SEMICOFRESPIRAL=0);dim1-9,7;0)+si((@accionamiento=1)Y(@SEMICOFRESPIRAL=1);dim1-17;0)+si((@accionamiento=2)Y(@SEMICOFRESPIRAL=0);dim1-8,3;0)+si((@accionamiento=2)Y(@SEMICOFRESPIRAL=1);dim1-14;0)+si((@accionamiento=3)Y(@SEMICOFRESPIRAL=0);dim1-8,3;0)+si((@accionamiento=3)Y(@SEMICOFRESPIRAL=1);dim1-14;0)+si((@accionamiento=4)Y(@SEMICOFRESPIRAL=0);dim1-8.7;0)+si((@accionamiento=4)Y(@SEMICOFRESPIRAL=1);dim1-14.5;0)
+  ap_prec_inc=1
+  MedCutPerf=7000
+end
+Componente No Visual
+  id=ID80030020_1
+  art=80030020
+  desc=Tubo ranurado galvanizado ojiva 78 x 1 ran 4 m galva
+  ancho_perfil=78
+  color=Blanco
+  tipo_corte_izq=|
+  tipo_corte_der=|
+  Despiece=1
+  TipoCurva=0
+  AngCorteI=90
+  AngCorteD=90
+  Centro=0
+  TipoTarifa=2
+  DtMedCutPerf=4000
+  f_cant=SI((DIM1>=356)Y(DIM1<=405);1;0)
+  f_alto=si((@accionamiento=1)Y(@SEMICOFRESPIRAL=0);dim1-9,7;0)+si((@accionamiento=1)Y(@SEMICOFRESPIRAL=1);dim1-17;0)+si((@accionamiento=2)Y(@SEMICOFRESPIRAL=0);dim1-8,3;0)+si((@accionamiento=2)Y(@SEMICOFRESPIRAL=1);dim1-14;0)+si((@accionamiento=3)Y(@SEMICOFRESPIRAL=0);dim1-8,3;0)+si((@accionamiento=3)Y(@SEMICOFRESPIRAL=1);dim1-14;0)+si((@accionamiento=4)Y(@SEMICOFRESPIRAL=0);dim1-8.7;0)+si((@accionamiento=4)Y(@SEMICOFRESPIRAL=1);dim1-14.5;0)
+  ap_prec_inc=1
+  MedCutPerf=4000
+end
+Componente No Visual
+  id=ID80030021_1
+  art=80030021
+  desc=Tubo ranurado galvanizado ojiva 78 x 1 ran 5 m galva
+  ancho_perfil=78
+  color=Blanco
+  tipo_corte_izq=|
+  tipo_corte_der=|
+  Despiece=1
+  TipoCurva=0
+  AngCorteI=90
+  AngCorteD=90
+  Centro=0
+  TipoTarifa=2
+  DtMedCutPerf=5000
+  f_cant=SI((DIM1>=406)Y(DIM1<=505);1;0)
+  f_alto=si((@accionamiento=1)Y(@SEMICOFRESPIRAL=0);dim1-9,7;0)+si((@accionamiento=1)Y(@SEMICOFRESPIRAL=1);dim1-17;0)+si((@accionamiento=2)Y(@SEMICOFRESPIRAL=0);dim1-8,3;0)+si((@accionamiento=2)Y(@SEMICOFRESPIRAL=1);dim1-14;0)+si((@accionamiento=3)Y(@SEMICOFRESPIRAL=0);dim1-8,3;0)+si((@accionamiento=3)Y(@SEMICOFRESPIRAL=1);dim1-14;0)+si((@accionamiento=4)Y(@SEMICOFRESPIRAL=0);dim1-8.7;0)+si((@accionamiento=4)Y(@SEMICOFRESPIRAL=1);dim1-14.5;0)
+  ap_prec_inc=1
+  MedCutPerf=5000
+end
+Componente No Visual
+  id=GA80030022_1
+  art=80030022
+  desc=Tubo ranurado galvanizado ojiva 78 x 1 ran 6 m galva
+  ancho_perfil=78
+  color=Blanco
+  tipo_corte_izq=|
+  tipo_corte_der=|
+  Despiece=1
+  TipoCurva=0
+  AngCorteI=90
+  AngCorteD=90
+  Centro=0
+  TipoTarifa=2
+  DtMedCutPerf=6000
+  f_cant=SI((DIM1>=505)Y(DIM1<=605);1;0)
+  f_alto=si((@accionamiento=1)Y(@SEMICOFRESPIRAL=0);dim1-9,7;0)+si((@accionamiento=1)Y(@SEMICOFRESPIRAL=1);dim1-17;0)+si((@accionamiento=2)Y(@SEMICOFRESPIRAL=0);dim1-8,3;0)+si((@accionamiento=2)Y(@SEMICOFRESPIRAL=1);dim1-14;0)+si((@accionamiento=3)Y(@SEMICOFRESPIRAL=0);dim1-8,3;0)+si((@accionamiento=3)Y(@SEMICOFRESPIRAL=1);dim1-14;0)+si((@accionamiento=4)Y(@SEMICOFRESPIRAL=0);dim1-8.7;0)+si((@accionamiento=4)Y(@SEMICOFRESPIRAL=1);dim1-14.5;0)
+  ap_prec_inc=1
+  MedCutPerf=6000
+end
+Componente No Visual
+  id=ID9910000_1
+  art=9910000
+  desc=Soporte universal Op. HiPro
+  tipo_ctrl=0
+  Despiece=1
+  TipoCurva=0
+  AngCorteI=0
+  AngCorteD=0
+  Centro=0
+  TipoTarifa=1
+  f_cant=SI((@ACCIONAMIENTO=2)Y(@SEMICOFRESPIRAL=0);1;0)
+end
+Componente No Visual
+  id=ID9128427_1
+  art=9128427
+  desc=Corona adap.LT60 P-800 y ø80x2
+  tipo_ctrl=0
+  Despiece=1
+  TipoCurva=0
+  AngCorteI=0
+  AngCorteD=0
+  Centro=0
+  TipoTarifa=1
+  f_cant=SI(@MOTORSOMFY=1;1;0)+SI(@MOTORSOMFY=2;1;0)+SI(@MOTORSOMFY=3;1;0)
+end
+Componente No Visual
+  id=ID9761001_1
+  art=9761001
+  desc=Rueda motr. HiP a Ø 78 Catalá
+  tipo_ctrl=0
+  Despiece=1
+  TipoCurva=0
+  AngCorteI=0
+  AngCorteD=0
+  Centro=0
+  TipoTarifa=1
+  f_cant=SI(@MOTORSOMFY=1;1;0)+SI(@MOTORSOMFY=2;1;0)+SI(@MOTORSOMFY=3;1;0)
+end
+Componente No Visual
+  id=ID9707026_1
+  art=9707026
+  desc=Corona adap.LT50 a ø 63x1,5mm
+  tipo_ctrl=0
+  Despiece=1
+  TipoCurva=0
+  AngCorteI=0
+  AngCorteD=0
+  Centro=0
+  TipoTarifa=1
+  f_cant=SI(@MOTORSOMFY=1;1;0)+SI(@MOTORSOMFY=2;1;0)+SI(@MOTORSOMFY=3;1;0)
+end
+Componente No Visual
+  id=ID1112249_1
+  art=1112249
+  desc=SUNEA 15/17 IO
+  tipo_ctrl=0
+  Despiece=1
+  TipoCurva=0
+  AngCorteI=0
+  AngCorteD=0
+  Centro=0
+  TipoTarifa=1
+  f_cant=si(@motorsomfy=1;1;0)
+end
+Componente No Visual
+  id=ID1039517_1
+  art=1039517
+  desc=LOGGIA 15/17 RTS
+  tipo_ctrl=0
+  Despiece=1
+  TipoCurva=0
+  AngCorteI=0
+  AngCorteD=0
+  Centro=0
+  TipoTarifa=1
+  f_cant=si(@motorsomfy=2;1;0)
+end
+Componente No Visual
+  id=ID1810630_1
+  art=1810630
+  desc=Telis 1 RTS Pure
+  tipo_ctrl=0
+  Despiece=1
+  TipoCurva=0
+  AngCorteI=0
+  AngCorteD=0
+  Centro=0
+  TipoTarifa=1
+  f_cant=si(@MANDOSOMFYRTS=1;1;0)
+end
+Componente No Visual
+  id=ID1810631_1
+  art=1810631
+  desc=Telis 4 RTS Pure
+  tipo_ctrl=0
+  Despiece=1
+  TipoCurva=0
+  AngCorteI=0
+  AngCorteD=0
+  Centro=0
+  TipoTarifa=1
+  f_cant=si(@MANDOSOMFYRTS=2;1;0)
+end
+Componente No Visual
+  id=ID1810642_1
+  art=1810642
+  desc=Telis 1 RTS Patio
+  tipo_ctrl=0
+  Despiece=1
+  TipoCurva=0
+  AngCorteI=0
+  AngCorteD=0
+  Centro=0
+  TipoTarifa=1
+  f_cant=si(@MANDOSOMFYRTS=3;1;0)
+end
+Componente No Visual
+  id=ID1810644_1
+  art=1810644
+  desc=Telis 4 RTS Patio
+  tipo_ctrl=0
+  Despiece=1
+  TipoCurva=0
+  AngCorteI=0
+  AngCorteD=0
+  Centro=0
+  TipoTarifa=1
+  f_cant=si(@MANDOSOMFYRTS=4;1;0)
+end
+Componente No Visual
+  id=ID1810634_1
+  art=1810634
+  desc=Telis Soliris RTS Pure
+  tipo_ctrl=0
+  Despiece=1
+  TipoCurva=0
+  AngCorteI=0
+  AngCorteD=0
+  Centro=0
+  TipoTarifa=1
+  f_cant=si(@MANDOSOMFYRTS=5;1;0)
+end
+Componente No Visual
+  id=ID1810957_1
+  art=1810957
+  desc=Telis 4 Soliris RTS Pure
+  tipo_ctrl=0
+  Despiece=1
+  TipoCurva=0
+  AngCorteI=0
+  AngCorteD=0
+  Centro=0
+  TipoTarifa=1
+  f_cant=si(@MANDOSOMFYRTS=6;1;0)
+end
+Componente No Visual
+  id=ID1810646_1
+  art=1810646
+  desc=Telis Soliris RTS Patio
+  tipo_ctrl=0
+  Despiece=1
+  TipoCurva=0
+  AngCorteI=0
+  AngCorteD=0
+  Centro=0
+  TipoTarifa=1
+  f_cant=si(@MANDOSOMFYRTS=7;1;0)
+end
+Componente No Visual
+  id=ID1810648_1
+  art=1810648
+  desc=Telis 4 Soliris RTS Patio
+  tipo_ctrl=0
+  Despiece=1
+  TipoCurva=0
+  AngCorteI=0
+  AngCorteD=0
+  Centro=0
+  TipoTarifa=1
+  f_cant=si(@MANDOSOMFYRTS=8;1;0)
+end
+Componente No Visual
+  id=ID1112321_1
+  art=1112321
+  desc=MAESTRIA + 50 IO 15/17
+  tipo_ctrl=0
+  Despiece=1
+  TipoCurva=0
+  AngCorteI=0
+  AngCorteD=0
+  Centro=0
+  TipoTarifa=1
+  f_cant=si(@motorsomfy=3;1;0)
+end
+Componente No Visual
+  id=ID1800463_1
+  art=1800463
+  desc=Situo 1 IO Pure
+  tipo_ctrl=0
+  Despiece=1
+  TipoCurva=0
+  AngCorteI=0
+  AngCorteD=0
+  Centro=0
+  TipoTarifa=1
+  f_cant=SI(@MANDOSOMFYIO=1;1;0)
+end
+Componente No Visual
+  id=ID1811297_1
+  art=1811297
+  desc=Situo 5 IO Pure
+  tipo_ctrl=0
+  Despiece=1
+  TipoCurva=0
+  AngCorteI=0
+  AngCorteD=0
+  Centro=0
+  TipoTarifa=1
+  f_cant=SI(@MANDOSOMFYIO=2;1;0)
+  desccomp=1
+end
+Componente No Visual
+  id=ID1800471_1
+  art=1800471
+  desc=Situo 1 variation io Pure
+  tipo_ctrl=0
+  Despiece=1
+  TipoCurva=0
+  AngCorteI=0
+  AngCorteD=0
+  Centro=0
+  TipoTarifa=1
+  f_cant=SI(@MANDOSOMFYIO=3;1;0)
+end
+Componente No Visual
+  id=ID1870371_1
+  art=1870371
+  desc=Situo 5 Var A/M IO Pure
+  tipo_ctrl=0
+  Despiece=1
+  TipoCurva=0
+  AngCorteI=0
+  AngCorteD=0
+  Centro=0
+  TipoTarifa=1
+  f_cant=SI(@MANDOSOMFYIO=4;1;0)
+end
+Componente No Visual
+  id=A45060555_1
+  art=A4506_0555
+  desc=Soporte universal rapido
+  tipo_ctrl=0
+  Despiece=1
+  TipoCurva=0
+  AngCorteI=0
+  AngCorteD=0
+  Centro=0
+  TipoTarifa=1
+  f_cant=SI((@ACCIONAMIENTO=3)Y(@SEMICOFRESPIRAL=0);1;0)
+end
+Componente No Visual
+  id=A45050521_1
+  art=A4505_0521
+  desc=Adaptadores 78 ojiva
+  tipo_ctrl=0
+  Despiece=1
+  TipoCurva=0
+  AngCorteI=0
+  AngCorteD=0
+  Centro=0
+  TipoTarifa=1
+  f_cant=SI(@MOTORCHERUBINI=1;1;0)+SI(@MOTORCHERUBINI=2;1;0)
+end
+Componente No Visual
+  id=AET45151700_2
+  art=AET45151700
+  desc=Motor Blue Wawe L45 15/17
+  tipo_ctrl=0
+  Despiece=1
+  TipoCurva=0
+  AngCorteI=0
+  AngCorteD=0
+  Centro=0
+  TipoTarifa=1
+  f_cant=si(@MOTORCHERUBINI=1;1;0)
+end
+Componente No Visual
+  id=AEW45151700_1
+  art=AEW45151700
+  desc=Motor Blue Wawe Wire L45 15/17
+  tipo_ctrl=0
+  Despiece=1
+  TipoCurva=0
+  AngCorteI=0
+  AngCorteD=0
+  Centro=0
+  TipoTarifa=1
+  f_cant=si(@MOTORCHERUBINI=2;1;0)
+end
+Componente No Visual
+  id=A530031L_1
+  art=A530031L
+  desc=EMISOR SKIPPER
+  tipo_ctrl=0
+  Despiece=1
+  TipoCurva=0
+  AngCorteI=0
+  AngCorteD=0
+  Centro=0
+  TipoTarifa=1
+  f_cant=SI(@MANDOSCHERUBINI=1;1;0)
+end
+Componente No Visual
+  id=A530033L_1
+  art=A530033L
+  desc=EMISOR SKIPPER PLUS
+  tipo_ctrl=0
+  Despiece=1
+  TipoCurva=0
+  AngCorteI=0
+  AngCorteD=0
+  Centro=0
+  TipoTarifa=1
+  f_cant=SI(@MANDOSCHERUBINI=2;1;0)
+end
+Componente No Visual
+  id=A530067L_1
+  art=A530067L
+  desc=Giro Warm Grey
+  tipo_ctrl=0
+  Despiece=1
+  TipoCurva=0
+  AngCorteI=0
+  AngCorteD=0
+  Centro=0
+  TipoTarifa=1
+  f_cant=SI(@MANDOSCHERUBINI=3;1;0)
+end
+Componente No Visual
+  id=A530069L_1
+  art=A530069L
+  desc=Giro Plus Warm Grey
+  tipo_ctrl=0
+  Despiece=1
+  TipoCurva=0
+  AngCorteI=0
+  AngCorteD=0
+  Centro=0
+  TipoTarifa=1
+  f_cant=SI(@MANDOSCHERUBINI=4;1;0)
+end
+Componente No Visual
+  id=ID60080081_1
+  art=60080081
+  desc=SOPORTE NEW OBRA Y TOLDO S45
+  tipo_ctrl=0
+  Despiece=1
+  TipoCurva=0
+  AngCorteI=0
+  AngCorteD=0
+  Centro=0
+  TipoTarifa=1
+  f_cant=SI((@ACCIONAMIENTO=4)Y(@SEMICOFRESPIRAL=0);1;0)
+end
+Componente No Visual
+  id=ID60070060_1
+  art=60070060
+  desc=J. CORONAS P/EJE 78 OJIVA S45
+  tipo_ctrl=0
+  Despiece=1
+  TipoCurva=0
+  AngCorteI=0
+  AngCorteD=0
+  Centro=0
+  TipoTarifa=1
+  f_cant=SI(@MOTORGAVIOTA=1;1;0)+SI(@MOTORGAVIOTA=2;1;0)
+end
+Componente No Visual
+  id=ID60050150_1
+  art=60050150
+  desc=MOTOR CROSS 20/15 S45
+  tipo_ctrl=0
+  Despiece=1
+  TipoCurva=0
+  AngCorteI=0
+  AngCorteD=0
+  Centro=0
+  TipoTarifa=1
+  f_cant=si(@MOTORGAVIOTA=2;1;0)
+end
+Componente No Visual
+  id=ID60090136_1
+  art=60090136
+  desc=EMISOR 1 CANAL CROSS
+  tipo_ctrl=0
+  Despiece=1
+  TipoCurva=0
+  AngCorteI=0
+  AngCorteD=0
+  Centro=0
+  TipoTarifa=1
+  f_cant=si(@MANDOSGAVIOTA=1;1;0)
+end
+Componente No Visual
+  id=ID60090137_1
+  art=60090137
+  desc=EMISOR 15 CANALES CROSS
+  tipo_ctrl=0
+  Despiece=1
+  TipoCurva=0
+  AngCorteI=0
+  AngCorteD=0
+  Centro=0
+  TipoTarifa=1
+  f_cant=si(@MANDOSGAVIOTA=2;1;0)
+end
+Componente No Visual
+  id=ID80050307_1
+  art=80050307
+  desc=Perfil terminal Bambu 2  7 m blanco
+  ancho_perfil=10
+  color=Blanco
+  tipo_corte_izq=|
+  tipo_corte_der=|
+  Despiece=1
+  TipoCurva=0
+  AngCorteI=90
+  AngCorteD=90
+  Centro=0
+  TipoTarifa=2
+  DtMedCutPerf=7000
+  f_cant=SI((DIM1>=100)Y(DIM1<=355);1;0)
+  f_alto=si((@accionamiento=1)Y(@SEMICOFRESPIRAL=0);dim1-9,7;0)+si((@accionamiento=1)Y(@SEMICOFRESPIRAL=1);dim1-20,3;0)+si((@accionamiento=2)Y(@SEMICOFRESPIRAL=0);dim1-8,3;0)+si((@accionamiento=2)Y(@SEMICOFRESPIRAL=1);dim1-16.8;0)+si((@accionamiento=3)Y(@SEMICOFRESPIRAL=0);dim1-8,3;0)+si((@accionamiento=3)Y(@SEMICOFRESPIRAL=1);dim1-16,8;0)+si((@accionamiento=4)Y(@SEMICOFRESPIRAL=0);dim1-8.7;0)+si((@accionamiento=4)Y(@SEMICOFRESPIRAL=1);dim1-16.8;0)
+  ap_prec_inc=1
+  MedCutPerf=7000
+end
+Componente No Visual
+  id=ID80050304_1
+  art=80050304
+  desc=Perfil terminal Bambu 2  4 m blanco
+  ancho_perfil=10
+  color=Blanco
+  tipo_corte_izq=|
+  tipo_corte_der=|
+  Despiece=1
+  TipoCurva=0
+  AngCorteI=90
+  AngCorteD=90
+  Centro=0
+  TipoTarifa=2
+  DtMedCutPerf=4000
+  f_cant=SI((DIM1>=356)Y(DIM1<=405);1;0)
+  f_alto=si((@accionamiento=1)Y(@SEMICOFRESPIRAL=0);dim1-9,7;0)+si((@accionamiento=1)Y(@SEMICOFRESPIRAL=1);dim1-20,3;0)+si((@accionamiento=2)Y(@SEMICOFRESPIRAL=0);dim1-8,3;0)+si((@accionamiento=2)Y(@SEMICOFRESPIRAL=1);dim1-16.8;0)+si((@accionamiento=3)Y(@SEMICOFRESPIRAL=0);dim1-8,3;0)+si((@accionamiento=3)Y(@SEMICOFRESPIRAL=1);dim1-16,8;0)+si((@accionamiento=4)Y(@SEMICOFRESPIRAL=0);dim1-8.7;0)+si((@accionamiento=4)Y(@SEMICOFRESPIRAL=1);dim1-16.8;0)
+  ap_prec_inc=1
+  MedCutPerf=4000
+end
+Componente No Visual
+  id=ID80050305_1
+  art=80050305
+  desc=Perfil terminal Bambu 2  5 m blanco
+  ancho_perfil=10
+  color=Blanco
+  tipo_corte_izq=|
+  tipo_corte_der=|
+  Despiece=1
+  TipoCurva=0
+  AngCorteI=90
+  AngCorteD=90
+  Centro=0
+  TipoTarifa=2
+  DtMedCutPerf=5000
+  f_cant=SI((DIM1>=406)Y(DIM1<=505);1;0)
+  f_alto=si((@accionamiento=1)Y(@SEMICOFRESPIRAL=0);dim1-9,7;0)+si((@accionamiento=1)Y(@SEMICOFRESPIRAL=1);dim1-20,3;0)+si((@accionamiento=2)Y(@SEMICOFRESPIRAL=0);dim1-8,3;0)+si((@accionamiento=2)Y(@SEMICOFRESPIRAL=1);dim1-16.8;0)+si((@accionamiento=3)Y(@SEMICOFRESPIRAL=0);dim1-8,3;0)+si((@accionamiento=3)Y(@SEMICOFRESPIRAL=1);dim1-16,8;0)+si((@accionamiento=4)Y(@SEMICOFRESPIRAL=0);dim1-8.7;0)+si((@accionamiento=4)Y(@SEMICOFRESPIRAL=1);dim1-16.8;0)
+  ap_prec_inc=1
+  MedCutPerf=5000
+end
+Componente No Visual
+  id=ID80050306_1
+  art=80050306
+  desc=Perfil terminal Bambu 2  6 m blanco
+  ancho_perfil=10
+  color=Blanco
+  tipo_corte_izq=|
+  tipo_corte_der=|
+  Despiece=1
+  TipoCurva=0
+  AngCorteI=90
+  AngCorteD=90
+  Centro=0
+  TipoTarifa=2
+  DtMedCutPerf=6000
+  f_cant=SI((DIM1>=506)Y(DIM1<=605);1;0)
+  f_alto=si((@accionamiento=1)Y(@SEMICOFRESPIRAL=0);dim1-9,7;0)+si((@accionamiento=1)Y(@SEMICOFRESPIRAL=1);dim1-20,3;0)+si((@accionamiento=2)Y(@SEMICOFRESPIRAL=0);dim1-8,3;0)+si((@accionamiento=2)Y(@SEMICOFRESPIRAL=1);dim1-16.8;0)+si((@accionamiento=3)Y(@SEMICOFRESPIRAL=0);dim1-8,3;0)+si((@accionamiento=3)Y(@SEMICOFRESPIRAL=1);dim1-16,8;0)+si((@accionamiento=4)Y(@SEMICOFRESPIRAL=0);dim1-8.7;0)+si((@accionamiento=4)Y(@SEMICOFRESPIRAL=1);dim1-16.8;0)
+  ap_prec_inc=1
+  MedCutPerf=6000
+end
+Componente No Visual
+  id=ID80050312_1
+  art=80050312
+  desc=Juego de tapas perfil Bambu 2 blanco
+  tipo_ctrl=0
+  Despiece=1
+  TipoCurva=0
+  AngCorteI=0
+  AngCorteD=0
+  Centro=0
+  TipoTarifa=2
+  f_cant=1
+  ap_prec_inc=1
+end
+Componente No Visual
+  id=ID80131429_1
+  art=80131429
+  desc=Perfil Spiral Premium 4 m blanco
+  ancho_perfil=10
+  color=Blanco
+  tipo_corte_izq=|
+  tipo_corte_der=|
+  Despiece=1
+  TipoCurva=0
+  AngCorteI=90
+  AngCorteD=90
+  Centro=0
+  TipoTarifa=2
+  DtMedCutPerf=4000
+  f_cant=SI((DIM1>=356)Y(DIM1<=405)Y(@SEMICOFRESPIRAL=1);1;0)
+  f_alto=si((@accionamiento=1)Y(@SEMICOFRESPIRAL=1);dim1-17,5;0)+si((@accionamiento=2)Y(@SEMICOFRESPIRAL=1);dim1-14;0)+si((@accionamiento=3)Y(@SEMICOFRESPIRAL=1);dim1-14;0)+si((@accionamiento=4)Y(@SEMICOFRESPIRAL=1);dim1-14;0)
+  ap_prec_inc=1
+  MedCutPerf=4000
+end
+Componente No Visual
+  id=ID80131431_1
+  art=80131431
+  desc=Perfil Spiral Premium 5 m blanco
+  ancho_perfil=10
+  color=Blanco
+  tipo_corte_izq=|
+  tipo_corte_der=|
+  Despiece=1
+  TipoCurva=0
+  AngCorteI=90
+  AngCorteD=90
+  Centro=0
+  TipoTarifa=2
+  DtMedCutPerf=5000
+  f_cant=SI((DIM1>=406)Y(DIM1<=505)Y(@SEMICOFRESPIRAL=1);1;0)
+  f_alto=si((@accionamiento=1)Y(@SEMICOFRESPIRAL=1);dim1-17,5;0)+si((@accionamiento=2)Y(@SEMICOFRESPIRAL=1);dim1-14;0)+si((@accionamiento=3)Y(@SEMICOFRESPIRAL=1);dim1-14;0)+si((@accionamiento=4)Y(@SEMICOFRESPIRAL=1);dim1-14;0)
+  ap_prec_inc=1
+  MedCutPerf=5000
+end
+Componente No Visual
+  id=ID80131432_1
+  art=80131432
+  desc=Perfil Spiral Premium 6 m blanco
+  ancho_perfil=10
+  color=Blanco
+  tipo_corte_izq=|
+  tipo_corte_der=|
+  Despiece=1
+  TipoCurva=0
+  AngCorteI=90
+  AngCorteD=90
+  Centro=0
+  TipoTarifa=2
+  DtMedCutPerf=6000
+  f_cant=SI((DIM1>=506)Y(DIM1<=605)Y(@SEMICOFRESPIRAL=1);1;0)
+  f_alto=si((@accionamiento=1)Y(@SEMICOFRESPIRAL=1);dim1-17,5;0)+si((@accionamiento=2)Y(@SEMICOFRESPIRAL=1);dim1-14;0)+si((@accionamiento=3)Y(@SEMICOFRESPIRAL=1);dim1-14;0)+si((@accionamiento=4)Y(@SEMICOFRESPIRAL=1);dim1-14;0)
+  ap_prec_inc=1
+  MedCutPerf=6000
+end
+Componente No Visual
+  id=ID80131433_1
+  art=80131433
+  desc=Perfil Spiral Premium 7 m blanco
+  ancho_perfil=10
+  color=Blanco
+  tipo_corte_izq=|
+  tipo_corte_der=|
+  Despiece=1
+  TipoCurva=0
+  AngCorteI=90
+  AngCorteD=90
+  Centro=0
+  TipoTarifa=2
+  DtMedCutPerf=7000
+  f_cant=SI((DIM1>=100)Y(DIM1<=355)Y(@SEMICOFRESPIRAL=1);1;0)
+  f_alto=si((@accionamiento=1)Y(@SEMICOFRESPIRAL=1);dim1-17,5;0)+si((@accionamiento=2)Y(@SEMICOFRESPIRAL=1);dim1-14;0)+si((@accionamiento=3)Y(@SEMICOFRESPIRAL=1);dim1-14;0)+si((@accionamiento=4)Y(@SEMICOFRESPIRAL=1);dim1-14;0)
+  ap_prec_inc=1
+  MedCutPerf=7000
+end
+Componente No Visual
+  id=ID80131200_1
+  art=80131200
+  desc=Perfil patín Spiral translúcido
+  ancho_perfil=10
+  color=Blanco
+  tipo_corte_izq=|
+  tipo_corte_der=|
+  Despiece=1
+  TipoCurva=0
+  AngCorteI=90
+  AngCorteD=90
+  Centro=0
+  TipoTarifa=2
+  DtMedCutPerf=7000
+  f_cant=SI(@SEMICOFRESPIRAL=1;1;0)
+  f_alto=si((@accionamiento=1)Y(@SEMICOFRESPIRAL=1);dim1-16.6;0)+si((@accionamiento=2)Y(@SEMICOFRESPIRAL=1);dim1-14.9;0)+si((@accionamiento=3)Y(@SEMICOFRESPIRAL=1);dim1-14.9;0)+si((@accionamiento=4)Y(@SEMICOFRESPIRAL=1);dim1-14.9;0)
+  ap_prec_inc=1
+  MedCutPerf=7000
+end
+Componente No Visual
+  id=ID80131427_1
+  art=80131427
+  desc=Soporte central pared-techo blanco
+  tipo_ctrl=0
+  Despiece=1
+  TipoCurva=0
+  AngCorteI=0
+  AngCorteD=0
+  Centro=0
+  TipoTarifa=1
+  f_cant=SI((DIM1>=500)Y(DIM1<=600)Y(@SEMICOFRESPIRAL=1);1;0)
+end
+Componente No Visual
+  id=ID80131458_1
+  art=80131458
+  desc=Kit de tapas Spiral Premium blanco
+  tipo_ctrl=0
+  Despiece=1
+  TipoCurva=0
+  AngCorteI=0
+  AngCorteD=0
+  Centro=0
+  TipoTarifa=2
+  f_cant=SI(@SEMICOFRESPIRAL=1;1;0)
+  ap_prec_inc=1
+end
+Componente No Visual
+  id=ID80040178_1
+  art=80040178
+  desc=Juego anclaje inyección caset con espiga blanco
+  tipo_ctrl=0
+  Despiece=1
+  TipoCurva=0
+  AngCorteI=0
+  AngCorteD=0
+  Centro=0
+  TipoTarifa=2
+  f_cant=SI(@SEMICOFRESPIRAL=0;1;0)
+  ap_prec_inc=1
+end
+Componente No Visual
+  id=ID80040266_1
+  art=80040266
+  desc=Juego anclaje inyección semicofres blanco
+  tipo_ctrl=0
+  Despiece=1
+  TipoCurva=0
+  AngCorteI=0
+  AngCorteD=0
+  Centro=0
+  TipoTarifa=2
+  f_cant=SI(@SEMICOFRESPIRAL=1;1;0)
+  ap_prec_inc=1
+end
+Componente No Visual
+  id=GA80080775_1
+  funcion=20
+  art=80070007
+  desc=Juego de brazos stor 0,50 m blanco
+  tipo_ctrl=0
+  Despiece=1
+  TipoCurva=0
+  AngCorteI=0
+  AngCorteD=0
+  Centro=0
+  TipoTarifa=2
+  f_cant=1
+  ap_prec_inc=1
+end
+Componente No Visual
+  id=ID80130016_1
+  art=80130016
+  desc=Regleta 4 taladros con tornillos para Bambu zincado
+  tipo_ctrl=0
+  Despiece=1
+  TipoCurva=0
+  AngCorteI=0
+  AngCorteD=0
+  Centro=0
+  TipoTarifa=2
+  f_cant=2
+  ap_prec_inc=1
+end
+Componente No Visual
+  id=DK0001_1
+  funcion=18
+  art=DK0001
+  desc=Lona acrílica Dickson Lisos Ecru
+  tipo_ctrl=0
+  eDim1=345
+  Despiece=1
+  TipoCurva=0
+  AngCorteI=0
+  AngCorteD=0
+  Centro=0
+  TipoTarifa=2
+  DtMedCutPerf=1200
+  f_cant=1
+  f_Dim1=DIM2+95+SI(@MEDIDAFALDON=1;0;LONAF_1_DIM1)
+  f_Dim2=si((@accionamiento=1)Y(@SEMICOFRESPIRAL=0);dim1-10.7;0)+si((@accionamiento=1)Y(@SEMICOFRESPIRAL=1);dim1-21.5;0)+si((@accionamiento=2)Y(@SEMICOFRESPIRAL=0);dim1-10;0)+si((@accionamiento=2)Y(@SEMICOFRESPIRAL=1);dim1-18;0)+si((@accionamiento=3)Y(@SEMICOFRESPIRAL=0);dim1-10;0)+si((@accionamiento=3)Y(@SEMICOFRESPIRAL=1);dim1-18;0)+si((@accionamiento=4)Y(@SEMICOFRESPIRAL=0);dim1-10;0)+si((@accionamiento=4)Y(@SEMICOFRESPIRAL=1);dim1-18;0)
+  ap_prec_inc=1
+  MedCutPerf=1200
+end
+Componente No Visual
+  id=LONAF_1
+  funcion=24
+  art=BG_SIN_FALDON
+  desc=Lona sin faldón
+  tipo_ctrl=0
+  Despiece=1
+  TipoCurva=0
+  AngCorteI=0
+  AngCorteD=0
+  Centro=0
+  TipoTarifa=2
+  DtMedCutPerf=1200
+  f_cant=Si(@MedidaFaldon=0;1;0)
+  desccomplista=1
+  ap_prec_inc=1
+end
+Componente No Visual
+  id=RIBETEATONO_2
+  funcion=22
+  art=COLOR_RIBETE_A_TONO
+  desc=COLOR DEL RIBETE A TONO CON EL TEJIDO
+  tipo_ctrl=0
+  Despiece=0
+  TipoCurva=0
+  AngCorteI=0
+  AngCorteD=0
+  Centro=0
+  TipoTarifa=1
+  f_cant=@COLORRIBETE=26
+end
+Componente No Visual
+  id=CONDOBLADILLO_1
+  funcion=25
+  art=BE_CON_DOBLADILLO
+  desc=DOBLADILLO ABAJO CON DOBLE COSTURA
+  tipo_ctrl=0
+  Despiece=0
+  TipoCurva=0
+  AngCorteI=0
+  AngCorteD=0
+  Centro=0
+  TipoTarifa=1
+  f_cant=@COLORRIBETE=25
+end
+Componente No Visual
+  id=COLOR0000_1
+  funcion=22
+  art=COLOR_0000
+  desc=RIBETE COLOR BLANCO 0000
+  tipo_ctrl=0
+  Despiece=0
+  TipoCurva=0
+  AngCorteI=0
+  AngCorteD=0
+  Centro=0
+  TipoTarifa=1
+  f_cant=@COLORRIBETE=1
+end
+Componente No Visual
+  id=COLOR5847_1
+  funcion=22
+  art=COLOR_5847
+  desc=RIBETE COLOR GRIS 5847
+  tipo_ctrl=0
+  Despiece=0
+  TipoCurva=0
+  AngCorteI=0
+  AngCorteD=0
+  Centro=0
+  TipoTarifa=1
+  f_cant=@COLORRIBETE=2
+end
+Componente No Visual
+  id=COLOR5029_1
+  funcion=22
+  art=COLOR_5029
+  desc=RIBETE COLOR GRIS 5029
+  tipo_ctrl=0
+  Despiece=0
+  TipoCurva=0
+  AngCorteI=0
+  AngCorteD=0
+  Centro=0
+  TipoTarifa=1
+  f_cant=@COLORRIBETE=3
+end
+Componente No Visual
+  id=COLOR9644_1
+  funcion=22
+  art=COLOR_9644
+  desc=RIBETE COLOR GRIS 9644
+  tipo_ctrl=0
+  Despiece=0
+  TipoCurva=0
+  AngCorteI=0
+  AngCorteD=0
+  Centro=0
+  TipoTarifa=1
+  f_cant=@COLORRIBETE=4
+end
+Componente No Visual
+  id=COLOR5445_1
+  funcion=22
+  art=COLOR_5445
+  desc=RIBETE COLOR BEIGE 5445
+  tipo_ctrl=0
+  Despiece=0
+  TipoCurva=0
+  AngCorteI=0
+  AngCorteD=0
+  Centro=0
+  TipoTarifa=1
+  f_cant=@COLORRIBETE=5
+end
+Componente No Visual
+  id=COLOR9633_1
+  funcion=22
+  art=COLOR_9633
+  desc=RIBETE COLOR BEIGE 9633
+  tipo_ctrl=0
+  Despiece=0
+  TipoCurva=0
+  AngCorteI=0
+  AngCorteD=0
+  Centro=0
+  TipoTarifa=1
+  f_cant=@COLORRIBETE=6
+end
+Componente No Visual
+  id=COLOR5110_1
+  funcion=22
+  art=COLOR_5110
+  desc=RIBETE COLOR MARRON 5110
+  tipo_ctrl=0
+  Despiece=0
+  TipoCurva=0
+  AngCorteI=0
+  AngCorteD=0
+  Centro=0
+  TipoTarifa=1
+  f_cant=@COLORRIBETE=7
+end
+Componente No Visual
+  id=COLOR9647_1
+  funcion=22
+  art=COLOR_9647
+  desc=RIBETE COLOR MARRON 9647
+  tipo_ctrl=0
+  Despiece=0
+  TipoCurva=0
+  AngCorteI=0
+  AngCorteD=0
+  Centro=0
+  TipoTarifa=1
+  f_cant=@COLORRIBETE=8
+end
+Componente No Visual
+  id=COLOR5040_1
+  funcion=22
+  art=COLOR_5040
+  desc=RIBETE COLOR MARRON 5040
+  tipo_ctrl=0
+  Despiece=0
+  TipoCurva=0
+  AngCorteI=0
+  AngCorteD=0
+  Centro=0
+  TipoTarifa=1
+  f_cant=@COLORRIBETE=9
+end
+Componente No Visual
+  id=COLOR5021_1
+  funcion=22
+  art=COLOR_5021
+  desc=RIBETE COLOR MARRON 5021
+  tipo_ctrl=0
+  Despiece=0
+  TipoCurva=0
+  AngCorteI=0
+  AngCorteD=0
+  Centro=0
+  TipoTarifa=1
+  f_cant=@COLORRIBETE=10
+end
+Componente No Visual
+  id=COLOR5291_1
+  funcion=22
+  art=COLOR_5291
+  desc=RIBETE COLOR MARRON 5291
+  tipo_ctrl=0
+  Despiece=0
+  TipoCurva=0
+  AngCorteI=0
+  AngCorteD=0
+  Centro=0
+  TipoTarifa=1
+  f_cant=@COLORRIBETE=11
+end
+Componente No Visual
+  id=COLOR5012_1
+  funcion=22
+  art=COLOR_5012
+  desc=RIBETE COLOR NEGRO 5012
+  tipo_ctrl=0
+  Despiece=0
+  TipoCurva=0
+  AngCorteI=0
+  AngCorteD=0
+  Centro=0
+  TipoTarifa=1
+  f_cant=@COLORRIBETE=12
+end
+Componente No Visual
+  id=COLOR9633_2
+  funcion=22
+  art=COLOR_9633
+  desc=RIBETE COLOR BEIGE 9633
+  tipo_ctrl=0
+  Despiece=0
+  TipoCurva=0
+  AngCorteI=0
+  AngCorteD=0
+  Centro=0
+  TipoTarifa=1
+  f_cant=@COLORRIBETE=13
+end
+Componente No Visual
+  id=COLOR3914_1
+  funcion=22
+  art=COLOR_3914
+  desc=RIBETE COLOR TERRACOTA 3914
+  tipo_ctrl=0
+  Despiece=0
+  TipoCurva=0
+  AngCorteI=0
+  AngCorteD=0
+  Centro=0
+  TipoTarifa=1
+  f_cant=@COLORRIBETE=14
+end
+Componente No Visual
+  id=COLOR9512_1
+  funcion=22
+  art=COLOR_9512
+  desc=RIBETE COLOR NARANJA 9512
+  tipo_ctrl=0
+  Despiece=0
+  TipoCurva=0
+  AngCorteI=0
+  AngCorteD=0
+  Centro=0
+  TipoTarifa=1
+  f_cant=@COLORRIBETE=15
+end
+Componente No Visual
+  id=COLOR5242_1
+  funcion=22
+  art=COLOR_5242
+  desc=RIBETE COLOR NARANJA 5242
+  tipo_ctrl=0
+  Despiece=0
+  TipoCurva=0
+  AngCorteI=0
+  AngCorteD=0
+  Centro=0
+  TipoTarifa=1
+  f_cant=@COLORRIBETE=16
+end
+Componente No Visual
+  id=COLOR5025_1
+  funcion=22
+  art=COLOR_5025
+  desc=RIBETE COLOR ROJO 5025
+  tipo_ctrl=0
+  Despiece=0
+  TipoCurva=0
+  AngCorteI=0
+  AngCorteD=0
+  Centro=0
+  TipoTarifa=1
+  f_cant=@COLORRIBETE=17
+end
+Componente No Visual
+  id=COLOR5024_1
+  funcion=22
+  art=COLOR_5024
+  desc=RIBETE COLOR AMARILLO 5024
+  tipo_ctrl=0
+  Despiece=0
+  TipoCurva=0
+  AngCorteI=0
+  AngCorteD=0
+  Centro=0
+  TipoTarifa=1
+  f_cant=@COLORRIBETE=18
+end
+Componente No Visual
+  id=COLOR5132_1
+  funcion=22
+  art=COLOR_5132
+  desc=RIBETE COLOR VERDE 5132
+  tipo_ctrl=0
+  Despiece=0
+  TipoCurva=0
+  AngCorteI=0
+  AngCorteD=0
+  Centro=0
+  TipoTarifa=1
+  f_cant=@COLORRIBETE=19
+end
+Componente No Visual
+  id=COLOR5888_1
+  funcion=22
+  art=COLOR_5888
+  desc=RIBETE COLOR VERDE 5888
+  tipo_ctrl=0
+  Despiece=0
+  TipoCurva=0
+  AngCorteI=0
+  AngCorteD=0
+  Centro=0
+  TipoTarifa=1
+  f_cant=@COLORRIBETE=20
+end
+Componente No Visual
+  id=COLOR5254_1
+  funcion=22
+  art=COLOR_R163
+  desc=RIBETE COLOR VERDE 5254
+  tipo_ctrl=0
+  Despiece=0
+  TipoCurva=0
+  AngCorteI=0
+  AngCorteD=0
+  Centro=0
+  TipoTarifa=1
+  f_cant=@COLORRIBETE=21
+end
+Componente No Visual
+  id=COLOR5412_1
+  funcion=22
+  art=COLOR_5412
+  desc=RIBETE COLOR AZUL 5412
+  tipo_ctrl=0
+  Despiece=0
+  TipoCurva=0
+  AngCorteI=0
+  AngCorteD=0
+  Centro=0
+  TipoTarifa=1
+  f_cant=@COLORRIBETE=22
+end
+Componente No Visual
+  id=COLOR5331_1
+  funcion=22
+  art=COLOR_5331
+  desc=RIBETE COLOR AZUL 5331
+  tipo_ctrl=0
+  Despiece=0
+  TipoCurva=0
+  AngCorteI=0
+  AngCorteD=0
+  Centro=0
+  TipoTarifa=1
+  f_cant=@COLORRIBETE=23
+end
+Componente No Visual
+  id=COLOR9514_1
+  funcion=22
+  art=COLOR_9514
+  desc=RIBETE COLOR AZUL 9514
+  tipo_ctrl=0
+  Despiece=0
+  TipoCurva=0
+  AngCorteI=0
+  AngCorteD=0
+  Centro=0
+  TipoTarifa=1
+  f_cant=@COLORRIBETE=24
+end
+Componente No Visual
+  id=soldadura_1
+  funcion=27
+  art=soldadura
+  desc=Confeccionado con soldadura
+  tipo_ctrl=0
+  Despiece=1
+  TipoCurva=0
+  AngCorteI=0
+  AngCorteD=0
+  Centro=0
+  TipoTarifa=2
+  f_cant=SI(@HILOS=12;1;0)
+  ap_prec_inc=1
+end
+Componente No Visual
+  id=Hilo66501_1
+  funcion=27
+  art=AAAA_Hilo_66501
+  desc=Hilo negro
+  tipo_ctrl=0
+  Despiece=1
+  TipoCurva=0
+  AngCorteI=0
+  AngCorteD=0
+  Centro=0
+  TipoTarifa=2
+  f_cant=SI(@HILOS=6;1;0)
+  ap_prec_inc=1
+end
+Componente No Visual
+  id=Hilo66502_1
+  funcion=27
+  art=AAA_Hilo_66502
+  desc=Hilo blanco
+  tipo_ctrl=0
+  Despiece=1
+  TipoCurva=0
+  AngCorteI=0
+  AngCorteD=0
+  Centro=0
+  TipoTarifa=2
+  f_cant=SI(@HILOS=0;1;0)
+  ap_prec_inc=1
+end
+Componente No Visual
+  id=Hilo66504_1
+  funcion=27
+  art=A_Hilo_66504
+  desc=Hilo burdeos
+  tipo_ctrl=0
+  Despiece=1
+  TipoCurva=0
+  AngCorteI=0
+  AngCorteD=0
+  Centro=0
+  TipoTarifa=2
+  f_cant=SI(@HILOS=4;1;0)
+  ap_prec_inc=1
+end
+Componente No Visual
+  id=Hilo66511_1
+  funcion=27
+  art=A_Hilo_66511
+  desc=Hilo gris
+  tipo_ctrl=0
+  Despiece=1
+  TipoCurva=0
+  AngCorteI=0
+  AngCorteD=0
+  Centro=0
+  TipoTarifa=2
+  f_cant=SI(@HILOS=1;1;0)
+  ap_prec_inc=1
+end
+Componente No Visual
+  id=Hilo66517_1
+  funcion=27
+  art=A_Hilo_66517
+  desc=Hilo beige
+  tipo_ctrl=0
+  Despiece=1
+  TipoCurva=0
+  AngCorteI=0
+  AngCorteD=0
+  Centro=0
+  TipoTarifa=2
+  f_cant=SI(@HILOS=2;1;0)
+  ap_prec_inc=1
+end
+Componente No Visual
+  id=HIlo66519_1
+  funcion=27
+  art=HIlo_66519 
+  desc=Hilo rojo
+  tipo_ctrl=0
+  Despiece=1
+  TipoCurva=0
+  AngCorteI=0
+  AngCorteD=0
+  Centro=0
+  TipoTarifa=2
+  f_cant=SI(@HILOS=3;1;0)
+  ap_prec_inc=1
+end
+Componente No Visual
+  id=Hilo66527_1
+  funcion=27
+  art=A_Hilo_66527
+  desc=Hilo verde
+  tipo_ctrl=0
+  Despiece=1
+  TipoCurva=0
+  AngCorteI=0
+  AngCorteD=0
+  Centro=0
+  TipoTarifa=2
+  f_cant=SI(@HILOS=7;1;0)
+  ap_prec_inc=1
+end
+Componente No Visual
+  id=Hilo66528_1
+  funcion=27
+  art=A_Hilo_66528
+  desc=Hilo naranja
+  tipo_ctrl=0
+  Despiece=1
+  TipoCurva=0
+  AngCorteI=0
+  AngCorteD=0
+  Centro=0
+  TipoTarifa=2
+  f_cant=SI(@HILOS=8;1;0)
+  ap_prec_inc=1
+end
+Componente No Visual
+  id=Hilo66529_1
+  funcion=27
+  art=A_Hilo_66529
+  desc=Hilo amarillo
+  tipo_ctrl=0
+  Despiece=1
+  TipoCurva=0
+  AngCorteI=0
+  AngCorteD=0
+  Centro=0
+  TipoTarifa=2
+  f_cant=SI(@HILOS=9;1;0)
+  ap_prec_inc=1
+end
+Componente No Visual
+  id=Hilo66547_1
+  funcion=27
+  art=A_Hilo_66547
+  desc=Hilo marrón
+  tipo_ctrl=0
+  Despiece=1
+  TipoCurva=0
+  AngCorteI=0
+  AngCorteD=0
+  Centro=0
+  TipoTarifa=2
+  f_cant=SI(@HILOS=10;1;0)
+  ap_prec_inc=1
+end
+Componente No Visual
+  id=Hilotono_1
+  funcion=27
+  art=AAA_Hilo_tono
+  desc=Hilo a tono
+  tipo_ctrl=0
+  Despiece=1
+  TipoCurva=0
+  AngCorteI=0
+  AngCorteD=0
+  Centro=0
+  TipoTarifa=2
+  f_cant=SI(@HILOS=11;1;0)
+  ap_prec_inc=1
+end
+Componente No Visual
+  id=Hilo66513_1
+  funcion=27
+  art=A_Hilo_66513
+  desc=Hilo azul
+  tipo_ctrl=0
+  Despiece=1
+  TipoCurva=0
+  AngCorteI=0
+  AngCorteD=0
+  Centro=0
+  TipoTarifa=2
+  f_cant=SI(@HILOS=5;1;0)
+  ap_prec_inc=1
+end
+Componente No Visual
+  id=MEDIDAFALDON1_1
+  art=BB_MEDIDA_FALDON_1
+  desc=Medida del faldón
+  tipo_ctrl=0
+  Despiece=1
+  TipoCurva=0
+  AngCorteI=0
+  AngCorteD=0
+  Centro=0
+  TipoTarifa=2
+  f_cant=Si(@MedidaFaldon=1;0;1)
+  f_Dim1=SI((@MEDIDAFALDON>1)y(@COLORRIBETE<=24);@MEDIDAFALDON+7;0)+SI((@MEDIDAFALDON>1)Y(@COLORRIBETE=25);@MEDIDAFALDON+10,5;0)+SI((@MEDIDAFALDON>1)y(@COLORRIBETE=26);@MEDIDAFALDON+7;0)
+  f_Dim2=si((@accionamiento=1)Y(@SEMICOFRESPIRAL=0);dim1-10.7;0)+si((@accionamiento=1)Y(@SEMICOFRESPIRAL=1);dim1-21.5;0)+si((@accionamiento=2)Y(@SEMICOFRESPIRAL=0);dim1-10;0)+si((@accionamiento=2)Y(@SEMICOFRESPIRAL=1);dim1-18;0)+si((@accionamiento=3)Y(@SEMICOFRESPIRAL=0);dim1-10;0)+si((@accionamiento=3)Y(@SEMICOFRESPIRAL=1);dim1-18;0)+si((@accionamiento=4)Y(@SEMICOFRESPIRAL=0);dim1-10;0)+si((@accionamiento=4)Y(@SEMICOFRESPIRAL=1);dim1-18;0)
+  desccomp=1
+  ap_prec_inc=1
+end
+Componente No Visual
+  id=DK0001_3
+  funcion=24
+  art=DK0001
+  desc=Lona acrílica Dickson Lisos Ecru
+  tipo_ctrl=0
+  Despiece=0
+  TipoCurva=0
+  AngCorteI=0
+  AngCorteD=0
+  Centro=0
+  TipoTarifa=1
+  f_cant=Si(@MedidaFaldon=1;0;1)
+  f_Dim1=SI((@MEDIDAFALDON>1)y#@#(@COLORRIBETE<=24);@MEDIDAFALDON+7;0)+SI#@#((@MEDIDAFALDON>1)Y#@#(@COLORRIBETE=25);@MEDIDAFALDON+10,5;0)+SI#@#((@MEDIDAFALDON>1)y#@#(@COLORRIBETE=26);@MEDIDAFALDON+7;0)
+  f_Dim2=si((@accionamiento=1)Y(@SEMICOFRESPIRAL=0);dim1-#@#10.7;0)+si((@accionamiento=1)Y#@#(@SEMICOFRESPIRAL=1);dim1-21.5;0)+si#@#((@accionamiento=2)Y(@SEMICOFRESPIRAL=0);dim1-10;0)+si#@#((@accionamiento=2)Y(@SEMICOFRESPIRAL=1);dim1-18;0)+si#@#((@accionamiento=3)Y(@SEMICOFRESPIRAL=0);dim1-10;0)+si#@#((@accionamiento=3)Y(@SEMICOFRESPIRAL=1);dim1-18;0)+si#@#((@accionamiento=4)Y(@SEMICOFRESPIRAL=0);dim1-10;0)+si#@#((@accionamiento=4)Y(@SEMICOFRESPIRAL=1);dim1-18;0)
+  red_cant=7
+end
+Componente No Visual
+  id=TF01_1
+  art=TF01
+  desc=Corte de tallas
+  tipo_ctrl=0
+  Despiece=1
+  TipoCurva=0
+  AngCorteI=0
+  AngCorteD=0
+  Centro=0
+  TipoTarifa=2
+  f_cant=1
+  ap_prec_inc=1
+end
+Componente No Visual
+  id=TF02_1
+  art=TF02
+  desc=Unión de paños
+  tipo_ctrl=0
+  Despiece=1
+  TipoCurva=0
+  AngCorteI=0
+  AngCorteD=0
+  Centro=0
+  TipoTarifa=2
+  f_cant=1
+  ap_prec_inc=1
+end
+Componente No Visual
+  id=TF03_1
+  art=TF03
+  desc=Verificacion y Faldilla
+  tipo_ctrl=0
+  Despiece=1
+  TipoCurva=0
+  AngCorteI=0
+  AngCorteD=0
+  Centro=0
+  TipoTarifa=2
+  f_cant=1
+  ap_prec_inc=1
+end
+Componente No Visual
+  id=TF03B_1
+  art=TF03B
+  desc=Terminacion confeccion
+  tipo_ctrl=0
+  Despiece=1
+  TipoCurva=0
+  AngCorteI=0
+  AngCorteD=0
+  Centro=0
+  TipoTarifa=2
+  f_cant=1
+  ap_prec_inc=1
+end
+
+class=TEstRelleno
+  x=0
+  y=0
+  w=250
+  h=600
+end
+

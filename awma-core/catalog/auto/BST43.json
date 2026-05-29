@@ -1,0 +1,144 @@
+{
+  "id": "BST43",
+  "nombre": "Cortina enrollable interior Soltistore Ø43",
+  "tipo": "vertical",
+  "version": "2025.09",
+  "fuente": {
+    "abd": "BST43.abd"
+  },
+  "dimensiones": {
+    "linea": {
+      "min": 50,
+      "max": 250,
+      "valores": []
+    },
+    "salida": {
+      "min": 100,
+      "max": 300,
+      "valores": []
+    }
+  },
+  "tarifa": {
+    "matriz": {}
+  },
+  "motores": [
+    {
+      "id": "manual",
+      "nombre": "Manivela",
+      "recargo": 0,
+      "familia": "manual"
+    },
+    {
+      "id": "somfy_motor_wt",
+      "nombre": "Somfy Motor Wt",
+      "recargo": 0,
+      "familia": "somfy"
+    },
+    {
+      "id": "somfy_motor_rts",
+      "nombre": "Somfy Motor Rts",
+      "recargo": 0,
+      "familia": "somfy"
+    },
+    {
+      "id": "somfy_motor_io",
+      "nombre": "Somfy Motor Io",
+      "recargo": 0,
+      "familia": "somfy"
+    },
+    {
+      "id": "cherubini_motor_mecanico",
+      "nombre": "Cherubini Motor Mecanico",
+      "recargo": 0,
+      "familia": "cherubini"
+    },
+    {
+      "id": "cherubini_motor_wave_rx_radio",
+      "nombre": "Cherubini Motor Wave Rx Radio",
+      "recargo": 0,
+      "familia": "cherubini"
+    },
+    {
+      "id": "gaviota_motor_cross_radio",
+      "nombre": "Gaviota Motor Cross Radio",
+      "recargo": 0,
+      "familia": "gaviota"
+    },
+    {
+      "id": "gaviota_motor_elite",
+      "nombre": "Gaviota Motor Elite",
+      "recargo": 0,
+      "familia": "gaviota"
+    },
+    {
+      "id": "aok_mecanico",
+      "nombre": "Aok Mecanico",
+      "recargo": 0,
+      "familia": "aok"
+    },
+    {
+      "id": "aok_radio",
+      "nombre": "Aok Radio",
+      "recargo": 0,
+      "familia": "aok"
+    },
+    {
+      "id": "aok_bateria_interna",
+      "nombre": "Aok Bateria Interna",
+      "recargo": 0,
+      "familia": "aok"
+    },
+    {
+      "id": "aok_bateria_externa",
+      "nombre": "Aok Bateria Externa",
+      "recargo": 0,
+      "familia": "aok"
+    }
+  ],
+  "reglas": [
+    {
+      "id": "linea_min",
+      "descripcion": "Línea mínima del modelo",
+      "efecto": "bloqueo",
+      "mensaje": "Línea mínima del BST43: 50 cm.",
+      "condicion": {
+        "linea": {
+          "lt": 50
+        }
+      }
+    },
+    {
+      "id": "linea_max",
+      "descripcion": "Línea máxima del modelo",
+      "efecto": "bloqueo",
+      "mensaje": "Línea máxima del BST43: 250 cm.",
+      "condicion": {
+        "linea": {
+          "gt": 250
+        }
+      }
+    },
+    {
+      "id": "salida_min",
+      "descripcion": "Salida mínima del modelo",
+      "efecto": "bloqueo",
+      "mensaje": "Salida mínima del BST43: 100 cm.",
+      "condicion": {
+        "salida": {
+          "lt": 100
+        }
+      }
+    },
+    {
+      "id": "salida_max",
+      "descripcion": "Salida máxima del modelo",
+      "efecto": "bloqueo",
+      "mensaje": "Salida máxima del BST43: 300 cm.",
+      "condicion": {
+        "salida": {
+          "gt": 300
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,26 @@
+{
+  "id": "REP1003",
+  "nombre": "Lona confeccionada para reposicion toldo BRAZO EXTENSIBLE",
+  "tipo": "otro",
+  "version": "2025.09",
+  "fuente": {
+    "abd": "REP1003.abd"
+  },
+  "dimensiones": {
+    "linea": {
+      "min": 0,
+      "max": 0,
+      "valores": []
+    },
+    "salida": {
+      "min": 0,
+      "max": 0,
+      "valores": []
+    }
+  },
+  "tarifa": {
+    "matriz": {}
+  },
+  "motores": [],
+  "reglas": []
+}

@@ -1,0 +1,952 @@
+articulo=+PUNTORECTOC
+desc=Toldo punto recto cofre
+NewEstruc=1
+color perfil=Blanco
+color accesorios=Blanco
+dim1=400
+dim2=100
+tipoacabado=8
+AplMultAncho=1
+intAtLin=50
+intAtEA=70
+ilumPrC=20
+ilumPrL=40
+ilumPrF=50
+ProfSombCerr=1
+
+##Datos_Estructura##
+
+Id=0
+PintCotasAut=0
+Modulo000=001         0         0         0         0
+
+
+
+Variable
+  nombre=@Motor
+  valor=1
+  tipovar=1
+  formula=
+  max=0
+  min=0
+  actmin=0
+  actmax=0
+  selec=1
+  peticion=1
+  condicion=
+  varserie=0
+  PermEdRes=0
+  ResManual=0
+  ValorManual=0
+  agrupar=0
+  enum_0_texto=NO
+  enum_0_valor=0
+  enum_0_condicion=
+  enum_1_texto=Pulsador
+  enum_1_valor=1
+  enum_1_condicion=
+  enum_2_texto=Emisor
+  enum_2_valor=2
+  enum_2_condicion=
+end
+Variable
+  nombre=@TipoEmisor
+  valor=1
+  tipovar=1
+  formula=
+  max=0
+  min=0
+  actmin=0
+  actmax=0
+  selec=0
+  peticion=1
+  condicion=@Motor=2
+  varserie=0
+  PermEdRes=0
+  ResManual=0
+  ValorManual=0
+  agrupar=0
+  enum_0_texto=Skiper
+  enum_0_valor=1
+  enum_0_condicion=
+  enum_1_texto=Skiper Black
+  enum_1_valor=2
+  enum_1_condicion=
+  enum_2_texto=Skiper Plus
+  enum_2_valor=3
+  enum_2_condicion=
+  enum_3_texto=Skiper Plus Black
+  enum_3_valor=4
+  enum_3_condicion=
+  enum_4_texto=Skiper Lux
+  enum_4_valor=5
+  enum_4_condicion=
+  enum_5_texto=Skiper Lux Black
+  enum_5_valor=6
+  enum_5_condicion=
+  enum_6_texto=Skiper P-Lux
+  enum_6_valor=7
+  enum_6_condicion=
+  enum_7_texto=Skiper P-Lux Black
+  enum_7_valor=8
+  enum_7_condicion=
+  enum_8_texto=Skiper Senso
+  enum_8_valor=9
+  enum_8_condicion=
+end
+Variable
+  nombre=@Manivela
+  valor=2
+  tipovar=1
+  formula=
+  max=0
+  min=0
+  actmin=0
+  actmax=0
+  selec=2
+  peticion=1
+  condicion=@Motor=0
+  varserie=0
+  PermEdRes=0
+  ResManual=0
+  ValorManual=0
+  agrupar=0
+  enum_0_texto=80 cm
+  enum_0_valor=0
+  enum_0_condicion=
+  enum_1_texto=110 cm
+  enum_1_valor=1
+  enum_1_condicion=
+  enum_2_texto=150 cm
+  enum_2_valor=2
+  enum_2_condicion=
+  enum_3_texto=200 cm
+  enum_3_valor=3
+  enum_3_condicion=
+  enum_4_texto=240 cm
+  enum_4_valor=4
+  enum_4_condicion=
+  enum_5_texto=No lleva
+  enum_5_valor=5
+  enum_5_condicion=
+  enum_6_texto=120 cm
+  enum_6_valor=7
+  enum_6_condicion=
+  enum_7_texto=140 cm
+  enum_7_valor=8
+  enum_7_condicion=
+end
+Variable
+  nombre=@PosicionMando
+  valor=1
+  tipovar=1
+  formula=
+  max=0
+  min=0
+  actmin=0
+  actmax=0
+  selec=0
+  peticion=1
+  condicion=
+  varserie=0
+  PermEdRes=0
+  ResManual=0
+  ValorManual=0
+  agrupar=0
+  enum_0_texto=Derecha
+  enum_0_valor=1
+  enum_0_condicion=
+  enum_1_texto=Izquierda
+  enum_1_valor=2
+  enum_1_condicion=
+end
+Variable
+  nombre=@TipoInstalacion
+  valor=1
+  tipovar=1
+  formula=
+  max=0
+  min=0
+  actmin=0
+  actmax=0
+  selec=0
+  peticion=1
+  condicion=
+  varserie=0
+  PermEdRes=0
+  ResManual=0
+  ValorManual=0
+  agrupar=0
+  enum_0_texto=Frontal - Techo
+  enum_0_valor=1
+  enum_0_condicion=
+  enum_1_texto=Techo
+  enum_1_valor=2
+  enum_1_condicion=
+  enum_2_texto=Frontal
+  enum_2_valor=3
+  enum_2_condicion=
+end
+Variable
+  nombre=@MedidaFaldon
+  valor=0
+  tipovar=0
+  formula=
+  max=0
+  min=0
+  actmin=0
+  actmax=0
+  selec=-1
+  peticion=1
+  condicion=
+  varserie=0
+  PermEdRes=0
+  ResManual=0
+  ValorManual=0
+  agrupar=0
+end
+Variable
+  nombre=@MedidaBrazo
+  valor=100
+  tipovar=2
+  formula=SI((Dim2<=60);60;0)+SI((Dim2>60)Y(Dim2<=70);70;0)+SI((Dim2>70)Y(Dim2<=80);80;0)+SI((Dim2>80)Y(Dim2<=90);90;0)+SI((Dim2>90)Y(Dim2<=100);100;0)+SI((Dim2>100)Y(Dim2<=110);110;0)+SI((Dim2>110)Y(Dim2<=120);120;0)+SI((Dim2>120)Y(Dim2<=130);130;0)+SI((Dim2>130)Y(Dim2<=140);140;0)+SI((Dim2>140)Y(Dim2<=150);150;0)
+  max=0
+  min=0
+  actmin=0
+  actmax=0
+  selec=-1
+  peticion=1
+  condicion=
+  varserie=0
+  PermEdRes=0
+  ResManual=0
+  ValorManual=0
+  agrupar=0
+end
+Componente No Visual
+  id=GAPVPUNTORECTOCBL_1
+  art=PVPUNTORECTOC/BL
+  desc=Precio Toldo punto recto cofre
+  tipo_ctrl=0
+  color=Blanco
+  eDim1=400
+  eDim2=100
+  Despiece=0
+  TipoCurva=0
+  AngCorteI=0
+  AngCorteD=0
+  Centro=0
+  TipoTarifa=1
+  f_cant=1
+  f_Dim1=DIM1
+  f_Dim2=DIM2
+end
+Componente No Visual
+  id=GA80130262_1
+  art=80130262
+  desc=Soporte pared-techo blanco
+  tipo_ctrl=0
+  Despiece=1
+  TipoCurva=0
+  AngCorteI=0
+  AngCorteD=0
+  Centro=0
+  TipoTarifa=2
+  f_cant=1
+  ap_prec_inc=1
+end
+Componente No Visual
+  id=GA80010360_1
+  art=80010360
+  desc=GEL 1:7 cáncamo 120 roscada blanco
+  tipo_ctrl=0
+  Despiece=1
+  TipoCurva=0
+  AngCorteI=0
+  AngCorteD=0
+  Centro=0
+  TipoTarifa=2
+  f_cant=si(@motor=0;1;0)
+  ap_prec_inc=1
+end
+Componente No Visual
+  id=GA80030008_1
+  funcion=19
+  art=80030008
+  desc=Tubo ranurado galvanizado ojiva 60 x 0,7 ran 7 m
+  ancho_perfil=60
+  color=Blanco
+  tipo_corte_izq=|
+  tipo_corte_der=|
+  Despiece=0
+  TipoCurva=0
+  AngCorteI=90
+  AngCorteD=90
+  Centro=0
+  TipoTarifa=1
+  DtMedCutPerf=5000
+  f_cant=Si ((@motor=0);1;0)
+  f_alto=si(@motor=0;Dim1-8,5;dim1-5,5)
+  MedCutPerf=5000
+end
+Componente No Visual
+  id=GA80030013_1
+  funcion=19
+  art=80030013
+  desc=Tubo ranurado galvanizado ojiva 70 x 0,8 ran 7 m
+  ancho_perfil=70
+  color=Blanco
+  tipo_corte_izq=|
+  tipo_corte_der=|
+  Despiece=1
+  TipoCurva=0
+  AngCorteI=90
+  AngCorteD=90
+  Centro=0
+  TipoTarifa=2
+  DtMedCutPerf=5000
+  f_cant=Si ((@motor<>0);1;0)
+  f_alto=si(@motor=0;Dim1-8,5;dim1-5)
+  ap_prec_inc=1
+  MedCutPerf=5000
+end
+Componente No Visual
+  id=GA80020003_1
+  art=80020003
+  desc=Casquillo máquina E/C 60 oct 13 x 32 zamac
+  tipo_ctrl=0
+  Despiece=1
+  TipoCurva=0
+  AngCorteI=0
+  AngCorteD=0
+  Centro=0
+  TipoTarifa=2
+  f_cant=si(@motor=0;1;0)
+  ap_prec_inc=1
+end
+Componente No Visual
+  id=GA80020013_1
+  art=80020013
+  desc=Casquillo punto 60 oct 13 plástico
+  tipo_ctrl=0
+  Despiece=1
+  TipoCurva=0
+  AngCorteI=0
+  AngCorteD=0
+  Centro=0
+  TipoTarifa=2
+  f_cant=si(@motor=0;1;0)
+  ap_prec_inc=1
+end
+Componente No Visual
+  id=GA80020002_1
+  art=80020002
+  desc=Casquillo punto 70 ran 13 plástico
+  tipo_ctrl=0
+  Despiece=1
+  TipoCurva=0
+  AngCorteI=0
+  AngCorteD=0
+  Centro=0
+  TipoTarifa=2
+  DtMedCutPerf=5000
+  f_cant=si(@motor<>0;1;0)
+  ap_prec_inc=1
+  MedCutPerf=5000
+end
+Componente No Visual
+  id=GA80060512_1
+  funcion=20
+  art=80060512
+  desc=Juego brazo curvo I2, con semi-tensión 0,60 m blanco
+  tipo_ctrl=0
+  color=Blanco
+  Despiece=1
+  TipoCurva=0
+  AngCorteI=0
+  AngCorteD=0
+  Centro=0
+  TipoTarifa=2
+  f_cant=SI((Dim2<=60);1;0)
+  ap_prec_inc=1
+end
+Componente No Visual
+  id=GA80060340_1
+  funcion=20
+  art=80060340
+  desc=Juego brazo curvo I2, con semi-tensión 0,70 m blanco
+  tipo_ctrl=0
+  color=Blanco
+  Despiece=1
+  TipoCurva=0
+  AngCorteI=0
+  AngCorteD=0
+  Centro=0
+  TipoTarifa=2
+  f_cant=SI((Dim2>60)Y(Dim2<=70);1;0)
+  ap_prec_inc=1
+end
+Componente No Visual
+  id=GA80060348_1
+  funcion=20
+  art=80060348
+  desc=Juego brazo curvo I2, con semi-tensión 0,80 m blanco
+  tipo_ctrl=0
+  color=Blanco
+  Despiece=1
+  TipoCurva=0
+  AngCorteI=0
+  AngCorteD=0
+  Centro=0
+  TipoTarifa=2
+  f_cant=SI((Dim2>70)Y(Dim2<=80);1;0)
+  ap_prec_inc=1
+end
+Componente No Visual
+  id=GA80060356_1
+  funcion=20
+  art=80060356
+  desc=Juego brazo curvo I2, con semi-tensión 0,90 m blanco
+  tipo_ctrl=0
+  color=Blanco
+  Despiece=1
+  TipoCurva=0
+  AngCorteI=0
+  AngCorteD=0
+  Centro=0
+  TipoTarifa=2
+  f_cant=SI((Dim2>80)Y(Dim2<=90);1;0)
+  ap_prec_inc=1
+end
+Componente No Visual
+  id=GA80060364_1
+  funcion=20
+  art=80060364
+  desc=Juego brazo curvo I2, con semi-tensión 1,00 m blanco
+  tipo_ctrl=0
+  color=Blanco
+  Despiece=1
+  TipoCurva=0
+  AngCorteI=0
+  AngCorteD=0
+  Centro=0
+  TipoTarifa=2
+  f_cant=SI((Dim2>90)Y(Dim2<=100);1;0)
+  ap_prec_inc=1
+end
+Componente No Visual
+  id=GA80060372_1
+  funcion=20
+  art=80060372
+  desc=Juego brazo curvo I2, con semi-tensión 1,10 m blanco
+  tipo_ctrl=0
+  color=Blanco
+  Despiece=1
+  TipoCurva=0
+  AngCorteI=0
+  AngCorteD=0
+  Centro=0
+  TipoTarifa=2
+  f_cant=SI((Dim2>100)Y(Dim2<=110);1;0)
+  ap_prec_inc=1
+end
+Componente No Visual
+  id=GA80060380_1
+  funcion=20
+  art=80060380
+  desc=Juego brazo curvo I2, con semi-tensión 1,20 m blanco
+  tipo_ctrl=0
+  color=Blanco
+  Despiece=1
+  TipoCurva=0
+  AngCorteI=0
+  AngCorteD=0
+  Centro=0
+  TipoTarifa=2
+  f_cant=SI((Dim2>110)Y(Dim2<=120);1;0)
+  ap_prec_inc=1
+end
+Componente No Visual
+  id=GA80060468_1
+  funcion=20
+  art=80060468
+  desc=Juego brazo curvo I3, con tensión 1,30 m blanco
+  tipo_ctrl=0
+  color=Blanco
+  Despiece=1
+  TipoCurva=0
+  AngCorteI=0
+  AngCorteD=0
+  Centro=0
+  TipoTarifa=2
+  f_cant=SI((Dim2>120)Y(Dim2<=130);1;0)
+  ap_prec_inc=1
+end
+Componente No Visual
+  id=GA80060476_1
+  funcion=20
+  art=80060476
+  desc=Juego brazo curvo I3, con tensión 1,40 m blanco
+  tipo_ctrl=0
+  color=Blanco
+  Despiece=1
+  TipoCurva=0
+  AngCorteI=0
+  AngCorteD=0
+  Centro=0
+  TipoTarifa=2
+  f_cant=SI((Dim2>130)Y(Dim2<=140);1;0)
+  ap_prec_inc=1
+end
+Componente No Visual
+  id=GA80060484_1
+  funcion=20
+  art=80060484
+  desc=Juego brazo curvo I3, con tensión 1,50 m blanco
+  tipo_ctrl=0
+  color=Blanco
+  Despiece=1
+  TipoCurva=0
+  AngCorteI=0
+  AngCorteD=0
+  Centro=0
+  TipoTarifa=2
+  f_cant=SI((Dim2>140)Y(Dim2<=150);1;0)
+  ap_prec_inc=1
+end
+Componente No Visual
+  id=GA80130245_1
+  funcion=23
+  art=80130245
+  desc=Juego de perfiles Desert D1  7 m blanco
+  ancho_perfil=10
+  color=Blanco
+  tipo_corte_izq=|
+  tipo_corte_der=|
+  Despiece=1
+  TipoCurva=0
+  AngCorteI=90
+  AngCorteD=90
+  Centro=0
+  TipoTarifa=2
+  DtMedCutPerf=5000
+  f_cant=1
+  f_alto=si(@motor=0;Dim1-7;dim1-6,5)
+  ap_prec_inc=1
+  MedCutPerf=5000
+end
+Componente No Visual
+  id=GA80130270_1
+  art=80130270
+  desc=Juego tapas blanco
+  tipo_ctrl=0
+  color=Blanco
+  Despiece=1
+  TipoCurva=0
+  AngCorteI=0
+  AngCorteD=0
+  Centro=0
+  TipoTarifa=2
+  f_cant=1
+  ap_prec_inc=1
+end
+Componente No Visual
+  id=GA80090023_1
+  funcion=21
+  art=80090023
+  desc=Manivela extra lacada gancho zincado 0,80 m blanco
+  tipo_ctrl=0
+  color=Blanco
+  Despiece=1
+  TipoCurva=0
+  AngCorteI=0
+  AngCorteD=0
+  Centro=0
+  TipoTarifa=2
+  f_cant=si((@Motor=0)y(@Manivela=0);1;0)
+  ap_prec_inc=1
+end
+Componente No Visual
+  id=GA80090008_1
+  funcion=21
+  art=80090008
+  desc=Manivela extra lacada gancho zincado 1,10 m blanco
+  tipo_ctrl=0
+  color=Blanco
+  Despiece=1
+  TipoCurva=0
+  AngCorteI=0
+  AngCorteD=0
+  Centro=0
+  TipoTarifa=2
+  f_cant=si((@Motor=0)y(@Manivela=1);1;0)
+  ap_prec_inc=1
+end
+Componente No Visual
+  id=GA80090009_1
+  funcion=21
+  art=80090009
+  desc=Manivela extra lacada gancho zincado 1,20 m blanco
+  tipo_ctrl=0
+  Despiece=0
+  TipoCurva=0
+  AngCorteI=0
+  AngCorteD=0
+  Centro=0
+  TipoTarifa=1
+  f_cant=si((@Motor=0)y(@Manivela=7);1;0)
+end
+Componente No Visual
+  id=GA80090072_1
+  funcion=21
+  art=80090072
+  desc=Manivela extra lacada gancho zincado 1,40 m blanco
+  tipo_ctrl=0
+  Despiece=0
+  TipoCurva=0
+  AngCorteI=0
+  AngCorteD=0
+  Centro=0
+  TipoTarifa=1
+  f_cant=si((@Motor=0)y(@Manivela=8);1;0)
+end
+Componente No Visual
+  id=GA80090010_1
+  funcion=21
+  art=80090010
+  desc=Manivela extra lacada gancho zincado 1,50 m blanco
+  tipo_ctrl=0
+  color=Blanco
+  Despiece=1
+  TipoCurva=0
+  AngCorteI=0
+  AngCorteD=0
+  Centro=0
+  TipoTarifa=2
+  f_cant=si((@Motor=0)y(@Manivela=2);1;0)
+  ap_prec_inc=1
+end
+Componente No Visual
+  id=GA80090012_1
+  funcion=21
+  art=80090012
+  desc=Manivela extra lacada gancho zincado 2,00 m blanco
+  tipo_ctrl=0
+  color=Blanco
+  Despiece=1
+  TipoCurva=0
+  AngCorteI=0
+  AngCorteD=0
+  Centro=0
+  TipoTarifa=2
+  f_cant=si((@Motor=0)y(@Manivela=3);1;0)
+  ap_prec_inc=1
+end
+Componente No Visual
+  id=GA80090014_1
+  funcion=21
+  art=80090014
+  desc=Manivela extra lacada gancho zincado 2,40 m blanco
+  tipo_ctrl=0
+  color=Blanco
+  Despiece=1
+  TipoCurva=0
+  AngCorteI=0
+  AngCorteD=0
+  Centro=0
+  TipoTarifa=2
+  f_cant=si((@Motor=0)y(@Manivela=4);1;0)
+  ap_prec_inc=1
+end
+Componente No Visual
+  id=G77LONA_1
+  funcion=18
+  art=G77LONA
+  desc=Lona
+  tipo_ctrl=0
+  eDim1=234.7
+  eDim2=394
+  Despiece=1
+  TipoCurva=0
+  AngCorteI=0
+  AngCorteD=0
+  Centro=0
+  TipoTarifa=2
+  f_cant=1
+  f_Dim1=(@MedidaBrazo*2)+30+@MedidaFaldon+4.7
+  f_Dim2=si(@motor=0;Dim1-9,5;dim1-6)
+  desccomp=1
+  ap_prec_inc=1
+end
+Componente No Visual
+  id=G77FONDAS_1
+  funcion=25
+  art=G77FONDAS
+  desc=Faldón tipo ondas
+  tipo_ctrl=0
+  color=Blanco
+  Despiece=1
+  TipoCurva=0
+  AngCorteI=0
+  AngCorteD=0
+  Centro=0
+  TipoTarifa=2
+  f_cant=@MedidaFaldon+4.7
+  desccomplista=1
+  ap_prec_inc=1
+end
+Componente No Visual
+  id=G77ACCDER_1
+  art=G77ACCDER
+  desc=Accionamiento derecha
+  tipo_ctrl=0
+  color=Blanco
+  Despiece=1
+  TipoCurva=0
+  AngCorteI=0
+  AngCorteD=0
+  Centro=0
+  TipoTarifa=2
+  f_cant=@PosicionMando=1
+  desccomp=1
+  ap_prec_inc=1
+end
+Componente No Visual
+  id=G77ACCIZD_1
+  art=G77ACCIZD
+  desc=Accionamiento izquierda
+  tipo_ctrl=0
+  color=Blanco
+  Despiece=1
+  TipoCurva=0
+  AngCorteI=0
+  AngCorteD=0
+  Centro=0
+  TipoTarifa=2
+  f_cant=@PosicionMando=2
+  desccomp=1
+  ap_prec_inc=1
+end
+Componente No Visual
+  id=G77FRONTALT_1
+  art=G77FRONTALT
+  desc=Instalacion Frontal - Techo
+  tipo_ctrl=0
+  color=Blanco
+  Despiece=1
+  TipoCurva=0
+  AngCorteI=0
+  AngCorteD=0
+  Centro=0
+  TipoTarifa=2
+  f_cant=@TipoInstalacion=1
+  desccomp=1
+  ap_prec_inc=1
+end
+Componente No Visual
+  id=G77TECHO_1
+  art=G77TECHO
+  desc=Instalacion Techo
+  tipo_ctrl=0
+  color=Blanco
+  Despiece=1
+  TipoCurva=0
+  AngCorteI=0
+  AngCorteD=0
+  Centro=0
+  TipoTarifa=2
+  f_cant=@TipoInstalacion=2
+  desccomp=1
+  ap_prec_inc=1
+end
+Componente No Visual
+  id=G77FRONTAL_1
+  art=G77FRONTAL
+  desc=Instalacion Frontal
+  tipo_ctrl=0
+  color=Blanco
+  Despiece=1
+  TipoCurva=0
+  AngCorteI=0
+  AngCorteD=0
+  Centro=0
+  TipoTarifa=2
+  f_cant=@TipoInstalacion=3
+  desccomp=1
+  ap_prec_inc=1
+end
+Componente No Visual
+  id=HRAET45151700_1
+  funcion=13
+  art=HRAET45151700
+  desc=Motor Blue Wawe L45 15/17
+  tipo_ctrl=0
+  color=Blanco
+  Despiece=1
+  TipoCurva=0
+  AngCorteI=0
+  AngCorteD=0
+  Centro=0
+  TipoTarifa=1
+  f_cant=@motor=2
+  desccomp=1
+end
+Componente No Visual
+  id=HRAME45151700_1
+  funcion=13
+  art=HRAME45151700
+  desc=Motor Blue Garda L45 15/17
+  tipo_ctrl=0
+  color=Blanco
+  Despiece=1
+  TipoCurva=0
+  AngCorteI=0
+  AngCorteD=0
+  Centro=0
+  TipoTarifa=1
+  f_cant=@Motor=1
+  desccomp=1
+end
+Componente No Visual
+  id=HRA530031_1
+  art=HRA530031
+  desc=Emisor Skipper
+  tipo_ctrl=0
+  color=Blanco
+  Despiece=0
+  TipoCurva=0
+  AngCorteI=0
+  AngCorteD=0
+  Centro=0
+  TipoTarifa=1
+  f_cant=(@TipoEmisor=1)y(@motor=2)
+  desccomp=1
+end
+Componente No Visual
+  id=HRA530037_1
+  art=HRA530037
+  desc=Emisor Skipper Black
+  tipo_ctrl=0
+  color=Blanco
+  Despiece=0
+  TipoCurva=0
+  AngCorteI=0
+  AngCorteD=0
+  Centro=0
+  TipoTarifa=1
+  f_cant=(@TipoEmisor=2)y(@motor=2)
+  desccomp=1
+end
+Componente No Visual
+  id=HRA530032_1
+  art=HRA530032
+  desc=Emisor Skipper Lux
+  tipo_ctrl=0
+  color=Blanco
+  Despiece=0
+  TipoCurva=0
+  AngCorteI=0
+  AngCorteD=0
+  Centro=0
+  TipoTarifa=1
+  f_cant=(@TipoEmisor=5)y(@motor=2)
+  desccomp=1
+end
+Componente No Visual
+  id=HRA530038_1
+  art=HRA530038
+  desc=Emisor Skipper Lux Black
+  tipo_ctrl=0
+  color=Blanco
+  Despiece=0
+  TipoCurva=0
+  AngCorteI=0
+  AngCorteD=0
+  Centro=0
+  TipoTarifa=1
+  f_cant=(@TipoEmisor=6)y(@motor=2)
+  desccomp=1
+end
+Componente No Visual
+  id=HRA530033_1
+  art=HRA530033
+  desc=Emisor Skipper Plus
+  tipo_ctrl=0
+  color=Blanco
+  Despiece=0
+  TipoCurva=0
+  AngCorteI=0
+  AngCorteD=0
+  Centro=0
+  TipoTarifa=1
+  f_cant=(@TipoEmisor=3)y(@motor=2)
+  desccomp=1
+end
+Componente No Visual
+  id=HRA530039_1
+  art=HRA530039
+  desc=Emisor Skipper Plus Black
+  tipo_ctrl=0
+  color=Blanco
+  Despiece=0
+  TipoCurva=0
+  AngCorteI=0
+  AngCorteD=0
+  Centro=0
+  TipoTarifa=1
+  f_cant=(@TipoEmisor=4)y(@motor=2)
+  desccomp=1
+end
+Componente No Visual
+  id=HRA530034_1
+  art=HRA530034
+  desc=Emisor Skipper P-Lux
+  tipo_ctrl=0
+  color=Blanco
+  Despiece=0
+  TipoCurva=0
+  AngCorteI=0
+  AngCorteD=0
+  Centro=0
+  TipoTarifa=1
+  f_cant=(@TipoEmisor=7)y(@motor=2)
+  desccomp=1
+end
+Componente No Visual
+  id=HRA530040_1
+  art=HRA530040
+  desc=Emisor Skipper P-Lux Black
+  tipo_ctrl=0
+  color=Blanco
+  Despiece=0
+  TipoCurva=0
+  AngCorteI=0
+  AngCorteD=0
+  Centro=0
+  TipoTarifa=1
+  f_cant=(@TipoEmisor=8)y(@motor=2)
+  desccomp=1
+end
+Componente No Visual
+  id=HRA530063L_1
+  art=HRA530063L
+  desc=Emisor Skipper Senso
+  tipo_ctrl=0
+  color=Blanco
+  Despiece=0
+  TipoCurva=0
+  AngCorteI=0
+  AngCorteD=0
+  Centro=0
+  TipoTarifa=1
+  f_cant=(@TipoEmisor=9)y(@motor=2)
+  desccomp=1
+end
+
+class=TEstRelleno
+  x=0
+  y=0
+  w=100
+  h=400
+end
+

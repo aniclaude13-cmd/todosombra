@@ -1,0 +1,144 @@
+{
+  "id": "ART3100",
+  "nombre": "Toldo de brazo invisible",
+  "tipo": "toldo_brazo",
+  "version": "2025.09",
+  "fuente": {
+    "abd": "ART3100.abd"
+  },
+  "dimensiones": {
+    "linea": {
+      "min": 200,
+      "max": 600,
+      "valores": []
+    },
+    "salida": {
+      "min": 150,
+      "max": 350,
+      "valores": []
+    }
+  },
+  "tarifa": {
+    "matriz": {}
+  },
+  "motores": [
+    {
+      "id": "manual",
+      "nombre": "Manivela",
+      "recargo": 0,
+      "familia": "manual"
+    },
+    {
+      "id": "somfy_motor_lt",
+      "nombre": "Somfy Motor Lt",
+      "recargo": 0,
+      "familia": "somfy"
+    },
+    {
+      "id": "somfy_motor_rts",
+      "nombre": "Somfy Motor Rts",
+      "recargo": 0,
+      "familia": "somfy"
+    },
+    {
+      "id": "somfy_motor_io",
+      "nombre": "Somfy Motor Io",
+      "recargo": 0,
+      "familia": "somfy"
+    },
+    {
+      "id": "somfy_motor_tubelite",
+      "nombre": "Somfy Motor Tubelite",
+      "recargo": 0,
+      "familia": "somfy"
+    },
+    {
+      "id": "cherubini_motor_mecanico",
+      "nombre": "Cherubini Motor Mecanico",
+      "recargo": 0,
+      "familia": "cherubini"
+    },
+    {
+      "id": "cherubini_motor_wave_rx_radio",
+      "nombre": "Cherubini Motor Wave Rx Radio",
+      "recargo": 0,
+      "familia": "cherubini"
+    },
+    {
+      "id": "gaviota_motor_gs_mecanico",
+      "nombre": "Gaviota Motor Gs Mecanico",
+      "recargo": 0,
+      "familia": "gaviota"
+    },
+    {
+      "id": "gaviota_motor_elite_radio",
+      "nombre": "Gaviota Motor Elite Radio",
+      "recargo": 0,
+      "familia": "gaviota"
+    },
+    {
+      "id": "gaviota_motor_tubelite",
+      "nombre": "Gaviota Motor Tubelite",
+      "recargo": 0,
+      "familia": "gaviota"
+    },
+    {
+      "id": "aok_motor_mecanico",
+      "nombre": "Aok Motor Mecanico",
+      "recargo": 0,
+      "familia": "aok"
+    },
+    {
+      "id": "aok_motor_radio",
+      "nombre": "Aok Motor Radio",
+      "recargo": 0,
+      "familia": "aok"
+    }
+  ],
+  "reglas": [
+    {
+      "id": "linea_min",
+      "descripcion": "Línea mínima del modelo",
+      "efecto": "bloqueo",
+      "mensaje": "Línea mínima del ART3100: 200 cm.",
+      "condicion": {
+        "linea": {
+          "lt": 200
+        }
+      }
+    },
+    {
+      "id": "linea_max",
+      "descripcion": "Línea máxima del modelo",
+      "efecto": "bloqueo",
+      "mensaje": "Línea máxima del ART3100: 600 cm.",
+      "condicion": {
+        "linea": {
+          "gt": 600
+        }
+      }
+    },
+    {
+      "id": "salida_min",
+      "descripcion": "Salida mínima del modelo",
+      "efecto": "bloqueo",
+      "mensaje": "Salida mínima del ART3100: 150 cm.",
+      "condicion": {
+        "salida": {
+          "lt": 150
+        }
+      }
+    },
+    {
+      "id": "salida_max",
+      "descripcion": "Salida máxima del modelo",
+      "efecto": "bloqueo",
+      "mensaje": "Salida máxima del ART3100: 350 cm.",
+      "condicion": {
+        "salida": {
+          "gt": 350
+        }
+      }
+    }
+  ]
+}

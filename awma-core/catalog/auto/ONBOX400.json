@@ -1,0 +1,69 @@
+{
+  "id": "ONBOX400",
+  "nombre": "Toldo Onbox 400",
+  "tipo": "toldo_cofre",
+  "version": "2025.09",
+  "fuente": {
+    "abd": "+ONBOX400.abd"
+  },
+  "dimensiones": {
+    "linea": {
+      "min": 0,
+      "max": 0,
+      "valores": []
+    },
+    "salida": {
+      "min": 0,
+      "max": 0,
+      "valores": []
+    }
+  },
+  "tarifa": {
+    "matriz": {}
+  },
+  "motores": [
+    {
+      "id": "somfy_no",
+      "nombre": "Somfy No",
+      "recargo": 0,
+      "familia": "somfy"
+    },
+    {
+      "id": "somfy_rts",
+      "nombre": "Somfy Rts",
+      "recargo": 0,
+      "familia": "somfy"
+    },
+    {
+      "id": "somfy_io",
+      "nombre": "Somfy Io",
+      "recargo": 0,
+      "familia": "somfy"
+    },
+    {
+      "id": "somfy_wt",
+      "nombre": "Somfy Wt",
+      "recargo": 0,
+      "familia": "somfy"
+    },
+    {
+      "id": "somfy_t_h_70",
+      "nombre": "Somfy T/H 70",
+      "recargo": 0,
+      "familia": "somfy"
+    },
+    {
+      "id": "cherubini_no",
+      "nombre": "Cherubini No",
+      "recargo": 0,
+      "familia": "cherubini"
+    },
+    {
+      "id": "cherubini_s",
+      "nombre": "Cherubini Sí",
+      "recargo": 0,
+      "familia": "cherubini"
+    }
+  ],
+  "reglas": []
+}
