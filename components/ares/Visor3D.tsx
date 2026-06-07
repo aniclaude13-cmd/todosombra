@@ -139,63 +139,96 @@ function useFloorTexture(): THREE.CanvasTexture {
 function ToldoAres({ lineaCm, salidaCm, colorTela = '#dcd1b8', colorAluminio = '#f1f1ed', extensionRatio = 1 }: Props) {
   const linea = lineaCm * CM;
   const salida = salidaCm * CM;
-  const cofreAlto = 0.18;
-  const cofreFondo = 0.19;
-  const brazoRadius = 0.022;
-  const jointRadius = 0.032;
-  const tuboRadius = 0.035;
+  // Cofre fino y aerodinámico (BOX6100)
+  const cofreAlto = 0.13;
+  const cofreFondo = 0.16;
+  const brazoRadius = 0.019;
+  const jointRadius = 0.028;
+  const tuboRadius = 0.032;
+  const faldonAlto = 0.16;
 
-  const segmento1Largo = salida * 0.52;
-  const segmento2Largo = salida * 0.48;
-  const shoulderX = linea / 2 - 0.22;
-  const shoulderY = -cofreAlto / 2 - 0.07;  // 7cm bajo el cofre → brazos bajo la lona
-  const shoulderZ = cofreFondo;              // articulan desde la cara frontal del cofre
+  // Inclinación realista de la lona (13° hacia abajo: escurre agua)
+  const slope = THREE.MathUtils.degToRad(13);
+
+  // Brazos: dos segmentos iguales de longitud exacta salida/2.
+  // Al estar el hombro desplazado 25mm en dirección normal-al-tejido (debajo de
+  // la lona), la cuerda hombro→tip coincide con la dirección de la pendiente
+  // y el brazo queda perfectamente recto al abrir (codo 0°).
+  const L_arm = salida / 2;
+  const segmento1Largo = L_arm;
+  const segmento2Largo = L_arm;
+  const shoulderX = linea / 2 - 0.16;
+  const lonaStartY = -cofreAlto / 2;
+  const lonaStartZ = cofreFondo;
+  // Hombro: 25mm por debajo de la superficie inclinada de la lona, en el borde frontal del cofre
+  const armOffsetNormal = 0.025;
+  const shoulderY = lonaStartY - armOffsetNormal * Math.cos(slope);
+  const shoulderZ = lonaStartZ - armOffsetNormal * Math.sin(slope);
 
   const r = THREE.MathUtils.clamp(extensionRatio, 0, 1);
 
-  // Cinematica del pantografo (toldo cofre real):
-  // - Los brazos van por debajo del tejido (bajo la lona): shoulder Y es negativo (bajo cofre)
-  // - Se pliegan en el plano vertical hacia el centro: segmento 1 se eleva, segmento 2 se pliega
-  // - Al cerrar, ambos se rotan hacia arriba (+pitch) y hacia adentro (-elbow) hasta ocultarse completamente en el cofre
-  // - El tip describe una línea casi recta horizontal que se acerca al cofre
-  // - El perfil de carga (barra frontal) mantiene su longitud (= ancho del toldo)
-  const pitchOpen = THREE.MathUtils.degToRad(-6);   // abierto: caída suficiente para quedar bajo la lona
-  const pitchClosed = THREE.MathUtils.degToRad(82); // cerrado: brazo casi vertical, se oculta en el cofre
-  const pitch1 = pitchOpen * r + pitchClosed * (1 - r);
-  const elbowAngle = (1 - r) * THREE.MathUtils.degToRad(-176); // 0 = recto, -176 = plegado total
+  // Cinemática realista: el codo SIEMPRE se pliega HACIA ABAJO (por debajo del tejido),
+  // nunca hacia arriba. Esto evita el efecto "muelle" y simula un brazo articulado real.
+  //
+  // - phi: ángulo de desviación del codo respecto a la línea recta hombro-tip.
+  //   phi=0  → brazo totalmente recto (extendido).
+  //   phi→90°→ brazo totalmente plegado (codo justo debajo del hombro).
+  // - smoothstep mantiene el brazo casi recto hasta r~0.7 y empieza a plegar
+  //   progresivamente, sin flexiones bruscas. Movimiento suave y natural.
+  // - pitch1 = slope + phi: el primer segmento se inclina MÁS hacia abajo
+  //   (codo desciende por debajo de la lona).
+  // - elbowAngle = -2*phi: el segundo segmento gira en sentido contrario
+  //   para alcanzar la barra frontal, formando una "V" invertida bajo el tejido.
+  const phiMax = THREE.MathUtils.degToRad(82);
+  const closeProgress = THREE.MathUtils.smoothstep(1 - r, 0.20, 0.96);
+  const phi = closeProgress * phiMax;
+  const pitch1 = slope + phi;
+  const elbowAngle = -2 * phi;
 
-  // Posicion del tip en coordenadas locales del shoulder
-  const totalPitch = pitch1 + elbowAngle;
-  const tipLocalY = Math.sin(pitch1) * segmento1Largo + Math.sin(totalPitch) * segmento2Largo;
-  const tipLocalZ = Math.cos(pitch1) * segmento1Largo + Math.cos(totalPitch) * segmento2Largo;
+  // Cinemática directa: posición del tip
+  const seg1EndY = -L_arm * Math.sin(pitch1);
+  const seg1EndZ = L_arm * Math.cos(pitch1);
 
-  // Sin yaw: el tip esta en el mismo plano X que el hombro
-  const tipX_der = shoulderX;
+  const pitch2 = pitch1 + elbowAngle; // = slope - phi
+  const tipLocalY = seg1EndY - L_arm * Math.sin(pitch2);
+  const tipLocalZ = seg1EndZ + L_arm * Math.cos(pitch2);
+
+  // Yaw (cierre horizontal): solo en el último tramo del cierre, para que los brazos
+  // se metan paralelos a la pared dentro del cofre.
+  const yawProgress = THREE.MathUtils.clamp((0.10 - r) / 0.08, 0, 1);
+  const yawMag = THREE.MathUtils.degToRad(85) * yawProgress;
+
+  // Aplicar yaw al tip (rotación alrededor de Y). Brazo derecho yaw negativo, izquierdo positivo.
+  // Por simetría ambos tips quedan a la misma Y/Z pero X simétrica.
+  const cy = Math.cos(yawMag);
+  const sy = Math.sin(yawMag);
+  // tip del brazo derecho (lado +X): rotación de yaw negativo del vector (0, tipLocalY, tipLocalZ)
+  // x_local rotado = tipLocalZ * sin(-yawMag) = -tipLocalZ * sy
+  const tipX_der = shoulderX - tipLocalZ * sy;
   const tipY = shoulderY + tipLocalY;
-  const tipZ = Math.max(cofreFondo + 0.005, shoulderZ + tipLocalZ);
+  const tipZ = shoulderZ + tipLocalZ * cy;
 
-  // El perfil de carga conserva su longitud (= ancho del toldo menos pequenos margenes)
-  const frontBarLength = Math.max(0.08, 2 * tipX_der + 0.04);
-  const frontBarVisible = r > 0.06;
-  // Brazos se ocultan gradualmente al cerrar: fade-out entre 15% y 5% de extensión, desaparecen completamente al <5%
-  const armOpacity = r > 0.15 ? 1 : (r > 0.05 ? (r - 0.05) / 0.1 : 0);
-  const armVisible = r > 0.05;
+  const frontBarLength = Math.max(0.04, 2 * tipX_der + 0.04);
+  const frontBarVisible = r > 0.04;
+  const armOpacity = r > 0.15 ? 1 : Math.max(0, (r - 0.04) / 0.11);
+  const armVisible = r > 0.04;
 
   const telaTexture = useFabricTexture(colorTela, lineaCm, salidaCm);
   const wallTexture = useWallTexture();
   const floorTexture = useFloorTexture();
 
-  // Lona: de la base del cofre hasta el perfil de carga.
-  const lonaStartY = -cofreAlto / 2;
-  const lonaStartZ = cofreFondo;
-  const lonaDY = (tipY + 0.028) - lonaStartY; // lona termina en la cima del perfil de carga, no en su centro
+  // Lona: desde la base del cofre hasta el perfil de carga (cima de la barra)
+  const lonaDY = (tipY + 0.020) - lonaStartY;
   const lonaDZ = Math.max(0.001, tipZ - lonaStartZ);
   const lonaLength = Math.sqrt(lonaDY * lonaDY + lonaDZ * lonaDZ);
   const lonaWidth = Math.max(0.05, frontBarLength - 0.04);
-  // Inclinacion en X: orientar el plano horizontal hacia el tip (cae si tip esta por debajo)
   const lonaTiltX = Math.atan2(-lonaDY, lonaDZ);
   const telaOpacity = r > 0.05 ? 1 : r * 20;
   const lonaVisible = r > 0.04 && lonaLength > 0.05;
+
+  // Faldón frontal: cae vertical desde la barra
+  const faldonVisible = r > 0.15;
+  const faldonOpacity = r > 0.3 ? 1 : Math.max(0, (r - 0.15) / 0.15);
 
   // Shared material props for spread
   const aluProps = {
@@ -258,46 +291,55 @@ function ToldoAres({ lineaCm, salidaCm, colorTela = '#dcd1b8', colorAluminio = '
         </mesh>
       )}
 
-      {/* Brazos articulados: por debajo de la lona, se ocultan al cerrar */}
-      {armVisible && [-shoulderX, shoulderX].map((x, i) => (
-        <group key={i} position={[x, shoulderY, shoulderZ]} opacity={armOpacity}>
-          {/* Esfera del hombro */}
-          <mesh castShadow>
-            <sphereGeometry args={[jointRadius, 16, 16]} />
-            <meshPhysicalMaterial {...aluProps} transparent opacity={armOpacity} />
-          </mesh>
-          {/* Segmento 1: pitch en X */}
-          <group rotation={[pitch1, 0, 0]}>
-            <mesh position={[0, 0, segmento1Largo / 2]} rotation={[Math.PI / 2, 0, 0]} castShadow>
-              <cylinderGeometry args={[brazoRadius, brazoRadius, segmento1Largo, 16]} />
+      {/* Brazos articulados: yaw (pliega hacia el centro) → pitch → codo */}
+      {armVisible && ([-1, 1] as const).map((side, i) => {
+        // Brazo derecho (side=+1): yaw negativo (rota hacia -X, el centro)
+        // Brazo izquierdo (side=-1): yaw positivo
+        const yawSigned = -side * yawMag;
+        return (
+          <group key={i} position={[side * shoulderX, shoulderY, shoulderZ]}>
+            {/* Esfera del hombro */}
+            <mesh castShadow>
+              <sphereGeometry args={[jointRadius, 16, 16]} />
               <meshPhysicalMaterial {...aluProps} transparent opacity={armOpacity} />
             </mesh>
-            {/* Codo articulado */}
-            <group position={[0, 0, segmento1Largo]}>
-              <mesh castShadow>
-                <sphereGeometry args={[jointRadius, 16, 16]} />
-                <meshPhysicalMaterial {...aluProps} transparent opacity={armOpacity} />
-              </mesh>
-              <group rotation={[elbowAngle, 0, 0]}>
-                <mesh position={[0, 0, segmento2Largo / 2]} rotation={[Math.PI / 2, 0, 0]} castShadow>
-                  <cylinderGeometry args={[brazoRadius, brazoRadius, segmento2Largo, 16]} />
+            {/* Rotación yaw (alrededor de Y) — pliega el brazo hacia el centro al cerrar */}
+            <group rotation={[0, yawSigned, 0]}>
+              {/* Pitch (inclinación vertical) */}
+              <group rotation={[pitch1, 0, 0]}>
+                {/* Segmento 1 */}
+                <mesh position={[0, 0, segmento1Largo / 2]} rotation={[Math.PI / 2, 0, 0]} castShadow>
+                  <cylinderGeometry args={[brazoRadius, brazoRadius, segmento1Largo, 16]} />
                   <meshPhysicalMaterial {...aluProps} transparent opacity={armOpacity} />
                 </mesh>
+                {/* Codo articulado */}
+                <group position={[0, 0, segmento1Largo]}>
+                  <mesh castShadow>
+                    <sphereGeometry args={[jointRadius, 16, 16]} />
+                    <meshPhysicalMaterial {...aluProps} transparent opacity={armOpacity} />
+                  </mesh>
+                  <group rotation={[elbowAngle, 0, 0]}>
+                    <mesh position={[0, 0, segmento2Largo / 2]} rotation={[Math.PI / 2, 0, 0]} castShadow>
+                      <cylinderGeometry args={[brazoRadius, brazoRadius, segmento2Largo, 16]} />
+                      <meshPhysicalMaterial {...aluProps} transparent opacity={armOpacity} />
+                    </mesh>
+                  </group>
+                </group>
               </group>
             </group>
           </group>
-        </group>
-      ))}
+        );
+      })}
 
-      {/* Perfil de carga (barra frontal): conecta los tips de los dos brazos. Se oculta cuando esta cerrado dentro del cofre. */}
+      {/* Perfil de carga (barra frontal): conecta los tips de los dos brazos */}
       {frontBarVisible && (
         <mesh position={[0, tipY, tipZ]} rotation={[0, 0, Math.PI / 2]} castShadow>
-          <cylinderGeometry args={[0.028, 0.028, frontBarLength, 24]} />
+          <cylinderGeometry args={[0.024, 0.024, frontBarLength, 24]} />
           <meshPhysicalMaterial {...aluProps} />
         </mesh>
       )}
 
-      {/* Lona: del cofre al perfil de carga. Se recoge a la vez que los brazos. */}
+      {/* Lona: del cofre al perfil de carga, inclinada hacia abajo */}
       {lonaVisible && (
         <group position={[0, lonaStartY, lonaStartZ]} rotation={[lonaTiltX, 0, 0]}>
           <mesh position={[0, 0, lonaLength / 2]} rotation={[-Math.PI / 2, 0, 0]} castShadow receiveShadow>
@@ -305,6 +347,17 @@ function ToldoAres({ lineaCm, salidaCm, colorTela = '#dcd1b8', colorAluminio = '
             <meshStandardMaterial {...telaMapProps} transparent opacity={telaOpacity} />
           </mesh>
         </group>
+      )}
+
+      {/* Faldón frontal: cae vertical desde el perfil de carga */}
+      {faldonVisible && (
+        <mesh
+          position={[0, tipY - faldonAlto / 2, tipZ + 0.005]}
+          castShadow
+        >
+          <planeGeometry args={[Math.max(0.05, frontBarLength - 0.08), faldonAlto]} />
+          <meshStandardMaterial {...telaMapProps} transparent opacity={telaOpacity * faldonOpacity} />
+        </mesh>
       )}
 
       {/* Sombra proyectada en el suelo */}
@@ -322,7 +375,7 @@ export default function Visor3D(props: Props) {
   return (
     <div className="w-full h-full bg-gradient-to-b from-sky-50 to-sky-200 rounded-xl overflow-hidden">
       <Canvas
-        camera={{ position: [2.8, 1.8, 5.2], fov: 42 }}
+        camera={{ position: [3.4, 4.6, 5.8], fov: 42 }}
         shadows
         gl={{ antialias: true, toneMapping: THREE.ACESFilmicToneMapping, toneMappingExposure: 1.15 }}
       >
@@ -346,7 +399,7 @@ export default function Visor3D(props: Props) {
             enablePan={false}
             minDistance={2.5}
             maxDistance={14}
-            target={[0, 1.8, 1.5]}
+            target={[0, 2.3, 1.3]}
             maxPolarAngle={Math.PI / 2.05}
           />
         </Suspense>
