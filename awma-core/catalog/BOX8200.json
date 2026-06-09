@@ -1,0 +1,242 @@
+{
+  "id": "BOX8200",
+  "nombre": "BOX8200",
+  "tipo": "toldo_cofre",
+  "version": "2026.1",
+  "fuente": {
+    "abd": "BOX8200.abd",
+    "tarifaPdf": "Tarifa-Awma-PVP-2026.pdf",
+    "paginaTarifa": 133
+  },
+  "dimensiones": {
+    "linea": {
+      "min": 200,
+      "max": 367,
+      "valores": [
+        200,
+        225,
+        258,
+        283,
+        309,
+        342,
+        367
+      ]
+    },
+    "salida": {
+      "min": 150,
+      "max": 300,
+      "valores": [
+        150,
+        175,
+        200,
+        225,
+        250,
+        275,
+        300
+      ]
+    }
+  },
+  "tarifa": {
+    "matriz": {
+      "200": {
+        "150": 3220
+      },
+      "225": {
+        "150": 3324,
+        "175": 3353
+      },
+      "258": {
+        "150": 3463,
+        "175": 3493,
+        "200": 3526
+      },
+      "283": {
+        "150": 3567,
+        "175": 3599,
+        "200": 3633,
+        "225": 3661
+      },
+      "309": {
+        "150": 3676,
+        "175": 3709,
+        "200": 3744,
+        "225": 3773,
+        "250": 3806
+      },
+      "342": {
+        "150": 3814,
+        "175": 3849,
+        "200": 3886,
+        "225": 3916,
+        "250": 3951,
+        "275": 3993
+      },
+      "367": {
+        "150": 3919,
+        "175": 3955,
+        "200": 3993,
+        "225": 4025,
+        "250": 4060,
+        "275": 4104,
+        "300": 4161
+      }
+    }
+  },
+  "motores": [
+    {
+      "id": "manual",
+      "nombre": "Manivela",
+      "recargo": 0,
+      "familia": "manual"
+    },
+    {
+      "id": "rts_30Nm",
+      "nombre": "Somfy RTS 30Nm",
+      "recargo": 215,
+      "familia": "somfy"
+    },
+    {
+      "id": "rts_40Nm",
+      "nombre": "Somfy RTS 40Nm",
+      "recargo": 240,
+      "familia": "somfy"
+    },
+    {
+      "id": "rts_50Nm",
+      "nombre": "Somfy RTS 50Nm",
+      "recargo": 295,
+      "familia": "somfy"
+    },
+    {
+      "id": "io_30Nm",
+      "nombre": "Somfy iO 30Nm",
+      "recargo": 320,
+      "familia": "somfy"
+    },
+    {
+      "id": "io_40Nm",
+      "nombre": "Somfy iO 40Nm",
+      "recargo": 345,
+      "familia": "somfy"
+    },
+    {
+      "id": "io_50Nm",
+      "nombre": "Somfy iO 50Nm",
+      "recargo": 400,
+      "familia": "somfy"
+    }
+  ],
+  "sobreprecios": [
+    {
+      "ref": "80080785",
+      "desc": "J. Brazos INV. Premium 1,50",
+      "precio": 286.24,
+      "categoria": "brazo"
+    },
+    {
+      "ref": "80080795",
+      "desc": "J. Brazos INV. Premium 1,75",
+      "precio": 301.36,
+      "categoria": "brazo"
+    },
+    {
+      "ref": "80080805",
+      "desc": "J. Brazos INV. Premium 2,00",
+      "precio": 318.53,
+      "categoria": "brazo"
+    },
+    {
+      "ref": "80080815",
+      "desc": "J. Brazos INV. Premium 2,25",
+      "precio": 329.79,
+      "categoria": "brazo"
+    },
+    {
+      "ref": "80080825",
+      "desc": "J. Brazos INV. Premium 2,50",
+      "precio": 344.37,
+      "categoria": "brazo"
+    },
+    {
+      "ref": "80080835",
+      "desc": "J. Brazos INV. Premium 2,75",
+      "precio": 367.46,
+      "categoria": "brazo"
+    },
+    {
+      "ref": "80080845",
+      "desc": "J. Brazos INV. Premium 3,00",
+      "precio": 402.89,
+      "categoria": "brazo"
+    },
+    {
+      "ref": "80130511",
+      "desc": "Soporte Techo ARES/IRIS Blanco",
+      "precio": 104.14,
+      "categoria": "soporte"
+    },
+    {
+      "ref": "80130512",
+      "desc": "Soporte Entre Paredes ARES/IRIS",
+      "precio": 114.56,
+      "categoria": "soporte"
+    }
+  ],
+  "reglas": [
+    {
+      "id": "linea_min",
+      "descripcion": "Línea mínima del modelo",
+      "efecto": "bloqueo",
+      "mensaje": "Línea mínima del BOX8200: 200 cm.",
+      "condicion": {
+        "linea": {
+          "lt": 200
+        }
+      }
+    },
+    {
+      "id": "linea_max",
+      "descripcion": "Línea máxima del modelo",
+      "efecto": "bloqueo",
+      "mensaje": "Línea máxima del BOX8200: 367 cm.",
+      "condicion": {
+        "linea": {
+          "gt": 367
+        }
+      }
+    },
+    {
+      "id": "salida_min",
+      "descripcion": "Salida mínima del modelo",
+      "efecto": "bloqueo",
+      "mensaje": "Salida mínima del BOX8200: 150 cm.",
+      "condicion": {
+        "salida": {
+          "lt": 150
+        }
+      }
+    },
+    {
+      "id": "salida_max",
+      "descripcion": "Salida máxima del modelo",
+      "efecto": "bloqueo",
+      "mensaje": "Salida máxima del BOX8200: 300 cm.",
+      "condicion": {
+        "salida": {
+          "gt": 300
+        }
+      }
+    },
+    {
+      "id": "tarifa_parcial",
+      "descripcion": "Extracción parcial del PDF — solo combinaciones medianas",
+      "efecto": "aviso",
+      "mensaje": "Tarifa cargada parcialmente para BOX8200. Para combinaciones grandes consultar fábrica.",
+      "condicion": {
+        "linea": {
+          "gte": 0
+        }
+      }
+    }
+  ]
+}

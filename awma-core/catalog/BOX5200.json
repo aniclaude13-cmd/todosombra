@@ -1,0 +1,313 @@
+{
+  "id": "BOX5200",
+  "nombre": "BOX5200",
+  "tipo": "toldo_cofre",
+  "version": "2026.1",
+  "fuente": {
+    "abd": "BOX5200.abd",
+    "tarifaPdf": "Tarifa-Awma-PVP-2026.pdf",
+    "paginaTarifa": 103
+  },
+  "dimensiones": {
+    "linea": {
+      "min": 128,
+      "max": 500,
+      "valores": [
+        128,
+        153,
+        178,
+        204,
+        237,
+        262,
+        287,
+        300,
+        325,
+        350,
+        375,
+        400,
+        425,
+        450,
+        475,
+        500
+      ]
+    },
+    "salida": {
+      "min": 100,
+      "max": 250,
+      "valores": [
+        100,
+        125,
+        150,
+        175,
+        200,
+        225,
+        250
+      ]
+    }
+  },
+  "tarifa": {
+    "matriz": {
+      "128": {
+        "100": 990
+      },
+      "153": {
+        "100": 1045,
+        "125": 1068
+      },
+      "178": {
+        "100": 1099,
+        "125": 1124,
+        "150": 1144
+      },
+      "204": {
+        "100": 1156,
+        "125": 1181,
+        "150": 1203,
+        "175": 1228
+      },
+      "237": {
+        "100": 1227,
+        "125": 1255,
+        "150": 1278,
+        "175": 1304,
+        "200": 1328
+      },
+      "262": {
+        "100": 1282,
+        "125": 1310,
+        "150": 1334,
+        "175": 1362,
+        "200": 1387,
+        "225": 1429
+      },
+      "287": {
+        "100": 1336,
+        "125": 1366,
+        "150": 1391,
+        "175": 1420,
+        "200": 1446,
+        "225": 1489,
+        "250": 1518
+      },
+      "300": {
+        "100": 1364,
+        "125": 1395,
+        "150": 1420,
+        "175": 1450,
+        "200": 1477,
+        "225": 1520,
+        "250": 1550
+      },
+      "325": {
+        "100": 1419,
+        "125": 1450,
+        "150": 1477,
+        "175": 1508,
+        "200": 1536,
+        "225": 1581,
+        "250": 1612
+      },
+      "350": {
+        "100": 1473,
+        "125": 1506,
+        "150": 1534,
+        "175": 1566,
+        "200": 1595,
+        "225": 1641,
+        "250": 1673
+      },
+      "375": {
+        "100": 1527,
+        "125": 1561,
+        "150": 1591,
+        "175": 1624,
+        "200": 1654,
+        "225": 1701,
+        "250": 1734
+      },
+      "400": {
+        "100": 1582,
+        "125": 1617,
+        "150": 1647,
+        "175": 1682,
+        "200": 1713,
+        "225": 1761,
+        "250": 1796
+      },
+      "425": {
+        "100": 1636,
+        "125": 1672,
+        "150": 1704,
+        "175": 1739,
+        "200": 1772
+      },
+      "450": {
+        "100": 1691,
+        "125": 1728,
+        "150": 1761,
+        "175": 1797,
+        "200": 1831
+      },
+      "475": {
+        "100": 1745,
+        "125": 1783,
+        "150": 1817,
+        "175": 1855,
+        "200": 1890
+      },
+      "500": {
+        "100": 1799,
+        "125": 1839,
+        "150": 1874,
+        "175": 1913,
+        "200": 1949
+      }
+    }
+  },
+  "motores": [
+    {
+      "id": "manual",
+      "nombre": "Manivela",
+      "recargo": 0,
+      "familia": "manual"
+    },
+    {
+      "id": "rts_30Nm",
+      "nombre": "Somfy RTS 30Nm",
+      "recargo": 215,
+      "familia": "somfy"
+    },
+    {
+      "id": "rts_40Nm",
+      "nombre": "Somfy RTS 40Nm",
+      "recargo": 240,
+      "familia": "somfy"
+    },
+    {
+      "id": "rts_50Nm",
+      "nombre": "Somfy RTS 50Nm",
+      "recargo": 295,
+      "familia": "somfy"
+    },
+    {
+      "id": "io_30Nm",
+      "nombre": "Somfy iO 30Nm",
+      "recargo": 320,
+      "familia": "somfy"
+    },
+    {
+      "id": "io_40Nm",
+      "nombre": "Somfy iO 40Nm",
+      "recargo": 345,
+      "familia": "somfy"
+    },
+    {
+      "id": "io_50Nm",
+      "nombre": "Somfy iO 50Nm",
+      "recargo": 400,
+      "familia": "somfy"
+    }
+  ],
+  "sobreprecios": [
+    {
+      "ref": "80081200",
+      "desc": "J. Brazos INV. SMART 1,00",
+      "precio": 216.15,
+      "categoria": "brazo"
+    },
+    {
+      "ref": "80081207",
+      "desc": "J. Brazos INV. SMART 1,25",
+      "precio": 231.3,
+      "categoria": "brazo"
+    },
+    {
+      "ref": "80081214",
+      "desc": "J. Brazos INV. SMART 1,50",
+      "precio": 241.84,
+      "categoria": "brazo"
+    },
+    {
+      "ref": "80081221",
+      "desc": "J. Brazos INV. SMART 1,75",
+      "precio": 256.29,
+      "categoria": "brazo"
+    },
+    {
+      "ref": "80081228",
+      "desc": "J. Brazos INV. SMART 2,00",
+      "precio": 268.0,
+      "categoria": "brazo"
+    },
+    {
+      "ref": "80081235",
+      "desc": "J. Brazos INV. SMART 2,25",
+      "precio": 296.4,
+      "categoria": "brazo"
+    },
+    {
+      "ref": "80081242",
+      "desc": "J. Brazos INV. SMART 2,50",
+      "precio": 311.07,
+      "categoria": "brazo"
+    },
+    {
+      "ref": "80130511",
+      "desc": "Soporte Techo ARES/IRIS Blanco",
+      "precio": 104.14,
+      "categoria": "soporte"
+    },
+    {
+      "ref": "80130512",
+      "desc": "Soporte Entre Paredes ARES/IRIS",
+      "precio": 114.56,
+      "categoria": "soporte"
+    }
+  ],
+  "reglas": [
+    {
+      "id": "linea_min",
+      "descripcion": "Línea mínima del modelo",
+      "efecto": "bloqueo",
+      "mensaje": "Línea mínima del BOX5200: 128 cm.",
+      "condicion": {
+        "linea": {
+          "lt": 128
+        }
+      }
+    },
+    {
+      "id": "linea_max",
+      "descripcion": "Línea máxima del modelo",
+      "efecto": "bloqueo",
+      "mensaje": "Línea máxima del BOX5200: 500 cm.",
+      "condicion": {
+        "linea": {
+          "gt": 500
+        }
+      }
+    },
+    {
+      "id": "salida_min",
+      "descripcion": "Salida mínima del modelo",
+      "efecto": "bloqueo",
+      "mensaje": "Salida mínima del BOX5200: 100 cm.",
+      "condicion": {
+        "salida": {
+          "lt": 100
+        }
+      }
+    },
+    {
+      "id": "salida_max",
+      "descripcion": "Salida máxima del modelo",
+      "efecto": "bloqueo",
+      "mensaje": "Salida máxima del BOX5200: 250 cm.",
+      "condicion": {
+        "salida": {
+          "gt": 250
+        }
+      }
+    }
+  ]
+}

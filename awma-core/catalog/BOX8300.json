@@ -1,0 +1,274 @@
+{
+  "id": "BOX8300",
+  "nombre": "BOX8300",
+  "tipo": "toldo_cofre",
+  "version": "2026.1",
+  "fuente": {
+    "abd": "BOX8300.abd",
+    "tarifaPdf": "Tarifa-Awma-PVP-2026.pdf",
+    "paginaTarifa": 136
+  },
+  "dimensiones": {
+    "linea": {
+      "min": 360,
+      "max": 888,
+      "valores": [
+        360,
+        411,
+        425,
+        475,
+        500,
+        526,
+        542,
+        601,
+        617,
+        650,
+        700,
+        725,
+        744,
+        845,
+        888
+      ]
+    },
+    "salida": {
+      "min": 300,
+      "max": 400,
+      "valores": [
+        300,
+        350,
+        400
+      ]
+    }
+  },
+  "tarifa": {
+    "matriz": {
+      "360": {
+        "300": 5852
+      },
+      "411": {
+        "300": 5931
+      },
+      "425": {
+        "300": 6138,
+        "350": 6256
+      },
+      "475": {
+        "300": 6213,
+        "350": 6336,
+        "400": 6467
+      },
+      "500": {
+        "300": 6286,
+        "350": 6410,
+        "400": 6540
+      },
+      "526": {
+        "300": 6537,
+        "350": 6666,
+        "400": 6802
+      },
+      "542": {
+        "300": 6560,
+        "350": 6689,
+        "400": 6825
+      },
+      "601": {
+        "300": 6742,
+        "350": 6877,
+        "400": 7017
+      },
+      "617": {
+        "300": 6903,
+        "350": 7037,
+        "400": 7178
+      },
+      "650": {
+        "300": 7066,
+        "350": 7206,
+        "400": 7352
+      },
+      "700": {
+        "300": 7186,
+        "350": 7329,
+        "400": 7479
+      },
+      "725": {
+        "300": 7712,
+        "350": 7855,
+        "400": 8005
+      },
+      "744": {
+        "300": 9345,
+        "350": 9532,
+        "400": 9728
+      },
+      "845": {
+        "300": 9781,
+        "350": 9974,
+        "400": 10177
+      },
+      "888": {
+        "300": 9982,
+        "350": 10181,
+        "400": 10389
+      }
+    }
+  },
+  "motores": [
+    {
+      "id": "manual",
+      "nombre": "Manivela",
+      "recargo": 0,
+      "familia": "manual"
+    },
+    {
+      "id": "rts_30Nm",
+      "nombre": "Somfy RTS 30Nm",
+      "recargo": 215,
+      "familia": "somfy"
+    },
+    {
+      "id": "rts_40Nm",
+      "nombre": "Somfy RTS 40Nm",
+      "recargo": 240,
+      "familia": "somfy"
+    },
+    {
+      "id": "rts_50Nm",
+      "nombre": "Somfy RTS 50Nm",
+      "recargo": 295,
+      "familia": "somfy"
+    },
+    {
+      "id": "io_30Nm",
+      "nombre": "Somfy iO 30Nm",
+      "recargo": 320,
+      "familia": "somfy"
+    },
+    {
+      "id": "io_40Nm",
+      "nombre": "Somfy iO 40Nm",
+      "recargo": 345,
+      "familia": "somfy"
+    },
+    {
+      "id": "io_50Nm",
+      "nombre": "Somfy iO 50Nm",
+      "recargo": 400,
+      "familia": "somfy"
+    }
+  ],
+  "sobreprecios": [
+    {
+      "ref": "80080785",
+      "desc": "J. Brazos INV. Premium 1,50",
+      "precio": 286.24,
+      "categoria": "brazo"
+    },
+    {
+      "ref": "80080795",
+      "desc": "J. Brazos INV. Premium 1,75",
+      "precio": 301.36,
+      "categoria": "brazo"
+    },
+    {
+      "ref": "80080805",
+      "desc": "J. Brazos INV. Premium 2,00",
+      "precio": 318.53,
+      "categoria": "brazo"
+    },
+    {
+      "ref": "80080815",
+      "desc": "J. Brazos INV. Premium 2,25",
+      "precio": 329.79,
+      "categoria": "brazo"
+    },
+    {
+      "ref": "80080825",
+      "desc": "J. Brazos INV. Premium 2,50",
+      "precio": 344.37,
+      "categoria": "brazo"
+    },
+    {
+      "ref": "80080835",
+      "desc": "J. Brazos INV. Premium 2,75",
+      "precio": 367.46,
+      "categoria": "brazo"
+    },
+    {
+      "ref": "80080845",
+      "desc": "J. Brazos INV. Premium 3,00",
+      "precio": 402.89,
+      "categoria": "brazo"
+    },
+    {
+      "ref": "80130511",
+      "desc": "Soporte Techo ARES/IRIS Blanco",
+      "precio": 104.14,
+      "categoria": "soporte"
+    },
+    {
+      "ref": "80130512",
+      "desc": "Soporte Entre Paredes ARES/IRIS",
+      "precio": 114.56,
+      "categoria": "soporte"
+    }
+  ],
+  "reglas": [
+    {
+      "id": "linea_min",
+      "descripcion": "Línea mínima del modelo",
+      "efecto": "bloqueo",
+      "mensaje": "Línea mínima del BOX8300: 360 cm.",
+      "condicion": {
+        "linea": {
+          "lt": 360
+        }
+      }
+    },
+    {
+      "id": "linea_max",
+      "descripcion": "Línea máxima del modelo",
+      "efecto": "bloqueo",
+      "mensaje": "Línea máxima del BOX8300: 888 cm.",
+      "condicion": {
+        "linea": {
+          "gt": 888
+        }
+      }
+    },
+    {
+      "id": "salida_min",
+      "descripcion": "Salida mínima del modelo",
+      "efecto": "bloqueo",
+      "mensaje": "Salida mínima del BOX8300: 300 cm.",
+      "condicion": {
+        "salida": {
+          "lt": 300
+        }
+      }
+    },
+    {
+      "id": "salida_max",
+      "descripcion": "Salida máxima del modelo",
+      "efecto": "bloqueo",
+      "mensaje": "Salida máxima del BOX8300: 400 cm.",
+      "condicion": {
+        "salida": {
+          "gt": 400
+        }
+      }
+    },
+    {
+      "id": "tarifa_parcial",
+      "descripcion": "Extracción parcial del PDF — solo combinaciones medianas",
+      "efecto": "aviso",
+      "mensaje": "Tarifa cargada parcialmente para BOX8300. Para combinaciones grandes consultar fábrica.",
+      "condicion": {
+        "linea": {
+          "gte": 0
+        }
+      }
+    }
+  ]
+}

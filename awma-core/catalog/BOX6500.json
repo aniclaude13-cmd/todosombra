@@ -1,0 +1,234 @@
+{
+  "id": "BOX6500",
+  "nombre": "BOX6500",
+  "tipo": "toldo_cofre",
+  "version": "2026.1",
+  "fuente": {
+    "abd": "BOX6500.abd",
+    "tarifaPdf": "Tarifa-Awma-PVP-2026.pdf",
+    "paginaTarifa": 127
+  },
+  "dimensiones": {
+    "linea": {
+      "min": 238,
+      "max": 600,
+      "valores": [
+        238,
+        289,
+        347,
+        397,
+        448,
+        500,
+        550,
+        600
+      ]
+    },
+    "salida": {
+      "min": 200,
+      "max": 400,
+      "valores": [
+        200,
+        250,
+        300,
+        350,
+        400
+      ]
+    }
+  },
+  "tarifa": {
+    "matriz": {
+      "238": {
+        "200": 2423
+      },
+      "289": {
+        "200": 2607,
+        "250": 2711
+      },
+      "347": {
+        "200": 2813,
+        "250": 2922,
+        "300": 3018
+      },
+      "397": {
+        "200": 2994,
+        "250": 3110,
+        "300": 3212,
+        "350": 3389
+      },
+      "448": {
+        "200": 3178,
+        "250": 3300,
+        "300": 3408,
+        "350": 3591,
+        "400": 3775
+      },
+      "500": {
+        "200": 3336,
+        "250": 3457,
+        "300": 3566,
+        "350": 3749,
+        "400": 3933
+      },
+      "550": {
+        "200": 3517,
+        "250": 3645,
+        "300": 3759,
+        "350": 3948,
+        "400": 4138
+      },
+      "600": {
+        "200": 3698,
+        "250": 3832,
+        "300": 3953,
+        "350": 4148,
+        "400": 4344
+      }
+    }
+  },
+  "motores": [
+    {
+      "id": "manual",
+      "nombre": "Manivela",
+      "recargo": 0,
+      "familia": "manual"
+    },
+    {
+      "id": "rts_30Nm",
+      "nombre": "Somfy RTS 30Nm",
+      "recargo": 215,
+      "familia": "somfy"
+    },
+    {
+      "id": "rts_40Nm",
+      "nombre": "Somfy RTS 40Nm",
+      "recargo": 240,
+      "familia": "somfy"
+    },
+    {
+      "id": "rts_50Nm",
+      "nombre": "Somfy RTS 50Nm",
+      "recargo": 295,
+      "familia": "somfy"
+    },
+    {
+      "id": "io_30Nm",
+      "nombre": "Somfy iO 30Nm",
+      "recargo": 320,
+      "familia": "somfy"
+    },
+    {
+      "id": "io_40Nm",
+      "nombre": "Somfy iO 40Nm",
+      "recargo": 345,
+      "familia": "somfy"
+    },
+    {
+      "id": "io_50Nm",
+      "nombre": "Somfy iO 50Nm",
+      "recargo": 400,
+      "familia": "somfy"
+    }
+  ],
+  "sobreprecios": [
+    {
+      "ref": "80080785",
+      "desc": "J. Brazos INV. Premium 1,50",
+      "precio": 286.24,
+      "categoria": "brazo"
+    },
+    {
+      "ref": "80080795",
+      "desc": "J. Brazos INV. Premium 1,75",
+      "precio": 301.36,
+      "categoria": "brazo"
+    },
+    {
+      "ref": "80080805",
+      "desc": "J. Brazos INV. Premium 2,00",
+      "precio": 318.53,
+      "categoria": "brazo"
+    },
+    {
+      "ref": "80080815",
+      "desc": "J. Brazos INV. Premium 2,25",
+      "precio": 329.79,
+      "categoria": "brazo"
+    },
+    {
+      "ref": "80080825",
+      "desc": "J. Brazos INV. Premium 2,50",
+      "precio": 344.37,
+      "categoria": "brazo"
+    },
+    {
+      "ref": "80080835",
+      "desc": "J. Brazos INV. Premium 2,75",
+      "precio": 367.46,
+      "categoria": "brazo"
+    },
+    {
+      "ref": "80080845",
+      "desc": "J. Brazos INV. Premium 3,00",
+      "precio": 402.89,
+      "categoria": "brazo"
+    },
+    {
+      "ref": "80130511",
+      "desc": "Soporte Techo ARES/IRIS Blanco",
+      "precio": 104.14,
+      "categoria": "soporte"
+    },
+    {
+      "ref": "80130512",
+      "desc": "Soporte Entre Paredes ARES/IRIS",
+      "precio": 114.56,
+      "categoria": "soporte"
+    }
+  ],
+  "reglas": [
+    {
+      "id": "linea_min",
+      "descripcion": "Línea mínima del modelo",
+      "efecto": "bloqueo",
+      "mensaje": "Línea mínima del BOX6500: 238 cm.",
+      "condicion": {
+        "linea": {
+          "lt": 238
+        }
+      }
+    },
+    {
+      "id": "linea_max",
+      "descripcion": "Línea máxima del modelo",
+      "efecto": "bloqueo",
+      "mensaje": "Línea máxima del BOX6500: 600 cm.",
+      "condicion": {
+        "linea": {
+          "gt": 600
+        }
+      }
+    },
+    {
+      "id": "salida_min",
+      "descripcion": "Salida mínima del modelo",
+      "efecto": "bloqueo",
+      "mensaje": "Salida mínima del BOX6500: 200 cm.",
+      "condicion": {
+        "salida": {
+          "lt": 200
+        }
+      }
+    },
+    {
+      "id": "salida_max",
+      "descripcion": "Salida máxima del modelo",
+      "efecto": "bloqueo",
+      "mensaje": "Salida máxima del BOX6500: 400 cm.",
+      "condicion": {
+        "salida": {
+          "gt": 400
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,283 @@
+{
+  "id": "BOX6000",
+  "nombre": "BOX6000",
+  "tipo": "toldo_cofre",
+  "version": "2026.1",
+  "fuente": {
+    "abd": "BOX6000.abd",
+    "tarifaPdf": "Tarifa-Awma-PVP-2026.pdf",
+    "paginaTarifa": 106
+  },
+  "dimensiones": {
+    "linea": {
+      "min": 151,
+      "max": 450,
+      "valores": [
+        151,
+        177,
+        202,
+        235,
+        260,
+        285,
+        300,
+        325,
+        350,
+        375,
+        400,
+        425,
+        450
+      ]
+    },
+    "salida": {
+      "min": 125,
+      "max": 250,
+      "valores": [
+        125,
+        150,
+        175,
+        200,
+        225,
+        250
+      ]
+    }
+  },
+  "tarifa": {
+    "matriz": {
+      "151": {
+        "125": 849
+      },
+      "177": {
+        "125": 896,
+        "150": 915
+      },
+      "202": {
+        "125": 942,
+        "150": 962,
+        "175": 986
+      },
+      "235": {
+        "125": 1003,
+        "150": 1024,
+        "175": 1049,
+        "200": 1071
+      },
+      "260": {
+        "125": 1049,
+        "150": 1071,
+        "175": 1097,
+        "200": 1121,
+        "225": 1159
+      },
+      "285": {
+        "125": 1095,
+        "150": 1119,
+        "175": 1146,
+        "200": 1170,
+        "225": 1210,
+        "250": 1237
+      },
+      "300": {
+        "125": 1123,
+        "150": 1147,
+        "175": 1174,
+        "200": 1200,
+        "225": 1240,
+        "250": 1268
+      },
+      "325": {
+        "125": 1169,
+        "150": 1194,
+        "175": 1223,
+        "200": 1249,
+        "225": 1290,
+        "250": 1319
+      },
+      "350": {
+        "125": 1215,
+        "150": 1241,
+        "175": 1271,
+        "200": 1298,
+        "225": 1341,
+        "250": 1371
+      },
+      "375": {
+        "125": 1261,
+        "150": 1288,
+        "175": 1319,
+        "200": 1347,
+        "225": 1391,
+        "250": 1422
+      },
+      "400": {
+        "125": 1307,
+        "150": 1335,
+        "175": 1367,
+        "200": 1397,
+        "225": 1441,
+        "250": 1474
+      },
+      "425": {
+        "125": 1353,
+        "150": 1382,
+        "175": 1415,
+        "200": 1446,
+        "225": 1492,
+        "250": 1525
+      },
+      "450": {
+        "125": 1399,
+        "150": 1429,
+        "175": 1464,
+        "200": 1495,
+        "225": 1542,
+        "250": 1576
+      }
+    }
+  },
+  "motores": [
+    {
+      "id": "manual",
+      "nombre": "Manivela",
+      "recargo": 0,
+      "familia": "manual"
+    },
+    {
+      "id": "rts_30Nm",
+      "nombre": "Somfy RTS 30Nm",
+      "recargo": 215,
+      "familia": "somfy"
+    },
+    {
+      "id": "rts_40Nm",
+      "nombre": "Somfy RTS 40Nm",
+      "recargo": 240,
+      "familia": "somfy"
+    },
+    {
+      "id": "rts_50Nm",
+      "nombre": "Somfy RTS 50Nm",
+      "recargo": 295,
+      "familia": "somfy"
+    },
+    {
+      "id": "io_30Nm",
+      "nombre": "Somfy iO 30Nm",
+      "recargo": 320,
+      "familia": "somfy"
+    },
+    {
+      "id": "io_40Nm",
+      "nombre": "Somfy iO 40Nm",
+      "recargo": 345,
+      "familia": "somfy"
+    },
+    {
+      "id": "io_50Nm",
+      "nombre": "Somfy iO 50Nm",
+      "recargo": 400,
+      "familia": "somfy"
+    }
+  ],
+  "sobreprecios": [
+    {
+      "ref": "80081200",
+      "desc": "J. Brazos INV. SMART 1,00",
+      "precio": 216.15,
+      "categoria": "brazo"
+    },
+    {
+      "ref": "80081207",
+      "desc": "J. Brazos INV. SMART 1,25",
+      "precio": 231.3,
+      "categoria": "brazo"
+    },
+    {
+      "ref": "80081214",
+      "desc": "J. Brazos INV. SMART 1,50",
+      "precio": 241.84,
+      "categoria": "brazo"
+    },
+    {
+      "ref": "80081221",
+      "desc": "J. Brazos INV. SMART 1,75",
+      "precio": 256.29,
+      "categoria": "brazo"
+    },
+    {
+      "ref": "80081228",
+      "desc": "J. Brazos INV. SMART 2,00",
+      "precio": 268.0,
+      "categoria": "brazo"
+    },
+    {
+      "ref": "80081235",
+      "desc": "J. Brazos INV. SMART 2,25",
+      "precio": 296.4,
+      "categoria": "brazo"
+    },
+    {
+      "ref": "80081242",
+      "desc": "J. Brazos INV. SMART 2,50",
+      "precio": 311.07,
+      "categoria": "brazo"
+    },
+    {
+      "ref": "80130511",
+      "desc": "Soporte Techo ARES/IRIS Blanco",
+      "precio": 104.14,
+      "categoria": "soporte"
+    },
+    {
+      "ref": "80130512",
+      "desc": "Soporte Entre Paredes ARES/IRIS",
+      "precio": 114.56,
+      "categoria": "soporte"
+    }
+  ],
+  "reglas": [
+    {
+      "id": "linea_min",
+      "descripcion": "Línea mínima del modelo",
+      "efecto": "bloqueo",
+      "mensaje": "Línea mínima del BOX6000: 151 cm.",
+      "condicion": {
+        "linea": {
+          "lt": 151
+        }
+      }
+    },
+    {
+      "id": "linea_max",
+      "descripcion": "Línea máxima del modelo",
+      "efecto": "bloqueo",
+      "mensaje": "Línea máxima del BOX6000: 450 cm.",
+      "condicion": {
+        "linea": {
+          "gt": 450
+        }
+      }
+    },
+    {
+      "id": "salida_min",
+      "descripcion": "Salida mínima del modelo",
+      "efecto": "bloqueo",
+      "mensaje": "Salida mínima del BOX6000: 125 cm.",
+      "condicion": {
+        "salida": {
+          "lt": 125
+        }
+      }
+    },
+    {
+      "id": "salida_max",
+      "descripcion": "Salida máxima del modelo",
+      "efecto": "bloqueo",
+      "mensaje": "Salida máxima del BOX6000: 250 cm.",
+      "condicion": {
+        "salida": {
+          "gt": 250
+        }
+      }
+    }
+  ]
+}

@@ -5,75 +5,357 @@
   "version": "2026.1",
   "fuente": {
     "abd": "BOX6110.abd",
-    "tarifaPdf": "Tarifa-Awma-PVP-2026.pdf"
+    "tarifaPdf": "Tarifa-Awma-PVP-2026.pdf",
+    "paginaTarifa": 115
   },
   "dimensiones": {
     "linea": {
-      "min": 179,
+      "min": 178,
       "max": 600,
-      "valores": []
+      "valores": [
+        178,
+        203,
+        236,
+        261,
+        287,
+        320,
+        345,
+        370,
+        395,
+        425,
+        450,
+        475,
+        500,
+        525,
+        550,
+        575,
+        600
+      ]
     },
     "salida": {
       "min": 150,
       "max": 400,
-      "valores": [125, 150, 175, 200, 225, 250, 275, 300, 325, 350]
+      "valores": [
+        150,
+        175,
+        200,
+        225,
+        250,
+        275,
+        300,
+        325,
+        350,
+        400
+      ]
     }
   },
   "tarifa": {
-    "matriz": {}
-  },
-  "motores": [
-    { "id": "manual", "nombre": "Manivela", "recargo": 0, "familia": "manual" },
-    { "id": "somfy_lt", "nombre": "Somfy LT", "recargo": 0, "familia": "somfy" },
-    { "id": "somfy_rts", "nombre": "Somfy RTS", "recargo": 0, "familia": "somfy" },
-    { "id": "somfy_io", "nombre": "Somfy iO", "recargo": 0, "familia": "somfy" },
-    { "id": "cherubini_mec", "nombre": "Cherubini Mecánico", "recargo": 0, "familia": "cherubini" }
-  ],
-  "brazos": {
-    "premium": {
-      "nombre": "Brazos Invisibles Premium",
-      "saltos_cm": [125, 150, 175, 200, 225, 250, 275, 300, 325, 350]
-    },
-    "concept350": {
-      "nombre": "Brazos Concept 350",
-      "saltos_cm": [150, 175, 200, 225, 250, 275, 300, 325, 350]
+    "matriz": {
+      "178": {
+        "150": 1221
+      },
+      "203": {
+        "150": 1280,
+        "175": 1305
+      },
+      "236": {
+        "150": 1358,
+        "175": 1384,
+        "200": 1413
+      },
+      "261": {
+        "150": 1417,
+        "175": 1444,
+        "200": 1474,
+        "225": 1498
+      },
+      "287": {
+        "150": 1478,
+        "175": 1507,
+        "200": 1537,
+        "225": 1562,
+        "250": 1591
+      },
+      "320": {
+        "150": 1556,
+        "175": 1586,
+        "200": 1618,
+        "225": 1644,
+        "250": 1674,
+        "275": 1712
+      },
+      "345": {
+        "150": 1614,
+        "175": 1646,
+        "200": 1679,
+        "225": 1707,
+        "250": 1737,
+        "275": 1776,
+        "300": 1826
+      },
+      "370": {
+        "150": 1673,
+        "175": 1706,
+        "200": 1740,
+        "225": 1769,
+        "250": 1801,
+        "275": 1841,
+        "300": 1892,
+        "325": 1928
+      },
+      "395": {
+        "150": 1732,
+        "175": 1765,
+        "200": 1801,
+        "225": 1831,
+        "250": 1864,
+        "275": 1905,
+        "300": 1958,
+        "325": 1995,
+        "350": 2055
+      },
+      "425": {
+        "150": 1803,
+        "175": 1837,
+        "200": 1874,
+        "225": 1906,
+        "250": 1940,
+        "275": 1982,
+        "300": 2036,
+        "325": 2075,
+        "350": 2136,
+        "400": 2472
+      },
+      "450": {
+        "150": 1861,
+        "175": 1897,
+        "200": 1935,
+        "225": 1968,
+        "250": 2003,
+        "275": 2047,
+        "300": 2102,
+        "325": 2142,
+        "350": 2204,
+        "400": 2541
+      },
+      "475": {
+        "150": 1920,
+        "175": 1957,
+        "200": 1996,
+        "225": 2030,
+        "250": 2066,
+        "275": 2111,
+        "300": 2167,
+        "325": 2208,
+        "350": 2272,
+        "400": 2611
+      },
+      "500": {
+        "150": 1979,
+        "175": 2017,
+        "200": 2057,
+        "225": 2092,
+        "250": 2130,
+        "275": 2175,
+        "300": 2233,
+        "325": 2275,
+        "350": 2339,
+        "400": 2681
+      },
+      "525": {
+        "150": 2038,
+        "175": 2077,
+        "200": 2118,
+        "225": 2154,
+        "250": 2193,
+        "275": 2240,
+        "300": 2298
+      },
+      "550": {
+        "150": 2097,
+        "175": 2137,
+        "200": 2179,
+        "225": 2216,
+        "250": 2256,
+        "275": 2304,
+        "300": 2364
+      },
+      "575": {
+        "150": 2155,
+        "175": 2197,
+        "200": 2240,
+        "225": 2278,
+        "250": 2320,
+        "275": 2369,
+        "300": 2429
+      },
+      "600": {
+        "150": 2214,
+        "175": 2257,
+        "200": 2302,
+        "225": 2341,
+        "250": 2383,
+        "275": 2433,
+        "300": 2495
+      }
     }
   },
+  "motores": [
+    {
+      "id": "manual",
+      "nombre": "Manivela",
+      "recargo": 0,
+      "familia": "manual"
+    },
+    {
+      "id": "rts_30Nm",
+      "nombre": "Somfy RTS 30Nm",
+      "recargo": 215,
+      "familia": "somfy"
+    },
+    {
+      "id": "rts_40Nm",
+      "nombre": "Somfy RTS 40Nm",
+      "recargo": 240,
+      "familia": "somfy"
+    },
+    {
+      "id": "rts_50Nm",
+      "nombre": "Somfy RTS 50Nm",
+      "recargo": 295,
+      "familia": "somfy"
+    },
+    {
+      "id": "io_30Nm",
+      "nombre": "Somfy iO 30Nm",
+      "recargo": 320,
+      "familia": "somfy"
+    },
+    {
+      "id": "io_40Nm",
+      "nombre": "Somfy iO 40Nm",
+      "recargo": 345,
+      "familia": "somfy"
+    },
+    {
+      "id": "io_50Nm",
+      "nombre": "Somfy iO 50Nm",
+      "recargo": 400,
+      "familia": "somfy"
+    }
+  ],
+  "sobreprecios": [
+    {
+      "ref": "80080785",
+      "desc": "J. Brazos INV. Premium 1,50",
+      "precio": 286.24,
+      "categoria": "brazo"
+    },
+    {
+      "ref": "80080795",
+      "desc": "J. Brazos INV. Premium 1,75",
+      "precio": 301.36,
+      "categoria": "brazo"
+    },
+    {
+      "ref": "80080805",
+      "desc": "J. Brazos INV. Premium 2,00",
+      "precio": 318.53,
+      "categoria": "brazo"
+    },
+    {
+      "ref": "80080815",
+      "desc": "J. Brazos INV. Premium 2,25",
+      "precio": 329.79,
+      "categoria": "brazo"
+    },
+    {
+      "ref": "80080825",
+      "desc": "J. Brazos INV. Premium 2,50",
+      "precio": 344.37,
+      "categoria": "brazo"
+    },
+    {
+      "ref": "80080835",
+      "desc": "J. Brazos INV. Premium 2,75",
+      "precio": 367.46,
+      "categoria": "brazo"
+    },
+    {
+      "ref": "80080845",
+      "desc": "J. Brazos INV. Premium 3,00",
+      "precio": 402.89,
+      "categoria": "brazo"
+    },
+    {
+      "ref": "80130511",
+      "desc": "Soporte Techo ARES/IRIS Blanco",
+      "precio": 104.14,
+      "categoria": "soporte"
+    },
+    {
+      "ref": "80130512",
+      "desc": "Soporte Entre Paredes ARES/IRIS",
+      "precio": 114.56,
+      "categoria": "soporte"
+    }
+  ],
   "reglas": [
     {
       "id": "linea_min",
       "descripcion": "Línea mínima del modelo",
       "efecto": "bloqueo",
-      "mensaje": "Línea mínima del BOX6110: 179 cm.",
-      "condicion": { "linea": { "lt": 179 } }
+      "mensaje": "Línea mínima del BOX6110 Cofre Concept: 178 cm.",
+      "condicion": {
+        "linea": {
+          "lt": 178
+        }
+      }
     },
     {
       "id": "linea_max",
       "descripcion": "Línea máxima del modelo",
       "efecto": "bloqueo",
-      "mensaje": "Línea máxima del BOX6110: 600 cm.",
-      "condicion": { "linea": { "gt": 600 } }
+      "mensaje": "Línea máxima del BOX6110 Cofre Concept: 600 cm.",
+      "condicion": {
+        "linea": {
+          "gt": 600
+        }
+      }
     },
     {
       "id": "salida_min",
       "descripcion": "Salida mínima del modelo",
       "efecto": "bloqueo",
-      "mensaje": "Salida mínima del BOX6110: 150 cm.",
-      "condicion": { "salida": { "lt": 150 } }
+      "mensaje": "Salida mínima del BOX6110 Cofre Concept: 150 cm.",
+      "condicion": {
+        "salida": {
+          "lt": 150
+        }
+      }
     },
     {
       "id": "salida_max",
       "descripcion": "Salida máxima del modelo",
       "efecto": "bloqueo",
-      "mensaje": "Salida máxima del BOX6110: 400 cm.",
-      "condicion": { "salida": { "gt": 400 } }
+      "mensaje": "Salida máxima del BOX6110 Cofre Concept: 400 cm.",
+      "condicion": {
+        "salida": {
+          "gt": 400
+        }
+      }
     },
     {
       "id": "salida_350_400_aviso",
       "descripcion": "Salidas 350-400 cm requieren validación técnica",
       "efecto": "aviso",
       "mensaje": "Salida >350 cm: la tarifa la contempla pero el configurador AWMA solo monta brazos hasta 350 cm. Lo confirma el técnico antes de pedir.",
-      "condicion": { "salida": { "gt": 350, "lte": 400 } }
+      "condicion": {
+        "salida": {
+          "gt": 350,
+          "lte": 400
+        }
+      }
     },
     {
       "id": "refuerzo_3_brazos",
@@ -82,8 +364,16 @@
       "mensaje": "Para línea >500 cm y salida >300 cm el toldo lleva refuerzo (3 brazos en lugar de 2). Coste extra de fábrica.",
       "condicion": {
         "and": [
-          { "linea": { "gt": 500 } },
-          { "salida": { "gt": 300 } }
+          {
+            "linea": {
+              "gt": 500
+            }
+          },
+          {
+            "salida": {
+              "gt": 300
+            }
+          }
         ]
       }
     },
@@ -94,8 +384,18 @@
       "mensaje": "Para línea >505 cm el perfil del BOX6110 solo está disponible en blanco.",
       "condicion": {
         "and": [
-          { "linea": { "gt": 505 } },
-          { "color_no_es": ["blanco", "9010", "ral9010"] }
+          {
+            "linea": {
+              "gt": 505
+            }
+          },
+          {
+            "color_no_es": [
+              "blanco",
+              "9010",
+              "ral9010"
+            ]
+          }
         ]
       }
     },
@@ -104,7 +404,11 @@
       "descripcion": "Instalación a techo no válida si línea >510",
       "efecto": "aviso",
       "mensaje": "Línea >510 cm: la instalación a techo no es válida en este modelo (debe ir a pared o entreparedes).",
-      "condicion": { "linea": { "gt": 510 } }
+      "condicion": {
+        "linea": {
+          "gt": 510
+        }
+      }
     }
   ]
 }
