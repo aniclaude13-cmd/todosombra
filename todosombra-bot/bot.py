@@ -8,6 +8,9 @@ import logging
 import os
 import re
 import subprocess
+import sys
+import tempfile
+from datetime import datetime
 from pathlib import Path
 from typing import Optional
 from telegram import Update, ReplyKeyboardMarkup, ReplyKeyboardRemove
@@ -17,6 +20,14 @@ from telegram.ext import (
 )
 
 import awma_rules_core as awma_rules  # Usar core nuevo (wrapper de compatibilidad)
+
+# Importar generador HPED (hoja de pedido AWMA)
+sys.path.insert(0, str(Path(__file__).parent.parent / "awma-core" / "tools"))
+try:
+    from generate_hped import ConfiguracionHPED, generar_hped_pdf  # type: ignore
+    HPED_DISPONIBLE = True
+except ImportError:
+    HPED_DISPONIBLE = False
 
 logging.basicConfig(
     format="%(asctime)s - %(name)s - %(levelname)s - %(message)s",
@@ -61,7 +72,7 @@ FICHAS_TECNICAS = {
  ELEGIR_TIPO, MEDIDAS_BUSQUEDA, COMPARAR_MODELOS,
  ELEGIR_COMPLEMENTO, MEDIDA_COMPLEMENTO, COLOR_ALUMINIO,
  AÑADIR_COMPLEMENTOS, MEDIDA_COMPLEMENTO_ADICIONAL, COLOR_CATEGORIA,
- CONSULTA_IA, DIVIDIR_O_DERIVAR) = range(23)
+ CONSULTA_IA, DIVIDIR_O_DERIVAR, ELEGIR_VARIANTE_PL) = range(24)
 
 # Catálogo Sauleda PLAINS LISOS (sin incremento de precio)
 CATEGORIAS_SAULEDA = {
@@ -267,6 +278,7 @@ def tiene_precio(producto: dict) -> bool:
     return True
 
 def calcular_precio(producto: dict, linea_cm: int, salida_cm: int) -> Optional[float]:
+    """Calcula precio desde JSON antiguo (fallback)."""
     pw = producto.get("precios_por_ancho")
     if not pw or isinstance(pw, dict) and "estimado" in pw:
         return None
@@ -294,6 +306,93 @@ def calcular_precio(producto: dict, linea_cm: int, salida_cm: int) -> Optional[f
         return None
 
     return float(salidas[salida_key])
+
+
+def _generar_hped_para_lead(ctx, lead: dict) -> Optional[Path]:
+    """Genera HPED PDF si el producto es palillería. Devuelve ruta o None."""
+    if not HPED_DISPONIBLE:
+        return None
+    producto = ctx.user_data.get("producto", {})
+    pid = (producto.get("id") or "").upper()
+    if not pid.startswith("PL"):
+        return None
+
+    producto_core = _normalizar_id_core(pid)
+    variante_suffix = ctx.user_data.get("variante_pl") or ""
+    palillo = "DOBLE" if "_D" in variante_suffix else "SIMPLE"
+    motorizado = "_M" in variante_suffix
+    pvp_con_iva = ctx.user_data.get("precio_con_iva") or 0.0
+
+    config = ConfiguracionHPED(
+        cliente=lead.get("nombre", ""),
+        nro_oferta=f"TS-{datetime.now().strftime('%Y%m%d-%H%M%S')}",
+        fecha=datetime.now().strftime("%d/%m/%Y"),
+        producto_id=producto_core,
+        producto_nombre=producto.get("nombre", producto_core),
+        linea_cm=ctx.user_data.get("linea", 0),
+        salida_cm=ctx.user_data.get("salida", 0),
+        palillo=palillo,
+        color_ral=str(ctx.user_data.get("color_aluminio", "9016")),
+        motorizado=motorizado,
+        tipo_motor="Somfy RTS 40Nm" if motorizado else "",
+        mando_posicion="DERECHA" if motorizado else "",
+        pvp_unitario=pvp_con_iva,
+        cantidad=1,
+        observaciones=(
+            f"Cliente: {lead.get('nombre', '—')} · Tel: {lead.get('contacto', '—')} · "
+            f"Zona: {lead.get('localidad', '—')}"
+        ),
+    )
+
+    out_dir = Path(tempfile.gettempdir()) / "todosombra_hped"
+    out_dir.mkdir(parents=True, exist_ok=True)
+    nombre_safe = re.sub(r"[^A-Za-z0-9_-]+", "_", lead.get("nombre", "lead"))[:30]
+    out_path = out_dir / f"HPED_{producto_core}_{nombre_safe}_{datetime.now().strftime('%Y%m%d-%H%M%S')}.pdf"
+    try:
+        generar_hped_pdf(config, out_path)
+        return out_path
+    except Exception as e:
+        logger.warning(f"No se pudo generar HPED: {e}")
+        return None
+
+
+def _normalizar_id_core(producto_id: str) -> str:
+    """Convierte IDs de productos.json (ej. 'PL7000_ENTRE_PAREDES') al ID del catálogo core ('PL7000').
+
+    Para palillerías, conserva solo el prefijo PL{4dígitos}. Resto pasa tal cual.
+    """
+    pid = (producto_id or "").upper()
+    m = re.match(r"^(PL\d{4})", pid)
+    if m:
+        return m.group(1)
+    return pid
+
+
+def calcular_precio_con_variante(
+    producto: dict, linea_cm: int, salida_cm: int, variante: Optional[str] = None
+) -> tuple[Optional[float], Optional[list]]:
+    """Calcula precio usando AWMA Core si es disponible (para variantes, especialmente PL).
+
+    Returns:
+        (precio, avisos) — donde avisos es lista de mensajes si requiere DAC.
+    """
+    producto_id = _normalizar_id_core(producto.get("id", ""))
+    if not producto_id:
+        return None, None
+
+    try:
+        resultado = awma_rules.core_calcular(
+            producto_id=producto_id,
+            linea=linea_cm,
+            salida=salida_cm,
+            variante=(producto_id + variante) if variante else None,
+        )
+        avisos_msgs = [a.mensaje for a in resultado.avisos] if resultado.avisos else []
+        return resultado.pvp_unitario if resultado.valido else None, avisos_msgs
+    except Exception as e:
+        logger.warning(f"core_calcular falló para {producto_id}: {e}")
+        # Si falla el core, usar precio antiguo
+        return calcular_precio(producto, linea_cm, salida_cm), None
 
 def precio_color(precio_base: float, grupo: str, tipo_color: str, datos: dict) -> float:
     grupos = datos.get("grupos_color", {})
@@ -403,6 +502,11 @@ def rango_lineas(producto: dict) -> str:
         lineas = _int_keys(pw)
         return f"{lineas[0]}–{lineas[-1]} cm"
     return "consultar"
+
+def es_palilleria(producto: dict) -> bool:
+    """Detecta si el producto es una palillería (PL7000, PL7010, etc.)"""
+    pid = producto.get("id", "").upper()
+    return pid.startswith("PL")
 
 # ─── HANDLERS ────────────────────────────────────────────────
 
@@ -739,7 +843,65 @@ async def confirmar_modelo_seleccionado(update: Update, ctx: ContextTypes.DEFAUL
         parse_mode="Markdown",
         reply_markup=ReplyKeyboardRemove()
     )
+
+    # Si es palillería, preguntar variantes antes de color aluminio
+    if es_palilleria(producto):
+        return await elegir_variante_pl(update, ctx)
+
     return await preguntar_color_aluminio(update, ctx)
+
+async def elegir_variante_pl(update: Update, ctx: ContextTypes.DEFAULT_TYPE) -> int:
+    """Pregunta por variantes de palillería (doble palillo, motor)."""
+    teclado = [
+        ["🔧 Palillo simple (manual)"],
+        ["📌 Palillo doble (manual)"],
+        ["⚡ Con motor"],
+        ["🔧⚡ Palillo doble + motor"],
+    ]
+    await update.message.reply_text(
+        "🪵 *Configuración de palillería*\n\n"
+        "¿Cómo la quieres?",
+        parse_mode="Markdown",
+        reply_markup=ReplyKeyboardMarkup(teclado, one_time_keyboard=True, resize_keyboard=True)
+    )
+    return ELEGIR_VARIANTE_PL
+
+
+async def recibir_variante_pl(update: Update, ctx: ContextTypes.DEFAULT_TYPE) -> int:
+    """Procesa la selección de variante de palillería."""
+    opcion = update.message.text.strip()
+    producto = ctx.user_data["producto"]
+    base_id = producto.get("id", "PL7000")
+
+    # Mapeo opción → sufijo variante
+    variante_map = {
+        "simple": "",
+        "doble": "_D",
+        "motor": "_M",
+        "doble + motor": "_DM",
+    }
+
+    variante_suffix = ""
+    if "simple" in opcion.lower() and "doble" not in opcion.lower():
+        variante_suffix = ""
+    elif "doble" in opcion.lower() and "motor" not in opcion.lower():
+        variante_suffix = "_D"
+    elif "motor" in opcion.lower() and "doble" not in opcion.lower():
+        variante_suffix = "_M"
+    elif "doble" in opcion.lower() and "motor" in opcion.lower():
+        variante_suffix = "_DM"
+
+    # Guardar variante en contexto
+    ctx.user_data["variante_pl"] = variante_suffix
+    ctx.user_data["variante_pl_label"] = opcion
+
+    await update.message.reply_text(
+        f"✅ {opcion}",
+        parse_mode="Markdown",
+        reply_markup=ReplyKeyboardRemove()
+    )
+    return await preguntar_color_aluminio(update, ctx)
+
 
 async def preguntar_color_aluminio(update: Update, ctx: ContextTypes.DEFAULT_TYPE) -> int:
     teclado = [[c] for c in COLORES_ALUMINIO_RAPIDOS.keys()]
@@ -1191,7 +1353,18 @@ async def mostrar_resumen(update: Update, ctx: ContextTypes.DEFAULT_TYPE) -> int
     tipo_color = ctx.user_data.get("tipo_color", "estándar")
     tejido = ctx.user_data.get("tejido")
 
-    precio_base = calcular_precio(producto, linea, salida)
+    # Si es palillería, usar motor AWMA Core con variantes
+    variante_pl = ctx.user_data.get("variante_pl")
+    if es_palilleria(producto) and variante_pl is not None:
+        precio_base, avisos_variante = calcular_precio_con_variante(
+            producto, linea, salida, variante=variante_pl
+        )
+        if avisos_variante:
+            ctx.user_data["avisos_variante"] = avisos_variante
+            msg = "ℹ️ *Nota sobre esta configuración:*\n• " + "\n• ".join(avisos_variante)
+            await update.message.reply_text(msg, parse_mode="Markdown")
+    else:
+        precio_base = calcular_precio(producto, linea, salida)
 
     if precio_base is None:
         await update.message.reply_text(
@@ -1232,16 +1405,22 @@ async def mostrar_resumen(update: Update, ctx: ContextTypes.DEFAULT_TYPE) -> int
         f"📏 *Medidas:* {linea} × {salida} cm",
         f"🎨 *Aluminio:* {ctx.user_data.get('color_aluminio', '—')}",
     ]
-    marca_label = (ctx.user_data.get("marca_motor", "somfy") or "somfy").capitalize()
-    lineas_resumen.append(f"⚙️ *Accionamiento:* {'⚡ Motor ' + marca_label if motorizado else '☀️ Manual'}")
-    if motorizado and ctx.user_data.get("preferencia_motor"):
-        pref = ctx.user_data["preferencia_motor"]
-        if "sin preferencia" not in pref.lower() and "otra marca" not in pref.lower():
-            lineas_resumen.append(f"🎛️ *Motor:* {pref}")
-    color_tejido = ctx.user_data.get("color_tejido", "—")
-    es_awma = ctx.user_data.get("es_awma", False)
-    awma_label = "✅ Sin incremento" if es_awma else "⚠️ Con posible incremento (técnico confirma)"
-    lineas_resumen.append(f"🧵 *Tejido:* {color_tejido} — {awma_label}")
+
+    # Si es palillería, mostrar configuración de variante
+    if es_palilleria(producto):
+        variante_label = ctx.user_data.get("variante_pl_label", "—")
+        lineas_resumen.append(f"🪵 *Configuración:* {variante_label}")
+    else:
+        marca_label = (ctx.user_data.get("marca_motor", "somfy") or "somfy").capitalize()
+        lineas_resumen.append(f"⚙️ *Accionamiento:* {'⚡ Motor ' + marca_label if motorizado else '☀️ Manual'}")
+        if motorizado and ctx.user_data.get("preferencia_motor"):
+            pref = ctx.user_data["preferencia_motor"]
+            if "sin preferencia" not in pref.lower() and "otra marca" not in pref.lower():
+                lineas_resumen.append(f"🎛️ *Motor:* {pref}")
+        color_tejido = ctx.user_data.get("color_tejido", "—")
+        es_awma = ctx.user_data.get("es_awma", False)
+        awma_label = "✅ Sin incremento" if es_awma else "⚠️ Con posible incremento (técnico confirma)"
+        lineas_resumen.append(f"🧵 *Tejido:* {color_tejido} — {awma_label}")
 
     lineas_resumen.extend([
         f"\n━━━━━━━━━━━━━━━━━━━━━━━",
@@ -1844,6 +2023,8 @@ async def captar_localidad(update: Update, ctx: ContextTypes.DEFAULT_TYPE) -> in
         "preferencia_motor": ctx.user_data.get("preferencia_motor"),
         "color_tejido": ctx.user_data.get("color_tejido"),
         "es_awma": ctx.user_data.get("es_awma"),
+        "variante_pl": ctx.user_data.get("variante_pl"),
+        "variante_pl_label": ctx.user_data.get("variante_pl_label"),
         "precio_base_orientativo": precio,
         "precio_final_orientativo": ctx.user_data.get("precio_calculado"),
         "precio_con_iva": ctx.user_data.get("precio_con_iva"),
@@ -1876,6 +2057,20 @@ async def captar_localidad(update: Update, ctx: ContextTypes.DEFAULT_TYPE) -> in
         await ctx.bot.send_message(ADMIN_CHAT_ID, msg_admin, parse_mode="Markdown")
     except Exception as e:
         logger.warning(f"No se pudo notificar al admin por Telegram: {e}")
+
+    # Generar y enviar hoja de pedido AWMA (solo palillería por ahora)
+    hped_path = _generar_hped_para_lead(ctx, lead)
+    if hped_path and hped_path.exists():
+        try:
+            with hped_path.open("rb") as f:
+                await ctx.bot.send_document(
+                    ADMIN_CHAT_ID,
+                    document=f,
+                    filename=hped_path.name,
+                    caption=f"📄 Hoja de pedido AWMA — {nombre} ({producto.get('nombre', '—')})",
+                )
+        except Exception as e:
+            logger.warning(f"No se pudo enviar HPED al admin: {e}")
 
     # Notificación por email
     try:
@@ -2134,6 +2329,7 @@ def main():
             AÑADIR_COMPLEMENTOS: [MessageHandler(filters.TEXT & ~filters.COMMAND, añadir_complementos)],
             MEDIDA_COMPLEMENTO_ADICIONAL: [MessageHandler(filters.TEXT & ~filters.COMMAND, medida_complemento_adicional)],
             CONSULTA_IA: [MessageHandler(filters.TEXT & ~filters.COMMAND, consulta_ia)],
+            ELEGIR_VARIANTE_PL: [MessageHandler(filters.TEXT & ~filters.COMMAND, recibir_variante_pl)],
         },
         fallbacks=[CommandHandler("cancelar", cancelar)],
         allow_reentry=True,
