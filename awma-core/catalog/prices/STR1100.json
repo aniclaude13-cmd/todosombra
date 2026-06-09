@@ -1,0 +1,20 @@
+{
+  "product": "STR1100",
+  "currency": "EUR",
+  "source": "Tarifa-Awma-PVP-2026.pdf",
+  "outputs_cm": [
+    100,
+    362
+  ],
+  "matrix_cm": {
+    "125": {
+      "100": 399
+    },
+    "150": {
+      "100": 422
+    }
+  },
+  "pdf_pages": [
+    "70-72"
+  ]
+}

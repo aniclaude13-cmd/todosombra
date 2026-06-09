@@ -114,6 +114,21 @@ def _siguiente_tarifada(valor: int, valores: List[int]) -> Optional[int]:
 
 # ---------- API pública ----------
 
+def _resolver_variante(cat: dict, variante: Optional[str]):
+    """Resuelve un SKU de variante (p.ej. 'PL7000_D') a sus flags y nota DAC.
+    Devuelve (composicion, requiere_dac, nota) o (None, False, None) si no aplica.
+    """
+    if not variante:
+        return None, False, None
+    variantes = cat.get("variantes") or []
+    base_id = cat["id"]
+    target = variante.strip()
+    for v in variantes:
+        if v["sku"] == target or v["sufijo"] == target or (base_id + v["sufijo"]) == target:
+            return v.get("composicion") or {}, bool(v.get("requiere_dac")), v.get("nota")
+    return None, False, None
+
+
 def calcular(
     producto_id: str,
     linea: int,
@@ -122,6 +137,7 @@ def calcular(
     color: Optional[str] = None,
     sobreprecios: Optional[List[dict]] = None,
     cantidad: int = 1,
+    variante: Optional[str] = None,
 ) -> Resultado:
     cat = cargar_catalogo(producto_id)
     cantidad = max(1, int(cantidad))
@@ -129,6 +145,20 @@ def calcular(
 
     bloqueos: List[Aviso] = []
     avisos: List[Aviso] = []
+
+    comp, requiere_dac, nota_dac = _resolver_variante(cat, variante)
+    if variante and comp is None:
+        bloqueos.append(Aviso(
+            regla_id="variante_desconocida",
+            efecto="bloqueo",
+            mensaje=f"Variante '{variante}' no existe en {cat['id']}.",
+        ))
+    elif requiere_dac:
+        avisos.append(Aviso(
+            regla_id="variante_dac",
+            efecto="aviso",
+            mensaje=nota_dac or "Variante sin tarifa pública: requiere cotización vía DAC/hoja de pedido AWMA.",
+        ))
 
     for regla in cat.get("reglas", []):
         if not _eval_cond(regla["condicion"], ctx):
@@ -176,17 +206,25 @@ def calcular(
             pvp_unitario += float(motor["recargo"])
             desglose.append(DesgloseItem(f"Motorización ({motor['nombre']})", float(motor["recargo"])))
 
-    if sobreprecios and cat.get("sobreprecios"):
+    sobreprecios_aplicar = list(sobreprecios) if sobreprecios else []
+    if comp and comp.get("palillo") == "doble":
+        if not any(sp.get("ref") == "PALILLO_DOBLE" for sp in sobreprecios_aplicar):
+            sobreprecios_aplicar.append({"ref": "PALILLO_DOBLE", "cantidad": 1})
+
+    if sobreprecios_aplicar and cat.get("sobreprecios"):
         catalogo_sp = {s["ref"]: s for s in cat["sobreprecios"]}
-        for sp in sobreprecios:
+        for sp in sobreprecios_aplicar:
             item = catalogo_sp.get(sp["ref"])
             if not item:
                 continue
             qty = max(1, int(sp.get("cantidad", 1)))
-            total = float(item["precio"]) * qty
+            if "precio_pct" in item:
+                total = pvp_base * float(item["precio_pct"]) / 100.0 * qty
+            else:
+                total = float(item["precio"]) * qty
             pvp_unitario += total
             etq = item["desc"] + (f" x{qty}" if qty > 1 else "")
-            desglose.append(DesgloseItem(etq, total))
+            desglose.append(DesgloseItem(etq, round(total, 2)))
 
     valido = not bloqueos
     pvp_total = pvp_unitario * cantidad

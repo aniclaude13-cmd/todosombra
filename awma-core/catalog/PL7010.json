@@ -1,0 +1,590 @@
+{
+  "id": "PL7010",
+  "nombre": "PL7010 Palillería Pared Portería",
+  "tipo": "palilleria",
+  "version": "2026.1",
+  "fuente": {
+    "abd": "PL7010.abd",
+    "tarifaPdf": "Tarifa-Awma-PVP-2026.pdf",
+    "paginaTarifa": 151
+  },
+  "tipo_instalacion": "pared_porteria",
+  "dimensiones": {
+    "linea": {
+      "min": 200,
+      "max": 700,
+      "valores": [
+        200,
+        250,
+        300,
+        350,
+        400,
+        450,
+        500,
+        550,
+        600,
+        650,
+        700
+      ]
+    },
+    "salida": {
+      "min": 150,
+      "max": 700,
+      "valores": [
+        150,
+        175,
+        200,
+        225,
+        250,
+        275,
+        300,
+        325,
+        350,
+        375,
+        400,
+        425,
+        450,
+        475,
+        500,
+        525,
+        550,
+        575,
+        600,
+        625,
+        650,
+        675,
+        700
+      ]
+    }
+  },
+  "tarifa": {
+    "matriz": {
+      "200": {
+        "150": 913,
+        "175": 948,
+        "200": 983,
+        "225": 1017,
+        "250": 1052,
+        "275": 1086,
+        "300": 1121,
+        "325": 1156,
+        "350": 1190,
+        "375": 1225,
+        "400": 1259,
+        "425": 1294,
+        "450": 1329,
+        "475": 1363,
+        "500": 1398,
+        "525": 1432,
+        "550": 1467,
+        "575": 1502,
+        "600": 1536,
+        "625": 1846,
+        "650": 1881,
+        "675": 1915,
+        "700": 1950
+      },
+      "250": {
+        "150": 999,
+        "175": 1039,
+        "200": 1079,
+        "225": 1119,
+        "250": 1159,
+        "275": 1199,
+        "300": 1239,
+        "325": 1279,
+        "350": 1319,
+        "375": 1359,
+        "400": 1399,
+        "425": 1439,
+        "450": 1479,
+        "475": 1519,
+        "500": 1559,
+        "525": 1599,
+        "550": 1639,
+        "575": 1679,
+        "600": 1719,
+        "625": 2047,
+        "650": 2087,
+        "675": 2127,
+        "700": 2167
+      },
+      "300": {
+        "150": 1085,
+        "175": 1130,
+        "200": 1175,
+        "225": 1221,
+        "250": 1266,
+        "275": 1312,
+        "300": 1357,
+        "325": 1402,
+        "350": 1448,
+        "375": 1493,
+        "400": 1539,
+        "425": 1584,
+        "450": 1629,
+        "475": 1675,
+        "500": 1720,
+        "525": 1766,
+        "550": 1811,
+        "575": 1856,
+        "600": 1902,
+        "625": 2249,
+        "650": 2294,
+        "675": 2339,
+        "700": 2385
+      },
+      "350": {
+        "150": 1170,
+        "175": 1221,
+        "200": 1272,
+        "225": 1323,
+        "250": 1374,
+        "275": 1424,
+        "300": 1475,
+        "325": 1526,
+        "350": 1577,
+        "375": 1628,
+        "400": 1678,
+        "425": 1729,
+        "450": 1780,
+        "475": 1831,
+        "500": 1882,
+        "525": 1932,
+        "550": 1983,
+        "575": 2034,
+        "600": 2085,
+        "625": 2450,
+        "650": 2501,
+        "675": 2552,
+        "700": 2602
+      },
+      "400": {
+        "150": 1256,
+        "175": 1312,
+        "200": 1368,
+        "225": 1425,
+        "250": 1481,
+        "275": 1537,
+        "300": 1593,
+        "325": 1649,
+        "350": 1706,
+        "375": 1762,
+        "400": 1818,
+        "425": 1874,
+        "450": 1930,
+        "475": 1987,
+        "500": 2043,
+        "525": 2099,
+        "550": 2155,
+        "575": 2211,
+        "600": 2268,
+        "625": 2651,
+        "650": 2707,
+        "675": 2764,
+        "700": 2820
+      },
+      "450": {
+        "150": 1342,
+        "175": 1403,
+        "200": 1465,
+        "225": 1527,
+        "250": 1588,
+        "275": 1650,
+        "300": 1711,
+        "325": 1773,
+        "350": 1834,
+        "375": 1896,
+        "400": 1958,
+        "425": 2019,
+        "450": 2081,
+        "475": 2142,
+        "500": 2204,
+        "525": 2266,
+        "550": 2327,
+        "575": 2389,
+        "600": 2450,
+        "625": 2852,
+        "650": 2914,
+        "675": 2976,
+        "700": 3037
+      },
+      "500": {
+        "150": 1427,
+        "175": 1494,
+        "200": 1561,
+        "225": 1628,
+        "250": 1695,
+        "275": 1762,
+        "300": 1829,
+        "325": 1896,
+        "350": 1963,
+        "375": 2030,
+        "400": 2097,
+        "425": 2164,
+        "450": 2231,
+        "475": 2298,
+        "500": 2365,
+        "525": 2432,
+        "550": 2499,
+        "575": 2566,
+        "600": 2633,
+        "625": 3054,
+        "650": 3121,
+        "675": 3188,
+        "700": 3255
+      },
+      "550": {
+        "150": 1513,
+        "175": 1585,
+        "200": 1658,
+        "225": 1730,
+        "250": 1803,
+        "275": 1875,
+        "300": 1947,
+        "325": 2020,
+        "350": 2092,
+        "375": 2165,
+        "400": 2237,
+        "425": 2309,
+        "450": 2382,
+        "475": 2454,
+        "500": 2527,
+        "525": 2599,
+        "550": 2671,
+        "575": 2744,
+        "600": 2816,
+        "625": 3255,
+        "650": 3327,
+        "675": 3400,
+        "700": 3472
+      },
+      "600": {
+        "150": 1599,
+        "175": 1677,
+        "200": 1754,
+        "225": 1832,
+        "250": 1910,
+        "275": 1988,
+        "300": 2066,
+        "325": 2143,
+        "350": 2221,
+        "375": 2299,
+        "400": 2377,
+        "425": 2454,
+        "450": 2532,
+        "475": 2610,
+        "500": 2688,
+        "525": 2766,
+        "550": 2843,
+        "575": 2921,
+        "600": 2999,
+        "625": 3456,
+        "650": 3534,
+        "675": 3612,
+        "700": 3689
+      },
+      "650": {
+        "150": 1684,
+        "175": 1768,
+        "200": 1851,
+        "225": 1934,
+        "250": 2017,
+        "275": 2100,
+        "300": 2184,
+        "325": 2267,
+        "350": 2350,
+        "375": 2433,
+        "400": 2516,
+        "425": 2600,
+        "450": 2683,
+        "475": 2766,
+        "500": 2849,
+        "525": 2932,
+        "550": 3015,
+        "575": 3099,
+        "600": 3182,
+        "625": 3657,
+        "650": 3740,
+        "675": 3824,
+        "700": 3907
+      },
+      "700": {
+        "150": 1770,
+        "175": 1859,
+        "200": 1947,
+        "225": 2036,
+        "250": 2124,
+        "275": 2213,
+        "300": 2302,
+        "325": 2390,
+        "350": 2479,
+        "375": 2567,
+        "400": 2656,
+        "425": 2745,
+        "450": 2833,
+        "475": 2922,
+        "500": 3010,
+        "525": 3099,
+        "550": 3188,
+        "575": 3276,
+        "600": 3365,
+        "625": 3858,
+        "650": 3947,
+        "675": 4036,
+        "700": 4124
+      }
+    }
+  },
+  "motores": [
+    {
+      "id": "manual",
+      "nombre": "Manivela",
+      "recargo": 0,
+      "familia": "manual"
+    },
+    {
+      "id": "rts_30Nm",
+      "nombre": "Somfy RTS 30Nm",
+      "recargo": 215,
+      "familia": "somfy"
+    },
+    {
+      "id": "rts_40Nm",
+      "nombre": "Somfy RTS 40Nm",
+      "recargo": 240,
+      "familia": "somfy"
+    },
+    {
+      "id": "rts_50Nm",
+      "nombre": "Somfy RTS 50Nm",
+      "recargo": 295,
+      "familia": "somfy"
+    },
+    {
+      "id": "io_30Nm",
+      "nombre": "Somfy iO 30Nm",
+      "recargo": 320,
+      "familia": "somfy"
+    },
+    {
+      "id": "io_40Nm",
+      "nombre": "Somfy iO 40Nm",
+      "recargo": 345,
+      "familia": "somfy"
+    },
+    {
+      "id": "io_50Nm",
+      "nombre": "Somfy iO 50Nm",
+      "recargo": 400,
+      "familia": "somfy"
+    }
+  ],
+  "sobreprecios": [
+    {
+      "ref": "PALILLO_DOBLE",
+      "desc": "Palillo doble (+8% sobre tarifa base)",
+      "precio_pct": 8,
+      "categoria": "palillo"
+    },
+    {
+      "ref": "KIT-MOT-G5",
+      "desc": "Kit motorización cable hasta 5m (2 guías)",
+      "precio": 531.21,
+      "categoria": "kit_motorizacion"
+    },
+    {
+      "ref": "KIT-MOT-G10",
+      "desc": "Kit motorización cable hasta 10m (2 guías)",
+      "precio": 537.76,
+      "categoria": "kit_motorizacion"
+    },
+    {
+      "ref": "KIT-MOT-5",
+      "desc": "Kit motorización correa 2 guías hasta 5m",
+      "precio": 1605.2,
+      "categoria": "kit_motorizacion"
+    },
+    {
+      "ref": "KIT-MOT-6",
+      "desc": "Kit motorización correa 2 guías hasta 6m",
+      "precio": 1700.3,
+      "categoria": "kit_motorizacion"
+    },
+    {
+      "ref": "KIT-MOT-7",
+      "desc": "Kit motorización correa 2 guías hasta 7m",
+      "precio": 1795.4,
+      "categoria": "kit_motorizacion"
+    },
+    {
+      "ref": "KIT-MOT1-5",
+      "desc": "Kit motorización correa 3 guías hasta 5m",
+      "precio": 2537.9,
+      "categoria": "kit_motorizacion"
+    },
+    {
+      "ref": "KIT-MOT1-6",
+      "desc": "Kit motorización correa 3 guías hasta 6m",
+      "precio": 2669.94,
+      "categoria": "kit_motorizacion"
+    },
+    {
+      "ref": "KIT-MOT1-7",
+      "desc": "Kit motorización correa 3 guías hasta 7m",
+      "precio": 2801.98,
+      "categoria": "kit_motorizacion"
+    }
+  ],
+  "variantes": [
+    {
+      "sufijo": "",
+      "sku": "PL7010",
+      "desc": "Estándar (palillo simple, manual)",
+      "composicion": {
+        "palillo": "simple",
+        "motor": "manual"
+      },
+      "requiere_dac": false
+    },
+    {
+      "sufijo": "_D",
+      "sku": "PL7010_D",
+      "desc": "Palillo doble",
+      "composicion": {
+        "palillo": "doble",
+        "motor": "manual"
+      },
+      "requiere_dac": false
+    },
+    {
+      "sufijo": "_DP",
+      "sku": "PL7010_DP",
+      "desc": "Palillo doble (alias _D)",
+      "composicion": {
+        "palillo": "doble",
+        "motor": "manual"
+      },
+      "requiere_dac": false
+    },
+    {
+      "sufijo": "_M",
+      "sku": "PL7010_M",
+      "desc": "Motorizado (motor incluido)",
+      "composicion": {
+        "palillo": "simple",
+        "motor": "incluido"
+      },
+      "requiere_dac": false
+    },
+    {
+      "sufijo": "_DM",
+      "sku": "PL7010_DM",
+      "desc": "Palillo doble + motor incluido",
+      "composicion": {
+        "palillo": "doble",
+        "motor": "incluido"
+      },
+      "requiere_dac": false
+    },
+    {
+      "sufijo": "CC",
+      "sku": "PL7010CC",
+      "desc": "Variante CC (confección tensa/plus onda, faldones dobles)",
+      "composicion": {
+        "palillo": "simple",
+        "motor": "manual",
+        "confeccion_avanzada": true
+      },
+      "requiere_dac": true,
+      "nota": "Sin tarifa pública. Cotizar a mano vía DAC/hoja de pedido AWMA."
+    },
+    {
+      "sufijo": "ESP",
+      "sku": "PL7010ESP",
+      "desc": "Versión especial (dim2=345, configuración guías/patos/etc.)",
+      "composicion": {
+        "palillo": "simple",
+        "motor": "manual",
+        "especial": true
+      },
+      "requiere_dac": true,
+      "nota": "Sin tarifa pública. Medidas/configuración especiales. Cotizar a mano."
+    },
+    {
+      "sufijo": "P",
+      "sku": "PL7010P",
+      "desc": "Variante P (SKU DAC interno)",
+      "composicion": {
+        "palillo": "simple",
+        "motor": "manual"
+      },
+      "requiere_dac": true,
+      "nota": "Sin tarifa pública. Cotizar a mano vía DAC."
+    },
+    {
+      "sufijo": "_DESP",
+      "sku": "PL7010_DESP",
+      "desc": "Palillo doble + especial",
+      "composicion": {
+        "palillo": "doble",
+        "motor": "manual",
+        "especial": true
+      },
+      "requiere_dac": true,
+      "nota": "Sin tarifa pública. Cotizar a mano."
+    }
+  ],
+  "reglas": [
+    {
+      "id": "salida_3guias",
+      "condicion": {
+        "salida": {
+          "gte": 625
+        }
+      },
+      "efecto": "aviso",
+      "mensaje": "Salida ≥ 625 cm: el sistema requiere 3 guías (ya incluido en tarifa)."
+    },
+    {
+      "id": "linea_max",
+      "condicion": {
+        "linea": {
+          "gt": 700
+        }
+      },
+      "efecto": "bloqueo",
+      "mensaje": "Línea máxima 700 cm para esta palillería."
+    },
+    {
+      "id": "salida_max",
+      "condicion": {
+        "salida": {
+          "gt": 700
+        }
+      },
+      "efecto": "bloqueo",
+      "mensaje": "Salida máxima 700 cm para esta palillería."
+    },
+    {
+      "id": "salida_min",
+      "condicion": {
+        "salida": {
+          "lt": 150
+        }
+      },
+      "efecto": "bloqueo",
+      "mensaje": "Salida mínima 150 cm para esta palillería."
+    },
+    {
+      "id": "linea_min",
+      "condicion": {
+        "linea": {
+          "lt": 200
+        }
+      },
+      "efecto": "bloqueo",
+      "mensaje": "Línea mínima 200 cm para esta palillería."
+    }
+  ]
+}

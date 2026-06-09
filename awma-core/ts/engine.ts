@@ -33,9 +33,24 @@ export interface Regla {
 export interface Sobreprecio {
   ref: string;
   desc: string;
-  precio: number;
+  precio?: number;
+  precio_pct?: number;
   obligatorio?: boolean;
   categoria?: string;
+}
+
+export interface Variante {
+  sufijo: string;
+  sku: string;
+  desc: string;
+  composicion?: {
+    palillo?: 'simple' | 'doble';
+    motor?: 'manual' | 'incluido';
+    especial?: boolean;
+    confeccion_avanzada?: boolean;
+  };
+  requiere_dac?: boolean;
+  nota?: string;
 }
 
 export interface Motor {
@@ -60,6 +75,7 @@ export interface Catalogo {
   };
   motores?: Motor[];
   sobreprecios?: Sobreprecio[];
+  variantes?: Variante[];
   reglas?: Regla[];
   brazos?: Record<string, { nombre: string; saltos_cm: number[] }>;
 }
@@ -72,6 +88,7 @@ export interface Quote {
   color?: string;
   sobreprecios?: { ref: string; cantidad: number }[];
   cantidad?: number;
+  variante?: string;
 }
 
 export interface DesgloseItem {
@@ -136,12 +153,30 @@ function siguienteLineaTarifada(linea: number, valores: number[]): number | null
   return null;
 }
 
+function resolverVariante(cat: Catalogo, target?: string): { comp: Variante['composicion'] | null; requiereDac: boolean; nota?: string } {
+  if (!target) return { comp: null, requiereDac: false };
+  const t = target.trim();
+  for (const v of cat.variantes ?? []) {
+    if (v.sku === t || v.sufijo === t || (cat.id + v.sufijo) === t) {
+      return { comp: v.composicion ?? {}, requiereDac: !!v.requiere_dac, nota: v.nota };
+    }
+  }
+  return { comp: null, requiereDac: false };
+}
+
 export function calcular(cat: Catalogo, q: Quote): Resultado {
   const cantidad = Math.max(1, (q.cantidad ?? 1) | 0);
   const ctx = { linea: q.linea, salida: q.salida, color: normalizarColor(q.color) };
 
   const bloqueos: Aviso[] = [];
   const avisos: Aviso[] = [];
+
+  const { comp, requiereDac, nota } = resolverVariante(cat, q.variante);
+  if (q.variante && comp == null) {
+    bloqueos.push({ reglaId: 'variante_desconocida', efecto: 'bloqueo', mensaje: `Variante '${q.variante}' no existe en ${cat.id}.` });
+  } else if (requiereDac) {
+    avisos.push({ reglaId: 'variante_dac', efecto: 'aviso', mensaje: nota ?? 'Variante sin tarifa pública: requiere cotización vía DAC/hoja de pedido AWMA.' });
+  }
 
   for (const regla of cat.reglas ?? []) {
     if (!evalCondicion(regla.condicion, ctx)) continue;
@@ -181,14 +216,21 @@ export function calcular(cat: Catalogo, q: Quote): Resultado {
     }
   }
 
-  if (q.sobreprecios && cat.sobreprecios) {
-    for (const sp of q.sobreprecios) {
+  const sobrepreciosAplicar = [...(q.sobreprecios ?? [])];
+  if (comp?.palillo === 'doble' && !sobrepreciosAplicar.some((sp) => sp.ref === 'PALILLO_DOBLE')) {
+    sobrepreciosAplicar.push({ ref: 'PALILLO_DOBLE', cantidad: 1 });
+  }
+
+  if (sobrepreciosAplicar.length && cat.sobreprecios) {
+    for (const sp of sobrepreciosAplicar) {
       const item = cat.sobreprecios.find((s) => s.ref === sp.ref);
       if (!item) continue;
       const qty = Math.max(1, (sp.cantidad ?? 1) | 0);
-      const total = item.precio * qty;
+      const total = item.precio_pct != null
+        ? pvpBase * (item.precio_pct / 100) * qty
+        : (item.precio ?? 0) * qty;
       pvpUnitario += total;
-      desglose.push({ concepto: item.desc + (qty > 1 ? ` x${qty}` : ''), importe: total });
+      desglose.push({ concepto: item.desc + (qty > 1 ? ` x${qty}` : ''), importe: Math.round(total * 100) / 100 });
     }
   }
 
