@@ -1,0 +1,786 @@
+{
+  "id": "TX7970",
+  "nombre": "TX7970 Pérgola Plana Grande",
+  "tipo": "pergola",
+  "version": "2026.1",
+  "fuente": {
+    "pdf": "Tarifa-Awma-PVP-2026.pdf",
+    "paginaTarifa": 189
+  },
+  "dimensiones": {
+    "linea": {
+      "min": 250,
+      "max": 1350,
+      "valores": [
+        250,
+        300,
+        350,
+        400,
+        450,
+        500,
+        550,
+        600,
+        650,
+        700,
+        750,
+        800,
+        850,
+        900,
+        950,
+        1000,
+        1050,
+        1100,
+        1150,
+        1200,
+        1250,
+        1300,
+        1350
+      ]
+    },
+    "salida": {
+      "min": 500,
+      "max": 2000,
+      "valores": [
+        500,
+        600,
+        700,
+        800,
+        900,
+        1000,
+        1100,
+        1200,
+        1300,
+        1400
+      ]
+    }
+  },
+  "tarifa": {
+    "matriz": {
+      "500": {
+        "250": 13862,
+        "300": 14435,
+        "350": 15160,
+        "400": 16034,
+        "450": 16645,
+        "500": 20899,
+        "550": 21518,
+        "600": 22137,
+        "650": 22756,
+        "700": 23375,
+        "750": 24407,
+        "800": 25026,
+        "850": 25645,
+        "900": 26264,
+        "950": 30714,
+        "1000": 31368,
+        "1050": 32021,
+        "1100": 32675,
+        "1150": 33328,
+        "1200": 33982,
+        "1250": 34635,
+        "1300": 35289,
+        "1350": 35942
+      },
+      "600": {
+        "250": 14706,
+        "300": 15331,
+        "350": 16108,
+        "400": 17034,
+        "450": 17697,
+        "500": 22224,
+        "550": 22895,
+        "600": 23565,
+        "650": 24236,
+        "700": 24907,
+        "750": 26043,
+        "800": 26714,
+        "850": 27385,
+        "900": 28055,
+        "950": 32779,
+        "1000": 33484,
+        "1050": 34190,
+        "1100": 34895,
+        "1150": 35600,
+        "1200": 36306,
+        "1250": 37011,
+        "1300": 37716,
+        "1350": 38422
+      },
+      "700": {
+        "250": 15550,
+        "300": 16227,
+        "350": 17056,
+        "400": 18034,
+        "450": 18748,
+        "500": 23549,
+        "550": 24271,
+        "600": 24994,
+        "650": 25716,
+        "700": 26439,
+        "750": 27679,
+        "800": 28402,
+        "850": 29124,
+        "900": 29847,
+        "950": 34843,
+        "1000": 35601,
+        "1050": 36358,
+        "1100": 37115,
+        "1150": 37872,
+        "1200": 38630,
+        "1250": 39387,
+        "1300": 40144,
+        "1350": 40901
+      },
+      "800": {
+        "250": 16395,
+        "300": 17123,
+        "350": 18004,
+        "400": 19034,
+        "450": 19800,
+        "500": 24873,
+        "550": 25648,
+        "600": 26422,
+        "650": 27196,
+        "700": 27971,
+        "750": 29316,
+        "800": 30090,
+        "850": 30864,
+        "900": 31639,
+        "950": 36908,
+        "1000": 37717,
+        "1050": 38526,
+        "1100": 39335,
+        "1150": 40144,
+        "1200": 40953,
+        "1250": 41763,
+        "1300": 42572,
+        "1350": 43381
+      },
+      "900": {
+        "250": 16843,
+        "300": 17584,
+        "350": 18478,
+        "400": 19521,
+        "450": 20300,
+        "500": 25526,
+        "550": 26314,
+        "600": 27101,
+        "650": 27888,
+        "700": 28676,
+        "750": 30033,
+        "800": 30821,
+        "850": 31608,
+        "900": 32395,
+        "950": 37818,
+        "1000": 38640,
+        "1050": 39462,
+        "1100": 40284,
+        "1150": 41106,
+        "1200": 41928,
+        "1250": 42750,
+        "1300": 43572,
+        "1350": 44394
+      },
+      "1000": {
+        "250": 17687,
+        "300": 18481,
+        "350": 19426,
+        "400": 20521,
+        "450": 21352,
+        "500": 26851,
+        "550": 27690,
+        "600": 28529,
+        "650": 29368,
+        "700": 30208,
+        "750": 31670,
+        "800": 32509,
+        "850": 33348,
+        "900": 34187,
+        "950": 39883,
+        "1000": 40756,
+        "1050": 41630,
+        "1100": 42504,
+        "1150": 43378,
+        "1200": 44252,
+        "1250": 45126,
+        "1300": 46000,
+        "1350": 46874
+      },
+      "1100": {
+        "250": 18532,
+        "300": 19377,
+        "350": 20374,
+        "400": 21521,
+        "450": 22403,
+        "500": 28176,
+        "550": 29067,
+        "600": 29958,
+        "650": 30849,
+        "700": 31740,
+        "750": 33306,
+        "800": 34197,
+        "850": 35088,
+        "900": 35979,
+        "950": 41947,
+        "1000": 42873,
+        "1050": 43799,
+        "1100": 44724,
+        "1150": 45650,
+        "1200": 46576,
+        "1250": 47502,
+        "1300": 48427,
+        "1350": 49353
+      },
+      "1200": {
+        "250": 19376,
+        "300": 20273,
+        "350": 21322,
+        "400": 22520,
+        "450": 23455,
+        "500": 29501,
+        "550": 30443,
+        "600": 31386,
+        "650": 32329,
+        "700": 33272,
+        "750": 34942,
+        "800": 35885,
+        "850": 36828,
+        "900": 37770,
+        "950": 44012,
+        "1000": 44990,
+        "1050": 45967,
+        "1100": 46945,
+        "1150": 47922,
+        "1200": 48900,
+        "1250": 49877,
+        "1300": 50855,
+        "1350": 51832
+      },
+      "1300": {
+        "250": 20220,
+        "300": 21169,
+        "350": 22270,
+        "400": 23520,
+        "450": 24507,
+        "500": 30825,
+        "550": 31820,
+        "600": 32815,
+        "650": 33809,
+        "700": 34804,
+        "750": 36578,
+        "800": 37573,
+        "850": 38567,
+        "900": 39562,
+        "950": 46077,
+        "1000": 47106,
+        "1050": 48136,
+        "1100": 49165,
+        "1150": 50194,
+        "1200": 51224,
+        "1250": 52253,
+        "1300": 53282,
+        "1350": 54312
+      },
+      "1400": {
+        "250": 20668,
+        "300": 21630,
+        "350": 22744,
+        "400": 24007,
+        "450": 25007,
+        "500": 31478,
+        "550": 32486,
+        "600": 33493,
+        "650": 34501,
+        "700": 35509,
+        "750": 37296,
+        "800": 38303,
+        "850": 39311,
+        "900": 40319,
+        "950": 46986,
+        "1000": 48029,
+        "1050": 49071,
+        "1100": 50114,
+        "1150": 51156,
+        "1200": 52198,
+        "1250": 53241,
+        "1300": 54283,
+        "1350": 55325
+      }
+    }
+  },
+  "tejadillo": {
+    "id": "TX-TJD-3",
+    "nombre": "Composite 3mm Cumbrera",
+    "tipo": "tejadillo",
+    "lineas": [
+      250,
+      300,
+      350,
+      400,
+      450,
+      500,
+      550,
+      600,
+      650,
+      700,
+      750,
+      800,
+      850,
+      900,
+      950,
+      1000,
+      1050,
+      1100,
+      1150,
+      1200,
+      1250,
+      1300,
+      1350
+    ],
+    "precios": {
+      "bajo800": {
+        "250": 694,
+        "300": 829,
+        "350": 965,
+        "400": 1101,
+        "450": 1237,
+        "500": 1392,
+        "550": 1528,
+        "600": 1664,
+        "650": 1799,
+        "700": 1935,
+        "750": 2071,
+        "800": 2207,
+        "850": 2343,
+        "900": 2479,
+        "950": 2634,
+        "1000": 2770,
+        "1050": 2905,
+        "1100": 3041,
+        "1150": 3177,
+        "1200": 3313,
+        "1250": 3449,
+        "1300": 3585,
+        "1350": 3721
+      },
+      "sobre800": {
+        "250": 1050,
+        "300": 1258,
+        "350": 1465,
+        "400": 1672,
+        "450": 1880,
+        "500": 2106,
+        "550": 2313,
+        "600": 2520,
+        "650": 2728,
+        "700": 2935,
+        "750": 3142,
+        "800": 3349,
+        "850": 3557,
+        "900": 3764,
+        "950": 3990,
+        "1000": 4197,
+        "1050": 4405,
+        "1100": 4612,
+        "1150": 4819,
+        "1200": 5026,
+        "1250": 5234,
+        "1300": 5441,
+        "1350": 5648
+      }
+    }
+  },
+  "motores": [
+    {
+      "id": "manual",
+      "nombre": "Manivela",
+      "recargo": 0,
+      "familia": "manual"
+    },
+    {
+      "id": "rts_30Nm",
+      "nombre": "Somfy RTS 30Nm",
+      "recargo": 215,
+      "familia": "somfy"
+    },
+    {
+      "id": "rts_40Nm",
+      "nombre": "Somfy RTS 40Nm",
+      "recargo": 240,
+      "familia": "somfy"
+    },
+    {
+      "id": "rts_50Nm",
+      "nombre": "Somfy RTS 50Nm",
+      "recargo": 295,
+      "familia": "somfy"
+    },
+    {
+      "id": "io_30Nm",
+      "nombre": "Somfy iO 30Nm",
+      "recargo": 320,
+      "familia": "somfy"
+    },
+    {
+      "id": "io_40Nm",
+      "nombre": "Somfy iO 40Nm",
+      "recargo": 345,
+      "familia": "somfy"
+    },
+    {
+      "id": "io_50Nm",
+      "nombre": "Somfy iO 50Nm",
+      "recargo": 400,
+      "familia": "somfy"
+    }
+  ],
+  "sobreprecios": [
+    {
+      "ref": "120.1.0022",
+      "desc": "Perfil 120x40 400cm Blanco",
+      "precio": 31.5,
+      "categoria": "perfil"
+    },
+    {
+      "ref": "120.1.0023",
+      "desc": "Perfil 120x40 500cm Blanco",
+      "precio": 31.51,
+      "categoria": "perfil"
+    },
+    {
+      "ref": "120.1.0027",
+      "desc": "Perfil 120x40 600cm Blanco",
+      "precio": 31.5,
+      "categoria": "perfil"
+    },
+    {
+      "ref": "120.1.0025",
+      "desc": "Perfil 120x40 700cm Blanco",
+      "precio": 31.5,
+      "categoria": "perfil"
+    },
+    {
+      "ref": "120.1.0044",
+      "desc": "Perfil 140x140 400cm Blanco",
+      "precio": 79.74,
+      "categoria": "perfil"
+    },
+    {
+      "ref": "120.1.0045",
+      "desc": "Perfil 140x140 500cm Blanco",
+      "precio": 79.74,
+      "categoria": "perfil"
+    },
+    {
+      "ref": "120.1.0046",
+      "desc": "Perfil 140x140 600cm Blanco",
+      "precio": 79.74,
+      "categoria": "perfil"
+    },
+    {
+      "ref": "120.1.0047",
+      "desc": "Perfil 140x140 700cm Blanco",
+      "precio": 79.74,
+      "categoria": "perfil"
+    },
+    {
+      "ref": "100.1.0021",
+      "desc": "Canal 140x140 400cm Blanco",
+      "precio": 88.19,
+      "categoria": "canal"
+    },
+    {
+      "ref": "100.1.0022",
+      "desc": "Canal 140x140 500cm Blanco",
+      "precio": 88.19,
+      "categoria": "canal"
+    },
+    {
+      "ref": "100.1.0023",
+      "desc": "Canal 140x140 600cm Blanco",
+      "precio": 88.19,
+      "categoria": "canal"
+    },
+    {
+      "ref": "100.1.0024",
+      "desc": "Canal 140x140 700cm Blanco",
+      "precio": 88.19,
+      "categoria": "canal"
+    },
+    {
+      "ref": "100.1.0045",
+      "desc": "Guía 75x140 400cm Blanco",
+      "precio": 95.79,
+      "categoria": "guia"
+    },
+    {
+      "ref": "100.1.0046",
+      "desc": "Guía 75x140 500cm Blanco",
+      "precio": 95.79,
+      "categoria": "guia"
+    },
+    {
+      "ref": "100.1.0047",
+      "desc": "Guía 75x140 600cm Blanco",
+      "precio": 95.79,
+      "categoria": "guia"
+    },
+    {
+      "ref": "100.1.0048",
+      "desc": "Guía 75x140 700cm Blanco",
+      "precio": 95.79,
+      "categoria": "guia"
+    },
+    {
+      "ref": "100.1.0029",
+      "desc": "Palillo 56x70 400cm Blanco",
+      "precio": 36.81,
+      "categoria": "palillo"
+    },
+    {
+      "ref": "100.1.0030",
+      "desc": "Palillo 56x70 500cm Blanco",
+      "precio": 36.81,
+      "categoria": "palillo"
+    },
+    {
+      "ref": "100.1.0031",
+      "desc": "Palillo 56x70 600cm Blanco",
+      "precio": 36.81,
+      "categoria": "palillo"
+    },
+    {
+      "ref": "100.1.0032",
+      "desc": "Palillo 56x70 700cm Blanco",
+      "precio": 36.81,
+      "categoria": "palillo"
+    },
+    {
+      "ref": "250.1.0005",
+      "desc": "Soporte Guía Trasero A Pared Blanco",
+      "precio": 59.49,
+      "categoria": "soporte"
+    },
+    {
+      "ref": "250.1.0007",
+      "desc": "Soporte Guía Trasero A Techo Blanco",
+      "precio": 71.39,
+      "categoria": "soporte"
+    },
+    {
+      "ref": "240.1.0003",
+      "desc": "Soporte Guía-Canal Delantero (TX7900) Blanco",
+      "precio": 44.3,
+      "categoria": "soporte"
+    },
+    {
+      "ref": "243.1.0003",
+      "desc": "Soporte Guía-Canal Blanco",
+      "precio": 37.32,
+      "categoria": "soporte"
+    },
+    {
+      "ref": "243.1.0005",
+      "desc": "Soporte Guía-Canal Desplazado Blanco",
+      "precio": 20.42,
+      "categoria": "soporte"
+    },
+    {
+      "ref": "230.1.0041",
+      "desc": "Distanciador Para Soporte Trasero Blanco",
+      "precio": 43.15,
+      "categoria": "soporte"
+    },
+    {
+      "ref": "242.0.0002",
+      "desc": "Base Interior 140x140 600mm Zincada",
+      "precio": 57.07,
+      "categoria": "base"
+    },
+    {
+      "ref": "202.1.0007",
+      "desc": "Placa Base Exterior 140x140 600mm Blanco",
+      "precio": 27.76,
+      "categoria": "base"
+    },
+    {
+      "ref": "230.0.0011",
+      "desc": "Entronque 140x140",
+      "precio": 24.91,
+      "categoria": "entronque"
+    },
+    {
+      "ref": "230.0.0025",
+      "desc": "Entronque 140x140 Corto",
+      "precio": 21.14,
+      "categoria": "entronque"
+    },
+    {
+      "ref": "230.0.0042",
+      "desc": "Entronque 140x60",
+      "precio": 15.86,
+      "categoria": "entronque"
+    },
+    {
+      "ref": "230.1.0043",
+      "desc": "Composite Unión Pérgolas 3mm 300cm Blanco",
+      "precio": 109.66,
+      "categoria": "union"
+    },
+    {
+      "ref": "121.0.0007",
+      "desc": "Refuerzo Canal 100x40 Hierro (600cm)",
+      "precio": 114.22,
+      "categoria": "refuerzo"
+    },
+    {
+      "ref": "120.0.0065",
+      "desc": "Perfil Cuadrado Refuerzo Palillo TENXO 40x40x4",
+      "precio": 24.59,
+      "categoria": "refuerzo"
+    },
+    {
+      "ref": "334.J.0001",
+      "desc": "Correa De Transmisión",
+      "precio": 20.29,
+      "categoria": "transmision"
+    },
+    {
+      "ref": "104.1.0002",
+      "desc": "Goma Antilluvia Blanca",
+      "precio": 5.8,
+      "categoria": "goma"
+    },
+    {
+      "ref": "104.2.0001",
+      "desc": "Goma Antilluvia Negra",
+      "precio": 6.09,
+      "categoria": "goma"
+    },
+    {
+      "ref": "265.0.0002",
+      "desc": "Patín Delantero Completo",
+      "precio": 57.77,
+      "categoria": "patin"
+    },
+    {
+      "ref": "265.1.0003",
+      "desc": "Patín Palillo Intermedio Completo Blanco",
+      "precio": 45.67,
+      "categoria": "patin"
+    },
+    {
+      "ref": "265.2.0004",
+      "desc": "Patín Palillo Intermedio Completo Negro",
+      "precio": 45.67,
+      "categoria": "patin"
+    },
+    {
+      "ref": "265.0.0005",
+      "desc": "Conjunto Polea Lisa Delantera",
+      "precio": 52.01,
+      "categoria": "polea"
+    },
+    {
+      "ref": "203.0.0005",
+      "desc": "Perno Patín Zamak",
+      "precio": 7.54,
+      "categoria": "perno"
+    },
+    {
+      "ref": "203.0.0006",
+      "desc": "Perno Palillo Inox",
+      "precio": 19.83,
+      "categoria": "perno"
+    },
+    {
+      "ref": "203.0.0009",
+      "desc": "Perno Palillo Fijo",
+      "precio": 28.75,
+      "categoria": "perno"
+    },
+    {
+      "ref": "203.0.0008",
+      "desc": "Perno Patín Delantero Inox",
+      "precio": 31.73,
+      "categoria": "perno"
+    }
+  ],
+  "reglas": [
+    {
+      "id": "linea_min",
+      "descripcion": "Línea mínima del modelo",
+      "efecto": "bloqueo",
+      "mensaje": "Línea mínima del TX7970 Pérgola Plana Grande: 250 cm.",
+      "condicion": {
+        "linea": {
+          "lt": 250
+        }
+      }
+    },
+    {
+      "id": "linea_max",
+      "descripcion": "Línea máxima del modelo",
+      "efecto": "bloqueo",
+      "mensaje": "Línea máxima del TX7970 Pérgola Plana Grande: 1350 cm.",
+      "condicion": {
+        "linea": {
+          "gt": 1350
+        }
+      }
+    },
+    {
+      "id": "salida_min",
+      "descripcion": "Salida mínima del modelo",
+      "efecto": "bloqueo",
+      "mensaje": "Salida mínima del TX7970 Pérgola Plana Grande: 250 cm.",
+      "condicion": {
+        "salida": {
+          "lt": 250
+        }
+      }
+    },
+    {
+      "id": "guias_2_hasta_450",
+      "descripcion": "2 guías para línea hasta 450 cm",
+      "efecto": "info",
+      "mensaje": "Línea ≤450 cm: TX7970 Pérgola Plana Grande lleva 2 guías.",
+      "condicion": {
+        "linea": {
+          "lte": 450
+        }
+      }
+    },
+    {
+      "id": "guias_3_entre_500_900",
+      "descripcion": "3 guías para línea 500-900 cm",
+      "efecto": "info",
+      "mensaje": "Línea 500-900 cm: TX7970 Pérgola Plana Grande lleva 3 guías.",
+      "condicion": {
+        "and": [
+          {
+            "linea": {
+              "gte": 500
+            }
+          },
+          {
+            "linea": {
+              "lte": 900
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "guias_4_desde_950",
+      "descripcion": "4 guías para línea desde 950 cm",
+      "efecto": "info",
+      "mensaje": "Línea ≥950 cm: TX7970 Pérgola Plana Grande lleva 4 guías.",
+      "condicion": {
+        "linea": {
+          "gte": 950
+        }
+      }
+    }
+  ]
+}
