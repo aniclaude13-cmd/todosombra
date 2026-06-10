@@ -1,0 +1,267 @@
+{
+  "id": "STR1100",
+  "nombre": "STR1100 DESERT Stor Cofre Balcón",
+  "tipo": "toldo_cofre",
+  "version": "2026.1",
+  "fuente": {
+    "abd": "STR1100.abd",
+    "tarifaPdf": "Tarifa-Awma-PVP-2026.pdf",
+    "paginaTarifa": 70
+  },
+  "dimensiones": {
+    "linea": {
+      "min": 100,
+      "max": 500,
+      "valores": [
+        100,
+        125,
+        150,
+        175,
+        200,
+        225,
+        250,
+        275,
+        300,
+        325,
+        350,
+        375,
+        400,
+        425,
+        450,
+        475,
+        500
+      ],
+      "etiqueta": "línea (ancho)"
+    },
+    "salida": {
+      "min": 170,
+      "max": 170,
+      "valores": [
+        170
+      ],
+      "etiqueta": "altura (techo/barandilla)"
+    }
+  },
+  "tarifa": {
+    "matriz": {
+      "100": {
+        "170": 362
+      },
+      "125": {
+        "170": 399
+      },
+      "150": {
+        "170": 422
+      },
+      "175": {
+        "170": 477
+      },
+      "200": {
+        "170": 500
+      },
+      "225": {
+        "170": 555
+      },
+      "250": {
+        "170": 578
+      },
+      "275": {
+        "170": 632
+      },
+      "300": {
+        "170": 655
+      },
+      "325": {
+        "170": 704
+      },
+      "350": {
+        "170": 759
+      },
+      "375": {
+        "170": 782
+      },
+      "400": {
+        "170": 837
+      },
+      "425": {
+        "170": 860
+      },
+      "450": {
+        "170": 883
+      },
+      "475": {
+        "170": 946
+      },
+      "500": {
+        "170": 969
+      }
+    }
+  },
+  "motores": [
+    {
+      "id": "manual",
+      "nombre": "Manivela",
+      "recargo": 0,
+      "familia": "manual"
+    },
+    {
+      "id": "rts_15Nw",
+      "nombre": "Somfy RTS 15Nw",
+      "recargo": 195,
+      "familia": "somfy"
+    },
+    {
+      "id": "io_15Nw",
+      "nombre": "Somfy iO 15Nw",
+      "recargo": 300,
+      "familia": "somfy"
+    }
+  ],
+  "sobreprecios": [
+    {
+      "ref": "80070007",
+      "desc": "J. Brazo STOR 500 blanco",
+      "precio": 53.0,
+      "categoria": "brazo"
+    },
+    {
+      "ref": "80070139",
+      "desc": "J. Spte. pared horizontal STOR blanco",
+      "precio": 17.0,
+      "categoria": "soporte"
+    },
+    {
+      "ref": "80070110",
+      "desc": "J. Soporte pared STOR blanco",
+      "precio": 14.0,
+      "categoria": "soporte"
+    },
+    {
+      "ref": "80070094",
+      "desc": "J. Soporte barandilla STOR blanco",
+      "precio": 25.0,
+      "categoria": "soporte"
+    },
+    {
+      "ref": "80070171",
+      "desc": "Spte. barandilla Ø50 STOR blanco",
+      "precio": 31.0,
+      "categoria": "soporte"
+    },
+    {
+      "ref": "80130241",
+      "desc": "Perfiles cofre Desert blanco 4M",
+      "precio": 82.0,
+      "categoria": "cofre",
+      "unidad": "ML"
+    },
+    {
+      "ref": "80130242",
+      "desc": "Perfiles cofre Desert blanco 5M",
+      "precio": 82.0,
+      "categoria": "cofre",
+      "unidad": "ML"
+    },
+    {
+      "ref": "80130243",
+      "desc": "Perfiles cofre Desert blanco 5,8M",
+      "precio": 80.0,
+      "categoria": "cofre",
+      "unidad": "ML"
+    },
+    {
+      "ref": "80130244",
+      "desc": "Perfiles cofre Desert blanco 6M",
+      "precio": 82.0,
+      "categoria": "cofre",
+      "unidad": "ML"
+    },
+    {
+      "ref": "80130270",
+      "desc": "J. tapas cofre Desert blanco",
+      "precio": 50.0,
+      "categoria": "cofre"
+    },
+    {
+      "ref": "80130262",
+      "desc": "Soporte pared-techo cofre Desert blanco",
+      "precio": 9.0,
+      "categoria": "soporte"
+    },
+    {
+      "ref": "80130282",
+      "desc": "Soporte lateral cofre Desert blanco",
+      "precio": 10.0,
+      "categoria": "soporte"
+    }
+  ],
+  "reglas": [
+    {
+      "id": "linea_min",
+      "descripcion": "Línea mínima del STR1100 DESERT Stor Cofre Balcón",
+      "efecto": "bloqueo",
+      "mensaje": "Línea mínima del STR1100 DESERT Stor Cofre Balcón: 100 cm.",
+      "condicion": {
+        "linea": {
+          "lt": 100
+        }
+      }
+    },
+    {
+      "id": "linea_max",
+      "descripcion": "Línea máxima del STR1100 DESERT Stor Cofre Balcón",
+      "efecto": "bloqueo",
+      "mensaje": "Línea máxima del STR1100 DESERT Stor Cofre Balcón: 500 cm.",
+      "condicion": {
+        "linea": {
+          "gt": 500
+        }
+      }
+    },
+    {
+      "id": "altura (techo/barandilla)_min",
+      "descripcion": "Altura (techo/barandilla) mínima del STR1100 DESERT Stor Cofre Balcón",
+      "efecto": "bloqueo",
+      "mensaje": "Altura (techo/barandilla) mínima del STR1100 DESERT Stor Cofre Balcón: 170 cm.",
+      "condicion": {
+        "salida": {
+          "lt": 170
+        }
+      }
+    },
+    {
+      "id": "altura (techo/barandilla)_max",
+      "descripcion": "Altura (techo/barandilla) máxima del STR1100 DESERT Stor Cofre Balcón",
+      "efecto": "bloqueo",
+      "mensaje": "Altura (techo/barandilla) máxima del STR1100 DESERT Stor Cofre Balcón: 170 cm.",
+      "condicion": {
+        "salida": {
+          "gt": 170
+        }
+      }
+    },
+    {
+      "id": "soportes_segun_linea",
+      "descripcion": "Nº de soportes según línea: 2 hasta 350, 3 hasta 450, 4 hasta 500",
+      "efecto": "aviso",
+      "mensaje": "STR1100: 2 soportes hasta 350 cm de línea, 3 soportes hasta 450 cm, 4 soportes para 475-500 cm.",
+      "condicion": {
+        "linea": {
+          "gte": 0
+        }
+      }
+    },
+    {
+      "id": "tubo_max_265",
+      "descripcion": "Capacidad máxima de tejido con tubo Ø70mm",
+      "efecto": "aviso",
+      "mensaje": "STR1100: capacidad máxima de lona con tubo Ø70mm es 265 cm de altura. Para alturas mayores consultar.",
+      "condicion": {
+        "linea": {
+          "gte": 0
+        }
+      }
+    }
+  ],
+  "descripcion": "Stor cofre DESERT con brazos abatibles de 50 cm y cofre estético. Tubo Ø70mm. Salida 170 cm (capacidad máxima 265 cm de lona)."
+}

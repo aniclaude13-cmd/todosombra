@@ -1,0 +1,292 @@
+{
+  "id": "STR1000",
+  "nombre": "STR1000 SOLARIS Stor Balcón",
+  "tipo": "toldo_brazo",
+  "version": "2026.1",
+  "fuente": {
+    "abd": "STR1000.abd",
+    "tarifaPdf": "Tarifa-Awma-PVP-2026.pdf",
+    "paginaTarifa": 68
+  },
+  "dimensiones": {
+    "linea": {
+      "min": 100,
+      "max": 600,
+      "valores": [
+        100,
+        125,
+        150,
+        175,
+        200,
+        225,
+        250,
+        275,
+        300,
+        325,
+        350,
+        375,
+        400,
+        425,
+        450,
+        475,
+        500,
+        525,
+        550,
+        575,
+        600
+      ],
+      "etiqueta": "línea (ancho)"
+    },
+    "salida": {
+      "min": 170,
+      "max": 250,
+      "valores": [
+        170,
+        200,
+        225,
+        250
+      ],
+      "etiqueta": "altura (techo/barandilla)"
+    }
+  },
+  "tarifa": {
+    "matriz": {
+      "100": {
+        "170": 306,
+        "200": 313,
+        "225": 318,
+        "250": 324
+      },
+      "125": {
+        "170": 351,
+        "200": 361,
+        "225": 370,
+        "250": 378
+      },
+      "150": {
+        "170": 364,
+        "200": 374,
+        "225": 382,
+        "250": 391
+      },
+      "175": {
+        "170": 409,
+        "200": 423,
+        "225": 434,
+        "250": 445
+      },
+      "200": {
+        "170": 422,
+        "200": 435,
+        "225": 446,
+        "250": 457
+      },
+      "225": {
+        "170": 467,
+        "200": 484,
+        "225": 498,
+        "250": 512
+      },
+      "250": {
+        "170": 480,
+        "200": 496,
+        "225": 510,
+        "250": 524
+      },
+      "275": {
+        "170": 525,
+        "200": 545,
+        "225": 562,
+        "250": 578
+      },
+      "300": {
+        "170": 538,
+        "200": 558,
+        "225": 574,
+        "250": 591
+      },
+      "325": {
+        "170": 550,
+        "200": 570,
+        "225": 587,
+        "250": 604
+      },
+      "350": {
+        "170": 596,
+        "200": 619,
+        "225": 638,
+        "250": 658
+      },
+      "375": {
+        "170": 608,
+        "200": 632,
+        "225": 651,
+        "250": 670
+      },
+      "400": {
+        "170": 654,
+        "200": 680,
+        "225": 702,
+        "250": 725
+      },
+      "425": {
+        "170": 666,
+        "200": 693,
+        "225": 715,
+        "250": 737
+      },
+      "450": {
+        "170": 679,
+        "200": 705,
+        "225": 728,
+        "250": 750
+      },
+      "475": {
+        "170": 724,
+        "200": 754,
+        "225": 779,
+        "250": 804
+      },
+      "500": {
+        "170": 737,
+        "200": 767,
+        "225": 792,
+        "250": 817
+      },
+      "525": {
+        "170": 782,
+        "200": 815,
+        "225": 843,
+        "250": 871
+      },
+      "550": {
+        "170": 795,
+        "200": 828,
+        "225": 856,
+        "250": 883
+      },
+      "575": {
+        "170": 840,
+        "200": 877,
+        "225": 907,
+        "250": 938
+      },
+      "600": {
+        "170": 853,
+        "200": 889,
+        "225": 920,
+        "250": 950
+      }
+    }
+  },
+  "motores": [
+    {
+      "id": "manual",
+      "nombre": "Manivela",
+      "recargo": 0,
+      "familia": "manual"
+    },
+    {
+      "id": "rts_10Nw",
+      "nombre": "Somfy RTS 10Nw",
+      "recargo": 180,
+      "familia": "somfy"
+    },
+    {
+      "id": "io_10Nw",
+      "nombre": "Somfy iO 10Nw",
+      "recargo": 285,
+      "familia": "somfy"
+    }
+  ],
+  "sobreprecios": [
+    {
+      "ref": "80070007",
+      "desc": "J. Brazo STOR 500 blanco",
+      "precio": 53.0,
+      "categoria": "brazo"
+    },
+    {
+      "ref": "80070139",
+      "desc": "J. Spte. pared horizontal STOR blanco",
+      "precio": 17.0,
+      "categoria": "soporte"
+    },
+    {
+      "ref": "80070110",
+      "desc": "J. Soporte pared STOR blanco",
+      "precio": 14.0,
+      "categoria": "soporte"
+    },
+    {
+      "ref": "80070094",
+      "desc": "J. Soporte barandilla STOR blanco",
+      "precio": 25.0,
+      "categoria": "soporte"
+    },
+    {
+      "ref": "80070171",
+      "desc": "Spte. barandilla Ø50 STOR blanco",
+      "precio": 31.0,
+      "categoria": "soporte"
+    }
+  ],
+  "reglas": [
+    {
+      "id": "linea_min",
+      "descripcion": "Línea mínima del STR1000 SOLARIS Stor Balcón",
+      "efecto": "bloqueo",
+      "mensaje": "Línea mínima del STR1000 SOLARIS Stor Balcón: 100 cm.",
+      "condicion": {
+        "linea": {
+          "lt": 100
+        }
+      }
+    },
+    {
+      "id": "linea_max",
+      "descripcion": "Línea máxima del STR1000 SOLARIS Stor Balcón",
+      "efecto": "bloqueo",
+      "mensaje": "Línea máxima del STR1000 SOLARIS Stor Balcón: 600 cm.",
+      "condicion": {
+        "linea": {
+          "gt": 600
+        }
+      }
+    },
+    {
+      "id": "altura (techo/barandilla)_min",
+      "descripcion": "Altura (techo/barandilla) mínima del STR1000 SOLARIS Stor Balcón",
+      "efecto": "bloqueo",
+      "mensaje": "Altura (techo/barandilla) mínima del STR1000 SOLARIS Stor Balcón: 170 cm.",
+      "condicion": {
+        "salida": {
+          "lt": 170
+        }
+      }
+    },
+    {
+      "id": "altura (techo/barandilla)_max",
+      "descripcion": "Altura (techo/barandilla) máxima del STR1000 SOLARIS Stor Balcón",
+      "efecto": "bloqueo",
+      "mensaje": "Altura (techo/barandilla) máxima del STR1000 SOLARIS Stor Balcón: 250 cm.",
+      "condicion": {
+        "salida": {
+          "gt": 250
+        }
+      }
+    },
+    {
+      "id": "stor_balcon_motor_recomendado",
+      "descripcion": "STR1000 admite máquina (manivela) o motorización ligera Somfy 10Nw",
+      "efecto": "aviso",
+      "mensaje": "STR1000: motor recomendado Somfy 10Nw. Para 150 cm de motor consultar referencia exacta.",
+      "condicion": {
+        "linea": {
+          "gte": 0
+        }
+      }
+    }
+  ],
+  "descripcion": "Stor balcón SOLARIS con brazos abatibles de 50 cm. La salida indica altura del techo/barandilla (170-250 cm). Fijación a pared/techo/barandilla."
+}

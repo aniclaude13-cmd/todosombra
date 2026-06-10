@@ -1,0 +1,302 @@
+{
+  "id": "ART4100",
+  "nombre": "ART4100 A1 SMART Brazos Articulados",
+  "tipo": "toldo_brazo",
+  "version": "2026.1",
+  "fuente": {
+    "abd": "ART4100.abd",
+    "tarifaPdf": "Tarifa-Awma-PVP-2026.pdf",
+    "paginaTarifa": 86
+  },
+  "dimensiones": {
+    "linea": {
+      "min": 151,
+      "max": 450,
+      "valores": [
+        151,
+        176,
+        202,
+        235,
+        260,
+        285,
+        300,
+        325,
+        350,
+        375,
+        400,
+        425,
+        450
+      ],
+      "etiqueta": "línea (ancho)"
+    },
+    "salida": {
+      "min": 125,
+      "max": 250,
+      "valores": [
+        125,
+        150,
+        175,
+        200,
+        225,
+        250
+      ],
+      "etiqueta": "salida (brazo)"
+    }
+  },
+  "tarifa": {
+    "matriz": {
+      "151": {
+        "125": 621
+      },
+      "176": {
+        "125": 642,
+        "150": 661
+      },
+      "202": {
+        "125": 662,
+        "150": 683,
+        "175": 707
+      },
+      "235": {
+        "125": 689,
+        "150": 711,
+        "175": 737,
+        "200": 760
+      },
+      "260": {
+        "125": 709,
+        "150": 732,
+        "175": 759,
+        "200": 784,
+        "225": 824
+      },
+      "285": {
+        "125": 729,
+        "150": 754,
+        "175": 782,
+        "200": 807,
+        "225": 849,
+        "250": 877
+      },
+      "300": {
+        "125": 741,
+        "150": 767,
+        "175": 795,
+        "200": 822,
+        "225": 864,
+        "250": 893
+      },
+      "325": {
+        "125": 762,
+        "150": 788,
+        "175": 818,
+        "200": 845,
+        "225": 888,
+        "250": 919
+      },
+      "350": {
+        "125": 782,
+        "150": 809,
+        "175": 840,
+        "200": 869,
+        "225": 913,
+        "250": 944
+      },
+      "375": {
+        "125": 802,
+        "150": 830,
+        "175": 863,
+        "200": 892,
+        "225": 938,
+        "250": 970
+      },
+      "400": {
+        "125": 822,
+        "150": 852,
+        "175": 885,
+        "200": 916,
+        "225": 962,
+        "250": 996
+      },
+      "425": {
+        "125": 842,
+        "150": 873,
+        "175": 907,
+        "200": 939,
+        "225": 987,
+        "250": 1022
+      },
+      "450": {
+        "125": 862,
+        "150": 894,
+        "175": 930,
+        "200": 963,
+        "225": 1012,
+        "250": 1048
+      }
+    }
+  },
+  "motores": [
+    {
+      "id": "manual",
+      "nombre": "Manivela",
+      "recargo": 0,
+      "familia": "manual"
+    },
+    {
+      "id": "rts_30Nw",
+      "nombre": "Somfy RTS 30Nw (salida ≤175)",
+      "recargo": 215,
+      "familia": "somfy"
+    },
+    {
+      "id": "rts_40Nw",
+      "nombre": "Somfy RTS 40Nw (salida ≥200)",
+      "recargo": 240,
+      "familia": "somfy"
+    },
+    {
+      "id": "io_30Nw",
+      "nombre": "Somfy iO 30Nw (salida ≤175)",
+      "recargo": 320,
+      "familia": "somfy"
+    },
+    {
+      "id": "io_40Nw",
+      "nombre": "Somfy iO 40Nw (salida ≥200)",
+      "recargo": 345,
+      "familia": "somfy"
+    }
+  ],
+  "sobreprecios": [
+    {
+      "ref": "80081265",
+      "desc": "J. Soporte SMART blanco",
+      "precio": 176.34,
+      "categoria": "soporte"
+    },
+    {
+      "ref": "80081200",
+      "desc": "J. Brazos INV. SMART 1,00",
+      "precio": 216.15,
+      "categoria": "brazo"
+    },
+    {
+      "ref": "80081207",
+      "desc": "J. Brazos INV. SMART 1,25",
+      "precio": 231.3,
+      "categoria": "brazo"
+    },
+    {
+      "ref": "80081214",
+      "desc": "J. Brazos INV. SMART 1,50",
+      "precio": 241.84,
+      "categoria": "brazo"
+    },
+    {
+      "ref": "80081221",
+      "desc": "J. Brazos INV. SMART 1,75",
+      "precio": 256.29,
+      "categoria": "brazo"
+    },
+    {
+      "ref": "80081228",
+      "desc": "J. Brazos INV. SMART 2,00",
+      "precio": 268.0,
+      "categoria": "brazo"
+    },
+    {
+      "ref": "80081235",
+      "desc": "J. Brazos INV. SMART 2,25",
+      "precio": 296.4,
+      "categoria": "brazo"
+    },
+    {
+      "ref": "80081242",
+      "desc": "J. Brazos INV. SMART 2,50",
+      "precio": 311.07,
+      "categoria": "brazo"
+    },
+    {
+      "ref": "80080885",
+      "desc": "J. Regletas inferior brazo Premium blanco",
+      "precio": 25.74,
+      "categoria": "accesorio"
+    },
+    {
+      "ref": "80081800",
+      "desc": "Pivote largo barra de carga A1 blanco",
+      "precio": 2.0,
+      "categoria": "accesorio"
+    }
+  ],
+  "reglas": [
+    {
+      "id": "linea_min",
+      "descripcion": "Línea mínima del ART4100 A1 SMART Brazos Articulados",
+      "efecto": "bloqueo",
+      "mensaje": "Línea mínima del ART4100 A1 SMART Brazos Articulados: 151 cm.",
+      "condicion": {
+        "linea": {
+          "lt": 151
+        }
+      }
+    },
+    {
+      "id": "linea_max",
+      "descripcion": "Línea máxima del ART4100 A1 SMART Brazos Articulados",
+      "efecto": "bloqueo",
+      "mensaje": "Línea máxima del ART4100 A1 SMART Brazos Articulados: 450 cm.",
+      "condicion": {
+        "linea": {
+          "gt": 450
+        }
+      }
+    },
+    {
+      "id": "salida (brazo)_min",
+      "descripcion": "Salida (brazo) mínima del ART4100 A1 SMART Brazos Articulados",
+      "efecto": "bloqueo",
+      "mensaje": "Salida (brazo) mínima del ART4100 A1 SMART Brazos Articulados: 125 cm.",
+      "condicion": {
+        "salida": {
+          "lt": 125
+        }
+      }
+    },
+    {
+      "id": "salida (brazo)_max",
+      "descripcion": "Salida (brazo) máxima del ART4100 A1 SMART Brazos Articulados",
+      "efecto": "bloqueo",
+      "mensaje": "Salida (brazo) máxima del ART4100 A1 SMART Brazos Articulados: 250 cm.",
+      "condicion": {
+        "salida": {
+          "gt": 250
+        }
+      }
+    },
+    {
+      "id": "motor_40Nw_salida_grande",
+      "descripcion": "Motor 40Nw recomendado para salidas ≥200",
+      "efecto": "aviso",
+      "mensaje": "ART4100: salida ≥200 cm utiliza motor Somfy 40Nw (en lugar de 30Nw).",
+      "condicion": {
+        "salida": {
+          "gte": 200
+        }
+      }
+    },
+    {
+      "id": "ensamblado_max_450",
+      "descripcion": "Se entrega ensamblado hasta 450 cm",
+      "efecto": "aviso",
+      "mensaje": "ART4100: se sirve ensamblado hasta 450 cm de línea; resto se entrega en partes lo más montado posible.",
+      "condicion": {
+        "linea": {
+          "gt": 450
+        }
+      }
+    }
+  ],
+  "descripcion": "Toldo de brazos articulados SMART con sistema de tensión interna. Tubo Ø70mm. Compatible con cajón Spiral Smart y tejadillo V2. Salida = longitud del brazo (125-250 cm)."
+}
