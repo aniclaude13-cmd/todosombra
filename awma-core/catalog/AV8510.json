@@ -1,0 +1,196 @@
+{
+  "id": "AV8510",
+  "nombre": "AV8510 NEXUS 100 Guía",
+  "tipo": "vertical",
+  "version": "2026.1",
+  "fuente": {
+    "abd": "AV8510.abd",
+    "tarifaPdf": "Tarifa-Awma-PVP-2026.pdf",
+    "paginaTarifa": 227
+  },
+  "dimensiones": {
+    "linea": {
+      "min": 100,
+      "max": 325,
+      "valores": [
+        100,
+        125,
+        150,
+        175,
+        200,
+        225,
+        250,
+        275,
+        300,
+        325
+      ],
+      "etiqueta": "línea (ancho)"
+    },
+    "salida": {
+      "min": 100,
+      "max": 300,
+      "valores": [
+        100,
+        150,
+        200,
+        250,
+        300
+      ],
+      "etiqueta": "altura"
+    }
+  },
+  "tarifa": {
+    "matriz": {
+      "100": {
+        "100": 919,
+        "150": 981,
+        "200": 1043,
+        "250": 1105,
+        "300": 1196
+      },
+      "125": {
+        "100": 993,
+        "150": 1060,
+        "200": 1128,
+        "250": 1195,
+        "300": 1292
+      },
+      "150": {
+        "100": 1051,
+        "150": 1118,
+        "200": 1186,
+        "250": 1254,
+        "300": 1350
+      },
+      "175": {
+        "100": 1081,
+        "150": 1155,
+        "200": 1228,
+        "250": 1301,
+        "300": 1403
+      },
+      "200": {
+        "100": 1120,
+        "150": 1193,
+        "200": 1266,
+        "250": 1339,
+        "300": 1441
+      },
+      "225": {
+        "100": 1159,
+        "150": 1232,
+        "200": 1305,
+        "250": 1378,
+        "300": 1480
+      },
+      "250": {
+        "100": 1213,
+        "150": 1292,
+        "200": 1370,
+        "250": 1449,
+        "300": 1556
+      },
+      "275": {
+        "100": 1281,
+        "150": 1359,
+        "200": 1438,
+        "250": 1516,
+        "300": 1595
+      },
+      "300": {
+        "100": 1335,
+        "150": 1419,
+        "200": 1503,
+        "250": 1587,
+        "300": 1671
+      },
+      "325": {
+        "100": 1373,
+        "150": 1458,
+        "200": 1542,
+        "250": 1626,
+        "300": 1710
+      }
+    }
+  },
+  "motores": [
+    {
+      "id": "manual",
+      "nombre": "Manivela",
+      "recargo": 0,
+      "familia": "manual"
+    },
+    {
+      "id": "rts_15Nm",
+      "nombre": "Somfy RTS 15Nm",
+      "recargo": 195,
+      "familia": "somfy"
+    },
+    {
+      "id": "rts_25Nm",
+      "nombre": "Somfy RTS 25Nm",
+      "recargo": 220,
+      "familia": "somfy"
+    },
+    {
+      "id": "io_15Nm",
+      "nombre": "Somfy iO 15Nm",
+      "recargo": 300,
+      "familia": "somfy"
+    },
+    {
+      "id": "io_25Nm",
+      "nombre": "Somfy iO 25Nm",
+      "recargo": 325,
+      "familia": "somfy"
+    }
+  ],
+  "sobreprecios": [],
+  "reglas": [
+    {
+      "id": "linea_min",
+      "descripcion": "Línea mínima del modelo",
+      "efecto": "bloqueo",
+      "mensaje": "Línea mínima del AV8510 NEXUS 100 Guía: 100 cm.",
+      "condicion": {
+        "linea": {
+          "lt": 100
+        }
+      }
+    },
+    {
+      "id": "linea_max",
+      "descripcion": "Línea máxima del modelo",
+      "efecto": "bloqueo",
+      "mensaje": "Línea máxima del AV8510 NEXUS 100 Guía: 325 cm.",
+      "condicion": {
+        "linea": {
+          "gt": 325
+        }
+      }
+    },
+    {
+      "id": "altura_min",
+      "descripcion": "Altura/salida mínima del modelo",
+      "efecto": "bloqueo",
+      "mensaje": "Altura mínima del AV8510 NEXUS 100 Guía: 100 cm.",
+      "condicion": {
+        "salida": {
+          "lt": 100
+        }
+      }
+    },
+    {
+      "id": "altura_max",
+      "descripcion": "Altura/salida máxima del modelo",
+      "efecto": "bloqueo",
+      "mensaje": "Altura máxima del AV8510 NEXUS 100 Guía: 300 cm.",
+      "condicion": {
+        "salida": {
+          "gt": 300
+        }
+      }
+    }
+  ],
+  "descripcion": "Vertical NEXUS 100, guías laterales. Cajón 100 mm."
+}

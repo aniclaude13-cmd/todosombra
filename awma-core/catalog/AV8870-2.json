@@ -1,0 +1,263 @@
+{
+  "id": "AV8870-2",
+  "nombre": "AV8870-2 NIMBUS Varilla sin cofre",
+  "tipo": "vertical",
+  "version": "2026.1",
+  "fuente": {
+    "abd": "AV8870-2.abd",
+    "tarifaPdf": "Tarifa-Awma-PVP-2026.pdf",
+    "paginaTarifa": 241
+  },
+  "dimensiones": {
+    "linea": {
+      "min": 150,
+      "max": 500,
+      "valores": [
+        150,
+        175,
+        200,
+        225,
+        250,
+        275,
+        300,
+        325,
+        350,
+        375,
+        400,
+        425,
+        450,
+        475,
+        500
+      ],
+      "etiqueta": "línea (ancho)"
+    },
+    "salida": {
+      "min": 200,
+      "max": 325,
+      "valores": [
+        200,
+        225,
+        250,
+        275,
+        300,
+        325
+      ],
+      "etiqueta": "altura"
+    }
+  },
+  "tarifa": {
+    "matriz": {
+      "150": {
+        "200": 738,
+        "225": 764,
+        "250": 790,
+        "275": 816,
+        "300": 842,
+        "325": 868
+      },
+      "175": {
+        "200": 783,
+        "225": 810,
+        "250": 837,
+        "275": 864,
+        "300": 891,
+        "325": 918
+      },
+      "200": {
+        "200": 827,
+        "225": 855,
+        "250": 884,
+        "275": 912,
+        "300": 940,
+        "325": 968
+      },
+      "225": {
+        "200": 872,
+        "225": 901,
+        "250": 930,
+        "275": 960,
+        "300": 989,
+        "325": 1018
+      },
+      "250": {
+        "200": 916,
+        "225": 947,
+        "250": 977,
+        "275": 1007,
+        "300": 1038,
+        "325": 1068
+      },
+      "275": {
+        "200": 961,
+        "225": 992,
+        "250": 1024,
+        "275": 1055,
+        "300": 1087,
+        "325": 1118
+      },
+      "300": {
+        "200": 1005,
+        "225": 1038,
+        "250": 1071,
+        "275": 1103,
+        "300": 1136,
+        "325": 1168
+      },
+      "325": {
+        "200": 1050,
+        "225": 1084,
+        "250": 1117,
+        "275": 1151,
+        "300": 1185,
+        "325": 1219
+      },
+      "350": {
+        "200": 1095,
+        "225": 1129,
+        "250": 1164,
+        "275": 1199,
+        "300": 1234,
+        "325": 1269
+      },
+      "375": {
+        "200": 1139,
+        "225": 1175,
+        "250": 1211,
+        "275": 1247,
+        "300": 1283,
+        "325": 1319
+      },
+      "400": {
+        "200": 1184,
+        "225": 1221,
+        "250": 1258,
+        "275": 1295,
+        "300": 1332,
+        "325": 1369
+      },
+      "425": {
+        "200": 1228,
+        "225": 1266,
+        "250": 1304,
+        "275": 1343,
+        "300": 1381,
+        "325": 1419
+      },
+      "450": {
+        "200": 1273,
+        "225": 1312,
+        "250": 1351,
+        "275": 1391,
+        "300": 1430,
+        "325": 1469
+      },
+      "475": {
+        "200": 1317,
+        "225": 1358,
+        "250": 1398,
+        "275": 1438,
+        "300": 1479,
+        "325": 1519
+      },
+      "500": {
+        "200": 1362,
+        "225": 1403,
+        "250": 1445,
+        "275": 1486,
+        "300": 1528,
+        "325": 1569
+      }
+    }
+  },
+  "motores": [
+    {
+      "id": "manual",
+      "nombre": "Manivela",
+      "recargo": 0,
+      "familia": "manual"
+    },
+    {
+      "id": "rts_20Nm",
+      "nombre": "Somfy RTS 20Nm (línea ≤400)",
+      "recargo": 215,
+      "familia": "somfy"
+    },
+    {
+      "id": "rts_30Nm",
+      "nombre": "Somfy RTS 30Nm (línea >400)",
+      "recargo": 245,
+      "familia": "somfy"
+    },
+    {
+      "id": "io_20Nm",
+      "nombre": "Somfy iO 20Nm (línea ≤400)",
+      "recargo": 320,
+      "familia": "somfy"
+    },
+    {
+      "id": "io_30Nm",
+      "nombre": "Somfy iO 30Nm (línea >400)",
+      "recargo": 350,
+      "familia": "somfy"
+    }
+  ],
+  "sobreprecios": [],
+  "reglas": [
+    {
+      "id": "linea_min",
+      "descripcion": "Línea mínima del modelo",
+      "efecto": "bloqueo",
+      "mensaje": "Línea mínima del AV8870-2 NIMBUS Varilla sin cofre: 150 cm.",
+      "condicion": {
+        "linea": {
+          "lt": 150
+        }
+      }
+    },
+    {
+      "id": "linea_max",
+      "descripcion": "Línea máxima del modelo",
+      "efecto": "bloqueo",
+      "mensaje": "Línea máxima del AV8870-2 NIMBUS Varilla sin cofre: 500 cm.",
+      "condicion": {
+        "linea": {
+          "gt": 500
+        }
+      }
+    },
+    {
+      "id": "altura_min",
+      "descripcion": "Altura/salida mínima del modelo",
+      "efecto": "bloqueo",
+      "mensaje": "Altura mínima del AV8870-2 NIMBUS Varilla sin cofre: 200 cm.",
+      "condicion": {
+        "salida": {
+          "lt": 200
+        }
+      }
+    },
+    {
+      "id": "altura_max",
+      "descripcion": "Altura/salida máxima del modelo",
+      "efecto": "bloqueo",
+      "mensaje": "Altura máxima del AV8870-2 NIMBUS Varilla sin cofre: 325 cm.",
+      "condicion": {
+        "salida": {
+          "gt": 325
+        }
+      }
+    },
+    {
+      "id": "motor_30Nw_linea_grande",
+      "descripcion": "Motor 30Nw para línea >400",
+      "efecto": "aviso",
+      "mensaje": "Línea >400 cm: motor Somfy 30Nw (en lugar de 20Nw).",
+      "condicion": {
+        "linea": {
+          "gt": 400
+        }
+      }
+    }
+  ],
+  "descripcion": "Vertical NIMBUS con guiado por varilla Ø10 mm acero inox, sin cofre."
+}

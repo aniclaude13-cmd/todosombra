@@ -1,0 +1,76 @@
+{
+  "id": "PRCS3100",
+  "nombre": "PRCS3100",
+  "tipo": "toldo_punto_recto_cofre",
+  "subtipo": "semi_tension_con_cofre",
+  "indice": "I2",
+  "linea": "DESERT",
+  "version": "2026.1",
+  "fuente": {
+    "tarifaPdf": "Tarifa-Awma-PVP-2026.pdf",
+    "paginaTarifa": 81
+  },
+  "paquete": {
+    "tejido": "acrilico",
+    "colorAluminio": "blanco",
+    "accionamiento": "manivela 150cm motor Somfy (no incluido)",
+    "tuboEnrollable": "70mm",
+    "brazo": "tension (sistema I2)",
+    "cofre": "desert D1",
+    "soportes": ["pared aluminio", "techo aluminio entreparedes"],
+    "entrega": "se sirve montado en todo lo posible, sin material de fijacion",
+    "observaciones": "capacidad de lona maxima con tubo 70mm de 265cm"
+  },
+  "compatibilidad": [],
+  "motorRecomendado": "15Nw",
+  "dimensiones": {
+    "linea": {
+      "min": 100,
+      "max": 450,
+      "valores": [100, 125, 150, 175, 200, 225, 250, 275, 300, 325, 350, 375, 400, 425, 450]
+    },
+    "salida": {
+      "min": 60,
+      "max": 120,
+      "valores": [60, 80, 100, 120]
+    }
+  },
+  "soportes": {
+    "2_soportes": { "lineaMin": 100, "lineaMax": 300 },
+    "3_soportes": { "lineaMin": 325, "lineaMax": 450 }
+  },
+  "tarifa": {
+    "matriz": {
+      "100": { "60": 370, "80": 384, "100": 398, "120": 413 },
+      "125": { "60": 402, "80": 418, "100": 433, "120": 450 },
+      "150": { "60": 434, "80": 451, "100": 469, "120": 487 },
+      "175": { "60": 466, "80": 485, "100": 504, "120": 524 },
+      "200": { "60": 497, "80": 518, "100": 540, "120": 561 },
+      "225": { "60": 529, "80": 552, "100": 575, "120": 598 },
+      "250": { "60": 561, "80": 586, "100": 610, "120": 636 },
+      "275": { "60": 593, "80": 619, "100": 646, "120": 673 },
+      "300": { "60": 625, "80": 653, "100": 681, "120": 710 },
+      "325": { "60": 665, "80": 695, "100": 725, "120": 756 },
+      "350": { "60": 697, "80": 728, "100": 760, "120": 793 },
+      "375": { "60": 728, "80": 762, "100": 796, "120": 830 },
+      "400": { "60": 760, "80": 796, "100": 831, "120": 867 },
+      "425": { "60": 792, "80": 829, "100": 866, "120": 904 },
+      "450": { "60": 824, "80": 863, "100": 902, "120": 941 }
+    }
+  },
+  "motores": [],
+  "sobreprecios": [
+    { "ref": "80060512", "desc": "J. BR. CURVO I2 SEMI-TENSION 0,60 BLANCO", "precio": 83.14, "unidad": "JGO", "categoria": "brazo" },
+    { "ref": "80060348", "desc": "J. BR. CURVO I2 SEMI-TENSION 0,80 BLANCO", "precio": 87.05, "unidad": "JGO", "categoria": "brazo" },
+    { "ref": "80060364", "desc": "J. BR. CURVO I2 SEMI-TENSION 1,00 BLANCO", "precio": 91.11, "unidad": "JGO", "categoria": "brazo" },
+    { "ref": "80060380", "desc": "J. BR. CURVO I2 SEMI-TENSION 1,20 BLANCO", "precio": 95.76, "unidad": "JGO", "categoria": "brazo" },
+    { "ref": "80130241", "desc": "MTS J. PERFILES COFRE DESERT BLANCO 4M", "precio": 81.69, "unidad": "ML", "categoria": "cofre" },
+    { "ref": "80130242", "desc": "MTS J. PERFILES COFRE DESERT BLANCO 5M", "precio": 81.69, "unidad": "ML", "categoria": "cofre" },
+    { "ref": "80130244", "desc": "MTS J. PERFILES COFRE DESERT BLANCO 6M", "precio": 81.69, "unidad": "ML", "categoria": "cofre" },
+    { "ref": "80130245", "desc": "MTS J. PERFILES COFRE DESERT BLANCO 7M", "precio": 81.69, "unidad": "ML", "categoria": "cofre" },
+    { "ref": "80130270", "desc": "J. TAPAS COFRE DESERT BLANCO", "precio": 50.34, "unidad": "JGO", "categoria": "tapa" },
+    { "ref": "80130262", "desc": "SOPORTE PARED-TECHO COFRE DESERT BLANCO", "precio": 9.06, "unidad": "UD", "categoria": "soporte" },
+    { "ref": "80130282", "desc": "SOPORTE LATERAL COFRE DESERT BLANCO", "precio": 9.61, "unidad": "UD", "categoria": "soporte" }
+  ],
+  "reglas": []
+}

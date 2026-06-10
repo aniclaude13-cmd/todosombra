@@ -1,0 +1,240 @@
+{
+  "id": "AV8770",
+  "nombre": "AV8770 IGLOO Toldo vertical",
+  "tipo": "vertical",
+  "version": "2026.1",
+  "fuente": {
+    "abd": "AV8770.abd",
+    "tarifaPdf": "Tarifa-Awma-PVP-2026.pdf",
+    "paginaTarifa": 239
+  },
+  "dimensiones": {
+    "linea": {
+      "min": 150,
+      "max": 400,
+      "valores": [
+        150,
+        175,
+        200,
+        225,
+        250,
+        275,
+        300,
+        325,
+        350,
+        375,
+        400
+      ],
+      "etiqueta": "línea (ancho)"
+    },
+    "salida": {
+      "min": 200,
+      "max": 300,
+      "valores": [
+        200,
+        225,
+        250,
+        275,
+        300
+      ],
+      "etiqueta": "altura"
+    }
+  },
+  "tarifa": {
+    "matriz": {
+      "150": {
+        "200": 1229,
+        "225": 1290,
+        "250": 1351,
+        "275": 1412,
+        "300": 1473
+      },
+      "175": {
+        "200": 1319,
+        "225": 1381,
+        "250": 1443,
+        "275": 1505,
+        "300": 1567
+      },
+      "200": {
+        "200": 1412,
+        "225": 1475,
+        "250": 1539,
+        "275": 1602,
+        "300": 1665
+      },
+      "225": {
+        "200": 1494,
+        "225": 1558,
+        "250": 1623,
+        "275": 1687,
+        "300": 1751
+      },
+      "250": {
+        "200": 1576,
+        "225": 1642,
+        "250": 1707,
+        "275": 1772,
+        "300": 1838
+      },
+      "275": {
+        "200": 1658,
+        "225": 1725,
+        "250": 1791,
+        "275": 1858,
+        "300": 1924
+      },
+      "300": {
+        "200": 1740,
+        "225": 1808,
+        "250": 1875,
+        "275": 1943,
+        "300": 2010
+      },
+      "325": {
+        "200": 1822,
+        "225": 1891,
+        "250": 1960,
+        "275": 2028,
+        "300": 2097
+      },
+      "350": {
+        "200": 1904,
+        "225": 1974,
+        "250": 2044,
+        "275": 2114,
+        "300": 2183
+      },
+      "375": {
+        "200": 1986,
+        "225": 2057,
+        "250": 2128,
+        "275": 2199,
+        "300": 2270
+      },
+      "400": {
+        "200": 2068,
+        "225": 2140,
+        "250": 2212,
+        "275": 2284,
+        "300": 2356
+      }
+    }
+  },
+  "motores": [
+    {
+      "id": "manual",
+      "nombre": "Manivela",
+      "recargo": 0,
+      "familia": "manual"
+    },
+    {
+      "id": "rts_15Nm",
+      "nombre": "Somfy RTS 15Nm",
+      "recargo": 195,
+      "familia": "somfy"
+    },
+    {
+      "id": "rts_25Nm",
+      "nombre": "Somfy RTS 25Nm",
+      "recargo": 220,
+      "familia": "somfy"
+    },
+    {
+      "id": "io_15Nm",
+      "nombre": "Somfy iO 15Nm",
+      "recargo": 300,
+      "familia": "somfy"
+    },
+    {
+      "id": "io_25Nm",
+      "nombre": "Somfy iO 25Nm",
+      "recargo": 325,
+      "familia": "somfy"
+    }
+  ],
+  "sobreprecios": [
+    {
+      "ref": "80170637",
+      "desc": "J. perfiles cofre Igloo blanco 7M",
+      "precio": 140.43,
+      "categoria": "cofre",
+      "unidad": "ML"
+    },
+    {
+      "ref": "80170677",
+      "desc": "J. perfiles guía Igloo blanco 6M",
+      "precio": 115.77,
+      "categoria": "guia",
+      "unidad": "ML"
+    },
+    {
+      "ref": "80170657",
+      "desc": "Perfil barra carga Igloo blanco 7M",
+      "precio": 75.69,
+      "categoria": "barra_carga",
+      "unidad": "ML"
+    },
+    {
+      "ref": "80170696",
+      "desc": "Kit tapas Igloo blanco",
+      "precio": 188.09,
+      "categoria": "accesorio",
+      "unidad": "KIT"
+    },
+    {
+      "ref": "80170707",
+      "desc": "J. cerrojillos Igloo blanco",
+      "precio": 111.5,
+      "categoria": "accesorio",
+      "unidad": "JGO"
+    }
+  ],
+  "reglas": [
+    {
+      "id": "linea_min",
+      "descripcion": "Línea mínima del modelo",
+      "efecto": "bloqueo",
+      "mensaje": "Línea mínima del AV8770 IGLOO Toldo vertical: 150 cm.",
+      "condicion": {
+        "linea": {
+          "lt": 150
+        }
+      }
+    },
+    {
+      "id": "linea_max",
+      "descripcion": "Línea máxima del modelo",
+      "efecto": "bloqueo",
+      "mensaje": "Línea máxima del AV8770 IGLOO Toldo vertical: 400 cm.",
+      "condicion": {
+        "linea": {
+          "gt": 400
+        }
+      }
+    },
+    {
+      "id": "altura_min",
+      "descripcion": "Altura/salida mínima del modelo",
+      "efecto": "bloqueo",
+      "mensaje": "Altura mínima del AV8770 IGLOO Toldo vertical: 200 cm.",
+      "condicion": {
+        "salida": {
+          "lt": 200
+        }
+      }
+    },
+    {
+      "id": "altura_max",
+      "descripcion": "Altura/salida máxima del modelo",
+      "efecto": "bloqueo",
+      "mensaje": "Altura máxima del AV8770 IGLOO Toldo vertical: 300 cm.",
+      "condicion": {
+        "salida": {
+          "gt": 300
+        }
+      }
+    }
+  ],
+  "descripcion": "Toldo vertical IGLOO con cofre cuadrado 120x130 mm. Varilla de retención en guías. Opción iluminación LED."
+}

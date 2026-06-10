@@ -1,0 +1,313 @@
+{
+  "id": "AV8730",
+  "nombre": "AV8730 PARAVENTO Guías + Refuerzos",
+  "tipo": "vertical",
+  "version": "2026.1",
+  "fuente": {
+    "abd": "AV8730.abd",
+    "tarifaPdf": "Tarifa-Awma-PVP-2026.pdf",
+    "paginaTarifa": 234
+  },
+  "dimensiones": {
+    "linea": {
+      "min": 150,
+      "max": 500,
+      "valores": [
+        150,
+        175,
+        200,
+        225,
+        250,
+        275,
+        300,
+        325,
+        350,
+        375,
+        400,
+        425,
+        450,
+        475,
+        500
+      ],
+      "etiqueta": "línea (ancho)"
+    },
+    "salida": {
+      "min": 200,
+      "max": 325,
+      "valores": [
+        200,
+        225,
+        250,
+        275,
+        300,
+        325
+      ],
+      "etiqueta": "altura"
+    }
+  },
+  "tarifa": {
+    "matriz": {
+      "150": {
+        "200": 579,
+        "225": 617,
+        "250": 656,
+        "275": 694,
+        "300": 733,
+        "325": 771
+      },
+      "175": {
+        "200": 634,
+        "225": 674,
+        "250": 713,
+        "275": 753,
+        "300": 792,
+        "325": 832
+      },
+      "200": {
+        "200": 645,
+        "225": 685,
+        "250": 726,
+        "275": 767,
+        "300": 807,
+        "325": 848
+      },
+      "225": {
+        "200": 656,
+        "225": 697,
+        "250": 739,
+        "275": 781,
+        "300": 823,
+        "325": 864
+      },
+      "250": {
+        "200": 711,
+        "225": 754,
+        "250": 796,
+        "275": 839,
+        "300": 882,
+        "325": 925
+      },
+      "275": {
+        "200": 721,
+        "225": 765,
+        "250": 809,
+        "275": 853,
+        "300": 898,
+        "325": 942
+      },
+      "300": {
+        "200": 776,
+        "225": 822,
+        "250": 867,
+        "275": 912,
+        "300": 957,
+        "325": 1002
+      },
+      "325": {
+        "200": 787,
+        "225": 834,
+        "250": 880,
+        "275": 926,
+        "300": 972,
+        "325": 1019
+      },
+      "350": {
+        "200": 842,
+        "225": 890,
+        "250": 937,
+        "275": 984,
+        "300": 1032,
+        "325": 1079
+      },
+      "375": {
+        "200": 853,
+        "225": 902,
+        "250": 950,
+        "275": 999,
+        "300": 1047,
+        "325": 1096
+      },
+      "400": {
+        "200": 864,
+        "225": 913,
+        "250": 963,
+        "275": 1013,
+        "300": 1062,
+        "325": 1112
+      },
+      "425": {
+        "200": 919,
+        "225": 970,
+        "250": 1020,
+        "275": 1071,
+        "300": 1122,
+        "325": 1173
+      },
+      "450": {
+        "200": 930,
+        "225": 982,
+        "250": 1033,
+        "275": 1085,
+        "300": 1137,
+        "325": 1189
+      },
+      "475": {
+        "200": 985,
+        "225": 1038,
+        "250": 1091,
+        "275": 1144,
+        "300": 1197,
+        "325": 1250
+      },
+      "500": {
+        "200": 995,
+        "225": 1050,
+        "250": 1104,
+        "275": 1158,
+        "300": 1212,
+        "325": 1266
+      }
+    }
+  },
+  "motores": [
+    {
+      "id": "manual",
+      "nombre": "Manivela",
+      "recargo": 0,
+      "familia": "manual"
+    },
+    {
+      "id": "rts_25Nm",
+      "nombre": "Somfy RTS 25Nm (línea ≤350)",
+      "recargo": 220,
+      "familia": "somfy"
+    },
+    {
+      "id": "rts_30Nm",
+      "nombre": "Somfy RTS 30Nm (línea >350)",
+      "recargo": 245,
+      "familia": "somfy"
+    },
+    {
+      "id": "io_25Nm",
+      "nombre": "Somfy iO 25Nm (línea ≤350)",
+      "recargo": 325,
+      "familia": "somfy"
+    },
+    {
+      "id": "io_30Nm",
+      "nombre": "Somfy iO 30Nm (línea >350)",
+      "recargo": 350,
+      "familia": "somfy"
+    }
+  ],
+  "sobreprecios": [
+    {
+      "ref": "80141306",
+      "desc": "Perfil guía Paravento blanco 7M",
+      "precio": 50.36,
+      "categoria": "guia",
+      "unidad": "ML"
+    },
+    {
+      "ref": "80141298",
+      "desc": "Tope plástico cerrojillo Paravento",
+      "precio": 3.03,
+      "categoria": "accesorio",
+      "unidad": "UD"
+    },
+    {
+      "ref": "80141296",
+      "desc": "J. embudo perfil guía Paravento blanco",
+      "precio": 3.33,
+      "categoria": "accesorio",
+      "unidad": "JGO"
+    },
+    {
+      "ref": "80140332",
+      "desc": "Perfil faldón Paravento blanco 7M",
+      "precio": 26.8,
+      "categoria": "faldon",
+      "unidad": "ML"
+    },
+    {
+      "ref": "80140718",
+      "desc": "Cerrojillo Paravento D10 ZnNi",
+      "precio": 11.73,
+      "categoria": "accesorio",
+      "unidad": "UD"
+    },
+    {
+      "ref": "80141335",
+      "desc": "Perfil refuerzo curvo Paravento blanco 7M",
+      "precio": 13.42,
+      "categoria": "refuerzo",
+      "unidad": "ML"
+    },
+    {
+      "ref": "80141329",
+      "desc": "Tapa perfil refuerzo curvo Paravento blanco",
+      "precio": 0.22,
+      "categoria": "accesorio",
+      "unidad": "UD"
+    }
+  ],
+  "reglas": [
+    {
+      "id": "linea_min",
+      "descripcion": "Línea mínima del modelo",
+      "efecto": "bloqueo",
+      "mensaje": "Línea mínima del AV8730 PARAVENTO Guías + Refuerzos: 150 cm.",
+      "condicion": {
+        "linea": {
+          "lt": 150
+        }
+      }
+    },
+    {
+      "id": "linea_max",
+      "descripcion": "Línea máxima del modelo",
+      "efecto": "bloqueo",
+      "mensaje": "Línea máxima del AV8730 PARAVENTO Guías + Refuerzos: 500 cm.",
+      "condicion": {
+        "linea": {
+          "gt": 500
+        }
+      }
+    },
+    {
+      "id": "altura_min",
+      "descripcion": "Altura/salida mínima del modelo",
+      "efecto": "bloqueo",
+      "mensaje": "Altura mínima del AV8730 PARAVENTO Guías + Refuerzos: 200 cm.",
+      "condicion": {
+        "salida": {
+          "lt": 200
+        }
+      }
+    },
+    {
+      "id": "altura_max",
+      "descripcion": "Altura/salida máxima del modelo",
+      "efecto": "bloqueo",
+      "mensaje": "Altura máxima del AV8730 PARAVENTO Guías + Refuerzos: 325 cm.",
+      "condicion": {
+        "salida": {
+          "gt": 325
+        }
+      }
+    },
+    {
+      "id": "motor_30Nw_linea_grande",
+      "descripcion": "Motor 30Nw para línea >350",
+      "efecto": "aviso",
+      "mensaje": "Línea >350 cm: motor Somfy 30Nw (en lugar de 25Nw).",
+      "condicion": {
+        "linea": {
+          "gt": 350
+        }
+      }
+    }
+  ],
+  "descripcion": "Cortavientos PARAVENTO con guías y refuerzos. Ventana panorámica transparente incluida."
+}

@@ -1,0 +1,196 @@
+{
+  "id": "AV8530",
+  "nombre": "AV8530 NEXUS 100 Guía + ZIP",
+  "tipo": "vertical",
+  "version": "2026.1",
+  "fuente": {
+    "abd": "AV8530.abd",
+    "tarifaPdf": "Tarifa-Awma-PVP-2026.pdf",
+    "paginaTarifa": 227
+  },
+  "dimensiones": {
+    "linea": {
+      "min": 100,
+      "max": 325,
+      "valores": [
+        100,
+        125,
+        150,
+        175,
+        200,
+        225,
+        250,
+        275,
+        300,
+        325
+      ],
+      "etiqueta": "línea (ancho)"
+    },
+    "salida": {
+      "min": 100,
+      "max": 300,
+      "valores": [
+        100,
+        150,
+        200,
+        250,
+        300
+      ],
+      "etiqueta": "altura"
+    }
+  },
+  "tarifa": {
+    "matriz": {
+      "100": {
+        "100": 954,
+        "150": 1053,
+        "200": 1153,
+        "250": 1252,
+        "300": 1381
+      },
+      "125": {
+        "100": 1027,
+        "150": 1132,
+        "200": 1237,
+        "250": 1342,
+        "300": 1476
+      },
+      "150": {
+        "100": 1085,
+        "150": 1190,
+        "200": 1295,
+        "250": 1400,
+        "300": 1534
+      },
+      "175": {
+        "100": 1116,
+        "150": 1226,
+        "200": 1336,
+        "250": 1447,
+        "300": 1586
+      },
+      "200": {
+        "100": 1154,
+        "150": 1265,
+        "200": 1375,
+        "250": 1485,
+        "300": 1625
+      },
+      "225": {
+        "100": 1193,
+        "150": 1303,
+        "200": 1414,
+        "250": 1524,
+        "300": 1663
+      },
+      "250": {
+        "100": 1246,
+        "150": 1362,
+        "200": 1478,
+        "250": 1594,
+        "300": 1739
+      },
+      "275": {
+        "100": 1314,
+        "150": 1430,
+        "200": 1546,
+        "250": 1662,
+        "300": 1778
+      },
+      "300": {
+        "100": 1368,
+        "150": 1489,
+        "200": 1610,
+        "250": 1732,
+        "300": 1853
+      },
+      "325": {
+        "100": 1406,
+        "150": 1528,
+        "200": 1649,
+        "250": 1770,
+        "300": 1892
+      }
+    }
+  },
+  "motores": [
+    {
+      "id": "manual",
+      "nombre": "Manivela",
+      "recargo": 0,
+      "familia": "manual"
+    },
+    {
+      "id": "rts_15Nm",
+      "nombre": "Somfy RTS 15Nm",
+      "recargo": 195,
+      "familia": "somfy"
+    },
+    {
+      "id": "rts_25Nm",
+      "nombre": "Somfy RTS 25Nm",
+      "recargo": 220,
+      "familia": "somfy"
+    },
+    {
+      "id": "io_15Nm",
+      "nombre": "Somfy iO 15Nm",
+      "recargo": 300,
+      "familia": "somfy"
+    },
+    {
+      "id": "io_25Nm",
+      "nombre": "Somfy iO 25Nm",
+      "recargo": 325,
+      "familia": "somfy"
+    }
+  ],
+  "sobreprecios": [],
+  "reglas": [
+    {
+      "id": "linea_min",
+      "descripcion": "Línea mínima del modelo",
+      "efecto": "bloqueo",
+      "mensaje": "Línea mínima del AV8530 NEXUS 100 Guía + ZIP: 100 cm.",
+      "condicion": {
+        "linea": {
+          "lt": 100
+        }
+      }
+    },
+    {
+      "id": "linea_max",
+      "descripcion": "Línea máxima del modelo",
+      "efecto": "bloqueo",
+      "mensaje": "Línea máxima del AV8530 NEXUS 100 Guía + ZIP: 325 cm.",
+      "condicion": {
+        "linea": {
+          "gt": 325
+        }
+      }
+    },
+    {
+      "id": "altura_min",
+      "descripcion": "Altura/salida mínima del modelo",
+      "efecto": "bloqueo",
+      "mensaje": "Altura mínima del AV8530 NEXUS 100 Guía + ZIP: 100 cm.",
+      "condicion": {
+        "salida": {
+          "lt": 100
+        }
+      }
+    },
+    {
+      "id": "altura_max",
+      "descripcion": "Altura/salida máxima del modelo",
+      "efecto": "bloqueo",
+      "mensaje": "Altura máxima del AV8530 NEXUS 100 Guía + ZIP: 300 cm.",
+      "condicion": {
+        "salida": {
+          "gt": 300
+        }
+      }
+    }
+  ],
+  "descripcion": "Vertical NEXUS 100, guías con sistema ZIP. Cajón 100 mm."
+}

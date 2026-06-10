@@ -1,0 +1,263 @@
+{
+  "id": "AV8870-1",
+  "nombre": "AV8870-1 NIMBUS Cable sin cofre",
+  "tipo": "vertical",
+  "version": "2026.1",
+  "fuente": {
+    "abd": "AV8870-1.abd",
+    "tarifaPdf": "Tarifa-Awma-PVP-2026.pdf",
+    "paginaTarifa": 241
+  },
+  "dimensiones": {
+    "linea": {
+      "min": 150,
+      "max": 500,
+      "valores": [
+        150,
+        175,
+        200,
+        225,
+        250,
+        275,
+        300,
+        325,
+        350,
+        375,
+        400,
+        425,
+        450,
+        475,
+        500
+      ],
+      "etiqueta": "línea (ancho)"
+    },
+    "salida": {
+      "min": 200,
+      "max": 325,
+      "valores": [
+        200,
+        225,
+        250,
+        275,
+        300,
+        325
+      ],
+      "etiqueta": "altura"
+    }
+  },
+  "tarifa": {
+    "matriz": {
+      "150": {
+        "200": 670,
+        "225": 680,
+        "250": 689,
+        "275": 699,
+        "300": 709,
+        "325": 718
+      },
+      "175": {
+        "200": 715,
+        "225": 726,
+        "250": 737,
+        "275": 748,
+        "300": 758,
+        "325": 769
+      },
+      "200": {
+        "200": 760,
+        "225": 772,
+        "250": 784,
+        "275": 796,
+        "300": 808,
+        "325": 820
+      },
+      "225": {
+        "200": 806,
+        "225": 819,
+        "250": 832,
+        "275": 845,
+        "300": 858,
+        "325": 871
+      },
+      "250": {
+        "200": 851,
+        "225": 865,
+        "250": 879,
+        "275": 893,
+        "300": 907,
+        "325": 921
+      },
+      "275": {
+        "200": 896,
+        "225": 911,
+        "250": 926,
+        "275": 941,
+        "300": 957,
+        "325": 972
+      },
+      "300": {
+        "200": 941,
+        "225": 957,
+        "250": 974,
+        "275": 990,
+        "300": 1006,
+        "325": 1023
+      },
+      "325": {
+        "200": 986,
+        "225": 1003,
+        "250": 1021,
+        "275": 1038,
+        "300": 1056,
+        "325": 1073
+      },
+      "350": {
+        "200": 1031,
+        "225": 1050,
+        "250": 1068,
+        "275": 1087,
+        "300": 1105,
+        "325": 1124
+      },
+      "375": {
+        "200": 1076,
+        "225": 1096,
+        "250": 1116,
+        "275": 1135,
+        "300": 1155,
+        "325": 1175
+      },
+      "400": {
+        "200": 1121,
+        "225": 1142,
+        "250": 1163,
+        "275": 1184,
+        "300": 1205,
+        "325": 1225
+      },
+      "425": {
+        "200": 1166,
+        "225": 1188,
+        "250": 1210,
+        "275": 1232,
+        "300": 1254,
+        "325": 1276
+      },
+      "450": {
+        "200": 1212,
+        "225": 1235,
+        "250": 1258,
+        "275": 1281,
+        "300": 1304,
+        "325": 1327
+      },
+      "475": {
+        "200": 1257,
+        "225": 1281,
+        "250": 1305,
+        "275": 1329,
+        "300": 1353,
+        "325": 1378
+      },
+      "500": {
+        "200": 1302,
+        "225": 1327,
+        "250": 1352,
+        "275": 1378,
+        "300": 1403,
+        "325": 1428
+      }
+    }
+  },
+  "motores": [
+    {
+      "id": "manual",
+      "nombre": "Manivela",
+      "recargo": 0,
+      "familia": "manual"
+    },
+    {
+      "id": "rts_20Nm",
+      "nombre": "Somfy RTS 20Nm (línea ≤400)",
+      "recargo": 215,
+      "familia": "somfy"
+    },
+    {
+      "id": "rts_30Nm",
+      "nombre": "Somfy RTS 30Nm (línea >400)",
+      "recargo": 245,
+      "familia": "somfy"
+    },
+    {
+      "id": "io_20Nm",
+      "nombre": "Somfy iO 20Nm (línea ≤400)",
+      "recargo": 320,
+      "familia": "somfy"
+    },
+    {
+      "id": "io_30Nm",
+      "nombre": "Somfy iO 30Nm (línea >400)",
+      "recargo": 350,
+      "familia": "somfy"
+    }
+  ],
+  "sobreprecios": [],
+  "reglas": [
+    {
+      "id": "linea_min",
+      "descripcion": "Línea mínima del modelo",
+      "efecto": "bloqueo",
+      "mensaje": "Línea mínima del AV8870-1 NIMBUS Cable sin cofre: 150 cm.",
+      "condicion": {
+        "linea": {
+          "lt": 150
+        }
+      }
+    },
+    {
+      "id": "linea_max",
+      "descripcion": "Línea máxima del modelo",
+      "efecto": "bloqueo",
+      "mensaje": "Línea máxima del AV8870-1 NIMBUS Cable sin cofre: 500 cm.",
+      "condicion": {
+        "linea": {
+          "gt": 500
+        }
+      }
+    },
+    {
+      "id": "altura_min",
+      "descripcion": "Altura/salida mínima del modelo",
+      "efecto": "bloqueo",
+      "mensaje": "Altura mínima del AV8870-1 NIMBUS Cable sin cofre: 200 cm.",
+      "condicion": {
+        "salida": {
+          "lt": 200
+        }
+      }
+    },
+    {
+      "id": "altura_max",
+      "descripcion": "Altura/salida máxima del modelo",
+      "efecto": "bloqueo",
+      "mensaje": "Altura máxima del AV8870-1 NIMBUS Cable sin cofre: 325 cm.",
+      "condicion": {
+        "salida": {
+          "gt": 325
+        }
+      }
+    },
+    {
+      "id": "motor_30Nw_linea_grande",
+      "descripcion": "Motor 30Nw para línea >400",
+      "efecto": "aviso",
+      "mensaje": "Línea >400 cm: motor Somfy 30Nw (en lugar de 20Nw).",
+      "condicion": {
+        "linea": {
+          "gt": 400
+        }
+      }
+    }
+  ],
+  "descripcion": "Vertical NIMBUS con guiado por cable Ø4 mm, sin cofre."
+}

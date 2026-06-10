@@ -1,0 +1,156 @@
+{
+  "id": "AV8430",
+  "nombre": "AV8430 NEXUS 80 Guía + ZIP",
+  "tipo": "vertical",
+  "version": "2026.1",
+  "fuente": {
+    "abd": "AV8430.abd",
+    "tarifaPdf": "Tarifa-Awma-PVP-2026.pdf",
+    "paginaTarifa": 225
+  },
+  "dimensiones": {
+    "linea": {
+      "min": 100,
+      "max": 200,
+      "valores": [
+        100,
+        125,
+        150,
+        175,
+        200
+      ],
+      "etiqueta": "línea (ancho)"
+    },
+    "salida": {
+      "min": 100,
+      "max": 200,
+      "valores": [
+        100,
+        125,
+        150,
+        175,
+        200
+      ],
+      "etiqueta": "altura"
+    }
+  },
+  "tarifa": {
+    "matriz": {
+      "100": {
+        "100": 937,
+        "125": 988,
+        "150": 1039,
+        "175": 1090,
+        "200": 1141
+      },
+      "125": {
+        "100": 997,
+        "125": 1049,
+        "150": 1101,
+        "175": 1153,
+        "200": 1205
+      },
+      "150": {
+        "100": 1056,
+        "125": 1109,
+        "150": 1162,
+        "175": 1216,
+        "200": 1269
+      },
+      "175": {
+        "100": 1072,
+        "125": 1126,
+        "150": 1181,
+        "175": 1235,
+        "200": 1290
+      },
+      "200": {
+        "100": 1112,
+        "125": 1167,
+        "150": 1223,
+        "175": 1278,
+        "200": 1334
+      }
+    }
+  },
+  "motores": [
+    {
+      "id": "manual",
+      "nombre": "Manivela",
+      "recargo": 0,
+      "familia": "manual"
+    },
+    {
+      "id": "rts_15Nm",
+      "nombre": "Somfy RTS 15Nm",
+      "recargo": 195,
+      "familia": "somfy"
+    },
+    {
+      "id": "rts_25Nm",
+      "nombre": "Somfy RTS 25Nm",
+      "recargo": 220,
+      "familia": "somfy"
+    },
+    {
+      "id": "io_15Nm",
+      "nombre": "Somfy iO 15Nm",
+      "recargo": 300,
+      "familia": "somfy"
+    },
+    {
+      "id": "io_25Nm",
+      "nombre": "Somfy iO 25Nm",
+      "recargo": 325,
+      "familia": "somfy"
+    }
+  ],
+  "sobreprecios": [],
+  "reglas": [
+    {
+      "id": "linea_min",
+      "descripcion": "Línea mínima del modelo",
+      "efecto": "bloqueo",
+      "mensaje": "Línea mínima del AV8430 NEXUS 80 Guía + ZIP: 100 cm.",
+      "condicion": {
+        "linea": {
+          "lt": 100
+        }
+      }
+    },
+    {
+      "id": "linea_max",
+      "descripcion": "Línea máxima del modelo",
+      "efecto": "bloqueo",
+      "mensaje": "Línea máxima del AV8430 NEXUS 80 Guía + ZIP: 200 cm.",
+      "condicion": {
+        "linea": {
+          "gt": 200
+        }
+      }
+    },
+    {
+      "id": "altura_min",
+      "descripcion": "Altura/salida mínima del modelo",
+      "efecto": "bloqueo",
+      "mensaje": "Altura mínima del AV8430 NEXUS 80 Guía + ZIP: 100 cm.",
+      "condicion": {
+        "salida": {
+          "lt": 100
+        }
+      }
+    },
+    {
+      "id": "altura_max",
+      "descripcion": "Altura/salida máxima del modelo",
+      "efecto": "bloqueo",
+      "mensaje": "Altura máxima del AV8430 NEXUS 80 Guía + ZIP: 200 cm.",
+      "condicion": {
+        "salida": {
+          "gt": 200
+        }
+      }
+    }
+  ],
+  "descripcion": "Vertical NEXUS 80, guías con sistema ZIP. Cajón 80 mm."
+}

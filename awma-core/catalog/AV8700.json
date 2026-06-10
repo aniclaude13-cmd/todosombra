@@ -1,0 +1,313 @@
+{
+  "id": "AV8700",
+  "nombre": "AV8700 PARAVENTO Cortavientos",
+  "tipo": "vertical",
+  "version": "2026.1",
+  "fuente": {
+    "abd": "AV8700.abd",
+    "tarifaPdf": "Tarifa-Awma-PVP-2026.pdf",
+    "paginaTarifa": 233
+  },
+  "dimensiones": {
+    "linea": {
+      "min": 150,
+      "max": 500,
+      "valores": [
+        150,
+        175,
+        200,
+        225,
+        250,
+        275,
+        300,
+        325,
+        350,
+        375,
+        400,
+        425,
+        450,
+        475,
+        500
+      ],
+      "etiqueta": "línea (ancho)"
+    },
+    "salida": {
+      "min": 200,
+      "max": 325,
+      "valores": [
+        200,
+        225,
+        250,
+        275,
+        300,
+        325
+      ],
+      "etiqueta": "altura"
+    }
+  },
+  "tarifa": {
+    "matriz": {
+      "150": {
+        "200": 313,
+        "225": 322,
+        "250": 330,
+        "275": 338,
+        "300": 347,
+        "325": 355
+      },
+      "175": {
+        "200": 360,
+        "225": 369,
+        "250": 379,
+        "275": 388,
+        "300": 398,
+        "325": 407
+      },
+      "200": {
+        "200": 371,
+        "225": 382,
+        "250": 392,
+        "275": 403,
+        "300": 414,
+        "325": 424
+      },
+      "225": {
+        "200": 382,
+        "225": 394,
+        "250": 406,
+        "275": 418,
+        "300": 429,
+        "325": 441
+      },
+      "250": {
+        "200": 429,
+        "225": 442,
+        "250": 455,
+        "275": 468,
+        "300": 481,
+        "325": 494
+      },
+      "275": {
+        "200": 440,
+        "225": 454,
+        "250": 468,
+        "275": 482,
+        "300": 496,
+        "325": 510
+      },
+      "300": {
+        "200": 486,
+        "225": 502,
+        "250": 517,
+        "275": 532,
+        "300": 547,
+        "325": 563
+      },
+      "325": {
+        "200": 497,
+        "225": 514,
+        "250": 530,
+        "275": 547,
+        "300": 563,
+        "325": 580
+      },
+      "350": {
+        "200": 544,
+        "225": 562,
+        "250": 579,
+        "275": 597,
+        "300": 614,
+        "325": 632
+      },
+      "375": {
+        "200": 555,
+        "225": 574,
+        "250": 593,
+        "275": 611,
+        "300": 630,
+        "325": 649
+      },
+      "400": {
+        "200": 566,
+        "225": 586,
+        "250": 606,
+        "275": 626,
+        "300": 646,
+        "325": 666
+      },
+      "425": {
+        "200": 613,
+        "225": 634,
+        "250": 655,
+        "275": 676,
+        "300": 697,
+        "325": 718
+      },
+      "450": {
+        "200": 624,
+        "225": 646,
+        "250": 668,
+        "275": 691,
+        "300": 713,
+        "325": 735
+      },
+      "475": {
+        "200": 670,
+        "225": 694,
+        "250": 717,
+        "275": 741,
+        "300": 764,
+        "325": 787
+      },
+      "500": {
+        "200": 682,
+        "225": 706,
+        "250": 731,
+        "275": 755,
+        "300": 780,
+        "325": 804
+      }
+    }
+  },
+  "motores": [
+    {
+      "id": "manual",
+      "nombre": "Manivela",
+      "recargo": 0,
+      "familia": "manual"
+    },
+    {
+      "id": "rts_25Nm",
+      "nombre": "Somfy RTS 25Nm (línea ≤350)",
+      "recargo": 220,
+      "familia": "somfy"
+    },
+    {
+      "id": "rts_30Nm",
+      "nombre": "Somfy RTS 30Nm (línea >350)",
+      "recargo": 245,
+      "familia": "somfy"
+    },
+    {
+      "id": "io_25Nm",
+      "nombre": "Somfy iO 25Nm (línea ≤350)",
+      "recargo": 325,
+      "familia": "somfy"
+    },
+    {
+      "id": "io_30Nm",
+      "nombre": "Somfy iO 30Nm (línea >350)",
+      "recargo": 350,
+      "familia": "somfy"
+    }
+  ],
+  "sobreprecios": [
+    {
+      "ref": "80141306",
+      "desc": "Perfil guía Paravento blanco 7M",
+      "precio": 50.36,
+      "categoria": "guia",
+      "unidad": "ML"
+    },
+    {
+      "ref": "80141298",
+      "desc": "Tope plástico cerrojillo Paravento",
+      "precio": 3.03,
+      "categoria": "accesorio",
+      "unidad": "UD"
+    },
+    {
+      "ref": "80141296",
+      "desc": "J. embudo perfil guía Paravento blanco",
+      "precio": 3.33,
+      "categoria": "accesorio",
+      "unidad": "JGO"
+    },
+    {
+      "ref": "80140332",
+      "desc": "Perfil faldón Paravento blanco 7M",
+      "precio": 26.8,
+      "categoria": "faldon",
+      "unidad": "ML"
+    },
+    {
+      "ref": "80140718",
+      "desc": "Cerrojillo Paravento D10 ZnNi",
+      "precio": 11.73,
+      "categoria": "accesorio",
+      "unidad": "UD"
+    },
+    {
+      "ref": "80141335",
+      "desc": "Perfil refuerzo curvo Paravento blanco 7M",
+      "precio": 13.42,
+      "categoria": "refuerzo",
+      "unidad": "ML"
+    },
+    {
+      "ref": "80141329",
+      "desc": "Tapa perfil refuerzo curvo Paravento blanco",
+      "precio": 0.22,
+      "categoria": "accesorio",
+      "unidad": "UD"
+    }
+  ],
+  "reglas": [
+    {
+      "id": "linea_min",
+      "descripcion": "Línea mínima del modelo",
+      "efecto": "bloqueo",
+      "mensaje": "Línea mínima del AV8700 PARAVENTO Cortavientos: 150 cm.",
+      "condicion": {
+        "linea": {
+          "lt": 150
+        }
+      }
+    },
+    {
+      "id": "linea_max",
+      "descripcion": "Línea máxima del modelo",
+      "efecto": "bloqueo",
+      "mensaje": "Línea máxima del AV8700 PARAVENTO Cortavientos: 500 cm.",
+      "condicion": {
+        "linea": {
+          "gt": 500
+        }
+      }
+    },
+    {
+      "id": "altura_min",
+      "descripcion": "Altura/salida mínima del modelo",
+      "efecto": "bloqueo",
+      "mensaje": "Altura mínima del AV8700 PARAVENTO Cortavientos: 200 cm.",
+      "condicion": {
+        "salida": {
+          "lt": 200
+        }
+      }
+    },
+    {
+      "id": "altura_max",
+      "descripcion": "Altura/salida máxima del modelo",
+      "efecto": "bloqueo",
+      "mensaje": "Altura máxima del AV8700 PARAVENTO Cortavientos: 325 cm.",
+      "condicion": {
+        "salida": {
+          "gt": 325
+        }
+      }
+    },
+    {
+      "id": "motor_30Nw_linea_grande",
+      "descripcion": "Motor 30Nw para línea >350",
+      "efecto": "aviso",
+      "mensaje": "Línea >350 cm: motor Somfy 30Nw (en lugar de 25Nw).",
+      "condicion": {
+        "linea": {
+          "gt": 350
+        }
+      }
+    }
+  ],
+  "descripcion": "Cortavientos PARAVENTO clásico, fijación pared/techo/entre paredes."
+}

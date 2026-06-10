@@ -1,0 +1,196 @@
+{
+  "id": "AV8500",
+  "nombre": "AV8500 NEXUS 100 Cable",
+  "tipo": "vertical",
+  "version": "2026.1",
+  "fuente": {
+    "abd": "AV8500.abd",
+    "tarifaPdf": "Tarifa-Awma-PVP-2026.pdf",
+    "paginaTarifa": 227
+  },
+  "dimensiones": {
+    "linea": {
+      "min": 100,
+      "max": 325,
+      "valores": [
+        100,
+        125,
+        150,
+        175,
+        200,
+        225,
+        250,
+        275,
+        300,
+        325
+      ],
+      "etiqueta": "línea (ancho)"
+    },
+    "salida": {
+      "min": 100,
+      "max": 300,
+      "valores": [
+        100,
+        150,
+        200,
+        250,
+        300
+      ],
+      "etiqueta": "altura"
+    }
+  },
+  "tarifa": {
+    "matriz": {
+      "100": {
+        "100": 926,
+        "150": 946,
+        "200": 967,
+        "250": 987,
+        "300": 1036
+      },
+      "125": {
+        "100": 1000,
+        "150": 1026,
+        "200": 1052,
+        "250": 1078,
+        "300": 1132
+      },
+      "150": {
+        "100": 1059,
+        "150": 1084,
+        "200": 1110,
+        "250": 1136,
+        "300": 1191
+      },
+      "175": {
+        "100": 1089,
+        "150": 1120,
+        "200": 1152,
+        "250": 1183,
+        "300": 1244
+      },
+      "200": {
+        "100": 1128,
+        "150": 1159,
+        "200": 1191,
+        "250": 1222,
+        "300": 1282
+      },
+      "225": {
+        "100": 1167,
+        "150": 1198,
+        "200": 1229,
+        "250": 1261,
+        "300": 1321
+      },
+      "250": {
+        "100": 1221,
+        "150": 1258,
+        "200": 1294,
+        "250": 1331,
+        "300": 1397
+      },
+      "275": {
+        "100": 1289,
+        "150": 1325,
+        "200": 1362,
+        "250": 1399,
+        "300": 1436
+      },
+      "300": {
+        "100": 1343,
+        "150": 1385,
+        "200": 1428,
+        "250": 1470,
+        "300": 1512
+      },
+      "325": {
+        "100": 1381,
+        "150": 1424,
+        "200": 1466,
+        "250": 1509,
+        "300": 1551
+      }
+    }
+  },
+  "motores": [
+    {
+      "id": "manual",
+      "nombre": "Manivela",
+      "recargo": 0,
+      "familia": "manual"
+    },
+    {
+      "id": "rts_15Nm",
+      "nombre": "Somfy RTS 15Nm",
+      "recargo": 195,
+      "familia": "somfy"
+    },
+    {
+      "id": "rts_25Nm",
+      "nombre": "Somfy RTS 25Nm",
+      "recargo": 220,
+      "familia": "somfy"
+    },
+    {
+      "id": "io_15Nm",
+      "nombre": "Somfy iO 15Nm",
+      "recargo": 300,
+      "familia": "somfy"
+    },
+    {
+      "id": "io_25Nm",
+      "nombre": "Somfy iO 25Nm",
+      "recargo": 325,
+      "familia": "somfy"
+    }
+  ],
+  "sobreprecios": [],
+  "reglas": [
+    {
+      "id": "linea_min",
+      "descripcion": "Línea mínima del modelo",
+      "efecto": "bloqueo",
+      "mensaje": "Línea mínima del AV8500 NEXUS 100 Cable: 100 cm.",
+      "condicion": {
+        "linea": {
+          "lt": 100
+        }
+      }
+    },
+    {
+      "id": "linea_max",
+      "descripcion": "Línea máxima del modelo",
+      "efecto": "bloqueo",
+      "mensaje": "Línea máxima del AV8500 NEXUS 100 Cable: 325 cm.",
+      "condicion": {
+        "linea": {
+          "gt": 325
+        }
+      }
+    },
+    {
+      "id": "altura_min",
+      "descripcion": "Altura/salida mínima del modelo",
+      "efecto": "bloqueo",
+      "mensaje": "Altura mínima del AV8500 NEXUS 100 Cable: 100 cm.",
+      "condicion": {
+        "salida": {
+          "lt": 100
+        }
+      }
+    },
+    {
+      "id": "altura_max",
+      "descripcion": "Altura/salida máxima del modelo",
+      "efecto": "bloqueo",
+      "mensaje": "Altura máxima del AV8500 NEXUS 100 Cable: 300 cm.",
+      "condicion": {
+        "salida": {
+          "gt": 300
+        }
+      }
+    }
+  ],
+  "descripcion": "Vertical NEXUS 100, guiado por cable. Cajón 100 mm."
+}

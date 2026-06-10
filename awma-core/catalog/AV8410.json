@@ -1,0 +1,156 @@
+{
+  "id": "AV8410",
+  "nombre": "AV8410 NEXUS 80 Guía",
+  "tipo": "vertical",
+  "version": "2026.1",
+  "fuente": {
+    "abd": "AV8410.abd",
+    "tarifaPdf": "Tarifa-Awma-PVP-2026.pdf",
+    "paginaTarifa": 225
+  },
+  "dimensiones": {
+    "linea": {
+      "min": 100,
+      "max": 200,
+      "valores": [
+        100,
+        125,
+        150,
+        175,
+        200
+      ],
+      "etiqueta": "línea (ancho)"
+    },
+    "salida": {
+      "min": 100,
+      "max": 200,
+      "valores": [
+        100,
+        125,
+        150,
+        175,
+        200
+      ],
+      "etiqueta": "altura"
+    }
+  },
+  "tarifa": {
+    "matriz": {
+      "100": {
+        "100": 867,
+        "125": 898,
+        "150": 930,
+        "175": 961,
+        "200": 992
+      },
+      "125": {
+        "100": 936,
+        "125": 970,
+        "150": 1004,
+        "175": 1038,
+        "200": 1072
+      },
+      "150": {
+        "100": 989,
+        "125": 1023,
+        "150": 1057,
+        "175": 1091,
+        "200": 1125
+      },
+      "175": {
+        "100": 1014,
+        "125": 1051,
+        "150": 1088,
+        "175": 1125,
+        "200": 1162
+      },
+      "200": {
+        "100": 1048,
+        "125": 1085,
+        "150": 1122,
+        "175": 1158,
+        "200": 1195
+      }
+    }
+  },
+  "motores": [
+    {
+      "id": "manual",
+      "nombre": "Manivela",
+      "recargo": 0,
+      "familia": "manual"
+    },
+    {
+      "id": "rts_15Nm",
+      "nombre": "Somfy RTS 15Nm",
+      "recargo": 195,
+      "familia": "somfy"
+    },
+    {
+      "id": "rts_25Nm",
+      "nombre": "Somfy RTS 25Nm",
+      "recargo": 220,
+      "familia": "somfy"
+    },
+    {
+      "id": "io_15Nm",
+      "nombre": "Somfy iO 15Nm",
+      "recargo": 300,
+      "familia": "somfy"
+    },
+    {
+      "id": "io_25Nm",
+      "nombre": "Somfy iO 25Nm",
+      "recargo": 325,
+      "familia": "somfy"
+    }
+  ],
+  "sobreprecios": [],
+  "reglas": [
+    {
+      "id": "linea_min",
+      "descripcion": "Línea mínima del modelo",
+      "efecto": "bloqueo",
+      "mensaje": "Línea mínima del AV8410 NEXUS 80 Guía: 100 cm.",
+      "condicion": {
+        "linea": {
+          "lt": 100
+        }
+      }
+    },
+    {
+      "id": "linea_max",
+      "descripcion": "Línea máxima del modelo",
+      "efecto": "bloqueo",
+      "mensaje": "Línea máxima del AV8410 NEXUS 80 Guía: 200 cm.",
+      "condicion": {
+        "linea": {
+          "gt": 200
+        }
+      }
+    },
+    {
+      "id": "altura_min",
+      "descripcion": "Altura/salida mínima del modelo",
+      "efecto": "bloqueo",
+      "mensaje": "Altura mínima del AV8410 NEXUS 80 Guía: 100 cm.",
+      "condicion": {
+        "salida": {
+          "lt": 100
+        }
+      }
+    },
+    {
+      "id": "altura_max",
+      "descripcion": "Altura/salida máxima del modelo",
+      "efecto": "bloqueo",
+      "mensaje": "Altura máxima del AV8410 NEXUS 80 Guía: 200 cm.",
+      "condicion": {
+        "salida": {
+          "gt": 200
+        }
+      }
+    }
+  ],
+  "descripcion": "Vertical NEXUS 80, guías laterales. Cajón 80 mm."
+}
