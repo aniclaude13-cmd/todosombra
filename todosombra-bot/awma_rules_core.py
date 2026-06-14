@@ -40,11 +40,34 @@ class Validacion:
 
 
 def _normalizar_ref(ref: str) -> Optional[str]:
-    """Extrae el producto_id del string ref, ej. 'BOX6110 cofre' -> 'BOX6110'."""
+    """Extrae el producto_id del string ref, ej. 'BOX6110 cofre' -> 'BOX6110'.
+
+    Acepta tanto 'BOX6100_ARES' como 'BOX6100 ARES' (con espacio).
+    """
     if not ref:
         return None
-    ref = ref.strip().upper()
-    for modelo in ["BOX6110", "BOX6100", "BOX6100_ARES", "PALILLERIA_80X40"]:
+    # Unificar espacios → underscore para que 'BOX6100 ARES' encaje con 'BOX6100_ARES'.
+    ref = ref.strip().upper().replace(" ", "_")
+    # Los IDs compuestos (BOX6100_ARES, BOX6010_INDIE) deben ir antes que su prefijo.
+    modelos = [
+        "BOX6100_ARES",
+        "BOX6010_INDIE",
+        "BOX5200",
+        "BOX6000",
+        "BOX6010",
+        "BOX6100",
+        "BOX6110",
+        "BOX6300",
+        "BOX6400",
+        "BOX6500",
+        "BOX7000",
+        "BOX8100",
+        "BOX8110",
+        "BOX8200",
+        "BOX8300",
+        "PALILLERIA_80X40",
+    ]
+    for modelo in modelos:
         if modelo in ref:
             return modelo
     # Si no reconoce, assume que es el ID exacto

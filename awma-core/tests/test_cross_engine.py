@@ -137,10 +137,10 @@ def test_box6010_indie_salida_fuera_rango():
 
 
 def test_box6010_indie_linea_fuera_rango():
-    """BOX6010 INDIE: línea > 500 bloquea."""
+    """BOX6010 INDIE: línea > 500 ya no bloquea — se resuelve con módulos acoplados."""
     r = calcular("BOX6010_INDIE", linea=525, salida=200)
-    assert not r.valido
-    assert any("500" in b.mensaje for b in r.bloqueos)
+    assert r.valido, r.motivo_invalido
+    assert any(a.regla_id == "acoplado" for a in r.avisos)
 
 
 def test_box6010_indie_combinacion_no_tarifada():
@@ -197,9 +197,10 @@ def test_box5200_motor_io():
 
 
 def test_box5200_linea_fuera_rango():
-    """BOX5200: línea >500 bloquea."""
+    """BOX5200: línea >500 se resuelve con módulos acoplados."""
     r = calcular("BOX5200", linea=525, salida=200)
-    assert not r.valido
+    assert r.valido, r.motivo_invalido
+    assert any(a.regla_id == "acoplado" for a in r.avisos)
 
 
 def test_box6000_basico():
@@ -310,9 +311,10 @@ def test_pl7000_3guias_aviso():
 
 
 def test_pl7000_linea_bloqueada():
-    """PL7000: línea > 700 bloquea."""
+    """PL7000: línea > 700 se resuelve con módulos acoplados."""
     r = calcular("PL7000", linea=800, salida=400)
-    assert not r.valido
+    assert r.valido, r.motivo_invalido
+    assert any(a.regla_id == "acoplado" for a in r.avisos)
 
 
 def test_pl7000_variante_D_palillo_doble():
@@ -386,6 +388,67 @@ def test_pl7030_palillo_doble_4pct():
     r = calcular("PL7030", linea=400, salida=400, variante="PL7030_D")
     assert r.valido
     assert abs(r.pvp_unitario - r.pvp_base * 1.04) < 0.01
+
+
+def test_acoplado_box6100_dos_modulos():
+    """BOX6100 800×250 = 2 módulos de 400×250 (suma literal de precios)."""
+    r = calcular("BOX6100", linea=800, salida=250)
+    assert r.valido, r.motivo_invalido
+    assert r.pvp_base == 1840 * 2  # precio de 400×250 multiplicado por 2
+    assert any(a.regla_id == "acoplado" for a in r.avisos)
+    # Desglose debe mostrar "× 2 módulos (acoplado)"
+    assert any("2 módulos" in d.concepto and "acoplado" in d.concepto for d in r.desglose)
+
+
+def test_acoplado_pl7000_dos_modulos():
+    """PL7000 800×400 = 2 módulos de 400×400 (palillería acoplada)."""
+    r = calcular("PL7000", linea=800, salida=400)
+    assert r.valido
+    base_1mod = 1432  # PL7000 400×400
+    assert r.pvp_base == base_1mod * 2
+    assert any(a.regla_id == "acoplado" for a in r.avisos)
+
+
+def test_acoplado_box6100_prioriza_menor_numero():
+    """BOX6100 900×250: elige 2×450 (menor número de módulos) sobre 3×300."""
+    # 900 cm / max 600 → necesita acoplado
+    # Opción 1: n=2 → 450 cada uno (ambos iguales) ✓
+    # Opción 2: n=3 → 300 cada uno (ambos iguales) ✓
+    # Gana opción 1 porque n es menor
+    r = calcular("BOX6100", linea=900, salida=250)
+    assert r.valido
+    assert any("2 módulos" in a.mensaje and "450" in a.mensaje for a in r.avisos)
+
+
+def test_acoplado_no_aplica_dentro_tabla():
+    """BOX6100 420×200: dentro de tabla (max 600), no acopla, solo snapea."""
+    r = calcular("BOX6100", linea=420, salida=200)
+    assert r.valido
+    # No debe haber aviso de acoplado
+    assert not any(a.regla_id == "acoplado" for a in r.avisos)
+    # Desglose muestra medidas snapeadas, no acoplado
+    assert any("425" in d.concepto for d in r.desglose)
+    assert not any("módulo" in d.concepto.lower() for d in r.desglose)
+
+
+def test_acoplado_no_resuelve_salida_fuera():
+    """BOX6100 800×350: línea se resuelve, pero salida fuera de tabla → sigue bloqueado."""
+    r = calcular("BOX6100", linea=800, salida=350)
+    # Salida máxima es 300, no hay acoplado en salida
+    assert not r.valido
+    assert any("salida" in b.mensaje.lower() for b in r.bloqueos)
+
+
+def test_acoplado_con_motor():
+    """BOX6100 800×250 acoplado + motor RTS 50Nm → 1 mando, N motores."""
+    # En la cotización, el mando se cobra una vez, pero el motor debería ser por módulo.
+    # Aquí solo verificamos que se calcula.
+    r = calcular("BOX6100", linea=800, salida=250, motor_id="rts_50Nm")
+    assert r.valido
+    # pvp_base = 1840 * 2 = 3680
+    # motor_recargo = 295 * 2 = 590
+    # pvp_unitario = 3680 + 590
+    assert r.pvp_unitario == 3680 + 590
 
 
 def test_normalizar_ref_wrapper():
@@ -464,6 +527,12 @@ if __name__ == "__main__":
         test_pl7000_variante_desconocida_bloquea,
         test_pl7020_palillo_doble_6pct,
         test_pl7030_palillo_doble_4pct,
+        test_acoplado_box6100_dos_modulos,
+        test_acoplado_pl7000_dos_modulos,
+        test_acoplado_box6100_prioriza_menor_numero,
+        test_acoplado_no_aplica_dentro_tabla,
+        test_acoplado_no_resuelve_salida_fuera,
+        test_acoplado_con_motor,
         test_normalizar_ref_wrapper,
     ]
 

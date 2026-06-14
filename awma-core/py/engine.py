@@ -112,6 +112,22 @@ def _siguiente_tarifada(valor: int, valores: List[int]) -> Optional[int]:
     return None
 
 
+def _buscar_acoplado(objetivo: int, max_val: int, valores: List[int]) -> Optional[tuple]:
+    """Cuando la línea pedida excede el máximo del catálogo, busca cuántos módulos
+    iguales se necesitan para sumar >= objetivo. Cada módulo debe estar en `valores`
+    y no superar `max_val`. Devuelve (n_modulos, ancho_modulo) con el menor N posible,
+    o None si no hay combinación viable.
+    """
+    if objetivo <= max_val or not valores:
+        return None
+    for n in range(2, 11):
+        ancho_min = (objetivo + n - 1) // n  # ceil
+        snap = _siguiente_tarifada(ancho_min, valores)
+        if snap is not None and snap <= max_val:
+            return (n, snap)
+    return None
+
+
 # ---------- API pública ----------
 
 def _resolver_variante(cat: dict, variante: Optional[str]):
@@ -175,15 +191,27 @@ def calcular(
 
     lineas = cat["dimensiones"]["linea"].get("valores") or []
     salidas = cat["dimensiones"]["salida"].get("valores") or []
-    linea_snap = _siguiente_tarifada(linea, lineas) if lineas else linea
+    linea_max = cat["dimensiones"]["linea"].get("max")
+
+    acoplado = None
+    if lineas and linea_max is not None and linea > linea_max:
+        acoplado = _buscar_acoplado(linea, linea_max, lineas)
+
+    if acoplado:
+        n_mod, ancho_mod = acoplado
+        linea_snap = ancho_mod
+    else:
+        linea_snap = _siguiente_tarifada(linea, lineas) if lineas else linea
     salida_snap = _siguiente_tarifada(salida, salidas) if salidas else salida
+
+    factor_acoplado = acoplado[0] if acoplado else 1
 
     pvp_base = 0.0
     if linea_snap is not None and salida_snap is not None:
         matriz = cat["tarifa"]["matriz"]
         precio = matriz.get(str(linea_snap), {}).get(str(salida_snap))
         if precio is not None:
-            pvp_base = float(precio)
+            pvp_base = float(precio) * factor_acoplado
 
     if pvp_base == 0.0 and not bloqueos:
         bloqueos.append(
@@ -194,17 +222,48 @@ def calcular(
             )
         )
 
+    if acoplado and pvp_base > 0:
+        n_mod, ancho_mod = acoplado
+        avisos.append(Aviso(
+            regla_id="acoplado",
+            efecto="aviso",
+            mensaje=(
+                f"Solución acoplada: {n_mod} módulos de {ancho_mod}×{salida_snap} cm "
+                f"(total {n_mod * ancho_mod} cm para cubrir {linea} cm pedidos). "
+                f"Suma literal de precios; el técnico ajusta postes intermedios e instalación."
+            ),
+        ))
+        # Los bloqueos por "línea > max" se degradan a avisos porque el acoplado los resuelve.
+        nuevos_bloqueos = []
+        for b in bloqueos:
+            if b.regla_id == "linea_max":
+                avisos.append(Aviso(regla_id=b.regla_id, efecto="aviso", mensaje=b.mensaje))
+            else:
+                nuevos_bloqueos.append(b)
+        bloqueos = nuevos_bloqueos
+
     desglose: List[DesgloseItem] = []
     if pvp_base > 0:
-        desglose.append(DesgloseItem(f"{cat['nombre']} {linea_snap}×{salida_snap} cm", pvp_base))
+        if acoplado:
+            n_mod, ancho_mod = acoplado
+            desglose.append(DesgloseItem(
+                f"{cat['nombre']} {ancho_mod}×{salida_snap} cm × {n_mod} módulos (acoplado)",
+                pvp_base,
+            ))
+        else:
+            desglose.append(DesgloseItem(f"{cat['nombre']} {linea_snap}×{salida_snap} cm", pvp_base))
 
     pvp_unitario = pvp_base
 
     if motor_id and cat.get("motores"):
         motor = next((m for m in cat["motores"] if m["id"] == motor_id), None)
         if motor and motor["recargo"] > 0:
-            pvp_unitario += float(motor["recargo"])
-            desglose.append(DesgloseItem(f"Motorización ({motor['nombre']})", float(motor["recargo"])))
+            recargo_total = float(motor["recargo"]) * factor_acoplado
+            pvp_unitario += recargo_total
+            etiq_motor = f"Motorización ({motor['nombre']})" + (
+                f" x{factor_acoplado} módulos" if factor_acoplado > 1 else ""
+            )
+            desglose.append(DesgloseItem(etiq_motor, recargo_total))
 
     sobreprecios_aplicar = list(sobreprecios) if sobreprecios else []
     if comp and comp.get("palillo") == "doble":
@@ -219,11 +278,15 @@ def calcular(
                 continue
             qty = max(1, int(sp.get("cantidad", 1)))
             if "precio_pct" in item:
+                # pvp_base ya incluye el factor_acoplado, así que el % queda correcto
                 total = pvp_base * float(item["precio_pct"]) / 100.0 * qty
             else:
-                total = float(item["precio"]) * qty
+                # precio fijo: aplicar por cada módulo acoplado
+                total = float(item["precio"]) * qty * factor_acoplado
             pvp_unitario += total
             etq = item["desc"] + (f" x{qty}" if qty > 1 else "")
+            if factor_acoplado > 1 and "precio_pct" not in item:
+                etq += f" ({factor_acoplado} módulos)"
             desglose.append(DesgloseItem(etq, round(total, 2)))
 
     valido = not bloqueos

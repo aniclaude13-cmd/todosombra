@@ -24,7 +24,11 @@ import awma_rules_core as awma_rules  # Usar core nuevo (wrapper de compatibilid
 # Importar generador HPED (hoja de pedido AWMA)
 sys.path.insert(0, str(Path(__file__).parent.parent / "awma-core" / "tools"))
 try:
-    from generate_hped import ConfiguracionHPED, generar_hped_pdf  # type: ignore
+    from generate_hped import (  # type: ignore
+        ConfiguracionHPED,
+        cargar_tipo_desde_catalogo,
+        generar_hped_pdf,
+    )
     HPED_DISPONIBLE = True
 except ImportError:
     HPED_DISPONIBLE = False
@@ -309,19 +313,54 @@ def calcular_precio(producto: dict, linea_cm: int, salida_cm: int) -> Optional[f
 
 
 def _generar_hped_para_lead(ctx, lead: dict) -> Optional[Path]:
-    """Genera HPED PDF si el producto es palillería. Devuelve ruta o None."""
+    """Genera HPED PDF para cualquier familia con catálogo en awma-core.
+
+    Soporta palillería (PL), cofre (BOX), brazo (PR/ART) y vertical (AV).
+    Si el producto no tiene catálogo conocido, devuelve None.
+    """
     if not HPED_DISPONIBLE:
         return None
     producto = ctx.user_data.get("producto", {})
     pid = (producto.get("id") or "").upper()
-    if not pid.startswith("PL"):
+    if not pid:
         return None
 
     producto_core = _normalizar_id_core(pid)
-    variante_suffix = ctx.user_data.get("variante_pl") or ""
-    palillo = "DOBLE" if "_D" in variante_suffix else "SIMPLE"
-    motorizado = "_M" in variante_suffix
-    pvp_con_iva = ctx.user_data.get("precio_con_iva") or 0.0
+    tipo_producto = cargar_tipo_desde_catalogo(producto_core)
+    if not tipo_producto:
+        # Sin catálogo conocido no podemos generar HPED con sentido.
+        return None
+
+    # Palillería: variantes condicionan palillo/motor.
+    variante_suffix = (ctx.user_data.get("variante_pl") or "").upper() if tipo_producto == "palilleria" else ""
+    palillo = "DOBLE" if "_D" in variante_suffix else ("SIMPLE" if tipo_producto == "palilleria" else "")
+    motorizado_pl = "_M" in variante_suffix
+
+    # Motorización: además de PL, otras familias pueden tenerla via user_data.
+    motor_seleccionado = ctx.user_data.get("motor") or {}
+    motorizado = motorizado_pl or bool(motor_seleccionado)
+    tipo_motor = motor_seleccionado.get("nombre") if motor_seleccionado else (
+        "Somfy RTS 40Nm" if motorizado_pl else ""
+    )
+
+    # Extras por familia: cualquier campo opcional capturado en user_data.
+    extras: dict = {}
+    if tipo_producto in ("toldo_cofre", "toldo_brazo"):
+        brazos = ctx.user_data.get("brazos") or ctx.user_data.get("tipo_brazo")
+        if brazos:
+            extras["Brazos"] = str(brazos)
+        tapas = ctx.user_data.get("tapas")
+        if tapas:
+            extras["Tapas"] = str(tapas)
+    elif tipo_producto == "vertical":
+        sistema = ctx.user_data.get("sistema_vertical") or ctx.user_data.get("sistema")
+        if sistema:
+            extras["Sistema"] = str(sistema)
+        color_tejido = ctx.user_data.get("color_tejido")
+        if color_tejido:
+            extras["Color tejido"] = str(color_tejido)
+
+    pvp_con_iva = ctx.user_data.get("precio_con_iva") or ctx.user_data.get("precio_final_total") or 0.0
 
     config = ConfiguracionHPED(
         cliente=lead.get("nombre", ""),
@@ -329,13 +368,15 @@ def _generar_hped_para_lead(ctx, lead: dict) -> Optional[Path]:
         fecha=datetime.now().strftime("%d/%m/%Y"),
         producto_id=producto_core,
         producto_nombre=producto.get("nombre", producto_core),
+        tipo_producto=tipo_producto,
         linea_cm=ctx.user_data.get("linea", 0),
         salida_cm=ctx.user_data.get("salida", 0),
         palillo=palillo,
         color_ral=str(ctx.user_data.get("color_aluminio", "9016")),
         motorizado=motorizado,
-        tipo_motor="Somfy RTS 40Nm" if motorizado else "",
+        tipo_motor=tipo_motor,
         mando_posicion="DERECHA" if motorizado else "",
+        extras=extras,
         pvp_unitario=pvp_con_iva,
         cantidad=1,
         observaciones=(
@@ -356,13 +397,17 @@ def _generar_hped_para_lead(ctx, lead: dict) -> Optional[Path]:
         return None
 
 
-def _normalizar_id_core(producto_id: str) -> str:
-    """Convierte IDs de productos.json (ej. 'PL7000_ENTRE_PAREDES') al ID del catálogo core ('PL7000').
+_CORE_PREFIX_RE = re.compile(r"^(PL\d{4}|BOX\d{4}(?:_ARES|_INDIE)?|AV\d{4}|PR[A-Z]?\d{4}|ART\d{3,4})")
 
-    Para palillerías, conserva solo el prefijo PL{4dígitos}. Resto pasa tal cual.
+
+def _normalizar_id_core(producto_id: str) -> str:
+    """Convierte IDs de productos.json al ID del catálogo core.
+
+    Ej. 'PL7000_ENTRE_PAREDES' → 'PL7000', 'BOX6100_ARES_PARED' → 'BOX6100_ARES'.
+    Si no encaja con familias conocidas, devuelve el ID original en mayúsculas.
     """
     pid = (producto_id or "").upper()
-    m = re.match(r"^(PL\d{4})", pid)
+    m = _CORE_PREFIX_RE.match(pid)
     if m:
         return m.group(1)
     return pid
@@ -393,6 +438,46 @@ def calcular_precio_con_variante(
         logger.warning(f"core_calcular falló para {producto_id}: {e}")
         # Si falla el core, usar precio antiguo
         return calcular_precio(producto, linea_cm, salida_cm), None
+
+
+def intentar_acoplado(producto: dict, linea_cm: int, salida_cm: int) -> tuple[Optional[float], Optional[dict]]:
+    """Cuando la medida pedida está fuera de tabla por línea > max, intenta resolver
+    con módulos iguales acoplados. Delega al motor core; si éste lo resuelve, devuelve
+    (precio_base_total, info_acoplado). info_acoplado tiene {n_modulos, ancho_modulo,
+    salida, mensaje} para mostrar al cliente y al técnico.
+
+    Devuelve (None, None) si el core no puede resolverlo o si el producto no tiene
+    catálogo en el core.
+    """
+    producto_id = _normalizar_id_core(producto.get("id", ""))
+    if not producto_id:
+        return None, None
+
+    try:
+        resultado = awma_rules.core_calcular(
+            producto_id=producto_id,
+            linea=linea_cm,
+            salida=salida_cm,
+        )
+    except Exception as e:
+        logger.warning(f"intentar_acoplado: core_calcular falló para {producto_id}: {e}")
+        return None, None
+
+    if not resultado.valido:
+        return None, None
+
+    aviso_acopl = next((a for a in resultado.avisos if a.regla_id == "acoplado"), None)
+    if not aviso_acopl:
+        return None, None
+
+    # Recuperamos n y ancho del primer item del desglose: "{nombre} {ancho}×{salida} cm × {n} módulos (acoplado)"
+    info = {
+        "mensaje": aviso_acopl.mensaje,
+        "linea_snap": resultado.linea,
+        "salida_snap": resultado.salida,
+        "desglose_concepto": resultado.desglose[0].concepto if resultado.desglose else None,
+    }
+    return float(resultado.pvp_base), info
 
 def precio_color(precio_base: float, grupo: str, tipo_color: str, datos: dict) -> float:
     grupos = datos.get("grupos_color", {})
@@ -1366,6 +1451,13 @@ async def mostrar_resumen(update: Update, ctx: ContextTypes.DEFAULT_TYPE) -> int
     else:
         precio_base = calcular_precio(producto, linea, salida)
 
+    # Si no hay precio (medida fuera de tabla), intentamos resolverlo con módulos acoplados.
+    info_acoplado = None
+    if precio_base is None:
+        precio_base, info_acoplado = intentar_acoplado(producto, linea, salida)
+        if info_acoplado:
+            ctx.user_data["acoplado_info"] = info_acoplado
+
     if precio_base is None:
         await update.message.reply_text(
             f"📋 *{producto['nombre']}* — {linea}×{salida} cm\n\n"
@@ -1378,6 +1470,12 @@ async def mostrar_resumen(update: Update, ctx: ContextTypes.DEFAULT_TYPE) -> int
             f"{producto['nombre']} {linea}×{salida}cm — medidas fuera de tabla"
         )
         return await iniciar_captacion(update, ctx)
+
+    if info_acoplado:
+        await update.message.reply_text(
+            "🔗 *Solución acoplada*\n\n" + info_acoplado["mensaje"],
+            parse_mode="Markdown",
+        )
 
     # Calcular incremento de color RAL (con mínimo si aplica)
     incremento_ral_pct = ctx.user_data.get("incremento_ral_pct", 0)
@@ -1405,6 +1503,10 @@ async def mostrar_resumen(update: Update, ctx: ContextTypes.DEFAULT_TYPE) -> int
         f"📏 *Medidas:* {linea} × {salida} cm",
         f"🎨 *Aluminio:* {ctx.user_data.get('color_aluminio', '—')}",
     ]
+
+    acoplado_info = ctx.user_data.get("acoplado_info")
+    if acoplado_info and acoplado_info.get("desglose_concepto"):
+        lineas_resumen.append(f"🔗 *Acoplado:* {acoplado_info['desglose_concepto']}")
 
     # Si es palillería, mostrar configuración de variante
     if es_palilleria(producto):
@@ -2058,7 +2160,7 @@ async def captar_localidad(update: Update, ctx: ContextTypes.DEFAULT_TYPE) -> in
     except Exception as e:
         logger.warning(f"No se pudo notificar al admin por Telegram: {e}")
 
-    # Generar y enviar hoja de pedido AWMA (solo palillería por ahora)
+    # Generar y enviar hoja de pedido AWMA (universal: PL/BOX/AV/PR/ART con catálogo)
     hped_path = _generar_hped_para_lead(ctx, lead)
     if hped_path and hped_path.exists():
         try:

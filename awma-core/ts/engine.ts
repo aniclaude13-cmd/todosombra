@@ -153,6 +153,19 @@ function siguienteLineaTarifada(linea: number, valores: number[]): number | null
   return null;
 }
 
+// Cuando la línea pedida excede el máximo del catálogo, busca cuántos módulos iguales
+// se necesitan para sumar >= objetivo. Cada módulo debe estar en `valores` y no superar
+// `maxVal`. Devuelve {n, ancho} con el menor n posible, o null si no hay combinación viable.
+function buscarAcoplado(objetivo: number, maxVal: number, valores: number[]): { n: number; ancho: number } | null {
+  if (objetivo <= maxVal || valores.length === 0) return null;
+  for (let n = 2; n <= 10; n++) {
+    const anchoMin = Math.ceil(objetivo / n);
+    const snap = siguienteLineaTarifada(anchoMin, valores);
+    if (snap != null && snap <= maxVal) return { n, ancho: snap };
+  }
+  return null;
+}
+
 function resolverVariante(cat: Catalogo, target?: string): { comp: Variante['composicion'] | null; requiereDac: boolean; nota?: string } {
   if (!target) return { comp: null, requiereDac: false };
   const t = target.trim();
@@ -188,12 +201,23 @@ export function calcular(cat: Catalogo, q: Quote): Resultado {
   // Snap de dimensiones a la rejilla tarifada
   const lineas = cat.dimensiones.linea.valores;
   const salidas = cat.dimensiones.salida.valores;
-  const lineaSnap = lineas.length ? siguienteLineaTarifada(q.linea, lineas) : q.linea;
+  const lineaMax = cat.dimensiones.linea.max;
+
+  const acoplado = (lineas.length && lineaMax != null && q.linea > lineaMax)
+    ? buscarAcoplado(q.linea, lineaMax, lineas)
+    : null;
+
+  const lineaSnap = acoplado
+    ? acoplado.ancho
+    : (lineas.length ? siguienteLineaTarifada(q.linea, lineas) : q.linea);
   const salidaSnap = salidas.length ? siguienteLineaTarifada(q.salida, salidas) : q.salida;
+
+  const factorAcoplado = acoplado ? acoplado.n : 1;
 
   let pvpBase = 0;
   if (lineaSnap != null && salidaSnap != null) {
-    pvpBase = cat.tarifa.matriz[String(lineaSnap)]?.[String(salidaSnap)] ?? 0;
+    const precio = cat.tarifa.matriz[String(lineaSnap)]?.[String(salidaSnap)] ?? 0;
+    pvpBase = (precio ?? 0) * factorAcoplado;
   }
 
   if (pvpBase === 0 && bloqueos.length === 0) {
@@ -204,15 +228,45 @@ export function calcular(cat: Catalogo, q: Quote): Resultado {
     });
   }
 
+  if (acoplado && pvpBase > 0) {
+    avisos.push({
+      reglaId: 'acoplado',
+      efecto: 'aviso',
+      mensaje: (
+        `Solución acoplada: ${acoplado.n} módulos de ${acoplado.ancho}×${salidaSnap} cm ` +
+        `(total ${acoplado.n * acoplado.ancho} cm para cubrir ${q.linea} cm pedidos). ` +
+        `Suma literal de precios; el técnico ajusta postes intermedios e instalación.`
+      ),
+    });
+    // Los bloqueos por "línea > max" se degradan a avisos porque el acoplado los resuelve.
+    for (let i = bloqueos.length - 1; i >= 0; i--) {
+      if (bloqueos[i].reglaId === 'linea_max') {
+        avisos.push({ reglaId: bloqueos[i].reglaId, efecto: 'aviso', mensaje: bloqueos[i].mensaje });
+        bloqueos.splice(i, 1);
+      }
+    }
+  }
+
   const desglose: DesgloseItem[] = [];
-  if (pvpBase > 0) desglose.push({ concepto: `${cat.nombre} ${lineaSnap}×${salidaSnap} cm`, importe: pvpBase });
+  if (pvpBase > 0) {
+    if (acoplado) {
+      desglose.push({
+        concepto: `${cat.nombre} ${acoplado.ancho}×${salidaSnap} cm × ${acoplado.n} módulos (acoplado)`,
+        importe: pvpBase,
+      });
+    } else {
+      desglose.push({ concepto: `${cat.nombre} ${lineaSnap}×${salidaSnap} cm`, importe: pvpBase });
+    }
+  }
 
   let pvpUnitario = pvpBase;
   if (q.motorId && cat.motores) {
     const motor = cat.motores.find((m) => m.id === q.motorId);
     if (motor && motor.recargo > 0) {
-      pvpUnitario += motor.recargo;
-      desglose.push({ concepto: `Motorización (${motor.nombre})`, importe: motor.recargo });
+      const recargoTotal = motor.recargo * factorAcoplado;
+      pvpUnitario += recargoTotal;
+      const etiq = `Motorización (${motor.nombre})` + (factorAcoplado > 1 ? ` x${factorAcoplado} módulos` : '');
+      desglose.push({ concepto: etiq, importe: recargoTotal });
     }
   }
 
@@ -226,11 +280,15 @@ export function calcular(cat: Catalogo, q: Quote): Resultado {
       const item = cat.sobreprecios.find((s) => s.ref === sp.ref);
       if (!item) continue;
       const qty = Math.max(1, (sp.cantidad ?? 1) | 0);
+      // precio_pct: pvpBase ya incluye factorAcoplado, queda correcto
+      // precio fijo: multiplicar por factorAcoplado (un sobreprecio por módulo)
       const total = item.precio_pct != null
         ? pvpBase * (item.precio_pct / 100) * qty
-        : (item.precio ?? 0) * qty;
+        : (item.precio ?? 0) * qty * factorAcoplado;
       pvpUnitario += total;
-      desglose.push({ concepto: item.desc + (qty > 1 ? ` x${qty}` : ''), importe: Math.round(total * 100) / 100 });
+      let etiq = item.desc + (qty > 1 ? ` x${qty}` : '');
+      if (factorAcoplado > 1 && item.precio_pct == null) etiq += ` (${factorAcoplado} módulos)`;
+      desglose.push({ concepto: etiq, importe: Math.round(total * 100) / 100 });
     }
   }
 
