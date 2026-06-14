@@ -1,5 +1,5 @@
 {
-  "buildCommand": "cd todosombra && npm run build",
-  "outputDirectory": "todosombra/.next",
-  "installCommand": "cd todosombra && npm install"
+  "buildCommand": "npm run build",
+  "outputDirectory": ".next",
+  "installCommand": "npm install"
 }
