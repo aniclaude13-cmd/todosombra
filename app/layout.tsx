@@ -15,7 +15,7 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: "TodoSombra — Toldos y pérgolas a medida",
   description:
-    "Configura en 3D tu toldo o pérgola exactamente como lo quieres y recíbelo en 4 semanas, directo de fábrica.",
+    "Configura tu toldo o pérgola exactamente como lo quieres y recíbelo en 4 semanas, directo de fábrica.",
 };
 
 export default function RootLayout({
