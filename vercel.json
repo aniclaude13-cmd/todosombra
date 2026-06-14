@@ -1,4 +1,3 @@
 {
-  "buildCommand": "cd todosombra && npm run build",
-  "outputDirectory": "todosombra/.next"
+  "root": "todosombra"
 }
