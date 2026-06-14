@@ -1,8 +1,0 @@
-{
-  "private": true,
-  "scripts": {
-    "build": "cd todosombra && npm run build",
-    "dev": "cd todosombra && npm run dev",
-    "start": "cd todosombra && npm run start"
-  }
-}
