@@ -1,0 +1,8359 @@
+{
+  "productos": [
+    {
+      "id": "LAVELA",
+      "nombre": "LAVELA",
+      "pagina": 25,
+      "tipo": "toldo",
+      "precio_base": null,
+      "precios_por_ancho": {
+        "estimado": 120
+      },
+      "sobreprecios": [],
+      "observaciones": "Estimación basada en página 26",
+      "linea": "LAVELA",
+      "salida": "variable",
+      "linea_min": null,
+      "linea_max": null,
+      "salida_min": null,
+      "salida_max": null,
+      "grupo_color": "G1",
+      "motorizable": true,
+      "grupo_motor": "1"
+    },
+    {
+      "id": "VELUM",
+      "nombre": "VELUM",
+      "pagina": 30,
+      "tipo": "toldo",
+      "precio_base": null,
+      "precios_por_ancho": {
+        "estimado": 200
+      },
+      "sobreprecios": [],
+      "observaciones": "Estimación basada en página 30",
+      "linea": "VELUM",
+      "salida": "variable",
+      "linea_min": null,
+      "linea_max": null,
+      "salida_min": null,
+      "salida_max": null,
+      "grupo_color": "G1",
+      "motorizable": true,
+      "grupo_motor": "1"
+    },
+    {
+      "id": "CONFECCIÓN_Y_TEJIDOS",
+      "nombre": "CONFECCIÓN Y TEJIDOS",
+      "pagina": 33,
+      "tipo": "categoría",
+      "precio_base": null,
+      "precios_por_ancho": null,
+      "sobreprecios": [],
+      "observaciones": "",
+      "linea": "CONFECCIÓN",
+      "salida": "variable",
+      "linea_min": null,
+      "linea_max": null,
+      "salida_min": null,
+      "salida_max": null,
+      "grupo_color": null,
+      "motorizable": false,
+      "grupo_motor": null
+    },
+    {
+      "id": "TEJIDOS_CONFECCIONADOS",
+      "nombre": "TEJIDOS CONFECCIONADOS",
+      "pagina": 37,
+      "tipo": "material",
+      "precio_base": null,
+      "precios_por_ancho": null,
+      "sobreprecios": [],
+      "observaciones": "",
+      "linea": "TEJIDOS",
+      "salida": "variable",
+      "linea_min": null,
+      "linea_max": null,
+      "salida_min": null,
+      "salida_max": null,
+      "grupo_color": null,
+      "motorizable": false,
+      "grupo_motor": null
+    },
+    {
+      "id": "LONAS_CONFECCIONADAS",
+      "nombre": "LONAS CONFECCIONADAS",
+      "pagina": 43,
+      "tipo": "material",
+      "precio_base": null,
+      "precios_por_ancho": {
+        "5": 6,
+        "112": 138,
+        "229": 224,
+        "347": 307,
+        "464": 390,
+        "582": 475,
+        "699": 564
+      },
+      "sobreprecios": [],
+      "observaciones": "Matriz con 7 líneas extraída",
+      "linea": "LONAS",
+      "salida": "variable",
+      "linea_min": null,
+      "linea_max": null,
+      "salida_min": null,
+      "salida_max": null,
+      "grupo_color": null,
+      "motorizable": false,
+      "grupo_motor": null
+    },
+    {
+      "id": "ACRÍLICO_PARA_PALILLERÍA",
+      "nombre": "ACRÍLICO PARA PALILLERÍA",
+      "pagina": 44,
+      "tipo": "material",
+      "precio_base": null,
+      "precios_por_ancho": {
+        "137": 132,
+        "274": 267,
+        "411": 402,
+        "921": 731
+      },
+      "sobreprecios": [],
+      "observaciones": "Matriz con 4 líneas extraída",
+      "linea": "ACRÍLICO",
+      "salida": "variable",
+      "linea_min": null,
+      "linea_max": null,
+      "salida_min": null,
+      "salida_max": null,
+      "grupo_color": null,
+      "motorizable": false,
+      "grupo_motor": null
+    },
+    {
+      "id": "CRISTAL_TRANSPARENTE",
+      "nombre": "CRISTAL TRANSPARENTE",
+      "pagina": 45,
+      "tipo": "material",
+      "precio_base": null,
+      "precios_por_ancho": null,
+      "sobreprecios": [],
+      "observaciones": "",
+      "linea": "CRISTAL",
+      "salida": "variable",
+      "linea_min": null,
+      "linea_max": null,
+      "salida_min": null,
+      "salida_max": null,
+      "grupo_color": null,
+      "motorizable": false,
+      "grupo_motor": null
+    },
+    {
+      "id": "MOTORIZACIÓN",
+      "nombre": "MOTORIZACIÓN",
+      "pagina": 51,
+      "tipo": "categoría",
+      "precio_base": null,
+      "precios_por_ancho": null,
+      "sobreprecios": [],
+      "observaciones": "",
+      "linea": "MOTORIZACIÓN",
+      "salida": "variable",
+      "linea_min": null,
+      "linea_max": null,
+      "salida_min": null,
+      "salida_max": null,
+      "grupo_color": null,
+      "motorizable": false,
+      "grupo_motor": null
+    },
+    {
+      "id": "MOTORES_SOMFY",
+      "nombre": "MOTORES SOMFY",
+      "pagina": 54,
+      "tipo": "motor",
+      "precio_base": null,
+      "precios_por_ancho": {
+        "1811020": 9013847,
+        "1871062": 1871085,
+        "9013075": 1816067
+      },
+      "sobreprecios": [],
+      "observaciones": "Matriz con 3 líneas extraída",
+      "linea": "MOTORES",
+      "salida": "variable",
+      "linea_min": null,
+      "linea_max": null,
+      "salida_min": null,
+      "salida_max": null,
+      "grupo_color": null,
+      "motorizable": false,
+      "grupo_motor": null
+    },
+    {
+      "id": "AUTOMATISMOS_SOMFY_RTS",
+      "nombre": "AUTOMATISMOS SOMFY RTS",
+      "pagina": 55,
+      "tipo": "motorización",
+      "precio_base": null,
+      "precios_por_ancho": {
+        "1870594": 1870371,
+        "1871290": 1871289,
+        "1875327": 1875328
+      },
+      "sobreprecios": [],
+      "observaciones": "Matriz con 3 líneas extraída",
+      "linea": "AUTOMATISMOS",
+      "salida": "variable",
+      "linea_min": null,
+      "linea_max": null,
+      "salida_min": null,
+      "salida_max": null,
+      "grupo_color": null,
+      "motorizable": false,
+      "grupo_motor": null
+    },
+    {
+      "id": "AUTOMATISMOS_SOMFY_IO",
+      "nombre": "AUTOMATISMOS SOMFY iO",
+      "pagina": 56,
+      "tipo": "motorización",
+      "precio_base": null,
+      "precios_por_ancho": {
+        "1822618": 1870777,
+        "1870532": 1816091,
+        "1875127": 1875108,
+        "2400509": 1811483
+      },
+      "sobreprecios": [],
+      "observaciones": "Matriz con 4 líneas extraída",
+      "linea": "AUTOMATISMOS",
+      "salida": "variable",
+      "linea_min": null,
+      "linea_max": null,
+      "salida_min": null,
+      "salida_max": null,
+      "grupo_color": null,
+      "motorizable": false,
+      "grupo_motor": null
+    },
+    {
+      "id": "MOTORES_SIMU",
+      "nombre": "MOTORES SIMU",
+      "pagina": 58,
+      "tipo": "motor",
+      "precio_base": null,
+      "precios_por_ancho": null,
+      "sobreprecios": [],
+      "observaciones": "",
+      "linea": "MOTORES",
+      "salida": "variable",
+      "linea_min": null,
+      "linea_max": null,
+      "salida_min": null,
+      "salida_max": null,
+      "grupo_color": null,
+      "motorizable": false,
+      "grupo_motor": null
+    },
+    {
+      "id": "MOTORES_TELECO",
+      "nombre": "MOTORES TELECO",
+      "pagina": 59,
+      "tipo": "motor",
+      "precio_base": null,
+      "precios_por_ancho": {
+        "60": 9910000
+      },
+      "sobreprecios": [],
+      "observaciones": "Matriz con 1 líneas extraída",
+      "linea": "MOTORES",
+      "salida": "variable",
+      "linea_min": null,
+      "linea_max": null,
+      "salida_min": null,
+      "salida_max": null,
+      "grupo_color": null,
+      "motorizable": false,
+      "grupo_motor": null
+    },
+    {
+      "id": "CORTINAS",
+      "nombre": "CORTINAS",
+      "pagina": 61,
+      "tipo": "sistema",
+      "precio_base": null,
+      "precios_por_ancho": null,
+      "sobreprecios": [],
+      "observaciones": "",
+      "linea": "CORTINAS",
+      "salida": "variable",
+      "linea_min": null,
+      "linea_max": null,
+      "salida_min": null,
+      "salida_max": null,
+      "grupo_color": null,
+      "motorizable": false,
+      "grupo_motor": null
+    },
+    {
+      "id": "CSL_COSTADILLO_LATERAL",
+      "nombre": "CSL COSTADILLO LATERAL",
+      "pagina": 63,
+      "tipo": "accesorio",
+      "precio_base": null,
+      "precios_por_ancho": {
+        "125": 170,
+        "150": 192,
+        "175": 214,
+        "200": 236,
+        "225": 258,
+        "250": 280,
+        "275": 302,
+        "300": 324,
+        "325": 346,
+        "350": 368,
+        "375": 390,
+        "400": 412,
+        "425": 434,
+        "450": 456,
+        "475": 478,
+        "500": 500,
+        "525": 522,
+        "550": 544,
+        "575": 566,
+        "600": 588,
+        "625": 610,
+        "650": 632,
+        "675": 654,
+        "700": 676
+      },
+      "sobreprecios": [],
+      "observaciones": "Matriz con 24 líneas extraída",
+      "linea": "CSL",
+      "salida": "variable",
+      "linea_min": null,
+      "linea_max": null,
+      "salida_min": null,
+      "salida_max": null,
+      "grupo_color": null,
+      "motorizable": false,
+      "grupo_motor": null
+    },
+    {
+      "id": "RC_RIEL_CON_CORTINA",
+      "nombre": "RC RIEL CON CORTINA",
+      "pagina": 64,
+      "tipo": "cortina",
+      "precio_base": null,
+      "precios_por_ancho": {
+        "100": 455,
+        "125": 478,
+        "150": 501,
+        "175": 525,
+        "200": 548,
+        "225": 572,
+        "250": 595,
+        "275": 619,
+        "300": 650,
+        "325": 817,
+        "350": 846
+      },
+      "sobreprecios": [],
+      "observaciones": "Matriz con 11 líneas extraída",
+      "linea": "RC",
+      "salida": "variable",
+      "linea_min": null,
+      "linea_max": null,
+      "salida_min": null,
+      "salida_max": null,
+      "grupo_color": "G1",
+      "motorizable": false,
+      "grupo_motor": null
+    },
+    {
+      "id": "CAP_CAPOTAS",
+      "nombre": "CAP CAPOTAS",
+      "pagina": 65,
+      "tipo": "toldo",
+      "precio_base": null,
+      "precios_por_ancho": {
+        "estimado": 100
+      },
+      "sobreprecios": [],
+      "observaciones": "Estimación basada en página 65",
+      "linea": "CAP",
+      "salida": "variable",
+      "linea_min": null,
+      "linea_max": null,
+      "salida_min": null,
+      "salida_max": null,
+      "grupo_color": "G1",
+      "motorizable": false,
+      "grupo_motor": null
+    },
+    {
+      "id": "STR_TOLDOS_STOR",
+      "nombre": "STR TOLDOS STOR",
+      "pagina": 67,
+      "tipo": "marca",
+      "precio_base": null,
+      "precios_por_ancho": {
+        "80070171": 80070110
+      },
+      "sobreprecios": [],
+      "observaciones": "Matriz con 1 líneas extraída",
+      "linea": "STR",
+      "salida": "variable",
+      "linea_min": null,
+      "linea_max": null,
+      "salida_min": null,
+      "salida_max": null,
+      "grupo_color": null,
+      "motorizable": false,
+      "grupo_motor": null
+    },
+    {
+      "id": "STR1000_SOLARIS",
+      "nombre": "STR1000 SOLARIS",
+      "pagina": 68,
+      "tipo": "toldo",
+      "precio_base": null,
+      "precios_por_ancho": {
+        "100": {
+          "170": 306,
+          "200": 313,
+          "225": 318,
+          "250": 324
+        },
+        "125": {
+          "170": 351,
+          "200": 361,
+          "225": 370,
+          "250": 378
+        },
+        "150": {
+          "170": 364,
+          "200": 374,
+          "225": 382,
+          "250": 391
+        },
+        "175": {
+          "170": 409,
+          "200": 423,
+          "225": 434,
+          "250": 445
+        },
+        "200": {
+          "170": 422,
+          "200": 435,
+          "225": 446,
+          "250": 457
+        },
+        "225": {
+          "170": 467,
+          "200": 484,
+          "225": 498,
+          "250": 512
+        },
+        "250": {
+          "170": 480,
+          "200": 496,
+          "225": 510,
+          "250": 524
+        },
+        "275": {
+          "170": 525,
+          "200": 545,
+          "225": 562,
+          "250": 578
+        },
+        "300": {
+          "170": 538,
+          "200": 558,
+          "225": 574,
+          "250": 591
+        },
+        "325": {
+          "170": 550,
+          "200": 570,
+          "225": 587,
+          "250": 604
+        },
+        "350": {
+          "170": 596,
+          "200": 619,
+          "225": 638,
+          "250": 658
+        },
+        "375": {
+          "170": 608,
+          "200": 632,
+          "225": 651,
+          "250": 670
+        },
+        "400": {
+          "170": 654,
+          "200": 680,
+          "225": 702,
+          "250": 725
+        },
+        "425": {
+          "170": 666,
+          "200": 693,
+          "225": 715,
+          "250": 737
+        },
+        "450": {
+          "170": 679,
+          "200": 705,
+          "225": 728,
+          "250": 750
+        },
+        "475": {
+          "170": 724,
+          "200": 754,
+          "225": 779,
+          "250": 804
+        },
+        "500": {
+          "170": 737,
+          "200": 767,
+          "225": 792,
+          "250": 817
+        },
+        "525": {
+          "170": 782,
+          "200": 815,
+          "225": 843,
+          "250": 871
+        },
+        "550": {
+          "170": 795,
+          "200": 828,
+          "225": 856,
+          "250": 883
+        },
+        "575": {
+          "170": 840,
+          "200": 877,
+          "225": 907,
+          "250": 938
+        },
+        "600": {
+          "170": 853,
+          "200": 889,
+          "225": 920,
+          "250": 950
+        }
+      },
+      "sobreprecios": [],
+      "observaciones": "Matriz completa 21×4 extraída de tarifa 2026 pág. 69",
+      "linea": "STR1000",
+      "salida": "variable",
+      "linea_min": null,
+      "linea_max": null,
+      "salida_min": 170,
+      "salida_max": 250,
+      "grupo_color": "G4",
+      "motorizable": true,
+      "grupo_motor": "5",
+      "subtipo": "stor_balcon"
+    },
+    {
+      "id": "STR1100_DESERT",
+      "nombre": "STR1100 DESERT",
+      "pagina": 70,
+      "tipo": "toldo",
+      "precio_base": null,
+      "precios_por_ancho": {
+        "100": {
+          "170": 362
+        },
+        "125": {
+          "170": 399
+        },
+        "150": {
+          "170": 422
+        },
+        "175": {
+          "170": 477
+        },
+        "200": {
+          "170": 500
+        },
+        "225": {
+          "170": 555
+        },
+        "250": {
+          "170": 578
+        },
+        "275": {
+          "170": 632
+        },
+        "300": {
+          "170": 655
+        },
+        "325": {
+          "170": 704
+        },
+        "350": {
+          "170": 759
+        },
+        "375": {
+          "170": 782
+        },
+        "400": {
+          "170": 837
+        },
+        "425": {
+          "170": 860
+        },
+        "450": {
+          "170": 883
+        },
+        "475": {
+          "170": 946
+        },
+        "500": {
+          "170": 969
+        }
+      },
+      "sobreprecios": [],
+      "observaciones": "Matriz completa 17×1 extraída de tarifa 2026 pág. 71 (solo salida 170cm)",
+      "linea": "STR1100",
+      "salida": "variable",
+      "linea_min": null,
+      "linea_max": null,
+      "salida_min": 170,
+      "salida_max": 240,
+      "grupo_color": "G4",
+      "motorizable": true,
+      "grupo_motor": "5",
+      "subtipo": "stor_balcon"
+    },
+    {
+      "id": "PR_TOLDOS_DE_PUNTO_RECTO",
+      "nombre": "PR TOLDOS DE PUNTO RECTO",
+      "pagina": 73,
+      "tipo": "marca",
+      "precio_base": null,
+      "precios_por_ancho": null,
+      "sobreprecios": [],
+      "observaciones": "",
+      "linea": "PR",
+      "salida": "variable",
+      "linea_min": null,
+      "linea_max": null,
+      "salida_min": null,
+      "salida_max": null,
+      "grupo_color": null,
+      "motorizable": false,
+      "grupo_motor": null
+    },
+    {
+      "id": "PR2000_ÍNDICO_I1",
+      "nombre": "PR2000 ÍNDICO I1",
+      "pagina": 74,
+      "tipo": "toldo",
+      "precio_base": null,
+      "precios_por_ancho": {
+        "100": {
+          "60": 293,
+          "80": 307,
+          "100": 321,
+          "120": 335,
+          "140": 349
+        },
+        "125": {
+          "60": 317,
+          "80": 332,
+          "100": 348,
+          "120": 365,
+          "140": 380
+        },
+        "150": {
+          "60": 341,
+          "80": 358,
+          "100": 376,
+          "120": 394,
+          "140": 411
+        },
+        "175": {
+          "60": 364,
+          "80": 383,
+          "100": 403,
+          "120": 423,
+          "140": 442
+        },
+        "200": {
+          "60": 388,
+          "80": 409,
+          "100": 430,
+          "120": 452,
+          "140": 473
+        },
+        "225": {
+          "60": 411,
+          "80": 434,
+          "100": 457,
+          "120": 481,
+          "140": 504
+        },
+        "250": {
+          "60": 435,
+          "80": 459,
+          "100": 485,
+          "120": 510,
+          "140": 535
+        },
+        "275": {
+          "60": 458,
+          "80": 485,
+          "100": 512,
+          "120": 539,
+          "140": 566
+        },
+        "300": {
+          "60": 482,
+          "80": 510,
+          "100": 539,
+          "120": 568,
+          "140": 597
+        },
+        "325": {
+          "60": 506,
+          "80": 536,
+          "100": 566,
+          "120": 597,
+          "140": 627
+        },
+        "350": {
+          "60": 529,
+          "80": 561,
+          "100": 594,
+          "120": 626,
+          "140": 658
+        },
+        "375": {
+          "60": 553,
+          "80": 587,
+          "100": 621,
+          "120": 655,
+          "140": 689
+        },
+        "400": {
+          "60": 576,
+          "80": 612,
+          "100": 648,
+          "120": 685,
+          "140": 720
+        },
+        "425": {
+          "60": 603,
+          "80": 640,
+          "100": 678,
+          "120": 717,
+          "140": 754
+        },
+        "450": {
+          "60": 624,
+          "80": 663,
+          "100": 703,
+          "120": 743,
+          "140": 782
+        },
+        "475": {
+          "60": 650,
+          "80": 691,
+          "100": 733,
+          "120": 775,
+          "140": 816
+        },
+        "500": {
+          "60": 671,
+          "80": 714,
+          "100": 757,
+          "120": 801,
+          "140": 844
+        },
+        "525": {
+          "60": 685,
+          "80": 730,
+          "100": 776,
+          "120": 821,
+          "140": 866
+        },
+        "550": {
+          "60": 712,
+          "80": 759,
+          "100": 806,
+          "120": 853,
+          "140": 900
+        },
+        "575": {
+          "60": 733,
+          "80": 781,
+          "100": 830,
+          "120": 879,
+          "140": 928
+        },
+        "600": {
+          "60": 753,
+          "80": 804,
+          "100": 854,
+          "120": 906,
+          "140": 956
+        }
+      },
+      "sobreprecios": [],
+      "observaciones": "Matriz completa 21×5 extraída de tarifa 2026 pág. 75",
+      "linea": "PR2000",
+      "salida": "variable",
+      "linea_min": null,
+      "linea_max": null,
+      "salida_min": 60,
+      "salida_max": 140,
+      "grupo_color": "G1",
+      "motorizable": true,
+      "grupo_motor": "1",
+      "subtipo": "punto_recto"
+    },
+    {
+      "id": "PRS2100_ÍNDICO_I2",
+      "nombre": "PRS2100 ÍNDICO I2",
+      "pagina": 76,
+      "tipo": "toldo",
+      "precio_base": null,
+      "precios_por_ancho": {
+        "100": {
+          "60": 309,
+          "80": 323,
+          "100": 337,
+          "120": 352
+        },
+        "125": {
+          "60": 333,
+          "80": 348,
+          "100": 364,
+          "120": 381
+        },
+        "150": {
+          "60": 356,
+          "80": 374,
+          "100": 392,
+          "120": 410
+        },
+        "175": {
+          "60": 380,
+          "80": 399,
+          "100": 419,
+          "120": 439
+        },
+        "200": {
+          "60": 403,
+          "80": 424,
+          "100": 446,
+          "120": 468
+        },
+        "225": {
+          "60": 427,
+          "80": 450,
+          "100": 473,
+          "120": 497
+        },
+        "250": {
+          "60": 450,
+          "80": 475,
+          "100": 500,
+          "120": 526
+        },
+        "275": {
+          "60": 474,
+          "80": 500,
+          "100": 527,
+          "120": 555
+        },
+        "300": {
+          "60": 497,
+          "80": 526,
+          "100": 554,
+          "120": 584
+        },
+        "325": {
+          "60": 521,
+          "80": 551,
+          "100": 582,
+          "120": 613
+        },
+        "350": {
+          "60": 544,
+          "80": 576,
+          "100": 609,
+          "120": 642
+        },
+        "375": {
+          "60": 567,
+          "80": 602,
+          "100": 636,
+          "120": 671
+        },
+        "400": {
+          "60": 591,
+          "80": 627,
+          "100": 663,
+          "120": 700
+        },
+        "425": {
+          "60": 614,
+          "80": 652,
+          "100": 690,
+          "120": 729
+        },
+        "450": {
+          "60": 638,
+          "80": 678,
+          "100": 717,
+          "120": 758
+        },
+        "475": {
+          "60": 661,
+          "80": 703,
+          "100": 745,
+          "120": 787
+        },
+        "500": {
+          "60": 685,
+          "80": 728,
+          "100": 772,
+          "120": 816
+        },
+        "525": {
+          "60": 708,
+          "80": 754,
+          "100": 799,
+          "120": 845
+        },
+        "550": {
+          "60": 732,
+          "80": 779,
+          "100": 826,
+          "120": 874
+        },
+        "575": {
+          "60": 755,
+          "80": 804,
+          "100": 853,
+          "120": 903
+        },
+        "600": {
+          "60": 779,
+          "80": 830,
+          "100": 880,
+          "120": 932
+        }
+      },
+      "sobreprecios": [],
+      "observaciones": "Matriz completa 21×4 extraída de tarifa 2026 pág. 77",
+      "linea": "PRS2100",
+      "salida": "variable",
+      "linea_min": null,
+      "linea_max": null,
+      "salida_min": 60,
+      "salida_max": 120,
+      "grupo_color": "G1",
+      "motorizable": true,
+      "grupo_motor": "1",
+      "subtipo": "punto_recto"
+    },
+    {
+      "id": "PRT2200_ÍNDICO_I3",
+      "nombre": "PRT2200 ÍNDICO I3",
+      "pagina": 78,
+      "tipo": "toldo",
+      "precio_base": null,
+      "precios_por_ancho": {
+        "100": {
+          "80": 391,
+          "100": 407,
+          "120": 421,
+          "140": 437
+        },
+        "125": {
+          "80": 417,
+          "100": 434,
+          "120": 450,
+          "140": 467
+        },
+        "150": {
+          "80": 442,
+          "100": 461,
+          "120": 479,
+          "140": 498
+        },
+        "175": {
+          "80": 467,
+          "100": 489,
+          "120": 508,
+          "140": 529
+        },
+        "200": {
+          "80": 492,
+          "100": 516,
+          "120": 537,
+          "140": 560
+        },
+        "225": {
+          "80": 518,
+          "100": 543,
+          "120": 566,
+          "140": 590
+        },
+        "250": {
+          "80": 543,
+          "100": 570,
+          "120": 595,
+          "140": 621
+        },
+        "275": {
+          "80": 568,
+          "100": 597,
+          "120": 623,
+          "140": 652
+        },
+        "300": {
+          "80": 594,
+          "100": 624,
+          "120": 652,
+          "140": 683
+        },
+        "325": {
+          "80": 619,
+          "100": 651,
+          "120": 681,
+          "140": 713
+        },
+        "350": {
+          "80": 644,
+          "100": 678,
+          "120": 710,
+          "140": 744
+        },
+        "375": {
+          "80": 669,
+          "100": 705,
+          "120": 739,
+          "140": 775
+        },
+        "400": {
+          "80": 695,
+          "100": 733,
+          "120": 768,
+          "140": 806
+        },
+        "425": {
+          "80": 720,
+          "100": 760,
+          "120": 797,
+          "140": 837
+        },
+        "450": {
+          "80": 745,
+          "100": 787,
+          "120": 826,
+          "140": 867
+        },
+        "475": {
+          "80": 770,
+          "100": 814,
+          "120": 855,
+          "140": 898
+        },
+        "500": {
+          "80": 796,
+          "100": 841,
+          "120": 884,
+          "140": 929
+        },
+        "525": {
+          "80": 821,
+          "100": 868,
+          "120": 913,
+          "140": 960
+        },
+        "550": {
+          "80": 846,
+          "100": 895,
+          "120": 942,
+          "140": 990
+        },
+        "575": {
+          "80": 872,
+          "100": 922,
+          "120": 971,
+          "140": 1021
+        },
+        "600": {
+          "80": 897,
+          "100": 949,
+          "120": 1000,
+          "140": 1052
+        }
+      },
+      "sobreprecios": [],
+      "observaciones": "Matriz completa 21×4 extraída de tarifa 2026 pág. 79",
+      "linea": "PRT2200",
+      "salida": "variable",
+      "linea_min": null,
+      "linea_max": null,
+      "salida_min": 80,
+      "salida_max": 140,
+      "grupo_color": "G1",
+      "motorizable": true,
+      "grupo_motor": "1",
+      "subtipo": "punto_recto"
+    },
+    {
+      "id": "PRCS3100_DESERT_ÍNDICO_I2",
+      "nombre": "PRCS3100 DESERT ÍNDICO I2",
+      "pagina": 80,
+      "tipo": "toldo",
+      "precio_base": null,
+      "precios_por_ancho": {
+        "100": {
+          "60": 370,
+          "80": 384,
+          "100": 398,
+          "120": 413
+        },
+        "125": {
+          "60": 402,
+          "80": 418,
+          "100": 433,
+          "120": 450
+        },
+        "150": {
+          "60": 434,
+          "80": 451,
+          "100": 469,
+          "120": 487
+        },
+        "175": {
+          "60": 466,
+          "80": 485,
+          "100": 504,
+          "120": 524
+        },
+        "200": {
+          "60": 497,
+          "80": 518,
+          "100": 540,
+          "120": 561
+        },
+        "225": {
+          "60": 529,
+          "80": 552,
+          "100": 575,
+          "120": 598
+        },
+        "250": {
+          "60": 561,
+          "80": 586,
+          "100": 610,
+          "120": 636
+        },
+        "275": {
+          "60": 593,
+          "80": 619,
+          "100": 646,
+          "120": 673
+        },
+        "300": {
+          "60": 625,
+          "80": 653,
+          "100": 681,
+          "120": 710
+        },
+        "325": {
+          "60": 665,
+          "80": 695,
+          "100": 725,
+          "120": 756
+        },
+        "350": {
+          "60": 697,
+          "80": 728,
+          "100": 760,
+          "120": 793
+        },
+        "375": {
+          "60": 728,
+          "80": 762,
+          "100": 796,
+          "120": 830
+        },
+        "400": {
+          "60": 760,
+          "80": 796,
+          "100": 831,
+          "120": 867
+        },
+        "425": {
+          "60": 792,
+          "80": 829,
+          "100": 866,
+          "120": 904
+        },
+        "450": {
+          "60": 824,
+          "80": 863,
+          "100": 902,
+          "120": 941
+        }
+      },
+      "sobreprecios": [],
+      "observaciones": "Matriz completa 15×4 extraída de tarifa 2026 pág. 81",
+      "linea": "PRCS3100",
+      "salida": "variable",
+      "linea_min": null,
+      "linea_max": null,
+      "salida_min": 60,
+      "salida_max": 120,
+      "grupo_color": "G1",
+      "motorizable": true,
+      "grupo_motor": "1",
+      "subtipo": "punto_recto"
+    },
+    {
+      "id": "PRCT3200_DESERT_ÍNDICO_I3",
+      "nombre": "PRCT3200 DESERT ÍNDICO I3",
+      "pagina": 82,
+      "tipo": "toldo",
+      "precio_base": null,
+      "precios_por_ancho": {
+        "100": {
+          "80": 465,
+          "100": 480,
+          "120": 494
+        },
+        "125": {
+          "80": 498,
+          "100": 516,
+          "120": 531
+        },
+        "150": {
+          "80": 532,
+          "100": 551,
+          "120": 568
+        },
+        "175": {
+          "80": 565,
+          "100": 586,
+          "120": 605
+        },
+        "200": {
+          "80": 599,
+          "100": 621,
+          "120": 642
+        },
+        "225": {
+          "80": 632,
+          "100": 657,
+          "120": 679
+        },
+        "250": {
+          "80": 666,
+          "100": 692,
+          "120": 716
+        },
+        "275": {
+          "80": 699,
+          "100": 727,
+          "120": 753
+        },
+        "300": {
+          "80": 733,
+          "100": 763,
+          "120": 790
+        },
+        "325": {
+          "80": 775,
+          "100": 806,
+          "120": 836
+        },
+        "350": {
+          "80": 808,
+          "100": 842,
+          "120": 873
+        },
+        "375": {
+          "80": 841,
+          "100": 877,
+          "120": 910
+        },
+        "400": {
+          "80": 875,
+          "100": 912,
+          "120": 947
+        },
+        "425": {
+          "80": 908,
+          "100": 947,
+          "120": 984
+        },
+        "450": {
+          "80": 942,
+          "100": 983,
+          "120": 1021
+        }
+      },
+      "sobreprecios": [],
+      "observaciones": "Matriz completa 15×3 extraída de tarifa 2026 pág. 83",
+      "linea": "PRCT3200",
+      "salida": "variable",
+      "linea_min": null,
+      "linea_max": null,
+      "salida_min": 80,
+      "salida_max": 120,
+      "grupo_color": "G1",
+      "motorizable": true,
+      "grupo_motor": "1",
+      "subtipo": "punto_recto"
+    },
+    {
+      "id": "ART_TOLDOS_DE_BRAZOS_ARTICULADOS",
+      "nombre": "ART TOLDOS DE BRAZOS ARTICULADOS",
+      "pagina": 85,
+      "tipo": "marca",
+      "precio_base": null,
+      "precios_por_ancho": null,
+      "sobreprecios": [],
+      "observaciones": "",
+      "linea": "ART",
+      "salida": "variable",
+      "linea_min": null,
+      "linea_max": null,
+      "salida_min": null,
+      "salida_max": null,
+      "grupo_color": null,
+      "motorizable": false,
+      "grupo_motor": null
+    },
+    {
+      "id": "ART4100_A1_SMART",
+      "nombre": "ART4100 A1 SMART",
+      "pagina": 86,
+      "tipo": "toldo",
+      "precio_base": null,
+      "precios_por_ancho": {
+        "151": {
+          "125": 621
+        },
+        "176": {
+          "125": 642,
+          "150": 661
+        },
+        "202": {
+          "125": 662,
+          "150": 683,
+          "175": 707
+        },
+        "235": {
+          "125": 689,
+          "150": 711,
+          "175": 737,
+          "200": 760
+        },
+        "260": {
+          "125": 709,
+          "150": 732,
+          "175": 759,
+          "200": 784,
+          "225": 824
+        },
+        "285": {
+          "125": 729,
+          "150": 754,
+          "175": 782,
+          "200": 807,
+          "225": 849,
+          "250": 877
+        },
+        "300": {
+          "125": 741,
+          "150": 767,
+          "175": 795,
+          "200": 822,
+          "225": 864,
+          "250": 893
+        },
+        "325": {
+          "125": 762,
+          "150": 788,
+          "175": 818,
+          "200": 845,
+          "225": 888,
+          "250": 919
+        },
+        "350": {
+          "125": 782,
+          "150": 809,
+          "175": 840,
+          "200": 869,
+          "225": 913,
+          "250": 944
+        },
+        "375": {
+          "125": 802,
+          "150": 830,
+          "175": 863,
+          "200": 892,
+          "225": 938,
+          "250": 970
+        },
+        "400": {
+          "125": 822,
+          "150": 852,
+          "175": 885,
+          "200": 916,
+          "225": 962,
+          "250": 996
+        },
+        "425": {
+          "125": 842,
+          "150": 873,
+          "175": 907,
+          "200": 939,
+          "225": 987,
+          "250": 1022
+        },
+        "450": {
+          "125": 862,
+          "150": 894,
+          "175": 930,
+          "200": 963,
+          "225": 1012,
+          "250": 1048
+        }
+      },
+      "sobreprecios": [],
+      "observaciones": "Matriz completa 13×6 extraída de tarifa 2026 pág. 87",
+      "linea": "ART4100",
+      "salida": "variable",
+      "linea_min": null,
+      "linea_max": null,
+      "salida_min": 125,
+      "salida_max": 250,
+      "grupo_color": "G1",
+      "motorizable": true,
+      "grupo_motor": "1",
+      "subtipo": "terraza_brazo"
+    },
+    {
+      "id": "ART4110_A1_PREMIUM",
+      "nombre": "ART4110 A1 PREMIUM",
+      "pagina": 88,
+      "tipo": "toldo",
+      "precio_base": null,
+      "precios_por_ancho": {
+        "185": {
+          "150": 716
+        },
+        "210": {
+          "150": 740,
+          "175": 766
+        },
+        "243": {
+          "150": 772,
+          "175": 799,
+          "200": 828
+        },
+        "268": {
+          "150": 797,
+          "175": 824,
+          "200": 854,
+          "225": 878
+        },
+        "293": {
+          "150": 821,
+          "175": 850,
+          "200": 881,
+          "225": 906,
+          "250": 934
+        },
+        "327": {
+          "150": 854,
+          "175": 884,
+          "200": 917,
+          "225": 943,
+          "250": 973,
+          "275": 1011
+        },
+        "352": {
+          "150": 878,
+          "175": 910,
+          "200": 943,
+          "225": 971,
+          "250": 1002,
+          "275": 1041,
+          "300": 1092
+        },
+        "377": {
+          "150": 903,
+          "175": 935,
+          "200": 970,
+          "225": 999,
+          "250": 1031,
+          "275": 1071,
+          "300": 1123,
+          "325": 1159
+        },
+        "402": {
+          "150": 927,
+          "175": 961,
+          "200": 996,
+          "225": 1026,
+          "250": 1060,
+          "275": 1101,
+          "300": 1154,
+          "325": 1192,
+          "350": 1252
+        },
+        "425": {
+          "150": 949,
+          "175": 984,
+          "200": 1021,
+          "225": 1052,
+          "250": 1086,
+          "275": 1128,
+          "300": 1182,
+          "325": 1221,
+          "350": 1282
+        },
+        "450": {
+          "150": 973,
+          "175": 1009,
+          "200": 1047,
+          "225": 1080,
+          "250": 1115,
+          "275": 1158,
+          "300": 1213,
+          "325": 1253,
+          "350": 1316
+        },
+        "475": {
+          "150": 998,
+          "175": 1035,
+          "200": 1074,
+          "225": 1107,
+          "250": 1144,
+          "275": 1188,
+          "300": 1245,
+          "325": 1286,
+          "350": 1349
+        },
+        "500": {
+          "150": 1022,
+          "175": 1060,
+          "200": 1100,
+          "225": 1135,
+          "250": 1173,
+          "275": 1218,
+          "300": 1276,
+          "325": 1318,
+          "350": 1382
+        },
+        "525": {
+          "150": 1046,
+          "175": 1086,
+          "200": 1127,
+          "225": 1163,
+          "250": 1201,
+          "275": 1248,
+          "300": 1307,
+          "325": 1350,
+          "350": 1416
+        },
+        "550": {
+          "150": 1071,
+          "175": 1111,
+          "200": 1153,
+          "225": 1190,
+          "250": 1230,
+          "275": 1278,
+          "300": 1338,
+          "325": 1382,
+          "350": 1449
+        },
+        "575": {
+          "150": 1095,
+          "175": 1136,
+          "200": 1180,
+          "225": 1218,
+          "250": 1259,
+          "275": 1308,
+          "300": 1369,
+          "325": 1414,
+          "350": 1482
+        },
+        "600": {
+          "150": 1119,
+          "175": 1162,
+          "200": 1206,
+          "225": 1245,
+          "250": 1288,
+          "275": 1338,
+          "300": 1400,
+          "325": 1446,
+          "350": 1516
+        }
+      },
+      "sobreprecios": [],
+      "observaciones": "Matriz completa 17 líneas × 9 salidas extraída de tarifa 2026 pág. 89",
+      "linea": "ART4110",
+      "salida": "variable",
+      "linea_min": null,
+      "linea_max": null,
+      "salida_min": 150,
+      "salida_max": 350,
+      "grupo_color": "G1",
+      "motorizable": true,
+      "grupo_motor": "1",
+      "subtipo": "terraza_brazo"
+    },
+    {
+      "id": "ARX1000_BRAZOS_CRUZADOS",
+      "nombre": "ARX1000 BRAZOS CRUZADOS",
+      "pagina": 90,
+      "tipo": "toldo",
+      "precio_base": null,
+      "precios_por_ancho": {
+        "107": {
+          "150": 779
+        },
+        "120": {
+          "150": 787,
+          "175": 809
+        },
+        "136": {
+          "150": 796,
+          "175": 819,
+          "200": 844
+        },
+        "149": {
+          "150": 804,
+          "175": 827,
+          "200": 853,
+          "225": 872
+        },
+        "162": {
+          "150": 811,
+          "175": 835,
+          "200": 861,
+          "225": 882,
+          "250": 905
+        },
+        "178": {
+          "150": 821,
+          "175": 845,
+          "200": 872,
+          "225": 893,
+          "250": 917,
+          "275": 950
+        },
+        "191": {
+          "150": 828,
+          "175": 853,
+          "200": 881,
+          "225": 902,
+          "250": 927,
+          "275": 960,
+          "300": 1004
+        },
+        "203": {
+          "150": 835,
+          "175": 861,
+          "200": 889,
+          "225": 911,
+          "250": 936,
+          "275": 970,
+          "300": 1015,
+          "325": 1044
+        },
+        "250": {
+          "150": 862,
+          "175": 890,
+          "200": 920,
+          "225": 945,
+          "250": 972,
+          "275": 1008,
+          "300": 1054,
+          "325": 1086,
+          "350": 1141
+        },
+        "275": {
+          "150": 877,
+          "175": 906,
+          "200": 937,
+          "225": 962,
+          "250": 991,
+          "275": 1028,
+          "300": 1076,
+          "325": 1109,
+          "350": 1164
+        },
+        "300": {
+          "150": 891,
+          "175": 922,
+          "200": 954,
+          "225": 980,
+          "250": 1010,
+          "275": 1048,
+          "300": 1097,
+          "325": 1131,
+          "350": 1187
+        },
+        "325": {
+          "150": 906,
+          "175": 937,
+          "200": 970,
+          "225": 998,
+          "250": 1029,
+          "275": 1068,
+          "300": 1118,
+          "325": 1153,
+          "350": 1211
+        },
+        "350": {
+          "150": 920,
+          "175": 953,
+          "200": 987,
+          "225": 1016,
+          "250": 1048,
+          "275": 1088,
+          "300": 1139,
+          "325": 1176,
+          "350": 1234
+        },
+        "375": {
+          "150": 935,
+          "175": 968,
+          "200": 1004,
+          "225": 1034,
+          "250": 1067,
+          "275": 1108,
+          "300": 1161,
+          "325": 1198,
+          "350": 1258
+        }
+      },
+      "sobreprecios": [],
+      "observaciones": "Matriz completa 14×9 extraída de tarifa 2026 pág. 91",
+      "linea": "ARX1000",
+      "salida": "variable",
+      "linea_min": null,
+      "linea_max": null,
+      "salida_min": 150,
+      "salida_max": 350,
+      "grupo_color": "G1",
+      "motorizable": true,
+      "grupo_motor": "1",
+      "subtipo": "terraza_brazo"
+    },
+    {
+      "id": "TJD_TEJADILLO",
+      "nombre": "TJD TEJADILLO",
+      "pagina": 92,
+      "tipo": "toldo",
+      "precio_base": null,
+      "precios_por_ancho": {
+        "200": 438,
+        "250": 502,
+        "300": 566,
+        "350": 630,
+        "400": 694,
+        "450": 758,
+        "500": 831,
+        "550": 895,
+        "600": 958,
+        "650": 1022,
+        "700": 1086
+      },
+      "sobreprecios": [],
+      "observaciones": "Matriz con 11 líneas extraída",
+      "linea": "TJD",
+      "salida": "variable",
+      "linea_min": null,
+      "linea_max": null,
+      "salida_min": null,
+      "salida_max": null,
+      "grupo_color": "G1",
+      "motorizable": true,
+      "grupo_motor": "1",
+      "subtipo": "complemento"
+    },
+    {
+      "id": "SBX_VÉRTIKO",
+      "nombre": "SBX VÉRTIKO",
+      "pagina": 93,
+      "tipo": "toldo",
+      "precio_base": null,
+      "precios_por_ancho": {
+        "200": {
+          "140": 438,
+          "170": 544
+        },
+        "250": {
+          "140": 502,
+          "170": 631
+        },
+        "300": {
+          "140": 566,
+          "170": 718
+        },
+        "350": {
+          "140": 630,
+          "170": 805
+        },
+        "400": {
+          "140": 694,
+          "170": 892
+        },
+        "450": {
+          "140": 758,
+          "170": 978
+        },
+        "500": {
+          "140": 831,
+          "170": 1065
+        },
+        "550": {
+          "140": 895,
+          "170": 1152
+        },
+        "600": {
+          "140": 958,
+          "170": 1239
+        },
+        "650": {
+          "140": 1022,
+          "170": 1326
+        },
+        "700": {
+          "140": 1086,
+          "170": 1413
+        }
+      },
+      "sobreprecios": [],
+      "observaciones": "Matriz completa 11×2 extraída de tarifa 2026 pág. 93 (140=acrílico SBX_A, 170=soltis SBX_S)",
+      "linea": "SBX",
+      "salida": "variable",
+      "linea_min": null,
+      "linea_max": null,
+      "salida_min": 140,
+      "salida_max": 170,
+      "grupo_color": "G1",
+      "motorizable": true,
+      "grupo_motor": "1",
+      "subtipo": "complemento"
+    },
+    {
+      "id": "SPL_SPIRAL",
+      "nombre": "SPL SPIRAL",
+      "pagina": 94,
+      "tipo": "toldo",
+      "precio_base": null,
+      "precios_por_ancho": {
+        "100": {
+          "PREMIUM": 233,
+          "SMART": 217
+        },
+        "125": {
+          "PREMIUM": 257,
+          "SMART": 241
+        },
+        "150": {
+          "PREMIUM": 282,
+          "SMART": 264
+        },
+        "175": {
+          "PREMIUM": 306,
+          "SMART": 288
+        },
+        "200": {
+          "PREMIUM": 331,
+          "SMART": 312
+        },
+        "225": {
+          "PREMIUM": 356,
+          "SMART": 336
+        },
+        "250": {
+          "PREMIUM": 380,
+          "SMART": 360
+        },
+        "275": {
+          "PREMIUM": 405,
+          "SMART": 383
+        },
+        "300": {
+          "PREMIUM": 429,
+          "SMART": 407
+        },
+        "325": {
+          "PREMIUM": 454,
+          "SMART": 431
+        },
+        "350": {
+          "PREMIUM": 479,
+          "SMART": 455
+        },
+        "375": {
+          "PREMIUM": 503,
+          "SMART": 479
+        },
+        "400": {
+          "PREMIUM": 528,
+          "SMART": 502
+        },
+        "425": {
+          "PREMIUM": 552
+        },
+        "450": {
+          "PREMIUM": 577
+        },
+        "475": {
+          "PREMIUM": 670
+        },
+        "500": {
+          "PREMIUM": 694
+        },
+        "525": {
+          "PREMIUM": 719
+        },
+        "550": {
+          "PREMIUM": 744
+        },
+        "575": {
+          "PREMIUM": 768
+        },
+        "600": {
+          "PREMIUM": 793
+        }
+      },
+      "sobreprecios": [],
+      "observaciones": "Matriz completa 21×2 extraída de tarifa 2026 pág. 94 (PREMIUM=SPL_P hasta 600cm, SMART=SPL_S hasta 400cm)",
+      "linea": "SPL",
+      "salida": "variable",
+      "linea_min": null,
+      "linea_max": null,
+      "salida_min": 125,
+      "salida_max": 350,
+      "grupo_color": "G1",
+      "motorizable": true,
+      "grupo_motor": "1",
+      "subtipo": "complemento"
+    },
+    {
+      "id": "MCK_TOLDOS_MONOBLOCK",
+      "nombre": "MCK TOLDOS MONOBLOCK",
+      "pagina": 97,
+      "tipo": "marca",
+      "precio_base": null,
+      "precios_por_ancho": null,
+      "sobreprecios": [],
+      "observaciones": "",
+      "linea": "MCK",
+      "salida": "variable",
+      "linea_min": null,
+      "linea_max": null,
+      "salida_min": null,
+      "salida_max": null,
+      "grupo_color": null,
+      "motorizable": false,
+      "grupo_motor": null
+    },
+    {
+      "id": "MCK4700_M1_PREMIUM_PLUS",
+      "nombre": "MCK4700 M1 PREMIUM PLUS",
+      "pagina": 98,
+      "tipo": "toldo",
+      "precio_base": null,
+      "precios_por_ancho": {
+        "197": {
+          "150": 1044
+        },
+        "222": {
+          "150": 1076,
+          "175": 1101
+        },
+        "255": {
+          "150": 1118,
+          "175": 1145,
+          "200": 1174
+        },
+        "281": {
+          "150": 1151,
+          "175": 1180,
+          "200": 1210,
+          "225": 1235
+        },
+        "306": {
+          "150": 1183,
+          "175": 1213,
+          "200": 1244,
+          "225": 1270,
+          "250": 1299
+        },
+        "339": {
+          "150": 1225,
+          "175": 1256,
+          "200": 1289,
+          "225": 1317,
+          "250": 1347,
+          "275": 1386
+        },
+        "364": {
+          "150": 1257,
+          "175": 1289,
+          "200": 1324,
+          "225": 1352,
+          "250": 1384,
+          "275": 1423,
+          "300": 1474
+        },
+        "389": {
+          "150": 1289,
+          "175": 1323,
+          "200": 1358,
+          "225": 1387,
+          "250": 1420,
+          "275": 1461,
+          "300": 1513,
+          "325": 1550
+        },
+        "414": {
+          "150": 1321,
+          "175": 1356,
+          "200": 1392,
+          "225": 1423,
+          "250": 1457,
+          "275": 1498,
+          "300": 1552,
+          "325": 1590,
+          "350": 1651
+        },
+        "494": {
+          "150": 1424,
+          "175": 1462,
+          "200": 1501,
+          "225": 1536,
+          "250": 1573,
+          "275": 1619,
+          "300": 1676,
+          "325": 1718,
+          "350": 1782,
+          "400": 2127
+        },
+        "545": {
+          "150": 1489,
+          "175": 1529,
+          "200": 1571,
+          "225": 1608,
+          "250": 1648,
+          "275": 1696,
+          "300": 1755,
+          "325": 1799,
+          "350": 1866,
+          "400": 2215
+        },
+        "595": {
+          "150": 1553,
+          "175": 1595,
+          "200": 1640,
+          "225": 1679,
+          "250": 1721,
+          "275": 1771,
+          "300": 1832,
+          "325": 1879,
+          "350": 1948,
+          "400": 2302
+        }
+      },
+      "sobreprecios": [],
+      "observaciones": "Matriz completa 12×10 máquina brazo Premium extraída de tarifa 2026 pág. 99",
+      "linea": "MCK4700",
+      "salida": "variable",
+      "linea_min": null,
+      "linea_max": null,
+      "salida_min": 150,
+      "salida_max": 400,
+      "grupo_color": "G2",
+      "motorizable": true,
+      "grupo_motor": "1",
+      "subtipo": "terraza_monoblock"
+    },
+    {
+      "id": "MCK4900_ARKO",
+      "nombre": "MCK4900 ARKO",
+      "pagina": 102,
+      "tipo": "toldo",
+      "precio_base": null,
+      "precios_por_ancho": {
+        "336": {
+          "200": 3739
+        },
+        "362": {
+          "200": 3809,
+          "250": 3910
+        },
+        "420": {
+          "200": 3965,
+          "250": 4072,
+          "300": 4167
+        },
+        "470": {
+          "200": 4100,
+          "250": 4212,
+          "300": 4311,
+          "350": 4482
+        },
+        "521": {
+          "200": 4238,
+          "250": 4355,
+          "300": 4459,
+          "350": 4634,
+          "400": 4810,
+          "450": 5101
+        },
+        "600": {
+          "200": 4451,
+          "250": 4576,
+          "300": 4687,
+          "350": 4870,
+          "400": 5054,
+          "450": 5352
+        },
+        "676": {
+          "200": 4656,
+          "250": 4788,
+          "300": 4907,
+          "350": 5097,
+          "400": 5288,
+          "450": 5594
+        },
+        "689": {
+          "200": 4692,
+          "250": 4824,
+          "300": 4945,
+          "350": 5136,
+          "400": 5328,
+          "450": 5635
+        },
+        "765": {
+          "200": 5677,
+          "250": 5849,
+          "300": 6003,
+          "350": 6263
+        },
+        "781": {
+          "200": 5721,
+          "250": 5894,
+          "300": 6049,
+          "350": 6310,
+          "400": 6573,
+          "450": 7008
+        },
+        "882": {
+          "200": 6070,
+          "250": 6253,
+          "300": 6418,
+          "350": 6689,
+          "400": 7269,
+          "450": 7724
+        },
+        "982": {
+          "200": 6340,
+          "250": 6533,
+          "300": 6707,
+          "350": 6988,
+          "400": 7269,
+          "450": 7724
+        },
+        "994": {
+          "200": 6373,
+          "250": 6567,
+          "300": 6742,
+          "350": 7024,
+          "400": 7306,
+          "450": 7762
+        },
+        "1168": {
+          "200": 7384,
+          "250": 7626,
+          "300": 7844,
+          "350": 8204,
+          "400": 8565,
+          "450": 9156
+        },
+        "1319": {
+          "200": 7868,
+          "250": 8125,
+          "300": 8357,
+          "350": 8732
+        },
+        "1400": {
+          "200": 8087,
+          "250": 8352,
+          "300": 8592,
+          "350": 8974,
+          "400": 9357,
+          "450": 9970
+        },
+        "1500": {
+          "200": 11015,
+          "250": 11353,
+          "300": 11654,
+          "350": 12168,
+          "400": 12684,
+          "450": 13545
+        },
+        "1600": {
+          "200": 11285,
+          "250": 11633,
+          "300": 11943,
+          "350": 12467,
+          "400": 12992,
+          "450": 13863
+        },
+        "1700": {
+          "200": 11555,
+          "250": 11912,
+          "300": 12232,
+          "350": 12766,
+          "400": 13300,
+          "450": 14181
+        },
+        "1800": {
+          "200": 11825,
+          "250": 12192,
+          "300": 12521,
+          "350": 13064,
+          "400": 13609,
+          "450": 14499
+        },
+        "1900": {
+          "200": 12095,
+          "250": 12472,
+          "300": 12811,
+          "350": 13363,
+          "400": 13917,
+          "450": 14817
+        },
+        "2000": {
+          "200": 12365,
+          "250": 12751,
+          "300": 13100,
+          "350": 13662,
+          "400": 14226,
+          "450": 15135
+        },
+        "2100": {
+          "200": 12635,
+          "250": 13031,
+          "300": 13389,
+          "350": 13961,
+          "400": 14534,
+          "450": 15453
+        }
+      },
+      "sobreprecios": [],
+      "observaciones": "Matriz completa 23×6 extraída de tarifa 2026 pág. 103",
+      "linea": "MCK4900",
+      "salida": "variable",
+      "linea_min": null,
+      "linea_max": null,
+      "salida_min": 200,
+      "salida_max": 450,
+      "grupo_color": "G2",
+      "motorizable": true,
+      "grupo_motor": "1",
+      "subtipo": "terraza_monoblock"
+    },
+    {
+      "id": "BOX_TOLDOS_CON_COFRE",
+      "nombre": "BOX TOLDOS CON COFRE",
+      "pagina": 105,
+      "tipo": "marca",
+      "precio_base": null,
+      "precios_por_ancho": null,
+      "sobreprecios": [],
+      "observaciones": "",
+      "linea": "BOX",
+      "salida": "variable",
+      "linea_min": null,
+      "linea_max": null,
+      "salida_min": null,
+      "salida_max": null,
+      "grupo_color": null,
+      "motorizable": false,
+      "grupo_motor": null
+    },
+    {
+      "id": "BOX6000_IRIS",
+      "nombre": "BOX6000 IRIS",
+      "pagina": 106,
+      "tipo": "toldo",
+      "precio_base": null,
+      "precios_por_ancho": {
+        "151": {
+          "125": 849
+        },
+        "177": {
+          "125": 896,
+          "150": 915
+        },
+        "202": {
+          "125": 942,
+          "150": 962,
+          "175": 986
+        },
+        "235": {
+          "125": 1003,
+          "150": 1024,
+          "175": 1049,
+          "200": 1071
+        },
+        "260": {
+          "125": 1049,
+          "150": 1071,
+          "175": 1097,
+          "200": 1121,
+          "225": 1159
+        },
+        "285": {
+          "125": 1095,
+          "150": 1119,
+          "175": 1146,
+          "200": 1170,
+          "225": 1210,
+          "250": 1237
+        },
+        "300": {
+          "125": 1123,
+          "150": 1147,
+          "175": 1174,
+          "200": 1200,
+          "225": 1240,
+          "250": 1268
+        },
+        "325": {
+          "125": 1169,
+          "150": 1194,
+          "175": 1223,
+          "200": 1249,
+          "225": 1290,
+          "250": 1319
+        },
+        "350": {
+          "125": 1215,
+          "150": 1241,
+          "175": 1271,
+          "200": 1298,
+          "225": 1341,
+          "250": 1371
+        },
+        "375": {
+          "125": 1261,
+          "150": 1288,
+          "175": 1319,
+          "200": 1347,
+          "225": 1391,
+          "250": 1422
+        },
+        "400": {
+          "125": 1307,
+          "150": 1335,
+          "175": 1367,
+          "200": 1397,
+          "225": 1441,
+          "250": 1474
+        },
+        "425": {
+          "125": 1353,
+          "150": 1382,
+          "175": 1415,
+          "200": 1446,
+          "225": 1492,
+          "250": 1525
+        },
+        "450": {
+          "125": 1399,
+          "150": 1429,
+          "175": 1464,
+          "200": 1495,
+          "225": 1542,
+          "250": 1576
+        }
+      },
+      "sobreprecios": [],
+      "observaciones": "Matriz completa 13×6 extraída de tarifa 2026 pág. 107",
+      "linea": "BOX6000",
+      "salida": "variable",
+      "linea_min": null,
+      "linea_max": null,
+      "salida_min": 125,
+      "salida_max": 250,
+      "grupo_color": "G2",
+      "motorizable": true,
+      "grupo_motor": "2",
+      "subtipo": "terraza_cofre"
+    },
+    {
+      "id": "BOX6010_INDIE",
+      "nombre": "BOX6010 INDIE",
+      "pagina": 108,
+      "tipo": "toldo",
+      "precio_base": null,
+      "precios_por_ancho": {
+        "128": {
+          "100": 796
+        },
+        "154": {
+          "100": 839,
+          "125": 859
+        },
+        "179": {
+          "100": 880,
+          "125": 902,
+          "150": 919
+        },
+        "204": {
+          "100": 921,
+          "125": 944,
+          "150": 962,
+          "175": 984
+        },
+        "237": {
+          "100": 975,
+          "125": 999,
+          "150": 1019,
+          "175": 1043,
+          "200": 1064
+        },
+        "262": {
+          "100": 1016,
+          "125": 1041,
+          "150": 1063,
+          "175": 1087,
+          "200": 1109,
+          "225": 1145
+        },
+        "287": {
+          "100": 1058,
+          "125": 1084,
+          "150": 1106,
+          "175": 1131,
+          "200": 1154,
+          "225": 1192,
+          "250": 1217
+        },
+        "300": {
+          "100": 1079,
+          "125": 1106,
+          "150": 1128,
+          "175": 1154,
+          "200": 1178,
+          "225": 1216,
+          "250": 1242
+        },
+        "325": {
+          "100": 1120,
+          "125": 1148,
+          "150": 1171,
+          "175": 1198,
+          "200": 1223,
+          "225": 1262,
+          "250": 1289
+        },
+        "350": {
+          "100": 1161,
+          "125": 1190,
+          "150": 1214,
+          "175": 1242,
+          "200": 1268,
+          "225": 1308,
+          "250": 1336
+        },
+        "375": {
+          "100": 1202,
+          "125": 1232,
+          "150": 1258,
+          "175": 1287,
+          "200": 1313,
+          "225": 1354,
+          "250": 1384
+        },
+        "400": {
+          "100": 1243,
+          "125": 1274,
+          "150": 1301,
+          "175": 1331,
+          "200": 1359,
+          "225": 1401,
+          "250": 1431
+        },
+        "425": {
+          "100": 1285,
+          "125": 1316,
+          "150": 1344,
+          "175": 1375,
+          "200": 1404
+        },
+        "450": {
+          "100": 1326,
+          "125": 1358,
+          "150": 1387,
+          "175": 1419,
+          "200": 1449
+        },
+        "475": {
+          "100": 1367,
+          "125": 1400,
+          "150": 1430,
+          "175": 1463,
+          "200": 1494
+        },
+        "500": {
+          "100": 1408,
+          "125": 1443,
+          "150": 1473,
+          "175": 1508,
+          "200": 1539
+        }
+      },
+      "sobreprecios": [],
+      "observaciones": "Matriz completa 16×7 extraída de tarifa 2026 pág. 109",
+      "linea": "BOX6010",
+      "salida": "variable",
+      "linea_min": null,
+      "linea_max": null,
+      "salida_min": 100,
+      "salida_max": 250,
+      "grupo_color": "G2",
+      "motorizable": true,
+      "grupo_motor": "2",
+      "subtipo": "terraza_cofre"
+    },
+    {
+      "id": "BOX5200_SAMA",
+      "nombre": "BOX5200 SAMA",
+      "pagina": 110,
+      "tipo": "toldo",
+      "precio_base": null,
+      "precios_por_ancho": {
+        "128": {
+          "100": 990
+        },
+        "153": {
+          "100": 1045,
+          "125": 1068
+        },
+        "178": {
+          "100": 1099,
+          "125": 1124,
+          "150": 1144
+        },
+        "204": {
+          "100": 1156,
+          "125": 1181,
+          "150": 1203,
+          "175": 1228
+        },
+        "237": {
+          "100": 1227,
+          "125": 1255,
+          "150": 1278,
+          "175": 1304,
+          "200": 1328
+        },
+        "262": {
+          "100": 1282,
+          "125": 1310,
+          "150": 1334,
+          "175": 1362,
+          "200": 1387,
+          "225": 1429
+        },
+        "287": {
+          "100": 1336,
+          "125": 1366,
+          "150": 1391,
+          "175": 1420,
+          "200": 1446,
+          "225": 1489,
+          "250": 1518
+        },
+        "300": {
+          "100": 1364,
+          "125": 1395,
+          "150": 1420,
+          "175": 1450,
+          "200": 1477,
+          "225": 1520,
+          "250": 1550
+        },
+        "325": {
+          "100": 1419,
+          "125": 1450,
+          "150": 1477,
+          "175": 1508,
+          "200": 1536,
+          "225": 1581,
+          "250": 1612
+        },
+        "350": {
+          "100": 1473,
+          "125": 1506,
+          "150": 1534,
+          "175": 1566,
+          "200": 1595,
+          "225": 1641,
+          "250": 1673
+        },
+        "375": {
+          "100": 1527,
+          "125": 1561,
+          "150": 1591,
+          "175": 1624,
+          "200": 1654,
+          "225": 1701,
+          "250": 1734
+        },
+        "400": {
+          "100": 1582,
+          "125": 1617,
+          "150": 1647,
+          "175": 1682,
+          "200": 1713,
+          "225": 1761,
+          "250": 1796
+        },
+        "425": {
+          "100": 1636,
+          "125": 1672,
+          "150": 1704,
+          "175": 1739,
+          "200": 1772
+        },
+        "450": {
+          "100": 1691,
+          "125": 1728,
+          "150": 1761,
+          "175": 1797,
+          "200": 1831
+        },
+        "475": {
+          "100": 1745,
+          "125": 1783,
+          "150": 1817,
+          "175": 1855,
+          "200": 1890
+        },
+        "500": {
+          "100": 1799,
+          "125": 1839,
+          "150": 1874,
+          "175": 1913,
+          "200": 1949
+        }
+      },
+      "sobreprecios": [],
+      "observaciones": "Matriz completa 16×7 extraída de tarifa 2026 pág. 111",
+      "linea": "BOX5200",
+      "salida": "variable",
+      "linea_min": null,
+      "linea_max": null,
+      "salida_min": 100,
+      "salida_max": 250,
+      "grupo_color": "G2",
+      "motorizable": true,
+      "grupo_motor": "2",
+      "subtipo": "terraza_cofre"
+    },
+    {
+      "id": "BOX6100_ARES",
+      "nombre": "BOX6100 ARES",
+      "pagina": 112,
+      "tipo": "toldo",
+      "precio_base": 1192,
+      "precios_por_ancho": {
+        "179": {
+          "150": 1192
+        },
+        "204": {
+          "150": 1250,
+          "175": 1275
+        },
+        "237": {
+          "150": 1328,
+          "175": 1354,
+          "200": 1382
+        },
+        "262": {
+          "150": 1386,
+          "175": 1413,
+          "200": 1443,
+          "225": 1466
+        },
+        "288": {
+          "150": 1447,
+          "175": 1475,
+          "200": 1506,
+          "225": 1531,
+          "250": 1559
+        },
+        "321": {
+          "150": 1524,
+          "175": 1554,
+          "200": 1586,
+          "225": 1612,
+          "250": 1642,
+          "275": 1679
+        },
+        "346": {
+          "150": 1583,
+          "175": 1614,
+          "200": 1646,
+          "225": 1674,
+          "250": 1704,
+          "275": 1743,
+          "300": 1793
+        },
+        "375": {
+          "150": 1650,
+          "175": 1683,
+          "200": 1717,
+          "225": 1746,
+          "250": 1777,
+          "275": 1817,
+          "300": 1868
+        },
+        "400": {
+          "150": 1709,
+          "175": 1742,
+          "200": 1778,
+          "225": 1807,
+          "250": 1840,
+          "275": 1881,
+          "300": 1933
+        },
+        "425": {
+          "150": 1767,
+          "175": 1802,
+          "200": 1838,
+          "225": 1869,
+          "250": 1903,
+          "275": 1945,
+          "300": 1998
+        },
+        "450": {
+          "150": 1826,
+          "175": 1861,
+          "200": 1899,
+          "225": 1931,
+          "250": 1966,
+          "275": 2009,
+          "300": 2064
+        },
+        "475": {
+          "150": 1884,
+          "175": 1921,
+          "200": 1960,
+          "225": 1993,
+          "250": 2029,
+          "275": 2073,
+          "300": 2129
+        },
+        "500": {
+          "150": 1943,
+          "175": 1981,
+          "200": 2020,
+          "225": 2055,
+          "250": 2092,
+          "275": 2137,
+          "300": 2194
+        },
+        "525": {
+          "150": 2001,
+          "175": 2040,
+          "200": 2081,
+          "225": 2116,
+          "250": 2206,
+          "275": 2252,
+          "300": 2310
+        },
+        "550": {
+          "150": 2060,
+          "175": 2100,
+          "200": 2142,
+          "225": 2229,
+          "250": 2269,
+          "275": 2316,
+          "300": 2375
+        },
+        "575": {
+          "150": 2118,
+          "175": 2159,
+          "200": 2202,
+          "225": 2291,
+          "250": 2331,
+          "275": 2380,
+          "300": 2440
+        },
+        "600": {
+          "150": 2177,
+          "175": 2219,
+          "200": 2263,
+          "225": 2353,
+          "250": 2394,
+          "275": 2444,
+          "300": 2505
+        }
+      },
+      "sobreprecios": [
+        {
+          "ref": "80131370",
+          "desc": "Kit Cofre ARES Blanco",
+          "price": 211.02
+        },
+        {
+          "ref": "80131388",
+          "desc": "Kit Tapas Plástico Máquina ARES",
+          "price": 71.19
+        },
+        {
+          "ref": "80131319",
+          "desc": "Kit Tapas Aluminio Motor ARES",
+          "price": 104.19
+        },
+        {
+          "ref": "80131328",
+          "desc": "Kit Tapas Aluminio Máquina ARES",
+          "price": 167.06
+        },
+        {
+          "ref": "80080785",
+          "desc": "J. Brazos INV. Premium 1,50",
+          "price": 286.24
+        },
+        {
+          "ref": "80080795",
+          "desc": "J. Brazos INV. Premium 1,75",
+          "price": 301.36
+        },
+        {
+          "ref": "80080805",
+          "desc": "J. Brazos INV. Premium 2,00",
+          "price": 318.53
+        },
+        {
+          "ref": "80080815",
+          "desc": "J. Brazos INV. Premium 2,25",
+          "price": 329.79
+        },
+        {
+          "ref": "80080825",
+          "desc": "J. Brazos INV. Premium 2,50",
+          "price": 344.37
+        },
+        {
+          "ref": "80080835",
+          "desc": "J. Brazos INV. Premium 2,75",
+          "price": 367.46
+        },
+        {
+          "ref": "80080845",
+          "desc": "J. Brazos INV. Premium 3,00",
+          "price": 402.89
+        },
+        {
+          "ref": "80130511",
+          "desc": "Soporte Techo ARES/IRIS Blanco",
+          "price": 104.14
+        },
+        {
+          "ref": "80130512",
+          "desc": "Soporte Entre Paredes ARES/IRIS",
+          "price": 114.56
+        },
+        {
+          "ref": "80130544",
+          "desc": "Soporte Central ARES Blanco",
+          "price": 54.95
+        }
+      ],
+      "observaciones": "Tarifa completa extraída",
+      "linea": "BOX6100",
+      "salida": "variable",
+      "linea_min": null,
+      "linea_max": null,
+      "salida_min": 150,
+      "salida_max": 300,
+      "grupo_color": "G2",
+      "motorizable": true,
+      "grupo_motor": "2",
+      "subtipo": "terraza_cofre"
+    },
+    {
+      "id": "BOX6110_CONCEPT",
+      "nombre": "BOX6110 CONCEPT",
+      "pagina": 114,
+      "tipo": "toldo",
+      "precio_base": null,
+      "precios_por_ancho": {
+        "178": {
+          "150": 1221
+        },
+        "203": {
+          "150": 1280,
+          "175": 1305
+        },
+        "236": {
+          "150": 1358,
+          "175": 1384,
+          "200": 1413
+        },
+        "261": {
+          "150": 1417,
+          "175": 1444,
+          "200": 1474,
+          "225": 1498
+        },
+        "287": {
+          "150": 1478,
+          "175": 1507,
+          "200": 1537,
+          "225": 1562,
+          "250": 1591
+        },
+        "320": {
+          "150": 1556,
+          "175": 1586,
+          "200": 1618,
+          "225": 1644,
+          "250": 1674,
+          "275": 1712
+        },
+        "345": {
+          "150": 1614,
+          "175": 1646,
+          "200": 1679,
+          "225": 1707,
+          "250": 1737,
+          "275": 1776,
+          "300": 1826
+        },
+        "370": {
+          "150": 1673,
+          "175": 1706,
+          "200": 1740,
+          "225": 1769,
+          "250": 1801,
+          "275": 1841,
+          "300": 1892,
+          "325": 1928
+        },
+        "395": {
+          "150": 1732,
+          "175": 1765,
+          "200": 1801,
+          "225": 1831,
+          "250": 1864,
+          "275": 1905,
+          "300": 1958,
+          "325": 1995,
+          "350": 2055
+        },
+        "425": {
+          "150": 1803,
+          "175": 1837,
+          "200": 1874,
+          "225": 1906,
+          "250": 1940,
+          "275": 1982,
+          "300": 2036,
+          "325": 2075,
+          "350": 2136,
+          "400": 2472
+        },
+        "450": {
+          "150": 1861,
+          "175": 1897,
+          "200": 1935,
+          "225": 1968,
+          "250": 2003,
+          "275": 2047,
+          "300": 2102,
+          "325": 2142,
+          "350": 2204,
+          "400": 2541
+        },
+        "475": {
+          "150": 1920,
+          "175": 1957,
+          "200": 1996,
+          "225": 2030,
+          "250": 2066,
+          "275": 2111,
+          "300": 2167,
+          "325": 2208,
+          "350": 2272,
+          "400": 2611
+        },
+        "500": {
+          "150": 1979,
+          "175": 2017,
+          "200": 2057,
+          "225": 2092,
+          "250": 2130,
+          "275": 2175,
+          "300": 2233,
+          "325": 2275,
+          "350": 2339,
+          "400": 2681
+        },
+        "525": {
+          "150": 2038,
+          "175": 2077,
+          "200": 2118,
+          "225": 2154,
+          "250": 2193,
+          "275": 2240,
+          "300": 2298
+        },
+        "550": {
+          "150": 2097,
+          "175": 2137,
+          "200": 2179,
+          "225": 2216,
+          "250": 2256,
+          "275": 2304,
+          "300": 2364
+        },
+        "575": {
+          "150": 2155,
+          "175": 2197,
+          "200": 2240,
+          "225": 2278,
+          "250": 2320,
+          "275": 2369,
+          "300": 2429
+        },
+        "600": {
+          "150": 2214,
+          "175": 2257,
+          "200": 2302,
+          "225": 2341,
+          "250": 2383,
+          "275": 2433,
+          "300": 2495
+        }
+      },
+      "sobreprecios": [],
+      "observaciones": "Matriz completa 17×10 extraída de tarifa 2026 pág. 115",
+      "linea": "BOX6110",
+      "salida": "variable",
+      "linea_min": null,
+      "linea_max": null,
+      "salida_min": 150,
+      "salida_max": 400,
+      "grupo_color": "G2",
+      "motorizable": true,
+      "grupo_motor": "2",
+      "subtipo": "terraza_cofre"
+    },
+    {
+      "id": "BOX6300_ALAND_2.0",
+      "nombre": "BOX6300 ALAND 2.0",
+      "pagina": 116,
+      "tipo": "toldo",
+      "precio_base": null,
+      "precios_por_ancho": {
+        "177": {
+          "150": 1310
+        },
+        "202": {
+          "150": 1370,
+          "175": 1395
+        },
+        "235": {
+          "150": 1458,
+          "175": 1484,
+          "200": 1513
+        },
+        "260": {
+          "150": 1543,
+          "175": 1571,
+          "200": 1600,
+          "225": 1624
+        },
+        "285": {
+          "150": 1603,
+          "175": 1632,
+          "200": 1662,
+          "225": 1687,
+          "250": 1715
+        },
+        "318": {
+          "150": 1691,
+          "175": 1721,
+          "200": 1753,
+          "225": 1780,
+          "250": 1809,
+          "275": 1846
+        },
+        "344": {
+          "150": 1751,
+          "175": 1782,
+          "200": 1815,
+          "225": 1843,
+          "250": 1873,
+          "275": 1912,
+          "300": 1962
+        },
+        "369": {
+          "150": 1837,
+          "175": 1869,
+          "200": 1903,
+          "225": 1931,
+          "250": 1963,
+          "275": 2003,
+          "300": 2054,
+          "325": 2090
+        },
+        "394": {
+          "150": 1896,
+          "175": 1930,
+          "200": 1965,
+          "225": 1995,
+          "250": 2027,
+          "275": 2068,
+          "300": 2120,
+          "325": 2157,
+          "350": 2216
+        },
+        "425": {
+          "150": 2035,
+          "175": 2070,
+          "200": 2106,
+          "225": 2137,
+          "250": 2172,
+          "275": 2214,
+          "300": 2267,
+          "325": 2305,
+          "350": 2366,
+          "400": 2697
+        },
+        "450": {
+          "150": 2044,
+          "175": 2079,
+          "200": 2117,
+          "225": 2149,
+          "250": 2185,
+          "275": 2228,
+          "300": 2282,
+          "325": 2322,
+          "350": 2383,
+          "400": 2717
+        },
+        "475": {
+          "150": 2180,
+          "175": 2217,
+          "200": 2256,
+          "225": 2289,
+          "250": 2325,
+          "275": 2370,
+          "300": 2425,
+          "325": 2466,
+          "350": 2529,
+          "400": 2865
+        },
+        "500": {
+          "150": 2189,
+          "175": 2227,
+          "200": 2267,
+          "225": 2301,
+          "250": 2338,
+          "275": 2384,
+          "300": 2440,
+          "325": 2482,
+          "350": 2546,
+          "400": 2884
+        },
+        "525": {
+          "150": 2325,
+          "175": 2364,
+          "200": 2405,
+          "225": 2441,
+          "250": 2530,
+          "275": 2576,
+          "300": 2634
+        },
+        "550": {
+          "150": 2334,
+          "175": 2374,
+          "200": 2416,
+          "225": 2503,
+          "250": 2543,
+          "275": 2591,
+          "300": 2649
+        },
+        "575": {
+          "150": 2470,
+          "175": 2512,
+          "200": 2555,
+          "225": 2643,
+          "250": 2684,
+          "275": 2733,
+          "300": 2793
+        },
+        "600": {
+          "150": 2505,
+          "175": 2547,
+          "200": 2591,
+          "225": 2681,
+          "250": 2723,
+          "275": 2772,
+          "300": 2833
+        }
+      },
+      "sobreprecios": [],
+      "observaciones": "Matriz completa 17×10 extraída de tarifa 2026 pág. 117",
+      "linea": "BOX6300",
+      "salida": "variable",
+      "linea_min": null,
+      "linea_max": null,
+      "salida_min": 150,
+      "salida_max": 400,
+      "grupo_color": "G2",
+      "motorizable": true,
+      "grupo_motor": "2",
+      "subtipo": "terraza_cofre"
+    },
+    {
+      "id": "BOX7000_GÉMINI",
+      "nombre": "BOX7000 GÉMINI",
+      "pagina": 118,
+      "tipo": "toldo",
+      "precio_base": null,
+      "precios_por_ancho": {
+        "257": {
+          "300": 3895
+        },
+        "282": {
+          "300": 4025,
+          "350": 4085
+        },
+        "315": {
+          "300": 4147,
+          "350": 4208,
+          "400": 4272
+        },
+        "340": {
+          "300": 4277,
+          "350": 4343,
+          "400": 4412,
+          "450": 4470
+        },
+        "365": {
+          "300": 4370,
+          "350": 4435,
+          "400": 4505,
+          "450": 4563,
+          "500": 4628
+        },
+        "399": {
+          "300": 4533,
+          "350": 4604,
+          "400": 4678,
+          "450": 4742,
+          "500": 4812,
+          "550": 4898
+        },
+        "424": {
+          "300": 4625,
+          "350": 4696,
+          "400": 4771,
+          "450": 4835,
+          "500": 4905,
+          "550": 4991,
+          "600": 5099
+        },
+        "450": {
+          "300": 4722,
+          "350": 4793,
+          "400": 4867,
+          "450": 4931,
+          "500": 5001,
+          "550": 5087,
+          "600": 5196
+        },
+        "500": {
+          "300": 4944,
+          "350": 5020,
+          "400": 5100,
+          "450": 5169,
+          "500": 5245,
+          "550": 5336,
+          "600": 5450
+        },
+        "550": {
+          "300": 5166,
+          "350": 5248,
+          "400": 5333,
+          "450": 5408,
+          "500": 5488,
+          "550": 5585,
+          "600": 5704
+        },
+        "600": {
+          "300": 5389,
+          "350": 5476,
+          "400": 5566,
+          "450": 5646,
+          "500": 5732,
+          "550": 5834,
+          "600": 5959
+        }
+      },
+      "sobreprecios": [],
+      "observaciones": "Matriz completa 11×7 extraída de tarifa 2026 pág. 119 (BOX7000/2 atornillada suelo 100x100)",
+      "linea": "BOX7000",
+      "salida": "variable",
+      "linea_min": null,
+      "linea_max": null,
+      "salida_min": 300,
+      "salida_max": 600,
+      "grupo_color": "G2",
+      "motorizable": true,
+      "grupo_motor": "2",
+      "subtipo": "terraza_cofre"
+    },
+    {
+      "id": "VSJ12000_VISOMBRA",
+      "nombre": "VSJ12000 VISOMBRA",
+      "pagina": 122,
+      "tipo": "toldo",
+      "precio_base": null,
+      "precios_por_ancho": {
+        "47": 108,
+        "95": 190,
+        "634": 763,
+        "1142": 1194,
+        "2833": 2886
+      },
+      "sobreprecios": [],
+      "observaciones": "Matriz con 5 líneas extraída",
+      "linea": "VSJ12000",
+      "salida": "variable",
+      "linea_min": null,
+      "linea_max": null,
+      "salida_min": null,
+      "salida_max": null,
+      "grupo_color": "G2",
+      "motorizable": true,
+      "grupo_motor": "2",
+      "subtipo": "jardin_dos_aguas"
+    },
+    {
+      "id": "BOX6400_LUSOL",
+      "nombre": "BOX6400 LUSOL",
+      "pagina": 126,
+      "tipo": "toldo",
+      "precio_base": null,
+      "precios_por_ancho": {
+        "181": {
+          "150": 1426
+        },
+        "206": {
+          "150": 1496,
+          "175": 1520
+        },
+        "239": {
+          "150": 1588,
+          "175": 1614,
+          "200": 1643
+        },
+        "248": {
+          "150": 1613,
+          "175": 1640,
+          "200": 1669,
+          "225": 1692,
+          "250": 1718,
+          "275": 1752,
+          "300": 1797
+        },
+        "264": {
+          "150": 1658,
+          "175": 1686,
+          "200": 1715,
+          "225": 1739,
+          "250": 1757
+        },
+        "289": {
+          "150": 1728,
+          "175": 1757,
+          "200": 1787,
+          "225": 1812,
+          "250": 1840
+        },
+        "323": {
+          "150": 1824,
+          "175": 1854,
+          "200": 1886,
+          "225": 1912,
+          "250": 1941,
+          "275": 1979
+        },
+        "373": {
+          "150": 1964,
+          "175": 1996,
+          "200": 2030,
+          "225": 2059,
+          "250": 2090,
+          "275": 2130,
+          "300": 2181,
+          "325": 2217
+        },
+        "398": {
+          "150": 2034,
+          "175": 2067,
+          "200": 2102,
+          "225": 2132,
+          "250": 2165,
+          "275": 2205,
+          "300": 2257,
+          "325": 2295,
+          "350": 2354
+        },
+        "425": {
+          "150": 2110,
+          "175": 2144,
+          "200": 2181,
+          "225": 2211,
+          "250": 2245,
+          "275": 2287,
+          "300": 2340,
+          "325": 2379,
+          "350": 2439,
+          "400": 2770
+        },
+        "450": {
+          "150": 2180,
+          "175": 2215,
+          "200": 2253,
+          "225": 2285,
+          "250": 2320,
+          "275": 2363,
+          "300": 2417,
+          "325": 2456,
+          "350": 2518,
+          "400": 2851
+        },
+        "475": {
+          "150": 2250,
+          "175": 2287,
+          "200": 2325,
+          "225": 2358,
+          "250": 2394,
+          "275": 2438,
+          "300": 2494,
+          "325": 2534,
+          "350": 2597,
+          "400": 2932
+        },
+        "500": {
+          "150": 2320,
+          "175": 2358,
+          "200": 2397,
+          "225": 2432,
+          "250": 2469,
+          "275": 2514,
+          "300": 2570,
+          "325": 2612,
+          "350": 2676,
+          "400": 3013
+        },
+        "525": {
+          "150": 2390,
+          "175": 2429,
+          "200": 2470,
+          "225": 2505,
+          "250": 2543,
+          "275": 2590,
+          "300": 2647,
+          "325": 2690,
+          "350": 2755,
+          "400": 3094
+        },
+        "550": {
+          "150": 2460,
+          "175": 2500,
+          "200": 2542,
+          "225": 2578,
+          "250": 2618,
+          "275": 2665,
+          "300": 2724,
+          "325": 2768,
+          "350": 2833,
+          "400": 3175
+        },
+        "575": {
+          "150": 2530,
+          "175": 2571,
+          "200": 2614,
+          "225": 2652,
+          "250": 2692,
+          "275": 2741,
+          "300": 2801,
+          "325": 2845,
+          "350": 2912,
+          "400": 3257
+        },
+        "600": {
+          "150": 2601,
+          "175": 2643,
+          "200": 2687,
+          "225": 2725,
+          "250": 2767,
+          "275": 2816,
+          "300": 2877,
+          "325": 2923,
+          "350": 2991,
+          "400": 3338
+        }
+      },
+      "sobreprecios": [],
+      "observaciones": "Matriz completa 17×10 extraída de tarifa 2026 pág. 127",
+      "linea": "BOX6400",
+      "salida": "variable",
+      "linea_min": null,
+      "linea_max": null,
+      "salida_min": 150,
+      "salida_max": 400,
+      "grupo_color": "G2",
+      "motorizable": true,
+      "grupo_motor": "2",
+      "subtipo": "terraza_cofre"
+    },
+    {
+      "id": "BOX6500_ARKO",
+      "nombre": "BOX6500 ARKO",
+      "pagina": 128,
+      "tipo": "toldo",
+      "precio_base": null,
+      "precios_por_ancho": {
+        "238": {
+          "200": 2423
+        },
+        "289": {
+          "200": 2607,
+          "250": 2711
+        },
+        "347": {
+          "200": 2813,
+          "250": 2922,
+          "300": 3018
+        },
+        "397": {
+          "200": 2994,
+          "250": 3110,
+          "300": 3212,
+          "350": 3389
+        },
+        "448": {
+          "200": 3178,
+          "250": 3300,
+          "300": 3408,
+          "350": 3591,
+          "400": 3775
+        },
+        "500": {
+          "200": 3336,
+          "250": 3457,
+          "300": 3566,
+          "350": 3749,
+          "400": 3933
+        },
+        "550": {
+          "200": 3517,
+          "250": 3645,
+          "300": 3759,
+          "350": 3948,
+          "400": 4138
+        },
+        "600": {
+          "200": 3698,
+          "250": 3832,
+          "300": 3953,
+          "350": 4148,
+          "400": 4344
+        }
+      },
+      "sobreprecios": [],
+      "observaciones": "Matriz completa 8×5 extraída de tarifa 2026 pág. 129",
+      "linea": "BOX6500",
+      "salida": "variable",
+      "linea_min": null,
+      "linea_max": null,
+      "salida_min": 200,
+      "salida_max": 400,
+      "grupo_color": "G2",
+      "motorizable": true,
+      "grupo_motor": "2",
+      "subtipo": "terraza_cofre"
+    },
+    {
+      "id": "BOX8100_KYMA",
+      "nombre": "BOX8100 KYMA",
+      "pagina": 130,
+      "tipo": "toldo",
+      "precio_base": null,
+      "precios_por_ancho": {
+        "193": {
+          "150": 2706
+        },
+        "219": {
+          "150": 2780,
+          "175": 2805
+        },
+        "252": {
+          "150": 2894,
+          "175": 2922,
+          "200": 2951
+        },
+        "277": {
+          "150": 2965,
+          "175": 2992,
+          "200": 3022,
+          "225": 3046
+        },
+        "302": {
+          "150": 3056,
+          "175": 3087,
+          "200": 3119,
+          "225": 3146,
+          "250": 3176
+        },
+        "335": {
+          "150": 3150,
+          "175": 3180,
+          "200": 3213,
+          "225": 3239,
+          "250": 3269,
+          "275": 3307
+        },
+        "360": {
+          "150": 3241,
+          "175": 3275,
+          "200": 3310,
+          "225": 3339,
+          "250": 3372,
+          "275": 3413,
+          "300": 3465
+        },
+        "386": {
+          "150": 3315,
+          "175": 3348,
+          "200": 3383,
+          "225": 3413,
+          "250": 3445,
+          "275": 3486,
+          "300": 3538,
+          "325": 3575
+        },
+        "411": {
+          "150": 3407,
+          "175": 3443,
+          "200": 3480,
+          "225": 3513,
+          "250": 3548,
+          "275": 3591,
+          "300": 3646,
+          "325": 3686,
+          "350": 3749
+        },
+        "425": {
+          "150": 3446,
+          "175": 3482,
+          "200": 3520,
+          "225": 3553,
+          "250": 3588,
+          "275": 3631,
+          "300": 3686,
+          "325": 3726,
+          "350": 3788,
+          "400": 4128
+        },
+        "475": {
+          "150": 3609,
+          "175": 3647,
+          "200": 3688,
+          "225": 3723,
+          "250": 3761,
+          "275": 3807,
+          "300": 3865,
+          "325": 3907,
+          "350": 3972,
+          "400": 4317
+        },
+        "500": {
+          "150": 3679,
+          "175": 3718,
+          "200": 3758,
+          "225": 3793,
+          "250": 3831,
+          "275": 3878,
+          "300": 3935,
+          "325": 3978,
+          "350": 4043,
+          "400": 4388
+        },
+        "525": {
+          "150": 3771,
+          "175": 3812,
+          "200": 3856,
+          "225": 3893,
+          "250": 3934,
+          "275": 3983,
+          "300": 4043,
+          "325": 4088,
+          "350": 4156,
+          "400": 4507
+        },
+        "550": {
+          "150": 3842,
+          "175": 3883,
+          "200": 3926,
+          "225": 3964,
+          "250": 4005,
+          "275": 4053,
+          "300": 4114,
+          "325": 4158,
+          "350": 4227,
+          "400": 4577
+        },
+        "600": {
+          "150": 4004,
+          "175": 4048,
+          "200": 4094,
+          "225": 4134,
+          "250": 4178,
+          "275": 4229,
+          "300": 4293,
+          "325": 4340,
+          "350": 4411,
+          "400": 4767
+        },
+        "650": {
+          "150": 4812,
+          "175": 4863,
+          "200": 4917,
+          "225": 4963,
+          "250": 5013,
+          "275": 5075,
+          "300": 5155,
+          "325": 5212,
+          "350": 5303,
+          "400": 5807
+        },
+        "700": {
+          "150": 4974,
+          "175": 5028,
+          "200": 5085,
+          "225": 5133,
+          "250": 5186,
+          "275": 5251,
+          "300": 5334,
+          "325": 5393,
+          "350": 5487,
+          "400": 5996
+        },
+        "750": {
+          "150": 5505,
+          "175": 5561,
+          "200": 5621,
+          "225": 5672,
+          "250": 5727,
+          "275": 5795,
+          "300": 5880,
+          "325": 5943,
+          "350": 6039,
+          "400": 6554
+        },
+        "800": {
+          "150": 5667,
+          "175": 5726,
+          "200": 5788,
+          "225": 5842,
+          "250": 5901,
+          "275": 5971,
+          "300": 6059,
+          "325": 6124,
+          "350": 6223,
+          "400": 6743
+        },
+        "850": {
+          "150": 5829,
+          "175": 5891,
+          "200": 5956,
+          "225": 6013,
+          "250": 6074,
+          "275": 6147,
+          "300": 6238,
+          "325": 6305,
+          "350": 6407,
+          "400": 6933
+        },
+        "900": {
+          "150": 5992,
+          "175": 6057,
+          "200": 6124,
+          "225": 6183,
+          "250": 6247,
+          "275": 6323,
+          "300": 6416,
+          "325": 6487,
+          "350": 6591,
+          "400": 7122
+        },
+        "1000": {
+          "150": 7088,
+          "175": 7165,
+          "200": 7246,
+          "225": 7316,
+          "250": 7392,
+          "275": 7484,
+          "300": 7599,
+          "325": 7684,
+          "350": 7814,
+          "400": 8505
+        },
+        "1100": {
+          "150": 7391,
+          "175": 7471,
+          "200": 7555,
+          "225": 7628,
+          "250": 7706,
+          "275": 7801,
+          "300": 7919,
+          "325": 8007,
+          "350": 8140,
+          "400": 8835
+        },
+        "1200": {
+          "150": 7716,
+          "175": 7802,
+          "200": 7891,
+          "225": 7969,
+          "250": 8053,
+          "275": 8153,
+          "300": 8277,
+          "325": 8370,
+          "350": 8508,
+          "400": 9214
+        },
+        "1300": {
+          "150": 9170,
+          "175": 9275,
+          "200": 9386,
+          "225": 9480,
+          "250": 9583,
+          "275": 9711,
+          "300": 9873,
+          "325": 9990,
+          "350": 10174,
+          "400": 11187
+        },
+        "1400": {
+          "150": 9474,
+          "175": 9582,
+          "200": 9695,
+          "225": 9792,
+          "250": 9898,
+          "275": 10028,
+          "300": 10193,
+          "325": 10312,
+          "350": 10499,
+          "400": 11518
+        },
+        "1500": {
+          "150": 10957,
+          "175": 11070,
+          "200": 11189,
+          "225": 11291,
+          "250": 11402,
+          "275": 11538,
+          "300": 11708,
+          "325": 11833,
+          "350": 12025,
+          "400": 13055
+        },
+        "1600": {
+          "150": 11261,
+          "175": 11376,
+          "200": 11498,
+          "225": 11603,
+          "250": 11717,
+          "275": 11855,
+          "300": 12028,
+          "325": 12156,
+          "350": 12351,
+          "400": 13386
+        },
+        "1700": {
+          "150": 11491,
+          "175": 11600,
+          "200": 11714,
+          "225": 11812,
+          "250": 11920,
+          "275": 12051,
+          "300": 12218,
+          "325": 12338,
+          "350": 12527,
+          "400": 13548
+        },
+        "1800": {
+          "150": 11910,
+          "175": 12037,
+          "200": 12169,
+          "225": 12285,
+          "250": 12410,
+          "275": 12559,
+          "300": 12743,
+          "325": 12881,
+          "350": 13087,
+          "400": 14144
+        }
+      },
+      "sobreprecios": [],
+      "observaciones": "Matriz completa 30×10 extraída de tarifa 2026 pág. 131",
+      "linea": "BOX8100",
+      "salida": "variable",
+      "linea_min": null,
+      "linea_max": null,
+      "salida_min": 150,
+      "salida_max": 400,
+      "grupo_color": "G2",
+      "motorizable": true,
+      "grupo_motor": "2",
+      "subtipo": "terraza_cofre"
+    },
+    {
+      "id": "BOX8110_KYMA_+_VÉRTIKO",
+      "nombre": "BOX8110 KYMA + VÉRTIKO",
+      "pagina": 134,
+      "tipo": "toldo",
+      "precio_base": null,
+      "precios_por_ancho": {
+        "193": {
+          "150": 3468
+        },
+        "219": {
+          "150": 3498,
+          "175": 3530
+        },
+        "252": {
+          "150": 3524,
+          "175": 3558,
+          "200": 3593
+        },
+        "277": {
+          "150": 3545,
+          "175": 3580,
+          "200": 3617,
+          "225": 3643
+        },
+        "302": {
+          "150": 3961,
+          "175": 3997,
+          "200": 4036,
+          "225": 4063,
+          "250": 4092
+        },
+        "335": {
+          "150": 3996,
+          "175": 4034,
+          "200": 4075,
+          "225": 4103,
+          "250": 4134,
+          "275": 4174
+        },
+        "360": {
+          "150": 4021,
+          "175": 4061,
+          "200": 4103,
+          "225": 4133,
+          "250": 4165,
+          "275": 4205,
+          "300": 4257
+        },
+        "386": {
+          "150": 4037,
+          "175": 4079,
+          "200": 4123,
+          "225": 4154,
+          "250": 4187,
+          "275": 4229,
+          "300": 4282
+        },
+        "411": {
+          "150": 4449,
+          "175": 4492,
+          "200": 4537,
+          "225": 4569,
+          "250": 4604,
+          "275": 4646,
+          "300": 4700
+        },
+        "450": {
+          "150": 4501,
+          "175": 4547,
+          "200": 4595,
+          "225": 4628,
+          "250": 4665,
+          "275": 4709,
+          "300": 4765
+        },
+        "475": {
+          "150": 4517,
+          "175": 4565,
+          "200": 4614,
+          "225": 4649,
+          "250": 4686,
+          "275": 4731,
+          "300": 4788
+        },
+        "500": {
+          "150": 4533,
+          "175": 4582,
+          "200": 4633,
+          "225": 4669,
+          "250": 4707,
+          "275": 4754,
+          "300": 4812
+        },
+        "525": {
+          "150": 4972,
+          "175": 5023,
+          "200": 5075,
+          "225": 5112,
+          "250": 5151,
+          "275": 5199,
+          "300": 5258
+        },
+        "550": {
+          "150": 4988,
+          "175": 5040,
+          "200": 5094,
+          "225": 5132,
+          "250": 5173,
+          "275": 5222,
+          "300": 5282
+        },
+        "600": {
+          "150": 5020,
+          "175": 5075,
+          "200": 5133,
+          "225": 5173,
+          "250": 5216,
+          "275": 5267,
+          "300": 5329
+        },
+        "620": {
+          "150": 6069,
+          "175": 6133,
+          "200": 6200,
+          "225": 6246,
+          "250": 6296,
+          "275": 6359,
+          "300": 6439
+        },
+        "693": {
+          "150": 6162,
+          "175": 6230,
+          "200": 6301,
+          "225": 6351,
+          "250": 6405,
+          "275": 6471,
+          "300": 6554
+        },
+        "743": {
+          "150": 6559,
+          "175": 6630,
+          "200": 6704,
+          "225": 6756,
+          "250": 6812,
+          "275": 6880,
+          "300": 6966
+        },
+        "794": {
+          "150": 7391,
+          "175": 7465,
+          "200": 7543,
+          "225": 7596,
+          "250": 7655,
+          "275": 7725,
+          "300": 7813
+        },
+        "845": {
+          "150": 7846,
+          "175": 7924,
+          "200": 8004,
+          "225": 8060,
+          "250": 8121,
+          "275": 8194,
+          "300": 8284
+        },
+        "900": {
+          "150": 8304,
+          "175": 8385,
+          "200": 8469,
+          "225": 8528,
+          "250": 8591,
+          "275": 8666,
+          "300": 8758
+        },
+        "1000": {
+          "150": 9483,
+          "175": 9577,
+          "200": 9676,
+          "225": 9744,
+          "250": 9818,
+          "275": 9909,
+          "300": 10022
+        }
+      },
+      "sobreprecios": [],
+      "observaciones": "Matriz completa 22×7 extraída de tarifa 2026 pág. 135",
+      "linea": "BOX8110",
+      "salida": "variable",
+      "linea_min": null,
+      "linea_max": null,
+      "salida_min": 150,
+      "salida_max": 300,
+      "grupo_color": "G2",
+      "motorizable": true,
+      "grupo_motor": "2",
+      "subtipo": "terraza_cofre"
+    },
+    {
+      "id": "BOX8200_KALI",
+      "nombre": "BOX8200 KALI",
+      "pagina": 136,
+      "tipo": "toldo",
+      "precio_base": null,
+      "precios_por_ancho": {
+        "200": {
+          "150": 3220
+        },
+        "225": {
+          "150": 3324,
+          "175": 3353
+        },
+        "258": {
+          "150": 3463,
+          "175": 3493,
+          "200": 3526
+        },
+        "283": {
+          "150": 3567,
+          "175": 3599,
+          "200": 3633,
+          "225": 3661
+        },
+        "309": {
+          "150": 3676,
+          "175": 3709,
+          "200": 3744,
+          "225": 3773,
+          "250": 3806
+        },
+        "342": {
+          "150": 3814,
+          "175": 3849,
+          "200": 3886,
+          "225": 3916,
+          "250": 3951,
+          "275": 3993
+        },
+        "367": {
+          "150": 3919,
+          "175": 3955,
+          "200": 3993,
+          "225": 4025,
+          "250": 4060,
+          "275": 4104,
+          "300": 4161
+        },
+        "392": {
+          "150": 4024,
+          "175": 4061,
+          "200": 4100,
+          "225": 4133,
+          "250": 4170,
+          "275": 4215,
+          "300": 4273,
+          "325": 4315
+        },
+        "417": {
+          "150": 4129,
+          "175": 4167,
+          "200": 4207,
+          "225": 4242,
+          "250": 4280,
+          "275": 4326,
+          "300": 4386,
+          "325": 4428,
+          "350": 4496
+        },
+        "425": {
+          "150": 4162,
+          "175": 4201,
+          "200": 4242,
+          "225": 4277,
+          "250": 4315,
+          "275": 4362,
+          "300": 4422,
+          "325": 4465,
+          "350": 4532,
+          "400": 4905
+        },
+        "475": {
+          "150": 4372,
+          "175": 4413,
+          "200": 4456,
+          "225": 4493,
+          "250": 4534,
+          "275": 4584,
+          "300": 4646,
+          "325": 4691,
+          "350": 4762,
+          "400": 5139
+        },
+        "500": {
+          "150": 4533,
+          "175": 4576,
+          "200": 4620,
+          "225": 4659,
+          "250": 4700,
+          "275": 4751,
+          "300": 4815,
+          "325": 4862,
+          "350": 4933,
+          "400": 5313
+        },
+        "525": {
+          "150": 4638,
+          "175": 4682,
+          "200": 4727,
+          "225": 4767,
+          "250": 4810,
+          "275": 4862,
+          "300": 4927,
+          "325": 4975,
+          "350": 5048,
+          "400": 5430
+        },
+        "550": {
+          "150": 4743,
+          "175": 4787,
+          "200": 4835,
+          "225": 4875,
+          "250": 4920,
+          "275": 4973,
+          "300": 5039,
+          "325": 5088,
+          "350": 5162,
+          "400": 5547
+        },
+        "600": {
+          "150": 4952,
+          "175": 4999,
+          "200": 5049,
+          "225": 5092,
+          "250": 5139,
+          "275": 5195,
+          "300": 5263,
+          "325": 5315,
+          "350": 5392,
+          "400": 5782
+        },
+        "650": {
+          "150": 5895,
+          "175": 5953,
+          "200": 6014,
+          "225": 6065,
+          "250": 6122,
+          "275": 6192,
+          "300": 6282,
+          "325": 6346,
+          "350": 6447,
+          "400": 7005
+        },
+        "700": {
+          "150": 6104,
+          "175": 6165,
+          "200": 6228,
+          "225": 6282,
+          "250": 6342,
+          "275": 6414,
+          "300": 6506,
+          "325": 6573,
+          "350": 6677,
+          "400": 7240
+        },
+        "750": {
+          "150": 6719,
+          "175": 6782,
+          "200": 6848,
+          "225": 6904,
+          "250": 6966,
+          "275": 7041,
+          "300": 7136,
+          "325": 7205,
+          "350": 7311,
+          "400": 7879
+        },
+        "800": {
+          "150": 6928,
+          "175": 6994,
+          "200": 7062,
+          "225": 7121,
+          "250": 7186,
+          "275": 7263,
+          "300": 7360,
+          "325": 7432,
+          "350": 7540,
+          "400": 8113
+        },
+        "850": {
+          "150": 7138,
+          "175": 7206,
+          "200": 7276,
+          "225": 7338,
+          "250": 7405,
+          "275": 7485,
+          "300": 7584,
+          "325": 7658,
+          "350": 7770,
+          "400": 8347
+        },
+        "900": {
+          "150": 7347,
+          "175": 7418,
+          "200": 7491,
+          "225": 7555,
+          "250": 7624,
+          "275": 7707,
+          "300": 7809,
+          "325": 7885,
+          "350": 7999,
+          "400": 8582
+        },
+        "1000": {
+          "150": 8615,
+          "175": 8698,
+          "200": 8785,
+          "225": 8860,
+          "250": 8942,
+          "275": 9041,
+          "300": 9167,
+          "325": 9258,
+          "350": 9399,
+          "400": 10155
+        },
+        "1100": {
+          "150": 9034,
+          "175": 9122,
+          "200": 9214,
+          "225": 9294,
+          "250": 9381,
+          "275": 9485,
+          "300": 9615,
+          "325": 9712,
+          "350": 9858,
+          "400": 10624
+        },
+        "1200": {
+          "150": 9453,
+          "175": 9546,
+          "200": 9643,
+          "225": 9728,
+          "250": 9819,
+          "275": 9929,
+          "300": 10064,
+          "325": 10165,
+          "350": 10317,
+          "400": 11092
+        },
+        "1300": {
+          "150": 11115,
+          "175": 11229,
+          "200": 11348,
+          "225": 11450,
+          "250": 11562,
+          "275": 11700,
+          "300": 11877,
+          "325": 12003,
+          "350": 12204,
+          "400": 13316
+        },
+        "1400": {
+          "150": 11534,
+          "175": 11652,
+          "200": 11777,
+          "225": 11884,
+          "250": 12000,
+          "275": 12144,
+          "300": 12325,
+          "325": 12457,
+          "350": 12663,
+          "400": 13784
+        },
+        "1500": {
+          "150": 13228,
+          "175": 13351,
+          "200": 13481,
+          "225": 13592,
+          "250": 13714,
+          "275": 13862,
+          "300": 14049,
+          "325": 14185,
+          "350": 14396,
+          "400": 15528
+        },
+        "1600": {
+          "150": 13647,
+          "175": 13775,
+          "200": 13910,
+          "225": 14026,
+          "250": 14153,
+          "275": 14306,
+          "300": 14498,
+          "325": 14639,
+          "350": 14855,
+          "400": 15996
+        },
+        "1700": {
+          "150": 14066,
+          "175": 14199,
+          "200": 14339,
+          "225": 14460,
+          "250": 14592,
+          "275": 14750,
+          "300": 14946,
+          "325": 15093,
+          "350": 15313,
+          "400": 16465
+        },
+        "1800": {
+          "150": 14485,
+          "175": 14623,
+          "200": 14768,
+          "225": 14894,
+          "250": 15030,
+          "275": 15194,
+          "300": 15395,
+          "325": 15546,
+          "350": 15772,
+          "400": 16933
+        }
+      },
+      "sobreprecios": [],
+      "observaciones": "Matriz completa 30×10 extraída de tarifa 2026 pág. 137",
+      "linea": "BOX8200",
+      "salida": "variable",
+      "linea_min": null,
+      "linea_max": null,
+      "salida_min": 150,
+      "salida_max": 400,
+      "grupo_color": "G2",
+      "motorizable": true,
+      "grupo_motor": "2",
+      "subtipo": "terraza_cofre"
+    },
+    {
+      "id": "BOX8300_MÁXIMUS",
+      "nombre": "BOX8300 MÁXIMUS",
+      "pagina": 140,
+      "tipo": "toldo",
+      "precio_base": null,
+      "precios_por_ancho": {
+        "360": {
+          "300": 5852
+        },
+        "411": {
+          "300": 5931
+        },
+        "425": {
+          "300": 6138,
+          "350": 6256
+        },
+        "475": {
+          "300": 6213,
+          "350": 6336,
+          "400": 6467
+        },
+        "500": {
+          "300": 6286,
+          "350": 6410,
+          "400": 6540
+        },
+        "526": {
+          "300": 6537,
+          "350": 6666,
+          "400": 6802
+        },
+        "542": {
+          "300": 6560,
+          "350": 6689,
+          "400": 6825
+        },
+        "601": {
+          "300": 6742,
+          "350": 6877,
+          "400": 7017
+        },
+        "617": {
+          "300": 6903,
+          "350": 7037,
+          "400": 7178
+        },
+        "650": {
+          "300": 7066,
+          "350": 7206,
+          "400": 7352
+        },
+        "700": {
+          "300": 7186,
+          "350": 7329,
+          "400": 7479
+        },
+        "725": {
+          "300": 7712,
+          "350": 7855,
+          "400": 8005
+        },
+        "744": {
+          "300": 9345,
+          "350": 9532,
+          "400": 9728
+        },
+        "845": {
+          "300": 9781,
+          "350": 9974,
+          "400": 10177
+        },
+        "888": {
+          "300": 9982,
+          "350": 10181,
+          "400": 10389
+        },
+        "900": {
+          "300": 10028,
+          "350": 10226,
+          "400": 10435
+        },
+        "925": {
+          "300": 10160,
+          "350": 10364,
+          "400": 10578
+        },
+        "950": {
+          "300": 10160,
+          "350": 10364,
+          "400": 10578
+        },
+        "975": {
+          "300": 10217,
+          "350": 10422,
+          "400": 10636
+        },
+        "1000": {
+          "300": 12292,
+          "350": 12540,
+          "400": 12800
+        },
+        "1014": {
+          "300": 12576,
+          "350": 12823,
+          "400": 13083
+        },
+        "1088": {
+          "300": 12895,
+          "350": 13148,
+          "400": 13414
+        },
+        "1200": {
+          "300": 13168,
+          "350": 13431,
+          "400": 13708
+        },
+        "1300": {
+          "300": 16366,
+          "350": 16716,
+          "400": 17085
+        },
+        "1400": {
+          "300": 16556,
+          "350": 16911,
+          "400": 17286
+        },
+        "1500": {
+          "300": 17296,
+          "350": 17662,
+          "400": 18047
+        },
+        "1600": {
+          "300": 17928,
+          "350": 18301,
+          "400": 18693
+        },
+        "1700": {
+          "300": 18384,
+          "350": 18767,
+          "400": 19170
+        },
+        "1800": {
+          "300": 18815,
+          "350": 19206,
+          "400": 19616
+        }
+      },
+      "sobreprecios": [],
+      "observaciones": "Matriz completa 29×3 extraída de tarifa 2026 pág. 141",
+      "linea": "BOX8300",
+      "salida": "variable",
+      "linea_min": null,
+      "linea_max": null,
+      "salida_min": 300,
+      "salida_max": 400,
+      "grupo_color": "G2",
+      "motorizable": true,
+      "grupo_motor": "2",
+      "subtipo": "terraza_cofre"
+    },
+    {
+      "id": "UVE",
+      "nombre": "UVE",
+      "pagina": 144,
+      "tipo": "toldo",
+      "precio_base": null,
+      "precios_por_ancho": {
+        "estimado": 144
+      },
+      "sobreprecios": [],
+      "observaciones": "Estimación basada en página 144",
+      "linea": "UVE",
+      "salida": "variable",
+      "linea_min": null,
+      "linea_max": null,
+      "salida_min": null,
+      "salida_max": null,
+      "grupo_color": "G2",
+      "motorizable": false,
+      "grupo_motor": null
+    },
+    {
+      "id": "ET1000_-_ENTRETOLDOS",
+      "nombre": "ET1000 - ENTRETOLDOS",
+      "pagina": 146,
+      "tipo": "toldo",
+      "precio_base": null,
+      "precios_por_ancho": {
+        "120": 235
+      },
+      "sobreprecios": [],
+      "observaciones": "Matriz con 1 líneas extraída",
+      "linea": "ET1000",
+      "salida": "variable",
+      "linea_min": null,
+      "linea_max": null,
+      "salida_min": null,
+      "salida_max": null,
+      "grupo_color": "G2",
+      "motorizable": false,
+      "grupo_motor": null,
+      "subtipo": "complemento"
+    },
+    {
+      "id": "PL_80X40_PALILLERÍAS",
+      "nombre": "PL 80X40 PALILLERÍAS",
+      "pagina": 149,
+      "tipo": "pérgola",
+      "precio_base": null,
+      "precios_por_ancho": {
+        "estimado": 149
+      },
+      "sobreprecios": [],
+      "observaciones": "Estimación basada en página 149",
+      "linea": "PL",
+      "salida": "variable",
+      "linea_min": null,
+      "linea_max": null,
+      "salida_min": null,
+      "salida_max": null,
+      "grupo_color": null,
+      "motorizable": false,
+      "grupo_motor": null,
+      "subtipo": "tejido"
+    },
+    {
+      "id": "PL7000_ENTRE_PAREDES",
+      "nombre": "PL7000 ENTRE PAREDES",
+      "pagina": 150,
+      "tipo": "pérgola",
+      "precio_base": null,
+      "precios_por_ancho": {
+        "150": 913,
+        "175": 948,
+        "200": 983,
+        "225": 1017,
+        "250": 1052,
+        "275": 1086,
+        "300": 1121,
+        "325": 1156,
+        "350": 1190,
+        "375": 1225,
+        "400": 1259,
+        "425": 1294,
+        "450": 1329,
+        "475": 1363,
+        "500": 1398,
+        "525": 1432,
+        "550": 1467,
+        "575": 1502,
+        "600": 1536,
+        "625": 1846,
+        "650": 1881,
+        "675": 1915,
+        "700": 1950
+      },
+      "sobreprecios": [],
+      "observaciones": "Matriz con 23 líneas extraída",
+      "linea": "PL7000",
+      "salida": "variable",
+      "linea_min": null,
+      "linea_max": null,
+      "salida_min": null,
+      "salida_max": null,
+      "grupo_color": "G2",
+      "motorizable": true,
+      "grupo_motor": "3",
+      "subtipo": "tejido"
+    },
+    {
+      "id": "PL7010_PARED_PORTERÍA",
+      "nombre": "PL7010 PARED PORTERÍA",
+      "pagina": 151,
+      "tipo": "pérgola",
+      "precio_base": null,
+      "precios_por_ancho": {
+        "150": 1416,
+        "175": 1457,
+        "200": 1499,
+        "225": 1541,
+        "250": 1583,
+        "275": 1624,
+        "300": 1666,
+        "325": 1708,
+        "350": 1749,
+        "375": 1791,
+        "400": 1833,
+        "425": 1874,
+        "450": 1916,
+        "475": 1958,
+        "500": 1999,
+        "525": 2041,
+        "550": 2083,
+        "575": 2124,
+        "600": 2166,
+        "625": 2630,
+        "650": 2672,
+        "675": 2713,
+        "700": 2755
+      },
+      "sobreprecios": [],
+      "observaciones": "Matriz con 23 líneas extraída",
+      "linea": "PL7010",
+      "salida": "variable",
+      "linea_min": null,
+      "linea_max": null,
+      "salida_min": null,
+      "salida_max": null,
+      "grupo_color": "G2",
+      "motorizable": true,
+      "grupo_motor": "3",
+      "subtipo": "tejido"
+    },
+    {
+      "id": "PL7020_PARED_PORTERÍA_+_LARGUERO",
+      "nombre": "PL7020 PARED PORTERÍA + LARGUERO",
+      "pagina": 152,
+      "tipo": "pérgola",
+      "precio_base": null,
+      "precios_por_ancho": {
+        "150": {
+          "200": 1219,
+          "250": 1334,
+          "300": 1448,
+          "350": 1563,
+          "400": 1677,
+          "450": 1792,
+          "500": 1906,
+          "550": 2021,
+          "600": 2135,
+          "650": 2250,
+          "700": 2364
+        },
+        "175": {
+          "200": 1254,
+          "250": 1373,
+          "300": 1493,
+          "350": 1613,
+          "400": 1733,
+          "450": 1853,
+          "500": 1972,
+          "550": 2092,
+          "600": 2212,
+          "650": 2332,
+          "700": 2451
+        },
+        "200": {
+          "200": 1288,
+          "250": 1413,
+          "300": 1538,
+          "350": 1663,
+          "400": 1788,
+          "450": 1913,
+          "500": 2038,
+          "550": 2164,
+          "600": 2289,
+          "650": 2414,
+          "700": 2539
+        },
+        "225": {
+          "200": 1322,
+          "250": 1452,
+          "300": 1583,
+          "350": 1713,
+          "400": 1844,
+          "450": 1974,
+          "500": 2105,
+          "550": 2235,
+          "600": 2366,
+          "650": 2496,
+          "700": 2626
+        },
+        "250": {
+          "200": 1356,
+          "250": 1492,
+          "300": 1628,
+          "350": 1763,
+          "400": 1899,
+          "450": 2035,
+          "500": 2171,
+          "550": 2307,
+          "600": 2442,
+          "650": 2578,
+          "700": 2714
+        },
+        "275": {
+          "200": 1390,
+          "250": 1531,
+          "300": 1672,
+          "350": 1814,
+          "400": 1955,
+          "450": 2096,
+          "500": 2237,
+          "550": 2378,
+          "600": 2519,
+          "650": 2660,
+          "700": 2801
+        },
+        "300": {
+          "200": 1424,
+          "250": 1571,
+          "300": 1717,
+          "350": 1864,
+          "400": 2010,
+          "450": 2157,
+          "500": 2303,
+          "550": 2449,
+          "600": 2596,
+          "650": 2742,
+          "700": 2889
+        },
+        "325": {
+          "200": 1459,
+          "250": 1610,
+          "300": 1762,
+          "350": 1914,
+          "400": 2066,
+          "450": 2217,
+          "500": 2369,
+          "550": 2521,
+          "600": 2673,
+          "650": 2824,
+          "700": 2976
+        },
+        "350": {
+          "200": 1493,
+          "250": 1650,
+          "300": 1807,
+          "350": 1964,
+          "400": 2121,
+          "450": 2278,
+          "500": 2435,
+          "550": 2592,
+          "600": 2750,
+          "650": 2907,
+          "700": 3064
+        },
+        "375": {
+          "200": 1527,
+          "250": 1689,
+          "300": 1852,
+          "350": 2014,
+          "400": 2177,
+          "450": 2339,
+          "500": 2501,
+          "550": 2664,
+          "600": 2826,
+          "650": 2989,
+          "700": 3151
+        },
+        "400": {
+          "200": 1561,
+          "250": 1729,
+          "300": 1897,
+          "350": 2064,
+          "400": 2232,
+          "450": 2400,
+          "500": 2568,
+          "550": 2735,
+          "600": 2903,
+          "650": 3071,
+          "700": 3239
+        },
+        "425": {
+          "200": 1595,
+          "250": 1768,
+          "300": 1941,
+          "350": 2115,
+          "400": 2288,
+          "450": 2461,
+          "500": 2634,
+          "550": 2807,
+          "600": 2980,
+          "650": 3153,
+          "700": 3326
+        },
+        "450": {
+          "200": 1629,
+          "250": 1808,
+          "300": 1986,
+          "350": 2165,
+          "400": 2343,
+          "450": 2521,
+          "500": 2700,
+          "550": 2878,
+          "600": 3057,
+          "650": 3235,
+          "700": 3414
+        },
+        "475": {
+          "200": 1664,
+          "250": 1847,
+          "300": 2031,
+          "350": 2215,
+          "400": 2399,
+          "450": 2582,
+          "500": 2766,
+          "550": 2950,
+          "600": 3134,
+          "650": 3317,
+          "700": 3501
+        },
+        "500": {
+          "200": 1698,
+          "250": 1887,
+          "300": 2076,
+          "350": 2265,
+          "400": 2454,
+          "450": 2643,
+          "500": 2832,
+          "550": 3021,
+          "600": 3210,
+          "650": 3399,
+          "700": 3589
+        },
+        "525": {
+          "200": 1732,
+          "250": 1926,
+          "300": 2121,
+          "350": 2315,
+          "400": 2510,
+          "450": 2704,
+          "500": 2898,
+          "550": 3093,
+          "600": 3287,
+          "650": 3482,
+          "700": 3676
+        },
+        "550": {
+          "200": 1766,
+          "250": 1966,
+          "300": 2166,
+          "350": 2365,
+          "400": 2565,
+          "450": 2765,
+          "500": 2964,
+          "550": 3164,
+          "600": 3364,
+          "650": 3564,
+          "700": 3763
+        },
+        "575": {
+          "200": 1800,
+          "250": 2005,
+          "300": 2210,
+          "350": 2415,
+          "400": 2620,
+          "450": 2826,
+          "500": 3031,
+          "550": 3236,
+          "600": 3441,
+          "650": 3646,
+          "700": 3851
+        },
+        "600": {
+          "200": 1834,
+          "250": 2045,
+          "300": 2255,
+          "350": 2466,
+          "400": 2676,
+          "450": 2886,
+          "500": 3097,
+          "550": 3307,
+          "600": 3518,
+          "650": 3728,
+          "700": 3938
+        },
+        "625": {
+          "200": 2141,
+          "250": 2369,
+          "300": 2598,
+          "350": 2826,
+          "400": 3055,
+          "450": 3283,
+          "500": 3512,
+          "550": 3740,
+          "600": 3969,
+          "650": 4197,
+          "700": 4426
+        },
+        "650": {
+          "200": 2175,
+          "250": 2409,
+          "300": 2642,
+          "350": 2876,
+          "400": 3110,
+          "450": 3344,
+          "500": 3578,
+          "550": 3812,
+          "600": 4046,
+          "650": 4279,
+          "700": 4513
+        },
+        "675": {
+          "200": 2209,
+          "250": 2448,
+          "300": 2687,
+          "350": 2927,
+          "400": 3166,
+          "450": 3405,
+          "500": 3644,
+          "550": 3883,
+          "600": 4122,
+          "650": 4362,
+          "700": 4601
+        },
+        "700": {
+          "200": 2243,
+          "250": 2488,
+          "300": 2732,
+          "350": 2977,
+          "400": 3221,
+          "450": 3466,
+          "500": 3710,
+          "550": 3955,
+          "600": 4199,
+          "650": 4444,
+          "700": 4688
+        }
+      },
+      "sobreprecios": [],
+      "observaciones": "",
+      "linea": "PL7020",
+      "salida": "variable",
+      "linea_min": 150,
+      "linea_max": 700,
+      "salida_min": 200,
+      "salida_max": 700,
+      "grupo_color": "G2",
+      "motorizable": true,
+      "grupo_motor": "3",
+      "subtipo": "tejido"
+    },
+    {
+      "id": "PL7030_AUTOPORTANTE_+_LARGUERO",
+      "nombre": "PL7030 AUTOPORTANTE + LARGUERO",
+      "pagina": 152,
+      "tipo": "pérgola",
+      "precio_base": null,
+      "precios_por_ancho": {
+        "estimado": 2026
+      },
+      "sobreprecios": [],
+      "observaciones": "Estimación basada en página 152",
+      "linea": "PL7030",
+      "salida": "variable",
+      "linea_min": null,
+      "linea_max": null,
+      "salida_min": null,
+      "salida_max": null,
+      "grupo_color": "G2",
+      "motorizable": true,
+      "grupo_motor": "3",
+      "subtipo": "tejido"
+    },
+    {
+      "id": "ACCESORIOS_80X40",
+      "nombre": "ACCESORIOS 80x40",
+      "pagina": 153,
+      "tipo": "accesorio",
+      "precio_base": null,
+      "precios_por_ancho": null,
+      "sobreprecios": [],
+      "observaciones": "",
+      "linea": "ACCESORIOS",
+      "salida": "variable",
+      "linea_min": null,
+      "linea_max": null,
+      "salida_min": null,
+      "salida_max": null,
+      "grupo_color": null,
+      "motorizable": false,
+      "grupo_motor": null
+    },
+    {
+      "id": "PERGOO_100X100_PALILLERÍAS",
+      "nombre": "PERGOO 100x100 PALILLERÍAS",
+      "pagina": 158,
+      "tipo": "pérgola",
+      "precio_base": null,
+      "precios_por_ancho": {
+        "estimado": 400
+      },
+      "sobreprecios": [],
+      "observaciones": "Estimación basada en página 158",
+      "linea": "PERGOO",
+      "salida": "variable",
+      "linea_min": null,
+      "linea_max": null,
+      "salida_min": null,
+      "salida_max": null,
+      "grupo_color": null,
+      "motorizable": false,
+      "grupo_motor": null,
+      "subtipo": "tejido"
+    },
+    {
+      "id": "PL7050_ENTRE_PAREDES",
+      "nombre": "PL7050 ENTRE PAREDES",
+      "pagina": 160,
+      "tipo": "pérgola",
+      "precio_base": null,
+      "precios_por_ancho": {
+        "200": 951,
+        "225": 980,
+        "250": 1008,
+        "275": 1036,
+        "300": 1065,
+        "325": 1093,
+        "350": 1121,
+        "375": 1150,
+        "400": 1178,
+        "425": 1206,
+        "450": 1235,
+        "475": 1263,
+        "500": 1291,
+        "525": 1320,
+        "550": 1348,
+        "575": 1376,
+        "600": 1405,
+        "625": 1629,
+        "650": 1657,
+        "675": 1686,
+        "700": 1714
+      },
+      "sobreprecios": [],
+      "observaciones": "Matriz con 21 líneas extraída",
+      "linea": "PL7050",
+      "salida": "variable",
+      "linea_min": null,
+      "linea_max": null,
+      "salida_min": null,
+      "salida_max": null,
+      "grupo_color": "G2",
+      "motorizable": true,
+      "grupo_motor": "3",
+      "subtipo": "tejido"
+    },
+    {
+      "id": "PL7070_PARED_PORTERÍA",
+      "nombre": "PL7070 PARED PORTERÍA",
+      "pagina": 162,
+      "tipo": "pérgola",
+      "precio_base": null,
+      "precios_por_ancho": {
+        "200": 1375,
+        "225": 1415,
+        "250": 1456,
+        "275": 1496,
+        "300": 1537,
+        "325": 1577,
+        "350": 1618,
+        "375": 1658,
+        "400": 1699,
+        "425": 1740,
+        "450": 1780,
+        "475": 1821,
+        "500": 1861,
+        "525": 1902,
+        "550": 1942,
+        "575": 1983,
+        "600": 2023,
+        "625": 2459,
+        "650": 2499,
+        "675": 2559,
+        "700": 2599
+      },
+      "sobreprecios": [],
+      "observaciones": "Matriz con 21 líneas extraída",
+      "linea": "PL7070",
+      "salida": "variable",
+      "linea_min": null,
+      "linea_max": null,
+      "salida_min": null,
+      "salida_max": null,
+      "grupo_color": "G2",
+      "motorizable": true,
+      "grupo_motor": "3",
+      "subtipo": "tejido"
+    },
+    {
+      "id": "PL7090_AUTOPORTANTE",
+      "nombre": "PL7090 AUTOPORTANTE",
+      "pagina": 164,
+      "tipo": "pérgola",
+      "precio_base": null,
+      "precios_por_ancho": {
+        "200": 1893,
+        "225": 1945,
+        "250": 1998,
+        "275": 2051,
+        "300": 2104,
+        "325": 2157,
+        "350": 2210,
+        "375": 2263,
+        "400": 2316,
+        "425": 2369,
+        "450": 2421,
+        "475": 2474,
+        "500": 2527,
+        "525": 2580,
+        "550": 2633,
+        "575": 2686,
+        "600": 2739,
+        "625": 3406,
+        "650": 3459,
+        "675": 3531,
+        "700": 3584
+      },
+      "sobreprecios": [],
+      "observaciones": "Matriz con 21 líneas extraída",
+      "linea": "PL7090",
+      "salida": "variable",
+      "linea_min": null,
+      "linea_max": null,
+      "salida_min": null,
+      "salida_max": null,
+      "grupo_color": "G2",
+      "motorizable": true,
+      "grupo_motor": "3",
+      "subtipo": "tejido"
+    },
+    {
+      "id": "ILUMINACIÓN",
+      "nombre": "ILUMINACIÓN",
+      "pagina": 166,
+      "tipo": "accesorio",
+      "precio_base": null,
+      "precios_por_ancho": {
+        "200": 226,
+        "225": 231,
+        "250": 235,
+        "275": 240,
+        "300": 244,
+        "325": 249,
+        "350": 253,
+        "375": 258,
+        "400": 262,
+        "425": 267,
+        "450": 271,
+        "475": 276,
+        "500": 280,
+        "525": 285,
+        "550": 289,
+        "575": 294,
+        "600": 298,
+        "625": 303,
+        "650": 307,
+        "675": 312,
+        "700": 316
+      },
+      "sobreprecios": [],
+      "observaciones": "Matriz con 21 líneas extraída",
+      "linea": "ILUMINACIÓN",
+      "salida": "variable",
+      "linea_min": null,
+      "linea_max": null,
+      "salida_min": null,
+      "salida_max": null,
+      "grupo_color": null,
+      "motorizable": false,
+      "grupo_motor": null
+    },
+    {
+      "id": "ACCESORIOS_100X100",
+      "nombre": "ACCESORIOS 100x100",
+      "pagina": 168,
+      "tipo": "accesorio",
+      "precio_base": null,
+      "precios_por_ancho": null,
+      "sobreprecios": [],
+      "observaciones": "",
+      "linea": "ACCESORIOS",
+      "salida": "variable",
+      "linea_min": null,
+      "linea_max": null,
+      "salida_min": null,
+      "salida_max": null,
+      "grupo_color": null,
+      "motorizable": false,
+      "grupo_motor": null
+    },
+    {
+      "id": "PERGOO_120X120_PALILLERÍAS",
+      "nombre": "PERGOO 120x120 PALILLERÍAS",
+      "pagina": 170,
+      "tipo": "pérgola",
+      "precio_base": null,
+      "precios_por_ancho": {
+        "estimado": 400
+      },
+      "sobreprecios": [],
+      "observaciones": "Estimación basada en página 170",
+      "linea": "PERGOO",
+      "salida": "variable",
+      "linea_min": null,
+      "linea_max": null,
+      "salida_min": null,
+      "salida_max": null,
+      "grupo_color": null,
+      "motorizable": false,
+      "grupo_motor": null,
+      "subtipo": "tejido"
+    },
+    {
+      "id": "PL7100_ENTRE_PAREDES",
+      "nombre": "PL7100 ENTRE PAREDES",
+      "pagina": 172,
+      "tipo": "pérgola",
+      "precio_base": null,
+      "precios_por_ancho": {
+        "200": 986,
+        "225": 1014,
+        "250": 1043,
+        "275": 1071,
+        "300": 1099,
+        "325": 1128,
+        "350": 1156,
+        "375": 1184,
+        "400": 1213,
+        "425": 1241,
+        "450": 1269,
+        "475": 1298,
+        "500": 1326,
+        "525": 1354,
+        "550": 1383,
+        "575": 1411,
+        "600": 1439,
+        "625": 1684,
+        "650": 1713,
+        "675": 1741,
+        "700": 1769
+      },
+      "sobreprecios": [],
+      "observaciones": "Matriz con 21 líneas extraída",
+      "linea": "PL7100",
+      "salida": "variable",
+      "linea_min": null,
+      "linea_max": null,
+      "salida_min": null,
+      "salida_max": null,
+      "grupo_color": "G2",
+      "motorizable": true,
+      "grupo_motor": "3",
+      "subtipo": "tejido"
+    },
+    {
+      "id": "PL7110_PARED_PORTERÍA",
+      "nombre": "PL7110 PARED PORTERÍA",
+      "pagina": 174,
+      "tipo": "pérgola",
+      "precio_base": null,
+      "precios_por_ancho": {
+        "200": 1462,
+        "225": 1504,
+        "250": 1545,
+        "275": 1587,
+        "300": 1628,
+        "325": 1670,
+        "350": 1711,
+        "375": 1753,
+        "400": 1794,
+        "425": 1836,
+        "450": 1877,
+        "475": 1919,
+        "500": 1960,
+        "525": 2002,
+        "550": 2043,
+        "575": 2085,
+        "600": 2126,
+        "625": 2608,
+        "650": 2650,
+        "675": 2710,
+        "700": 2752
+      },
+      "sobreprecios": [],
+      "observaciones": "Matriz con 21 líneas extraída",
+      "linea": "PL7110",
+      "salida": "variable",
+      "linea_min": null,
+      "linea_max": null,
+      "salida_min": null,
+      "salida_max": null,
+      "grupo_color": "G2",
+      "motorizable": true,
+      "grupo_motor": "3",
+      "subtipo": "tejido"
+    },
+    {
+      "id": "PL7130_AUTOPORTANTE",
+      "nombre": "PL7130 AUTOPORTANTE",
+      "pagina": 176,
+      "tipo": "pérgola",
+      "precio_base": null,
+      "precios_por_ancho": {
+        "200": 2007,
+        "225": 2062,
+        "250": 2117,
+        "275": 2172,
+        "300": 2227,
+        "325": 2282,
+        "350": 2336,
+        "375": 2391,
+        "400": 2446,
+        "425": 2501,
+        "450": 2556,
+        "475": 2611,
+        "500": 2666,
+        "525": 2721,
+        "550": 2776,
+        "575": 2830,
+        "600": 2885,
+        "625": 3607,
+        "650": 3662,
+        "675": 3736,
+        "700": 3791
+      },
+      "sobreprecios": [],
+      "observaciones": "Matriz con 21 líneas extraída",
+      "linea": "PL7130",
+      "salida": "variable",
+      "linea_min": null,
+      "linea_max": null,
+      "salida_min": null,
+      "salida_max": null,
+      "grupo_color": "G2",
+      "motorizable": true,
+      "grupo_motor": "3",
+      "subtipo": "tejido"
+    },
+    {
+      "id": "ACCESORIOS_120X120",
+      "nombre": "ACCESORIOS 120x120",
+      "pagina": 179,
+      "tipo": "accesorio",
+      "precio_base": null,
+      "precios_por_ancho": null,
+      "sobreprecios": [],
+      "observaciones": "",
+      "linea": "ACCESORIOS",
+      "salida": "variable",
+      "linea_min": null,
+      "linea_max": null,
+      "salida_min": null,
+      "salida_max": null,
+      "grupo_color": null,
+      "motorizable": false,
+      "grupo_motor": null
+    },
+    {
+      "id": "ILUMINACIÓN_1",
+      "nombre": "ILUMINACIÓN",
+      "pagina": 179,
+      "tipo": "accesorio",
+      "precio_base": null,
+      "precios_por_ancho": null,
+      "sobreprecios": [],
+      "observaciones": "",
+      "linea": "ILUMINACIÓN",
+      "salida": "variable",
+      "linea_min": null,
+      "linea_max": null,
+      "salida_min": null,
+      "salida_max": null,
+      "grupo_color": null,
+      "motorizable": false,
+      "grupo_motor": null
+    },
+    {
+      "id": "TENXO_PÉRGOLAS_TENSADAS",
+      "nombre": "TENXO PÉRGOLAS TENSADAS",
+      "pagina": 183,
+      "tipo": "pérgola",
+      "precio_base": null,
+      "precios_por_ancho": {
+        "estimado": 183
+      },
+      "sobreprecios": [],
+      "observaciones": "Estimación basada en página 183",
+      "linea": "TENXO",
+      "salida": "variable",
+      "linea_min": null,
+      "linea_max": null,
+      "salida_min": null,
+      "salida_max": null,
+      "grupo_color": null,
+      "motorizable": false,
+      "grupo_motor": null,
+      "subtipo": "lona_tensada"
+    },
+    {
+      "id": "TX7900_TENXO_ENTRE_PAREDES",
+      "nombre": "TX7900 TENXO ENTRE PAREDES",
+      "pagina": 185,
+      "tipo": "pérgola",
+      "precio_base": null,
+      "precios_por_ancho": {
+        "250": 12860,
+        "300": 13832,
+        "350": 14804,
+        "400": 15776,
+        "450": 16181,
+        "500": 17153,
+        "550": 18125,
+        "600": 19096,
+        "650": 20068,
+        "700": 20474
+      },
+      "sobreprecios": [],
+      "observaciones": "Matriz con 10 líneas extraída",
+      "linea": "TX7900",
+      "salida": "variable",
+      "linea_min": null,
+      "linea_max": null,
+      "salida_min": null,
+      "salida_max": null,
+      "grupo_color": "G2",
+      "motorizable": true,
+      "grupo_motor": "3",
+      "subtipo": "lona_tensada"
+    },
+    {
+      "id": "TX7910_TENXO_PARED_PORTERÍA",
+      "nombre": "TX7910 TENXO PARED PORTERÍA",
+      "pagina": 186,
+      "tipo": "pérgola",
+      "precio_base": null,
+      "precios_por_ancho": {
+        "250": 17708,
+        "300": 18814,
+        "350": 19919,
+        "400": 21025,
+        "450": 21536,
+        "500": 22641,
+        "550": 23747,
+        "600": 24853,
+        "650": 25958,
+        "700": 26469
+      },
+      "sobreprecios": [],
+      "observaciones": "Matriz con 10 líneas extraída",
+      "linea": "TX7910",
+      "salida": "variable",
+      "linea_min": null,
+      "linea_max": null,
+      "salida_min": null,
+      "salida_max": null,
+      "grupo_color": "G2",
+      "motorizable": true,
+      "grupo_motor": "3",
+      "subtipo": "lona_tensada"
+    },
+    {
+      "id": "TX7930_TENXO_AUTOPORTANTE",
+      "nombre": "TX7930 TENXO AUTOPORTANTE",
+      "pagina": 187,
+      "tipo": "pérgola",
+      "precio_base": null,
+      "precios_por_ancho": {
+        "250": 15313,
+        "300": 16312,
+        "350": 17311,
+        "400": 18310,
+        "450": 21913,
+        "500": 22913,
+        "550": 23912
+      },
+      "sobreprecios": [],
+      "observaciones": "Matriz con 7 líneas extraída",
+      "linea": "TX7930",
+      "salida": "variable",
+      "linea_min": null,
+      "linea_max": null,
+      "salida_min": null,
+      "salida_max": null,
+      "grupo_color": "G2",
+      "motorizable": true,
+      "grupo_motor": "3",
+      "subtipo": "lona_tensada"
+    },
+    {
+      "id": "TX7950_TENXO_ARRIOSTRADA",
+      "nombre": "TX7950 TENXO ARRIOSTRADA",
+      "pagina": 188,
+      "tipo": "pérgola",
+      "precio_base": null,
+      "precios_por_ancho": {
+        "500": 30714,
+        "600": 32779,
+        "700": 34843,
+        "800": 36908,
+        "900": 37818,
+        "1000": 39883,
+        "1100": 41947,
+        "1200": 44012,
+        "1300": 46077,
+        "1400": 46986
+      },
+      "sobreprecios": [],
+      "observaciones": "Matriz con 10 líneas extraída",
+      "linea": "TX7950",
+      "salida": "variable",
+      "linea_min": null,
+      "linea_max": null,
+      "salida_min": null,
+      "salida_max": null,
+      "grupo_color": "G2",
+      "motorizable": true,
+      "grupo_motor": "3",
+      "subtipo": "lona_tensada"
+    },
+    {
+      "id": "TX7970_TENXO_2_AGUAS_AUTOPORTANTE",
+      "nombre": "TX7970 TENXO 2 AGUAS AUTOPORTANTE",
+      "pagina": 189,
+      "tipo": "pérgola",
+      "precio_base": null,
+      "precios_por_ancho": {
+        "250": {
+          "500": 13862,
+          "600": 14706,
+          "700": 15550,
+          "800": 16395,
+          "900": 16843,
+          "1000": 17687,
+          "1100": 18532,
+          "1200": 19376,
+          "1300": 20220,
+          "1400": 20668
+        },
+        "300": {
+          "500": 14435,
+          "600": 15331,
+          "700": 16227,
+          "800": 17123,
+          "900": 17584,
+          "1000": 18481,
+          "1100": 19377,
+          "1200": 20273,
+          "1300": 21169,
+          "1400": 21630
+        },
+        "350": {
+          "500": 15160,
+          "600": 16108,
+          "700": 17056,
+          "800": 18004,
+          "900": 18478,
+          "1000": 19426,
+          "1100": 20374,
+          "1200": 21322,
+          "1300": 22270,
+          "1400": 22744
+        },
+        "400": {
+          "500": 16034,
+          "600": 17034,
+          "700": 18034,
+          "800": 19034,
+          "900": 19521,
+          "1000": 20521,
+          "1100": 21521,
+          "1200": 22520,
+          "1300": 23520,
+          "1400": 24007
+        },
+        "450": {
+          "500": 16645,
+          "600": 17697,
+          "700": 18748,
+          "800": 19800,
+          "900": 20300,
+          "1000": 21352,
+          "1100": 22403,
+          "1200": 23455,
+          "1300": 24507,
+          "1400": 25007
+        },
+        "500": {
+          "500": 20899,
+          "600": 22224,
+          "700": 23549,
+          "800": 24873,
+          "900": 25526,
+          "1000": 26851,
+          "1100": 28176,
+          "1200": 29501,
+          "1300": 30825,
+          "1400": 31478
+        },
+        "550": {
+          "500": 21518,
+          "600": 22895,
+          "700": 24271,
+          "800": 25648,
+          "900": 26314,
+          "1000": 27690,
+          "1100": 29067,
+          "1200": 30443,
+          "1300": 31820,
+          "1400": 32486
+        },
+        "600": {
+          "500": 22137,
+          "600": 23565,
+          "700": 24994,
+          "800": 26422,
+          "900": 27101,
+          "1000": 28529,
+          "1100": 29958,
+          "1200": 31386,
+          "1300": 32815,
+          "1400": 33493
+        },
+        "650": {
+          "500": 22756,
+          "600": 24236,
+          "700": 25716,
+          "800": 27196,
+          "900": 27888,
+          "1000": 29368,
+          "1100": 30849,
+          "1200": 32329,
+          "1300": 33809,
+          "1400": 34501
+        },
+        "700": {
+          "500": 23375,
+          "600": 24907,
+          "700": 26439,
+          "800": 27971,
+          "900": 28676,
+          "1000": 30208,
+          "1100": 31740,
+          "1200": 33272,
+          "1300": 34804,
+          "1400": 35509
+        },
+        "750": {
+          "500": 24407,
+          "600": 26043,
+          "700": 27679,
+          "800": 29316,
+          "900": 30033,
+          "1000": 31670,
+          "1100": 33306,
+          "1200": 34942,
+          "1300": 36578,
+          "1400": 37296
+        },
+        "800": {
+          "500": 25026,
+          "600": 26714,
+          "700": 28402,
+          "800": 30090,
+          "900": 30821,
+          "1000": 32509,
+          "1100": 34197,
+          "1200": 35885,
+          "1300": 37573,
+          "1400": 38303
+        },
+        "850": {
+          "500": 25645,
+          "600": 27385,
+          "700": 29124,
+          "800": 30864,
+          "900": 31608,
+          "1000": 33348,
+          "1100": 35088,
+          "1200": 36828,
+          "1300": 38567,
+          "1400": 39311
+        },
+        "900": {
+          "500": 26264,
+          "600": 28055,
+          "700": 29847,
+          "800": 31639,
+          "900": 32395,
+          "1000": 34187,
+          "1100": 35979,
+          "1200": 37770,
+          "1300": 39562,
+          "1400": 40319
+        },
+        "950": {
+          "500": 30714,
+          "600": 32779,
+          "700": 34843,
+          "800": 36908,
+          "900": 37818,
+          "1000": 39883,
+          "1100": 41947,
+          "1200": 44012,
+          "1300": 46077,
+          "1400": 46986
+        },
+        "1000": {
+          "500": 31368,
+          "600": 33484,
+          "700": 35601,
+          "800": 37717,
+          "900": 38640,
+          "1000": 40756,
+          "1100": 42873,
+          "1200": 44990,
+          "1300": 47106,
+          "1400": 48029
+        },
+        "1050": {
+          "500": 32021,
+          "600": 34190,
+          "700": 36358,
+          "800": 38526,
+          "900": 39462,
+          "1000": 41630,
+          "1100": 43799,
+          "1200": 45967,
+          "1300": 48136,
+          "1400": 49071
+        },
+        "1100": {
+          "500": 32675,
+          "600": 34895,
+          "700": 37115,
+          "800": 39335,
+          "900": 40284,
+          "1000": 42504,
+          "1100": 44724,
+          "1200": 46945,
+          "1300": 49165,
+          "1400": 50114
+        },
+        "1150": {
+          "500": 33328,
+          "600": 35600,
+          "700": 37872,
+          "800": 40144,
+          "900": 41106,
+          "1000": 43378,
+          "1100": 45650,
+          "1200": 47922,
+          "1300": 50194,
+          "1400": 51156
+        },
+        "1200": {
+          "500": 33982,
+          "600": 36306,
+          "700": 38630,
+          "800": 40953,
+          "900": 41928,
+          "1000": 44252,
+          "1100": 46576,
+          "1200": 48900,
+          "1300": 51224,
+          "1400": 52198
+        },
+        "1250": {
+          "500": 34635,
+          "600": 37011,
+          "700": 39387,
+          "800": 41763,
+          "900": 42750,
+          "1000": 45126,
+          "1100": 47502,
+          "1200": 49877,
+          "1300": 52253,
+          "1400": 53241
+        },
+        "1300": {
+          "500": 35289,
+          "600": 37716,
+          "700": 40144,
+          "800": 42572,
+          "900": 43572,
+          "1000": 46000,
+          "1100": 48427,
+          "1200": 50855,
+          "1300": 53282,
+          "1400": 54283
+        },
+        "1350": {
+          "500": 35942,
+          "600": 38422,
+          "700": 40901,
+          "800": 43381,
+          "900": 44394,
+          "1000": 46874,
+          "1100": 49353,
+          "1200": 51832,
+          "1300": 54312,
+          "1400": 55325
+        }
+      },
+      "sobreprecios": [],
+      "observaciones": "Pérgola 2 aguas autoportante. Patas laterales incluidas. 2/3/4 guías según línea.",
+      "linea": "TX7970",
+      "salida": "variable",
+      "linea_min": 250,
+      "linea_max": 1350,
+      "salida_min": 500,
+      "salida_max": 1400,
+      "grupo_color": "G2",
+      "motorizable": true,
+      "grupo_motor": "3",
+      "subtipo": "lona_tensada"
+    },
+    {
+      "id": "ACCESORIOS_TENXO",
+      "nombre": "ACCESORIOS TENXO",
+      "pagina": 190,
+      "tipo": "accesorio",
+      "precio_base": null,
+      "precios_por_ancho": null,
+      "sobreprecios": [],
+      "observaciones": "",
+      "linea": "ACCESORIOS",
+      "salida": "variable",
+      "linea_min": null,
+      "linea_max": null,
+      "salida_min": null,
+      "salida_max": null,
+      "grupo_color": null,
+      "motorizable": false,
+      "grupo_motor": null
+    },
+    {
+      "id": "TRIÁNGULOS_LATERALES_Y_FRONTALES",
+      "nombre": "TRIÁNGULOS LATERALES Y FRONTALES",
+      "pagina": 192,
+      "tipo": "accesorio",
+      "precio_base": null,
+      "precios_por_ancho": null,
+      "sobreprecios": [],
+      "observaciones": "",
+      "linea": "TRIÁNGULOS",
+      "salida": "variable",
+      "linea_min": null,
+      "linea_max": null,
+      "salida_min": null,
+      "salida_max": null,
+      "grupo_color": null,
+      "motorizable": false,
+      "grupo_motor": null
+    },
+    {
+      "id": "TENFLAT_PÉRGOLAS_TENSADAS",
+      "nombre": "TENFLAT PÉRGOLAS TENSADAS",
+      "pagina": 195,
+      "tipo": "pérgola",
+      "precio_base": null,
+      "precios_por_ancho": {
+        "estimado": 195
+      },
+      "sobreprecios": [],
+      "observaciones": "Estimación basada en página 195",
+      "linea": "TENFLAT",
+      "salida": "variable",
+      "linea_min": null,
+      "linea_max": null,
+      "salida_min": null,
+      "salida_max": null,
+      "grupo_color": null,
+      "motorizable": false,
+      "grupo_motor": null,
+      "subtipo": "lona_tensada"
+    },
+    {
+      "id": "TF7900_TENFLAT_ENTRE_PAREDES",
+      "nombre": "TF7900 TENFLAT ENTRE PAREDES",
+      "pagina": 197,
+      "tipo": "pérgola",
+      "precio_base": null,
+      "precios_por_ancho": {
+        "250": 557,
+        "300": 631,
+        "350": 706,
+        "400": 780,
+        "450": 854,
+        "500": 929,
+        "550": 1003,
+        "600": 1077,
+        "650": 1152,
+        "700": 1226
+      },
+      "sobreprecios": [],
+      "observaciones": "Matriz con 10 líneas extraída",
+      "linea": "TF7900",
+      "salida": "variable",
+      "linea_min": null,
+      "linea_max": null,
+      "salida_min": null,
+      "salida_max": null,
+      "grupo_color": "G2",
+      "motorizable": true,
+      "grupo_motor": "3",
+      "subtipo": "lona_tensada"
+    },
+    {
+      "id": "TF7910_TENFLAT_PARED_PORTERÍA",
+      "nombre": "TF7910 TENFLAT PARED PORTERÍA",
+      "pagina": 198,
+      "tipo": "pérgola",
+      "precio_base": null,
+      "precios_por_ancho": {
+        "250": 743,
+        "300": 817,
+        "350": 892,
+        "400": 966,
+        "450": 1040,
+        "500": 1114,
+        "550": 1189,
+        "600": 1263,
+        "650": 1337,
+        "700": 1412
+      },
+      "sobreprecios": [],
+      "observaciones": "Matriz con 10 líneas extraída",
+      "linea": "TF7910",
+      "salida": "variable",
+      "linea_min": null,
+      "linea_max": null,
+      "salida_min": null,
+      "salida_max": null,
+      "grupo_color": "G2",
+      "motorizable": true,
+      "grupo_motor": "3",
+      "subtipo": "lona_tensada"
+    },
+    {
+      "id": "TF7930_TENFLAT_AUTOPORTANTE",
+      "nombre": "TF7930 TENFLAT AUTOPORTANTE",
+      "pagina": 199,
+      "tipo": "pérgola",
+      "precio_base": null,
+      "precios_por_ancho": {
+        "250": {
+          "250": 8368,
+          "300": 8883,
+          "350": 9399,
+          "400": 9915,
+          "450": 10431,
+          "500": 10946,
+          "550": 11462,
+          "600": 11978,
+          "650": 12493,
+          "700": 13009
+        },
+        "300": {
+          "250": 8652,
+          "300": 9192,
+          "350": 9732,
+          "400": 10272,
+          "450": 10812,
+          "500": 11352,
+          "550": 11892,
+          "600": 12432,
+          "650": 12972,
+          "700": 13512
+        },
+        "350": {
+          "250": 9007,
+          "300": 9572,
+          "350": 10136,
+          "400": 10700,
+          "450": 11264,
+          "500": 11829,
+          "550": 12393,
+          "600": 12957,
+          "650": 13522,
+          "700": 14086
+        },
+        "400": {
+          "250": 9292,
+          "300": 9880,
+          "350": 10469,
+          "400": 11057,
+          "450": 11646,
+          "500": 12234,
+          "550": 12823,
+          "600": 13412,
+          "650": 14000,
+          "700": 14589
+        },
+        "450": {
+          "250": 9735,
+          "300": 10348,
+          "350": 10961,
+          "400": 11574,
+          "450": 12187,
+          "500": 12800,
+          "550": 13413,
+          "600": 14025,
+          "650": 14638,
+          "700": 15251
+        },
+        "500": {
+          "250": 11782,
+          "300": 12542,
+          "350": 13302,
+          "400": 14063,
+          "450": 14823,
+          "500": 15583,
+          "550": 16344,
+          "600": 17104,
+          "650": 17864,
+          "700": 18624
+        },
+        "550": {
+          "250": 12049,
+          "300": 12834,
+          "350": 13618,
+          "400": 14403,
+          "450": 15187,
+          "500": 15972,
+          "550": 16757,
+          "600": 17541,
+          "650": 18326,
+          "700": 19110
+        },
+        "600": {
+          "250": 12316,
+          "300": 13125,
+          "350": 13934,
+          "400": 14743,
+          "450": 15552,
+          "500": 16361,
+          "550": 17170,
+          "600": 17979,
+          "650": 18787,
+          "700": 19596
+        },
+        "650": {
+          "250": 12584,
+          "300": 13417,
+          "350": 14250,
+          "400": 15083,
+          "450": 15916,
+          "500": 16750,
+          "550": 17583,
+          "600": 18416,
+          "650": 19249,
+          "700": 20082
+        },
+        "700": {
+          "250": 12851,
+          "300": 13709,
+          "350": 14566,
+          "400": 15423,
+          "450": 16281,
+          "500": 17138,
+          "550": 17996,
+          "600": 18853,
+          "650": 19711,
+          "700": 20568
+        }
+      },
+      "sobreprecios": [],
+      "observaciones": "Canalón perimetral incluido. 3 guías / 6 patas.",
+      "linea": "TF7930",
+      "salida": "variable",
+      "linea_min": 250,
+      "linea_max": 700,
+      "salida_min": 250,
+      "salida_max": 700,
+      "grupo_color": "G2",
+      "motorizable": true,
+      "grupo_motor": "3",
+      "subtipo": "lona_tensada"
+    },
+    {
+      "id": "TENSAND_PÉRGOLAS_PLANA",
+      "nombre": "TENSAND PÉRGOLAS PLANA",
+      "pagina": 201,
+      "tipo": "pérgola",
+      "precio_base": null,
+      "precios_por_ancho": {
+        "estimado": 201
+      },
+      "sobreprecios": [],
+      "observaciones": "Estimación basada en página 201",
+      "linea": "TENSAND",
+      "salida": "variable",
+      "linea_min": null,
+      "linea_max": null,
+      "salida_min": null,
+      "salida_max": null,
+      "grupo_color": null,
+      "motorizable": false,
+      "grupo_motor": null,
+      "subtipo": "panel_sandwich"
+    },
+    {
+      "id": "TS5000_TENSAND_ENTRE_PAREDES",
+      "nombre": "TS5000 TENSAND ENTRE PAREDES",
+      "pagina": 203,
+      "tipo": "pérgola",
+      "precio_base": null,
+      "precios_por_ancho": {
+        "200": 1569,
+        "250": 1737,
+        "300": 1905,
+        "350": 2072,
+        "400": 2240,
+        "450": 2407,
+        "500": 2575,
+        "550": 2743,
+        "600": 2910,
+        "650": 3078,
+        "700": 3245,
+        "750": 3413
+      },
+      "sobreprecios": [],
+      "observaciones": "Matriz con 12 líneas extraída",
+      "linea": "TS5000",
+      "salida": "variable",
+      "linea_min": null,
+      "linea_max": null,
+      "salida_min": null,
+      "salida_max": null,
+      "grupo_color": "G2",
+      "motorizable": true,
+      "grupo_motor": "3",
+      "subtipo": "panel_sandwich"
+    },
+    {
+      "id": "TS5030_TENSAND_AUTOPORTANTE",
+      "nombre": "TS5030 TENSAND AUTOPORTANTE",
+      "pagina": 204,
+      "tipo": "pérgola",
+      "precio_base": null,
+      "precios_por_ancho": {
+        "200": 3229,
+        "250": 3397,
+        "300": 3564,
+        "350": 3732,
+        "400": 3899,
+        "450": 4067,
+        "500": 4235,
+        "550": 4402,
+        "600": 4570,
+        "650": 4737,
+        "700": 4905,
+        "750": 5073
+      },
+      "sobreprecios": [],
+      "observaciones": "Matriz con 12 líneas extraída",
+      "linea": "TS5030",
+      "salida": "variable",
+      "linea_min": null,
+      "linea_max": null,
+      "salida_min": null,
+      "salida_max": null,
+      "grupo_color": "G2",
+      "motorizable": true,
+      "grupo_motor": "3",
+      "subtipo": "panel_sandwich"
+    },
+    {
+      "id": "TS5010_TENSAND_PARED_PORTERÍA",
+      "nombre": "TS5010 TENSAND PARED PORTERÍA",
+      "pagina": 205,
+      "tipo": "pérgola",
+      "precio_base": null,
+      "precios_por_ancho": {
+        "200": 1249,
+        "250": 1519,
+        "300": 1789,
+        "350": 2060,
+        "400": 2330,
+        "450": 2601,
+        "500": 2871,
+        "550": 3141,
+        "600": 3412,
+        "650": 3682,
+        "700": 3953
+      },
+      "sobreprecios": [],
+      "observaciones": "Matriz con 11 líneas extraída",
+      "linea": "TS5010",
+      "salida": "variable",
+      "linea_min": null,
+      "linea_max": null,
+      "salida_min": null,
+      "salida_max": null,
+      "grupo_color": "G2",
+      "motorizable": true,
+      "grupo_motor": "3",
+      "subtipo": "panel_sandwich"
+    },
+    {
+      "id": "PANEL_TENSAND",
+      "nombre": "PANEL TENSAND",
+      "pagina": 206,
+      "tipo": "accesorio",
+      "precio_base": null,
+      "precios_por_ancho": null,
+      "sobreprecios": [],
+      "observaciones": "",
+      "linea": "PANEL",
+      "salida": "variable",
+      "linea_min": null,
+      "linea_max": null,
+      "salida_min": null,
+      "salida_max": null,
+      "grupo_color": null,
+      "motorizable": false,
+      "grupo_motor": null
+    },
+    {
+      "id": "TENKI-L_PÉRGOLAS_BIOCLIMÁTICAS",
+      "nombre": "TENKI-l PÉRGOLAS BIOCLIMÁTICAS",
+      "pagina": 209,
+      "tipo": "pérgola",
+      "precio_base": null,
+      "precios_por_ancho": {
+        "estimado": 209
+      },
+      "sobreprecios": [],
+      "observaciones": "Estimación basada en página 209",
+      "linea": "TENKI-l",
+      "salida": "variable",
+      "linea_min": null,
+      "linea_max": null,
+      "salida_min": null,
+      "salida_max": null,
+      "grupo_color": null,
+      "motorizable": false,
+      "grupo_motor": null,
+      "subtipo": "bioclimatica"
+    },
+    {
+      "id": "TK6000_TENKI_L_ENTRE_PAREDES",
+      "nombre": "TK6000 TENKI L ENTRE PAREDES",
+      "pagina": 211,
+      "tipo": "pérgola",
+      "precio_base": null,
+      "precios_por_ancho": {
+        "200": 10422,
+        "225": 10992,
+        "250": 11561,
+        "275": 12131,
+        "300": 12700,
+        "325": 13269,
+        "350": 13838,
+        "375": 14408,
+        "400": 14977,
+        "425": 15547,
+        "450": 16116,
+        "475": 500
+      },
+      "sobreprecios": [],
+      "observaciones": "Matriz con 12 líneas extraída",
+      "linea": "TK6000",
+      "salida": "variable",
+      "linea_min": null,
+      "linea_max": null,
+      "salida_min": null,
+      "salida_max": null,
+      "grupo_color": "G2",
+      "motorizable": true,
+      "grupo_motor": "3",
+      "subtipo": "bioclimatica"
+    },
+    {
+      "id": "TK6010_TENKI_L_PP_LAMAS_PARALELAS",
+      "nombre": "TK6010 TENKI L PP LAMAS PARALELAS",
+      "pagina": 212,
+      "tipo": "pérgola",
+      "precio_base": null,
+      "precios_por_ancho": {
+        "200": 10429,
+        "225": 10997,
+        "250": 11568,
+        "275": 12135,
+        "300": 12707,
+        "325": 13274,
+        "350": 13845,
+        "375": 14413,
+        "400": 14984,
+        "425": 15552,
+        "450": 16123,
+        "475": 500
+      },
+      "sobreprecios": [],
+      "observaciones": "Matriz con 12 líneas extraída",
+      "linea": "TK6010",
+      "salida": "variable",
+      "linea_min": null,
+      "linea_max": null,
+      "salida_min": null,
+      "salida_max": null,
+      "grupo_color": "G2",
+      "motorizable": true,
+      "grupo_motor": "3",
+      "subtipo": "bioclimatica"
+    },
+    {
+      "id": "TK6010-2_TENKI_L_PP_LAMAS_PERPEND.",
+      "nombre": "TK6010-2 TENKI L PP LAMAS PERPEND.",
+      "pagina": 213,
+      "tipo": "pérgola",
+      "precio_base": null,
+      "precios_por_ancho": {
+        "200": 11064,
+        "225": 11631,
+        "250": 12203,
+        "275": 12770,
+        "300": 13341,
+        "325": 13909,
+        "350": 14480,
+        "375": 15048,
+        "400": 15619,
+        "425": 16187,
+        "450": 16758,
+        "475": 500
+      },
+      "sobreprecios": [],
+      "observaciones": "Matriz con 12 líneas extraída",
+      "linea": "TK6010-2",
+      "salida": "variable",
+      "linea_min": null,
+      "linea_max": null,
+      "salida_min": null,
+      "salida_max": null,
+      "grupo_color": "G2",
+      "motorizable": true,
+      "grupo_motor": "3",
+      "subtipo": "bioclimatica"
+    },
+    {
+      "id": "TK6030_TENKI_L_AUTOPORTANTE",
+      "nombre": "TK6030 TENKI L AUTOPORTANTE",
+      "pagina": 214,
+      "tipo": "pérgola",
+      "precio_base": null,
+      "precios_por_ancho": {
+        "estimado": 2026
+      },
+      "sobreprecios": [],
+      "observaciones": "Estimación basada en página 214",
+      "linea": "TK6030",
+      "salida": "variable",
+      "linea_min": null,
+      "linea_max": null,
+      "salida_min": null,
+      "salida_max": null,
+      "grupo_color": "G2",
+      "motorizable": true,
+      "grupo_motor": "3",
+      "subtipo": "bioclimatica"
+    },
+    {
+      "id": "ILUMINACIÓN_2",
+      "nombre": "ILUMINACIÓN",
+      "pagina": 215,
+      "tipo": "accesorio",
+      "precio_base": null,
+      "precios_por_ancho": null,
+      "sobreprecios": [],
+      "observaciones": "",
+      "linea": "ILUMINACIÓN",
+      "salida": "variable",
+      "linea_min": null,
+      "linea_max": null,
+      "salida_min": null,
+      "salida_max": null,
+      "grupo_color": null,
+      "motorizable": false,
+      "grupo_motor": null
+    },
+    {
+      "id": "A-WIND_VERTICALES",
+      "nombre": "A-WIND VERTICALES",
+      "pagina": 217,
+      "tipo": "vertical",
+      "precio_base": null,
+      "precios_por_ancho": null,
+      "sobreprecios": [],
+      "observaciones": "",
+      "linea": "A-WIND",
+      "salida": "variable",
+      "linea_min": null,
+      "linea_max": null,
+      "salida_min": null,
+      "salida_max": null,
+      "grupo_color": null,
+      "motorizable": false,
+      "grupo_motor": null
+    },
+    {
+      "id": "WZ1000_MANUAL",
+      "nombre": "WZ1000 MANUAL",
+      "pagina": 219,
+      "tipo": "vertical",
+      "precio_base": null,
+      "precios_por_ancho": null,
+      "sobreprecios": [],
+      "observaciones": "",
+      "linea": "WZ1000",
+      "salida": "variable",
+      "linea_min": null,
+      "linea_max": null,
+      "salida_min": null,
+      "salida_max": null,
+      "grupo_color": "G2",
+      "motorizable": true,
+      "grupo_motor": "6"
+    },
+    {
+      "id": "WZ2000_MOTORIZADO",
+      "nombre": "WZ2000 MOTORIZADO",
+      "pagina": 219,
+      "tipo": "vertical",
+      "precio_base": null,
+      "precios_por_ancho": null,
+      "sobreprecios": [],
+      "observaciones": "",
+      "linea": "WZ2000",
+      "salida": "variable",
+      "linea_min": null,
+      "linea_max": null,
+      "salida_min": null,
+      "salida_max": null,
+      "grupo_color": "G2",
+      "motorizable": true,
+      "grupo_motor": "6"
+    },
+    {
+      "id": "AV_VERTICALES",
+      "nombre": "AV VERTICALES",
+      "pagina": 223,
+      "tipo": "vertical",
+      "precio_base": null,
+      "precios_por_ancho": null,
+      "sobreprecios": [],
+      "observaciones": "",
+      "linea": "AV",
+      "salida": "variable",
+      "linea_min": null,
+      "linea_max": null,
+      "salida_min": null,
+      "salida_max": null,
+      "grupo_color": null,
+      "motorizable": false,
+      "grupo_motor": null
+    },
+    {
+      "id": "AV8400_8410_8430_NEXUS_80",
+      "nombre": "AV8400/8410/8430 NEXUS 80",
+      "pagina": 224,
+      "tipo": "vertical",
+      "precio_base": null,
+      "precios_por_ancho": {
+        "100": 937,
+        "125": 997,
+        "150": 1056,
+        "175": 1072,
+        "200": 1112
+      },
+      "sobreprecios": [],
+      "observaciones": "Matriz con 5 líneas extraída",
+      "linea": "AV8400/8410/8430",
+      "salida": "variable",
+      "linea_min": null,
+      "linea_max": null,
+      "salida_min": null,
+      "salida_max": null,
+      "grupo_color": "G1",
+      "motorizable": true,
+      "grupo_motor": "4"
+    },
+    {
+      "id": "AV8500_8510_8530_NEXUS_100",
+      "nombre": "AV8500/8510/8530 NEXUS 100",
+      "pagina": 226,
+      "tipo": "vertical",
+      "precio_base": null,
+      "precios_por_ancho": {
+        "100": 954,
+        "125": 1027,
+        "150": 1085,
+        "175": 1116,
+        "200": 1154,
+        "225": 1193,
+        "250": 1246,
+        "275": 1314,
+        "300": 1368,
+        "325": 1406
+      },
+      "sobreprecios": [],
+      "observaciones": "Matriz con 10 líneas extraída",
+      "linea": "AV8500/8510/8530",
+      "salida": "variable",
+      "linea_min": null,
+      "linea_max": null,
+      "salida_min": null,
+      "salida_max": null,
+      "grupo_color": "G1",
+      "motorizable": true,
+      "grupo_motor": "4"
+    },
+    {
+      "id": "AV8600_8610_8630_NEXUS_130",
+      "nombre": "AV8600/8610/8630 NEXUS 130",
+      "pagina": 228,
+      "tipo": "vertical",
+      "precio_base": null,
+      "precios_por_ancho": {
+        "100": 1055,
+        "125": 1130,
+        "150": 1190,
+        "175": 1272,
+        "200": 1332,
+        "225": 1391,
+        "250": 1466,
+        "275": 1554,
+        "300": 1629,
+        "325": 1720,
+        "350": 1795,
+        "375": 1854,
+        "400": 1923,
+        "425": 1998,
+        "450": 2058,
+        "475": 2133,
+        "500": 2192
+      },
+      "sobreprecios": [],
+      "observaciones": "Matriz con 17 líneas extraída",
+      "linea": "AV8600/8610/8630",
+      "salida": "variable",
+      "linea_min": null,
+      "linea_max": null,
+      "salida_min": null,
+      "salida_max": null,
+      "grupo_color": "G1",
+      "motorizable": true,
+      "grupo_motor": "4"
+    },
+    {
+      "id": "AV8700_8710_8730_PARAVENTO",
+      "nombre": "AV8700/8710/8730 PARAVENTO",
+      "pagina": 232,
+      "tipo": "vertical",
+      "precio_base": null,
+      "precios_por_ancho": {
+        "150": 534,
+        "175": 574,
+        "200": 584,
+        "225": 595,
+        "250": 635,
+        "275": 646,
+        "300": 686,
+        "325": 697,
+        "350": 737,
+        "375": 748,
+        "400": 759,
+        "425": 799,
+        "450": 810,
+        "475": 850,
+        "500": 861
+      },
+      "sobreprecios": [],
+      "observaciones": "Matriz con 15 líneas extraída",
+      "linea": "AV8700/8710/8730",
+      "salida": "variable",
+      "linea_min": null,
+      "linea_max": null,
+      "salida_min": null,
+      "salida_max": null,
+      "grupo_color": "G1",
+      "motorizable": true,
+      "grupo_motor": "4"
+    },
+    {
+      "id": "AV8750_PARABOX",
+      "nombre": "AV8750 PARABOX",
+      "pagina": 236,
+      "tipo": "vertical",
+      "precio_base": null,
+      "precios_por_ancho": {
+        "150": 670,
+        "175": 714,
+        "200": 759,
+        "225": 803,
+        "250": 848,
+        "275": 892,
+        "300": 937,
+        "325": 981,
+        "350": 1026,
+        "375": 1070,
+        "400": 1114,
+        "425": 1159,
+        "450": 1203,
+        "475": 1248,
+        "500": 1292
+      },
+      "sobreprecios": [],
+      "observaciones": "Matriz con 15 líneas extraída",
+      "linea": "AV8750",
+      "salida": "variable",
+      "linea_min": null,
+      "linea_max": null,
+      "salida_min": null,
+      "salida_max": null,
+      "grupo_color": "G1",
+      "motorizable": true,
+      "grupo_motor": "4"
+    },
+    {
+      "id": "AV8770_IGLOO",
+      "nombre": "AV8770 IGLOO",
+      "pagina": 238,
+      "tipo": "vertical",
+      "precio_base": null,
+      "precios_por_ancho": {
+        "150": 1229,
+        "175": 1319,
+        "200": 1412,
+        "225": 1494,
+        "250": 1576,
+        "275": 1658,
+        "300": 1740,
+        "325": 1822,
+        "350": 1904,
+        "375": 1986,
+        "400": 2068
+      },
+      "sobreprecios": [],
+      "observaciones": "Matriz con 11 líneas extraída",
+      "linea": "AV8770",
+      "salida": "variable",
+      "linea_min": null,
+      "linea_max": null,
+      "salida_min": null,
+      "salida_max": null,
+      "grupo_color": "G1",
+      "motorizable": true,
+      "grupo_motor": "4"
+    },
+    {
+      "id": "AV8870__AV8890_NIMBUS",
+      "nombre": "AV8870/ AV8890 NIMBUS",
+      "pagina": 240,
+      "tipo": "vertical",
+      "precio_base": null,
+      "precios_por_ancho": {
+        "150": 738,
+        "175": 783,
+        "200": 827,
+        "225": 872,
+        "250": 916,
+        "275": 961,
+        "300": 1005,
+        "325": 1050,
+        "350": 1095,
+        "375": 1139,
+        "400": 1184,
+        "425": 1228,
+        "450": 1273,
+        "475": 1317,
+        "500": 1362
+      },
+      "sobreprecios": [],
+      "observaciones": "Matriz con 15 líneas extraída",
+      "linea": "AV8870/",
+      "salida": "variable",
+      "linea_min": null,
+      "linea_max": null,
+      "salida_min": null,
+      "salida_max": null,
+      "grupo_color": "G1",
+      "motorizable": true,
+      "grupo_motor": "4"
+    },
+    {
+      "id": "VRD_TOLDOS_VERANDA",
+      "nombre": "VRD TOLDOS VERANDA",
+      "pagina": 245,
+      "tipo": "toldo",
+      "precio_base": null,
+      "precios_por_ancho": {
+        "estimado": 245
+      },
+      "sobreprecios": [],
+      "observaciones": "Estimación basada en página 245",
+      "linea": "VRD",
+      "salida": "variable",
+      "linea_min": null,
+      "linea_max": null,
+      "salida_min": null,
+      "salida_max": null,
+      "grupo_color": null,
+      "motorizable": false,
+      "grupo_motor": null
+    },
+    {
+      "id": "VRD9000_EOS",
+      "nombre": "VRD9000 EOS",
+      "pagina": 246,
+      "tipo": "toldo",
+      "precio_base": null,
+      "precios_por_ancho": {
+        "200": 2963,
+        "250": 3123,
+        "300": 3284,
+        "350": 3444,
+        "400": 3605,
+        "450": 3765,
+        "500": 3926
+      },
+      "sobreprecios": [],
+      "observaciones": "Matriz con 7 líneas extraída",
+      "linea": "VRD9000",
+      "salida": "variable",
+      "linea_min": null,
+      "linea_max": null,
+      "salida_min": null,
+      "salida_max": null,
+      "grupo_color": "G2",
+      "motorizable": true,
+      "grupo_motor": "2",
+      "subtipo": "veranda"
+    },
+    {
+      "id": "VRD9000-2_EOS_PLUS",
+      "nombre": "VRD9000-2 EOS PLUS",
+      "pagina": 248,
+      "tipo": "toldo",
+      "precio_base": null,
+      "precios_por_ancho": {
+        "200": 3723,
+        "250": 3913,
+        "300": 4104,
+        "350": 4294,
+        "400": 4485,
+        "450": 4675,
+        "500": 4865
+      },
+      "sobreprecios": [],
+      "observaciones": "Matriz con 7 líneas extraída",
+      "linea": "VRD9000-2",
+      "salida": "variable",
+      "linea_min": null,
+      "linea_max": null,
+      "salida_min": null,
+      "salida_max": null,
+      "grupo_color": "G2",
+      "motorizable": true,
+      "grupo_motor": "2",
+      "subtipo": "veranda"
+    },
+    {
+      "id": "VRD9010_SCREENY_130GPZ_TO",
+      "nombre": "VRD9010 SCREENY 130GPZ TO",
+      "pagina": 250,
+      "tipo": "toldo",
+      "precio_base": null,
+      "precios_por_ancho": {
+        "100": 3542,
+        "150": 3898,
+        "200": 4255,
+        "250": 4611,
+        "300": 4967,
+        "350": 5324,
+        "400": 5663,
+        "450": 6020,
+        "500": 6376
+      },
+      "sobreprecios": [],
+      "observaciones": "Matriz con 9 líneas extraída",
+      "linea": "VRD9010",
+      "salida": "variable",
+      "linea_min": null,
+      "linea_max": null,
+      "salida_min": null,
+      "salida_max": null,
+      "grupo_color": "G2",
+      "motorizable": true,
+      "grupo_motor": "2",
+      "subtipo": "veranda"
+    },
+    {
+      "id": "VRD9200_GIOTTO",
+      "nombre": "VRD9200 GIOTTO",
+      "pagina": 252,
+      "tipo": "toldo",
+      "precio_base": null,
+      "precios_por_ancho": {
+        "200": 3210,
+        "250": 3424,
+        "300": 3638,
+        "350": 3897,
+        "400": 4112,
+        "450": 4326,
+        "500": 4540
+      },
+      "sobreprecios": [],
+      "observaciones": "Matriz con 7 líneas extraída",
+      "linea": "VRD9200",
+      "salida": "variable",
+      "linea_min": null,
+      "linea_max": null,
+      "salida_min": null,
+      "salida_max": null,
+      "grupo_color": "G2",
+      "motorizable": true,
+      "grupo_motor": "2",
+      "subtipo": "veranda"
+    },
+    {
+      "id": "VRD9300_SIRIO",
+      "nombre": "VRD9300 SIRIO",
+      "pagina": 254,
+      "tipo": "toldo",
+      "precio_base": null,
+      "precios_por_ancho": {
+        "200": 5026,
+        "250": 5405,
+        "300": 5783,
+        "350": 6206,
+        "400": 6585,
+        "450": 6964,
+        "500": 7342,
+        "550": 7721,
+        "600": 8099
+      },
+      "sobreprecios": [],
+      "observaciones": "Matriz con 9 líneas extraída",
+      "linea": "VRD9300",
+      "salida": "variable",
+      "linea_min": null,
+      "linea_max": null,
+      "salida_min": null,
+      "salida_max": null,
+      "grupo_color": "G2",
+      "motorizable": true,
+      "grupo_motor": "2",
+      "subtipo": "veranda"
+    },
+    {
+      "id": "VRD9500_SIRIO_WALL",
+      "nombre": "VRD9500 SIRIO WALL",
+      "pagina": 258,
+      "tipo": "toldo",
+      "precio_base": null,
+      "precios_por_ancho": {
+        "200": 6034,
+        "250": 6504,
+        "300": 6975,
+        "350": 7490,
+        "400": 7961,
+        "450": 8431,
+        "500": 8902,
+        "550": 9372,
+        "600": 9843
+      },
+      "sobreprecios": [],
+      "observaciones": "Matriz con 9 líneas extraída",
+      "linea": "VRD9500",
+      "salida": "variable",
+      "linea_min": null,
+      "linea_max": null,
+      "salida_min": null,
+      "salida_max": null,
+      "grupo_color": "G2",
+      "motorizable": true,
+      "grupo_motor": "2",
+      "subtipo": "veranda"
+    },
+    {
+      "id": "LUZ_ILUMINACIÓN",
+      "nombre": "LUZ ILUMINACIÓN",
+      "pagina": 263,
+      "tipo": "categoría",
+      "precio_base": null,
+      "precios_por_ancho": {
+        "250": 5,
+        "300": 6,
+        "350": 7,
+        "400": 8,
+        "450": 8,
+        "500": 9,
+        "550": 10,
+        "600": 11,
+        "650": 12,
+        "700": 12
+      },
+      "sobreprecios": [],
+      "observaciones": "Matriz con 10 líneas extraída",
+      "linea": "LUZ",
+      "salida": "variable",
+      "linea_min": null,
+      "linea_max": null,
+      "salida_min": null,
+      "salida_max": null,
+      "grupo_color": null,
+      "motorizable": false,
+      "grupo_motor": null
+    },
+    {
+      "id": "TENXO",
+      "nombre": "TENXO",
+      "pagina": 264,
+      "tipo": "accesorio",
+      "precio_base": null,
+      "precios_por_ancho": {
+        "80081861": 250,
+        "80081862": 300,
+        "80081863": 350,
+        "80081916": 275,
+        "80081917": 325
+      },
+      "sobreprecios": [],
+      "observaciones": "Matriz con 5 líneas extraída",
+      "linea": "TENXO",
+      "salida": "variable",
+      "linea_min": null,
+      "linea_max": null,
+      "salida_min": null,
+      "salida_max": null,
+      "grupo_color": null,
+      "motorizable": false,
+      "grupo_motor": null
+    },
+    {
+      "id": "BRAZOS_CONCEPT",
+      "nombre": "BRAZOS CONCEPT",
+      "pagina": 265,
+      "tipo": "accesorio",
+      "precio_base": null,
+      "precios_por_ancho": null,
+      "sobreprecios": [],
+      "observaciones": "",
+      "linea": "BRAZOS",
+      "salida": "variable",
+      "linea_min": null,
+      "linea_max": null,
+      "salida_min": null,
+      "salida_max": null,
+      "grupo_color": null,
+      "motorizable": false,
+      "grupo_motor": null
+    },
+    {
+      "id": "ACC_ACCESORIOS_GENERALES",
+      "nombre": "ACC ACCESORIOS GENERALES",
+      "pagina": 267,
+      "tipo": "accesorio",
+      "precio_base": null,
+      "precios_por_ancho": null,
+      "sobreprecios": [],
+      "observaciones": "",
+      "linea": "ACC",
+      "salida": "variable",
+      "linea_min": null,
+      "linea_max": null,
+      "salida_min": null,
+      "salida_max": null,
+      "grupo_color": null,
+      "motorizable": false,
+      "grupo_motor": null
+    },
+    {
+      "id": "MÁQUINAS_Y_CASQUILLOS",
+      "nombre": "MÁQUINAS Y CASQUILLOS",
+      "pagina": 268,
+      "tipo": "accesorio",
+      "precio_base": null,
+      "precios_por_ancho": null,
+      "sobreprecios": [],
+      "observaciones": "",
+      "linea": "MÁQUINAS",
+      "salida": "variable",
+      "linea_min": null,
+      "linea_max": null,
+      "salida_min": null,
+      "salida_max": null,
+      "grupo_color": null,
+      "motorizable": false,
+      "grupo_motor": null
+    },
+    {
+      "id": "TUBOS",
+      "nombre": "TUBOS",
+      "pagina": 269,
+      "tipo": "accesorio",
+      "precio_base": null,
+      "precios_por_ancho": null,
+      "sobreprecios": [],
+      "observaciones": "",
+      "linea": "TUBOS",
+      "salida": "variable",
+      "linea_min": null,
+      "linea_max": null,
+      "salida_min": null,
+      "salida_max": null,
+      "grupo_color": null,
+      "motorizable": false,
+      "grupo_motor": null
+    },
+    {
+      "id": "ANCLAJES",
+      "nombre": "ANCLAJES",
+      "pagina": 270,
+      "tipo": "accesorio",
+      "precio_base": null,
+      "precios_por_ancho": null,
+      "sobreprecios": [],
+      "observaciones": "",
+      "linea": "ANCLAJES",
+      "salida": "variable",
+      "linea_min": null,
+      "linea_max": null,
+      "salida_min": null,
+      "salida_max": null,
+      "grupo_color": null,
+      "motorizable": false,
+      "grupo_motor": null
+    },
+    {
+      "id": "PERFILES_Y_MANIVELAS",
+      "nombre": "PERFILES Y MANIVELAS",
+      "pagina": 271,
+      "tipo": "accesorio",
+      "precio_base": null,
+      "precios_por_ancho": null,
+      "sobreprecios": [],
+      "observaciones": "",
+      "linea": "PERFILES",
+      "salida": "variable",
+      "linea_min": null,
+      "linea_max": null,
+      "salida_min": null,
+      "salida_max": null,
+      "grupo_color": null,
+      "motorizable": false,
+      "grupo_motor": null
+    },
+    {
+      "id": "VARIOS",
+      "nombre": "VARIOS",
+      "pagina": 272,
+      "tipo": "accesorio",
+      "precio_base": null,
+      "precios_por_ancho": null,
+      "sobreprecios": [],
+      "observaciones": "",
+      "linea": "VARIOS",
+      "salida": "variable",
+      "linea_min": null,
+      "linea_max": null,
+      "salida_min": null,
+      "salida_max": null,
+      "grupo_color": null,
+      "motorizable": false,
+      "grupo_motor": null
+    },
+    {
+      "id": "STB_TOLDOS_STOBAG",
+      "nombre": "STB TOLDOS STOBAG",
+      "pagina": 273,
+      "tipo": "marca",
+      "precio_base": null,
+      "precios_por_ancho": null,
+      "sobreprecios": [],
+      "observaciones": "",
+      "linea": "STB",
+      "salida": "variable",
+      "linea_min": null,
+      "linea_max": null,
+      "salida_min": null,
+      "salida_max": null,
+      "grupo_color": null,
+      "motorizable": false,
+      "grupo_motor": null
+    },
+    {
+      "id": "S8130_SELECT",
+      "nombre": "S8130 SELECT",
+      "pagina": 274,
+      "tipo": "toldo",
+      "precio_base": null,
+      "precios_por_ancho": {
+        "290": 2495,
+        "320": 2559,
+        "350": 2624,
+        "380": 2688,
+        "400": 2731,
+        "550": 3053,
+        "600": 3161,
+        "640": 4655,
+        "705": 5062,
+        "765": 5513,
+        "805": 5613,
+        "850": 5726,
+        "900": 5852,
+        "950": 6270,
+        "1000": 6395,
+        "1050": 6521,
+        "1100": 6646,
+        "1150": 6772,
+        "1200": 6897,
+        "1250": 8350,
+        "1300": 8475,
+        "1350": 8601,
+        "1400": 8727,
+        "1450": 8852,
+        "1500": 8978,
+        "1550": 9103,
+        "1600": 9229,
+        "1650": 9354,
+        "1700": 9480,
+        "1750": 9605,
+        "1800": 9731
+      },
+      "sobreprecios": [],
+      "observaciones": "Matriz con 31 líneas extraída",
+      "linea": "S8130",
+      "salida": "variable",
+      "linea_min": null,
+      "linea_max": null,
+      "salida_min": null,
+      "salida_max": null,
+      "grupo_color": "G3",
+      "motorizable": true,
+      "grupo_motor": null,
+      "subtipo": "stobag"
+    },
+    {
+      "id": "S8135_OMBRAMATIC",
+      "nombre": "S8135 OMBRAMATIC",
+      "pagina": 278,
+      "tipo": "toldo",
+      "precio_base": null,
+      "precios_por_ancho": {
+        "290": 3218,
+        "320": 3282,
+        "350": 3347,
+        "380": 3411,
+        "400": 3454,
+        "550": 3776,
+        "600": 3884
+      },
+      "sobreprecios": [],
+      "observaciones": "Matriz con 7 líneas extraída",
+      "linea": "S8135",
+      "salida": "variable",
+      "linea_min": null,
+      "linea_max": null,
+      "salida_min": null,
+      "salida_max": null,
+      "grupo_color": "G3",
+      "motorizable": true,
+      "grupo_motor": null,
+      "subtipo": "stobag"
+    },
+    {
+      "id": "S2160_2_JUMBO",
+      "nombre": "S2160/2 JUMBO",
+      "pagina": 280,
+      "tipo": "toldo",
+      "precio_base": null,
+      "precios_por_ancho": {
+        "395": 8719,
+        "400": 8736,
+        "450": 8907,
+        "500": 9077,
+        "600": 9419,
+        "625": 16706,
+        "700": 16962,
+        "750": 17296,
+        "800": 17466,
+        "850": 17781,
+        "900": 17951,
+        "950": 18122,
+        "1000": 18293,
+        "1050": 18463,
+        "1100": 18634,
+        "1150": 18805,
+        "1200": 18975,
+        "1250": 24795,
+        "1300": 24965,
+        "1350": 25233,
+        "1400": 25404,
+        "1450": 25574,
+        "1500": 25745,
+        "1550": 25916,
+        "1600": 26086,
+        "1650": 26257,
+        "1700": 26427,
+        "1750": 26598,
+        "1800": 26769
+      },
+      "sobreprecios": [],
+      "observaciones": "Matriz con 29 líneas extraída",
+      "linea": "S2160/2",
+      "salida": "variable",
+      "linea_min": null,
+      "linea_max": null,
+      "salida_min": null,
+      "salida_max": null,
+      "grupo_color": "G3",
+      "motorizable": true,
+      "grupo_motor": null,
+      "subtipo": "stobag"
+    },
+    {
+      "id": "BX2000_CASABOX",
+      "nombre": "BX2000 CASABOX",
+      "pagina": 282,
+      "tipo": "toldo",
+      "precio_base": null,
+      "precios_por_ancho": {
+        "188": 2981,
+        "208": 3051,
+        "228": 3122,
+        "258": 3227,
+        "288": 3333,
+        "348": 3544,
+        "400": 3728,
+        "450": 3904,
+        "500": 4080,
+        "550": 4256
+      },
+      "sobreprecios": [],
+      "observaciones": "Matriz con 10 líneas extraída",
+      "linea": "BX2000",
+      "salida": "variable",
+      "linea_min": null,
+      "linea_max": null,
+      "salida_min": null,
+      "salida_max": null,
+      "grupo_color": "G3",
+      "motorizable": true,
+      "grupo_motor": null,
+      "subtipo": "stobag"
+    },
+    {
+      "id": "BX3000_TENDABOX",
+      "nombre": "BX3000 TENDABOX",
+      "pagina": 284,
+      "tipo": "toldo",
+      "precio_base": null,
+      "precios_por_ancho": {
+        "190": 4511,
+        "240": 4769,
+        "305": 5104,
+        "380": 5491,
+        "430": 5749,
+        "470": 5956,
+        "500": 6110,
+        "550": 6368,
+        "600": 6626,
+        "650": 6885
+      },
+      "sobreprecios": [],
+      "observaciones": "Matriz con 10 líneas extraída",
+      "linea": "BX3000",
+      "salida": "variable",
+      "linea_min": null,
+      "linea_max": null,
+      "salida_min": null,
+      "salida_max": null,
+      "grupo_color": "G3",
+      "motorizable": true,
+      "grupo_motor": null,
+      "subtipo": "stobag"
+    },
+    {
+      "id": "BX4000_CAMABOX",
+      "nombre": "BX4000 CAMABOX",
+      "pagina": 286,
+      "tipo": "toldo",
+      "precio_base": null,
+      "precios_por_ancho": {
+        "250": 4752,
+        "300": 5019,
+        "350": 5287,
+        "400": 5554,
+        "450": 5822,
+        "500": 6089,
+        "550": 6357
+      },
+      "sobreprecios": [],
+      "observaciones": "Matriz con 7 líneas extraída",
+      "linea": "BX4000",
+      "salida": "variable",
+      "linea_min": null,
+      "linea_max": null,
+      "salida_min": null,
+      "salida_max": null,
+      "grupo_color": "G3",
+      "motorizable": true,
+      "grupo_motor": null,
+      "subtipo": "stobag"
+    },
+    {
+      "id": "BX4700_CAMABOX",
+      "nombre": "BX4700 CAMABOX",
+      "pagina": 288,
+      "tipo": "toldo",
+      "precio_base": null,
+      "precios_por_ancho": {
+        "250": 8537,
+        "300": 8874,
+        "350": 9211,
+        "400": 9547,
+        "450": 9884,
+        "500": 10220,
+        "550": 10720,
+        "600": 11057,
+        "650": 11393,
+        "700": 11730
+      },
+      "sobreprecios": [],
+      "observaciones": "Matriz con 10 líneas extraída",
+      "linea": "BX4700",
+      "salida": "variable",
+      "linea_min": null,
+      "linea_max": null,
+      "salida_min": null,
+      "salida_max": null,
+      "grupo_color": "G3",
+      "motorizable": true,
+      "grupo_motor": null,
+      "subtipo": "stobag"
+    },
+    {
+      "id": "BX8000_RESOBOX",
+      "nombre": "BX8000 RESOBOX",
+      "pagina": 290,
+      "tipo": "toldo",
+      "precio_base": null,
+      "precios_por_ancho": {
+        "300": 7430,
+        "350": 7752,
+        "400": 8074,
+        "450": 8396,
+        "500": 8718,
+        "550": 9040,
+        "600": 9362,
+        "650": 9684,
+        "700": 10437,
+        "750": 14094,
+        "800": 14416,
+        "850": 14738,
+        "900": 15060,
+        "950": 15545,
+        "1000": 15867,
+        "1050": 16190,
+        "1100": 16512,
+        "1150": 16834,
+        "1200": 17156,
+        "1250": 22515,
+        "1300": 22837,
+        "1350": 23159,
+        "1400": 23482,
+        "1450": 23804,
+        "1500": 24126,
+        "1550": 24448,
+        "1600": 24770,
+        "1650": 25092,
+        "1700": 25414,
+        "1750": 25736,
+        "1800": 26058
+      },
+      "sobreprecios": [],
+      "observaciones": "Matriz con 31 líneas extraída",
+      "linea": "BX8000",
+      "salida": "variable",
+      "linea_min": null,
+      "linea_max": null,
+      "salida_min": null,
+      "salida_max": null,
+      "grupo_color": "G3",
+      "motorizable": true,
+      "grupo_motor": null,
+      "subtipo": "stobag"
+    },
+    {
+      "id": "SR6000_SIROFLEX",
+      "nombre": "SR6000 SIROFLEX",
+      "pagina": 292,
+      "tipo": "toldo",
+      "precio_base": null,
+      "precios_por_ancho": {
+        "120": 1167,
+        "150": 1232,
+        "180": 1298,
+        "200": 1341
+      },
+      "sobreprecios": [],
+      "observaciones": "Matriz con 4 líneas extraída",
+      "linea": "SR6000",
+      "salida": "variable",
+      "linea_min": null,
+      "linea_max": null,
+      "salida_min": null,
+      "salida_max": null,
+      "grupo_color": "G3",
+      "motorizable": true,
+      "grupo_motor": null,
+      "subtipo": "stobag"
+    },
+    {
+      "id": "FS6000_VISOMBRA",
+      "nombre": "FS6000 VISOMBRA",
+      "pagina": 294,
+      "tipo": "toldo",
+      "precio_base": null,
+      "precios_por_ancho": {
+        "100": 1962,
+        "150": 2109,
+        "200": 2257,
+        "250": 2568,
+        "300": 2716,
+        "350": 2864,
+        "400": 3012
+      },
+      "sobreprecios": [],
+      "observaciones": "Matriz con 7 líneas extraída",
+      "linea": "FS6000",
+      "salida": "variable",
+      "linea_min": null,
+      "linea_max": null,
+      "salida_min": null,
+      "salida_max": null,
+      "grupo_color": "G3",
+      "motorizable": true,
+      "grupo_motor": null,
+      "subtipo": "stobag"
+    },
+    {
+      "id": "VS5200_1__2_VENTOSOL",
+      "nombre": "VS5200/1 /2 VENTOSOL",
+      "pagina": 296,
+      "tipo": "toldo",
+      "precio_base": null,
+      "precios_por_ancho": {
+        "100": 1794,
+        "150": 1934,
+        "200": 2075,
+        "250": 2215,
+        "300": 2355,
+        "350": 2712,
+        "400": 2853,
+        "450": 2993,
+        "500": 3133
+      },
+      "sobreprecios": [],
+      "observaciones": "Matriz con 9 líneas extraída",
+      "linea": "VS5200/1",
+      "salida": "variable",
+      "linea_min": null,
+      "linea_max": null,
+      "salida_min": null,
+      "salida_max": null,
+      "grupo_color": "G3",
+      "motorizable": true,
+      "grupo_motor": null,
+      "subtipo": "stobag"
+    },
+    {
+      "id": "VS5400_VENTOSOL",
+      "nombre": "VS5400 VENTOSOL",
+      "pagina": 298,
+      "tipo": "toldo",
+      "precio_base": null,
+      "precios_por_ancho": {
+        "100": 2453,
+        "125": 2541,
+        "150": 2629,
+        "175": 2717,
+        "200": 2805,
+        "225": 2893,
+        "250": 2982,
+        "275": 3102,
+        "300": 3190
+      },
+      "sobreprecios": [],
+      "observaciones": "Matriz con 9 líneas extraída",
+      "linea": "VS5400",
+      "salida": "variable",
+      "linea_min": null,
+      "linea_max": null,
+      "salida_min": null,
+      "salida_max": null,
+      "grupo_color": "G3",
+      "motorizable": true,
+      "grupo_motor": null,
+      "subtipo": "stobag"
+    },
+    {
+      "id": "VS5600_1__2_VENTOSOL",
+      "nombre": "VS5600/1 /2 VENTOSOL",
+      "pagina": 300,
+      "tipo": "toldo",
+      "precio_base": null,
+      "precios_por_ancho": {
+        "200": 3785,
+        "250": 3968,
+        "300": 4151,
+        "350": 4334,
+        "400": 4518,
+        "450": 4754,
+        "500": 4938,
+        "550": 5121,
+        "600": 5304
+      },
+      "sobreprecios": [],
+      "observaciones": "Matriz con 9 líneas extraída",
+      "linea": "VS5600/1",
+      "salida": "variable",
+      "linea_min": null,
+      "linea_max": null,
+      "salida_min": null,
+      "salida_max": null,
+      "grupo_color": "G3",
+      "motorizable": true,
+      "grupo_motor": null,
+      "subtipo": "stobag"
+    },
+    {
+      "id": "VS6100_VENTOSOL",
+      "nombre": "VS6100 VENTOSOL",
+      "pagina": 302,
+      "tipo": "toldo",
+      "precio_base": null,
+      "precios_por_ancho": {
+        "100": 2095,
+        "150": 2235,
+        "200": 2374,
+        "250": 2513,
+        "300": 2653,
+        "350": 2955,
+        "400": 3095
+      },
+      "sobreprecios": [],
+      "observaciones": "Matriz con 7 líneas extraída",
+      "linea": "VS6100",
+      "salida": "variable",
+      "linea_min": null,
+      "linea_max": null,
+      "salida_min": null,
+      "salida_max": null,
+      "grupo_color": "G3",
+      "motorizable": true,
+      "grupo_motor": null,
+      "subtipo": "stobag"
+    },
+    {
+      "id": "VS6200_VENTOSOL",
+      "nombre": "VS6200 VENTOSOL",
+      "pagina": 304,
+      "tipo": "toldo",
+      "precio_base": null,
+      "precios_por_ancho": {
+        "100": 2175,
+        "150": 2341,
+        "200": 2507,
+        "250": 2673,
+        "300": 2838,
+        "350": 3221,
+        "400": 3387,
+        "450": 3553,
+        "500": 3718
+      },
+      "sobreprecios": [],
+      "observaciones": "Matriz con 9 líneas extraída",
+      "linea": "VS6200",
+      "salida": "variable",
+      "linea_min": null,
+      "linea_max": null,
+      "salida_min": null,
+      "salida_max": null,
+      "grupo_color": "G3",
+      "motorizable": true,
+      "grupo_motor": null,
+      "subtipo": "stobag"
+    },
+    {
+      "id": "VM720_3_VENTOSOL",
+      "nombre": "VM720/3 VENTOSOL",
+      "pagina": 306,
+      "tipo": "toldo",
+      "precio_base": null,
+      "precios_por_ancho": {
+        "200": 2966,
+        "250": 3183,
+        "300": 3399,
+        "350": 3615,
+        "400": 3831,
+        "450": 4048,
+        "500": 4264,
+        "550": 4480,
+        "600": 4696,
+        "650": 4913,
+        "700": 5129
+      },
+      "sobreprecios": [],
+      "observaciones": "Matriz con 11 líneas extraída",
+      "linea": "VM720/3",
+      "salida": "variable",
+      "linea_min": null,
+      "linea_max": null,
+      "salida_min": null,
+      "salida_max": null,
+      "grupo_color": "G3",
+      "motorizable": true,
+      "grupo_motor": null,
+      "subtipo": "stobag"
+    },
+    {
+      "id": "PS4000_AIROMATIC",
+      "nombre": "PS4000 AIROMATIC",
+      "pagina": 308,
+      "tipo": "toldo",
+      "precio_base": null,
+      "precios_por_ancho": {
+        "100": 3210,
+        "125": 3287,
+        "150": 3364,
+        "175": 3440,
+        "200": 3523,
+        "225": 3681,
+        "250": 3758,
+        "275": 3835,
+        "300": 3911,
+        "325": 3988,
+        "350": 4065,
+        "375": 4141,
+        "400": 4218
+      },
+      "sobreprecios": [],
+      "observaciones": "Matriz con 13 líneas extraída",
+      "linea": "PS4000",
+      "salida": "variable",
+      "linea_min": null,
+      "linea_max": null,
+      "salida_min": null,
+      "salida_max": null,
+      "grupo_color": "G3",
+      "motorizable": true,
+      "grupo_motor": null,
+      "subtipo": "stobag"
+    },
+    {
+      "id": "PS4500_AIROMATIC",
+      "nombre": "PS4500 AIROMATIC",
+      "pagina": 310,
+      "tipo": "toldo",
+      "precio_base": null,
+      "precios_por_ancho": {
+        "200": 4148,
+        "250": 4332,
+        "300": 4516,
+        "350": 4700,
+        "400": 4909,
+        "450": 5096,
+        "500": 5283,
+        "550": 5471
+      },
+      "sobreprecios": [],
+      "observaciones": "Matriz con 8 líneas extraída",
+      "linea": "PS4500",
+      "salida": "variable",
+      "linea_min": null,
+      "linea_max": null,
+      "salida_min": null,
+      "salida_max": null,
+      "grupo_color": "G3",
+      "motorizable": true,
+      "grupo_motor": null,
+      "subtipo": "stobag"
+    },
+    {
+      "id": "PS6000_TARGA",
+      "nombre": "PS6000 TARGA",
+      "pagina": 312,
+      "tipo": "toldo",
+      "precio_base": null,
+      "precios_por_ancho": {
+        "200": 5014,
+        "250": 5291,
+        "300": 5568,
+        "350": 5845,
+        "400": 6122,
+        "450": 6481,
+        "500": 6758,
+        "550": 7035,
+        "600": 7312,
+        "650": 9514,
+        "700": 9771
+      },
+      "sobreprecios": [],
+      "observaciones": "Matriz con 11 líneas extraída",
+      "linea": "PS6000",
+      "salida": "variable",
+      "linea_min": null,
+      "linea_max": null,
+      "salida_min": null,
+      "salida_max": null,
+      "grupo_color": "G3",
+      "motorizable": true,
+      "grupo_motor": null,
+      "subtipo": "stobag"
+    },
+    {
+      "id": "PS6100_TARGA_PLUS",
+      "nombre": "PS6100 TARGA PLUS",
+      "pagina": 314,
+      "tipo": "toldo",
+      "precio_base": null,
+      "precios_por_ancho": {
+        "200": 5890,
+        "250": 6166,
+        "300": 6442,
+        "350": 6718,
+        "400": 6994,
+        "450": 7352,
+        "500": 7628,
+        "550": 7904,
+        "600": 8180,
+        "650": 10808,
+        "700": 11064
+      },
+      "sobreprecios": [],
+      "observaciones": "Matriz con 11 líneas extraída",
+      "linea": "PS6100",
+      "salida": "variable",
+      "linea_min": null,
+      "linea_max": null,
+      "salida_min": null,
+      "salida_max": null,
+      "grupo_color": "G3",
+      "motorizable": true,
+      "grupo_motor": null,
+      "subtipo": "stobag"
+    },
+    {
+      "id": "PS2500_ARNEX",
+      "nombre": "PS2500 ARNEX",
+      "pagina": 316,
+      "tipo": "toldo",
+      "precio_base": null,
+      "precios_por_ancho": {
+        "200": 3889,
+        "250": 4024,
+        "300": 4159,
+        "350": 4293,
+        "400": 4428,
+        "450": 4644,
+        "500": 4779,
+        "550": 4914,
+        "600": 5048
+      },
+      "sobreprecios": [],
+      "observaciones": "Matriz con 9 líneas extraída",
+      "linea": "PS2500",
+      "salida": "variable",
+      "linea_min": null,
+      "linea_max": null,
+      "salida_min": null,
+      "salida_max": null,
+      "grupo_color": "G3",
+      "motorizable": true,
+      "grupo_motor": null,
+      "subtipo": "stobag"
+    },
+    {
+      "id": "PS8000_ARNEX_PLUS",
+      "nombre": "PS8000 ARNEX PLUS",
+      "pagina": 318,
+      "tipo": "toldo",
+      "precio_base": null,
+      "precios_por_ancho": {
+        "200": 5334,
+        "250": 5565,
+        "300": 5796,
+        "350": 6026,
+        "400": 6257,
+        "450": 6569,
+        "500": 6800,
+        "550": 7030,
+        "600": 7261
+      },
+      "sobreprecios": [],
+      "observaciones": "Matriz con 9 líneas extraída",
+      "linea": "PS8000",
+      "salida": "variable",
+      "linea_min": null,
+      "linea_max": null,
+      "salida_min": null,
+      "salida_max": null,
+      "grupo_color": "G3",
+      "motorizable": true,
+      "grupo_motor": null,
+      "subtipo": "stobag"
+    },
+    {
+      "id": "VA1100_LIGHT_SURAVA",
+      "nombre": "VA1100 LIGHT SURAVA",
+      "pagina": 320,
+      "tipo": "toldo",
+      "precio_base": null,
+      "precios_por_ancho": {
+        "estimado": 320
+      },
+      "sobreprecios": [],
+      "observaciones": "Estimación basada en página 320",
+      "linea": "VA1100",
+      "salida": "variable",
+      "linea_min": null,
+      "linea_max": null,
+      "salida_min": null,
+      "salida_max": null,
+      "grupo_color": "G3",
+      "motorizable": true,
+      "grupo_motor": null
+    },
+    {
+      "id": "VA2100_BOX_SURAVA",
+      "nombre": "VA2100 BOX SURAVA",
+      "pagina": 322,
+      "tipo": "toldo",
+      "precio_base": null,
+      "precios_por_ancho": {
+        "estimado": 322
+      },
+      "sobreprecios": [],
+      "observaciones": "Estimación basada en página 322",
+      "linea": "VA2100",
+      "salida": "variable",
+      "linea_min": null,
+      "linea_max": null,
+      "salida_min": null,
+      "salida_max": null,
+      "grupo_color": "G3",
+      "motorizable": true,
+      "grupo_motor": null
+    },
+    {
+      "id": "VA3100_HIDE_SURAVA",
+      "nombre": "VA3100 HIDE SURAVA",
+      "pagina": 324,
+      "tipo": "toldo",
+      "precio_base": null,
+      "precios_por_ancho": {
+        "estimado": 324
+      },
+      "sobreprecios": [],
+      "observaciones": "Estimación basada en página 324",
+      "linea": "VA3100",
+      "salida": "variable",
+      "linea_min": null,
+      "linea_max": null,
+      "salida_min": null,
+      "salida_max": null,
+      "grupo_color": "G3",
+      "motorizable": true,
+      "grupo_motor": null
+    },
+    {
+      "id": "VA2100_BOX_ZIP_SURAVA",
+      "nombre": "VA2100 BOX ZIP SURAVA",
+      "pagina": 326,
+      "tipo": "toldo",
+      "precio_base": null,
+      "precios_por_ancho": {
+        "estimado": 326
+      },
+      "sobreprecios": [],
+      "observaciones": "Estimación basada en página 326",
+      "linea": "VA2100",
+      "salida": "variable",
+      "linea_min": null,
+      "linea_max": null,
+      "salida_min": null,
+      "salida_max": null,
+      "grupo_color": "G3",
+      "motorizable": true,
+      "grupo_motor": null
+    },
+    {
+      "id": "VA3100_HIDE_ZIP_SURAVA",
+      "nombre": "VA3100 HIDE ZIP SURAVA",
+      "pagina": 328,
+      "tipo": "toldo",
+      "precio_base": null,
+      "precios_por_ancho": {
+        "estimado": 328
+      },
+      "sobreprecios": [],
+      "observaciones": "Estimación basada en página 328",
+      "linea": "VA3100",
+      "salida": "variable",
+      "linea_min": null,
+      "linea_max": null,
+      "salida_min": null,
+      "salida_max": null,
+      "grupo_color": "G3",
+      "motorizable": true,
+      "grupo_motor": null
+    },
+    {
+      "id": "S6600__S6800_VIVO",
+      "nombre": "S6600 | S6800 VIVO",
+      "pagina": 330,
+      "tipo": "toldo",
+      "precio_base": null,
+      "precios_por_ancho": {
+        "estimado": 200
+      },
+      "sobreprecios": [],
+      "observaciones": "Estimación basada en página 330",
+      "linea": "S6600",
+      "salida": "variable",
+      "linea_min": null,
+      "linea_max": null,
+      "salida_min": null,
+      "salida_max": null,
+      "grupo_color": "G3",
+      "motorizable": true,
+      "grupo_motor": null
+    },
+    {
+      "id": "S6600_H_VIVO",
+      "nombre": "S6600/H VIVO",
+      "pagina": 332,
+      "tipo": "toldo",
+      "precio_base": null,
+      "precios_por_ancho": {
+        "estimado": 250
+      },
+      "sobreprecios": [],
+      "observaciones": "Estimación basada en página 332",
+      "linea": "S6600/H",
+      "salida": "variable",
+      "linea_min": null,
+      "linea_max": null,
+      "salida_min": null,
+      "salida_max": null,
+      "grupo_color": "G3",
+      "motorizable": true,
+      "grupo_motor": null
+    },
+    {
+      "id": "S6800_P_VIVO",
+      "nombre": "S6800/P VIVO",
+      "pagina": 334,
+      "tipo": "toldo",
+      "precio_base": null,
+      "precios_por_ancho": {
+        "estimado": 200
+      },
+      "sobreprecios": [],
+      "observaciones": "Estimación basada en página 334",
+      "linea": "S6800/P",
+      "salida": "variable",
+      "linea_min": null,
+      "linea_max": null,
+      "salida_min": null,
+      "salida_max": null,
+      "grupo_color": "G3",
+      "motorizable": true,
+      "grupo_motor": null
+    },
+    {
+      "id": "P3600_PERGOLINO",
+      "nombre": "P3600 PERGOLINO",
+      "pagina": 336,
+      "tipo": "toldo",
+      "precio_base": null,
+      "precios_por_ancho": {
+        "200": 6370,
+        "250": 6691,
+        "300": 7011,
+        "350": 7331,
+        "400": 7652,
+        "450": 8135,
+        "500": 8456,
+        "550": 8776,
+        "600": 9097,
+        "650": 12345,
+        "700": 12707
+      },
+      "sobreprecios": [],
+      "observaciones": "Matriz con 11 líneas extraída",
+      "linea": "P3600",
+      "salida": "variable",
+      "linea_min": null,
+      "linea_max": null,
+      "salida_min": null,
+      "salida_max": null,
+      "grupo_color": "G3",
+      "motorizable": true,
+      "grupo_motor": null,
+      "subtipo": "stobag"
+    }
+  ],
+  "metadata": {
+    "total_productos": 153,
+    "tarifa": "AWMA 2026",
+    "fecha_extraccion": "2026-05-16",
+    "moneda": "EUR",
+    "estado": "Extracción multi-página",
+    "version": "1.0",
+    "ultima_actualizacion": "2026-05-16",
+    "total_con_precios": 122,
+    "porcentaje_cobertura": 79.7
+  },
+  "grupos_color": {
+    "G1": {
+      "nombre": "Sistemas Gaviota",
+      "colores": [
+        {
+          "nombre": "Blanco Tráfico RAL9016",
+          "incluido": true,
+          "incremento_pct": 0
+        },
+        {
+          "nombre": "Negro tex., Plata tex., RAL7016, RAL8014, RAL1013, RAL7022, Bronce, RAL7011",
+          "incremento_pct": 10
+        },
+        {
+          "nombre": "Marrón, Negro Satinado, Plata, Verde Musgo, Verde, Inox, RAL3005, RAL7035, RAL7016, RAL8019",
+          "incremento_pct": 20
+        },
+        {
+          "nombre": "Carta RAL (otros no indicados)",
+          "incremento_pct": 35
+        }
+      ]
+    },
+    "G2": {
+      "nombre": "Sistemas AWMA",
+      "colores": [
+        {
+          "nombre": "Blanco RAL9016 / Blanco Puro RAL9010",
+          "incluido": true,
+          "incremento_pct": 0
+        },
+        {
+          "nombre": "Carta RAL colores básicos",
+          "incremento_pct": 6
+        },
+        {
+          "nombre": "Carta RAL RAL9006/9007, Mates y Texturizados",
+          "incremento_pct": 10
+        },
+        {
+          "nombre": "Antracita Noir (colores especiales)",
+          "incremento_pct": 25
+        },
+        {
+          "nombre": "Imitación Madera / Oxirón (TEX)",
+          "incremento_pct": 50
+        }
+      ]
+    },
+    "G3": {
+      "nombre": "Sistemas Stobag",
+      "colores": [
+        {
+          "nombre": "Blanco Puro C12/RAL9010",
+          "incluido": true,
+          "incremento_pct": 0
+        },
+        {
+          "nombre": "Blanco C10/RAL9016",
+          "incremento_pct": 6
+        },
+        {
+          "nombre": "Classic Colours (Alu, Alu Gris, Gris Antracita, Negro, Gris Férrico)",
+          "incremento_pct": 10
+        },
+        {
+          "nombre": "Lifestyle Colours",
+          "incremento_pct": 15,
+          "minimo_eur": 428
+        },
+        {
+          "nombre": "Rainbow Colours",
+          "incremento_pct": 14,
+          "minimo_eur": 699
+        },
+        {
+          "nombre": "Unique Colours",
+          "incremento_pct": 20,
+          "minimo_eur": 799
+        }
+      ]
+    },
+    "G4": {
+      "nombre": "Sistemas BAT (Enrollables)",
+      "colores": [
+        {
+          "nombre": "Blanco RAL9016",
+          "incluido": true,
+          "incremento_pct": 0
+        },
+        {
+          "nombre": "Grises estándar (RAL7012, RAL7016, RAL7022, RAL8014)",
+          "incremento_pct": 12
+        },
+        {
+          "nombre": "Especiales texturizados (Blanco Puro TX, Gris Antracita TX, RAL TX, Negro Inver TX)",
+          "incremento_pct": 35
+        }
+      ]
+    },
+    "G5": {
+      "nombre": "Sistemas Siplan",
+      "nota": "Consultar precios y disponibilidad según producto"
+    }
+  },
+  "grupos_motor": {
+    "1": {
+      "nombre": "Verticales / Punto Recto / Brazos Articulados sin cofre",
+      "motores_somfy": [
+        "LT",
+        "ALTUS RTS",
+        "SUNILUS IO",
+        "SONESSE"
+      ]
+    },
+    "2": {
+      "nombre": "BOX con cofre / Punto Recto con cofre / Verandas",
+      "motores_somfy": [
+        "WT",
+        "OREA RTS",
+        "SUNEA IO"
+      ]
+    },
+    "3": {
+      "nombre": "Pérgolas",
+      "motores_somfy": [
+        "PÉRGOLA SP RTS",
+        "PÉRGOLA SP IO",
+        "ALTUS",
+        "RTS",
+        "SUNILUS IO"
+      ]
+    },
+    "4": {
+      "nombre": "Cortavientos / Balcón",
+      "motores_somfy": [
+        "LOGGIA RTS",
+        "MAESTRÍA IO"
+      ]
+    },
+    "5": {
+      "nombre": "Enrollables",
+      "motores_somfy": [
+        "ALTUS RTS",
+        "LS",
+        "SUNILUS IO",
+        "SONESSE"
+      ]
+    },
+    "6": {
+      "nombre": "A-WIND",
+      "motores_somfy": [
+        "MAESTRÍA IO"
+      ]
+    }
+  }
+}

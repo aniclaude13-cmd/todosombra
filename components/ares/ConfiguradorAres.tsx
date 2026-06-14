@@ -1,20 +1,16 @@
 'use client';
 
-import { useMemo, useState, useEffect, useRef } from 'react';
-import dynamic from 'next/dynamic';
+import { useMemo, useState } from 'react';
 import {
   ARES_LINEAS,
   ARES_SALIDAS,
   ARES_RECARGO_MOTOR,
-  type AresLinea,
   type AresSalida,
   type AresMotor,
   type AresConfig,
   ARES_LINEA_MIN_POR_SALIDA,
   calcularPrecioAres,
 } from '@/lib/tarifa-ares';
-
-const Visor3D = dynamic(() => import('./Visor3D'), { ssr: false });
 
 const eur = (n: number) =>
   new Intl.NumberFormat('es-ES', { style: 'currency', currency: 'EUR', maximumFractionDigits: 0 }).format(n);
@@ -36,9 +32,10 @@ const COLORES_TELA = [
 ];
 
 const ADMIN_KEY = 'todosombra_admin';
+const ARES_LINEA_MAX = 1000;
 
 export default function ConfiguradorAres() {
-  const [linea, setLinea] = useState<AresLinea>(400);
+  const [linea, setLinea] = useState<number>(400);
   const [salida, setSalida] = useState<AresSalida>(250);
   const [motor, setMotor] = useState<AresMotor>('rts_40Nm');
   const [montaje, setMontaje] = useState<'frente' | 'techo' | 'pared' | 'entre_paredes'>('frente');
@@ -52,48 +49,7 @@ export default function ConfiguradorAres() {
   const [colorRal, setColorRal] = useState('6005');
   const [colorTelaId, setColorTelaId] = useState('verde');
   const [cantidad, setCantidad] = useState(1);
-  const [extensionTarget, setExtensionTarget] = useState(1);
-  const [extensionRatio, setExtensionRatio] = useState(1);
-  const [isClosing, setIsClosing] = useState(false);
-  const animationRef = useRef<number | null>(null);
 
-  const toggleToldo = () => {
-    setIsClosing(true);
-    setExtensionTarget(extensionTarget === 1 ? 0 : 1);
-    setTimeout(() => setIsClosing(false), 600);
-  };
-
-  // Smooth animation of extensionRatio
-  useEffect(() => {
-    const startTime = Date.now();
-    const duration = 600;
-    const startValue = extensionRatio;
-    const endValue = extensionTarget;
-
-    const animate = () => {
-      const elapsed = Date.now() - startTime;
-      const progress = Math.min(elapsed / duration, 1);
-      const easeProgress = progress < 0.5 ? 2 * progress * progress : -1 + (4 - 2 * progress) * progress;
-      const newValue = startValue + (endValue - startValue) * easeProgress;
-      setExtensionRatio(newValue);
-
-      if (progress < 1) {
-        animationRef.current = requestAnimationFrame(animate);
-      }
-    };
-
-    if (Math.abs(extensionRatio - extensionTarget) > 0.01) {
-      animationRef.current = requestAnimationFrame(animate);
-    }
-
-    return () => {
-      if (animationRef.current) {
-        cancelAnimationFrame(animationRef.current);
-      }
-    };
-  }, [extensionTarget]);
-
-  // Modo admin (mostrar coste): activa con ?admin=1 o tecla A en localStorage
   const [adminMode] = useState(() => {
     if (typeof window === 'undefined') return false;
     if (window.location.search.includes('admin=1')) {
@@ -103,42 +59,16 @@ export default function ConfiguradorAres() {
     return localStorage.getItem(ADMIN_KEY) === '1';
   });
 
-  const colorTelaHex = COLORES_TELA.find((t) => t.id === colorTelaId)?.hex ?? '#dcd1b8';
-  const colorAluminioHex = COLORES_RAL.find((r) => r.ral === colorRal)?.hex ?? '#f1f1ed';
-
   const config: AresConfig = { linea, salida, motor, montaje, colorRal, cantidad };
   const precio = useMemo(() => calcularPrecioAres(config), [linea, salida, motor, cantidad]);
 
-  // Filtrar líneas válidas según salida elegida
-  const lineasValidas = ARES_LINEAS.filter((l) => l >= ARES_LINEA_MIN_POR_SALIDA[salida]);
+  const lineasSugeridas = ARES_LINEAS.filter((l) => l >= ARES_LINEA_MIN_POR_SALIDA[salida]);
+  const lineaMinSugerida = ARES_LINEA_MIN_POR_SALIDA[salida];
+  const avisoAcoplado = precio.avisos.find((a) => a.reglaId === 'acoplado');
 
   return (
-    <div className="grid grid-cols-1 lg:grid-cols-[1fr_400px] gap-6 h-full">
-      {/* Visor 3D */}
-      <div className="h-[50vh] lg:h-[calc(100vh-8rem)] min-h-[400px] flex flex-col">
-        <div className="flex-1">
-          <Visor3D
-            lineaCm={linea}
-            salidaCm={salida}
-            colorTela={colorTelaHex}
-            colorAluminio={colorAluminioHex}
-            extensionRatio={extensionRatio}
-          />
-        </div>
-        <button
-          onClick={toggleToldo}
-          disabled={isClosing}
-          className="mt-3 w-full bg-[#d4a034] hover:bg-[#e8b442] disabled:bg-[#d4a034]/50 text-[#0d0c0b] font-medium py-2 rounded-lg transition"
-          style={{
-            transition: 'all 600ms ease-in-out',
-          }}
-        >
-          {extensionRatio === 1 ? '🔼 Cerrar toldo' : '🔽 Abrir toldo'}
-        </button>
-      </div>
-
-      {/* Panel de configuración */}
-      <div className="bg-white rounded-xl shadow-sm border border-[#e5e1d8] p-6 overflow-y-auto">
+    <div className="max-w-2xl mx-auto py-6 px-4">
+      <div className="bg-white rounded-xl shadow-sm border border-[#e5e1d8] p-6">
         <div className="mb-6">
           <h1 className="text-2xl font-semibold text-[#1a1917]">Toldo cofre ARES</h1>
           <p className="text-sm text-[#7a756f] mt-1">Configura tu toldo a medida</p>
@@ -153,7 +83,7 @@ export default function ConfiguradorAres() {
                 const newSalida = Number(e.target.value) as AresSalida;
                 setSalida(newSalida);
                 if (linea < ARES_LINEA_MIN_POR_SALIDA[newSalida]) {
-                  setLinea(ARES_LINEA_MIN_POR_SALIDA[newSalida] as AresLinea);
+                  setLinea(ARES_LINEA_MIN_POR_SALIDA[newSalida]);
                 }
               }}
             >
@@ -166,13 +96,24 @@ export default function ConfiguradorAres() {
           </Field>
 
           <Field label="Línea (ancho)">
-            <select className={selectCls} value={linea} onChange={(e) => setLinea(Number(e.target.value) as AresLinea)}>
-              {lineasValidas.map((l) => (
-                <option key={l} value={l}>
-                  {l} cm
-                </option>
+            <input
+              type="number"
+              min={lineaMinSugerida}
+              max={ARES_LINEA_MAX}
+              step={5}
+              value={linea}
+              onChange={(e) => setLinea(Math.max(lineaMinSugerida, Math.min(ARES_LINEA_MAX, Number(e.target.value))))}
+              list="ares-lineas-sugeridas"
+              className={selectCls}
+            />
+            <datalist id="ares-lineas-sugeridas">
+              {lineasSugeridas.map((l) => (
+                <option key={l} value={l} />
               ))}
-            </select>
+            </datalist>
+            <p className="text-xs text-[#a09a94] mt-1">
+              Hasta {ARES_LINEAS[ARES_LINEAS.length - 1]} cm en módulo único. Para anchos mayores, se acoplan módulos iguales.
+            </p>
           </Field>
 
           <Field label="Fijación">
@@ -300,7 +241,6 @@ export default function ConfiguradorAres() {
           </Field>
         </div>
 
-        {/* Panel precio */}
         <div className="mt-6 pt-6 border-t border-[#e5e1d8]">
           {!precio.valido ? (
             <div className="bg-amber-50 border border-amber-200 rounded-lg p-3 text-sm text-amber-900">
@@ -308,6 +248,12 @@ export default function ConfiguradorAres() {
             </div>
           ) : (
             <>
+              {avisoAcoplado && (
+                <div className="mb-4 bg-[#fdf6e8] border border-[#d4a034]/40 rounded-lg p-3 text-xs text-[#5a4a1f]">
+                  <div className="font-medium text-[#1a1917] mb-1">Solución acoplada</div>
+                  {avisoAcoplado.mensaje}
+                </div>
+              )}
               <div className="flex items-baseline justify-between">
                 <span className="text-sm text-[#7a756f]">Precio total</span>
                 <span className="text-3xl font-semibold text-[#1a1917]">{eur(precio.pvpTotal)}</span>

@@ -1,7 +1,6 @@
 'use client';
 
 import { useMemo, useState } from 'react';
-import dynamic from 'next/dynamic';
 import {
   PL_LINEAS,
   PL_SALIDAS,
@@ -11,8 +10,6 @@ import {
   type PalileriaConfig,
   calcularPrecioPalilleria,
 } from '@/lib/tarifa-palilleria';
-
-const Visor3DPalilleria = dynamic(() => import('./Visor3DPalilleria'), { ssr: false });
 
 const eur = (n: number) =>
   new Intl.NumberFormat('es-ES', { style: 'currency', currency: 'EUR', maximumFractionDigits: 0 }).format(n);
@@ -59,19 +56,12 @@ export default function ConfiguradorPalilleria() {
     return localStorage.getItem(ADMIN_KEY) === '1';
   });
 
-  const colorTelaHex = COLORES_TELA.find((t) => t.id === colorTelaId)?.hex ?? '#dcd1b8';
-  const colorAluminioHex = COLORES_RAL.find((r) => r.ral === colorRal)?.hex ?? '#f1f1ed';
-
   const config: PalileriaConfig = { modelo, linea, salida, colorRal, cantidad };
   const precio = useMemo(() => calcularPrecioPalilleria(config), [modelo, linea, salida, cantidad]);
 
   return (
-    <div className="grid grid-cols-1 lg:grid-cols-[1fr_400px] gap-6 h-full">
-      <div className="h-[50vh] lg:h-[calc(100vh-8rem)] min-h-[400px]">
-        <Visor3DPalilleria lineaCm={linea} salidaCm={salida} colorTela={colorTelaHex} colorAluminio={colorAluminioHex} />
-      </div>
-
-      <div className="bg-white rounded-xl shadow-sm border border-stone-200 p-6 overflow-y-auto">
+    <div className="max-w-2xl mx-auto py-6 px-4">
+      <div className="bg-white rounded-xl shadow-sm border border-stone-200 p-6">
         <div className="mb-6">
           <h1 className="text-2xl font-semibold text-stone-900">Palillería 80×40</h1>
           <p className="text-sm text-stone-500 mt-1">Configura tu pérgola a medida</p>
