@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import Image from 'next/image';
 import AnimateIn from '@/components/AnimateIn';
 import StatsBar from '@/components/StatsBar';
 
@@ -37,13 +38,22 @@ export default function Home() {
     <main className="bg-[#faf9f6] text-[#1a1917]">
 
       {/* ── HERO ─────────────────────────────────────────────── */}
-      <section className="relative min-h-screen bg-[#0d0c0b] overflow-hidden flex flex-col bg-cover bg-center" style={{backgroundImage: 'url(/hero-toldo.png)', backgroundPosition: 'right center'}}>
+      <section className="relative min-h-screen bg-[#0d0c0b] overflow-hidden flex flex-col">
+
+        {/* Background image */}
+        <Image
+          src="/hero-toldo.png"
+          alt="Toldo en terraza"
+          fill
+          className="absolute inset-0 object-cover object-right -z-10"
+          priority
+        />
 
         {/* Dark overlay */}
-        <div className="absolute inset-0 bg-gradient-to-r from-[#0d0c0b] via-[#0d0c0b]/80 to-transparent pointer-events-none" />
+        <div className="absolute inset-0 bg-gradient-to-r from-[#0d0c0b] via-[#0d0c0b]/80 to-transparent pointer-events-none z-0" />
 
         {/* Gradient blobs */}
-        <div className="absolute inset-0 pointer-events-none select-none" aria-hidden>
+        <div className="absolute inset-0 pointer-events-none select-none z-10" aria-hidden>
           <div
             className="hero-blob absolute rounded-full"
             style={{
@@ -63,7 +73,7 @@ export default function Home() {
         </div>
 
         {/* Nav */}
-        <nav className="relative z-10 flex items-center justify-between px-6 lg:px-12 py-6">
+        <nav className="relative z-20 flex items-center justify-between px-6 lg:px-12 py-6">
           <span className="font-bold text-xl tracking-tight text-white select-none">
             <span className="text-[#d4a034]">Todo</span>Sombra
           </span>
@@ -92,7 +102,7 @@ export default function Home() {
         </nav>
 
         {/* Content */}
-        <div className="relative z-10 flex-1 flex flex-col items-center justify-center text-center px-6 pb-10">
+        <div className="relative z-20 flex-1 flex flex-col items-center justify-center text-center px-6 pb-10">
           <div className="hero-badge inline-flex items-center gap-2 text-xs text-[#d4a034]/70 uppercase tracking-widest mb-8 border border-[#d4a034]/20 rounded-full px-5 py-1.5">
             <span className="w-1.5 h-1.5 rounded-full bg-[#d4a034] animate-pulse" />
             Mar Menor · Costa de Murcia
@@ -125,7 +135,7 @@ export default function Home() {
         </div>
 
         {/* Scroll indicator */}
-        <div className="relative z-10 flex justify-center pb-8" aria-hidden>
+        <div className="relative z-20 flex justify-center pb-8" aria-hidden>
           <div className="scroll-line w-px h-10 bg-gradient-to-b from-transparent to-white/25" />
         </div>
       </section>
