@@ -37,7 +37,10 @@ export default function Home() {
     <main className="bg-[#faf9f6] text-[#1a1917]">
 
       {/* ── HERO ─────────────────────────────────────────────── */}
-      <section className="relative min-h-screen bg-[#0d0c0b] overflow-hidden flex flex-col">
+      <section className="relative min-h-screen bg-[#0d0c0b] overflow-hidden flex flex-col bg-cover bg-center" style={{backgroundImage: 'url(/hero-toldo.png)', backgroundPosition: 'right center'}}>
+
+        {/* Dark overlay */}
+        <div className="absolute inset-0 bg-gradient-to-r from-[#0d0c0b] via-[#0d0c0b]/80 to-transparent pointer-events-none" />
 
         {/* Gradient blobs */}
         <div className="absolute inset-0 pointer-events-none select-none" aria-hidden>
@@ -187,29 +190,34 @@ export default function Home() {
 
           <div className="grid md:grid-cols-3 lg:grid-cols-5 gap-4">
             {[
-              { cat: 'Toldo cofre', nombre: 'ARES', desc: 'El más vendido. Hasta 6 m, manual o motorizado. Sauleda incluido.' },
-              { cat: 'Toldo cofre', nombre: 'BOX', desc: 'Elegancia y robustez. Sistema modular adaptable a cualquier fachada.' },
-              { cat: 'Pérgola', nombre: 'Palillería 80×40', desc: 'Pérgola de jardín. Fijación pared, portería o autoportante.' },
-              { cat: 'Pérgola motorizada', nombre: 'TENXO', desc: 'Motorizada, moderna. Lamas orientables para control solar.' },
-              { cat: 'Brazo articulado', nombre: 'ART', desc: 'Brazos retráctiles articulados. Máxima flexibilidad de uso.' },
+              { cat: 'Toldo cofre', nombre: 'ARES', desc: 'El más vendido. Hasta 6 m, manual o motorizado. Sauleda incluido.', img: '/ares/ares-catalog.png' },
+              { cat: 'Toldo cofre', nombre: 'BOX', desc: 'Elegancia y robustez. Sistema modular adaptable a cualquier fachada.', img: '/ares/box-catalog.png' },
+              { cat: 'Pérgola', nombre: 'Palillería 80×40', desc: 'Pérgola de jardín. Fijación pared, portería o autoportante.', img: '/pl7000-catalog.png' },
+              { cat: 'Pérgola motorizada', nombre: 'TENXO', desc: 'Motorizada, moderna. Lamas orientables para control solar.', img: '/tenxo-catalog.png' },
+              { cat: 'Brazo articulado', nombre: 'ART', desc: 'Brazos retráctiles articulados. Máxima flexibilidad de uso.', img: '/art-catalog.png' },
             ].map((prod, i) => (
               <AnimateIn key={prod.nombre} delay={i * 70}>
                 <Link
                   href="/configurador"
-                  className="group block bg-white rounded-2xl border border-[#e5e1d8] p-6 hover:border-[#d4a034] hover:shadow-lg hover:shadow-[#d4a034]/8 transition-all duration-300 h-full flex flex-col"
+                  className="group block bg-white rounded-2xl border border-[#e5e1d8] overflow-hidden hover:border-[#d4a034] hover:shadow-lg hover:shadow-[#d4a034]/8 transition-all duration-300 h-full flex flex-col"
                 >
-                  <div className="text-[10px] text-[#a09a94] uppercase tracking-wider font-medium">
-                    {prod.cat}
+                  <div className="h-32 bg-[#f0ede6] overflow-hidden">
+                    <img src={prod.img} alt={prod.nombre} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" />
                   </div>
-                  <h3 className="text-lg font-bold text-[#1a1917] mt-2 flex-1">{prod.nombre}</h3>
-                  <p className="text-[#7a756f] mt-2 text-xs leading-relaxed">
-                    {prod.desc}
-                  </p>
-                  <div className="mt-4 flex items-center justify-between">
-                    <span className="text-[9px] text-[#b0aaa4]">A medida</span>
-                    <span className="text-[#d4a034] font-semibold group-hover:translate-x-1 transition-transform inline-block text-sm">
-                      →
-                    </span>
+                  <div className="p-6 flex flex-col flex-1">
+                    <div className="text-[10px] text-[#a09a94] uppercase tracking-wider font-medium">
+                      {prod.cat}
+                    </div>
+                    <h3 className="text-lg font-bold text-[#1a1917] mt-2 flex-1">{prod.nombre}</h3>
+                    <p className="text-[#7a756f] mt-2 text-xs leading-relaxed">
+                      {prod.desc}
+                    </p>
+                    <div className="mt-4 flex items-center justify-between">
+                      <span className="text-[9px] text-[#b0aaa4]">A medida</span>
+                      <span className="text-[#d4a034] font-semibold group-hover:translate-x-1 transition-transform inline-block text-sm">
+                        →
+                      </span>
+                    </div>
                   </div>
                 </Link>
               </AnimateIn>
