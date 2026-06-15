@@ -45,15 +45,17 @@ export default function Home() {
           src="/hero-toldo.png"
           alt="Toldo en terraza"
           fill
-          className="absolute inset-0 object-cover object-right -z-10"
+          className="object-cover object-right"
+          style={{ zIndex: -1 }}
           priority
+          quality={90}
         />
 
         {/* Dark overlay */}
-        <div className="absolute inset-0 bg-gradient-to-r from-[#0d0c0b] via-[#0d0c0b]/80 to-transparent pointer-events-none z-0" />
+        <div className="absolute inset-0 bg-gradient-to-r from-[#0d0c0b] via-[#0d0c0b]/80 to-transparent pointer-events-none" style={{ zIndex: 0 }} />
 
         {/* Gradient blobs */}
-        <div className="absolute inset-0 pointer-events-none select-none z-10" aria-hidden>
+        <div className="absolute inset-0 pointer-events-none select-none" style={{ zIndex: 1 }} aria-hidden>
           <div
             className="hero-blob absolute rounded-full"
             style={{
@@ -73,7 +75,7 @@ export default function Home() {
         </div>
 
         {/* Nav */}
-        <nav className="relative z-20 flex items-center justify-between px-6 lg:px-12 py-6">
+        <nav className="relative flex items-center justify-between px-6 lg:px-12 py-6" style={{ zIndex: 10 }}>
           <span className="font-bold text-xl tracking-tight text-white select-none">
             <span className="text-[#d4a034]">Todo</span>Sombra
           </span>
@@ -102,7 +104,7 @@ export default function Home() {
         </nav>
 
         {/* Content */}
-        <div className="relative z-20 flex-1 flex flex-col items-center justify-center text-center px-6 pb-10">
+        <div className="relative flex-1 flex flex-col items-center justify-center text-center px-6 pb-10" style={{ zIndex: 10 }}>
           <div className="hero-badge inline-flex items-center gap-2 text-xs text-[#d4a034]/70 uppercase tracking-widest mb-8 border border-[#d4a034]/20 rounded-full px-5 py-1.5">
             <span className="w-1.5 h-1.5 rounded-full bg-[#d4a034] animate-pulse" />
             Mar Menor · Costa de Murcia
@@ -135,7 +137,7 @@ export default function Home() {
         </div>
 
         {/* Scroll indicator */}
-        <div className="relative z-20 flex justify-center pb-8" aria-hidden>
+        <div className="relative flex justify-center pb-8" style={{ zIndex: 10 }} aria-hidden>
           <div className="scroll-line w-px h-10 bg-gradient-to-b from-transparent to-white/25" />
         </div>
       </section>
@@ -211,8 +213,8 @@ export default function Home() {
                   href="/configurador"
                   className="group block bg-white rounded-2xl border border-[#e5e1d8] overflow-hidden hover:border-[#d4a034] hover:shadow-lg hover:shadow-[#d4a034]/8 transition-all duration-300 h-full flex flex-col"
                 >
-                  <div className="h-32 bg-[#f0ede6] overflow-hidden">
-                    <img src={prod.img} alt={prod.nombre} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" />
+                  <div className="relative h-40 bg-[#f0ede6] overflow-hidden">
+                    <Image src={prod.img} alt={prod.nombre} fill className="object-cover group-hover:scale-105 transition-transform duration-300" />
                   </div>
                   <div className="p-6 flex flex-col flex-1">
                     <div className="text-[10px] text-[#a09a94] uppercase tracking-wider font-medium">
@@ -330,13 +332,19 @@ export default function Home() {
           </AnimateIn>
 
           <div className="grid md:grid-cols-3 gap-4">
-            {Array.from({ length: 6 }).map((_, i) => (
+            {[
+              { img: '/ares/box6100-foto.png', title: 'BOX6100 - Terraza Mar Menor' },
+              { img: '/ares/box6100-iso.png', title: 'BOX6100 - Render 3D' },
+              { img: '/ares/box6100-foto.png', title: 'BOX6100 - Instalación Cartagena' },
+              { img: '/ares/box6100-iso.png', title: 'Pérgola Motorizada - Mazarrón' },
+              { img: '/ares/box6100-foto.png', title: 'Toldo ARES - Los Alcázares' },
+              { img: '/ares/box6100-iso.png', title: 'Sistema Modular - San Javier' },
+            ].map((item, i) => (
               <AnimateIn key={i} delay={i * 70}>
-                <div className="relative h-64 rounded-2xl overflow-hidden border border-[#e5e1d8] bg-gradient-to-br from-[#e5e1d8] to-[#d4d1cc] flex items-center justify-center">
-                  <div className="text-center">
-                    <div className="text-5xl mb-2">📸</div>
-                    <p className="text-sm text-[#7a756f]">Foto {i + 1}</p>
-                    <p className="text-xs text-[#a09a94] mt-1">Instalación real</p>
+                <div className="relative h-64 rounded-2xl overflow-hidden border border-[#e5e1d8] bg-gradient-to-br from-[#e5e1d8] to-[#d4d1cc] group cursor-pointer hover:shadow-lg hover:shadow-[#d4a034]/10 transition-all duration-300">
+                  <Image src={item.img} alt={item.title} fill className="object-cover group-hover:scale-110 transition-transform duration-500" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-[#0d0c0b]/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end justify-start p-4">
+                    <p className="text-white text-sm font-medium">{item.title}</p>
                   </div>
                 </div>
               </AnimateIn>
