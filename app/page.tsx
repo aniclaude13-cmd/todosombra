@@ -185,16 +185,13 @@ export default function Home() {
             </div>
           </AnimateIn>
 
-          <div className="grid md:grid-cols-3 lg:grid-cols-4 gap-4">
+          <div className="grid md:grid-cols-3 lg:grid-cols-5 gap-4">
             {[
               { cat: 'Toldo cofre', nombre: 'ARES', desc: 'El más vendido. Hasta 6 m, manual o motorizado. Sauleda incluido.' },
               { cat: 'Toldo cofre', nombre: 'BOX', desc: 'Elegancia y robustez. Sistema modular adaptable a cualquier fachada.' },
               { cat: 'Pérgola', nombre: 'Palillería 80×40', desc: 'Pérgola de jardín. Fijación pared, portería o autoportante.' },
               { cat: 'Pérgola motorizada', nombre: 'TENXO', desc: 'Motorizada, moderna. Lamas orientables para control solar.' },
-              { cat: 'Pérgola', nombre: 'TENFLAT', desc: 'Diseño flat. Líneas limpias y minimalistas. Muy contemporáneo.' },
               { cat: 'Brazo articulado', nombre: 'ART', desc: 'Brazos retráctiles articulados. Máxima flexibilidad de uso.' },
-              { cat: 'Stor balcón', nombre: 'Punto Recto', desc: 'Estandarización de medidas. Solución económica y rápida.' },
-              { cat: 'Vertical', nombre: 'AV / NEXUS', desc: 'Protección solar vertical. Ideal para fachadas expuestas.' },
             ].map((prod, i) => (
               <AnimateIn key={prod.nombre} delay={i * 70}>
                 <Link

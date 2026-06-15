@@ -12,16 +12,22 @@ interface Props {
 const eur = (n: number) =>
   new Intl.NumberFormat('es-ES', { style: 'currency', currency: 'EUR', maximumFractionDigits: 0 }).format(n);
 
-function categorizarModelo(id: string): { categoria: string; icono: string } {
+function categorizarModelo(id: string): { categoria: string; icono: string; imagen?: string } {
   const up = id.toUpperCase();
-  if (up.includes('BOX') || up.includes('ARES')) return { categoria: 'Toldo cofre', icono: '🏖️' };
-  if (up.startsWith('PL') || up.startsWith('PR') || up.startsWith('TENXO')) return { categoria: 'Pérgola', icono: '⛱️' };
-  if (up.startsWith('STR')) return { categoria: 'Stor balcón', icono: '🪟' };
-  if (up.startsWith('ART')) return { categoria: 'Brazo articulado', icono: '🌤️' };
-  if (up.startsWith('NEXUS') || up.startsWith('PARAVENTO') || up.startsWith('PARABOX') || up.startsWith('IGLOO') || up.startsWith('NIMBUS')) {
-    return { categoria: 'Vertical', icono: '🔲' };
+  let resultado = { categoria: 'Toldo', icono: '☂️' };
+
+  if (up.includes('BOX') || up.includes('ARES')) {
+    resultado = { categoria: 'Toldo cofre', icono: '🏖️', imagen: '/ares/box6100-foto.png' };
+  } else if (up.startsWith('PL') || up.startsWith('PR') || up.startsWith('TENXO')) {
+    resultado = { categoria: 'Pérgola', icono: '⛱️' };
+  } else if (up.startsWith('STR')) {
+    resultado = { categoria: 'Stor balcón', icono: '🪟' };
+  } else if (up.startsWith('ART')) {
+    resultado = { categoria: 'Brazo articulado', icono: '🌤️' };
+  } else if (up.startsWith('NEXUS') || up.startsWith('PARAVENTO') || up.startsWith('PARABOX') || up.startsWith('IGLOO') || up.startsWith('NIMBUS')) {
+    resultado = { categoria: 'Vertical', icono: '🔲' };
   }
-  return { categoria: 'Toldo', icono: '☂️' };
+  return resultado;
 }
 
 export default function StepElegirModelo({ state, dispatch, setLoading }: Props) {
@@ -82,8 +88,16 @@ export default function StepElegirModelo({ state, dispatch, setLoading }: Props)
               onClick={() => handleSeleccionar(prod.id)}
               className="group w-full p-4 rounded-lg bg-[#faf9f6] hover:bg-white border border-[#e5e1d8] hover:border-[#d4a034] hover:shadow-md transition text-left flex items-center gap-4"
             >
-              <div className="w-14 h-14 rounded-lg bg-white border border-[#e5e1d8] flex items-center justify-center text-2xl shrink-0">
-                {icono}
+              <div className="w-16 h-16 rounded-lg bg-white border border-[#e5e1d8] flex items-center justify-center shrink-0 overflow-hidden">
+                {imagen ? (
+                  <img
+                    src={imagen}
+                    alt={prod.nombre}
+                    className="w-full h-full object-cover"
+                  />
+                ) : (
+                  <div className="text-2xl">{icono}</div>
+                )}
               </div>
               <div className="flex-1 min-w-0">
                 <div className="text-[10px] uppercase tracking-wider text-[#a09a94] font-medium">{categoria}</div>
