@@ -16,6 +16,10 @@ export const metadata: Metadata = {
   title: "TodoSombra — Toldos y pérgolas a medida",
   description:
     "Configura tu toldo o pérgola exactamente como lo quieres y recíbelo en 4 semanas, directo de fábrica.",
+  icons: {
+    icon: "/favicon.ico",
+    apple: "/favicon.png",
+  },
 };
 
 export default function RootLayout({
