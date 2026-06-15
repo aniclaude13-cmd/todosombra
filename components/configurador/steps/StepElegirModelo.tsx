@@ -14,7 +14,7 @@ const eur = (n: number) =>
 
 function categorizarModelo(id: string): { categoria: string; icono: string; imagen?: string } {
   const up = id.toUpperCase();
-  let resultado = { categoria: 'Toldo', icono: '☂️' };
+  let resultado: { categoria: string; icono: string; imagen?: string } = { categoria: 'Toldo', icono: '☂️' };
 
   if (up.includes('BOX') || up.includes('ARES')) {
     resultado = { categoria: 'Toldo cofre', icono: '🏖️', imagen: '/ares/box6100-foto.png' };
