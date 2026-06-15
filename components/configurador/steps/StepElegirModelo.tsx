@@ -81,7 +81,7 @@ export default function StepElegirModelo({ state, dispatch, setLoading }: Props)
 
       <div className="space-y-3">
         {state.compatibles.map((prod) => {
-          const { categoria, icono } = categorizarModelo(prod.id);
+          const { categoria, icono, imagen } = categorizarModelo(prod.id);
           return (
             <button
               key={prod.id}
