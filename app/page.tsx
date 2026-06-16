@@ -333,12 +333,15 @@ export default function Home() {
 
           <div className="grid md:grid-cols-3 gap-4">
             {[
-              { img: '/ares/box6100-foto.png', title: 'BOX6100 - Terraza Mar Menor' },
-              { img: '/ares/box6100-iso.png', title: 'BOX6100 - Render 3D' },
-              { img: '/ares/box6100-foto.png', title: 'BOX6100 - Instalación Cartagena' },
-              { img: '/ares/box6100-iso.png', title: 'Pérgola Motorizada - Mazarrón' },
-              { img: '/ares/box6100-foto.png', title: 'Toldo ARES - Los Alcázares' },
-              { img: '/ares/box6100-iso.png', title: 'Sistema Modular - San Javier' },
+              { img: '/gallery/bioclim-1.jpg', title: 'Pérgola bioclimática — patio' },
+              { img: '/gallery/cofre-2.jpg', title: 'Toldo cofre con LED' },
+              { img: '/gallery/bioclim-2.jpg', title: 'Pérgola bioclimática junto a piscina' },
+              { img: '/gallery/cofre-1.jpg', title: 'Toldo cofre sobre piscina' },
+              { img: '/gallery/pergola-1.jpg', title: 'Pérgola con cubierta decorativa' },
+              { img: '/gallery/cofre-3.jpg', title: 'Toldo cofre con vertical' },
+              { img: '/gallery/bioclim-3.jpg', title: 'Pérgola bioclimática en terraza' },
+              { img: '/gallery/doble-1.jpg', title: 'Toldo doble brazo libre' },
+              { img: '/gallery/pergola-2.jpg', title: 'Pergotenda — cubierta textil' },
             ].map((item, i) => (
               <AnimateIn key={i} delay={i * 70}>
                 <div className="relative h-64 rounded-2xl overflow-hidden border border-[#e5e1d8] bg-gradient-to-br from-[#e5e1d8] to-[#d4d1cc] group cursor-pointer hover:shadow-lg hover:shadow-[#d4a034]/10 transition-all duration-300">
