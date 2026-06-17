@@ -2,6 +2,8 @@ import Link from 'next/link';
 import Image from 'next/image';
 import AnimateIn from '@/components/AnimateIn';
 import StatsBar from '@/components/StatsBar';
+import Gallery from '@/components/Gallery';
+import StickyCTA from '@/components/StickyCTA';
 
 const WHATSAPP = 'https://wa.me/34644592007?text=Hola%2C%20me%20interesa%20un%20toldo%20o%20p%C3%A9rgola';
 
@@ -331,32 +333,7 @@ export default function Home() {
             </div>
           </AnimateIn>
 
-          <div className="grid md:grid-cols-3 gap-4">
-            {[
-              { img: '/gallery/bioclim-1.jpg', title: 'Pérgola bioclimática — patio' },
-              { img: '/gallery/cofre-2.jpg', title: 'Toldo cofre con LED' },
-              { img: '/gallery/bioclim-2.jpg', title: 'Pérgola bioclimática junto a piscina' },
-              { img: '/gallery/cofre-1.jpg', title: 'Toldo cofre sobre piscina' },
-              { img: '/gallery/pergola-1.jpg', title: 'Pérgola con cubierta decorativa' },
-              { img: '/gallery/cofre-3.jpg', title: 'Toldo cofre con vertical' },
-              { img: '/gallery/bioclim-3.jpg', title: 'Pérgola bioclimática en terraza' },
-              { img: '/gallery/doble-1.jpg', title: 'Toldo doble brazo libre' },
-              { img: '/gallery/pergola-2.jpg', title: 'Pergotenda — cubierta textil' },
-            ].map((item, i) => (
-              <AnimateIn key={i} delay={i * 70}>
-                <div className="relative h-64 rounded-2xl overflow-hidden border border-[#e5e1d8] bg-gradient-to-br from-[#e5e1d8] to-[#d4d1cc] group cursor-pointer hover:shadow-lg hover:shadow-[#d4a034]/10 transition-all duration-300">
-                  <Image src={item.img} alt={item.title} fill className="object-cover group-hover:scale-110 transition-transform duration-500" />
-                  <div className="absolute inset-0 bg-gradient-to-t from-[#0d0c0b]/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end justify-start p-4">
-                    <p className="text-white text-sm font-medium">{item.title}</p>
-                  </div>
-                </div>
-              </AnimateIn>
-            ))}
-          </div>
-
-          <div className="mt-8 text-center text-sm text-[#7a756f]">
-            <p>¿Tienes instalaciones que quieras compartir? <a href={WHATSAPP} target="_blank" rel="noopener noreferrer" className="text-[#d4a034] hover:text-[#e8b442] font-medium">Envíalas por WhatsApp →</a></p>
-          </div>
+          <Gallery />
         </div>
       </section>
 
@@ -406,6 +383,7 @@ export default function Home() {
         </div>
       </footer>
 
+      <StickyCTA />
     </main>
   );
 }
