@@ -2,7 +2,7 @@
 
 import { useState } from 'react';
 import { WizardState, WizardAction } from '@/lib/configurador/state';
-import { buscarProductos } from '@/lib/configurador/catalog';
+import { buscarProductos, obtenerCatalogo } from '@/lib/configurador/catalog';
 
 interface Props {
   state: WizardState;
@@ -20,8 +20,12 @@ export default function StepBuscar({ state, dispatch }: Props) {
     }
   };
 
-  const handleSeleccionar = (productoId: string) => {
+  const handleSeleccionar = async (productoId: string) => {
     dispatch({ type: 'SET_PRODUCTO_ID', id: productoId });
+    const cat = await obtenerCatalogo(productoId);
+    if (cat) {
+      dispatch({ type: 'SET_TIPO_BUSQUEDA', tipo: cat.tipo, subtipos: [cat.tipo] });
+    }
     dispatch({ type: 'SET_STEP', step: 'medidas' });
   };
 
