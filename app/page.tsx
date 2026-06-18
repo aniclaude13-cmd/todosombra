@@ -44,7 +44,7 @@ export default function Home() {
 
         {/* Background image */}
         <Image
-          src="/hero-toldo.png"
+          src="/hero-toldo.jpg"
           alt="Toldo en terraza"
           fill
           className="object-cover object-right"
