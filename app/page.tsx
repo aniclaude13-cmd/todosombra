@@ -40,7 +40,7 @@ export default function Home() {
     <main className="bg-[#faf9f6] text-[#1a1917]">
 
       {/* ── HERO ─────────────────────────────────────────────── */}
-      <section className="relative min-h-screen bg-[#0d0c0b] overflow-hidden flex flex-col">
+      <section className="relative min-h-screen overflow-hidden flex flex-col">
 
         {/* Background image */}
         <Image
@@ -48,16 +48,16 @@ export default function Home() {
           alt="Toldo en terraza"
           fill
           className="object-cover object-right"
-          style={{ zIndex: -1 }}
+          style={{ zIndex: 0 }}
           priority
           quality={90}
         />
 
         {/* Dark overlay */}
-        <div className="absolute inset-0 bg-gradient-to-r from-[#0d0c0b] via-[#0d0c0b]/80 to-transparent pointer-events-none" style={{ zIndex: 0 }} />
+        <div className="absolute inset-0 bg-gradient-to-r from-[#0d0c0b] via-[#0d0c0b]/80 to-transparent pointer-events-none" style={{ zIndex: 1 }} />
 
         {/* Gradient blobs */}
-        <div className="absolute inset-0 pointer-events-none select-none" style={{ zIndex: 1 }} aria-hidden>
+        <div className="absolute inset-0 pointer-events-none select-none" style={{ zIndex: 2 }} aria-hidden>
           <div
             className="hero-blob absolute rounded-full"
             style={{
