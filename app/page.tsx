@@ -44,19 +44,22 @@ export default function Home() {
       {/* ── HERO ─────────────────────────────────────────────── */}
       <section className="relative min-h-screen overflow-hidden flex flex-col">
 
-        {/* Background image */}
-        <Image
-          src="/hero-toldo.jpg"
-          alt="Toldo en terraza"
-          fill
-          className="object-cover object-right"
-          style={{ zIndex: 0 }}
-          priority
-          quality={90}
-        />
+        {/* Background image with ken-burns */}
+        <div className="absolute inset-0 overflow-hidden" style={{ zIndex: 0 }}>
+          <Image
+            src="/hero-toldo.jpg"
+            alt="Toldo en terraza"
+            fill
+            className="object-cover object-right hero-kenburns"
+            priority
+            quality={90}
+          />
+        </div>
 
         {/* Dark overlay */}
-        <div className="absolute inset-0 bg-gradient-to-r from-[#0d0c0b] via-[#0d0c0b]/80 to-transparent pointer-events-none" style={{ zIndex: 1 }} />
+        <div className="absolute inset-0 bg-gradient-to-r from-[#0d0c0b] via-[#0d0c0b]/80 to-[#0d0c0b]/30 pointer-events-none" style={{ zIndex: 1 }} />
+        {/* Bottom fade for depth */}
+        <div className="absolute inset-x-0 bottom-0 h-40 bg-gradient-to-t from-[#0d0c0b]/70 to-transparent pointer-events-none" style={{ zIndex: 1 }} />
 
         {/* Gradient blobs */}
         <div className="absolute inset-0 pointer-events-none select-none" style={{ zIndex: 2 }} aria-hidden>
@@ -137,6 +140,56 @@ export default function Home() {
             >
               Ver productos
             </a>
+          </div>
+
+          {/* Trust strip */}
+          <div className="hero-trust mt-8 flex items-center justify-center gap-3 text-xs text-white/45">
+            <div className="flex items-center gap-0.5 text-[#d4a034]">
+              {[0, 1, 2, 3, 4].map((i) => (
+                <svg key={i} viewBox="0 0 20 20" fill="currentColor" className="w-3.5 h-3.5">
+                  <path d="M10 1.5l2.6 5.4 5.9.6-4.4 4 1.3 5.8L10 14.4l-5.4 2.9 1.3-5.8-4.4-4 5.9-.6L10 1.5z" />
+                </svg>
+              ))}
+            </div>
+            <span>4.9/5 · Instaladores certificados AWMA</span>
+          </div>
+        </div>
+
+        {/* Floating live-price card (desktop) */}
+        <div
+          className="hero-card hidden lg:flex absolute bottom-12 right-8 xl:right-16 w-[260px] bg-white/95 backdrop-blur-sm rounded-2xl shadow-2xl shadow-black/40 p-4 flex-col gap-3 border border-white/20 float-bob"
+          style={{ zIndex: 10 }}
+        >
+          <div className="flex items-center justify-between">
+            <span className="text-[10px] uppercase tracking-widest text-[#a09a94] font-semibold">
+              Configurando
+            </span>
+            <span className="flex items-center gap-1 text-[10px] text-emerald-600 font-semibold">
+              <span className="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse" />
+              en vivo
+            </span>
+          </div>
+          <div>
+            <div className="text-[11px] text-[#a09a94]">Toldo cofre ARES</div>
+            <div className="font-bold text-[#1a1917] text-sm">4,00 × 3,00 m · RAL 9006</div>
+          </div>
+          <div className="space-y-1 text-[11px] text-[#7a756f] border-t border-[#e5e1d8] pt-2">
+            <div className="flex justify-between">
+              <span>Máquina + tejido</span>
+              <span className="text-[#1a1917]">1.245 €</span>
+            </div>
+            <div className="flex justify-between">
+              <span>Motor Somfy</span>
+              <span className="text-[#1a1917]">335 €</span>
+            </div>
+            <div className="flex justify-between">
+              <span>IVA + instalación</span>
+              <span className="text-[#1a1917]">incluido</span>
+            </div>
+          </div>
+          <div className="flex items-end justify-between border-t border-[#e5e1d8] pt-2">
+            <span className="text-[10px] text-[#a09a94] uppercase tracking-wide">Total</span>
+            <span className="text-xl font-bold text-[#d4a034]">1.580 €</span>
           </div>
         </div>
 

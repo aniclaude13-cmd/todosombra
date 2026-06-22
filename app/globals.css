@@ -80,3 +80,34 @@ body {
 .animate-fade-in {
   animation: fade-in 0.2s ease-out both;
 }
+
+/* Hero ken-burns background */
+@keyframes ken-burns {
+  0%   { transform: scale(1.04) translate3d(0, 0, 0); }
+  50%  { transform: scale(1.10) translate3d(-1.5%, -1%, 0); }
+  100% { transform: scale(1.04) translate3d(0, 0, 0); }
+}
+.hero-kenburns {
+  animation: ken-burns 28s ease-in-out infinite;
+  will-change: transform;
+}
+
+/* Float bob for hero accents */
+@keyframes float-bob {
+  0%, 100% { transform: translateY(0); }
+  50%      { transform: translateY(-8px); }
+}
+.float-bob {
+  animation: float-bob 4.5s ease-in-out infinite;
+}
+.float-bob-slow {
+  animation: float-bob 6s ease-in-out infinite 0.5s;
+}
+
+/* Hero quick reveal for floating card */
+.hero-card {
+  animation: hero-reveal 1s cubic-bezier(0.16, 1, 0.3, 1) 0.85s both;
+}
+.hero-trust {
+  animation: hero-reveal 1s cubic-bezier(0.16, 1, 0.3, 1) 0.95s both;
+}
