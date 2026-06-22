@@ -5,6 +5,7 @@ import StatsBar from '@/components/StatsBar';
 import Gallery from '@/components/Gallery';
 import StickyCTA from '@/components/StickyCTA';
 import ProductsShowcase from '@/components/ProductsShowcase';
+import HowItWorks from '@/components/HowItWorks';
 
 const WHATSAPP = 'https://wa.me/34644592007?text=Hola%2C%20me%20interesa%20un%20toldo%20o%20p%C3%A9rgola';
 
@@ -149,45 +150,7 @@ export default function Home() {
       <StatsBar />
 
       {/* ── CÓMO FUNCIONA ────────────────────────────────────── */}
-      <section className="py-24 px-6">
-        <div className="max-w-5xl mx-auto">
-          <AnimateIn>
-            <div className="text-center mb-16">
-              <h2 className="text-3xl lg:text-4xl font-bold text-[#1a1917]">
-                ¿Cómo funciona?
-              </h2>
-              <p className="mt-3 text-[#7a756f] max-w-lg mx-auto text-base">
-                De la idea al toldo instalado en 4 semanas. Sin sorpresas.
-              </p>
-            </div>
-          </AnimateIn>
-
-          <div className="grid md:grid-cols-4 gap-4">
-            {[
-              { num: '1', icon: '⚙️', title: 'Configura', desc: 'Elige modelo, medidas, color y opciones. El precio se calcula al instante.' },
-              { num: '2', icon: '💰', title: 'Presupuesto', desc: 'Ves el desglose exacto: máquina, motor, tejido, complementos e IVA.' },
-              { num: '3', icon: '✓', title: 'Reserva', desc: 'Confirmas tus datos. Te llamamos para ultimar detalles y visita técnica.' },
-              { num: '4', icon: '🔨', title: 'Instalamos', desc: 'Fabricamos a medida. Instalamos con equipo propio. 10 años de garantía.' },
-            ].map((paso, i) => (
-              <AnimateIn key={paso.num} delay={i * 90}>
-                <div className="relative">
-                  <div className="bg-white rounded-2xl p-6 border border-[#e5e1d8] h-full flex flex-col">
-                    <div className="absolute -top-4 -left-4 w-10 h-10 bg-[#d4a034] rounded-full flex items-center justify-center font-bold text-white text-sm">
-                      {paso.num}
-                    </div>
-                    <div className="text-3xl mb-3 mt-2">{paso.icon}</div>
-                    <div className="font-semibold text-[#1a1917] mb-2">{paso.title}</div>
-                    <p className="text-sm text-[#7a756f] leading-relaxed flex-1">{paso.desc}</p>
-                  </div>
-                  {i < 3 && (
-                    <div className="hidden md:block absolute top-1/2 -right-2 w-4 h-0.5 bg-[#e5e1d8]" />
-                  )}
-                </div>
-              </AnimateIn>
-            ))}
-          </div>
-        </div>
-      </section>
+      <HowItWorks />
 
       {/* ── PRODUCTOS ────────────────────────────────────────── */}
       <section id="productos" className="py-24 px-6">
