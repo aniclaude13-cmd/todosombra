@@ -2,6 +2,7 @@
 
 import { WizardState, WizardAction } from '@/lib/configurador/state';
 import { obtenerCatalogo } from '@/lib/configurador/catalog';
+import { categorizarPorId } from '@/lib/configurador/productImages';
 
 interface Props {
   state: WizardState;
@@ -11,24 +12,6 @@ interface Props {
 
 const eur = (n: number) =>
   new Intl.NumberFormat('es-ES', { style: 'currency', currency: 'EUR', maximumFractionDigits: 0 }).format(n);
-
-function categorizarModelo(id: string): { categoria: string; icono: string; imagen?: string } {
-  const up = id.toUpperCase();
-  let resultado: { categoria: string; icono: string; imagen?: string } = { categoria: 'Toldo', icono: '☂️' };
-
-  if (up.includes('BOX') || up.includes('ARES')) {
-    resultado = { categoria: 'Toldo cofre', icono: '🏖️', imagen: '/ares/box6100-foto.png' };
-  } else if (up.startsWith('PL') || up.startsWith('PR') || up.startsWith('TENXO')) {
-    resultado = { categoria: 'Pérgola', icono: '⛱️' };
-  } else if (up.startsWith('STR')) {
-    resultado = { categoria: 'Stor balcón', icono: '🪟' };
-  } else if (up.startsWith('ART')) {
-    resultado = { categoria: 'Brazo articulado', icono: '🌤️' };
-  } else if (up.startsWith('NEXUS') || up.startsWith('PARAVENTO') || up.startsWith('PARABOX') || up.startsWith('IGLOO') || up.startsWith('NIMBUS')) {
-    resultado = { categoria: 'Vertical', icono: '🔲' };
-  }
-  return resultado;
-}
 
 export default function StepElegirModelo({ state, dispatch, setLoading }: Props) {
   const handleSeleccionar = async (productoId: string) => {
@@ -81,14 +64,14 @@ export default function StepElegirModelo({ state, dispatch, setLoading }: Props)
 
       <div className="space-y-3">
         {state.compatibles.map((prod) => {
-          const { categoria, icono, imagen } = categorizarModelo(prod.id);
+          const { categoria, icono, imagen } = categorizarPorId(prod.id);
           return (
             <button
               key={prod.id}
               onClick={() => handleSeleccionar(prod.id)}
               className="group w-full p-4 rounded-lg bg-[#faf9f6] hover:bg-white border border-[#e5e1d8] hover:border-[#d4a034] hover:shadow-md transition text-left flex items-center gap-4"
             >
-              <div className="w-16 h-16 rounded-lg bg-white border border-[#e5e1d8] flex items-center justify-center shrink-0 overflow-hidden">
+              <div className="w-24 h-16 rounded-lg bg-white border border-[#e5e1d8] flex items-center justify-center shrink-0 overflow-hidden">
                 {imagen ? (
                   <img
                     src={imagen}

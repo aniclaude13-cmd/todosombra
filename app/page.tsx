@@ -4,6 +4,7 @@ import AnimateIn from '@/components/AnimateIn';
 import StatsBar from '@/components/StatsBar';
 import Gallery from '@/components/Gallery';
 import StickyCTA from '@/components/StickyCTA';
+import ProductsShowcase from '@/components/ProductsShowcase';
 
 const WHATSAPP = 'https://wa.me/34644592007?text=Hola%2C%20me%20interesa%20un%20toldo%20o%20p%C3%A9rgola';
 
@@ -190,53 +191,23 @@ export default function Home() {
 
       {/* ── PRODUCTOS ────────────────────────────────────────── */}
       <section id="productos" className="py-24 px-6">
-        <div className="max-w-5xl mx-auto">
+        <div className="max-w-6xl mx-auto">
           <AnimateIn>
             <div className="text-center mb-16">
+              <div className="text-[11px] text-[#d4a034] uppercase tracking-widest font-semibold mb-3">
+                Catálogo AWMA · 28 modelos
+              </div>
               <h2 className="text-3xl lg:text-4xl font-bold text-[#1a1917]">
-                Configura el tuyo
+                Toda la gama, configurable a medida
               </h2>
-              <p className="mt-3 text-[#7a756f] max-w-lg mx-auto text-base">
-                Elige tu producto, ajusta medidas y ve el precio exacto en tiempo real.
+              <p className="mt-3 text-[#7a756f] max-w-xl mx-auto text-base">
+                Toldos cofre, pérgolas, verticales y brazos articulados. Elige el tuyo y
+                obtén el precio exacto en segundos.
               </p>
             </div>
           </AnimateIn>
 
-          <div className="grid md:grid-cols-3 lg:grid-cols-5 gap-4">
-            {[
-              { cat: 'Toldo cofre', nombre: 'ARES', desc: 'El más vendido. Hasta 6 m, manual o motorizado. Sauleda incluido.', img: '/ares/ares-catalog.png' },
-              { cat: 'Toldo cofre', nombre: 'BOX', desc: 'Elegancia y robustez. Sistema modular adaptable a cualquier fachada.', img: '/ares/box-catalog.png' },
-              { cat: 'Pérgola', nombre: 'Palillería 80×40', desc: 'Pérgola de jardín. Fijación pared, portería o autoportante.', img: '/pl7000-catalog.png' },
-              { cat: 'Pérgola motorizada', nombre: 'TENXO', desc: 'Motorizada, moderna. Lamas orientables para control solar.', img: '/tenxo-catalog.png' },
-              { cat: 'Brazo articulado', nombre: 'ART', desc: 'Brazos retráctiles articulados. Máxima flexibilidad de uso.', img: '/art-catalog.png' },
-            ].map((prod, i) => (
-              <AnimateIn key={prod.nombre} delay={i * 70}>
-                <Link
-                  href="/configurador"
-                  className="group block bg-white rounded-2xl border border-[#e5e1d8] overflow-hidden hover:border-[#d4a034] hover:shadow-lg hover:shadow-[#d4a034]/8 transition-all duration-300 h-full flex flex-col"
-                >
-                  <div className="relative h-40 bg-[#f0ede6] overflow-hidden">
-                    <Image src={prod.img} alt={prod.nombre} fill className="object-cover group-hover:scale-105 transition-transform duration-300" />
-                  </div>
-                  <div className="p-6 flex flex-col flex-1">
-                    <div className="text-[10px] text-[#a09a94] uppercase tracking-wider font-medium">
-                      {prod.cat}
-                    </div>
-                    <h3 className="text-lg font-bold text-[#1a1917] mt-2 flex-1">{prod.nombre}</h3>
-                    <p className="text-[#7a756f] mt-2 text-xs leading-relaxed">
-                      {prod.desc}
-                    </p>
-                    <div className="mt-4 flex items-center justify-between">
-                      <span className="text-[9px] text-[#b0aaa4]">A medida</span>
-                      <span className="text-[#d4a034] font-semibold group-hover:translate-x-1 transition-transform inline-block text-sm">
-                        →
-                      </span>
-                    </div>
-                  </div>
-                </Link>
-              </AnimateIn>
-            ))}
-          </div>
+          <ProductsShowcase />
         </div>
       </section>
 
