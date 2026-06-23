@@ -87,7 +87,7 @@ export default function StepElegirModelo({ state, dispatch, setLoading }: Props)
                 <div className="font-semibold text-[#1a1917] truncate">{prod.nombre}</div>
               </div>
               <div className="text-right shrink-0">
-                <div className="text-[10px] text-[#a09a94] uppercase tracking-wide">desde</div>
+                <div className="text-[10px] text-[#a09a94] uppercase tracking-wide">precio</div>
                 <div className="text-lg font-bold text-[#d4a034]">{eur(prod.precio)}</div>
               </div>
               <div className="text-[#d4a034] opacity-0 group-hover:opacity-100 transition shrink-0">→</div>
