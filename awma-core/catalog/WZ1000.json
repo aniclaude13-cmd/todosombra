@@ -1,0 +1,78 @@
+{
+  "id": "WZ1000",
+  "nombre": "WZ1000 A-WIND Máquina",
+  "tipo": "vertical",
+  "version": "2026.1",
+  "fuente": {
+    "abd": "WZ1000.abd",
+    "tarifaPdf": "Tarifa-Awma-PVP-2026.pdf",
+    "paginaTarifa": 218
+  },
+  "dimensiones": {
+    "linea": {
+      "min": 100,
+      "max": 300,
+      "valores": [100, 125, 150, 175, 200, 225, 250, 275, 300],
+      "etiqueta": "línea (ancho)"
+    },
+    "salida": {
+      "min": 100,
+      "max": 300,
+      "valores": [100, 150, 200, 250, 300],
+      "etiqueta": "altura"
+    }
+  },
+  "tarifa": {
+    "matriz": {
+      "100": { "100": 580, "150": 636, "200": 693, "250": 750, "300": 807 },
+      "125": { "100": 622, "150": 679, "200": 736, "250": 793, "300": 849 },
+      "150": { "100": 664, "150": 721, "200": 778, "250": 835, "300": 892 },
+      "175": { "100": 722, "150": 785, "200": 847, "250": 909, "300": 972 },
+      "200": { "100": 765, "150": 827, "200": 889, "250": 952, "300": 1014 },
+      "225": { "100": 807, "150": 869, "200": 932, "250": 994, "300": 1056 },
+      "250": { "100": 865, "150": 933, "200": 1001, "250": 1068, "300": 1136 },
+      "275": { "100": 911, "150": 978, "200": 1046, "250": 1114, "300": 1182 },
+      "300": { "100": 969, "150": 1042, "200": 1115, "250": 1188, "300": 1262 }
+    }
+  },
+  "motores": [
+    {
+      "id": "manual",
+      "nombre": "Máquina + manivela",
+      "recargo": 0,
+      "familia": "manual"
+    }
+  ],
+  "sobreprecios": [],
+  "reglas": [
+    {
+      "id": "linea_min",
+      "descripcion": "Línea mínima del modelo",
+      "efecto": "bloqueo",
+      "mensaje": "Línea mínima del WZ1000 A-WIND Máquina: 100 cm.",
+      "condicion": { "linea": { "lt": 100 } }
+    },
+    {
+      "id": "linea_max",
+      "descripcion": "Línea máxima del modelo",
+      "efecto": "bloqueo",
+      "mensaje": "Línea máxima del WZ1000 A-WIND Máquina: 300 cm.",
+      "condicion": { "linea": { "gt": 300 } }
+    },
+    {
+      "id": "altura_min",
+      "descripcion": "Altura/salida mínima del modelo",
+      "efecto": "bloqueo",
+      "mensaje": "Altura mínima del WZ1000 A-WIND Máquina: 100 cm.",
+      "condicion": { "salida": { "lt": 100 } }
+    },
+    {
+      "id": "altura_max",
+      "descripcion": "Altura/salida máxima del modelo",
+      "efecto": "bloqueo",
+      "mensaje": "Altura máxima del WZ1000 A-WIND Máquina: 300 cm.",
+      "condicion": { "salida": { "gt": 300 } }
+    }
+  ],
+  "descripcion": "A-WIND. Vertical con cajón registrable y sistema ZIP, accionamiento manual con máquina + manivela. Tubo Ø85/Ø100 según línea."
+}
