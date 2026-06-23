@@ -894,10 +894,9 @@ async def medidas_busqueda(update: Update, ctx: ContextTypes.DEFAULT_TYPE) -> in
 
         lineas_msg.append(f"\n{icono} *{i}. {nombre_con_aviso}*")
         lineas_msg.append(f"   💶 Precio: {precio_txt}")
+        lineas_msg.append(f"   📏 Línea: {linea_rango}")
         if salida_info:
-            lineas_msg.append(f"   📏 {salida_info}")
-        else:
-            lineas_msg.append(f"   📏 Línea: {linea_rango}")
+            lineas_msg.append(f"   📐 {salida_info}")
         teclado.append([p["nombre"]])
 
     lineas_msg.append("\n👇 *Elige el que más te guste:*")
@@ -933,10 +932,13 @@ async def comparar_modelos(update: Update, ctx: ContextTypes.DEFAULT_TYPE) -> in
         for i, (p, precio) in enumerate(compatibles, 1):
             precio_txt = f"*{precio:,.0f} €*" if precio else "consultar"
             rango = rango_lineas(p)
+            salida_info = salidas_para_linea(p, linea)
             icono = "🏅" if i == 1 else "✨" if i <= 3 else "📌"
             lineas_msg.append(f"\n{icono} *{i}. {p['nombre']}*")
             lineas_msg.append(f"   💶 Precio: {precio_txt}")
             lineas_msg.append(f"   📏 Línea: {rango}")
+            if salida_info:
+                lineas_msg.append(f"   📐 {salida_info}")
             teclado.append([p["nombre"]])
 
         lineas_msg.append("\n👇 *Elige el que más te guste:*")
