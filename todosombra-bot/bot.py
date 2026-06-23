@@ -126,27 +126,24 @@ COLORES_SAULEDA_PLAINS = {
     c.lower() for colores in CATEGORIAS_SAULEDA.values() for c in colores
 }
 
-# Mapeo opción visible → filtro {tipo, subtipos}
-# Si subtipos es None, no se filtra por subtipo (acepta cualquiera dentro de tipo).
-# Si subtipos es una lista, sólo se aceptan productos con subtipo en la lista.
+# Mapeo opción visible → filtro {tipos: [...]}
+# `tipos` es una lista de valores de `tipo` aceptados en el JSON de productos.
 TIPOS_PRODUCTO = {
     "🌅 Toldo de terraza": {
-        "tipo": "toldo",
-        "subtipos": ["terraza_cofre", "terraza_brazo", "terraza_monoblock"],
+        "tipos": ["toldo_brazo", "toldo_cofre"],
     },
     "🪟 Toldo de balcón / ventana": {
-        "tipo": "toldo",
-        "subtipos": ["stor_balcon", "punto_recto"],
+        "tipos": ["toldo_punto_recto", "toldo_punto_recto_cofre"],
     },
-    "🏠 Toldo veranda (techo cristal)": {
-        "tipo": "toldo",
-        "subtipos": ["veranda"],
+    "🎪 Pérgola / TENXO": {
+        "tipos": ["pergola"],
     },
-    "🌞 Pérgola bioclimática (lamas)": {"tipo": "pérgola", "subtipos": ["bioclimatica"]},
-    "🏠 Pérgola panel sándwich (techo rígido)": {"tipo": "pérgola", "subtipos": ["panel_sandwich"]},
-    "🪢 Pérgola lona tensada": {"tipo": "pérgola", "subtipos": ["lona_tensada"]},
-    "🎪 Pérgola con tejido": {"tipo": "pérgola", "subtipos": ["tejido"]},
-    "🌬️ Toldos verticales": {"tipo": "vertical", "subtipos": None},
+    "🌬️ Toldos verticales / cortavientos": {
+        "tipos": ["vertical"],
+    },
+    "🏛️ Palillería": {
+        "tipos": ["palilleria"],
+    },
 }
 
 # Subtipos que NO se ofrecen en el filtro automático por medidas
@@ -513,18 +510,24 @@ def precio_color(precio_base: float, grupo: str, tipo_color: str, datos: dict) -
 def filtrar_por_tipo_y_medidas(filtro, linea_cm: int, salida_cm: int, datos: dict) -> list:
     """Devuelve lista de (producto, precio) compatibles con las medidas, ordenados por precio.
 
-    `filtro` puede ser un string (tipo) por compatibilidad o un dict {tipo, subtipos}.
+    `filtro` puede ser:
+      - un string: un único `tipo` aceptado
+      - un dict {tipos: [...]}: lista de `tipo` aceptados (nuevo formato)
+      - un dict {tipo: "...", subtipos: [...]}: legacy, todavía soportado
     """
     if isinstance(filtro, str):
-        tipo = filtro
+        tipos_permitidos = {filtro}
+        subtipos_permitidos = None
+    elif "tipos" in filtro:
+        tipos_permitidos = set(filtro["tipos"])
         subtipos_permitidos = None
     else:
-        tipo = filtro.get("tipo")
+        tipos_permitidos = {filtro.get("tipo")}
         subtipos_permitidos = filtro.get("subtipos")
 
     resultados = []
     for p in datos["productos"]:
-        if p.get("tipo") != tipo:
+        if p.get("tipo") not in tipos_permitidos:
             continue
         if p["id"] in EXCLUIDOS_BUSQUEDA:
             continue
@@ -532,8 +535,6 @@ def filtrar_por_tipo_y_medidas(filtro, linea_cm: int, salida_cm: int, datos: dic
         if sub in SUBTIPOS_EXCLUIDOS_BUSQUEDA:
             continue
         if subtipos_permitidos is not None and sub not in subtipos_permitidos:
-            continue
-        if p.get("grupo_color") is None:
             continue
         pw = p.get("precios_por_ancho")
         if not pw or (isinstance(pw, dict) and "estimado" in pw):
@@ -809,7 +810,10 @@ async def medidas_busqueda(update: Update, ctx: ContextTypes.DEFAULT_TYPE) -> in
     compatibles = filtrar_por_tipo_y_medidas(tipo, linea, salida, datos)
 
     if not compatibles:
-        tipo_txt = tipo.get("tipo") if isinstance(tipo, dict) else tipo
+        if isinstance(tipo, dict):
+            tipo_txt = ",".join(tipo.get("tipos") or [tipo.get("tipo") or "?"])
+        else:
+            tipo_txt = tipo
         ctx.user_data["motivo_derivacion"] = f"Sin modelo compatible: {tipo_txt} {linea}×{salida}cm"
 
         alternativa = buscar_alternativa_modular(tipo, linea, salida, datos)
