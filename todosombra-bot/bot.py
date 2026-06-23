@@ -606,6 +606,28 @@ def rango_lineas(producto: dict) -> str:
         return f"{lineas[0]}–{lineas[-1]} cm"
     return "consultar"
 
+def salidas_para_linea(producto: dict, linea_cm: int) -> str:
+    """Devuelve las salidas disponibles para una línea específica.
+
+    Ej: "Salida: 125–250 cm" o "Salida: solo 250 cm"
+    """
+    pw = producto.get("precios_por_ancho", {})
+    if not pw:
+        return ""
+
+    salida_data = pw.get(str(linea_cm))
+    if not salida_data:
+        return ""
+
+    if isinstance(salida_data, dict):
+        salidas = _int_keys(salida_data)
+        if salidas:
+            if len(salidas) == 1:
+                return f"Salida: {salidas[0]} cm"
+            return f"Salida: {salidas[0]}–{salidas[-1]} cm"
+
+    return ""
+
 def es_palilleria(producto: dict) -> bool:
     """Detecta si el producto es una palillería (PL7000, PL7010, etc.)"""
     pid = producto.get("id", "").upper()
@@ -850,7 +872,8 @@ async def medidas_busqueda(update: Update, ctx: ContextTypes.DEFAULT_TYPE) -> in
     teclado = []
     for i, (p, precio) in enumerate(opciones_a_mostrar, 1):
         precio_txt = f"*{precio:,.0f} €*" if precio else "consultar"
-        rango = rango_lineas(p)
+        linea_rango = rango_lineas(p)
+        salida_info = salidas_para_linea(p, linea)
         icono = "🏅" if i == 1 else "✨" if i <= 3 else "📌"
 
         aviso = verificar_si_es_exacto_o_acoplado(p, linea)
@@ -860,7 +883,10 @@ async def medidas_busqueda(update: Update, ctx: ContextTypes.DEFAULT_TYPE) -> in
 
         lineas_msg.append(f"\n{icono} *{i}. {nombre_con_aviso}*")
         lineas_msg.append(f"   💶 Precio: {precio_txt}")
-        lineas_msg.append(f"   📏 Línea: {rango}")
+        if salida_info:
+            lineas_msg.append(f"   📏 {salida_info}")
+        else:
+            lineas_msg.append(f"   📏 Línea: {linea_rango}")
         teclado.append([p["nombre"]])
 
     lineas_msg.append("\n👇 *Elige el que más te guste:*")
