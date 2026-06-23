@@ -871,9 +871,9 @@ async def medidas_busqueda(update: Update, ctx: ContextTypes.DEFAULT_TYPE) -> in
     opciones_a_mostrar = compatibles if mostrar_todas else compatibles[:6]
 
     if mostrar_todas:
-        header = f"📋 *Todas las {len(compatibles)} opciones* para {linea} cm ancho × {salida} cm sobresale:\n"
+        header = f"📋 *Todas las {len(compatibles)} opciones*\n• Línea: {linea} cm\n• Salida: {salida} cm\n"
     else:
-        header = f"💰 *Las 6 opciones más económicas* para {linea} cm ancho × {salida} cm sobresale:\n"
+        header = f"💰 *Las 6 opciones más económicas*\n• Línea: {linea} cm\n• Salida: {salida} cm\n"
 
     lineas_msg = [header]
     teclado = []
