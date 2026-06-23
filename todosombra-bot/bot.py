@@ -575,10 +575,17 @@ def filtrar_por_tipo_y_medidas(filtro, linea_cm: int, salida_cm: int, datos: dic
 
         precio = calcular_precio(p, linea_cm, salida_cm)
         if precio is not None:
-            resultados.append((p, precio))
+            # Calcular si es exacto o requiere acoplado
+            pw = p.get("precios_por_ancho", {})
+            lineas_exactas = _int_keys(pw) if pw else []
+            es_exacto = (linea_cm in lineas_exactas)
 
-    resultados.sort(key=lambda x: x[1] if x[1] is not None else 999999)
-    return resultados
+            resultados.append((p, precio, es_exacto))
+
+    # Ordenar: primero exactos, luego por precio
+    resultados.sort(key=lambda x: (not x[2], x[1] if x[1] is not None else 999999))
+    # Remover el flag de exactitud antes de devolver
+    return [(p, precio) for p, precio, _ in resultados]
 
 def buscar_alternativa_modular(filtro, linea_cm: int, salida_cm: int, datos: dict, max_modulos: int = 3):
     """Si las medidas no entran en un solo brazo, prueba a dividir la línea en N módulos.
