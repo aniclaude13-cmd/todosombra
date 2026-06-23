@@ -440,6 +440,24 @@ def calcular_precio_con_variante(
         return calcular_precio(producto, linea_cm, salida_cm), None
 
 
+def verificar_si_es_exacto_o_acoplado(producto: dict, linea_cm: int) -> str:
+    """Verifica si una línea específica es exacta (en tabla) o requiere acoplado.
+
+    Devuelve "" si es exacta, o "⚠️ Acoplado" si requiere módulos.
+    """
+    pw = producto.get("precios_por_ancho", {})
+    if not pw:
+        return ""
+
+    lineas_exactas = _int_keys(pw)
+    if linea_cm in lineas_exactas:
+        return ""  # es exacta
+
+    # Está fuera de tabla exacta, probablemente requiera acoplado
+    if linea_cm > max(lineas_exactas):
+        return "⚠️ Acoplado"
+    return ""
+
 def intentar_acoplado(producto: dict, linea_cm: int, salida_cm: int) -> tuple[Optional[float], Optional[dict]]:
     """Cuando la medida pedida está fuera de tabla por línea > max, intenta resolver
     con módulos iguales acoplados. Delega al motor core; si éste lo resuelve, devuelve
@@ -834,7 +852,13 @@ async def medidas_busqueda(update: Update, ctx: ContextTypes.DEFAULT_TYPE) -> in
         precio_txt = f"*{precio:,.0f} €*" if precio else "consultar"
         rango = rango_lineas(p)
         icono = "🏅" if i == 1 else "✨" if i <= 3 else "📌"
-        lineas_msg.append(f"\n{icono} *{i}. {p['nombre']}*")
+
+        aviso = verificar_si_es_exacto_o_acoplado(p, linea)
+        nombre_con_aviso = p['nombre']
+        if aviso:
+            nombre_con_aviso += f" {aviso}"
+
+        lineas_msg.append(f"\n{icono} *{i}. {nombre_con_aviso}*")
         lineas_msg.append(f"   💶 Precio: {precio_txt}")
         lineas_msg.append(f"   📏 Línea: {rango}")
         teclado.append([p["nombre"]])
