@@ -64,7 +64,7 @@ export default function ProductsShowcase() {
               {productos.map((prod, i) => (
                 <AnimateIn key={prod.id} delay={Math.min(i * 50, 350)}>
                   <Link
-                    href="/configurador"
+                    href={`/producto/${prod.id}`}
                     className="group block bg-white rounded-xl border border-[#e5e1d8] overflow-hidden hover:border-[#d4a034] hover:shadow-lg hover:shadow-[#d4a034]/10 transition-all duration-300 h-full"
                   >
                     <div className="relative aspect-[4/3] bg-[#f0ede6] overflow-hidden">

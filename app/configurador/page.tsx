@@ -1,5 +1,5 @@
 import { Metadata } from 'next';
-import ConfiguradorWizard from '@/components/configurador/ConfiguradorWizard';
+import ConfiguradorWrapper from '@/components/configurador/ConfiguradorWrapper';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 
@@ -23,7 +23,7 @@ export default function ConfiguradorPage() {
           aria-hidden
         />
         <div className="relative">
-          <ConfiguradorWizard />
+          <ConfiguradorWrapper />
         </div>
       </main>
       <Footer />

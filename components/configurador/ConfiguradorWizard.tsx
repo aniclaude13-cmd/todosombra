@@ -1,7 +1,9 @@
 'use client';
 
-import { useReducer, useState } from 'react';
+import { useReducer, useState, useEffect } from 'react';
+import { useSearchParams } from 'next/navigation';
 import { INITIAL_STATE, wizardReducer } from '@/lib/configurador/state';
+import { obtenerProductoDetail } from '@/lib/product-details';
 import WizardHeader from './WizardHeader';
 import StepMenu from './steps/StepMenu';
 import StepBuscar from './steps/StepBuscar';
@@ -18,8 +20,23 @@ import StepDatosCliente from './steps/StepDatosCliente';
 import StepCierre from './steps/StepCierre';
 
 export default function ConfiguradorWizard() {
+  const searchParams = useSearchParams();
   const [state, dispatch] = useReducer(wizardReducer, INITIAL_STATE);
   const [loading, setLoading] = useState(false);
+
+  useEffect(() => {
+    const productoId = searchParams.get('producto');
+    if (productoId) {
+      const detail = obtenerProductoDetail(productoId);
+      if (detail) {
+        // Preseleccionar producto y saltar a medidas
+        dispatch({ type: 'SET_PRODUCTO_ID', id: productoId });
+        dispatch({ type: 'SET_RUTA', ruta: 'tipo' });
+        dispatch({ type: 'SET_STEP', step: 'medidas' });
+      }
+    }
+  }, [searchParams]);
+
 
   const renderStep = () => {
     switch (state.step) {
