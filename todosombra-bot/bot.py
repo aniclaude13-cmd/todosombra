@@ -1610,6 +1610,7 @@ async def mostrar_resumen(update: Update, ctx: ContextTypes.DEFAULT_TYPE) -> int
             )
 
     lineas_resumen.extend([
+        f"\n🔧 _Precio sin instalación. Si quieres que te lo montemos, lo confirmamos en la visita gratuita._",
         f"\n_Precio orientativo. El técnico confirma las medidas y cierra el presupuesto final, sin compromiso._",
     ])
 
@@ -1894,6 +1895,9 @@ def _construir_desglose_completo(ctx) -> str:
         for c in extras_a_consultar:
             lineas.append(f"• {c['nombre']}")
 
+    lineas.append(
+        "\n🔧 _Precio sin instalación. Si quieres que te lo montemos, lo confirmamos en la visita gratuita._"
+    )
     lineas.append(
         "\n_Precio orientativo. El técnico confirma las medidas y cierra el presupuesto final, sin compromiso._"
     )
