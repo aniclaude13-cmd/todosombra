@@ -1,4 +1,5 @@
 import { calcular, type Catalogo } from '@/awma-core/ts/engine';
+import { calcularInstalacion, type InstalacionResultado } from '@/awma-core/ts/instalacion';
 
 import ART4100 from '@/awma-core/catalog/ART4100.json';
 import ART4110 from '@/awma-core/catalog/ART4110.json';
@@ -137,6 +138,15 @@ export async function filtrarPorMedidas(
   compatibles.sort((a, b) => a.precio - b.precio);
 
   return compatibles.slice(0, 6);
+}
+
+export async function calcularInstalacionProducto(
+  productoId: string,
+  motor?: string | null
+): Promise<InstalacionResultado | null> {
+  const cat = await obtenerCatalogo(productoId);
+  if (!cat) return null;
+  return calcularInstalacion({ tipoProducto: cat.tipo, motor });
 }
 
 export async function calcularPrecioProducto(

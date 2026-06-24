@@ -2,7 +2,8 @@
 
 import { useEffect, useState } from 'react';
 import { WizardState, WizardAction } from '@/lib/configurador/state';
-import { calcularPrecioProducto } from '@/lib/configurador/catalog';
+import { calcularPrecioProducto, calcularInstalacionProducto } from '@/lib/configurador/catalog';
+import type { InstalacionResultado } from '@/awma-core/ts/instalacion';
 
 interface Props {
   state: WizardState;
@@ -18,6 +19,7 @@ export default function StepResumen({ state, dispatch }: Props) {
     desglose: Array<{ concepto: string; importe: number }>;
     avisos: Array<{ reglaId: string; mensaje: string }>;
   } | null>(null);
+  const [instalacion, setInstalacion] = useState<InstalacionResultado | null>(null);
 
   useEffect(() => {
     if (state.productoId && state.linea && state.salida) {
@@ -44,6 +46,7 @@ export default function StepResumen({ state, dispatch }: Props) {
           });
         }
       });
+      calcularInstalacionProducto(state.productoId, state.motor).then(setInstalacion);
     }
   }, [state.productoId, state.linea, state.salida, state.motor, state.variantePL]);
 
@@ -55,11 +58,14 @@ export default function StepResumen({ state, dispatch }: Props) {
     );
   }
 
-  const subtotal = precio.pvpUnitario + state.complementos.reduce((s, c) => s + (c.precio || 0), 0);
+  const precioInstalacion = state.incluirInstalacion && instalacion ? instalacion.precioTotal : 0;
+  const subtotal =
+    precio.pvpUnitario + state.complementos.reduce((s, c) => s + (c.precio || 0), 0) + precioInstalacion;
   const iva = subtotal * 0.21;
   const total = subtotal + iva;
 
   const avisoAcoplado = precio.avisos.find((a) => a.reglaId === 'acoplado');
+  const instalacionDisponible = !!instalacion && instalacion.precioBase > 0;
 
   return (
     <div className="bg-white rounded-xl shadow-sm border border-[#e5e1d8] p-6">
@@ -94,7 +100,38 @@ export default function StepResumen({ state, dispatch }: Props) {
             <span className="text-[#1a1917]">{comp.precio ? eur(comp.precio) : 'A consultar'}</span>
           </div>
         ))}
+        {state.incluirInstalacion && instalacion && (
+          <>
+            <div className="flex justify-between pt-2 border-t border-[#e5e1d8]">
+              <span className="text-[#7a756f]">+ Instalación (orientativa)</span>
+              <span className="text-[#1a1917]">{eur(instalacion.precioBase)}</span>
+            </div>
+            {instalacion.suplementos.map((s, i) => (
+              <div key={`sup-${i}`} className="flex justify-between text-xs">
+                <span className="text-[#a09a94]">↳ {s.concepto}</span>
+                <span className="text-[#7a756f]">{eur(s.importe)}</span>
+              </div>
+            ))}
+          </>
+        )}
       </div>
+
+      {instalacionDisponible && (
+        <label className="flex items-start gap-3 mb-4 p-3 bg-[#faf9f6] rounded-lg cursor-pointer hover:bg-[#f3efe6] transition">
+          <input
+            type="checkbox"
+            checked={state.incluirInstalacion}
+            onChange={(e) => dispatch({ type: 'SET_INSTALACION', incluir: e.target.checked })}
+            className="mt-1 accent-[#d4a034]"
+          />
+          <div className="text-sm">
+            <div className="font-medium text-[#1a1917]">Quiero incluir instalación</div>
+            <div className="text-xs text-[#7a756f] mt-0.5">
+              Precio orientativo: {eur(instalacion!.precioTotal)} · Sujeto a visita técnica gratuita.
+            </div>
+          </div>
+        </label>
+      )}
 
       <div className="border-t border-[#e5e1d8] pt-4 space-y-1 text-sm">
         <div className="flex justify-between text-[#7a756f]">
@@ -110,7 +147,9 @@ export default function StepResumen({ state, dispatch }: Props) {
           <span>{eur(total)}</span>
         </div>
         <p className="text-xs text-[#7a756f] italic mt-3">
-          🔧 Precio sin instalación. Si quieres que te lo montemos, lo confirmamos en la visita gratuita.
+          {state.incluirInstalacion
+            ? '🔧 La instalación es orientativa; el precio definitivo se confirma tras la visita técnica gratuita.'
+            : '🔧 Precio sin instalación. Marca la casilla si quieres que te la incluyamos como orientativa.'}
         </p>
       </div>
 

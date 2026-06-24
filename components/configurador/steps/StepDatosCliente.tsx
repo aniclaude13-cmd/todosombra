@@ -40,6 +40,7 @@ export default function StepDatosCliente({ state, dispatch, setLoading }: Props)
           colorTela: state.colorTela,
           complementos: state.complementos,
           precioTotal: state.precioTotal,
+          incluirInstalacion: state.incluirInstalacion,
         }),
       });
 

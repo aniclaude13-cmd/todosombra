@@ -1,5 +1,6 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { calcular, type Catalogo } from '@/awma-core/ts/engine';
+import { calcularInstalacion } from '@/awma-core/ts/instalacion';
 import BOX6100_ARES_JSON from '@/awma-core/catalog/BOX6100_ARES.json';
 import { enviarQuoteAlOwner, enviarQuoteAlCliente } from '@/lib/email-service';
 import { notificarQuoteGenerada, enviarMensajeWhatsApp } from '@/lib/webhook-service';
@@ -21,6 +22,9 @@ export interface QuoteRequest {
   clienteEmail?: string;
   clienteWhatsapp?: string;
   referencia?: string;
+  incluirInstalacion?: boolean;
+  kmDesdeOrigen?: number;
+  veleta?: boolean;
 }
 
 export interface QuoteResponse {
@@ -35,6 +39,14 @@ export interface QuoteResponse {
     detalleRecargos: { desc: string; precio: number }[];
     precioTotal: number;
     cliente?: string;
+    instalacion?: {
+      servicio: string | null;
+      precioBase: number;
+      suplementos: { concepto: string; importe: number }[];
+      precioTotal: number;
+      disclaimer: string;
+    };
+    precioTotalConInstalacion?: number;
   };
   error?: string;
 }
@@ -79,6 +91,19 @@ export async function POST(request: NextRequest): Promise<NextResponse<QuoteResp
     const precioMaquina = maquina?.importe ?? resultado.pvpBase;
     const detalleRecargos = recargos.map((d) => ({ desc: d.concepto, precio: d.importe }));
 
+    // Calcular instalación si se solicita
+    let instalacion = undefined;
+    let precioTotalConInstalacion = resultado.pvpTotal;
+    if (body.incluirInstalacion) {
+      instalacion = calcularInstalacion({
+        tipoProducto: catalogo.tipo,
+        motor: body.motor && body.motor !== 'ninguno' ? body.motor : undefined,
+        kmDesdeOrigen: body.kmDesdeOrigen,
+        veleta: body.veleta,
+      });
+      precioTotalConInstalacion += instalacion.precioTotal;
+    }
+
     const quoteId = `QUOTE-${Date.now()}-${Math.random().toString(36).substr(2, 9)}`;
 
     const response: QuoteResponse = {
@@ -93,6 +118,7 @@ export async function POST(request: NextRequest): Promise<NextResponse<QuoteResp
         detalleRecargos,
         precioTotal: resultado.pvpTotal,
         cliente: body.clienteNombre,
+        ...(instalacion && { instalacion, precioTotalConInstalacion }),
       },
     };
 

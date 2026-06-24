@@ -1,0 +1,63 @@
+{
+  "version": "2026.1",
+  "fuente": "Tarifa interna TodoSombra/Tecnitoldo (orientativa)",
+  "moneda": "EUR",
+  "disclaimer": "Precios orientativos sujetos a visita técnica. Zona base: Mar Menor / Costa de Murcia.",
+  "condicionPresupuesto": "Desplazamiento: +0,50 €/km cuando la instalación supere los 25 km del centro asignado.",
+  "servicios": {
+    "cambio_lona_simple": 167.50,
+    "cambio_lona_cofre": 210.00,
+    "toldo_punto_recto": 182.50,
+    "brazo_invisible_manual": 210.00,
+    "brazo_invisible_motor": 250.00,
+    "monoblock_manual": 215.00,
+    "monoblock_motor": 255.00,
+    "cofre_semicofre_manual": 267.50,
+    "cofre_semicofre_motor": 310.00,
+    "veranda": 375.00,
+    "corredero_40x40_manual": 250.00,
+    "corredero_motor": 425.00,
+    "pergola_corredera_textil_t1": 550.00,
+    "pergola_bioclimatica_t1": 950.00,
+    "porteria_pergola_1a": 197.50,
+    "porteria_pergola_2a": 225.00,
+    "desmontaje": 72.50,
+    "tejadillo": 150.00,
+    "veleta_suplemento": 25.00
+  },
+  "mapeoTipoProducto": {
+    "toldo_cofre": {
+      "manual": "cofre_semicofre_manual",
+      "motor": "cofre_semicofre_motor"
+    },
+    "toldo_punto_recto_cofre": {
+      "manual": "cofre_semicofre_manual",
+      "motor": "cofre_semicofre_motor"
+    },
+    "toldo_brazo": {
+      "manual": "brazo_invisible_manual",
+      "motor": "brazo_invisible_motor"
+    },
+    "toldo_punto_recto": {
+      "manual": "toldo_punto_recto",
+      "motor": "toldo_punto_recto"
+    },
+    "vertical": {
+      "manual": "monoblock_manual",
+      "motor": "monoblock_motor"
+    },
+    "pergola": {
+      "manual": "pergola_corredera_textil_t1",
+      "motor": "pergola_bioclimatica_t1"
+    },
+    "palilleria": {
+      "manual": "tejadillo",
+      "motor": "tejadillo"
+    }
+  },
+  "zonaBase": {
+    "origen": "San Pedro del Pinatar",
+    "kmIncluidos": 25,
+    "precioKmExtra": 0.50
+  }
+}

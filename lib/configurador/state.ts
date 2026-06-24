@@ -55,6 +55,7 @@ export interface WizardState {
   // Complementos y datos
   complementos: Complemento[];
   cliente: Partial<ClienteData>;
+  incluirInstalacion: boolean;
 
   // Metadata
   precioBase: number;
@@ -86,6 +87,7 @@ export const INITIAL_STATE: WizardState = {
 
   complementos: [],
   cliente: {},
+  incluirInstalacion: false,
 
   precioBase: 0,
   precioTotal: 0,
@@ -111,6 +113,7 @@ export type WizardAction =
   | { type: 'ADD_COMPLEMENTO'; complemento: Complemento }
   | { type: 'REMOVE_COMPLEMENTO'; index: number }
   | { type: 'SET_CLIENTE'; cliente: Partial<ClienteData> }
+  | { type: 'SET_INSTALACION'; incluir: boolean }
   | { type: 'SET_PRECIO'; precioBase: number; precioTotal: number; desglose: Array<{ concepto: string; importe: number }>; avisos: Array<{ reglaId: string; mensaje: string }> }
   | { type: 'RESET' };
 
@@ -150,6 +153,8 @@ export function wizardReducer(state: WizardState, action: WizardAction): WizardS
       return { ...state, complementos: state.complementos.filter((_, i) => i !== action.index) };
     case 'SET_CLIENTE':
       return { ...state, cliente: action.cliente };
+    case 'SET_INSTALACION':
+      return { ...state, incluirInstalacion: action.incluir };
     case 'SET_PRECIO':
       return {
         ...state,
