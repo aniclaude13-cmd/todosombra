@@ -109,6 +109,9 @@ export default function StepResumen({ state, dispatch }: Props) {
           <span>Total</span>
           <span>{eur(total)}</span>
         </div>
+        <p className="text-xs text-[#7a756f] italic mt-3">
+          🔧 Precio sin instalación. Si quieres que te lo montemos, lo confirmamos en la visita gratuita.
+        </p>
       </div>
 
       <div className="mt-6 space-y-3">
