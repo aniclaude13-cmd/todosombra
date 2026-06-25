@@ -22,7 +22,7 @@ export default function Footer() {
                   📞 +34 644 592 007
                 </a>
               </li>
-              <li className="text-[#7a7a7a]">Mar Menor, Murcia</li>
+              <li className="text-[#7a7a7a]">Murcia · Levante · Cataluña · Madrid</li>
               <li className="text-[#7a7a7a] text-xs pt-2">Respuesta de lunes a viernes</li>
             </ul>
           </div>

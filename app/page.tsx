@@ -21,20 +21,19 @@ const features = [
     desc: 'Producto AWMA, el mismo que instalan los profesionales. Sin intermediarios ni sobrecostes.',
   },
   {
-    icon: '📍',
-    title: 'Instalador local',
-    desc: 'Equipo propio en el Mar Menor y la costa de Murcia. Somos de aquí.',
+    icon: '🌐',
+    title: 'Red de instaladores',
+    desc: 'Equipos certificados en Murcia, Alicante, Valencia, Tarragona y Madrid.',
   },
   {
     icon: '🛡️',
-    title: 'Garantía de 10 años',
-    desc: 'Materiales de primera, instalación profesional, respaldo real detrás de cada toldo.',
+    title: '3 años de garantía',
+    desc: 'Garantía TodoSombra en instalación, más la garantía de fábrica AWMA en estructura.',
   },
 ];
 
-const municipios = [
-  'Mar Menor', 'Los Alcázares', 'San Pedro del Pinatar', 'San Javier',
-  'La Manga', 'Cartagena', 'Mazarrón', 'Águilas',
+const provincias = [
+  'Murcia', 'Alicante', 'Valencia', 'Tarragona', 'Madrid',
 ];
 
 export default function Home() {
@@ -114,7 +113,7 @@ export default function Home() {
         <div className="relative flex-1 flex flex-col items-center justify-center text-center px-6 pb-10" style={{ zIndex: 10 }}>
           <div className="hero-badge inline-flex items-center gap-2 text-xs text-[#d4a034]/70 uppercase tracking-widest mb-8 border border-[#d4a034]/20 rounded-full px-5 py-1.5">
             <span className="w-1.5 h-1.5 rounded-full bg-[#d4a034] animate-pulse" />
-            Mar Menor · Costa de Murcia
+            Murcia · Alicante · Valencia · Tarragona · Madrid
           </div>
 
           <h1 className="hero-title text-4xl sm:text-5xl lg:text-[4.5rem] font-bold text-white leading-[1.08] tracking-tight max-w-4xl">
@@ -211,7 +210,7 @@ export default function Home() {
           <AnimateIn>
             <div className="text-center mb-16">
               <div className="text-[11px] text-[#d4a034] uppercase tracking-widest font-semibold mb-3">
-                Catálogo AWMA · 28 modelos
+                Catálogo AWMA · +50 modelos
               </div>
               <h2 className="text-3xl lg:text-4xl font-bold text-[#1a1917]">
                 Toda la gama, configurable a medida
@@ -258,13 +257,13 @@ export default function Home() {
                 Zona de instalación
               </div>
               <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">
-                Cubrimos toda la costa
+                Instalamos en 5 provincias
               </h2>
               <p className="text-white/40 mb-10 max-w-md mx-auto text-sm leading-relaxed">
-                Instalación profesional con equipo propio en el Mar Menor y la costa sur de Murcia.
+                Red de instaladores certificados AWMA en Murcia, Comunidad Valenciana, Cataluña y Madrid.
               </p>
               <div className="flex flex-wrap justify-center gap-2.5">
-                {municipios.map((loc) => (
+                {provincias.map((loc) => (
                   <span
                     key={loc}
                     className="bg-white/8 text-white/60 text-sm px-4 py-1.5 rounded-full border border-white/10 hover:bg-white/12 hover:text-white/80 transition"
@@ -315,7 +314,7 @@ export default function Home() {
                 Instalaciones reales
               </h2>
               <p className="mt-3 text-[#7a756f] max-w-lg mx-auto text-base">
-                Nuestros trabajos en terrazas, pérgolas y jardines de la costa de Murcia.
+                Nuestros trabajos en terrazas, pérgolas y jardines del Levante y Madrid.
               </p>
             </div>
           </AnimateIn>
@@ -334,7 +333,7 @@ export default function Home() {
                 <span className="text-white/55">Sombra</span>
               </span>
               <p className="text-white/40 text-[11px] leading-relaxed">
-                Toldos y pérgolas a medida. Directos de fábrica, instalación profesional en Mar Menor y costa de Murcia.
+                Toldos y pérgolas a medida. Directos de fábrica, red de instaladores en Murcia, Levante, Cataluña y Madrid.
               </p>
             </div>
             <div>
