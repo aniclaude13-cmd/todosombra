@@ -18,11 +18,12 @@ export async function generateStaticParams() {
 }
 
 interface Props {
-  params: { id: string };
+  params: Promise<{ id: string }>;
 }
 
-export default function ProductPage({ params }: Props) {
-  const detail = obtenerProductoDetail(params.id);
+export default async function ProductPage({ params }: Props) {
+  const { id } = await params;
+  const detail = obtenerProductoDetail(id);
 
   if (!detail) {
     notFound();
