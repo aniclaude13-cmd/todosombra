@@ -1,5 +1,6 @@
 import { calcular, type Catalogo } from '@/awma-core/ts/engine';
 import { calcularInstalacion, type InstalacionResultado } from '@/awma-core/ts/instalacion';
+import { BAJO_CONSULTA_IDS } from '@/lib/product-details';
 
 import ART4100 from '@/awma-core/catalog/ART4100.json';
 import ART4110 from '@/awma-core/catalog/ART4110.json';
@@ -109,6 +110,7 @@ export async function filtrarPorMedidas(
   const compatibles: ProductoCompatible[] = [];
 
   for (const cat of catalogs) {
+    if (BAJO_CONSULTA_IDS.has(cat.id)) continue;
     if (
       linea < cat.dimensiones.linea.min ||
       linea > cat.dimensiones.linea.max ||

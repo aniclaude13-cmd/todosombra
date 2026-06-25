@@ -76,12 +76,17 @@ export default async function ProductPage({ params }: Props) {
 
             {/* Precio y garantía */}
             <div className="bg-[#faf9f6] rounded-xl p-4 space-y-2">
-              {detail.precioDesde && (
+              {detail.bajoConsulta ? (
+                <div className="flex items-center justify-between">
+                  <span className="text-[#7a756f]">Precio</span>
+                  <span className="text-2xl font-bold text-[#1a1917]">Bajo consulta</span>
+                </div>
+              ) : detail.precioDesde ? (
                 <div className="flex items-center justify-between">
                   <span className="text-[#7a756f]">Precio desde</span>
                   <span className="text-2xl font-bold text-[#1a1917]">{eur(detail.precioDesde)}</span>
                 </div>
-              )}
+              ) : null}
               <div className="flex items-center justify-between pt-2 border-t border-[#e5e1d8]">
                 <span className="text-[#7a756f]">🛡️ Garantía</span>
                 <span className="font-medium text-[#1a1917]">{detail.garantia}</span>
@@ -90,20 +95,33 @@ export default async function ProductPage({ params }: Props) {
 
             {/* CTA */}
             <div className="space-y-3 pt-4">
-              <Link
-                href={`/configurador?producto=${detail.id}`}
-                className="block w-full bg-[#d4a034] text-[#0d0c0b] rounded-lg py-4 font-semibold text-center hover:bg-[#e8b442] transition shadow-sm shadow-[#d4a034]/20"
-              >
-                Cotizar {detail.nombre} →
-              </Link>
-              <a
-                href="https://wa.me/34644592007?text=Hola%2C%20me%20interesa%20conocer%20más%20sobre%20el%20toldo%20ARES"
-                className="block w-full border border-[#e5e1d8] text-[#1a1917] rounded-lg py-3 font-medium text-center hover:border-[#d4a034] transition"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                📞 Hablar con un técnico
-              </a>
+              {detail.bajoConsulta ? (
+                <a
+                  href={`https://wa.me/34644592007?text=${encodeURIComponent(`Hola, quiero información del ${detail.nombre}.`)}`}
+                  className="block w-full bg-[#d4a034] text-[#0d0c0b] rounded-lg py-4 font-semibold text-center hover:bg-[#e8b442] transition shadow-sm shadow-[#d4a034]/20"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Solicitar presupuesto →
+                </a>
+              ) : (
+                <>
+                  <Link
+                    href={`/configurador?producto=${detail.id}`}
+                    className="block w-full bg-[#d4a034] text-[#0d0c0b] rounded-lg py-4 font-semibold text-center hover:bg-[#e8b442] transition shadow-sm shadow-[#d4a034]/20"
+                  >
+                    Cotizar {detail.nombre} →
+                  </Link>
+                  <a
+                    href={`https://wa.me/34644592007?text=${encodeURIComponent(`Hola, me interesa conocer más sobre el ${detail.nombre}.`)}`}
+                    className="block w-full border border-[#e5e1d8] text-[#1a1917] rounded-lg py-3 font-medium text-center hover:border-[#d4a034] transition"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    📞 Hablar con un técnico
+                  </a>
+                </>
+              )}
             </div>
           </div>
         </div>
@@ -163,14 +181,27 @@ export default async function ProductPage({ params }: Props) {
         <div className="max-w-6xl mx-auto px-4 lg:px-8 py-12 text-center">
           <h2 className="text-3xl font-bold mb-4">¿Listo para actualizar tu terraza?</h2>
           <p className="text-[#b0ada8] mb-6 max-w-2xl mx-auto">
-            Obtén un presupuesto exacto en 2 minutos. Sin formularios, sin esperas.
+            {detail.bajoConsulta
+              ? 'Modelo bajo consulta. Escríbenos por WhatsApp y te preparamos un presupuesto a medida.'
+              : 'Obtén un presupuesto exacto en 2 minutos. Sin formularios, sin esperas.'}
           </p>
-          <Link
-            href={`/configurador?producto=${detail.id}`}
-            className="inline-flex items-center gap-2 bg-[#d4a034] text-[#0d0c0b] rounded-lg px-6 py-3 font-semibold hover:bg-[#e8b442] transition"
-          >
-            Cotizar ahora →
-          </Link>
+          {detail.bajoConsulta ? (
+            <a
+              href={`https://wa.me/34644592007?text=${encodeURIComponent(`Hola, quiero información del ${detail.nombre}.`)}`}
+              className="inline-flex items-center gap-2 bg-[#d4a034] text-[#0d0c0b] rounded-lg px-6 py-3 font-semibold hover:bg-[#e8b442] transition"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Solicitar presupuesto →
+            </a>
+          ) : (
+            <Link
+              href={`/configurador?producto=${detail.id}`}
+              className="inline-flex items-center gap-2 bg-[#d4a034] text-[#0d0c0b] rounded-lg px-6 py-3 font-semibold hover:bg-[#e8b442] transition"
+            >
+              Cotizar ahora →
+            </Link>
+          )}
         </div>
       </section>
     </main>
