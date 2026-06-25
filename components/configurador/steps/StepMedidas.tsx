@@ -57,8 +57,8 @@ export default function StepMedidas({ state, dispatch, setLoading }: Props) {
       {/* Diagrama */}
       <div className="bg-[#faf9f6] rounded-lg p-4 mb-5 flex items-center justify-center">
         <svg viewBox="0 0 200 130" className="w-44 h-28">
-          <rect x="20" y="20" width="160" height="14" fill="#1a1917" rx="2" />
-          <polygon points="20,34 180,34 165,90 35,90" fill="#d4a034" fillOpacity="0.85" />
+          <rect x="35" y="20" width="130" height="14" fill="#1a1917" rx="2" />
+          <polygon points="35,34 165,34 180,90 20,90" fill="#d4a034" fillOpacity="0.85" />
           <line x1="20" y1="100" x2="180" y2="100" stroke="#7a756f" strokeWidth="1" />
           <line x1="20" y1="96" x2="20" y2="104" stroke="#7a756f" strokeWidth="1" />
           <line x1="180" y1="96" x2="180" y2="104" stroke="#7a756f" strokeWidth="1" />
