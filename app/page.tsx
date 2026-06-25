@@ -8,6 +8,30 @@ import ProductsShowcase from '@/components/ProductsShowcase';
 import HowItWorks from '@/components/HowItWorks';
 
 const WHATSAPP = 'https://wa.me/34644592007?text=Hola%2C%20me%20interesa%20un%20toldo%20o%20p%C3%A9rgola';
+const WHATSAPP_INSTALADOR = `https://wa.me/34644592007?text=${encodeURIComponent('Hola, soy toldero profesional y quiero unirme a la red de instaladores TodoSombra.')}`;
+
+const ventajasInstalador = [
+  {
+    icon: '🎯',
+    title: 'Leads cualificados',
+    desc: 'Recibe clientes que ya han configurado su toldo y conocen el precio. Solo cierras la visita técnica.',
+  },
+  {
+    icon: '🏭',
+    title: 'Producto AWMA directo',
+    desc: 'Acceso a tarifa de instalador autorizado, con envío directo de fábrica y soporte técnico AWMA.',
+  },
+  {
+    icon: '💳',
+    title: 'Cobro asegurado',
+    desc: 'TodoSombra gestiona pagos y financiación. Tú cobras tu parte sin perseguir al cliente.',
+  },
+  {
+    icon: '🚀',
+    title: 'Sin coste de alta',
+    desc: 'Únete gratis, sin permanencia. Solo pagas por el material que pides a fábrica.',
+  },
+];
 
 const features = [
   {
@@ -92,6 +116,12 @@ export default function Home() {
             >
               Configurador
             </Link>
+            <a
+              href="#instaladores"
+              className="text-sm text-white/50 hover:text-white transition hidden md:block"
+            >
+              Instaladores
+            </a>
             <a
               href="#contacto"
               className="text-sm text-white/50 hover:text-white transition hidden md:block"
@@ -272,6 +302,61 @@ export default function Home() {
                   </span>
                 ))}
               </div>
+            </div>
+          </AnimateIn>
+        </div>
+      </section>
+
+      {/* ── ÚNETE A LA RED ───────────────────────────────────── */}
+      <section id="instaladores" className="bg-[#f0ede6] py-24 px-6">
+        <div className="max-w-5xl mx-auto">
+          <AnimateIn>
+            <div className="text-center mb-12">
+              <div className="text-[11px] text-[#d4a034] uppercase tracking-widest font-semibold mb-3">
+                Para profesionales
+              </div>
+              <h2 className="text-3xl lg:text-4xl font-bold text-[#1a1917] mb-4">
+                ¿Eres toldero profesional?
+              </h2>
+              <p className="text-[#7a756f] max-w-xl mx-auto text-base leading-relaxed">
+                Únete a la red TodoSombra y monta en toda España. Te traemos los clientes;
+                tú haces lo que mejor sabes hacer: instalar.
+              </p>
+            </div>
+          </AnimateIn>
+
+          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-5 mb-12">
+            {ventajasInstalador.map((v, i) => (
+              <AnimateIn key={v.title} delay={i * 90}>
+                <div className="bg-white rounded-2xl p-6 border border-[#e5e1d8] h-full">
+                  <div className="text-2xl mb-3">{v.icon}</div>
+                  <div className="font-semibold text-[#1a1917] mb-2">{v.title}</div>
+                  <p className="text-sm text-[#7a756f] leading-relaxed">{v.desc}</p>
+                </div>
+              </AnimateIn>
+            ))}
+          </div>
+
+          <AnimateIn>
+            <div className="bg-[#1a1917] rounded-3xl p-8 lg:p-12 text-center">
+              <div className="text-xs text-[#d4a034]/70 uppercase tracking-widest mb-3">
+                Buscamos instaladores en toda España
+              </div>
+              <h3 className="text-2xl lg:text-3xl font-bold text-white mb-3">
+                Asturias, Galicia, País Vasco, Andalucía…
+              </h3>
+              <p className="text-white/50 mb-8 max-w-lg mx-auto text-sm leading-relaxed">
+                Si tienes empresa de toldos y quieres recibir leads de tu zona, escríbenos por
+                WhatsApp y te mandamos las condiciones del acuerdo.
+              </p>
+              <a
+                href={WHATSAPP_INSTALADOR}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 bg-[#d4a034] text-[#0d0c0b] font-semibold px-8 py-4 rounded-full hover:bg-[#e8b442] transition-all hover:scale-105 active:scale-95"
+              >
+                Quiero unirme a la red →
+              </a>
             </div>
           </AnimateIn>
         </div>
