@@ -4,6 +4,7 @@ import { useEffect, useState } from 'react';
 import { WizardState, WizardAction } from '@/lib/configurador/state';
 import { calcularPrecioProducto, calcularInstalacionProducto } from '@/lib/configurador/catalog';
 import type { InstalacionResultado } from '@/awma-core/ts/instalacion';
+import ProRegistroCTA from '../ProRegistroCTA';
 
 interface Props {
   state: WizardState;
@@ -152,6 +153,15 @@ export default function StepResumen({ state, dispatch }: Props) {
             : '🔧 Precio sin instalación. Marca la casilla si quieres que te la incluyamos como orientativa.'}
         </p>
       </div>
+
+      <ProRegistroCTA
+        contexto={{
+          productoId: state.productoId,
+          linea: state.linea,
+          salida: state.salida,
+          precioPVP: precio.pvpUnitario,
+        }}
+      />
 
       <div className="mt-6 space-y-3">
         <button
