@@ -17,8 +17,11 @@ export const metadata: Metadata = {
   description:
     "Configura tu toldo o pérgola exactamente como lo quieres y recíbelo en 4 semanas, directo de fábrica.",
   icons: {
-    icon: "/favicon.ico",
-    apple: "/favicon.png",
+    icon: [
+      { url: "/favicon.svg", type: "image/svg+xml" },
+      { url: "/favicon.ico", sizes: "any" },
+    ],
+    apple: "/apple-touch-icon.png",
   },
 };
 
