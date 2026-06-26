@@ -42,8 +42,8 @@ const RAW: ProductoVisual[] = [
   { id: 'AV8770', nombre: 'IGLOOO', categoria: 'vertical', categoriaLabel: 'Vertical', imagen: '/av8770-iglooo-catalog.jpg', icono: '🔲' },
   { id: 'AV8870-1', nombre: 'NIMBUS', categoria: 'vertical', categoriaLabel: 'Vertical', imagen: '/av8870-nimbus-catalog.jpg', icono: '🔲' },
 
-  { id: 'ART4100', nombre: 'ART 4100', categoria: 'brazo', categoriaLabel: 'Brazo articulado', imagen: '/art4100-catalog.jpg', icono: '🌤️' },
-  { id: 'ART4110', nombre: 'ART 4110', categoria: 'brazo', categoriaLabel: 'Brazo articulado', imagen: '/art4110-catalog.jpg', icono: '🌤️' },
+  { id: 'ART4100', nombre: 'ART 4100', categoria: 'brazo', categoriaLabel: 'Brazo articulado', imagen: '/art4100-catalog.jpg', icono: '🌤️', familia: 'art', familiaLabel: 'ART', varianteLabel: '4100' },
+  { id: 'ART4110', nombre: 'ART 4110', categoria: 'brazo', categoriaLabel: 'Brazo articulado', imagen: '/art4110-catalog.jpg', icono: '🌤️', familia: 'art', familiaLabel: 'ART', varianteLabel: '4110' },
 ];
 
 const BY_ID: Record<string, ProductoVisual> = RAW.reduce(
