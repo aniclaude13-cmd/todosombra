@@ -1,5 +1,6 @@
 import { Metadata } from 'next';
 import ConfiguradorWrapper from '@/components/configurador/ConfiguradorWrapper';
+import { PanelParticular, PanelProfesional } from '@/components/configurador/BeneficiosLaterales';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 
@@ -22,8 +23,12 @@ export default function ConfiguradorPage() {
           }}
           aria-hidden
         />
-        <div className="relative">
-          <ConfiguradorWrapper />
+        <div className="relative w-full max-w-7xl mx-auto px-4 lg:px-8 py-8 flex items-start justify-center gap-8">
+          <PanelParticular />
+          <div className="flex-shrink-0">
+            <ConfiguradorWrapper />
+          </div>
+          <PanelProfesional />
         </div>
       </main>
       <Footer />
