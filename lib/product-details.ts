@@ -147,9 +147,9 @@ export const PRODUCT_DETAILS: Record<string, ProductDetail> = {
       'Resistencia a viento extremo',
       'Bajo mantenimiento',
     ],
-    imagenHero: '/tenxo-catalog.png',
+    imagenHero: '/tenxo-catalog.jpg',
     galeriaFotos: [
-      '/tenxo-catalog.png',
+      '/tenxo-catalog.jpg',
     ],
     precioDesde: 3200,
     garantia: '10 años en estructura, 5 en motor',
