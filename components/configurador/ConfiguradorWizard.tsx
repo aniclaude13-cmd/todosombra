@@ -74,7 +74,7 @@ export default function ConfiguradorWizard() {
   const showHeader = state.step !== 'menu' && state.step !== 'cierre';
 
   return (
-    <div className="max-w-2xl px-4">
+    <div className="w-full max-w-2xl mx-auto px-4">
       {loading && (
         <div className="fixed inset-0 bg-black/30 flex items-center justify-center z-50">
           <div className="bg-white rounded-lg p-6">

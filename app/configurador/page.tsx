@@ -25,7 +25,7 @@ export default function ConfiguradorPage() {
         />
         <div className="relative w-full max-w-7xl mx-auto px-4 lg:px-8 py-8 flex items-start justify-center gap-8">
           <PanelParticular />
-          <div className="flex-shrink-0">
+          <div className="w-full min-w-0 xl:flex-shrink-0 xl:w-auto">
             <ConfiguradorWrapper />
           </div>
           <PanelProfesional />
