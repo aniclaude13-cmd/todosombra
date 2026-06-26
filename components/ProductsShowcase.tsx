@@ -1,7 +1,7 @@
 import Link from 'next/link';
 import Image from 'next/image';
 import AnimateIn from './AnimateIn';
-import { PRODUCTOS_POR_CATEGORIA, type Categoria } from '@/lib/configurador/productImages';
+import { FAMILIAS_POR_CATEGORIA, type Categoria } from '@/lib/configurador/productImages';
 
 interface CategoriaSeccion {
   key: Categoria;
@@ -36,15 +36,15 @@ export default function ProductsShowcase() {
   return (
     <div className="space-y-20">
       {CATEGORIAS.map((cat) => {
-        const productos = PRODUCTOS_POR_CATEGORIA[cat.key];
-        if (productos.length === 0) return null;
+        const familias = FAMILIAS_POR_CATEGORIA[cat.key];
+        if (familias.length === 0) return null;
         return (
           <div key={cat.key}>
             <AnimateIn>
               <div className="flex items-end justify-between mb-8 gap-6">
                 <div>
                   <div className="text-[11px] text-[#d4a034] uppercase tracking-widest font-semibold mb-2">
-                    {productos.length} {productos.length === 1 ? 'modelo' : 'modelos'}
+                    {familias.length} {familias.length === 1 ? 'modelo' : 'modelos'}
                   </div>
                   <h3 className="text-2xl lg:text-3xl font-bold text-[#1a1917]">
                     {cat.titulo}
@@ -61,16 +61,16 @@ export default function ProductsShowcase() {
             </AnimateIn>
 
             <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3 sm:gap-4">
-              {productos.map((prod, i) => (
-                <AnimateIn key={prod.id} delay={Math.min(i * 50, 350)}>
+              {familias.map((fam, i) => (
+                <AnimateIn key={fam.primary.id} delay={Math.min(i * 50, 350)}>
                   <Link
-                    href={`/producto/${prod.id}`}
+                    href={`/producto/${fam.primary.id}`}
                     className="group block bg-white rounded-xl border border-[#e5e1d8] overflow-hidden hover:border-[#d4a034] hover:shadow-lg hover:shadow-[#d4a034]/10 transition-all duration-300 h-full"
                   >
                     <div className="relative aspect-[4/3] bg-[#f0ede6] overflow-hidden">
                       <Image
-                        src={prod.imagen}
-                        alt={prod.nombre}
+                        src={fam.primary.imagen}
+                        alt={fam.displayName}
                         fill
                         sizes="(max-width: 640px) 50vw, (max-width: 1024px) 33vw, 25vw"
                         className="object-cover group-hover:scale-105 transition-transform duration-500"
@@ -79,16 +79,21 @@ export default function ProductsShowcase() {
                     </div>
                     <div className="p-3 sm:p-4">
                       <div className="text-[9px] text-[#a09a94] uppercase tracking-wider font-medium mb-1">
-                        {prod.categoriaLabel}
+                        {fam.primary.categoriaLabel}
                       </div>
                       <div className="flex items-center justify-between gap-2">
                         <h4 className="text-sm sm:text-base font-bold text-[#1a1917] truncate">
-                          {prod.nombre}
+                          {fam.displayName}
                         </h4>
                         <span className="text-[#d4a034] text-sm opacity-0 group-hover:opacity-100 transition shrink-0">
                           →
                         </span>
                       </div>
+                      {fam.variantes.length > 1 && (
+                        <div className="text-[10px] text-[#a09a94] mt-1">
+                          {fam.variantes.length} tamaños
+                        </div>
+                      )}
                     </div>
                   </Link>
                 </AnimateIn>

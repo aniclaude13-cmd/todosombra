@@ -7,6 +7,9 @@ export interface ProductoVisual {
   categoriaLabel: string;
   imagen: string;
   icono: string;
+  familia?: string;
+  familiaLabel?: string;
+  varianteLabel?: string;
 }
 
 const RAW: ProductoVisual[] = [
@@ -25,15 +28,15 @@ const RAW: ProductoVisual[] = [
   { id: 'BOX8200', nombre: 'KALI', categoria: 'cofre', categoriaLabel: 'Toldo cofre', imagen: '/box8200-kali-catalog.jpg', icono: '🏖️' },
   { id: 'BOX8300', nombre: 'MAXIMUS', categoria: 'cofre', categoriaLabel: 'Toldo cofre', imagen: '/box8300-maximus-catalog.jpg', icono: '🏖️' },
 
-  { id: 'PL7000', nombre: 'Palillería 80×40', categoria: 'pergola', categoriaLabel: 'Pérgola', imagen: '/pl7000-catalog.jpg', icono: '⛱️' },
-  { id: 'PL7010', nombre: 'Palillería 80×40 D', categoria: 'pergola', categoriaLabel: 'Pérgola', imagen: '/pl7010-catalog.jpg', icono: '⛱️' },
-  { id: 'PL7020', nombre: 'Palillería 100×40', categoria: 'pergola', categoriaLabel: 'Pérgola', imagen: '/pl7020-catalog.jpg', icono: '⛱️' },
-  { id: 'PL7030', nombre: 'Palillería 100×40 D', categoria: 'pergola', categoriaLabel: 'Pérgola', imagen: '/pl7030-catalog.jpg', icono: '⛱️' },
+  { id: 'PL7000', nombre: 'Palillería 80×40', categoria: 'pergola', categoriaLabel: 'Pérgola', imagen: '/pl7000-catalog.jpg', icono: '⛱️', familia: 'palilleria', familiaLabel: 'Palillería', varianteLabel: '80×40' },
+  { id: 'PL7010', nombre: 'Palillería 80×40 D', categoria: 'pergola', categoriaLabel: 'Pérgola', imagen: '/pl7010-catalog.jpg', icono: '⛱️', familia: 'palilleria', familiaLabel: 'Palillería', varianteLabel: '80×40 D' },
+  { id: 'PL7020', nombre: 'Palillería 100×40', categoria: 'pergola', categoriaLabel: 'Pérgola', imagen: '/pl7020-catalog.jpg', icono: '⛱️', familia: 'palilleria', familiaLabel: 'Palillería', varianteLabel: '100×40' },
+  { id: 'PL7030', nombre: 'Palillería 100×40 D', categoria: 'pergola', categoriaLabel: 'Pérgola', imagen: '/pl7030-catalog.jpg', icono: '⛱️', familia: 'palilleria', familiaLabel: 'Palillería', varianteLabel: '100×40 D' },
   { id: 'TX7900', nombre: 'TENXO', categoria: 'pergola', categoriaLabel: 'Pérgola motorizada', imagen: '/tenxo-catalog.jpg', icono: '⛱️' },
 
-  { id: 'AV8400', nombre: 'NEXUS 80', categoria: 'vertical', categoriaLabel: 'Vertical', imagen: '/av8400-nexus80-catalog.jpg', icono: '🔲' },
-  { id: 'AV8500', nombre: 'NEXUS 100', categoria: 'vertical', categoriaLabel: 'Vertical', imagen: '/av8500-nexus100-catalog.jpg', icono: '🔲' },
-  { id: 'AV8600', nombre: 'NEXUS 130', categoria: 'vertical', categoriaLabel: 'Vertical', imagen: '/av8600-nexus130-catalog.jpg', icono: '🔲' },
+  { id: 'AV8400', nombre: 'NEXUS 80', categoria: 'vertical', categoriaLabel: 'Vertical', imagen: '/av8400-nexus80-catalog.jpg', icono: '🔲', familia: 'nexus', familiaLabel: 'NEXUS', varianteLabel: '80' },
+  { id: 'AV8500', nombre: 'NEXUS 100', categoria: 'vertical', categoriaLabel: 'Vertical', imagen: '/av8500-nexus100-catalog.jpg', icono: '🔲', familia: 'nexus', familiaLabel: 'NEXUS', varianteLabel: '100' },
+  { id: 'AV8600', nombre: 'NEXUS 130', categoria: 'vertical', categoriaLabel: 'Vertical', imagen: '/av8600-nexus130-catalog.jpg', icono: '🔲', familia: 'nexus', familiaLabel: 'NEXUS', varianteLabel: '130' },
   { id: 'AV8700', nombre: 'PARAVENTO', categoria: 'vertical', categoriaLabel: 'Vertical', imagen: '/av8700-paravento-catalog.jpg', icono: '🔲' },
   { id: 'AV8750', nombre: 'PARABOX', categoria: 'vertical', categoriaLabel: 'Vertical', imagen: '/av8750-parabox-catalog.jpg', icono: '🔲' },
   { id: 'AV8770', nombre: 'IGLOOO', categoria: 'vertical', categoriaLabel: 'Vertical', imagen: '/av8770-iglooo-catalog.jpg', icono: '🔲' },
@@ -87,3 +90,45 @@ export const PRODUCTOS_POR_CATEGORIA: Record<Categoria, ProductoVisual[]> = {
 };
 
 export const PRODUCTOS_VISUALES: ProductoVisual[] = RAW;
+
+export interface FamiliaCard {
+  primary: ProductoVisual;
+  displayName: string;
+  variantes: ProductoVisual[];
+}
+
+function agruparPorFamilia(productos: ProductoVisual[]): FamiliaCard[] {
+  const cards: FamiliaCard[] = [];
+  const seenFamily = new Set<string>();
+
+  for (const p of productos) {
+    if (!p.familia) {
+      cards.push({ primary: p, displayName: p.nombre, variantes: [] });
+      continue;
+    }
+    if (seenFamily.has(p.familia)) continue;
+    seenFamily.add(p.familia);
+    const variantes = productos.filter((v) => v.familia === p.familia);
+    cards.push({
+      primary: p,
+      displayName: p.familiaLabel ?? p.nombre,
+      variantes,
+    });
+  }
+
+  return cards;
+}
+
+export const FAMILIAS_POR_CATEGORIA: Record<Categoria, FamiliaCard[]> = {
+  cofre: agruparPorFamilia(PRODUCTOS_POR_CATEGORIA.cofre),
+  pergola: agruparPorFamilia(PRODUCTOS_POR_CATEGORIA.pergola),
+  vertical: agruparPorFamilia(PRODUCTOS_POR_CATEGORIA.vertical),
+  brazo: agruparPorFamilia(PRODUCTOS_POR_CATEGORIA.brazo),
+  stor: agruparPorFamilia(PRODUCTOS_POR_CATEGORIA.stor),
+};
+
+export function getVariantesDeFamilia(id: string): ProductoVisual[] {
+  const p = BY_ID[id];
+  if (!p?.familia) return [];
+  return RAW.filter((v) => v.familia === p.familia);
+}

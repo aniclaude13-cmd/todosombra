@@ -2,7 +2,7 @@ import { notFound } from 'next/navigation';
 import Link from 'next/link';
 import Image from 'next/image';
 import { obtenerProductoDetail } from '@/lib/product-details';
-import { PRODUCTOS_POR_CATEGORIA } from '@/lib/configurador/productImages';
+import { PRODUCTOS_POR_CATEGORIA, getVariantesDeFamilia } from '@/lib/configurador/productImages';
 
 const eur = (n: number) =>
   new Intl.NumberFormat('es-ES', { style: 'currency', currency: 'EUR', maximumFractionDigits: 0 }).format(n);
@@ -28,6 +28,9 @@ export default async function ProductPage({ params }: Props) {
   if (!detail) {
     notFound();
   }
+
+  const variantes = getVariantesDeFamilia(id);
+  const tieneVariantes = variantes.length > 1;
 
   return (
     <main className="bg-[#faf9f6] text-[#1a1917]">
@@ -69,6 +72,32 @@ export default async function ProductPage({ params }: Props) {
               </h1>
               <p className="text-xl text-[#7a756f]">{detail.tagline}</p>
             </div>
+
+            {tieneVariantes && (
+              <div>
+                <div className="text-[11px] text-[#7a756f] uppercase tracking-widest font-semibold mb-2">
+                  Tamaños disponibles
+                </div>
+                <div className="flex flex-wrap gap-2">
+                  {variantes.map((v) => {
+                    const activa = v.id === id;
+                    return (
+                      <Link
+                        key={v.id}
+                        href={`/producto/${v.id}`}
+                        className={
+                          activa
+                            ? 'px-4 py-2 rounded-lg border-2 border-[#d4a034] bg-[#d4a034]/10 text-[#1a1917] text-sm font-semibold'
+                            : 'px-4 py-2 rounded-lg border border-[#e5e1d8] bg-white text-[#7a756f] text-sm font-medium hover:border-[#d4a034] hover:text-[#1a1917] transition'
+                        }
+                      >
+                        {v.varianteLabel ?? v.nombre}
+                      </Link>
+                    );
+                  })}
+                </div>
+              </div>
+            )}
 
             <p className="text-base text-[#1a1917] leading-relaxed">
               {detail.descripcion}
