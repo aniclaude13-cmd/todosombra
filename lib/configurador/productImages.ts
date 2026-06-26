@@ -29,7 +29,7 @@ const RAW: ProductoVisual[] = [
   { id: 'PL7010', nombre: 'Palillería 80×40 D', categoria: 'pergola', categoriaLabel: 'Pérgola', imagen: '/pl7010-catalog.jpg', icono: '⛱️' },
   { id: 'PL7020', nombre: 'Palillería 100×40', categoria: 'pergola', categoriaLabel: 'Pérgola', imagen: '/pl7020-catalog.jpg', icono: '⛱️' },
   { id: 'PL7030', nombre: 'Palillería 100×40 D', categoria: 'pergola', categoriaLabel: 'Pérgola', imagen: '/pl7030-catalog.jpg', icono: '⛱️' },
-  { id: 'TX7900', nombre: 'TENXO', categoria: 'pergola', categoriaLabel: 'Pérgola motorizada', imagen: '/tenxo-catalog.png', icono: '⛱️' },
+  { id: 'TX7900', nombre: 'TENXO', categoria: 'pergola', categoriaLabel: 'Pérgola motorizada', imagen: '/tenxo-catalog.jpg', icono: '⛱️' },
 
   { id: 'AV8400', nombre: 'NEXUS 80', categoria: 'vertical', categoriaLabel: 'Vertical', imagen: '/av8400-nexus80-catalog.jpg', icono: '🔲' },
   { id: 'AV8500', nombre: 'NEXUS 100', categoria: 'vertical', categoriaLabel: 'Vertical', imagen: '/av8500-nexus100-catalog.jpg', icono: '🔲' },
