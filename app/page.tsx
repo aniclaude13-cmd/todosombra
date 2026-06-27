@@ -266,17 +266,23 @@ export default function Home() {
                   </p>
                 </div>
               </div>
-              <div className="bg-white border border-[#e5e1d8] rounded-2xl p-6 flex items-center gap-5">
+              <Link href="/partners" className="bg-white border border-[#e5e1d8] rounded-2xl p-6 flex items-center gap-5 hover:border-[#d4a034] transition group">
                 <div className="w-14 h-14 rounded-xl bg-[#0d0c0b] text-[#d4a034] flex items-center justify-center text-xs font-bold flex-shrink-0 text-center leading-tight">
                   Tecni<br/>toldo
                 </div>
-                <div>
-                  <div className="font-semibold text-[#1a1917] mb-1">Instalador partner</div>
+                <div className="flex-1">
+                  <div className="font-semibold text-[#1a1917] mb-1 flex items-center gap-1.5">
+                    Instalador partner
+                    <Image src="/partner-badge.svg" alt="Sello partner" width={20} height={20} className="opacity-80" />
+                  </div>
                   <p className="text-sm text-[#7a756f] leading-relaxed">
-                    Primer partner instalador. Más de 30 años montando toldos en Levante y Murcia.
+                    Primer partner certificado. Más de 30 años montando toldos en Levante y Murcia.
                   </p>
+                  <span className="text-xs text-[#d4a034] mt-1 inline-block group-hover:underline">
+                    Ver el sello Partner →
+                  </span>
                 </div>
-              </div>
+              </Link>
             </div>
           </AnimateIn>
         </div>
@@ -510,6 +516,7 @@ export default function Home() {
               <ul className="space-y-2">
                 <li><Link href="/configurador" className="hover:text-white/70 transition">Configurador</Link></li>
                 <li><Link href="/via-rapida" className="hover:text-white/70 transition">Vía rápida</Link></li>
+                <li><Link href="/partners" className="hover:text-white/70 transition">Sello Partner</Link></li>
                 <li><a href="#productos" className="hover:text-white/70 transition">Catálogo</a></li>
                 <li><a href="#contacto" className="hover:text-white/70 transition">Contacto</a></li>
               </ul>

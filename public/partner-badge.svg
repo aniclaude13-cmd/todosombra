@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="200" height="200">
+  <!-- Outer ring -->
+  <circle cx="100" cy="100" r="95" fill="#0d0c0b" stroke="#d4a034" stroke-width="3"/>
+  <!-- Inner ring -->
+  <circle cx="100" cy="100" r="78" fill="none" stroke="#d4a034" stroke-width="1.5" stroke-dasharray="4 3"/>
+
+  <!-- Sun icon -->
+  <g transform="translate(100,72)">
+    <circle r="14" fill="#d4a034"/>
+    <g stroke="#d4a034" stroke-width="2.5" stroke-linecap="round">
+      <line x1="0" y1="-22" x2="0" y2="-18"/>
+      <line x1="0" y1="18" x2="0" y2="22"/>
+      <line x1="-22" y1="0" x2="-18" y2="0"/>
+      <line x1="18" y1="0" x2="22" y2="0"/>
+      <line x1="-15.5" y1="-15.5" x2="-12.7" y2="-12.7"/>
+      <line x1="12.7" y1="12.7" x2="15.5" y2="15.5"/>
+      <line x1="15.5" y1="-15.5" x2="12.7" y2="-12.7"/>
+      <line x1="-12.7" y1="12.7" x2="-15.5" y2="15.5"/>
+    </g>
+  </g>
+
+  <!-- PARTNER text -->
+  <text x="100" y="112" text-anchor="middle" font-family="'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="13" font-weight="700" letter-spacing="5" fill="#d4a034" text-transform="uppercase">PARTNER</text>
+
+  <!-- TodoSombra text -->
+  <text x="100" y="131" text-anchor="middle" font-family="'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="18" font-weight="800" letter-spacing="1" fill="#ffffff">TodoSombra</text>
+
+  <!-- CERTIFICADO arc at bottom -->
+  <path id="bottom-arc" d="M 30,100 A 70,70 0 0,0 170,100" fill="none"/>
+  <text font-family="'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="9" font-weight="600" letter-spacing="4" fill="#d4a034" opacity="0.7">
+    <textPath href="#bottom-arc" startOffset="50%" text-anchor="middle">INSTALADOR CERTIFICADO</textPath>
+  </text>
+
+  <!-- Checkmark badge -->
+  <circle cx="143" cy="63" r="13" fill="#d4a034"/>
+  <polyline points="137,63 141,68 149,57" fill="none" stroke="#0d0c0b" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
