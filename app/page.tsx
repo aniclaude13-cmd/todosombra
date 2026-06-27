@@ -163,12 +163,12 @@ export default function Home() {
             >
               Configurar mi toldo →
             </Link>
-            <a
-              href="#productos"
+            <Link
+              href="/via-rapida"
               className="border border-white/15 text-white/65 font-medium px-9 py-4 rounded-full hover:border-white/35 hover:text-white transition"
             >
-              Ver productos
-            </a>
+              ⚡ Propuesta rápida
+            </Link>
           </div>
 
           {/* Trust strip */}
@@ -473,6 +473,7 @@ export default function Home() {
               <h4 className="font-semibold text-white/70 mb-3">Producto</h4>
               <ul className="space-y-2">
                 <li><Link href="/configurador" className="hover:text-white/70 transition">Configurador</Link></li>
+                <li><Link href="/via-rapida" className="hover:text-white/70 transition">Vía rápida</Link></li>
                 <li><a href="#productos" className="hover:text-white/70 transition">Catálogo</a></li>
                 <li><a href="#contacto" className="hover:text-white/70 transition">Contacto</a></li>
               </ul>
