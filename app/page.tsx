@@ -262,7 +262,7 @@ export default function Home() {
           <AnimateIn delay={120}>
             <div className="grid sm:grid-cols-2 gap-5 mt-10">
               <div className="bg-white border border-[#e5e1d8] rounded-2xl p-6 flex items-center gap-5">
-                <div className="w-20 h-20 flex-shrink-0 flex items-center justify-center bg-[#0d0c0b] rounded-lg">
+                <div className="w-20 h-20 flex-shrink-0 flex items-center justify-center bg-white rounded-lg">
                   <Image
                     src="/awma-logo.jpg"
                     alt="AWMA Logo"
