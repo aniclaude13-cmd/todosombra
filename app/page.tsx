@@ -46,13 +46,13 @@ const features = [
   },
   {
     icon: '🌐',
-    title: 'Red de instaladores',
-    desc: 'Equipos certificados en Murcia, Alicante, Valencia, Tarragona y Madrid.',
+    title: 'Instalación opcional con Partners',
+    desc: 'Si lo necesitas, nuestros Partners instalan en Alicante, Valencia, Tarragona, Madrid y Murcia.',
   },
   {
     icon: '🛡️',
     title: '3 años de garantía',
-    desc: 'Garantía TodoSombra en instalación, más la garantía de fábrica AWMA en estructura.',
+    desc: 'Garantía de fábrica AWMA en la estructura. Si instalas con un Partner, garantía adicional de su servicio.',
   },
 ];
 
@@ -143,7 +143,7 @@ export default function Home() {
         <div className="relative flex-1 flex flex-col items-center justify-center text-center px-6 pb-10" style={{ zIndex: 10 }}>
           <div className="hero-badge inline-flex items-center gap-2 text-xs text-[#d4a034]/70 uppercase tracking-widest mb-8 border border-[#d4a034]/20 rounded-full px-5 py-1.5">
             <span className="w-1.5 h-1.5 rounded-full bg-[#d4a034] animate-pulse" />
-            Murcia · Alicante · Valencia · Tarragona · Madrid
+            Alicante · Valencia · Tarragona · Madrid · Murcia
           </div>
 
           <h1 className="hero-title text-4xl sm:text-5xl lg:text-[4.5rem] font-bold text-white leading-[1.08] tracking-tight max-w-4xl">
@@ -153,7 +153,7 @@ export default function Home() {
 
           <p className="hero-sub mt-6 text-base lg:text-lg text-white/45 max-w-xl leading-relaxed">
             Configura tu toldo o pérgola, ve el precio al instante y recíbelo
-            directo de fábrica. Instalación profesional incluida.
+            directo de fábrica. Instalación opcional con nuestros Partners.
           </p>
 
           <div className="hero-cta mt-10 flex flex-col sm:flex-row gap-4 justify-center">
@@ -212,8 +212,8 @@ export default function Home() {
               <span className="text-[#1a1917]">335 €</span>
             </div>
             <div className="flex justify-between">
-              <span>IVA + instalación</span>
-              <span className="text-[#1a1917]">incluido</span>
+              <span>IVA incluido · Instalación</span>
+              <span className="text-[#1a1917]">opcional</span>
             </div>
           </div>
           <div className="flex items-end justify-between border-t border-[#e5e1d8] pt-2">
@@ -284,13 +284,13 @@ export default function Home() {
           <AnimateIn>
             <div className="bg-[#1a1917] rounded-3xl p-12 lg:p-16 text-center">
               <div className="text-xs text-[#d4a034]/70 uppercase tracking-widest mb-4">
-                Zona de instalación
+                Instalación opcional con nuestros Partners
               </div>
               <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">
-                Instalamos en 5 provincias
+                Partners certificados en 5 provincias
               </h2>
               <p className="text-white/40 mb-10 max-w-md mx-auto text-sm leading-relaxed">
-                Red de instaladores certificados AWMA en Murcia, Comunidad Valenciana, Cataluña y Madrid.
+                Compra tu toldo o pérgola directos de fábrica. Si quieres instalación, te la coordinamos con nuestros Partners en Alicante, Valencia, Tarragona, Madrid y Murcia.
               </p>
               <div className="flex flex-wrap justify-center gap-2.5">
                 {provincias.map((loc) => (
@@ -319,7 +319,7 @@ export default function Home() {
                 ¿Eres toldero profesional?
               </h2>
               <p className="text-[#7a756f] max-w-xl mx-auto text-base leading-relaxed">
-                Únete a la red TodoSombra y monta en toda España. Te traemos los clientes;
+                Únete a la red TodoSombra. Te traemos los clientes ya configurados;
                 tú haces lo que mejor sabes hacer: instalar.
               </p>
             </div>
@@ -399,7 +399,7 @@ export default function Home() {
                 Instalaciones reales
               </h2>
               <p className="mt-3 text-[#7a756f] max-w-lg mx-auto text-base">
-                Nuestros trabajos en terrazas, pérgolas y jardines del Levante y Madrid.
+                Trabajos de nuestros Partners en terrazas, pérgolas y jardines de Alicante, Valencia, Tarragona, Madrid y Murcia.
               </p>
             </div>
           </AnimateIn>
@@ -418,7 +418,7 @@ export default function Home() {
                 <span className="text-white/55">Sombra</span>
               </span>
               <p className="text-white/40 text-[11px] leading-relaxed">
-                Toldos y pérgolas a medida. Directos de fábrica, red de instaladores en Murcia, Levante, Cataluña y Madrid.
+                Toldos y pérgolas a medida, directos de fábrica. Instalación opcional con nuestros Partners en Alicante, Valencia, Tarragona, Madrid y Murcia.
               </p>
             </div>
             <div>
@@ -440,9 +440,9 @@ export default function Home() {
             <div>
               <h4 className="font-semibold text-white/70 mb-3">Legal</h4>
               <ul className="space-y-2">
-                <li><a href="#" className="hover:text-white/70 transition">Aviso legal</a></li>
-                <li><a href="#" className="hover:text-white/70 transition">Privacidad</a></li>
-                <li><a href="#" className="hover:text-white/70 transition">Cookies</a></li>
+                <li><Link href="/legal/aviso-legal" className="hover:text-white/70 transition">Aviso legal</Link></li>
+                <li><Link href="/legal/privacidad" className="hover:text-white/70 transition">Privacidad</Link></li>
+                <li><Link href="/legal/cookies" className="hover:text-white/70 transition">Cookies</Link></li>
               </ul>
             </div>
           </div>
