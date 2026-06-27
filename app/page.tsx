@@ -234,6 +234,54 @@ export default function Home() {
       {/* ── CÓMO FUNCIONA ────────────────────────────────────── */}
       <HowItWorks />
 
+      {/* ── QUIÉNES SOMOS ────────────────────────────────────── */}
+      <section className="py-24 px-6 bg-[#faf9f6]">
+        <div className="max-w-4xl mx-auto">
+          <AnimateIn>
+            <div className="text-center mb-10">
+              <div className="text-[11px] text-[#d4a034] uppercase tracking-widest font-semibold mb-3">
+                Quiénes somos
+              </div>
+              <h2 className="text-3xl lg:text-4xl font-bold text-[#1a1917] mb-6 leading-tight">
+                Nacemos para digitalizar el sector del toldo
+              </h2>
+              <p className="text-[#7a756f] text-base lg:text-lg leading-relaxed">
+                TodoSombra es la primera plataforma que asocia <strong className="text-[#1a1917]">grandes fabricantes</strong> con <strong className="text-[#1a1917]">instaladores profesionales</strong> para
+                que el cliente final compre online, vea el precio al instante y reciba el producto directo de fábrica — con instalación
+                opcional a manos de un partner certificado.
+              </p>
+            </div>
+          </AnimateIn>
+
+          <AnimateIn delay={120}>
+            <div className="grid sm:grid-cols-2 gap-5 mt-10">
+              <div className="bg-white border border-[#e5e1d8] rounded-2xl p-6 flex items-center gap-5">
+                <div className="w-14 h-14 rounded-xl bg-[#0d0c0b] text-[#d4a034] flex items-center justify-center text-xl font-bold flex-shrink-0">
+                  AWMA
+                </div>
+                <div>
+                  <div className="font-semibold text-[#1a1917] mb-1">Fabricante</div>
+                  <p className="text-sm text-[#7a756f] leading-relaxed">
+                    Líder europeo en estructuras de aluminio. Toldos cofre, pérgolas, verticales — fabricados en España.
+                  </p>
+                </div>
+              </div>
+              <div className="bg-white border border-[#e5e1d8] rounded-2xl p-6 flex items-center gap-5">
+                <div className="w-14 h-14 rounded-xl bg-[#0d0c0b] text-[#d4a034] flex items-center justify-center text-xs font-bold flex-shrink-0 text-center leading-tight">
+                  Tecni<br/>toldo
+                </div>
+                <div>
+                  <div className="font-semibold text-[#1a1917] mb-1">Instalador partner</div>
+                  <p className="text-sm text-[#7a756f] leading-relaxed">
+                    Primer partner instalador. Más de 30 años montando toldos en Levante y Murcia.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </AnimateIn>
+        </div>
+      </section>
+
       {/* ── PRODUCTOS ────────────────────────────────────────── */}
       <section id="productos" className="py-24 px-6">
         <div className="max-w-6xl mx-auto">
