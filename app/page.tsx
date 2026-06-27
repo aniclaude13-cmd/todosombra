@@ -262,13 +262,13 @@ export default function Home() {
           <AnimateIn delay={120}>
             <div className="grid sm:grid-cols-2 gap-5 mt-10">
               <div className="bg-white border border-[#e5e1d8] rounded-2xl p-6 flex items-center gap-5">
-                <div className="w-16 h-16 flex-shrink-0 flex items-center justify-center">
+                <div className="w-20 h-20 flex-shrink-0 flex items-center justify-center bg-[#0d0c0b] rounded-lg">
                   <Image
                     src="/awma-logo.jpg"
                     alt="AWMA Logo"
-                    width={64}
-                    height={64}
-                    className="object-contain"
+                    width={80}
+                    height={80}
+                    className="object-contain p-2"
                   />
                 </div>
                 <div>
@@ -279,12 +279,12 @@ export default function Home() {
                 </div>
               </div>
               <Link href="/partners" className="bg-white border border-[#e5e1d8] rounded-2xl p-6 flex items-center gap-5 hover:border-[#d4a034] transition group">
-                <div className="w-16 h-16 flex-shrink-0 flex items-center justify-center bg-[#f0ede6] rounded-lg">
+                <div className="w-24 h-16 flex-shrink-0 flex items-center justify-center bg-[#f5f5f5] rounded-lg">
                   <Image
                     src="/tecnitoldo-logo.jpg"
                     alt="Tecnitoldo Logo"
-                    width={64}
-                    height={40}
+                    width={96}
+                    height={50}
                     className="object-contain"
                   />
                 </div>
