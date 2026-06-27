@@ -111,9 +111,18 @@ export default async function ProductPage({ params }: Props) {
                   <span className="text-2xl font-bold text-[#1a1917]">Bajo consulta</span>
                 </div>
               ) : detail.precioDesde ? (
-                <div className="flex items-center justify-between">
-                  <span className="text-[#7a756f]">Precio desde</span>
-                  <span className="text-2xl font-bold text-[#1a1917]">{eur(detail.precioDesde)}</span>
+                <div>
+                  <div className="flex items-center justify-between">
+                    <span className="text-[#7a756f]">
+                      {detail.precioOrientativo ? 'Precio orientativo desde' : 'Precio desde'}
+                    </span>
+                    <span className="text-2xl font-bold text-[#1a1917]">{eur(detail.precioDesde)}</span>
+                  </div>
+                  {detail.precioOrientativo && (
+                    <p className="text-xs text-[#a09a94] mt-1 leading-relaxed">
+                      Precio de referencia para medidas mínimas. El precio final depende de medidas, tejido y opciones — pídenos cotización exacta.
+                    </p>
+                  )}
                 </div>
               ) : null}
               <div className="flex items-center justify-between pt-2 border-t border-[#e5e1d8]">

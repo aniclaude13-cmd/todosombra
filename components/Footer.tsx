@@ -1,15 +1,17 @@
+import Link from 'next/link';
+
 export default function Footer() {
   const whatsappLink = 'https://wa.me/34644592007?text=Hola%2C%20me%20interesa%20un%20toldo%20o%20p%C3%A9rgola';
 
   return (
-    <footer className="bg-[#1a1917] text-white py-8 px-4">
+    <footer className="bg-[#1a1917] text-white py-10 px-4">
       <div className="max-w-7xl mx-auto">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           {/* Información */}
           <div>
             <h3 className="font-bold text-lg mb-4">TodoSombra</h3>
-            <p className="text-[#a8a5a0] text-sm">
-              Toldos y pérgolas a medida, directamente desde fábrica.
+            <p className="text-[#a8a5a0] text-sm leading-relaxed">
+              Toldos y pérgolas a medida, directos de fábrica. Instalación opcional con nuestros Partners.
             </p>
           </div>
 
@@ -22,8 +24,18 @@ export default function Footer() {
                   📞 +34 644 592 007
                 </a>
               </li>
-              <li className="text-[#7a7a7a]">Murcia · Levante · Cataluña · Madrid</li>
+              <li className="text-[#7a7a7a]">Alicante · Valencia · Tarragona · Madrid · Murcia</li>
               <li className="text-[#7a7a7a] text-xs pt-2">Respuesta de lunes a viernes</li>
+            </ul>
+          </div>
+
+          {/* Legal */}
+          <div>
+            <h4 className="font-semibold mb-4 text-[#d4a034]">Legal</h4>
+            <ul className="space-y-2 text-sm text-[#a8a5a0]">
+              <li><Link href="/legal/aviso-legal" className="hover:text-[#d4a034] transition">Aviso legal</Link></li>
+              <li><Link href="/legal/privacidad" className="hover:text-[#d4a034] transition">Política de privacidad</Link></li>
+              <li><Link href="/legal/cookies" className="hover:text-[#d4a034] transition">Política de cookies</Link></li>
             </ul>
           </div>
 

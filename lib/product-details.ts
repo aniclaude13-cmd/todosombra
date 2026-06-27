@@ -10,15 +10,10 @@ export interface ProductDetail {
   precioDesde?: number;
   garantia: string;
   bajoConsulta?: boolean;
+  precioOrientativo?: boolean;
 }
 
-export const BAJO_CONSULTA_IDS = new Set([
-  'BOX5200',
-  'BOX6010_INDIE',
-  'BOX6400',
-  'BOX8110',
-  'BOX8200',
-]);
+export const BAJO_CONSULTA_IDS = new Set<string>([]);
 
 export const PRODUCT_DETAILS: Record<string, ProductDetail> = {
   BOX6100_ARES: {
@@ -255,8 +250,9 @@ export const PRODUCT_DETAILS: Record<string, ProductDetail> = {
     galeriaFotos: [
       '/box5200-sama-catalog.jpg',
     ],
+    precioDesde: 990,
     garantia: '10 años',
-    bajoConsulta: true,
+    precioOrientativo: true,
   },
   BOX6010_INDIE: {
     id: 'BOX6010_INDIE',
@@ -281,8 +277,9 @@ export const PRODUCT_DETAILS: Record<string, ProductDetail> = {
     galeriaFotos: [
       '/box6010-indie-catalog.jpg',
     ],
+    precioDesde: 800,
     garantia: '10 años',
-    bajoConsulta: true,
+    precioOrientativo: true,
   },
   BOX6110: {
     id: 'BOX6110',
@@ -359,8 +356,9 @@ export const PRODUCT_DETAILS: Record<string, ProductDetail> = {
     galeriaFotos: [
       '/box6400-lusol-catalog.jpg',
     ],
+    precioDesde: 1430,
     garantia: '10 años',
-    bajoConsulta: true,
+    precioOrientativo: true,
   },
   BOX6500: {
     id: 'BOX6500',
@@ -463,8 +461,9 @@ export const PRODUCT_DETAILS: Record<string, ProductDetail> = {
     galeriaFotos: [
       '/box8110-kyma-vertiko-catalog.jpg',
     ],
+    precioDesde: 3470,
     garantia: '10 años',
-    bajoConsulta: true,
+    precioOrientativo: true,
   },
   BOX8200: {
     id: 'BOX8200',
@@ -489,8 +488,9 @@ export const PRODUCT_DETAILS: Record<string, ProductDetail> = {
     galeriaFotos: [
       '/box8200-kali-catalog.jpg',
     ],
+    precioDesde: 3220,
     garantia: '10 años',
-    bajoConsulta: true,
+    precioOrientativo: true,
   },
   BOX8300: {
     id: 'BOX8300',
