@@ -279,7 +279,7 @@ export default function Home() {
                 </div>
               </div>
               <Link href="/partners" className="bg-white border border-[#e5e1d8] rounded-2xl p-6 flex items-center gap-5 hover:border-[#d4a034] transition group">
-                <div className="w-16 h-16 flex-shrink-0 flex items-center justify-center bg-white">
+                <div className="w-16 h-16 flex-shrink-0 flex items-center justify-center bg-[#f0ede6] rounded-lg">
                   <Image
                     src="/tecnitoldo-logo.jpg"
                     alt="Tecnitoldo Logo"
