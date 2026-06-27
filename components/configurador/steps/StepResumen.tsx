@@ -147,6 +147,18 @@ export default function StepResumen({ state, dispatch }: Props) {
           <span>Total</span>
           <span>{eur(total)}</span>
         </div>
+
+        {/* Cetelem */}
+        <div className="mt-3 flex items-center justify-between bg-[#f0f4ff] border border-[#c8d4f0] rounded-lg px-3 py-2.5">
+          <div className="flex items-center gap-2">
+            <span className="bg-[#003082] text-white text-[9px] font-bold px-1.5 py-0.5 rounded">CETELEM</span>
+            <span className="text-xs text-[#1a1917]">Financia en hasta 36 meses</span>
+          </div>
+          <span className="text-xs font-semibold text-[#003082]">
+            Desde {eur(Math.ceil(total / 36))} /mes
+          </span>
+        </div>
+
         <p className="text-xs text-[#7a756f] italic mt-3">
           {state.incluirInstalacion
             ? '🔧 La instalación es orientativa; el precio definitivo se confirma tras la visita técnica gratuita.'

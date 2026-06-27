@@ -410,6 +410,42 @@ export default function Home() {
         </div>
       </section>
 
+      {/* ── FINANCIACIÓN ─────────────────────────────────────── */}
+      <section className="py-16 px-6 bg-white border-t border-[#e5e1d8]">
+        <div className="max-w-4xl mx-auto">
+          <AnimateIn>
+            <div className="flex flex-col md:flex-row items-center justify-between gap-8">
+              <div className="flex items-center gap-5">
+                <div className="w-14 h-14 bg-[#003082] rounded-xl flex items-center justify-center text-white font-bold text-xs tracking-tight text-center leading-tight flex-shrink-0">
+                  CETE<br/>LEM
+                </div>
+                <div>
+                  <div className="text-[11px] text-[#d4a034] uppercase tracking-widest font-semibold mb-1">Financiación</div>
+                  <h3 className="text-xl font-bold text-[#1a1917]">Paga a plazos con Cetelem</h3>
+                  <p className="text-sm text-[#7a756f] mt-1">
+                    Financia tu toldo o pérgola hasta 36 meses. Aprobación rápida, sin cambiar de banco.
+                  </p>
+                </div>
+              </div>
+              <div className="flex flex-col sm:flex-row items-center gap-3 flex-shrink-0">
+                <div className="text-center text-sm text-[#7a756f]">
+                  <span className="block text-2xl font-bold text-[#1a1917]">Desde 39 €/mes</span>
+                  <span>en un toldo de 1.500 €</span>
+                </div>
+                <a
+                  href={WHATSAPP}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="bg-[#d4a034] text-[#0d0c0b] font-semibold px-6 py-3 rounded-full hover:bg-[#e8b442] transition text-sm whitespace-nowrap"
+                >
+                  Solicitar financiación →
+                </a>
+              </div>
+            </div>
+          </AnimateIn>
+        </div>
+      </section>
+
       {/* ── CTA FINAL ────────────────────────────────────────── */}
       <section id="contacto" className="bg-[#d4a034] py-24 px-6 text-center">
         <AnimateIn>
