@@ -2,6 +2,7 @@
 
 import { useState } from 'react';
 import Link from 'next/link';
+import { track } from '@/lib/analytics';
 
 const WHATSAPP = 'https://wa.me/34644592007?text=Hola%2C%20quiero%20un%20presupuesto%20r%C3%A1pido';
 
@@ -44,6 +45,7 @@ export default function ViaRapida() {
       });
       const data = await res.json();
       if (!data.ok) throw new Error(data.error || 'Error');
+      track('submit_lead_express', { tipo, medidaAprox: medida, provincia });
       setStep('done');
     } catch (e) {
       setError('No se pudo enviar. Escríbenos por WhatsApp directamente.');

@@ -5,6 +5,7 @@ import { WizardState, WizardAction } from '@/lib/configurador/state';
 import { calcularPrecioProducto, calcularInstalacionProducto } from '@/lib/configurador/catalog';
 import type { InstalacionResultado } from '@/awma-core/ts/instalacion';
 import ProRegistroCTA from '../ProRegistroCTA';
+import { track } from '@/lib/analytics';
 
 interface Props {
   state: WizardState;
@@ -44,6 +45,12 @@ export default function StepResumen({ state, dispatch }: Props) {
             precioTotal: r.pvpUnitario,
             desglose: r.desglose,
             avisos: r.avisos,
+          });
+          track('generate_quote', {
+            productoId: state.productoId || '',
+            linea: state.linea || 0,
+            salida: state.salida || 0,
+            precio: r.pvpUnitario,
           });
         }
       });
@@ -177,7 +184,10 @@ export default function StepResumen({ state, dispatch }: Props) {
 
       <div className="mt-6 space-y-3">
         <button
-          onClick={() => dispatch({ type: 'SET_STEP', step: 'datos_cliente' })}
+          onClick={() => {
+            track('configure_step', { step: 'datos_cliente' });
+            dispatch({ type: 'SET_STEP', step: 'datos_cliente' });
+          }}
           className="w-full bg-[#d4a034] text-[#0d0c0b] rounded-lg py-3 font-semibold hover:bg-[#e8b442] transition shadow-sm shadow-[#d4a034]/20"
         >
           Lo quiero — reservar presupuesto →

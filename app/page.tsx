@@ -132,6 +132,8 @@ export default function Home() {
               href={WHATSAPP}
               target="_blank"
               rel="noopener noreferrer"
+              data-track="click_whatsapp"
+              data-track-param-location="nav"
               className="text-sm bg-[#d4a034] text-[#0d0c0b] font-semibold px-5 py-2 rounded-full hover:bg-[#e8b442] transition-all hover:scale-105 active:scale-95"
             >
               WhatsApp
@@ -159,12 +161,16 @@ export default function Home() {
           <div className="hero-cta mt-10 flex flex-col sm:flex-row gap-4 justify-center">
             <Link
               href="/configurador"
+              data-track="view_configurator"
+              data-track-param-source="hero"
               className="bg-[#d4a034] text-[#0d0c0b] font-semibold px-9 py-4 rounded-full hover:bg-[#e8b442] transition-all hover:scale-105 active:scale-95 shadow-lg shadow-[#d4a034]/20"
             >
               Configurar mi toldo →
             </Link>
             <Link
               href="/via-rapida"
+              data-track="click_via_rapida"
+              data-track-param-source="hero"
               className="border border-white/15 text-white/65 font-medium px-9 py-4 rounded-full hover:border-white/35 hover:text-white transition"
             >
               ⚡ Propuesta rápida
@@ -256,8 +262,14 @@ export default function Home() {
           <AnimateIn delay={120}>
             <div className="grid sm:grid-cols-2 gap-5 mt-10">
               <div className="bg-white border border-[#e5e1d8] rounded-2xl p-6 flex items-center gap-5">
-                <div className="w-14 h-14 rounded-xl bg-[#0d0c0b] text-[#d4a034] flex items-center justify-center text-xl font-bold flex-shrink-0">
-                  AWMA
+                <div className="w-16 h-16 flex-shrink-0 flex items-center justify-center">
+                  <Image
+                    src="/awma-logo.jpg"
+                    alt="AWMA Logo"
+                    width={64}
+                    height={64}
+                    className="object-contain"
+                  />
                 </div>
                 <div>
                   <div className="font-semibold text-[#1a1917] mb-1">Fabricante</div>
@@ -267,8 +279,14 @@ export default function Home() {
                 </div>
               </div>
               <Link href="/partners" className="bg-white border border-[#e5e1d8] rounded-2xl p-6 flex items-center gap-5 hover:border-[#d4a034] transition group">
-                <div className="w-14 h-14 rounded-xl bg-[#0d0c0b] text-[#d4a034] flex items-center justify-center text-xs font-bold flex-shrink-0 text-center leading-tight">
-                  Tecni<br/>toldo
+                <div className="w-16 h-16 flex-shrink-0 flex items-center justify-center bg-white">
+                  <Image
+                    src="/tecnitoldo-logo.jpg"
+                    alt="Tecnitoldo Logo"
+                    width={64}
+                    height={40}
+                    className="object-contain"
+                  />
                 </div>
                 <div className="flex-1">
                   <div className="font-semibold text-[#1a1917] mb-1 flex items-center gap-1.5">
@@ -407,6 +425,8 @@ export default function Home() {
                 href={WHATSAPP_INSTALADOR}
                 target="_blank"
                 rel="noopener noreferrer"
+                data-track="submit_lead_pro"
+                data-track-param-source="home_instaladores"
                 className="inline-flex items-center gap-2 bg-[#d4a034] text-[#0d0c0b] font-semibold px-8 py-4 rounded-full hover:bg-[#e8b442] transition-all hover:scale-105 active:scale-95"
               >
                 Quiero unirme a la red →
@@ -442,6 +462,8 @@ export default function Home() {
                   href={WHATSAPP}
                   target="_blank"
                   rel="noopener noreferrer"
+                  data-track="click_financiacion"
+                  data-track-param-source="banner_home"
                   className="bg-[#d4a034] text-[#0d0c0b] font-semibold px-6 py-3 rounded-full hover:bg-[#e8b442] transition text-sm whitespace-nowrap"
                 >
                   Solicitar financiación →
@@ -472,6 +494,8 @@ export default function Home() {
               href={WHATSAPP}
               target="_blank"
               rel="noopener noreferrer"
+              data-track="click_whatsapp"
+              data-track-param-location="cta_final"
               className="border-2 border-[#0d0c0b]/20 text-[#0d0c0b] font-medium px-9 py-4 rounded-full hover:border-[#0d0c0b]/40 transition"
             >
               Hablar por WhatsApp

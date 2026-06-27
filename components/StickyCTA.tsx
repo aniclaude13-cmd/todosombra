@@ -33,6 +33,8 @@ export default function StickyCTA() {
         target="_blank"
         rel="noopener noreferrer"
         aria-label="Hablar por WhatsApp"
+        data-track="click_whatsapp"
+        data-track-param-location="sticky_floating"
         className={`fixed bottom-4 left-4 z-50 w-14 h-14 bg-[#25D366] hover:bg-[#1ebe57] rounded-full shadow-xl shadow-[#25D366]/30 flex items-center justify-center transition-all duration-300 hover:scale-105 active:scale-95 ${transitionClass}`}
       >
         <svg viewBox="0 0 32 32" className="w-7 h-7 fill-white" aria-hidden>

@@ -2,6 +2,7 @@
 
 import { useState } from 'react';
 import { WizardState, WizardAction } from '@/lib/configurador/state';
+import { track } from '@/lib/analytics';
 
 interface Props {
   state: WizardState;
@@ -45,6 +46,11 @@ export default function StepDatosCliente({ state, dispatch, setLoading }: Props)
       });
 
       if (!res.ok) throw new Error('Error al enviar');
+      track('submit_lead', {
+        productoId: state.productoId || '',
+        precio: state.precioTotal || 0,
+        instalacion: !!state.incluirInstalacion,
+      });
       dispatch({ type: 'SET_STEP', step: 'cierre' });
     } catch (e) {
       setError('No se pudo enviar. Inténtalo de nuevo.');
